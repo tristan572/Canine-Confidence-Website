@@ -47,8 +47,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Phone</div>
-                    <div className="text-medium-grey mb-1">0411 123 456</div>
-                    <div className="text-sm text-medium-grey">Available 7 days a week, 8AM - 8PM</div>
+                    <div className="text-medium-grey mb-1">0409 521 358</div>
+                    <div className="text-sm text-medium-grey">Available Monday - Saturday, 5AM - 8PM</div>
                   </div>
                 </div>
 
@@ -58,7 +58,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Email</div>
-                    <div className="text-medium-grey mb-1">hello@canineconfidence.com.au</div>
+                    <div className="text-medium-grey mb-1">info@canineconfidence.com.au</div>
                     <div className="text-sm text-medium-grey">We'll respond within 24 hours</div>
                   </div>
                 </div>

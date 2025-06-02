@@ -108,11 +108,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary-blue" />
-                <span className="text-gray-300">0411 123 456</span>
+                <span className="text-gray-300">0409 521 358</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary-blue" />
-                <span className="text-gray-300">hello@canineconfidence.com.au</span>
+                <span className="text-gray-300">info@canineconfidence.com.au</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary-blue" />

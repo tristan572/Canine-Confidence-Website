@@ -86,49 +86,49 @@ export class MemStorage implements IStorage {
     // Seed services
     const serviceData: InsertService[] = [
       {
-        name: "Behaviour Modification",
-        description: "Address problem behaviours with science-based methods that create lasting positive change for reactive, anxious, or aggressive dogs.",
+        name: "Initial Assessment",
+        description: "Get to know your dog and understand their unique needs. We'll assess behavior, temperament, and create a personalized plan that focuses on play, trust, and clear communication for lasting results.",
         duration: "90 minutes",
-        location: "Your home or neutral venue",
-        price: "From $150",
-        category: "training",
-        features: ["Science-based methods", "Personalized approach", "Ongoing support"]
+        location: "In-home assessment",
+        price: "$180",
+        category: "assessment",
+        features: ["Comprehensive evaluation", "Personalized training plan", "Written recommendations", "Ongoing support guidance"]
       },
       {
-        name: "Walk & Train Sessions",
-        description: "Real-world training during walks to improve leash manners, recall, and social skills in everyday environments.",
+        name: "Behaviour Modification",
+        description: "Transform challenging behaviors through modern training methods. We focus on building trust and clear communication while ensuring your dog's genetic needs are met through engaging, play-based sessions.",
         duration: "60 minutes",
-        location: "Local parks & streets",
-        price: "From $120",
+        location: "In-home or suitable environment",
+        price: "$140",
         category: "training",
-        features: ["Real-world training", "Leash manners", "Social skills"]
+        features: ["Play-based approach", "Trust building", "Clear communication", "Genetic fulfillment focus"]
       },
       {
         name: "One-on-One Coaching",
-        description: "Personalized training sessions focused on your specific goals and challenges with dedicated one-on-one attention.",
-        duration: "75 minutes",
-        location: "Your home",
-        price: "From $140",
+        description: "Intensive personalized sessions that strengthen the bond between you and your dog. Using modern techniques focused on play and positive engagement to achieve lasting behavioral changes.",
+        duration: "60 minutes",
+        location: "In-home or designated area",
+        price: "$140",
         category: "training",
-        features: ["Personalized sessions", "One-on-one attention", "Goal-focused"]
+        features: ["Individual attention", "Bond strengthening", "Modern techniques", "Customized approach"]
       },
       {
-        name: "Professional Walks",
-        description: "Exercise and enrichment walks that maintain training progress while giving your dog physical and mental stimulation.",
-        duration: "30-60 minutes",
-        location: "Pick up from home",
-        price: "From $45",
-        category: "care",
-        features: ["Exercise & enrichment", "Training maintenance", "Physical & mental stimulation"]
+        name: "In-Home Obedience",
+        description: "Basic obedience training in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
+        duration: "30 minutes",
+        location: "In-home training",
+        price: "$70",
+        category: "training",
+        features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
       },
       {
-        name: "House Visits",
-        description: "Comprehensive in-home training to address specific household behaviours and establish routines in your dog's environment.",
-        duration: "90 minutes",
-        location: "Your home",
-        price: "From $160",
-        category: "training",
-        features: ["In-home training", "Household behaviours", "Routine establishment"]
+        name: "Virtual Consultation",
+        description: "One-hour video consultation perfect for troubleshooting specific issues, follow-up support, or getting started with training guidance from the comfort of your home.",
+        duration: "60 minutes",
+        location: "Video call (Zoom)",
+        price: "$120",
+        category: "consultation",
+        features: ["Convenient video call", "Problem solving", "Follow-up support", "Training guidance"]
       }
     ];
 
@@ -137,17 +137,35 @@ export class MemStorage implements IStorage {
     // Seed products
     const productData: InsertProduct[] = [
       {
-        name: "Training Leashes",
-        description: "Professional-grade training leashes in various lengths for different training scenarios.",
-        price: "50.00",
-        priceRange: "$35 - $65",
+        name: "Long Lines",
+        description: "Essential for recall training and giving your dog freedom while maintaining control. Perfect for building confidence in open spaces.",
+        price: "45.00",
+        priceRange: "$35 - $55",
         category: "equipment",
         imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
         inStock: true
       },
       {
+        name: "Standard Leash",
+        description: "High-quality everyday leash designed for comfortable walks and basic training exercises. Durable and reliable for daily use.",
+        price: "30.00",
+        priceRange: "$25 - $35",
+        category: "equipment",
+        imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        inStock: true
+      },
+      {
+        name: "Training Collars",
+        description: "Comfortable, adjustable collars designed for training sessions. Safe and effective for teaching proper leash manners.",
+        price: "40.00",
+        priceRange: "$30 - $50",
+        category: "equipment",
+        imageUrl: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        inStock: true
+      },
+      {
         name: "Training Balls",
-        description: "Durable balls designed for fetch training and reward-based learning activities.",
+        description: "Durable balls designed for fetch training and play-based learning. Great for building engagement and reward-based training.",
         price: "20.00",
         priceRange: "$15 - $25",
         category: "toys",
@@ -156,20 +174,29 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Tug Toys",
-        description: "Interactive tug toys perfect for building engagement and teaching impulse control.",
-        price: "30.00",
-        priceRange: "$20 - $40",
+        description: "Interactive tug toys perfect for building engagement and teaching impulse control through play. Essential for modern training methods.",
+        price: "25.00",
+        priceRange: "$20 - $35",
         category: "toys",
         imageUrl: "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
         inStock: true
       },
       {
-        name: "Training Collars",
-        description: "Comfortable, adjustable collars designed specifically for training sessions.",
-        price: "40.00",
-        priceRange: "$25 - $55",
+        name: "Training Clickers",
+        description: "Precise timing tools for mark-and-reward training. Help create clear communication between you and your dog.",
+        price: "12.00",
+        priceRange: "$8 - $15",
         category: "equipment",
-        imageUrl: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        imageUrl: "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        inStock: true
+      },
+      {
+        name: "Enrichment Toys",
+        description: "Mental stimulation toys that fulfill your dog's genetic needs. Perfect for keeping active minds engaged and satisfied.",
+        price: "35.00",
+        priceRange: "$25 - $45",
+        category: "toys",
+        imageUrl: "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
         inStock: true
       }
     ];
