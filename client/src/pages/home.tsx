@@ -15,7 +15,8 @@ import {
   Heart,
   Clock,
   MapPin,
-  DollarSign
+  DollarSign,
+  Target
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -38,11 +39,11 @@ export default function HomePage() {
   });
 
   const serviceIcons = {
+    "Initial Assessment": Target,
     "Behaviour Modification": GraduationCap,
-    "Walk & Train Sessions": Footprints,
     "One-on-One Coaching": User,
-    "Professional Walks": Route,
-    "House Visits": Home,
+    "In-Home Obedience": Home,
+    "Virtual Consultation": Phone,
   };
 
   return (

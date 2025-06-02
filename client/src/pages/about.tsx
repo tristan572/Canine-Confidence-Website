@@ -25,7 +25,7 @@ export default function AboutPage() {
             About Canine Confidence
           </h1>
           <p className="text-xl text-medium-grey mb-8">
-            Passionate about helping dogs and their humans live in harmony through balanced, relationship-focused training that brings out the best in both.
+            With over 5 years of experience and 80 five-star reviews on Madpaws, we're passionate about helping dogs and their humans live in harmony through modern training methods focused on play, trust, and genetic fulfillment.
           </p>
         </div>
       </section>
@@ -38,13 +38,13 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Our Mission</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Based in Brisbane, our mission is to build strong bonds between owners and their dogs through balanced, relationship-focused training that brings out the best in both.
+                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Based in Brisbane, our mission is to transform challenging behaviors through modern training methods focused on play, trust, bond, clear communication, and genetic fulfillment.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  We believe confident dogs come from confident owners—and that's where we come in. Our tailored one-on-one training plans are designed to empower owners with the tools, understanding, and support they need to guide their dogs toward a calm, happy, and fulfilled life.
+                  We believe every dog and owner combination is unique, which is why we personalize plans for each individual partnership. We're truly dedicated to successful outcomes and seeing through until the end, offering ongoing support for the life of the dog.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Play is at the heart of everything we do. We use it not just as a reward, but as a way to teach, connect, and motivate. Whether you're working through behavior challenges or building solid foundations, our training style is clear, fun, and practical.
+                  Play is at the heart of everything we do. We use it not just as a reward, but as a way to teach, connect, and motivate. Our approach focuses heavily on play with true care for the animal, ensuring your dog's genetic needs are met while building lasting confidence.
                 </p>
               </div>
 
@@ -111,9 +111,9 @@ export default function AboutPage() {
               <div className="bg-primary-blue p-4 rounded-full w-fit mx-auto mb-6">
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-4">Science-Based Methods</h3>
+              <h3 className="text-xl font-semibold text-charcoal mb-4">Modern Training Methods</h3>
               <p className="text-medium-grey">
-                Our training techniques are grounded in modern animal behavior science and positive reinforcement principles.
+                Our training techniques focus on play, trust, bond, clear communication, and fulfilling your dog's genetic needs.
               </p>
             </Card>
 
