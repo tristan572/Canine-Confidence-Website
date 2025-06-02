@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { insertBookingSchema } from "@shared/schema";
 import type { Service } from "@shared/schema";
@@ -106,6 +106,9 @@ export default function BookingForm({ preselectedService }: BookingFormProps) {
     <div className="max-w-2xl mx-auto">
       <DialogHeader className="mb-6">
         <DialogTitle className="text-2xl font-bold text-charcoal">Book a Training Session</DialogTitle>
+        <DialogDescription className="text-medium-grey">
+          Complete this form to book your training session. We'll contact you within 24 hours to confirm.
+        </DialogDescription>
         <div className="flex items-center space-x-2 mt-4">
           {[1, 2, 3].map((i) => (
             <div

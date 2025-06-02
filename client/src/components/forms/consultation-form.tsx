@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { insertConsultationSchema } from "@shared/schema";
 
@@ -57,9 +57,9 @@ export default function ConsultationForm() {
     <div className="max-w-md mx-auto">
       <DialogHeader className="mb-6">
         <DialogTitle className="text-2xl font-bold text-charcoal">Request Free Consultation</DialogTitle>
-        <p className="text-medium-grey">
+        <DialogDescription className="text-medium-grey">
           Get personalized advice in a quick 15-minute phone consultation at no cost.
-        </p>
+        </DialogDescription>
       </DialogHeader>
 
       <Form {...form}>
