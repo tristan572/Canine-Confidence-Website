@@ -1,7 +1,8 @@
 import { 
-  services, products, blogPosts, bookings, consultations, contactSubmissions, cartItems,
+  services, products, packages, blogPosts, bookings, consultations, contactSubmissions, cartItems,
   type Service, type InsertService,
   type Product, type InsertProduct,
+  type Package, type InsertPackage,
   type BlogPost, type InsertBlogPost,
   type Booking, type InsertBooking,
   type Consultation, type InsertConsultation,
@@ -20,6 +21,12 @@ export interface IStorage {
   getProduct(id: number): Promise<Product | undefined>;
   getProductsByCategory(category: string): Promise<Product[]>;
   createProduct(product: InsertProduct): Promise<Product>;
+
+  // Packages
+  getPackages(): Promise<Package[]>;
+  getPackage(id: number): Promise<Package | undefined>;
+  getPackagesByCategory(category: string): Promise<Package[]>;
+  createPackage(packageData: InsertPackage): Promise<Package>;
 
   // Blog Posts
   getBlogPosts(): Promise<BlogPost[]>;
@@ -50,6 +57,7 @@ export interface IStorage {
 export class MemStorage implements IStorage {
   private services: Map<number, Service>;
   private products: Map<number, Product>;
+  private packages: Map<number, Package>;
   private blogPosts: Map<number, BlogPost>;
   private bookings: Map<number, Booking>;
   private consultations: Map<number, Consultation>;
@@ -57,6 +65,7 @@ export class MemStorage implements IStorage {
   private cartItems: Map<number, CartItem>;
   private currentServiceId: number;
   private currentProductId: number;
+  private currentPackageId: number;
   private currentBlogPostId: number;
   private currentBookingId: number;
   private currentConsultationId: number;

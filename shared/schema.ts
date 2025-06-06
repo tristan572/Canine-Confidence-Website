@@ -24,6 +24,20 @@ export const products = pgTable("products", {
   inStock: boolean("in_stock").default(true),
 });
 
+export const packages = pgTable("packages", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  price: text("price").notNull(),
+  originalPrice: text("original_price"),
+  duration: text("duration").notNull(),
+  sessions: integer("sessions").notNull(),
+  category: text("category").notNull(),
+  features: text("features").array(),
+  isPopular: boolean("is_popular").default(false),
+  imageUrl: text("image_url"),
+});
+
 export const blogPosts = pgTable("blog_posts", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
@@ -97,6 +111,10 @@ export const insertProductSchema = createInsertSchema(products).omit({
   id: true,
 });
 
+export const insertPackageSchema = createInsertSchema(packages).omit({
+  id: true,
+});
+
 export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
   id: true,
   publishedAt: true,
@@ -131,6 +149,9 @@ export type InsertService = z.infer<typeof insertServiceSchema>;
 
 export type Product = typeof products.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
+
+export type Package = typeof packages.$inferSelect;
+export type InsertPackage = z.infer<typeof insertPackageSchema>;
 
 export type BlogPost = typeof blogPosts.$inferSelect;
 export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;
