@@ -6,7 +6,8 @@ import {
   insertBookingSchema, 
   insertConsultationSchema, 
   insertContactSubmissionSchema,
-  insertCartItemSchema 
+  insertCartItemSchema,
+  insertPackageSchema 
 } from "@shared/schema";
 
 if (!process.env.STRIPE_SECRET_KEY) {
@@ -64,6 +65,35 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(product);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch product" });
+    }
+  });
+
+  // Packages routes
+  app.get("/api/packages", async (req, res) => {
+    try {
+      const category = req.query.category as string;
+      let packages;
+      if (category) {
+        packages = await storage.getPackagesByCategory(category);
+      } else {
+        packages = await storage.getPackages();
+      }
+      res.json(packages);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch packages" });
+    }
+  });
+
+  app.get("/api/packages/:id", async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const packageData = await storage.getPackage(id);
+      if (!packageData) {
+        return res.status(404).json({ message: "Package not found" });
+      }
+      res.json(packageData);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch package" });
     }
   });
 

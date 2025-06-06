@@ -75,6 +75,7 @@ export class MemStorage implements IStorage {
   constructor() {
     this.services = new Map();
     this.products = new Map();
+    this.packages = new Map();
     this.blogPosts = new Map();
     this.bookings = new Map();
     this.consultations = new Map();
@@ -82,6 +83,7 @@ export class MemStorage implements IStorage {
     this.cartItems = new Map();
     this.currentServiceId = 1;
     this.currentProductId = 1;
+    this.currentPackageId = 1;
     this.currentBlogPostId = 1;
     this.currentBookingId = 1;
     this.currentConsultationId = 1;
@@ -212,6 +214,84 @@ export class MemStorage implements IStorage {
 
     productData.forEach(product => this.createProduct(product));
 
+    // Seed packages
+    const packageData: InsertPackage[] = [
+      {
+        name: "Puppy Foundation Package",
+        description: "Complete early development program for puppies 8-16 weeks. Build confidence, social skills, and basic manners during critical learning period.",
+        price: "$450",
+        originalPrice: "$550",
+        duration: "6 weeks",
+        sessions: 6,
+        category: "puppy",
+        features: [
+          "6 x 1-hour sessions",
+          "Socialisation protocols",
+          "House training guidance", 
+          "Basic commands (sit, stay, come)",
+          "Handling and grooming prep",
+          "Take-home training materials"
+        ],
+        isPopular: true
+      },
+      {
+        name: "Behaviour Transformation Package",
+        description: "Comprehensive program for dogs with challenging behaviours. Address reactivity, anxiety, aggression, and other complex issues.",
+        price: "$850",
+        originalPrice: "$950",
+        duration: "10 weeks", 
+        sessions: 10,
+        category: "behaviour",
+        features: [
+          "10 x 1.5-hour sessions",
+          "Detailed behaviour assessment",
+          "Customised training plan",
+          "Management strategies",
+          "Ongoing support between sessions",
+          "Follow-up check-ins"
+        ],
+        isPopular: true
+      },
+      {
+        name: "Advanced Obedience Package",
+        description: "Take your dog's training to the next level with advanced commands, off-leash reliability, and complex behaviours.",
+        price: "$650",
+        originalPrice: "$750",
+        duration: "8 weeks",
+        sessions: 8,
+        category: "advanced",
+        features: [
+          "8 x 1-hour sessions",
+          "Off-leash training",
+          "Advanced commands",
+          "Distance and duration work",
+          "Distraction training",
+          "Real-world practice sessions"
+        ],
+        isPopular: false
+      },
+      {
+        name: "Reactive Dog Rehabilitation",
+        description: "Specialised program for dogs showing reactivity towards other dogs, people, or environmental triggers.",
+        price: "$750",
+        originalPrice: "$850",
+        duration: "12 weeks",
+        sessions: 12,
+        category: "rehabilitation",
+        features: [
+          "12 x 1-hour sessions",
+          "Counter-conditioning protocols",
+          "Desensitisation training",
+          "Management techniques",
+          "Safe socialisation strategies",
+          "Lifetime support guarantee"
+        ],
+        isPopular: false
+      }
+    ];
+
+    packageData.forEach(pkg => this.createPackage(pkg));
+
     // Seed blog posts
     const blogData: InsertBlogPost[] = [
       {
@@ -277,6 +357,26 @@ export class MemStorage implements IStorage {
     const newProduct: Product = { ...product, id };
     this.products.set(id, newProduct);
     return newProduct;
+  }
+
+  // Packages
+  async getPackages(): Promise<Package[]> {
+    return Array.from(this.packages.values());
+  }
+
+  async getPackage(id: number): Promise<Package | undefined> {
+    return this.packages.get(id);
+  }
+
+  async getPackagesByCategory(category: string): Promise<Package[]> {
+    return Array.from(this.packages.values()).filter(pkg => pkg.category === category);
+  }
+
+  async createPackage(packageData: InsertPackage): Promise<Package> {
+    const id = this.currentPackageId++;
+    const newPackage: Package = { ...packageData, id };
+    this.packages.set(id, newPackage);
+    return newPackage;
   }
 
   // Blog Posts
