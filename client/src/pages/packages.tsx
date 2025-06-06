@@ -98,6 +98,13 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
     onClose();
   };
 
+  // Reset widget state when dialog closes
+  useEffect(() => {
+    if (!isOpen) {
+      setShowWidget(false);
+    }
+  }, [isOpen]);
+
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       {!showWidget ? (
