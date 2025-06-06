@@ -68,7 +68,7 @@ export default function HomePage() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net', '_blank')}
+                  onClick={() => setShowBookingWidget(true)}
                   className="btn-primary text-lg px-8 py-4"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
@@ -307,7 +307,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => window.open('https://canineconfidence.simplybook.net', '_blank')}
+                onClick={() => setShowBookingWidget(true)}
                 className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
               >
                 <Calendar className="w-5 h-5 mr-2" />
