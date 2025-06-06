@@ -37,7 +37,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
             </div>
           </div>
           <Button 
-            onClick={() => setShowBookingWidget(true)}
+            onClick={() => window.open('https://canineconfidence.simplybook.net', '_blank')}
             className="w-full btn-primary"
           >
             <Calendar className="w-4 h-4 mr-2" />
