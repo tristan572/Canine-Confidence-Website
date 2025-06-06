@@ -135,8 +135,8 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
         )}
         
         <CardHeader className="text-center pb-4">
-          <CardTitle className="text-2xl font-bold text-charcoal">{pkg.name}</CardTitle>
-          <div className="flex items-center justify-center gap-4 text-sm text-medium-grey mt-2">
+          <CardTitle className="text-2xl font-bold text-gray-800">{pkg.name}</CardTitle>
+          <div className="flex items-center justify-center gap-4 text-sm text-gray-600 mt-2">
             <div className="flex items-center gap-1">
               <Clock className="w-4 h-4" />
               {pkg.duration}
@@ -149,13 +149,13 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
         </CardHeader>
 
         <CardContent className="space-y-6">
-          <p className="text-medium-grey text-center">{pkg.description}</p>
+          <p className="text-gray-600 text-center">{pkg.description}</p>
 
           <div className="text-center">
             <div className="flex items-center justify-center gap-2">
-              <span className="text-3xl font-bold text-primary-blue">{pkg.price}</span>
+              <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
               {pkg.originalPrice && (
-                <span className="text-lg text-medium-grey line-through">{pkg.originalPrice}</span>
+                <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
               )}
             </div>
             {pkg.originalPrice && (
@@ -166,10 +166,10 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
           </div>
 
           <div className="space-y-3">
-            <h4 className="font-semibold text-charcoal">What's Included:</h4>
+            <h4 className="font-semibold text-gray-800">What's Included:</h4>
             <ul className="space-y-2">
               {pkg.features?.map((feature, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm">
+                <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
                   <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                   <span>{feature}</span>
                 </li>
@@ -287,41 +287,41 @@ export default function PackagesPage() {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-charcoal mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Why Choose Our Training Packages?
             </h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our structured programs provide comprehensive solutions for lasting behaviour change
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-2">Proven Methods</h3>
-              <p className="text-medium-grey">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Methods</h3>
+              <p className="text-gray-600">
                 Science-based training techniques that focus on building trust and confidence
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-2">Personalised Approach</h3>
-              <p className="text-medium-grey">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Personalised Approach</h3>
+              <p className="text-gray-600">
                 Every program is tailored to your dog's unique personality and learning style
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-2">Ongoing Support</h3>
-              <p className="text-medium-grey">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Ongoing Support</h3>
+              <p className="text-gray-600">
                 Continued guidance and support throughout your training journey
               </p>
             </div>
