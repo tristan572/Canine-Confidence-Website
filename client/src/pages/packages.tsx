@@ -34,7 +34,7 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
             "url": "https://canineconfidence.simplybook.net",
             "theme": "simple_beauty_theme",
             "theme_settings": {
-              "sb_base_color": "#5a7f9e",
+              "sb_base_color": "#2563EB",
               "header_color": "#ffffff",
               "timeline_hide_unavailable": "0",
               "hide_past_days": "0",
@@ -43,14 +43,14 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
               "display_item_mode": "block",
               "body_bg_color": "#ffffff",
               "sb_review_image": "",
-              "dark_font_color": "#474747",
+              "dark_font_color": "#374151",
               "light_font_color": "#ffffff",
-              "btn_color_1": "#fad02c",
-              "sb_company_label_color": "#352b05",
+              "btn_color_1": "#2563EB",
+              "sb_company_label_color": "#374151",
               "hide_img_mode": "0",
               "show_sidebar": "1",
-              "sb_busy": "#c7b3b3",
-              "sb_available": "#d6ebff"
+              "sb_busy": "#E5E7EB",
+              "sb_available": "#DBEAFE"
             },
             "timeline": null,
             "datepicker": null,
@@ -98,10 +98,9 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
     onClose();
   };
 
-  if (!showWidget) {
-    // Show the "Secure Booking System" popup first
-    return (
-      <Dialog open={isOpen} onOpenChange={handleClose}>
+  return (
+    <Dialog open={isOpen} onOpenChange={handleClose}>
+      {!showWidget ? (
         <DialogContent className="max-w-md w-full p-6">
           <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
             Secure Booking System
@@ -132,44 +131,39 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
             <p>📅 Real-time availability • 💳 Secure payments</p>
           </div>
         </DialogContent>
-      </Dialog>
-    );
-  }
-
-  // Show the embedded widget
-  return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0">
-        <div className="bg-blue-600 p-4 flex justify-between items-center">
-          <div>
-            <DialogTitle className="text-xl font-bold text-white">
-              Book Your Training Package
-            </DialogTitle>
-            <DialogDescription className="text-blue-100 text-sm">
-              Select your preferred training package and schedule
-            </DialogDescription>
+      ) : (
+        <DialogContent className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0">
+          <div className="bg-blue-600 p-4 flex justify-between items-center">
+            <div>
+              <DialogTitle className="text-xl font-bold text-white">
+                Book Your Training Package
+              </DialogTitle>
+              <DialogDescription className="text-blue-100 text-sm">
+                Select your preferred training package and schedule
+              </DialogDescription>
+            </div>
+            <Button
+              onClick={handleClose}
+              variant="ghost"
+              size="sm"
+              className="text-white hover:bg-blue-700"
+            >
+              ✕
+            </Button>
           </div>
-          <Button
-            onClick={handleClose}
-            variant="ghost"
-            size="sm"
-            className="text-white hover:bg-blue-700"
+          
+          <div 
+            ref={widgetContainerRef}
+            className="w-full h-[650px] bg-white flex items-center justify-center"
+            style={{ minHeight: '650px' }}
           >
-            ✕
-          </Button>
-        </div>
-        
-        <div 
-          ref={widgetContainerRef}
-          className="w-full h-[650px] bg-white flex items-center justify-center"
-          style={{ minHeight: '650px' }}
-        >
-          <div className="text-center">
-            <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
-            <p className="text-gray-600">Loading booking system...</p>
+            <div className="text-center">
+              <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
+              <p className="text-gray-600">Loading booking system...</p>
+            </div>
           </div>
-        </div>
-      </DialogContent>
+        </DialogContent>
+      )}
     </Dialog>
   );
 };
