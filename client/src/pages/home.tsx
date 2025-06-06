@@ -18,20 +18,26 @@ import {
   MapPin,
   DollarSign,
   Target,
-  Calendar
+  Calendar,
+  CheckCircle,
+  Star
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceCard from "@/components/ui/service-card";
 import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
-import type { Service, Product, BlogPost } from "@shared/schema";
+import type { Service, Product, BlogPost, Package } from "@shared/schema";
 
 export default function HomePage() {
   const [showBookingWidget, setShowBookingWidget] = useState(false);
   
   const { data: services, isLoading: servicesLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
+  });
+
+  const { data: packages, isLoading: packagesLoading } = useQuery<Package[]>({
+    queryKey: ["/api/packages"],
   });
 
   const { data: products, isLoading: productsLoading } = useQuery<Product[]>({
@@ -121,6 +127,114 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Training Packages Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Star className="w-4 h-4" />
+              Most Popular Training Solutions
+            </div>
+            <h2 className="text-4xl font-bold text-charcoal mb-4">Comprehensive Training Packages</h2>
+            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
+              Our structured training programs are designed to build confidence in both you and your dog through proven methods and ongoing support.
+            </p>
+          </div>
+
+          {packagesLoading ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[...Array(4)].map((_, i) => (
+                <Card key={i} className="animate-pulse">
+                  <CardContent className="p-8">
+                    <div className="h-6 bg-gray-200 rounded mb-4"></div>
+                    <div className="h-16 bg-gray-200 rounded mb-6"></div>
+                    <div className="h-8 bg-gray-200 rounded mb-4"></div>
+                    <div className="space-y-2 mb-6">
+                      {[...Array(3)].map((_, j) => (
+                        <div key={j} className="h-4 bg-gray-200 rounded"></div>
+                      ))}
+                    </div>
+                    <div className="h-10 bg-gray-200 rounded"></div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {packages?.map((pkg) => (
+                <Card key={pkg.id} className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 relative overflow-hidden group">
+                  {pkg.name === "Complete Confidence Package" && (
+                    <div className="absolute top-0 right-0 bg-gradient-to-l from-yellow-400 to-orange-400 text-white px-3 py-1 text-xs font-bold">
+                      BEST VALUE
+                    </div>
+                  )}
+                  <CardContent className="p-8">
+                    <div className="text-center mb-6">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
+                      <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
+                      
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
+                        {pkg.originalPrice && (
+                          <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
+                        )}
+                      </div>
+                      {pkg.originalPrice && (
+                        <p className="text-sm text-green-600 font-medium mt-1">
+                          Save {parseInt(pkg.originalPrice.replace('$', '')) - parseInt(pkg.price.replace('$', ''))} AUD
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="space-y-3 mb-8">
+                      <h4 className="font-semibold text-gray-800 text-sm">What's Included:</h4>
+                      <ul className="space-y-2">
+                        {pkg.features?.slice(0, 4).map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
+                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                        {pkg.features && pkg.features.length > 4 && (
+                          <li className="text-sm text-blue-600 font-medium">
+                            + {pkg.features.length - 4} more benefits
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+
+                    <Link href="/packages">
+                      <Button className="w-full btn-primary text-sm py-3 group-hover:bg-blue-700 transition-colors">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Learn More & Book
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
+
+          <div className="text-center mt-12">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Not sure which package is right for you?</h3>
+              <p className="text-medium-grey mb-4">Get personalized recommendations in a free 15-minute consultation</p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="btn-primary px-6">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Get Free Consultation
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
