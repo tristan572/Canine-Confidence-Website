@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Star, Clock, Users, CheckCircle, Calendar } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import type { Package } from "@shared/schema";
@@ -97,29 +97,23 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
-        <div className="flex justify-between items-center p-4 border-b bg-primary-blue">
-          <h2 className="text-xl font-bold text-white">Book Your Package</h2>
-          <button
-            onClick={onClose}
-            className="text-white hover:text-gray-200 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-primary-blue/20 transition-colors"
-            aria-label="Close booking widget"
-          >
-            ×
-          </button>
-        </div>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-hidden p-0">
+        <DialogTitle className="text-xl font-bold text-white bg-primary-blue p-4">
+          Book Your Package
+        </DialogTitle>
+        <DialogDescription className="sr-only">
+          Select and book your preferred training package using our scheduling system
+        </DialogDescription>
         
         <div 
           ref={widgetContainerRef}
           className="h-[600px] w-full"
           id="simplybook-packages-widget-container"
         />
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
@@ -230,12 +224,12 @@ export default function PackagesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-blue to-secondary-blue text-white py-20">
+      <section className="bg-gradient-to-br from-primary-blue to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Training Packages
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
             Comprehensive training programs designed to transform your dog's behaviour and strengthen your bond
           </p>
           <div className="flex flex-wrap justify-center gap-4">
