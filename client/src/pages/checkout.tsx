@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, ShoppingCart } from "lucide-react";
 import { Link } from "wouter";
+import { getCartSessionId } from "@/lib/cart";
 import type { CartItem, Product } from "@shared/schema";
 
 // Make sure to call `loadStripe` outside of a component's render to avoid
@@ -132,10 +133,7 @@ const CartSummary = ({ cartItems, products }: {
 
 export default function CheckoutPage() {
   const [clientSecret, setClientSecret] = useState("");
-  const [sessionId] = useState(() => 
-    sessionStorage.getItem('cart-session') || 
-    Math.random().toString(36).substring(2, 15)
-  );
+  const sessionId = getCartSessionId();
 
   // Fetch cart items
   const { data: cartItems = [], isLoading: isCartLoading } = useQuery({

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { getCartSessionId } from "@/lib/cart";
 import type { Product } from "@shared/schema";
 
 interface ProductCardProps {
@@ -15,19 +16,9 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // Get or create session ID for cart functionality
-  const getSessionId = () => {
-    let sessionId = sessionStorage.getItem('cart-session');
-    if (!sessionId) {
-      sessionId = 'cart-' + Math.random().toString(36).substring(2, 15);
-      sessionStorage.setItem('cart-session', sessionId);
-    }
-    return sessionId;
-  };
-
   const addToCartMutation = useMutation({
     mutationFn: async () => {
-      const sessionId = getSessionId();
+      const sessionId = getCartSessionId();
       const response = await apiRequest("POST", "/api/cart", {
         productId: product.id,
         quantity: 1,
@@ -40,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         title: "Added to cart",
         description: `${product.name} has been added to your cart.`,
       });
-      const sessionId = getSessionId();
+      const sessionId = getCartSessionId();
       queryClient.invalidateQueries({ queryKey: ['/api/cart', sessionId] });
     },
     onError: (error) => {

@@ -7,20 +7,11 @@ import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ShoppingCart from "@/components/ui/shopping-cart";
+import { getCartSessionId } from "@/lib/cart";
 
 export default function Navbar() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  // Get or create session ID for cart functionality
-  const getSessionId = () => {
-    let sessionId = sessionStorage.getItem('cart-session');
-    if (!sessionId) {
-      sessionId = 'cart-' + Math.random().toString(36).substring(2, 15);
-      sessionStorage.setItem('cart-session', sessionId);
-    }
-    return sessionId;
-  };
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -67,7 +58,7 @@ export default function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <ShoppingCart sessionId={getSessionId()} />
+            <ShoppingCart sessionId={getCartSessionId()} />
             
             <Dialog>
               <DialogTrigger asChild>

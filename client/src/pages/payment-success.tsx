@@ -5,13 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { apiRequest } from '@/lib/queryClient';
 import { Link } from 'wouter';
+import { getCartSessionId, clearCartSession } from '@/lib/cart';
 
 export default function PaymentSuccessPage() {
   const [, setLocation] = useLocation();
   const [isConfirmed, setIsConfirmed] = useState(false);
-  const [sessionId] = useState(() => 
-    sessionStorage.getItem('cart-session') || ''
-  );
+  const sessionId = getCartSessionId();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
