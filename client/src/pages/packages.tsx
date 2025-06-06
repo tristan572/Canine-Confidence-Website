@@ -196,7 +196,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
 };
 
 export default function PackagesPage() {
-  const { data: packages = [], isLoading } = useQuery({
+  const { data: packages = [], isLoading, error } = useQuery({
     queryKey: ['/api/packages'],
     queryFn: () => apiRequest('GET', '/api/packages').then(res => res.json())
   });
@@ -218,15 +218,28 @@ export default function PackagesPage() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full" />
+        <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full" />
       </div>
     );
   }
 
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-xl font-bold text-gray-800 mb-2">Error Loading Packages</h2>
+          <p className="text-gray-600">Please try refreshing the page</p>
+        </div>
+      </div>
+    );
+  }
+
+  console.log('Packages data:', packages, 'isLoading:', isLoading, 'error:', error);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-blue to-blue-600 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Training Packages
@@ -236,16 +249,16 @@ export default function PackagesPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold">100+</div>
-              <div className="text-sm">Dogs Trained</div>
+              <div className="text-2xl font-bold text-white">100+</div>
+              <div className="text-sm text-white">Dogs Trained</div>
             </div>
             <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold">95%</div>
-              <div className="text-sm">Success Rate</div>
+              <div className="text-2xl font-bold text-white">95%</div>
+              <div className="text-sm text-white">Success Rate</div>
             </div>
             <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold">5★</div>
-              <div className="text-sm">Average Rating</div>
+              <div className="text-2xl font-bold text-white">5★</div>
+              <div className="text-sm text-white">Average Rating</div>
             </div>
           </div>
         </div>
@@ -268,6 +281,13 @@ export default function PackagesPage() {
             ))}
           </div>
 
+          {/* Debug Info */}
+          <div className="bg-yellow-100 p-4 rounded mb-4 text-sm">
+            <p className="text-gray-800">Debug: Packages loaded: {packages.length}, Filtered: {filteredPackages.length}</p>
+            <p className="text-gray-800">Selected category: {selectedCategory}</p>
+            <p className="text-gray-800">Loading: {isLoading ? 'true' : 'false'}</p>
+          </div>
+
           {/* Packages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPackages.map((pkg: Package) => (
@@ -275,9 +295,10 @@ export default function PackagesPage() {
             ))}
           </div>
 
-          {filteredPackages.length === 0 && (
+          {filteredPackages.length === 0 && !isLoading && (
             <div className="text-center py-12">
-              <p className="text-xl text-medium-grey">No packages found in this category.</p>
+              <p className="text-xl text-gray-600">No packages found in this category.</p>
+              <p className="text-gray-500 mt-2">Total packages available: {packages.length}</p>
             </div>
           )}
         </div>
