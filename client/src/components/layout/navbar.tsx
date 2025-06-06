@@ -109,6 +109,10 @@ export default function Navbar() {
                 ))}
                 
                 <div className="pt-4 space-y-3">
+                  <div className="flex justify-center">
+                    <ShoppingCart sessionId={getCartSessionId()} />
+                  </div>
+                  
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button variant="outline" className="w-full border-primary-blue text-primary-blue hover:bg-light-blue">
