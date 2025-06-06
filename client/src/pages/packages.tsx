@@ -16,8 +16,8 @@ declare global {
 
 const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const handleBookingClick = () => {
-    // Open SimplyBook.me in new tab, matching services flow
-    window.open('https://canineconfidence.simplybook.net', '_blank');
+    // Open SimplyBook.me booking page - let user navigate to packages
+    window.open('https://canineconfidence.simplybook.net/v2/', '_blank');
     onClose();
   };
 
@@ -28,7 +28,7 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
           Secure Booking System
         </DialogTitle>
         <DialogDescription className="text-gray-600 mb-6">
-          You'll be redirected to our secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
+          You'll be redirected to our secure booking platform. Once there, please select "Training Packages" from the service categories to book your preferred package with integrated payment processing.
         </DialogDescription>
         
         <div className="space-y-4">
