@@ -15,105 +15,38 @@ declare global {
 }
 
 const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const widgetContainerRef = useRef<HTMLDivElement>(null);
-  const widgetInstanceRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (!isOpen || !widgetContainerRef.current) return;
-
-    const loadWidget = () => {
-      if (window.SimplybookWidget && widgetContainerRef.current) {
-        // Clear any existing widget
-        widgetContainerRef.current.innerHTML = '';
-        
-        // Create the package-specific widget
-        widgetInstanceRef.current = new window.SimplybookWidget({
-          "widget_type": "iframe",
-          "url": "https://canineconfidence.simplybook.net",
-          "theme": "simple_beauty_theme",
-          "theme_settings": {
-            "sb_base_color": "#2563EB",
-            "header_color": "#ffffff",
-            "timeline_hide_unavailable": "1",
-            "hide_past_days": "0",
-            "timeline_show_end_time": "0",
-            "timeline_modern_display": "as_slots",
-            "display_item_mode": "block",
-            "body_bg_color": "#ffffff",
-            "sb_review_image": "",
-            "dark_font_color": "#374151",
-            "light_font_color": "#ffffff",
-            "btn_color_1": "#2563EB",
-            "sb_company_label_color": "#374151",
-            "hide_img_mode": "0",
-            "show_sidebar": "1",
-            "sb_busy": "#E5E7EB",
-            "sb_available": "#DBEAFE"
-          },
-          "timeline": null,
-          "datepicker": null,
-          "is_rtl": false,
-          "app_config": {
-            "clear_session": 0,
-            "allow_switch_to_ada": 0,
-            "predefined": []
-          },
-          "navigate": "packages"
-        });
-      }
-    };
-
-    // Check if SimplybookWidget is already loaded
-    if (window.SimplybookWidget) {
-      loadWidget();
-    } else {
-      // Load the script if not already loaded
-      const existingScript = document.querySelector('script[src*="widget.simplybook.net"]');
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.src = '//widget.simplybook.net/v2/widget/widget.js';
-        script.type = 'text/javascript';
-        script.onload = loadWidget;
-        document.head.appendChild(script);
-      } else {
-        // Script exists but may not be loaded yet
-        const checkWidget = () => {
-          if (window.SimplybookWidget) {
-            loadWidget();
-          } else {
-            setTimeout(checkWidget, 100);
-          }
-        };
-        checkWidget();
-      }
-    }
-
-    return () => {
-      // Cleanup widget when component unmounts or closes
-      if (widgetInstanceRef.current && widgetContainerRef.current) {
-        widgetContainerRef.current.innerHTML = '';
-        widgetInstanceRef.current = null;
-      }
-    };
-  }, [isOpen]);
+  const handleBookingClick = () => {
+    // Open SimplyBook.me directly in a new tab for packages
+    window.open('https://canineconfidence.simplybook.net/v2/#book/location/1/category/1/', '_blank');
+    onClose();
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-hidden p-0">
-        <div className="bg-primary-blue p-4">
-          <DialogTitle className="text-xl font-bold text-white">
-            Book Your Package
-          </DialogTitle>
-          <DialogDescription className="text-blue-100 text-sm">
-            Select and book your preferred training package using our scheduling system
-          </DialogDescription>
-        </div>
+      <DialogContent className="max-w-md w-full p-6">
+        <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+          Book Your Package
+        </DialogTitle>
+        <DialogDescription className="text-gray-600 mb-6">
+          You'll be redirected to our secure booking system to select and schedule your training package.
+        </DialogDescription>
         
-        <div 
-          ref={widgetContainerRef}
-          className="h-[600px] w-full"
-          id="simplybook-packages-widget-container"
-        />
+        <div className="space-y-4">
+          <Button 
+            onClick={handleBookingClick}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
+          >
+            Continue to Booking System
+          </Button>
+          
+          <Button 
+            onClick={onClose}
+            variant="outline"
+            className="w-full"
+          >
+            Cancel
+          </Button>
+        </div>
       </DialogContent>
     </Dialog>
   );
@@ -234,8 +167,6 @@ export default function PackagesPage() {
     );
   }
 
-  console.log('Packages data:', packages, 'isLoading:', isLoading, 'error:', error);
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -279,13 +210,6 @@ export default function PackagesPage() {
                 {category.label}
               </Button>
             ))}
-          </div>
-
-          {/* Debug Info */}
-          <div className="bg-yellow-100 p-4 rounded mb-4 text-sm">
-            <p className="text-gray-800">Debug: Packages loaded: {packages.length}, Filtered: {filteredPackages.length}</p>
-            <p className="text-gray-800">Selected category: {selectedCategory}</p>
-            <p className="text-gray-800">Loading: {isLoading ? 'true' : 'false'}</p>
           </div>
 
           {/* Packages Grid */}
