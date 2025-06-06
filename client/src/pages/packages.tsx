@@ -19,101 +19,113 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
   const widgetInstanceRef = useRef<any>(null);
 
   useEffect(() => {
-    if (!isOpen || !widgetContainerRef.current) return;
+    if (!isOpen) return;
 
     const loadWidget = () => {
       if (window.SimplybookWidget && widgetContainerRef.current) {
         // Clear any existing widget
         widgetContainerRef.current.innerHTML = '';
         
-        // Create the package-specific widget using your exact code
-        widgetInstanceRef.current = new window.SimplybookWidget({
-          "widget_type": "iframe",
-          "url": "https://canineconfidence.simplybook.net",
-          "theme": "simple_beauty_theme",
-          "theme_settings": {
-            "sb_base_color": "#5a7f9e",
-            "header_color": "#ffffff",
-            "timeline_hide_unavailable": "0",
-            "hide_past_days": "0",
-            "timeline_show_end_time": "0",
-            "timeline_modern_display": "as_slots",
-            "display_item_mode": "block",
-            "body_bg_color": "#ffffff",
-            "sb_review_image": "",
-            "dark_font_color": "#474747",
-            "light_font_color": "#ffffff",
-            "btn_color_1": "#fad02c",
-            "sb_company_label_color": "#352b05",
-            "hide_img_mode": "0",
-            "show_sidebar": "1",
-            "sb_busy": "#c7b3b3",
-            "sb_available": "#d6ebff"
-          },
-          "timeline": null,
-          "datepicker": null,
-          "is_rtl": false,
-          "app_config": {
-            "clear_session": 0,
-            "allow_switch_to_ada": 0,
-            "predefined": []
-          },
-          "navigate": "packages"
-        });
+        // Create the package-specific widget
+        try {
+          widgetInstanceRef.current = new window.SimplybookWidget({
+            "widget_type": "iframe",
+            "url": "https://canineconfidence.simplybook.net",
+            "theme": "simple_beauty_theme",
+            "theme_settings": {
+              "sb_base_color": "#5a7f9e",
+              "header_color": "#ffffff",
+              "timeline_hide_unavailable": "0",
+              "hide_past_days": "0",
+              "timeline_show_end_time": "0",
+              "timeline_modern_display": "as_slots",
+              "display_item_mode": "block",
+              "body_bg_color": "#ffffff",
+              "sb_review_image": "",
+              "dark_font_color": "#474747",
+              "light_font_color": "#ffffff",
+              "btn_color_1": "#fad02c",
+              "sb_company_label_color": "#352b05",
+              "hide_img_mode": "0",
+              "show_sidebar": "1",
+              "sb_busy": "#c7b3b3",
+              "sb_available": "#d6ebff"
+            },
+            "timeline": null,
+            "datepicker": null,
+            "is_rtl": false,
+            "app_config": {
+              "clear_session": 0,
+              "allow_switch_to_ada": 0,
+              "predefined": []
+            },
+            "navigate": "packages"
+          });
+          
+          // Append the widget to our container
+          if (widgetInstanceRef.current && widgetContainerRef.current) {
+            widgetContainerRef.current.appendChild(widgetInstanceRef.current);
+          }
+        } catch (error) {
+          console.error('Error creating SimplyBook widget:', error);
+        }
       }
     };
 
-    // Check if SimplybookWidget is already loaded
-    if (window.SimplybookWidget) {
-      loadWidget();
+    // Load script and widget
+    const script = document.createElement('script');
+    script.src = 'https://widget.simplybook.net/v2/widget/widget.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    script.onload = () => {
+      setTimeout(loadWidget, 100);
+    };
+    
+    if (!document.querySelector('script[src*="widget.simplybook.net"]')) {
+      document.head.appendChild(script);
     } else {
-      // Load the script if not already loaded
-      const existingScript = document.querySelector('script[src*="widget.simplybook.net"]');
-      if (!existingScript) {
-        const script = document.createElement('script');
-        script.src = '//widget.simplybook.net/v2/widget/widget.js';
-        script.type = 'text/javascript';
-        script.onload = loadWidget;
-        document.head.appendChild(script);
-      } else {
-        // Script exists but may not be loaded yet
-        const checkWidget = () => {
-          if (window.SimplybookWidget) {
-            loadWidget();
-          } else {
-            setTimeout(checkWidget, 100);
-          }
-        };
-        checkWidget();
-      }
+      loadWidget();
     }
 
     return () => {
-      // Cleanup widget when component unmounts or closes
-      if (widgetInstanceRef.current && widgetContainerRef.current) {
+      // Cleanup
+      if (widgetContainerRef.current) {
         widgetContainerRef.current.innerHTML = '';
-        widgetInstanceRef.current = null;
       }
+      widgetInstanceRef.current = null;
     };
   }, [isOpen]);
 
+  if (!isOpen) return null;
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-hidden p-0">
+      <DialogContent 
+        className="max-w-4xl w-full max-h-[90vh] overflow-hidden p-0"
+        aria-describedby="booking-widget-description"
+      >
         <div className="bg-blue-600 p-4">
           <DialogTitle className="text-xl font-bold text-white">
-            Book Your Package
+            Book Your Training Package
           </DialogTitle>
-          <DialogDescription className="text-blue-100 text-sm">
-            Select and book your preferred training package
+          <DialogDescription 
+            id="booking-widget-description"
+            className="text-blue-100 text-sm"
+          >
+            Select and book your preferred training package using our scheduling system
           </DialogDescription>
         </div>
         
         <div 
           ref={widgetContainerRef}
-          className="h-[600px] w-full"
+          className="h-[600px] w-full bg-gray-50 flex items-center justify-center"
           id="simplybook-packages-widget-container"
-        />
+        >
+          <div className="text-center">
+            <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
+            <p className="text-gray-600">Loading booking system...</p>
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
   );
