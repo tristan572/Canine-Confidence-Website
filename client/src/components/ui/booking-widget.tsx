@@ -29,7 +29,7 @@ export default function BookingWidget({ isOpen, onClose }: BookingWidgetProps) {
           "url": "https://canineconfidence.simplybook.net",
           "theme": "simple_beauty_theme",
           "theme_settings": {
-            "sb_base_color": "#5a7f9e",
+            "sb_base_color": "#2563EB",
             "header_color": "#ffffff",
             "timeline_hide_unavailable": "1",
             "hide_past_days": "0",
@@ -38,14 +38,14 @@ export default function BookingWidget({ isOpen, onClose }: BookingWidgetProps) {
             "display_item_mode": "block",
             "body_bg_color": "#ffffff",
             "sb_review_image": "",
-            "dark_font_color": "#474747",
+            "dark_font_color": "#374151",
             "light_font_color": "#ffffff",
-            "btn_color_1": "#fad02c",
-            "sb_company_label_color": "#352b05",
+            "btn_color_1": "#2563EB",
+            "sb_company_label_color": "#374151",
             "hide_img_mode": "1",
             "show_sidebar": "1",
-            "sb_busy": "#c7b3b3",
-            "sb_available": "#d6ebff"
+            "sb_busy": "#E5E7EB",
+            "sb_available": "#DBEAFE"
           },
           "timeline": "modern",
           "datepicker": "top_calendar",
