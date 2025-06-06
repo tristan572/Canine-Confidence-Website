@@ -16,8 +16,8 @@ declare global {
 
 const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const handleBookingClick = () => {
-    // Open SimplyBook.me directly in a new tab for packages
-    window.open('https://canineconfidence.simplybook.net/v2/#book/location/1/category/1/', '_blank');
+    // Open SimplyBook.me main booking page
+    window.open('https://canineconfidence.simplybook.net', '_blank');
     onClose();
   };
 
@@ -25,10 +25,10 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-md w-full p-6">
         <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
-          Book Your Package
+          Book Your Training Package
         </DialogTitle>
         <DialogDescription className="text-gray-600 mb-6">
-          You'll be redirected to our secure booking system to select and schedule your training package.
+          You'll be redirected to our booking system. Once there, please select "Training Packages" from the service categories to book your preferred package.
         </DialogDescription>
         
         <div className="space-y-4">
@@ -36,7 +36,7 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
             onClick={handleBookingClick}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
           >
-            Continue to Booking System
+            Go to Booking System
           </Button>
           
           <Button 
