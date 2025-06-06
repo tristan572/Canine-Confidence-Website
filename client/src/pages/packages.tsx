@@ -15,20 +15,31 @@ declare global {
 }
 
 const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const widgetContainerRef = useRef<HTMLDivElement>(null);
-  const widgetInstanceRef = useRef<any>(null);
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Load the SimplyBook.me script once
+    if (!document.querySelector('script[src*="widget.simplybook.net"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://widget.simplybook.net/v2/widget/widget.js';
+      script.type = 'text/javascript';
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
 
-    const loadWidget = () => {
-      if (window.SimplybookWidget && widgetContainerRef.current) {
-        // Clear any existing widget
-        widgetContainerRef.current.innerHTML = '';
-        
-        // Create the package-specific widget
-        try {
-          widgetInstanceRef.current = new window.SimplybookWidget({
+    // Initialize the widget when dialog opens
+    const timer = setTimeout(() => {
+      if (window.SimplybookWidget) {
+        const container = document.getElementById('simplybook-widget-container');
+        if (container) {
+          container.innerHTML = '';
+          
+          // Create widget with your configuration
+          const widget = new window.SimplybookWidget({
             "widget_type": "iframe",
             "url": "https://canineconfidence.simplybook.net",
             "theme": "simple_beauty_theme",
@@ -61,39 +72,11 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
             },
             "navigate": "packages"
           });
-          
-          // Append the widget to our container
-          if (widgetInstanceRef.current && widgetContainerRef.current) {
-            widgetContainerRef.current.appendChild(widgetInstanceRef.current);
-          }
-        } catch (error) {
-          console.error('Error creating SimplyBook widget:', error);
         }
       }
-    };
+    }, 500);
 
-    // Load script and widget
-    const script = document.createElement('script');
-    script.src = 'https://widget.simplybook.net/v2/widget/widget.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    script.onload = () => {
-      setTimeout(loadWidget, 100);
-    };
-    
-    if (!document.querySelector('script[src*="widget.simplybook.net"]')) {
-      document.head.appendChild(script);
-    } else {
-      loadWidget();
-    }
-
-    return () => {
-      // Cleanup
-      if (widgetContainerRef.current) {
-        widgetContainerRef.current.innerHTML = '';
-      }
-      widgetInstanceRef.current = null;
-    };
+    return () => clearTimeout(timer);
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -101,31 +84,36 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className="max-w-4xl w-full max-h-[90vh] overflow-hidden p-0"
-        aria-describedby="booking-widget-description"
+        className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0"
+        aria-describedby="booking-description"
       >
-        <div className="bg-blue-600 p-4">
-          <DialogTitle className="text-xl font-bold text-white">
-            Book Your Training Package
-          </DialogTitle>
-          <DialogDescription 
-            id="booking-widget-description"
-            className="text-blue-100 text-sm"
+        <div className="bg-blue-600 p-4 flex justify-between items-center">
+          <div>
+            <DialogTitle className="text-xl font-bold text-white">
+              Book Your Training Package
+            </DialogTitle>
+            <DialogDescription 
+              id="booking-description"
+              className="text-blue-100 text-sm"
+            >
+              Schedule your preferred training package
+            </DialogDescription>
+          </div>
+          <Button
+            onClick={onClose}
+            variant="ghost"
+            size="sm"
+            className="text-white hover:bg-blue-700"
           >
-            Select and book your preferred training package using our scheduling system
-          </DialogDescription>
+            ✕
+          </Button>
         </div>
         
         <div 
-          ref={widgetContainerRef}
-          className="h-[600px] w-full bg-gray-50 flex items-center justify-center"
-          id="simplybook-packages-widget-container"
-        >
-          <div className="text-center">
-            <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
-            <p className="text-gray-600">Loading booking system...</p>
-          </div>
-        </div>
+          id="simplybook-widget-container"
+          className="w-full h-[650px] bg-white"
+          style={{ minHeight: '650px' }}
+        />
       </DialogContent>
     </Dialog>
   );
