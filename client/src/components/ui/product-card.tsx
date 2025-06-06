@@ -15,11 +15,19 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
-  // Generate a simple session ID for cart functionality
-  const sessionId = "temp-session-" + Math.random().toString(36).substr(2, 9);
+  // Get or create session ID for cart functionality
+  const getSessionId = () => {
+    let sessionId = sessionStorage.getItem('cart-session');
+    if (!sessionId) {
+      sessionId = 'cart-' + Math.random().toString(36).substring(2, 15);
+      sessionStorage.setItem('cart-session', sessionId);
+    }
+    return sessionId;
+  };
 
   const addToCartMutation = useMutation({
     mutationFn: async () => {
+      const sessionId = getSessionId();
       const response = await apiRequest("POST", "/api/cart", {
         productId: product.id,
         quantity: 1,
@@ -32,7 +40,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         title: "Added to cart",
         description: `${product.name} has been added to your cart.`,
       });
-      queryClient.invalidateQueries({ queryKey: [`/api/cart/${sessionId}`] });
+      const sessionId = getSessionId();
+      queryClient.invalidateQueries({ queryKey: ['/api/cart', sessionId] });
     },
     onError: (error) => {
       toast({
