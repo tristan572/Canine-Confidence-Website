@@ -100,12 +100,14 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-hidden p-0">
-        <DialogTitle className="text-xl font-bold text-white bg-primary-blue p-4">
-          Book Your Package
-        </DialogTitle>
-        <DialogDescription className="sr-only">
-          Select and book your preferred training package using our scheduling system
-        </DialogDescription>
+        <div className="bg-primary-blue p-4">
+          <DialogTitle className="text-xl font-bold text-white">
+            Book Your Package
+          </DialogTitle>
+          <DialogDescription className="text-blue-100 text-sm">
+            Select and book your preferred training package using our scheduling system
+          </DialogDescription>
+        </div>
         
         <div 
           ref={widgetContainerRef}
