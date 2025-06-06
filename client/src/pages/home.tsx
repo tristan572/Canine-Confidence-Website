@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -16,9 +17,10 @@ import {
   Clock,
   MapPin,
   DollarSign,
-  Target
+  Target,
+  Calendar
 } from "lucide-react";
-import BookingForm from "@/components/forms/booking-form";
+import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceCard from "@/components/ui/service-card";
 import ProductCard from "@/components/ui/product-card";
@@ -26,6 +28,8 @@ import BlogCard from "@/components/ui/blog-card";
 import type { Service, Product, BlogPost } from "@shared/schema";
 
 export default function HomePage() {
+  const [showBookingWidget, setShowBookingWidget] = useState(false);
+  
   const { data: services, isLoading: servicesLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
@@ -63,16 +67,13 @@ export default function HomePage() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="btn-primary text-lg px-8 py-4">
-                      Start Training Today
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                    <BookingForm />
-                  </DialogContent>
-                </Dialog>
+                <Button 
+                  onClick={() => setShowBookingWidget(true)}
+                  className="btn-primary text-lg px-8 py-4"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Start Training Today
+                </Button>
 
                 <Dialog>
                   <DialogTrigger asChild>
@@ -305,16 +306,13 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
-                    Book Your First Session
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                  <BookingForm />
-                </DialogContent>
-              </Dialog>
+              <Button 
+                onClick={() => setShowBookingWidget(true)}
+                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Your First Session
+              </Button>
 
               <Dialog>
                 <DialogTrigger asChild>
@@ -345,6 +343,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <BookingWidget 
+        isOpen={showBookingWidget} 
+        onClose={() => setShowBookingWidget(false)} 
+      />
     </div>
   );
 }
