@@ -15,11 +15,12 @@ declare global {
 }
 
 const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  const [showWidget, setShowWidget] = useState(false);
   const widgetContainerRef = useRef<HTMLDivElement>(null);
   const widgetInstanceRef = useRef<any>(null);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!showWidget) return;
 
     const loadWidget = () => {
       if (window.SimplybookWidget && widgetContainerRef.current) {
@@ -86,10 +87,58 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
       }
       widgetInstanceRef.current = null;
     };
-  }, [isOpen]);
+  }, [showWidget]);
 
+  const handleContinue = () => {
+    setShowWidget(true);
+  };
+
+  const handleClose = () => {
+    setShowWidget(false);
+    onClose();
+  };
+
+  if (!showWidget) {
+    // Show the "Secure Booking System" popup first
+    return (
+      <Dialog open={isOpen} onOpenChange={handleClose}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleContinue}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={handleClose}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+    );
+  }
+
+  // Show the embedded widget
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0">
         <div className="bg-blue-600 p-4 flex justify-between items-center">
           <div>
@@ -101,7 +150,7 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
             </DialogDescription>
           </div>
           <Button
-            onClick={onClose}
+            onClick={handleClose}
             variant="ghost"
             size="sm"
             className="text-white hover:bg-blue-700"
