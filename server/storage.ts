@@ -224,7 +224,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        imageUrl: "/attached_assets/puppy-1047521_640_1749300332650.jpg",
         features: [
           "6 x in-home private sessions",
           "Socialisation protocols",
