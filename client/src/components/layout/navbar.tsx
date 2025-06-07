@@ -40,7 +40,7 @@ export default function Navbar() {
             <img 
               src={logoImage} 
               alt="Canine Confidence" 
-              className="h-12 w-12 rounded-full object-cover shadow-md group-hover:shadow-lg transition-shadow"
+              className="h-16 w-16 rounded-full object-cover shadow-md group-hover:shadow-lg transition-shadow"
             />
             <div>
               <span className="text-xl font-bold text-charcoal block leading-none">
