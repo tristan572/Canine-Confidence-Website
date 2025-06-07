@@ -359,7 +359,7 @@ export default function PackagesPage() {
               Why Choose Our Training Packages?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our structured programs provide comprehensive solutions for lasting behaviour change
+              Our structured programs provide comprehensive solutions and lasting behaviour change, for great value.
             </p>
           </div>
 
