@@ -41,7 +41,7 @@ export default function Navbar() {
               <img 
                 src={logoImage} 
                 alt="Canine Confidence" 
-                className="h-full w-full object-cover scale-125"
+                className="h-full w-full object-cover scale-150"
               />
             </div>
             <div>
