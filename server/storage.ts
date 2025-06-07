@@ -279,7 +279,7 @@ export class MemStorage implements IStorage {
         originalPrice: "$1250",
         duration: "4 weeks",
         sessions: 12,
-        category: "reactive",
+        category: "behaviour",
         features: [
           "4 x private 90min sessions",
           "8 x trainer-dog only sessions",

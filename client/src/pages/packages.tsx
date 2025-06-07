@@ -263,8 +263,7 @@ export default function PackagesPage() {
     { value: 'all', label: 'All Packages' },
     { value: 'puppy', label: 'Puppy Programs' },
     { value: 'behaviour', label: 'Behaviour Modification' },
-    { value: 'obedience', label: 'Obedience Training' },
-    { value: 'reactive', label: 'Rehabilitation' }
+    { value: 'obedience', label: 'Obedience Training' }
   ];
 
   const filteredPackages = selectedCategory === 'all' 
