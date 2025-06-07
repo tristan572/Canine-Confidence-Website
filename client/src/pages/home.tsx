@@ -68,7 +68,7 @@ export default function HomePage() {
                   Build <span className="text-primary-blue">Confidence</span> in Your Dog
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Professional dog training in Brisbane focused on building bonds built from play, trust, and clear communication. We create lasting changes through modern training methods that fulfill your dog's genetic needs.
+                  Strengthening bonds built from play, trust and clarity in communication.
                 </p>
               </div>
               
