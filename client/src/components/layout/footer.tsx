@@ -18,7 +18,7 @@ export default function Footer() {
                 className="h-10 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-gray-300">
+            <p className="text-gray-200">
               Building strong bonds between dogs and their humans through balanced, relationship-focused training in Brisbane.
             </p>
             <div className="flex space-x-4">
@@ -39,27 +39,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services" className="text-gray-200 hover:text-white transition-colors">
                   Behaviour Modification
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services" className="text-gray-200 hover:text-white transition-colors">
                   Walk & Train
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services" className="text-gray-200 hover:text-white transition-colors">
                   One-on-One Coaching
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services" className="text-gray-200 hover:text-white transition-colors">
                   Professional Walks
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services" className="text-gray-200 hover:text-white transition-colors">
                   House Visits
                 </Link>
               </li>
@@ -71,29 +71,29 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/about" className="text-gray-200 hover:text-white transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/blog" className="text-gray-200 hover:text-white transition-colors">
                   Training Blog
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/products" className="text-gray-200 hover:text-white transition-colors">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/contact" className="text-gray-200 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="text-gray-300 hover:text-white transition-colors text-left">
+                    <button className="text-gray-200 hover:text-white transition-colors text-left">
                       Free Consultation
                     </button>
                   </DialogTrigger>
@@ -111,15 +111,15 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary-blue" />
-                <span className="text-gray-300">0409 521 358</span>
+                <span className="text-gray-200">0409 521 358</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary-blue" />
-                <span className="text-gray-300">info@canineconfidence.com.au</span>
+                <span className="text-gray-200">info@canineconfidence.com.au</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary-blue" />
-                <span className="text-gray-300">Brisbane, QLD</span>
+                <span className="text-gray-200">Brisbane, QLD</span>
               </li>
             </ul>
           </div>
@@ -127,17 +127,17 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
+          <p className="text-gray-200 text-sm">
             © 2024 Canine Confidence. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <button className="text-gray-300 hover:text-white transition-colors text-sm">
+            <button className="text-gray-200 hover:text-white transition-colors text-sm">
               Privacy Policy
             </button>
-            <button className="text-gray-300 hover:text-white transition-colors text-sm">
+            <button className="text-gray-200 hover:text-white transition-colors text-sm">
               Terms of Service
             </button>
-            <button className="text-gray-300 hover:text-white transition-colors text-sm">
+            <button className="text-gray-200 hover:text-white transition-colors text-sm">
               Cancellation Policy
             </button>
           </div>
