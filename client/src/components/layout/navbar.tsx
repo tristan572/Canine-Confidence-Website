@@ -40,9 +40,9 @@ export default function Navbar() {
             <img 
               src={logoImage} 
               alt="Canine Confidence" 
-              className="h-12 w-auto"
+              className="h-14 md:h-16 w-auto"
             />
-            <span className="text-2xl font-bold text-charcoal">
+            <span className="text-xl md:text-2xl font-bold text-charcoal">
               Canine Confidence
             </span>
           </Link>
