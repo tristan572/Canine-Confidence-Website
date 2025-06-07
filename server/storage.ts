@@ -237,19 +237,20 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Behaviour Transformation Package",
-        description: "Comprehensive program for dogs with challenging behaviours. Address reactivity, anxiety, aggression, and other complex issues.",
-        price: "$850",
-        originalPrice: "$950",
-        duration: "10 weeks", 
-        sessions: 10,
+        description: "Comprehensive program for dogs with challenging behaviours. Address reactivity, anxiety, over-excitement, destructiveness and other complex issues.",
+        price: "$990",
+        originalPrice: "$1150",
+        duration: "8 weeks", 
+        sessions: 8,
         category: "behaviour",
         features: [
-          "10 x 1.5-hour sessions",
+          "8 x 1-hour sessions",
           "Detailed behaviour assessment",
           "Customised training plan",
           "Management strategies",
+          "Behavioural modification",
           "Ongoing support between sessions",
-          "Follow-up check-ins"
+          "Follow-up check-ins and more"
         ],
         isPopular: true
       },
