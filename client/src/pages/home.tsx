@@ -65,7 +65,7 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
-                  Build <span className="text-primary-blue">Confidence</span> in Your Dog
+                  Where <span className="text-primary-blue">Confidence</span> Grows, Because Dogs Know
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
                   Professional dog training in Brisbane, where trust, play, and clear communication build stronger bonds.
