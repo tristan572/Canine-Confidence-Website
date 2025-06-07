@@ -303,12 +303,12 @@ export default function PackagesPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold text-white">100+</div>
+              <div className="text-2xl font-bold text-white">200+</div>
               <div className="text-sm text-white">Dogs Trained</div>
             </div>
             <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold text-white">95%</div>
-              <div className="text-sm text-white">Success Rate</div>
+              <div className="text-2xl font-bold text-white">100%</div>
+              <div className="text-sm text-white">Happier Dogs</div>
             </div>
             <div className="bg-white/20 rounded-lg px-6 py-3">
               <div className="text-2xl font-bold text-white">5★</div>
