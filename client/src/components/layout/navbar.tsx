@@ -8,6 +8,7 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ShoppingCart from "@/components/ui/shopping-cart";
 import { getCartSessionId } from "@/lib/cart";
+import logoImage from "@assets/Business logo 1_1749266952529.jpg";
 
 export default function Navbar() {
   const [location] = useLocation();
