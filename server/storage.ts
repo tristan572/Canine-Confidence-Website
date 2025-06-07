@@ -255,20 +255,20 @@ export class MemStorage implements IStorage {
         isPopular: true
       },
       {
-        name: "Advanced Obedience Package",
-        description: "Take your dog's training to the next level with advanced commands, off-leash reliability, and complex behaviours.",
-        price: "$650",
-        originalPrice: "$750",
+        name: "Foundations Obedience Package",
+        description: "Build your dogs foundational skills to have a well mannered, balanced and fulfilled dog that you have verbal control over at all times.",
+        price: "$990",
+        originalPrice: "$1150",
         duration: "8 weeks",
         sessions: 8,
-        category: "advanced",
+        category: "obedience",
         features: [
-          "8 x 1-hour sessions",
-          "Off-leash training",
-          "Advanced commands",
-          "Distance and duration work",
-          "Distraction training",
-          "Real-world practice sessions"
+          "8 x private 1-hour sessions",
+          "Training plan and homework to follow",
+          "Skills - sit, down, come, place, loose lead +more",
+          "Play development",
+          "Impulse control",
+          "Confidence building and more"
         ],
         isPopular: false
       },
