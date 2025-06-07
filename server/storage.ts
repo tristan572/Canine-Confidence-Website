@@ -224,6 +224,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
+        imageUrl: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "6 x in-home private sessions",
           "Socialisation protocols",
@@ -243,6 +244,7 @@ export class MemStorage implements IStorage {
         duration: "8 weeks", 
         sessions: 8,
         category: "behaviour",
+        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "8 x 1-hour sessions",
           "Detailed behaviour assessment",
@@ -262,6 +264,7 @@ export class MemStorage implements IStorage {
         duration: "8 weeks",
         sessions: 8,
         category: "obedience",
+        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "8 x private 1-hour sessions",
           "Training plan and homework to follow",
@@ -280,6 +283,7 @@ export class MemStorage implements IStorage {
         duration: "4 weeks",
         sessions: 12,
         category: "behaviour",
+        imageUrl: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "4 x private 90min sessions",
           "8 x trainer-dog only sessions",
