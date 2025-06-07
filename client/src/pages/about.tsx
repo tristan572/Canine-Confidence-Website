@@ -38,7 +38,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Our Mission</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Based in Brisbane, our mission is to transform challenging behaviors through modern training methods focused on play, trust, bond, clear communication, and genetic fulfillment.
+                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Based in North Brisbane, our mission is to transform challenging behaviors through modern training methods focused on play, trust, bond, clear communication, and genetic fulfillment.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   We believe every dog and owner combination is unique, which is why we personalize plans for each individual partnership. We're truly dedicated to successful outcomes and seeing through until the end, offering ongoing support for the life of the dog.
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   <div className="text-sm text-medium-grey">Years Experience</div>
                 </Card>
                 <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">Brisbane</div>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">North Brisbane</div>
                   <div className="text-sm text-medium-grey">Local Expert</div>
                 </Card>
               </div>
