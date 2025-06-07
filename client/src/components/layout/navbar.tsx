@@ -37,9 +37,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-teal rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <Dog className="w-7 h-7 text-white" />
-            </div>
+            <img 
+              src={logoImage} 
+              alt="Canine Confidence" 
+              className="h-12 w-12 rounded-full object-cover shadow-md group-hover:shadow-lg transition-shadow"
+            />
             <div>
               <span className="text-xl font-bold text-charcoal block leading-none">
                 Canine Confidence
