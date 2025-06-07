@@ -390,7 +390,7 @@ export default function PackagesPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Ongoing Support</h3>
               <p className="text-gray-600">
-                Continued guidance and support throughout your training journey
+                Continued guidance and support throughout your training journey and dogs life
               </p>
             </div>
           </div>
