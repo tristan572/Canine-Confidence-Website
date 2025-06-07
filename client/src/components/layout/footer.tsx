@@ -12,12 +12,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center bg-white rounded-lg p-2 w-fit">
-              <img 
-                src={logoImage} 
-                alt="Canine Confidence" 
-                className="h-16 w-auto"
-              />
+            <div className="flex items-center">
+              <div className="text-white">
+                <div className="flex items-center gap-2">
+                  <Dog className="h-8 w-8 text-blue-400" />
+                  <div>
+                    <div className="text-xl font-bold">Canine</div>
+                    <div className="text-lg font-semibold text-blue-400">CONFIDENCE</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <p className="text-white">
               Building strong bonds between dogs and their humans through balanced, relationship-focused training in North Brisbane.
