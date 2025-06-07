@@ -230,7 +230,8 @@ export class MemStorage implements IStorage {
           "House training guidance", 
           "Basic commands (sit, stay, come etc)",
           "Foundations of learning and playing",
-          "Take-home training materials"
+          "Take-home training materials",
+          "Plus much more"
         ],
         isPopular: true
       },
