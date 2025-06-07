@@ -111,8 +111,8 @@ export default function HomePage() {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Professional dog trainer working with happy dog" 
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Professional dog trainer building confidence with happy dogs in Brisbane training session" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               

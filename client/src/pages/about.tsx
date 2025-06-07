@@ -47,7 +47,14 @@ export default function AboutPage() {
                   Play is at the heart of everything we do. We use it not just as a reward, but as a way to teach, connect, and motivate. Our approach focuses heavily on play with true care for the animal, ensuring your dog's genetic needs are met while building lasting confidence.
                 </p>
               </div>
-
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800" 
+                alt="Professional dog trainer in Brisbane working with happy dogs using trust-based methods" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
               <div className="grid grid-cols-2 gap-6">
                 <Card className="bg-white p-6 border border-gray-100">
                   <div className="text-3xl font-bold text-primary-blue mb-2">CCPDT</div>
