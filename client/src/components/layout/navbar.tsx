@@ -36,13 +36,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
             <img 
               src={logoImage} 
               alt="Canine Confidence" 
-              className="h-14 md:h-16 w-auto"
+              className="h-16 sm:h-18 md:h-20 w-auto"
             />
-            <span className="text-xl md:text-2xl font-bold text-charcoal">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-charcoal">
               Canine Confidence
             </span>
           </Link>
