@@ -37,11 +37,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <img 
-              src={logoImage} 
-              alt="Canine Confidence" 
-              className="h-16 w-16 rounded-full object-cover shadow-md group-hover:shadow-lg transition-shadow"
-            />
+            <div className="h-16 w-16 rounded-full shadow-md group-hover:shadow-lg transition-shadow overflow-hidden">
+              <img 
+                src={logoImage} 
+                alt="Canine Confidence" 
+                className="h-full w-full object-cover scale-125"
+              />
+            </div>
             <div>
               <span className="text-xl font-bold text-charcoal block leading-none">
                 Canine Confidence
