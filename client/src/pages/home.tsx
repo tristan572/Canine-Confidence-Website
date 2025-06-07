@@ -68,7 +68,7 @@ export default function HomePage() {
                   Where <span className="text-primary-blue">Confidence</span> Grows
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Professional dog training in Brisbane, where trust, play, and clear communication build stronger bonds.
+                  Professional dog training in North Brisbane, where trust, play, and clear communication build stronger bonds.
                   We help you create lasting behaviour change using modern methods that fulfill your dog's instincts and bring peace to your home.
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-charcoal">100%</div>
-                  <div className="text-sm text-medium-grey">Happier Doggo's</div>
+                  <div className="text-sm text-medium-grey">Happier Dogs</div>
                 </div>
               </div>
             </div>

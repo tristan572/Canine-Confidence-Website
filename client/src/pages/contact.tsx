@@ -48,7 +48,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Phone</div>
                     <div className="text-medium-grey mb-1">0409 521 358</div>
-                    <div className="text-sm text-medium-grey">Available Monday - Saturday, 5AM - 8PM</div>
+                    <div className="text-sm text-medium-grey">Available Monday - Friday, 5:30AM - 8PM</div>
                   </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Service Area</div>
-                    <div className="text-medium-grey mb-1">Brisbane & Surrounding Areas</div>
+                    <div className="text-medium-grey mb-1">North Brisbane & Surrounding Areas</div>
                     <div className="text-sm text-medium-grey">Mobile service - we come to you!</div>
                   </div>
                 </div>
@@ -81,8 +81,9 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Business Hours</div>
                     <div className="text-medium-grey space-y-1">
-                      <div>Monday - Friday: 8:00 AM - 8:00 PM</div>
-                      <div>Saturday - Sunday: 9:00 AM - 6:00 PM</div>
+                      <div>Monday - Friday: 5:30 AM - 8:00 PM</div>
+                      <div>Saturday: 9:00 AM - 5:00 PM</div>
+                      <div>Sunday: Closed</div>
                     </div>
                   </div>
                 </div>

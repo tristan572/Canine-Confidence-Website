@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white">
-              Building strong bonds between dogs and their humans through balanced, relationship-focused training in Brisbane.
+              Building strong bonds between dogs and their humans through balanced, relationship-focused training in North Brisbane.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary-blue">
