@@ -3,6 +3,7 @@ import { Dog, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-r
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ConsultationForm from "@/components/forms/consultation-form";
+import logoImage from "@assets/Business logo 1_1749266952529.jpg";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <img 
-                src="/attached_assets/Business logo 1_1749266952529.jpg" 
+                src={logoImage} 
                 alt="Canine Confidence" 
                 className="h-10 w-auto brightness-0 invert"
               />
