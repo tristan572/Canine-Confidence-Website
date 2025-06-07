@@ -180,7 +180,7 @@ export class MemStorage implements IStorage {
         price: "20.00",
         priceRange: "$15 - $25",
         category: "toys",
-        imageUrl: "https://images.unsplash.com/photo-1615751072497-5f5169febe17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+        imageUrl: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
         inStock: true
       },
       {
@@ -264,7 +264,7 @@ export class MemStorage implements IStorage {
         duration: "8 weeks",
         sessions: 8,
         category: "obedience",
-        imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "8 x private 1-hour sessions",
           "Training plan and homework to follow",
@@ -283,7 +283,7 @@ export class MemStorage implements IStorage {
         duration: "4 weeks",
         sessions: 12,
         category: "behaviour",
-        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        imageUrl: "https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "4 x private 90min sessions",
           "8 x trainer-dog only sessions",
