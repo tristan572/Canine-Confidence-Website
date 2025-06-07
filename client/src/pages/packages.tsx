@@ -370,7 +370,7 @@ export default function PackagesPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Methods</h3>
               <p className="text-gray-600">
-                Science-based training techniques that focus on building trust and confidence
+                Proven, effective training techniques that focus on building trust and confidence between dog and handler.
               </p>
             </div>
 
