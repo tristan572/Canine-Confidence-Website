@@ -16,7 +16,7 @@ export default function Footer() {
               <img 
                 src={logoImage} 
                 alt="Canine Confidence" 
-                className="h-30 w-auto bg-white rounded-sm px-6 py-3"
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-white">
