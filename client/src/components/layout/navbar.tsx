@@ -35,9 +35,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <Dog className="text-primary-blue text-2xl" />
-            <span className="text-2xl font-bold text-charcoal">Canine Confidence</span>
+          <Link href="/" className="flex items-center">
+            <img 
+              src="@assets/Business logo 1_1749266952529.jpg" 
+              alt="Canine Confidence" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

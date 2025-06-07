@@ -11,9 +11,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Dog className="text-primary-blue text-xl" />
-              <span className="text-xl font-bold">Canine Confidence</span>
+            <div className="flex items-center">
+              <img 
+                src="@assets/Business logo 1_1749266952529.jpg" 
+                alt="Canine Confidence" 
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-gray-300">
               Building strong bonds between dogs and their humans through balanced, relationship-focused training in Brisbane.
