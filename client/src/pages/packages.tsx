@@ -180,13 +180,24 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
 
   return (
     <>
-      <Card className={`relative ${pkg.isPopular ? 'ring-2 ring-primary-blue' : ''} hover:shadow-lg transition-shadow`}>
+      <Card className={`relative ${pkg.isPopular ? 'ring-2 ring-primary-blue' : ''} hover:shadow-lg transition-shadow overflow-hidden`}>
         {pkg.isPopular && (
-          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
             <Badge className="bg-primary-blue text-white px-4 py-1">
               <Star className="w-3 h-3 mr-1" />
               Most Popular
             </Badge>
+          </div>
+        )}
+        
+        {pkg.imageUrl && (
+          <div className="relative h-48 w-full">
+            <img 
+              src={pkg.imageUrl} 
+              alt={`${pkg.name} training session`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         )}
         
