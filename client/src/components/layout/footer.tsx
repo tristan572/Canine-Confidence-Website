@@ -12,11 +12,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center">
+            <div className="flex items-center bg-white rounded-lg p-2 w-fit">
               <img 
                 src={logoImage} 
                 alt="Canine Confidence" 
-                className="h-20 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-white">
