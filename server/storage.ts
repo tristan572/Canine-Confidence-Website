@@ -219,17 +219,17 @@ export class MemStorage implements IStorage {
       {
         name: "Puppy Foundation Package",
         description: "Complete early development program for puppies 8-24 weeks. Build confidence, social skills, and basic manners during the critical learning period.",
-        price: "$450",
-        originalPrice: "$550",
+        price: "$550",
+        originalPrice: "$650",
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
         features: [
-          "6 x 1-hour sessions",
+          "6 x in-home private sessions",
           "Socialisation protocols",
           "House training guidance", 
-          "Basic commands (sit, stay, come)",
-          "Handling and grooming prep",
+          "Basic commands (sit, stay, come etc)",
+          "Foundations of learning and playing",
           "Take-home training materials"
         ],
         isPopular: true
