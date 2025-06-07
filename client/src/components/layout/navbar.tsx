@@ -32,31 +32,34 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-            <img 
-              src={logoImage} 
-              alt="Canine Confidence" 
-              className="h-24 sm:h-28 md:h-32 w-auto"
-            />
-            <span className="text-xl sm:text-2xl md:text-3xl font-bold text-charcoal">
-              Canine Confidence
-            </span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary-blue to-teal rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+              <Dog className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <span className="text-xl font-bold text-charcoal block leading-none">
+                Canine Confidence
+              </span>
+              <span className="text-sm text-gray-600 block leading-none mt-0.5">
+                Brisbane Dog Training
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-medium transition-colors ${
+                className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
                   isActive(item.href)
-                    ? "text-primary-blue"
-                    : "text-charcoal hover:text-primary-blue"
+                    ? "text-primary-blue bg-blue-50"
+                    : "text-gray-700 hover:text-primary-blue hover:bg-gray-50"
                 }`}
               >
                 {item.label}
@@ -65,14 +68,14 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <ShoppingCart sessionId={getCartSessionId()} />
             
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline" className="border-primary-blue text-primary-blue hover:bg-light-blue">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Free Consultation
+                <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue">
+                  <Phone className="w-3.5 h-3.5 mr-1.5" />
+                  Consultation
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-md">
@@ -82,7 +85,7 @@ export default function Navbar() {
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="btn-primary">
+                <Button size="sm" className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm">
                   Book Now
                 </Button>
               </DialogTrigger>
