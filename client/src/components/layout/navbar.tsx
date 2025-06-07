@@ -37,7 +37,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img 
-              src="@assets/Business logo 1_1749266952529.jpg" 
+              src="/attached_assets/Business logo 1_1749266952529.jpg" 
               alt="Canine Confidence" 
               className="h-12 w-auto"
             />

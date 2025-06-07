@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <img 
-                src="@assets/Business logo 1_1749266952529.jpg" 
+                src="/attached_assets/Business logo 1_1749266952529.jpg" 
                 alt="Canine Confidence" 
                 className="h-10 w-auto brightness-0 invert"
               />
