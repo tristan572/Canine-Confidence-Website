@@ -104,8 +104,8 @@ export default function HomePage() {
                   <div className="text-sm text-medium-grey">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-charcoal">95%</div>
-                  <div className="text-sm text-medium-grey">Success Rate</div>
+                  <div className="text-2xl font-bold text-charcoal">100%</div>
+                  <div className="text-sm text-medium-grey">Happier Doggo's</div>
                 </div>
               </div>
             </div>
