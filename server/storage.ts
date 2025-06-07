@@ -218,7 +218,7 @@ export class MemStorage implements IStorage {
     const packageData: InsertPackage[] = [
       {
         name: "Puppy Foundation Package",
-        description: "Complete early development program for puppies 8-16 weeks. Build confidence, social skills, and basic manners during critical learning period.",
+        description: "Complete early development program for puppies 8-24 weeks. Build confidence, social skills, and basic manners during the critical learning period.",
         price: "$450",
         originalPrice: "$550",
         duration: "6 weeks",
