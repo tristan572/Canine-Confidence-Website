@@ -101,7 +101,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-charcoal">200+</div>
-                  <div className="text-sm text-medium-grey">Happy Clients</div>
+                  <div className="text-sm text-medium-grey">Confident Clients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-charcoal">100%</div>

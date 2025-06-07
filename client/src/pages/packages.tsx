@@ -304,7 +304,7 @@ export default function PackagesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/20 rounded-lg px-6 py-3">
               <div className="text-2xl font-bold text-white">200+</div>
-              <div className="text-sm text-white">Happy Clients</div>
+              <div className="text-sm text-white">Confident Clients</div>
             </div>
             <div className="bg-white/20 rounded-lg px-6 py-3">
               <div className="text-2xl font-bold text-white">100%</div>
