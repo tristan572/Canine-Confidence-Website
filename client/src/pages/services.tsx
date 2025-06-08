@@ -77,17 +77,6 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="btn-primary text-lg px-8 py-4">
-                  Book a Session
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                <BookingForm />
-              </DialogContent>
-            </Dialog>
-
-            <Dialog>
-              <DialogTrigger asChild>
                 <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
                   Free Consultation
                 </Button>
