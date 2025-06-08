@@ -34,7 +34,7 @@ export default function ServicesPage() {
     "Initial Assessment": CheckCircle,
     "In-Home Obedience": Home,
     "Virtual Consultation": Phone,
-    "Local Walk": Camera,
+    "Local Walk": Footprints,
     "Adventure Walk": TreePine,
   };
 

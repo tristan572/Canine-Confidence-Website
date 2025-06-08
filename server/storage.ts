@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Local Walk",
-        description: "A 30-minute walk from your home focused on enrichment, fun, play, and affection. Perfect for busy schedules or when your dog needs extra exercise and attention.",
+        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
         duration: "30 minutes",
         location: "From client's home",
         price: "$45",
