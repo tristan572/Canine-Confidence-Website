@@ -143,7 +143,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Adventure Walk",
-        description: "A 60-minute adventure walk where we collect your dog from home and take them to local parks, forests, or beaches for an enriching outdoor experience.",
+        description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
         duration: "60 minutes", 
         location: "Local parks, forests, or beaches",
         price: "$80",
