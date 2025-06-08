@@ -50,7 +50,7 @@ export default function AboutPage() {
               
               <div className="grid grid-cols-2 gap-6">
                 <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">CCPDT</div>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">NDTF</div>
                   <div className="text-sm text-medium-grey">Certified Professional</div>
                 </Card>
                 <Card className="bg-white p-6 border border-gray-100">
