@@ -288,7 +288,7 @@ export default function AboutPage() {
               <Clock className="w-5 h-5 text-primary-blue" />
               <div>
                 <div className="font-semibold text-charcoal">Availability</div>
-                <div className="text-medium-grey">7 Days a Week</div>
+                <div className="text-medium-grey">6 Days a Week</div>
               </div>
             </div>
             
