@@ -65,7 +65,7 @@ export default function ServicesPage() {
             Professional Dog Training Services
           </h1>
           <p className="text-xl text-medium-grey mb-8">
-            Tailored training solutions designed to build confidence in both dogs and their owners through positive, relationship-focused methods.
+            Professional dog training in Brisbane, where trust, play, and clear communication builds stronger bonds. We help you create lasting behavioural foundations using modern methods that fulfils your dog's genetic desires and brings balance to your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Dialog>
