@@ -116,7 +116,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "One-on-One Coaching",
-        description: "What's Included:\n\nIndividual, private attention\nCustomised training\nIn-depth understanding of methods\nModern techniques\nLasting results\nOngoing phone support\n\n60 minutes\nIn-home or suitable area\n$140",
+        description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioral changes.\n\nWhat's Included:\n\nIndividual, private attention\nCustomised training\nIn-depth understanding of methods\nModern techniques\nLasting results\nOngoing phone support\n60 minutes\nIn-home or suitable area\n$140",
         duration: "60 minutes",
         location: "In-home or suitable area",
         price: "$140",
