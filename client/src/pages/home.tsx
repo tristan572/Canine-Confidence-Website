@@ -246,7 +246,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Services</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Tailored training solutions designed to build confidence in both dogs and their owners through positive, relationship-focussed methods.
+              Tailored training solutions designed to build confidence in both dogs and their owners through positive, relationship-focused methods.
             </p>
           </div>
 
