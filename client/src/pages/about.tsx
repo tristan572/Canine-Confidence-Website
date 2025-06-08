@@ -106,7 +106,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
-                Every dog has genetic needs that must be met for true happiness. We identify and fulfil these needs through structured activities and mental stimulation.
+                Every dog has genetic needs that must be met for true happiness. We identify and fulfil these needs as a priority.
               </p>
             </Card>
 
