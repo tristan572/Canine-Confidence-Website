@@ -98,12 +98,12 @@ export class MemStorage implements IStorage {
     const serviceData: InsertService[] = [
       {
         name: "Initial Assessment",
-        description: "Get to know your dog and understand their unique needs. We'll assess behavior, temperament, and create a personalized plan that focuses on true genetic fulfilment, confidence and bond building, clarity in communication and empowering owners with skills to maintain lasting results.",
+        description: "Get to know your dog and understand their unique needs. We'll assess behavior, temperament, and create a personalised plan that focuses on true genetic fulfilment, confidence and bond building, clarity in communication and empowering owners with skills to maintain lasting results.",
         duration: "90 minutes",
         location: "In-home assessment",
-        price: "$180",
+        price: "$190",
         category: "assessment",
-        features: ["Comprehensive evaluation", "Personalized training plan", "Written recommendations", "Ongoing support guidance"]
+        features: ["Comprehensive evaluation", "Personalised training plan", "Written recommendations", "Ongoing support guidance"]
       },
       {
         name: "Behaviour Modification",
