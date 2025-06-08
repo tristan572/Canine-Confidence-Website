@@ -68,7 +68,7 @@ export default function HomePage() {
                   Where <span className="text-primary-blue">Confidence</span> Grows
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Professional dog training in Brisbane, where trust, play, and clear communication builds stronger bonds. We help you create lasting behavioural foundations using modern methods that fulfills your dog's genetic desires and brings balance to your home.
+                  Professional dog training in Brisbane, where trust, play, and clear communication builds stronger bonds. We help you create lasting behavioural foundations using modern methods that fulfils your dog's genetic desires and brings balance to your home.
                 </p>
               </div>
               
@@ -223,7 +223,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
               <h3 className="text-lg font-semibold text-charcoal mb-2">Not sure which package is right for you?</h3>
-              <p className="text-medium-grey mb-4">Get personalized recommendations in a free 15-minute consultation</p>
+              <p className="text-medium-grey mb-4">Get personalised recommendations in a free 15-minute consultation</p>
               <Dialog>
                 <DialogTrigger asChild>
                   <Button className="btn-primary px-6">
@@ -246,7 +246,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Services</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Tailored training solutions designed to build confidence in both dogs and their owners through positive, relationship-focused methods.
+              Tailored training solutions designed to build confidence in both dogs and their owners through positive, relationship-focussed methods.
             </p>
           </div>
 

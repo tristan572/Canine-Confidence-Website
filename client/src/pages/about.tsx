@@ -38,10 +38,10 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Our Mission</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Based in North Brisbane, our mission is to transform challenging behaviors through modern training methods focused on play, trust, bond, clear communication, and genetic fulfillment.
+                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Based in North Brisbane, our mission is to transform challenging behaviours through modern training methods focused on play, trust, bond, clear communication, and genetic fulfilment.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  We believe every dog and owner combination is unique, which is why we personalize plans for each individual partnership. We're truly dedicated to successful outcomes and seeing through until the end, offering ongoing support for the life of the dog.
+                  We believe every dog and owner combination is unique, which is why we personalise plans for each individual partnership. We're truly dedicated to successful outcomes and seeing through until the end, offering ongoing support for the life of the dog.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   Play is at the heart of everything we do. We use it not just as a reward, but as a way to teach, connect, and motivate. Our approach focuses heavily on play with true care for the animal, ensuring your dog's genetic needs are met while building lasting confidence.
@@ -104,9 +104,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Genetic Fulfillment</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
-                Every dog has genetic needs that must be met for true happiness. We identify and fulfill these needs through structured activities and mental stimulation.
+                Every dog has genetic needs that must be met for true happiness. We identify and fulfil these needs through structured activities and mental stimulation.
               </p>
             </Card>
 
