@@ -125,7 +125,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "In-Home Obedience",
-        description: "Basic obedience training in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
+        description: "Basic obedience training, completed by the trainer, in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
         duration: "30 minutes",
         location: "In-home training",
         price: "$70",
