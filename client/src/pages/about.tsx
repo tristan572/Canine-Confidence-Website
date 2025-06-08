@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Play-Based Learning</h3>
               <p className="text-medium-grey">
-                We use play not just as a reward, but as the primary method to teach, connect, and motivate. Play creates joy and builds lasting relationships.
+                We use play not just as a reward, but as the primary method to teach, connect, and motivate. Play is the framework that strengthens bonds and builds lasting relationships.
               </p>
             </Card>
 
