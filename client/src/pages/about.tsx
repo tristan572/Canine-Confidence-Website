@@ -25,7 +25,7 @@ export default function AboutPage() {
             About Canine Confidence
           </h1>
           <p className="text-xl text-medium-grey mb-8">
-            With over 5 years of experience and 80 five-star reviews on Madpaws, we're passionate about helping dogs and their humans live in harmony through modern training methods focused on play, trust, and genetic fulfillment.
+            With over 5 years of experience and 80 five-star reviews on the Madpaws platform, we're passionate about helping dogs and their humans live in harmony through modern training methods based in play, trust, and genetic fulfillment.
           </p>
         </div>
       </section>
