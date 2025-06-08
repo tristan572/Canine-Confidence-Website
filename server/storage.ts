@@ -112,7 +112,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$140",
         category: "training",
-        features: ["Play-based approach", "Trust building", "Clear communication", "Genetic fulfilment focus"]
+        features: ["Individual, private sessions", "Customised training", "Modern techniques", "Coaching", "Ongoing phone support"]
       },
       {
         name: "One-on-One Coaching",
