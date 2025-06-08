@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,11 +17,12 @@ import {
   TreePine,
   Camera
 } from "lucide-react";
-import BookingForm from "@/components/forms/booking-form";
+import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
 
 export default function ServicesPage() {
+  const [showBookingWidget, setShowBookingWidget] = useState(false);
   const { data: services, isLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
@@ -132,16 +134,12 @@ export default function ServicesPage() {
                         <span>{service.price}</span>
                       </div>
                     </div>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="w-full btn-primary">
-                          Book Session
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                        <BookingForm preselectedService={service.id} />
-                      </DialogContent>
-                    </Dialog>
+                    <Button 
+                      onClick={() => setShowBookingWidget(true)}
+                      className="w-full btn-primary"
+                    >
+                      Book Session
+                    </Button>
                   </CardContent>
                 </Card>
               );
@@ -216,6 +214,11 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <BookingWidget 
+        isOpen={showBookingWidget} 
+        onClose={() => setShowBookingWidget(false)} 
+      />
     </div>
   );
 }
