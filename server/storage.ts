@@ -133,6 +133,24 @@ export class MemStorage implements IStorage {
         features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
       },
       {
+        name: "Local Walk",
+        description: "A 30-minute walk from your home focused on enrichment, fun, play, and affection. Perfect for busy schedules or when your dog needs extra exercise and attention.",
+        duration: "30 minutes",
+        location: "From client's home",
+        price: "$45",
+        category: "walking",
+        features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates"]
+      },
+      {
+        name: "Adventure Walk",
+        description: "A 60-minute adventure walk where we collect your dog from home and take them to local parks, forests, or beaches for an enriching outdoor experience.",
+        duration: "60 minutes", 
+        location: "Local parks, forests, or beaches",
+        price: "$80",
+        category: "walking",
+        features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
+      },
+      {
         name: "Virtual Consultation",
         description: "One-hour video consultation perfect for troubleshooting specific issues, follow-up support, or getting started with training guidance from the comfort of your home.",
         duration: "60 minutes",

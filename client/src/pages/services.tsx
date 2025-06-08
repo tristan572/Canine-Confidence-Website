@@ -12,7 +12,9 @@ import {
   Clock,
   MapPin,
   DollarSign,
-  CheckCircle
+  CheckCircle,
+  TreePine,
+  Camera
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -29,6 +31,11 @@ export default function ServicesPage() {
     "One-on-One Coaching": User,
     "Professional Walks": Route,
     "House Visits": Home,
+    "Initial Assessment": CheckCircle,
+    "In-Home Obedience": Home,
+    "Virtual Consultation": Phone,
+    "Local Walk": Camera,
+    "Adventure Walk": TreePine,
   };
 
   if (isLoading) {
