@@ -112,11 +112,11 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$140",
         category: "training",
-        features: ["Play-based approach", "Trust building", "Clear communication", "Genetic fulfillment focus"]
+        features: ["Play-based approach", "Trust building", "Clear communication", "Genetic fulfilment focus"]
       },
       {
         name: "One-on-One Coaching",
-        description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioral changes.",
+        description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioural changes.",
         duration: "60 minutes",
         location: "In-home or suitable area",
         price: "$140",
