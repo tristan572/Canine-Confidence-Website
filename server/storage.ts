@@ -324,6 +324,96 @@ export class MemStorage implements IStorage {
           "Lifetime support guarantee"
         ],
         isPopular: false
+      },
+      {
+        name: "5 x One-on-One Coaching",
+        description: "Five comprehensive coaching sessions for owners who want in-depth understanding of training methods and personalised guidance for their dog's specific needs.",
+        price: "$600",
+        originalPrice: "$700",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "training",
+        features: [
+          "5 x individual private sessions",
+          "Customised training approach",
+          "In-depth understanding of methods",
+          "Modern techniques focus",
+          "Lasting results guarantee",
+          "Ongoing phone support between sessions"
+        ],
+        isPopular: false
+      },
+      {
+        name: "5 x In-Home Obedience",
+        description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning.",
+        price: "$340",
+        originalPrice: "$350",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "training",
+        features: [
+          "5 x 30-minute home sessions",
+          "Essential commands training",
+          "Play-based learning approach",
+          "Home environment comfort",
+          "Quick progress tracking",
+          "Trainer-led instruction"
+        ],
+        isPopular: false
+      },
+      {
+        name: "5 x Walk and Train",
+        description: "Five specialised sessions combining walking with obedience training, perfect for transitioning indoor skills to real-world environments.",
+        price: "$340",
+        originalPrice: "$350",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "training",
+        features: [
+          "5 x 40-minute sessions",
+          "Home pickup service included",
+          "General obedience reinforcement",
+          "Loose lead walking practice",
+          "Real-world environment training",
+          "Indoor to outdoor skill transition"
+        ],
+        isPopular: false
+      },
+      {
+        name: "5 x Adventure Walks",
+        description: "Five exciting adventure outings to local forests, parks, or beaches providing maximum enrichment, exercise, and fun for your dog.",
+        price: "$375",
+        originalPrice: "$400",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "walking",
+        features: [
+          "5 x 60-minute adventure sessions",
+          "Collection from home",
+          "Adventure locations variety",
+          "Video updates provided",
+          "Enrichment activities focus",
+          "Fun, play, and affection"
+        ],
+        isPopular: false
+      },
+      {
+        name: "5 x Local Walks",
+        description: "Five convenient local walks from your home providing essential exercise, stimulation, and care for your dog's daily routine.",
+        price: "$215",
+        originalPrice: "$225",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "walking",
+        features: [
+          "5 x 30-minute local walks",
+          "Direct from your home",
+          "Enrichment activities included",
+          "Fun and play focus",
+          "Affection and care provided",
+          "Photo or video updates"
+        ],
+        isPopular: false
       }
     ];
 
