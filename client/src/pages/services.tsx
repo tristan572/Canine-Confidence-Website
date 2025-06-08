@@ -38,7 +38,7 @@ export default function ServicesPage() {
     "Virtual Consultation": Phone,
     "Local Walk": Footprints,
     "Adventure Walk": Footprints,
-    "Walk and Train": Route,
+    "Walk and Train": Footprints,
   };
 
   if (isLoading) {
