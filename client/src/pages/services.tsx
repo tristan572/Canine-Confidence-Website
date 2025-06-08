@@ -35,7 +35,7 @@ export default function ServicesPage() {
     "In-Home Obedience": Home,
     "Virtual Consultation": Phone,
     "Local Walk": Footprints,
-    "Adventure Walk": TreePine,
+    "Adventure Walk": Footprints,
   };
 
   if (isLoading) {
