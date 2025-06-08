@@ -151,6 +151,15 @@ export class MemStorage implements IStorage {
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
       },
       {
+        name: "Walk and Train",
+        description: "Walk and Train is a specialised service where we visit your home, pick up your dog, and reinforce general obedience skills and loose lead walking while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
+        duration: "40 minutes",
+        location: "Home pickup and local area",
+        price: "$70",
+        category: "training",
+        features: ["Home pickup service", "General obedience reinforcement", "Loose lead walking practice", "Real-world environment training", "Transition from indoor to outdoor skills"]
+      },
+      {
         name: "Virtual Consultation",
         description: "One-hour video consultation perfect for troubleshooting specific issues, follow-up support, or getting started with training guidance from the comfort of your home.",
         duration: "60 minutes",
