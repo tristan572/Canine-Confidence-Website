@@ -53,6 +53,7 @@ export default function HomePage() {
     "Behaviour Modification": GraduationCap,
     "One-on-One Coaching": User,
     "In-Home Obedience": Home,
+    "Walk and Train": Footprints,
     "Virtual Consultation": Phone,
   };
 
