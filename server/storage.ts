@@ -116,12 +116,12 @@ export class MemStorage implements IStorage {
       },
       {
         name: "One-on-One Coaching",
-        description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioral changes.",
+        description: "What's Included:\n\nIndividual, private attention\nCustomised training\nIn-depth understanding of methods\nModern techniques\nLasting results\nOngoing phone support\n\n60 minutes\nIn-home or suitable area\n$140",
         duration: "60 minutes",
-        location: "In-home or designated area",
+        location: "In-home or suitable area",
         price: "$140",
         category: "training",
-        features: ["Individual attention", "Bond strengthening", "Modern techniques", "Customized approach"]
+        features: ["Individual, private attention", "Customised training", "In-depth understanding of methods", "Modern techniques", "Lasting results", "Ongoing phone support"]
       },
       {
         name: "In-Home Obedience",
