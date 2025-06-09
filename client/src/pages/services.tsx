@@ -15,7 +15,8 @@ import {
   DollarSign,
   CheckCircle,
   TreePine,
-  Camera
+  Camera,
+  ClipboardList
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -33,7 +34,7 @@ export default function ServicesPage() {
     "One-on-One Coaching": User,
     "Professional Walks": Route,
     "House Visits": Home,
-    "Initial Assessment": CheckCircle,
+    "Initial Assessment": ClipboardList,
     "In-Home Obedience": Home,
     "Virtual Consultation": Phone,
     "Local Walk": Footprints,

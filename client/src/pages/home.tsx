@@ -20,7 +20,8 @@ import {
   Target,
   Calendar,
   CheckCircle,
-  Star
+  Star,
+  ClipboardList
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -49,7 +50,7 @@ export default function HomePage() {
   });
 
   const serviceIcons = {
-    "Initial Assessment": Target,
+    "Initial Assessment": ClipboardList,
     "Behaviour Modification": GraduationCap,
     "One-on-One Coaching": User,
     "In-Home Obedience": Home,
