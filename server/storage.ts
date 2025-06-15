@@ -385,7 +385,7 @@ export class MemStorage implements IStorage {
         originalPrice: "$400",
         duration: "5 sessions",
         sessions: 5,
-        category: "walking",
+        category: "adventure",
         features: [
           "5 x 60-minute adventure sessions",
           "Collection from home",
@@ -403,7 +403,7 @@ export class MemStorage implements IStorage {
         originalPrice: "$225",
         duration: "5 sessions",
         sessions: 5,
-        category: "walking",
+        category: "adventure",
         features: [
           "5 x 30-minute local walks",
           "Direct from your home",
