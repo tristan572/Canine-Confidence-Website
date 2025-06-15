@@ -361,7 +361,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Walk and Train",
-        description: "Five specialised sessions combining walking with obedience training, perfect for transitioning indoor skills to real-world environments.",
+        description: "Our Five Walk and Trains Package offers practical dog training with convenience. We pick up your dog from home and reinforce obedience and loose lead walking skills during real-world strolls. Ideal for progressing from in-home training, this package ensures confidence building, practical application and lasting results.",
         price: "$340",
         originalPrice: "$350",
         duration: "5 sessions",
