@@ -412,6 +412,24 @@ export class MemStorage implements IStorage {
           "Photo or video updates"
         ],
         isPopular: false
+      },
+      {
+        name: "5 x One-on-One Coaching",
+        description: "Five intensive coaching sessions providing personalised guidance for you and your dog. Our expert trainers work directly with you to address specific behavioral challenges and develop customised training plans that deliver lasting results.",
+        price: "$675",
+        originalPrice: "$700",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "behavior",
+        features: [
+          "5 x 60-minute coaching sessions",
+          "Personalised training plans",
+          "Behavioral issue assessment",
+          "Owner instruction and guidance",
+          "Progress tracking and adjustments",
+          "Ongoing support between sessions"
+        ],
+        isPopular: false
       }
     ];
 
