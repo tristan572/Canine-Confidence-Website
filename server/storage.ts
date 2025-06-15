@@ -105,15 +105,7 @@ export class MemStorage implements IStorage {
         category: "assessment",
         features: ["Comprehensive evaluation", "Personalised training plan", "Written recommendations", "Ongoing support guidance"]
       },
-      {
-        name: "Behaviour Modification",
-        description: "Transform challenging behaviors through modern training methods. We focus on building trust and clear communication while ensuring your dog's genetic needs are met through engaging, play-based sessions.",
-        duration: "60 minutes",
-        location: "In-home or suitable environment",
-        price: "$140",
-        category: "training",
-        features: ["Individual, private sessions", "Customised training", "Modern techniques", "Coaching", "Ongoing phone support"]
-      },
+
       {
         name: "One-on-One Coaching",
         description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioural changes.",
