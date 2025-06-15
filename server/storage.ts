@@ -349,7 +349,7 @@ export class MemStorage implements IStorage {
         originalPrice: "$350",
         duration: "5 sessions",
         sessions: 5,
-        category: "training",
+        category: "obedience",
         features: [
           "5 x 30-minute home sessions",
           "Essential commands training",
@@ -367,7 +367,7 @@ export class MemStorage implements IStorage {
         originalPrice: "$350",
         duration: "5 sessions",
         sessions: 5,
-        category: "training",
+        category: "obedience",
         features: [
           "5 x 40-minute sessions",
           "Home pickup service included",
