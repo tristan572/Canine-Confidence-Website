@@ -343,7 +343,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x In-Home Obedience",
-        description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning.",
+        description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning. Each session is tailored to your dog's unique needs and can take place while you are at work, ensuring efficient, stress-free training in a familiar environment for optimal results.",
         price: "$340",
         originalPrice: "$350",
         duration: "5 sessions",
