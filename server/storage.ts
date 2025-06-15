@@ -379,7 +379,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Adventure Walks",
-        description: "Five exciting adventure outings to local forests, parks, or beaches providing maximum enrichment, exercise, and fun for your dog.",
+        description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",
