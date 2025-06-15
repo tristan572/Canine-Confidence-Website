@@ -279,7 +279,7 @@ export default function PackagesPage() {
 
   const filteredPackages = selectedCategory === 'all' 
     ? packages 
-    : packages.filter((pkg: Package) => pkg.category === selectedCategory);
+    : packages.filter((pkg: Package) => pkg.category.includes(selectedCategory));
 
   if (isLoading) {
     return (
