@@ -342,6 +342,24 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
+        name: "5 x One-on-One Coaching",
+        description: "Unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals, with ongoing feedback and dedicated support throughout your journey. Perfect for those seeking steady improvement, this package delivers exceptional value and ensures effective learning for both you and your dog.",
+        price: "$600",
+        originalPrice: "$700",
+        duration: "5 sessions",
+        sessions: 5,
+        category: "behavior",
+        features: [
+          "5 x individual private sessions",
+          "Customised training approach",
+          "In-depth understanding of methods",
+          "Modern techniques focus",
+          "Lasting results guarantee",
+          "Ongoing phone support between sessions"
+        ],
+        isPopular: false
+      },
+      {
         name: "5 x In-Home Obedience",
         description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning. Each session is tailored to your dog's unique needs and can take place while you are at work, ensuring efficient, stress-free training in a familiar environment for optimal results.",
         price: "$340",
