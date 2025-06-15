@@ -325,7 +325,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x One-on-One Coaching",
-        description: "Five comprehensive coaching sessions for owners who want in-depth understanding of training methods and personalised guidance for their dog's specific needs.",
+        description: "Unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals, with ongoing feedback and dedicated support throughout your journey. Perfect for those seeking steady improvement, this package delivers exceptional value and ensures effective learning for both you and your dog.",
         price: "$600",
         originalPrice: "$700",
         duration: "5 sessions",
