@@ -265,7 +265,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Behaviour Transformation Package",
-        description: "Comprehensive program for dogs with challenging behaviours. Address reactivity, anxiety, over-excitement, destructiveness and other complex issues.",
+        description: "Comprehensive behaviour modification program for dogs with challenging behaviours. Via one-on-one coaching sessions we can address many problem behaviours including but not limited to anxiety, over-excitement, destructiveness, barking, lead pulling, defiance and more. This program is our flagship program. Turning dogs from 'behaving badly' to the perfect companion!",
         price: "$990",
         originalPrice: "$1150",
         duration: "8 weeks", 
