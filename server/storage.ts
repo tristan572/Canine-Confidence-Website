@@ -285,7 +285,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Foundations Obedience Package",
-        description: "Build your dogs foundational skills to have a well mannered, balanced and fulfilled dog that you have verbal control over at all times.",
+        description: "Build your dogs foundational obedience skills to have a well mannered, balanced and fulfilled dog. Your bond with your dog will be the envy of your neighbourhood.",
         price: "$990",
         originalPrice: "$1150",
         duration: "8 weeks",
@@ -294,11 +294,11 @@ export class MemStorage implements IStorage {
         imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
         features: [
           "8 x private 1-hour sessions",
-          "Training plan and homework to follow",
-          "Skills - sit, down, come, place, loose lead +more",
+          "Training plan and homework guide",
+          "Skills - sit, down, come, place, loose lead + more",
           "Play development",
           "Impulse control",
-          "Confidence building and more"
+          "Confidence building + more"
         ],
         isPopular: false
       },
