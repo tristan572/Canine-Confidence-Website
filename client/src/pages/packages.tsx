@@ -182,8 +182,8 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
     <>
       <Card className={`relative ${pkg.isPopular ? 'ring-2 ring-primary-blue' : ''} hover:shadow-lg transition-shadow overflow-hidden`}>
         {pkg.isPopular && (
-          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-            <Badge className="bg-primary-blue text-white px-4 py-1">
+          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-10">
+            <Badge className="bg-primary-blue text-white px-3 py-1.5 text-sm font-medium shadow-lg">
               <Star className="w-3 h-3 mr-1" />
               Most Popular
             </Badge>

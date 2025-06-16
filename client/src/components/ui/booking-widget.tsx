@@ -46,7 +46,7 @@ export default function BookingWidget({ isOpen, onClose }: BookingWidgetProps) {
               "light_font_color": "#ffffff",
               "btn_color_1": "#2563EB",
               "sb_company_label_color": "#374151",
-              "hide_img_mode": "1",
+              "hide_img_mode": "0",
               "show_sidebar": "1",
               "sb_busy": "#E5E7EB",
               "sb_available": "#DBEAFE"

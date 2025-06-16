@@ -70,7 +70,7 @@ export default function HomePage() {
                   Where <span className="text-primary-blue">Confidence</span> Begins
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Tailored training solutions designed to build confidence in both dogs and their owners through positive, relationship-focused methods.
+                  Tailored training solutions designed to build confidence in both dogs and their owners through considerate, relationship-focused methods.
                 </p>
               </div>
               

@@ -192,7 +192,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-charcoal mb-6">Our Training Philosophy</h2>
           <p className="text-lg text-medium-grey mb-8">
-            At Canine Confidence, we believe that confident dogs come from confident owners. Our balanced, relationship-focused approach ensures lasting results that strengthen the bond between you and your dog.
+            At Canine Confidence, we believe that confident dogs come from confident owners. Our considerate, relationship-focused approach ensures lasting results that strengthen the bond between you and your dog.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl">
