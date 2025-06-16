@@ -381,6 +381,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
+        imageUrl: "/attached_assets/image_1750049520029.png",
         features: [
           "5 x 60-minute adventure sessions",
           "Collection from home",
