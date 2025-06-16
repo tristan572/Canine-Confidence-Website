@@ -276,14 +276,14 @@ export class MemStorage implements IStorage {
         isPopular: true
       },
       {
-        name: "Foundations Obedience Package",
+        name: "Foundational Obedience Program",
         description: "Build your dogs foundational obedience skills to have a well mannered, balanced and fulfilled dog. Your bond with your dog will be the envy of your neighbourhood.",
         price: "$990",
         originalPrice: "$1150",
         duration: "8 weeks",
         sessions: 8,
         category: "obedience",
-        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        imageUrl: "/attached_assets/image_1750049053389.png",
         features: [
           "8 x private 1-hour sessions",
           "Training plan and homework guide",
