@@ -113,10 +113,7 @@ export default function ServicesPage() {
                         <h4 className="font-semibold text-charcoal mb-3">What's Included:</h4>
                         <ul className="space-y-2">
                           {service.features.map((feature, index) => (
-                            <li key={index} className="flex items-center text-sm text-medium-grey">
-                              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
-                              {feature}
-                            </li>
+                            
                           ))}
                         </ul>
                       </div>
