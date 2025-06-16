@@ -323,6 +323,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
+        imageUrl: "/attached_assets/image_1750049391709.png",
         features: [
           "5 x individual private sessions",
           "Customised training approach",
