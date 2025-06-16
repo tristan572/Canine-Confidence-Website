@@ -263,7 +263,7 @@ export class MemStorage implements IStorage {
         duration: "8 weeks", 
         sessions: 8,
         category: "behaviour",
-        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        imageUrl: "/attached_assets/image_1750048973571.png",
         features: [
           "8 x 1-hour sessions",
           "Detailed behaviour assessment",
