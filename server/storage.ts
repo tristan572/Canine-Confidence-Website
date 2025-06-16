@@ -140,6 +140,7 @@ export class MemStorage implements IStorage {
         location: "From client's home",
         price: "$45",
         category: "walking",
+        imageUrl: "/attached_assets/image_1750049687824.png",
         features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates"]
       },
       {
@@ -400,6 +401,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
+        imageUrl: "/attached_assets/image_1750049687824.png",
         features: [
           "5 x 30-minute local walks",
           "Direct from your home",
