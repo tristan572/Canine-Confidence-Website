@@ -295,14 +295,14 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
-        name: "Reactive Dog Rehabilitation",
+        name: "Reactivity Rehabilitation Program",
         description: "Comprehensive program for dogs showing reactivity towards other dogs, people, or environmental triggers. This package combines trainer only sessions and owner coaching sessions for life long skill retention but also efficient and effective rehabilitation.",
         price: "$1100",
         originalPrice: "$1250",
         duration: "4 weeks",
         sessions: 12,
         category: "behaviour",
-        imageUrl: "https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+        imageUrl: "/attached_assets/image_1750049297197.png",
         features: [
           "Training plan and homework supplied",
           "Foundations and communication",
