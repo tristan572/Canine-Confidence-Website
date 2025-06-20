@@ -473,6 +473,14 @@ export class MemStorage implements IStorage {
         reviewText: "Great advise and instant results",
         service: "Training",
         location: null
+      },
+      {
+        clientName: "Prue B.",
+        dogName: null,
+        rating: 5,
+        reviewText: "Very professional and after only one session my dogs pulling on lead has improved! Highly recommend",
+        service: "Dog walks",
+        location: null
       }
     ];
 
