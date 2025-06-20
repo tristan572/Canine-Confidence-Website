@@ -455,6 +455,28 @@ export class MemStorage implements IStorage {
     ];
 
     blogData.forEach(post => this.createBlogPost(post));
+
+    // Seed testimonials
+    const testimonialData: InsertTestimonial[] = [
+      {
+        clientName: "Caitlyn F.",
+        dogName: "Koda",
+        rating: 5,
+        reviewText: "He was great, very friendly. He helped us a lot with training and was great with koda. Can't wait for our future sessions.",
+        service: "Training",
+        location: null
+      },
+      {
+        clientName: "Rorie N.",
+        dogName: null,
+        rating: 5,
+        reviewText: "Great advise and instant results",
+        service: "Training",
+        location: null
+      }
+    ];
+
+    testimonialData.forEach(testimonial => this.createTestimonial(testimonial));
   }
 
   // Services
