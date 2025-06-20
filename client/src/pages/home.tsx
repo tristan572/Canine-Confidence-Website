@@ -471,11 +471,11 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Star className="w-4 h-4" />
-              Real Client Reviews
+              Client Reviews
             </div>
             <h2 className="text-4xl font-bold text-charcoal mb-4">What Our Clients Say</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Authentic reviews from dog owners who've experienced the transformation through our training programs.
+              Reviews from dog owners who've experienced the transformation through our training programs.
             </p>
           </div>
 
@@ -500,7 +500,7 @@ export default function HomePage() {
           ) : (
             <div className="text-center py-12">
               <p className="text-medium-grey">
-                Testimonials are being updated. Visit our{" "}
+                More reviews available on our{" "}
                 <a 
                   href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
                   target="_blank"
@@ -508,8 +508,7 @@ export default function HomePage() {
                   className="text-primary-blue hover:underline"
                 >
                   Madpaws profile
-                </a>{" "}
-                to read authentic client reviews.
+                </a>.
               </p>
             </div>
           )}
