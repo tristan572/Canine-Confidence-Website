@@ -489,6 +489,14 @@ export class MemStorage implements IStorage {
         reviewText: "Thank you to Tristian for helping us get started on dog training at short notice for our new puppy. Tristian is very knowledgeable on all aspects of dog training and has great communication. We found the training session valuable and look foward to putting what we have learnt into practice. We highly recommend Tristian if you are looking for a dog trainer.",
         service: "Training",
         location: null
+      },
+      {
+        clientName: "Steph and Jonathan A.",
+        dogName: null,
+        rating: 5,
+        reviewText: "We reached out to Tristan for help training our 1yo puppy who is displaying some behaviour problems. Tristan was extremely knowledgeable, patient and understanding. He spent the time to talk us through all of our concerns with a no-judgement attitude. He has also taken the time to create a training plan for us to implement. Thank you Tristan! Looking forward to the next session.",
+        service: "Training",
+        location: null
       }
     ];
 
