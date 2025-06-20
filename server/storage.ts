@@ -481,6 +481,14 @@ export class MemStorage implements IStorage {
         reviewText: "Very professional and after only one session my dogs pulling on lead has improved! Highly recommend",
         service: "Dog walks",
         location: null
+      },
+      {
+        clientName: "Charlotte S.",
+        dogName: null,
+        rating: 5,
+        reviewText: "Thank you to Tristian for helping us get started on dog training at short notice for our new puppy. Tristian is very knowledgeable on all aspects of dog training and has great communication. We found the training session valuable and look foward to putting what we have learnt into practice. We highly recommend Tristian if you are looking for a dog trainer.",
+        service: "Training",
+        location: null
       }
     ];
 
