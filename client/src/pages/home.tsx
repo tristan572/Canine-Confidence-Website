@@ -50,6 +50,10 @@ export default function HomePage() {
     queryKey: ["/api/blog"],
   });
 
+  const { data: testimonials, isLoading: testimonialsLoading } = useQuery<Testimonial[]>({
+    queryKey: ["/api/testimonials"],
+  });
+
   const serviceIcons = {
     "Initial Assessment": ClipboardList,
     "Behaviour Modification": GraduationCap,
@@ -458,6 +462,57 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Star className="w-4 h-4" />
+              Real Client Reviews
+            </div>
+            <h2 className="text-4xl font-bold text-charcoal mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
+              Authentic reviews from dog owners who've experienced the transformation through our training programs.
+            </p>
+          </div>
+
+          {testimonialsLoading ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[...Array(3)].map((_, i) => (
+                <Card key={i} className="animate-pulse">
+                  <CardContent className="p-6">
+                    <div className="h-4 bg-gray-200 rounded mb-4"></div>
+                    <div className="h-16 bg-gray-200 rounded mb-4"></div>
+                    <div className="h-4 bg-gray-200 rounded w-32"></div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : testimonials && testimonials.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.slice(0, 6).map((testimonial) => (
+                <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-medium-grey">
+                Testimonials are being updated. Visit our{" "}
+                <a 
+                  href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-blue hover:underline"
+                >
+                  Madpaws profile
+                </a>{" "}
+                to read authentic client reviews.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
