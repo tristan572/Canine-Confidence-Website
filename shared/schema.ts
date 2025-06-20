@@ -102,6 +102,18 @@ export const cartItems = pgTable("cart_items", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+export const testimonials = pgTable("testimonials", {
+  id: serial("id").primaryKey(),
+  clientName: text("client_name").notNull(),
+  dogName: text("dog_name"),
+  rating: integer("rating").notNull(),
+  reviewText: text("review_text").notNull(),
+  service: text("service"),
+  location: text("location"),
+  createdAt: timestamp("created_at").defaultNow(),
+  isActive: boolean("is_active").default(true),
+});
+
 // Insert schemas
 export const insertServiceSchema = createInsertSchema(services).omit({
   id: true,
@@ -143,6 +155,11 @@ export const insertCartItemSchema = createInsertSchema(cartItems).omit({
   createdAt: true,
 });
 
+export const insertTestimonialSchema = createInsertSchema(testimonials).omit({
+  id: true,
+  createdAt: true,
+});
+
 // Types
 export type Service = typeof services.$inferSelect;
 export type InsertService = z.infer<typeof insertServiceSchema>;
@@ -167,3 +184,6 @@ export type InsertContactSubmission = z.infer<typeof insertContactSubmissionSche
 
 export type CartItem = typeof cartItems.$inferSelect;
 export type InsertCartItem = z.infer<typeof insertCartItemSchema>;
+
+export type Testimonial = typeof testimonials.$inferSelect;
+export type InsertTestimonial = z.infer<typeof insertTestimonialSchema>;

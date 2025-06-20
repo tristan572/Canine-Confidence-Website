@@ -1,5 +1,5 @@
 import { 
-  services, products, packages, blogPosts, bookings, consultations, contactSubmissions, cartItems,
+  services, products, packages, blogPosts, bookings, consultations, contactSubmissions, cartItems, testimonials,
   type Service, type InsertService,
   type Product, type InsertProduct,
   type Package, type InsertPackage,
@@ -7,7 +7,8 @@ import {
   type Booking, type InsertBooking,
   type Consultation, type InsertConsultation,
   type ContactSubmission, type InsertContactSubmission,
-  type CartItem, type InsertCartItem
+  type CartItem, type InsertCartItem,
+  type Testimonial, type InsertTestimonial
 } from "@shared/schema";
 
 export interface IStorage {
@@ -52,6 +53,11 @@ export interface IStorage {
   updateCartItem(id: number, quantity: number): Promise<CartItem | undefined>;
   removeFromCart(id: number): Promise<boolean>;
   clearCart(sessionId: string): Promise<boolean>;
+
+  // Testimonials
+  getTestimonials(): Promise<Testimonial[]>;
+  getTestimonial(id: number): Promise<Testimonial | undefined>;
+  createTestimonial(testimonial: InsertTestimonial): Promise<Testimonial>;
 }
 
 export class MemStorage implements IStorage {
@@ -63,6 +69,7 @@ export class MemStorage implements IStorage {
   private consultations: Map<number, Consultation>;
   private contactSubmissions: Map<number, ContactSubmission>;
   private cartItems: Map<number, CartItem>;
+  private testimonials: Map<number, Testimonial>;
   private currentServiceId: number;
   private currentProductId: number;
   private currentPackageId: number;
@@ -71,6 +78,7 @@ export class MemStorage implements IStorage {
   private currentConsultationId: number;
   private currentContactSubmissionId: number;
   private currentCartItemId: number;
+  private currentTestimonialId: number;
 
   constructor() {
     this.services = new Map();
