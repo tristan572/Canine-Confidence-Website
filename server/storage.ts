@@ -89,6 +89,7 @@ export class MemStorage implements IStorage {
     this.consultations = new Map();
     this.contactSubmissions = new Map();
     this.cartItems = new Map();
+    this.testimonials = new Map();
     this.currentServiceId = 1;
     this.currentProductId = 1;
     this.currentPackageId = 1;
@@ -97,6 +98,7 @@ export class MemStorage implements IStorage {
     this.currentConsultationId = 1;
     this.currentContactSubmissionId = 1;
     this.currentCartItemId = 1;
+    this.currentTestimonialId = 1;
 
     this.seedData();
   }
@@ -624,6 +626,26 @@ export class MemStorage implements IStorage {
     const items = await this.getCartItems(sessionId);
     items.forEach(item => this.cartItems.delete(item.id));
     return true;
+  }
+
+  async getTestimonials(): Promise<Testimonial[]> {
+    return Array.from(this.testimonials.values()).filter(t => t.isActive);
+  }
+
+  async getTestimonial(id: number): Promise<Testimonial | undefined> {
+    return this.testimonials.get(id);
+  }
+
+  async createTestimonial(testimonial: InsertTestimonial): Promise<Testimonial> {
+    const id = this.currentTestimonialId++;
+    const newTestimonial: Testimonial = {
+      ...testimonial,
+      id,
+      createdAt: new Date(),
+      isActive: true
+    };
+    this.testimonials.set(id, newTestimonial);
+    return newTestimonial;
   }
 }
 

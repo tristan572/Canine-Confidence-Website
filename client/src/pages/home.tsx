@@ -28,7 +28,8 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceCard from "@/components/ui/service-card";
 import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
-import type { Service, Product, BlogPost, Package } from "@shared/schema";
+import TestimonialCard from "@/components/ui/testimonial-card";
+import type { Service, Product, BlogPost, Package, Testimonial } from "@shared/schema";
 
 export default function HomePage() {
   const [showBookingWidget, setShowBookingWidget] = useState(false);

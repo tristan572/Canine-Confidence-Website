@@ -308,6 +308,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Testimonials routes
+  app.get("/api/testimonials", async (req, res) => {
+    try {
+      const testimonials = await storage.getTestimonials();
+      res.json(testimonials);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch testimonials" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
