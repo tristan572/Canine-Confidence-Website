@@ -111,7 +111,7 @@ export class MemStorage implements IStorage {
         description: "Get to know your dog and understand their unique needs.  We'll assess behaviour and temperament and then create a personalised plan that focuses on true genetic fulfilment, confidence and bond building, communication clarity and empowering you with skills to maintain lasting behavioural change",
         duration: "60 minutes",
         location: "In-home assessment",
-        price: "$70",
+        price: "$90",
         category: "assessment",
         features: ["Comprehensive evaluation", "Personalised training plan", "Written recommendations", "Ongoing support guidance"]
       },
@@ -121,7 +121,7 @@ export class MemStorage implements IStorage {
         description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioural changes.",
         duration: "60 minutes",
         location: "In-home or suitable environment",
-        price: "$140",
+        price: "$120",
         category: "training",
         features: ["Individual, private sessions", "Customised training", "In-depth understanding of methods", "Modern techniques", "Lasting results", "Ongoing phone support"]
       },
@@ -130,7 +130,7 @@ export class MemStorage implements IStorage {
         description: "Basic obedience training, completed by the trainer, in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
         duration: "30 minutes",
         location: "In-home training",
-        price: "$70",
+        price: "$60",
         category: "training",
         features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
       },
@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
         description: "Walk and Train is a specialised service where we visit your home, pick up your dog, and reinforce general obedience skills and loose lead walking while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
         duration: "40 minutes",
         location: "Home pickup and local area",
-        price: "$70",
+        price: "$60",
         category: "training",
         features: ["Home pickup service", "General obedience reinforcement", "Loose lead walking practice", "Real-world environment training", "Transition from indoor to outdoor skills"]
       },
