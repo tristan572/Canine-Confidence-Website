@@ -167,7 +167,7 @@ export class MemStorage implements IStorage {
         description: "One-hour video consultation perfect for troubleshooting specific issues, follow-up support, or getting started with training guidance from the comfort of your home.",
         duration: "60 minutes",
         location: "Video call (Zoom)",
-        price: "$120",
+        price: "$100",
         category: "consultation",
         features: ["Convenient video call", "Problem solving", "Follow-up support", "Training guidance"]
       }
