@@ -683,7 +683,7 @@ When dogs don't get appropriate outlets for their natural instincts, they create
 ## The Major Drive Categories
 
 ### Herding Dogs
-**Breeds:** Border Collie, Australian Kelpie, German Shepherd, Australian Cattle Dog
+**Breeds:** Border Collie, Australian Kelpie, Australian Cattle Dog
 
 **Natural Instincts:**
 - Controlling and directing movement
