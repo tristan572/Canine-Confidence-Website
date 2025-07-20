@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { Star, Clock, Users, CheckCircle, Calendar } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import type { Package } from "@shared/schema";
+import packagesHeroImage from "@assets/image_1750049520029.png";
 
 declare global {
   interface Window {
@@ -335,7 +336,7 @@ export default function PackagesPage() {
             
             <div className="relative">
               <img 
-                src="@assets/image_1750049520029.png" 
+                src={packagesHeroImage} 
                 alt="Active dog training session showing enrichment and play-based learning" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

@@ -4,6 +4,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import heroImage from "@assets/image_1750049053389.png";
+import testimonialsImage from "@assets/image_1750049431855.png";
 import { 
   GraduationCap, 
   Footprints, 
@@ -118,7 +120,7 @@ export default function HomePage() {
             
             <div className="relative">
               <img 
-                src="@assets/image_1750049391709.png" 
+                src={heroImage} 
                 alt="Professional dog trainer building confidence through interactive training with happy dogs" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -538,7 +540,7 @@ export default function HomePage() {
             
             <div className="relative">
               <img 
-                src="@assets/image_1750049431855.png" 
+                src={testimonialsImage} 
                 alt="Successful training session demonstrating positive reinforcement and play-based learning methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

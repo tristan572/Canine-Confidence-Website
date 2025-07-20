@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import servicesHeroImage from "@assets/image_1750049481697.png";
 import { 
   GraduationCap, 
   Footprints, 
@@ -98,7 +99,7 @@ export default function ServicesPage() {
             
             <div className="relative">
               <img 
-                src="@assets/image_1750049481697.png" 
+                src={servicesHeroImage} 
                 alt="Professional dog training session showing positive reinforcement techniques" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />

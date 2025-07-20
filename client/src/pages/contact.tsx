@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
+import contactHeroImage from "@assets/image_1750049297197.png";
 
 export default function ContactPage() {
   return (
@@ -32,7 +33,7 @@ export default function ContactPage() {
             
             <div className="relative">
               <img 
-                src="@assets/image_1750049297197.png" 
+                src={contactHeroImage} 
                 alt="Happy confident dog after successful training showing the results of professional dog training" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
