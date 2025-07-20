@@ -330,7 +330,7 @@ export class MemStorage implements IStorage {
       {
         name: "5 x One-on-One Coaching",
         description: "Unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals, with ongoing feedback and dedicated support throughout your journey. Perfect for those seeking steady improvement, this package delivers exceptional value and ensures effective learning for both you and your dog.",
-        price: "$580",
+        price: "$550",
         originalPrice: "$600",
         duration: "5 sessions",
         sessions: 5,
@@ -350,7 +350,7 @@ export class MemStorage implements IStorage {
       {
         name: "5 x In-Home Obedience",
         description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning. Each session is tailored to your dog's unique needs and can take place while you are at work, ensuring efficient, stress-free training in a familiar environment for optimal results.",
-        price: "$290",
+        price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
         sessions: 5,
@@ -369,7 +369,7 @@ export class MemStorage implements IStorage {
       {
         name: "5 x Walk and Train",
         description: "Our Five Walk and Trains Package offers practical dog training with convenience. We pick up your dog from home and reinforce obedience and loose lead walking skills during real-world strolls. Ideal for progressing from in-home training, this package ensures confidence building, practical application and lasting results.",
-        price: "$290",
+        price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
         sessions: 5,
@@ -388,7 +388,7 @@ export class MemStorage implements IStorage {
       {
         name: "5 x Adventure Walks",
         description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
-        price: "$380",
+        price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",
         sessions: 5,
@@ -407,7 +407,7 @@ export class MemStorage implements IStorage {
       {
         name: "5 x Local Walks",
         description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog stays happy and active.",
-        price: "$210",
+        price: "$215",
         originalPrice: "$225",
         duration: "5 sessions",
         sessions: 5,
