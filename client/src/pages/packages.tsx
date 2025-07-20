@@ -305,25 +305,40 @@ export default function PackagesPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Training Packages
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
-            Comprehensive training programs designed to transform your dog's behaviour and strengthen your bond
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold text-white">200+</div>
-              <div className="text-sm text-white">Confident Clients</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-white">
+                  Training Packages
+                </h1>
+                <p className="text-xl md:text-2xl text-white">
+                  Comprehensive training programs designed to transform your dog's behaviour and strengthen your bond
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-4">
+                <div className="bg-white/20 rounded-lg px-6 py-3">
+                  <div className="text-2xl font-bold text-white">200+</div>
+                  <div className="text-sm text-white">Confident Clients</div>
+                </div>
+                <div className="bg-white/20 rounded-lg px-6 py-3">
+                  <div className="text-2xl font-bold text-white">100%</div>
+                  <div className="text-sm text-white">Happier Dogs</div>
+                </div>
+                <div className="bg-white/20 rounded-lg px-6 py-3">
+                  <div className="text-2xl font-bold text-white">5★</div>
+                  <div className="text-sm text-white">Average Rating</div>
+                </div>
+              </div>
             </div>
-            <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-sm text-white">Happier Dogs</div>
-            </div>
-            <div className="bg-white/20 rounded-lg px-6 py-3">
-              <div className="text-2xl font-bold text-white">5★</div>
-              <div className="text-sm text-white">Average Rating</div>
+            
+            <div className="relative">
+              <img 
+                src="@assets/image_1750049520029.png" 
+                alt="Active dog training session showing enrichment and play-based learning" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
             </div>
           </div>
         </div>

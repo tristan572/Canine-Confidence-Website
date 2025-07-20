@@ -70,7 +70,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800" 
+                src="@assets/image_1750049053389.png" 
                 alt="Professional dog trainer in Brisbane working with happy dogs using trust-based methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -139,8 +139,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700" 
-                alt="Brisbane dog training environment with multiple dogs in controlled setting" 
+                src="@assets/image_1750049687824.png" 
+                alt="Brisbane dog training environment showing professional leash training techniques" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               

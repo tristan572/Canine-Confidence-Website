@@ -71,24 +71,38 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="hero-gradient py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-6">
-            Professional Dog Training Services
-          </h1>
-          <p className="text-xl text-medium-grey mb-8">
-            Professional dog training in Brisbane, where trust, play, and clear communication builds stronger bonds. We help you create lasting behavioural foundations using modern methods that fulfils your dog's genetic desires and brings balance to your home.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
-                  Free Consultation
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-md">
-                <ConsultationForm />
-              </DialogContent>
-            </Dialog>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-5xl font-bold text-charcoal">
+                  Professional Dog Training Services
+                </h1>
+                <p className="text-xl text-medium-grey">
+                  Professional dog training in Brisbane, where trust, play, and clear communication builds stronger bonds. We help you create lasting behavioural foundations using modern methods that fulfils your dog's genetic desires and brings balance to your home.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
+                      Free Consultation
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <ConsultationForm />
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="@assets/image_1750049481697.png" 
+                alt="Professional dog training session showing positive reinforcement techniques" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>

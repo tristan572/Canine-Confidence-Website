@@ -17,13 +17,27 @@ export default function ContactPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="hero-gradient py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-medium-grey mb-8">
-            Ready to start your dog's transformation? We're here to help with any questions about our training services.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-5xl font-bold text-charcoal">
+                  Get in Touch
+                </h1>
+                <p className="text-xl text-medium-grey">
+                  Ready to start your dog's transformation? We're here to help with any questions about our training services.
+                </p>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src="@assets/image_1750049297197.png" 
+                alt="Happy confident dog after successful training showing the results of professional dog training" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
