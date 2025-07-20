@@ -48,7 +48,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Phone</div>
                     <div className="text-medium-grey mb-1">0409 521 358</div>
-                    <div className="text-sm text-medium-grey">Available Monday - Friday, 5:30AM - 8PM</div>
+                    <div className="text-sm text-medium-grey">Available Monday - Saturday, 8AM - 8PM</div>
                   </div>
                 </div>
 

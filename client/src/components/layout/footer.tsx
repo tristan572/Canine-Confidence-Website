@@ -116,9 +116,12 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-primary-blue" />
-                <span className="text-white">0409 521 358</span>
+              <li className="flex items-start space-x-2">
+                <Phone className="h-4 w-4 text-primary-blue mt-0.5" />
+                <div className="text-white">
+                  <div>0409 521 358</div>
+                  <div className="text-xs text-gray-300">Mon-Sat: 8am - 8pm</div>
+                </div>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary-blue" />
