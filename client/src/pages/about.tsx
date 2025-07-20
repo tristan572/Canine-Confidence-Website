@@ -126,7 +126,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Clarity in Life</h3>
               <p className="text-medium-grey">
-                Clear expectations and consistent communication create a structured environment where dogs feel secure and confident, knowing exactly what's expected of them.
+                Clear expectations and consistent communication create an environment where dogs feel secure and confident because they understand what's expected of them.
               </p>
             </Card>
           </div>
