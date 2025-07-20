@@ -266,66 +266,67 @@ export class MemStorage implements IStorage {
         ],
         isPopular: true
       },
-      {
-        name: "Behaviour Transformation Package",
-        description: "Comprehensive behaviour modification program for dogs with challenging behaviours. Via one-on-one coaching sessions we can address many problem behaviours including but not limited to anxiety, over-excitement, destructiveness, barking, lead pulling, defiance and more. This program is our flagship program. Turning dogs from 'behaving badly' to the perfect companion!",
-        price: "$990",
-        originalPrice: "$1150",
-        duration: "8 weeks", 
-        sessions: 8,
-        category: "behaviour",
-        imageUrl: "/attached_assets/image_1750048973571.png",
-        features: [
-          "8 x 1-hour sessions",
-          "Detailed behaviour assessment",
-          "Customised training plan",
-          "Management strategies",
-          "Behavioural modification",
-          "Ongoing support between sessions",
-          "Follow-up check-ins and more"
-        ],
-        isPopular: true
-      },
-      {
-        name: "Foundational Obedience Program",
-        description: "Build your dogs foundational obedience skills to have a well mannered, balanced and fulfilled dog. Your bond with your dog will be the envy of your neighbourhood.",
-        price: "$990",
-        originalPrice: "$1150",
-        duration: "8 weeks",
-        sessions: 8,
-        category: "obedience",
-        imageUrl: "/attached_assets/image_1750049053389.png",
-        features: [
-          "8 x private 1-hour sessions",
-          "Training plan and homework guide",
-          "Skills - sit, down, come, place, loose lead + more",
-          "Play development",
-          "Impulse control",
-          "Confidence building + more"
-        ],
-        isPopular: false
-      },
-      {
-        name: "Reactivity Rehabilitation Program",
-        description: "Comprehensive program for dogs showing reactivity towards other dogs, people, or environmental triggers. This package combines trainer only sessions and owner coaching sessions for life long skill retention but also efficient and effective rehabilitation.",
-        price: "$1100",
-        originalPrice: "$1250",
-        duration: "4 weeks",
-        sessions: 12,
-        category: "behaviour",
-        imageUrl: "/attached_assets/image_1750049297197.png",
-        features: [
-          "Training plan and homework supplied",
-          "Foundations and communication",
-          "Management techniques",
-          "Confidence building and genetic fulfilment",
-          "Impulse control",
-          "Counter-conditioning",
-          "Safe socialisation strategies",
-          "Lifetime support guarantee"
-        ],
-        isPopular: false
-      },
+      // Hidden packages - pending implementation
+      // {
+      //   name: "Behaviour Transformation Package",
+      //   description: "Comprehensive behaviour modification program for dogs with challenging behaviours. Via one-on-one coaching sessions we can address many problem behaviours including but not limited to anxiety, over-excitement, destructiveness, barking, lead pulling, defiance and more. This program is our flagship program. Turning dogs from 'behaving badly' to the perfect companion!",
+      //   price: "$990",
+      //   originalPrice: "$1150",
+      //   duration: "8 weeks", 
+      //   sessions: 8,
+      //   category: "behaviour",
+      //   imageUrl: "/attached_assets/image_1750048973571.png",
+      //   features: [
+      //     "8 x 1-hour sessions",
+      //     "Detailed behaviour assessment",
+      //     "Customised training plan",
+      //     "Management strategies",
+      //     "Behavioural modification",
+      //     "Ongoing support between sessions",
+      //     "Follow-up check-ins and more"
+      //   ],
+      //   isPopular: true
+      // },
+      // {
+      //   name: "Foundational Obedience Program",
+      //   description: "Build your dogs foundational obedience skills to have a well mannered, balanced and fulfilled dog. Your bond with your dog will be the envy of your neighbourhood.",
+      //   price: "$990",
+      //   originalPrice: "$1150",
+      //   duration: "8 weeks",
+      //   sessions: 8,
+      //   category: "obedience",
+      //   imageUrl: "/attached_assets/image_1750049053389.png",
+      //   features: [
+      //     "8 x private 1-hour sessions",
+      //     "Training plan and homework guide",
+      //     "Skills - sit, down, come, place, loose lead + more",
+      //     "Play development",
+      //     "Impulse control",
+      //     "Confidence building + more"
+      //   ],
+      //   isPopular: false
+      // },
+      // {
+      //   name: "Reactivity Rehabilitation Program",
+      //   description: "Comprehensive program for dogs showing reactivity towards other dogs, people, or environmental triggers. This package combines trainer only sessions and owner coaching sessions for life long skill retention but also efficient and effective rehabilitation.",
+      //   price: "$1100",
+      //   originalPrice: "$1250",
+      //   duration: "4 weeks",
+      //   sessions: 12,
+      //   category: "behaviour",
+      //   imageUrl: "/attached_assets/image_1750049297197.png",
+      //   features: [
+      //     "Training plan and homework supplied",
+      //     "Foundations and communication",
+      //     "Management techniques",
+      //     "Confidence building and genetic fulfilment",
+      //     "Impulse control",
+      //     "Counter-conditioning",
+      //     "Safe socialisation strategies",
+      //     "Lifetime support guarantee"
+      //   ],
+      //   isPopular: false
+      // },
       {
         name: "5 x One-on-One Coaching",
         description: "Unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals, with ongoing feedback and dedicated support throughout your journey. Perfect for those seeking steady improvement, this package delivers exceptional value and ensures effective learning for both you and your dog.",
