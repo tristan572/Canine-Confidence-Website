@@ -157,7 +157,7 @@ export default function ContactPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What areas do you service?</h3>
               <p className="text-medium-grey text-sm">
-                We provide mobile training services throughout Brisbane and surrounding areas including Logan, Ipswich, and the Gold Coast corridor.
+                We provide mobile training services throughout Brisbane and surrounding areas. Extended travel may incur additional fees.
               </p>
             </Card>
 
@@ -171,14 +171,14 @@ export default function ContactPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">Do you work with aggressive dogs?</h3>
               <p className="text-medium-grey text-sm">
-                Yes, we specialize in behavioral modification including aggression cases. Safety is our top priority, and we'll assess each situation individually.
+                We specialize in dog behavioral modification, however we do not handle cases involving human aggression. Please get in contact to ensure we can properly assess your situation and provide appropriate references if needed.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What payment methods do you accept?</h3>
               <p className="text-medium-grey text-sm">
-                We accept cash, bank transfer, and all major credit cards. Payment is due at the time of service unless other arrangements are made.
+                We accept all major payment methods through our secure online scheduling system. Payment is required upfront before sessions to confirm your booking.
               </p>
             </Card>
           </div>
