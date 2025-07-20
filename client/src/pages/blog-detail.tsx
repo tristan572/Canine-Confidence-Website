@@ -127,7 +127,6 @@ export default function BlogDetailPage() {
           <div className="prose prose-lg max-w-none">
             <div className="text-charcoal leading-relaxed space-y-6">
               <ReactMarkdown 
-                className="markdown-content"
                 components={{
                   h1: ({children}) => <h1 className="text-3xl font-bold text-charcoal mb-6 mt-12 first:mt-0">{children}</h1>,
                   h2: ({children}) => <h2 className="text-2xl font-bold text-charcoal mb-4 mt-10">{children}</h2>,
