@@ -196,7 +196,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: 0411 123 456
+                Call Now: 0409 521 358
               </Button>
               <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
