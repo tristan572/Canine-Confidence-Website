@@ -85,11 +85,11 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              We believe in building confidence through play, trust, and clear communication—creating lasting bonds between dogs and their families.
+              We believe in building confidence through play, skills, genetic fulfillment, and clarity—creating lasting bonds between dogs and their families.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-white p-8 text-center border border-gray-100">
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Heart className="w-8 h-8 text-white" />
@@ -97,6 +97,16 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold text-charcoal mb-4">Play-Based Learning</h3>
               <p className="text-medium-grey">
                 We use play not just as a reward, but as the primary method to teach, connect, and motivate. Play is the framework that strengthens bonds and builds lasting relationships.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-8 text-center border border-gray-100">
+              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Skills</h3>
+              <p className="text-medium-grey">
+                We give dogs the essential skills they need to navigate through our world safely and in harmony with us, building confidence for life's everyday challenges.
               </p>
             </Card>
 
@@ -114,9 +124,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Trust & Communication</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Clarity in Life</h3>
               <p className="text-medium-grey">
-                Clear communication builds trust. We teach both dogs and owners how to understand each other, creating harmony in the home.
+                Clear expectations and consistent communication create a structured environment where dogs feel secure and confident, knowing exactly what's expected of them.
               </p>
             </Card>
           </div>
