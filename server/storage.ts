@@ -427,31 +427,384 @@ export class MemStorage implements IStorage {
 
     packageData.forEach(pkg => this.createPackage(pkg));
 
-    // Seed blog posts
+    // Seed blog posts - Four Building Blocks Articles
     const blogData: InsertBlogPost[] = [
       {
-        title: "5 Essential Commands Every Dog Should Know",
-        excerpt: "Learn the fundamental commands that form the foundation of good behaviour and create a strong communication system with your dog.",
-        content: "Training your dog is one of the most rewarding experiences you can share together...",
+        title: "Building Block 1: Health - The Foundation of Everything",
+        excerpt: "Before your dog can learn, behave, or thrive, they must feel good in their body. Discover why health is the non-negotiable starting point for all training success.",
+        content: `# Building Block 1: Health - The Foundation of Everything
+
+Before you can expect your dog to learn, behave, or thrive, they must first feel good in their body. This block is the non-negotiable starting point—without physical wellbeing, no amount of training, play, or structure will stick.
+
+A dog in pain, discomfort, or poor health can't be expected to focus, cooperate, or feel calm. Health must come first—always.
+
+## Key Elements of Canine Health
+
+### 1. Diet
+Feed a species-appropriate, balanced diet that fuels your dog's body and mind:
+- Puppies need extra support for growth and development
+- A mix of raw, air or freeze-dried food should be used—aim for nutrient density and minimal processing
+- High-quality kibble can be mixed with the above for financial or practical reasons, if needed
+- Poor nutrition often shows up as behavioural issues, poor coat and severe illness, years down the track
+
+### 2. Rest & Recovery
+- Dogs need 12–20 hours of sleep a day, depending on age and breed
+- Overstimulated dogs become hyperactive and mouthy, not just tired
+- Provide structured down time and calm spaces for nervous system recovery
+
+### 3. Pain Management
+- Always rule out pain if your dog's behaviour changes or they resist handling or training
+- Dogs hide pain well—watch for subtle signs: reluctance to jump, changes in posture, irritability, or licking a body part
+- Address both acute (injury) and chronic (arthritis, gut issues, structural problems) pain
+
+### 4. Vet Check-Ups
+- Regular health assessments are essential—even for young or seemingly healthy dogs
+- Get baseline bloodwork done early in life for comparison later
+- Early detection prevents long-term suffering and expensive interventions
+
+### 5. Supplements (if needed)
+Consider supplements for:
+- Omega-3s for inflammation and coat health
+- Probiotics for gut support
+- Joint supplements for active or ageing dogs
+
+## Why You Can't Skip This Block
+
+- A dog in pain won't respond to leash pressure, play, or commands without distress
+- Poor sleep leads to over-arousal, short fuse, and erratic behaviour
+- Medical issues often look like behaviour problems—but they're not
+
+When something seems "off," start by checking physical health. Don't train over pain.`,
+        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        readTime: "8 min read",
+        tags: ["health", "foundation", "wellness", "four building blocks"]
+      },
+      {
+        title: "Building Block 2: Lifestyle - Fulfilling Your Dog's Mind",
+        excerpt: "Once physical health is in check, your dog needs mental fulfillment and purpose. Learn how to identify your dog's natural drives and provide meaningful outlets.",
+        content: `# Building Block 2: Lifestyle - Fulfilling Your Dog's Mind
+
+Once physical health is in check, your dog needs a healthy mind and purpose. Without this, dogs become restless, anxious, or difficult to manage—not because they're a problem, but because they're having a problem.
+
+## Key Elements of Canine Lifestyle
+
+### 1. Purpose & Fulfillment
+Every breed—and every individual dog—has natural drives, whether it's to chase, herd, hunt, guard, retrieve, or problem-solve.
+
+While we can't always provide the real job (e.g. sheep to herd, animals to hunt), we can mimic it through thoughtful play and training:
+
+**Drive-Specific Activities:**
+
+| Drive Type | Examples | Fulfillment Activities |
+|------------|----------|----------------------|
+| **Herding** (Border Collie, Kelpie) | Control movement | Flirt pole games, directional obedience, pattern games |
+| **Hunting/Retrieving** (Spaniels, Labs) | Find and retrieve | "Find it" games, tracking, fetch and delivery |
+| **Guarding/Protection** (Rottweiler, GSD) | Protect territory | Tug with rules, obedience under pressure, bite work |
+| **Sighthounds** (Greyhound, Whippet) | Chase movement | Fast-moving toy games, sprint-and-rest play |
+| **Terriers** | Dig and hunt | Dig pits, flirt pole games, rag games |
+| **Companion breeds** | Low-drive companionship | Food enrichment, gentle scent games, soft engagement |
+
+### 2. Freedom & Expression
+- Dogs need time to run, sniff, chew, and just be a dog
+- Provide outlets (sniff walks, off leash running, chewing stations) that give freedom without sacrificing safety
+- Suppression creates frustration—structured expression creates balance
+
+### 3. Play
+- Play is how dogs bond, learn, and regulate emotion
+- Prioritise interactive human play like tug, chase, and fetch
+- You should remain their main source of fun and fulfillment
+
+### 4. Scent Work
+- Scenting is a biological need for all dogs—not just hounds
+- Simple games like "find it," scatter feeding, or intro-level scent work build confidence and calmness
+
+## Why This Block Matters
+
+Mental fulfillment is not optional—it's essential. Dogs with unmet lifestyle needs often show:
+- Excessive barking
+- Destruction
+- Escaping or chasing
+- Over-excitement or reactivity
+
+A fulfilled dog is more focused, more cooperative, and more peaceful in daily life.
+
+**Remember:** Find what drives your dog—and use it later to build clarity and skills.`,
+        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        readTime: "10 min read",
+        tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"]
+      },
+      {
+        title: "Building Block 3: Clarity - Understanding & Communication",
+        excerpt: "Even the healthiest, most fulfilled dog will struggle without clarity. Learn how to create clear communication that builds confidence and eliminates confusion.",
+        content: `# Building Block 3: Clarity - Understanding & Communication
+
+Even the healthiest, most fulfilled dog will struggle to fit into our lives without clarity. Dogs need to understand what is expected of them, what their boundaries are, and how to interpret our feedback.
+
+**Confusion creates anxiety. Clarity creates confidence.**
+
+## What Clarity Really Means
+
+Clarity isn't about rigid control—it's about consistent, meaningful communication. When your dog knows what words and tools mean, they feel more secure, cooperative, and calm.
+
+A clear system reduces stress, builds trust, and eliminates guesswork.
+
+## 1. The 4 Windows of Opportunity
+
+Dogs move through natural "windows" or states of being. Teaching your dog to enter and exit each one smoothly creates emotional balance, better behaviour, and a deeper bond.
+
+| Window/Command | Purpose | Definition |
+|----------------|---------|------------|
+| **Ready** | Engagement | Interactive play with you. Builds relationship, drive, and focus. |
+| **Free** | Exploration | Off-duty time to sniff, wander, or just be a dog. Self-directed decompression. |
+| **Settle** | Calmness | Low arousal, calm relaxation. Teaches patience and emotional control. Must be non-negotiable. |
+| **Work** | Obedience | Structured skills, commands, and focused effort. Clear expectations, non-negotiable follow-through. |
+
+Teaching your dog these states—and how to switch between them—is one of the most valuable things you'll ever do.
+
+**This becomes the framework for daily life, not just a training concept.**
+
+## 2. Markers Build Meaning
+
+Words like "yes," "wrong," and "no" are not just instructions—they're communication packages, giving the dog multiple bits of info in one precise moment.
+
+- **"Yes"** – Correct! Leave your position and take your reward from handler.
+- **"Get it"** – Correct! Leave your position and take your reward over there.
+- **"Wrong"** – Try something else, no big deal. No reward for that behaviour.
+- **"No"** – That's over. Stop the behaviour now and forever. Intolerable outcome is coming.
+
+### How to Use Markers: Mark the Moment
+
+Markers are like pressing the shutter button on a camera: They take a snapshot of the exact moment/behaviour your dog does something you want to strengthen or weaken.
+
+- **Yes** – Taking a photo of the behaviour your dog did right. That behaviour will be remembered and repeated because it's followed by a reward.
+- **Wrong** – A gentle click showing your dog this moment won't lead to rewards. No big deal, just try something else.
+- **No** – A clear picture of unacceptable behaviour that should never be repeated. We follow "no" with something undesirable to the dog, done fairly.
+
+**Why it works:** Dogs live in the moment. Markers "freeze" the exact second your dog makes a choice, making your communication more efficient, fairer, and less emotional.
+
+## 3. The Leash Is Communication, Not Restraint
+
+The leash is an extension of your relationship—not just a tool for control.
+
+- Teach your dog how to respond to leash pressure, not just tolerate it
+- Use soft guidance, not jerking or dragging
+- Pressure should feel like conversation, not conflict
+
+When used clearly and fairly, the leash becomes a calm, reliable bridge between you and your dog.
+
+## Why Clarity Is Foundational
+
+- Dogs without clarity guess—and usually guess wrong
+- Inconsistent communication creates confusion, stress, and disobedience
+- Clear systems allow your dog to relax, focus, and make better choices
+
+Clarity isn't about perfection—it's about predictability. Dogs thrive when they know what things mean.`,
         imageUrl: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-        readTime: "5 min read",
-        tags: ["training", "commands", "basics"]
+        readTime: "9 min read",
+        tags: ["communication", "clarity", "markers", "four building blocks"]
       },
       {
-        title: "Understanding Your Dog's Body Language",
-        excerpt: "Decode the signals your dog is sending you and learn to communicate more effectively through understanding their natural expressions.",
-        content: "Dogs communicate primarily through body language...",
+        title: "Building Block 4: Skills - Obedience That Holds Up in Real Life",
+        excerpt: "With health, lifestyle, and clarity in place, we can focus on skills—the structured obedience behaviours that help your dog function confidently in everyday life.",
+        content: `# Building Block 4: Skills - Obedience That Holds Up in Real Life
+
+With health, lifestyle, and clarity in place, we can now focus on skills—the structured obedience behaviours that help your dog function calmly and confidently in everyday life.
+
+Skills are the visible layer of training, but they only work when the other foundations are solid. If your dog is unwell, under-stimulated, or confused about what's expected, obedience will always be shaky.
+
+**Skills give your dog the ability to live well in our human world—and give you the tools to guide them calmly through it.**
+
+## What Skills Really Mean
+
+Skills aren't just about tricks or control. They're about building your dog's ability to:
+- Focus under pressure
+- Pause when needed
+- Move with you calmly and safely
+- Respond to direction anywhere, anytime
+
+**Obedience shouldn't feel like a power struggle—it should feel like a shared language.**
+
+When trained properly, these skills increase freedom, reduce conflict, and make life more enjoyable for everyone involved.
+
+## Core Life Skills Every Dog Should Learn
+
+| Command/Concept | Purpose |
+|-----------------|---------|
+| **Sit / Down** | Stillness and focus |
+| **Stay / Wait** | Patience and self-control |
+| **Recall (Come)** | Freedom and safety |
+| **Loose Lead Walking (Let's go)** | Calm navigation through the world |
+| **Place** | Boundaries and relaxation |
+| **Leave It** | Impulse control and safety |
+| **Out** | Impulse control, play |
+| **Thresholds** | Respect for space and exits |
+| **Middle** | Engagement, safety, confidence |
+
+**These are real-life skills—not tricks.** They reduce stress, increase trust, and make daily life smoother.
+
+## Teaching Through Play, Not Pressure
+
+- Most skills are best taught through play and luring, during the Ready window
+- As your dog matures, expectations increase—but training remains fair, consistent, and fun
+- Skills should be proofed in every window—Free, Settle, Work, and during Ready—so your dog doesn't only listen in perfect conditions
+
+## The Work Window Needs Ongoing Work
+
+Obedience is not a one-time achievement—it's a skillset that needs ongoing maintenance and generalisation.
+
+- Dogs must learn to perform behaviours in different environments, levels of distraction, and states of arousal
+- The Work window must be revisited regularly and adjusted as the dog's needs and challenges evolve
+
+**A dog that can "sit" in your kitchen but not at the café doesn't have the skill—they have a trick.**
+
+## Real-World Application
+
+True obedience isn't what the dog does in training—it's what they can do in real life.
+
+Your dog should be able to:
+- Sit calmly while children run past
+- Come when called at the off-leash park
+- Walk on a loose lead through busy streets
+- Stay on their place bed while guests visit
+- Leave food on the ground when asked
+
+## Building Skills Step by Step
+
+1. **Start in the Ready window** - Use play and motivation
+2. **Proof in different windows** - Ensure reliability across all states
+3. **Add distractions gradually** - Build confidence in challenging environments
+4. **Maintain regularly** - Skills need ongoing practice and refinement
+5. **Apply in real life** - Transfer training to everyday situations
+
+Remember: Skills are the final piece of the puzzle, not the starting point. When built on solid foundations of health, lifestyle, and clarity, they become reliable tools that serve both you and your dog for life.`,
         imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-        readTime: "7 min read",
-        tags: ["body language", "communication", "behavior"]
+        readTime: "8 min read",
+        tags: ["obedience", "skills", "training", "four building blocks"]
       },
       {
-        title: "Mental Enrichment Ideas for Active Dogs",
-        excerpt: "Keep your dog's mind stimulated with creative activities that challenge their intelligence and prevent destructive behaviours.",
-        content: "Mental stimulation is just as important as physical exercise...",
-        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-        readTime: "6 min read",
-        tags: ["enrichment", "mental stimulation", "activities"]
+        title: "The Four Building Blocks: Creating Balance for Life",
+        excerpt: "Discover how health, lifestyle, clarity, and skills work together to create a calm, confident companion. Learn the complete framework for lasting harmony.",
+        content: `# The Four Building Blocks: Creating Balance for Life
+
+When all four blocks—Health, Lifestyle, Clarity, and Skills—are working together, you don't just have a trained dog. You have a calm, confident companion who feels good, feels fulfilled, understands how to live with you, and can follow your lead in the real world.
+
+**This is how balance is built—and how harmony between humans and dogs is truly achieved.**
+
+## Understanding the Framework
+
+The Four Building Blocks aren't separate training methods—they're interconnected foundations that must work together:
+
+### Block 1: Health - The Foundation
+Without physical wellness, nothing else matters. A dog in pain, poor health, or chronic discomfort cannot:
+- Focus on training
+- Regulate emotions properly  
+- Respond consistently to guidance
+- Feel confident in their body
+
+**Health must come first—always.**
+
+### Block 2: Lifestyle - The Mind's Needs
+Once your dog feels good physically, their mind needs purpose and fulfillment. Every dog has genetic drives that must be satisfied:
+- Herding breeds need movement control
+- Hunting breeds need scent and retrieval work
+- Guardian breeds need protection-style engagement
+- All dogs need freedom, play, and mental stimulation
+
+**A fulfilled dog is naturally more cooperative and balanced.**
+
+### Block 3: Clarity - The Communication Bridge
+Even healthy, fulfilled dogs need to understand what's expected of them. Clear communication creates:
+- Predictable interactions
+- Reduced anxiety and confusion
+- Stronger trust between dog and owner
+- Framework for daily life through the 4 Windows (Ready, Free, Settle, Work)
+
+**Clarity isn't control—it's confident communication.**
+
+### Block 4: Skills - Real-World Application
+With the first three blocks solid, your dog can now learn reliable life skills:
+- Obedience that works anywhere
+- Impulse control under pressure
+- Calm navigation through human environments
+- Safety and freedom through reliable responses
+
+**Skills are the visible layer, but they only work when built on solid foundations.**
+
+## Why the Order Matters
+
+You cannot skip blocks or build them out of order:
+
+❌ **Teaching skills to an unhealthy dog** = Unreliable, stressful training
+❌ **Demanding obedience from an unfulfilled dog** = Constant battles and regression  
+❌ **Training without clarity** = Confused, anxious responses
+❌ **Skipping lifestyle needs** = Destructive, restless behaviour despite "good" training
+
+✅ **Building systematically** = Lasting balance and genuine partnership
+
+## Signs of a Balanced Dog
+
+When all four blocks are in place, your dog will:
+
+**Physically:**
+- Move confidently and comfortably
+- Sleep well and wake refreshed
+- Show consistent energy levels
+- Respond to touch and handling calmly
+
+**Mentally:**
+- Engage enthusiastically in appropriate activities
+- Settle easily when asked
+- Show curiosity without overwhelming excitement
+- Adapt to new situations with confidence
+
+**Emotionally:**
+- Demonstrate secure attachment to you
+- Recover quickly from stress or excitement
+- Show appropriate responses to different contexts
+- Display calm confidence in their daily life
+
+**Behaviourally:**
+- Respond reliably to guidance in any environment
+- Make good choices independently
+- Transition smoothly between different activities
+- Live peacefully within human household rules
+
+## Implementing the Four Building Blocks
+
+### Start with Assessment
+- Health: Schedule a vet check and evaluate diet, sleep, pain levels
+- Lifestyle: Identify your dog's breed drives and current fulfillment level
+- Clarity: Assess your current communication consistency
+- Skills: Evaluate which life skills need development or refinement
+
+### Build Systematically
+1. **Address health first** - No training until physical needs are met
+2. **Identify and fulfill drives** - Find what truly motivates your dog  
+3. **Establish clear communication** - Implement the 4 Windows and marker system
+4. **Develop reliable skills** - Build obedience that transfers to real life
+
+### Maintain Balance
+- Regular health monitoring and care
+- Ongoing fulfillment of genetic drives
+- Consistent communication and expectations
+- Continued skill development and proofing
+
+## The Result: True Partnership
+
+Dogs with all four blocks in place become:
+- **Calm** - because their needs are met
+- **Confident** - because they understand their world
+- **Cooperative** - because the relationship is fulfilling
+- **Capable** - because they have the skills to succeed
+
+This isn't just training—it's building a life together based on mutual understanding, clear communication, and genuine care for your dog's complete wellbeing.
+
+**Build the blocks. Live the balance.**
+
+Your dog is counting on you to provide not just commands and correction, but a complete foundation for a confident, fulfilling life. When you give them health, lifestyle, clarity, and skills, you're not just training behaviour—you're building a relationship that will bring joy and harmony for years to come.`,
+        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        readTime: "12 min read",
+        tags: ["four building blocks", "balance", "framework", "complete guide"]
       }
     ];
 
