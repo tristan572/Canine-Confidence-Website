@@ -11,13 +11,8 @@ export default function ProductsPage() {
     },
     {
       category: "Training Toys",
-      items: ["Training Balls", "Tug Toys", "Enrichment Toys", "Interactive Puzzles"],
+      items: ["Balls", "Tug Toys", "Flirt Poles"],
       description: "Engaging toys that support play-based learning methods"
-    },
-    {
-      category: "Accessories",
-      items: ["Treat Pouches", "Target Sticks", "Agility Equipment", "Grooming Tools"],
-      description: "Essential accessories to enhance your training experience"
     }
   ];
 
@@ -50,7 +45,7 @@ export default function ProductsPage() {
           </div>
 
           {/* Product Categories Preview */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
             {upcomingProducts.map((category, index) => (
               <Card key={index} className="p-6 text-left">
                 <h3 className="text-xl font-semibold text-charcoal mb-3">{category.category}</h3>
