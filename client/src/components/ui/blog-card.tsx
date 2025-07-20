@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock } from "lucide-react";
+import { Link } from "wouter";
 import type { BlogPost } from "@shared/schema";
 
 interface BlogCardProps {
@@ -36,9 +37,11 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
         <h3 className="text-xl font-semibold text-charcoal mb-3">{post.title}</h3>
         <p className="text-medium-grey mb-4">{post.excerpt}</p>
-        <Button variant="ghost" className="text-primary-blue hover:text-secondary-blue p-0 font-medium">
-          Read More →
-        </Button>
+        <Link to={`/blog/${post.id}`}>
+          <Button variant="ghost" className="text-primary-blue hover:text-secondary-blue p-0 font-medium">
+            Read More →
+          </Button>
+        </Link>
       </CardContent>
     </Card>
   );

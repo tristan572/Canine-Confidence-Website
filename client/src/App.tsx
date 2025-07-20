@@ -11,6 +11,7 @@ import Services from "@/pages/services";
 import Packages from "@/pages/packages";
 import Products from "@/pages/products";
 import Blog from "@/pages/blog";
+import BlogDetail from "@/pages/blog-detail";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Admin from "@/pages/admin";
@@ -38,6 +39,7 @@ function Router() {
         <Route path="/packages" component={Packages} />
         <Route path="/products" component={Products} />
         <Route path="/blog" component={Blog} />
+        <Route path="/blog/:id" component={BlogDetail} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/admin" component={Admin} />
