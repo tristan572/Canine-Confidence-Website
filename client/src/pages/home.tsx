@@ -151,7 +151,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-4xl font-bold text-charcoal mb-4">Comprehensive Training Packages</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Tailored training that fulfills your dog's genetic needs while empowering you with clear communication tools to build an unbreakable bond.
+              Tailored training that fulfills your dog's genetic needs while empowering you with clear communication tools to build an unbreakable bond and create harmony in the household.
             </p>
           </div>
 
