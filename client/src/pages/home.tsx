@@ -74,7 +74,7 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
-                  Where <span className="text-primary-blue">Dogs</span> Thrive
+                  Where Dogs <span className="text-primary-blue">Thrive</span>
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
                   Unique training solutions designed to build confidence in both dogs and their owners through considerate, relationship-focused methods.
