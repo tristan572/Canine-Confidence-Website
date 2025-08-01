@@ -151,7 +151,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-4xl font-bold text-charcoal mb-4">Comprehensive Training Packages</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Our tailored training programs create harmony between you and your dog, fulfilling their natural needs while giving you the tools to truly understand each other and connect.
+              Tailored training that fulfills your dog's genetic needs while empowering you with clear communication tools to build an unbreakable bond.
             </p>
           </div>
 
