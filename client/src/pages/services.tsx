@@ -18,7 +18,8 @@ import {
   TreePine,
   Camera,
   ClipboardList,
-  MapPinned
+  MapPinned,
+  Mountain
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -40,7 +41,7 @@ export default function ServicesPage() {
     "In-Home Obedience": Home,
     "Virtual Consultation": Phone,
     "Local Walk": MapPinned,
-    "Adventure Walk": Footprints,
+    "Adventure Walk": Mountain,
     "Walk and Train": Footprints,
   };
 

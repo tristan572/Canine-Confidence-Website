@@ -24,7 +24,8 @@ import {
   CheckCircle,
   Star,
   ClipboardList,
-  MapPinned
+  MapPinned,
+  Mountain
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -68,7 +69,7 @@ export default function HomePage() {
     "Professional Walks": Route,
     "Walk & Train Sessions": Footprints,
     "House Visits": Home,
-    "Adventure Walk": Footprints,
+    "Adventure Walk": Mountain,
   };
 
   return (
