@@ -23,7 +23,8 @@ import {
   Calendar,
   CheckCircle,
   Star,
-  ClipboardList
+  ClipboardList,
+  MapPinned
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -63,6 +64,11 @@ export default function HomePage() {
     "In-Home Obedience": Home,
     "Walk and Train": Footprints,
     "Virtual Consultation": Phone,
+    "Local Walk": MapPinned,
+    "Professional Walks": Route,
+    "Walk & Train Sessions": Footprints,
+    "House Visits": Home,
+    "Adventure Walk": Footprints,
   };
 
   return (
