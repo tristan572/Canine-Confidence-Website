@@ -477,7 +477,7 @@ The reality is simple: a dog in pain won't respond normally to leash pressure, p
 When something feels "off" with your dog, resist the urge to immediately seek behavioral solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
-        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.png",
         readTime: "8 min read",
         tags: ["health", "foundation", "wellness", "four building blocks"]
       },
@@ -531,7 +531,7 @@ These behaviors aren't moral failings or dominance displays—they're symptoms o
 A fulfilled dog is naturally more focused, more cooperative, and more peaceful in daily life. When your dog's mind is engaged and their drives are satisfied, they have the mental and emotional capacity to focus on what you're asking of them. They become partners in the training process rather than resistant participants.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "/attached_assets/generated_images/Mental_stimulation_and_purpose_5a926b0c.png",
         readTime: "10 min read",
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"]
       },
@@ -593,7 +593,7 @@ Inconsistent communication creates confusion, stress, and what looks like disobe
 Clarity isn't about achieving perfection—it's about creating predictability. Dogs thrive when they know what things mean, when they can trust that the rules won't change arbitrarily, and when they can predict the consequences of their choices. This predictability creates confidence, and confident dogs are naturally more cooperative, more focused, and more enjoyable to live with.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "/attached_assets/generated_images/Clear_communication_and_understanding_50d3f284.png",
         readTime: "9 min read",
         tags: ["communication", "clarity", "markers", "four building blocks"]
       },
@@ -659,7 +659,7 @@ When properly developed, life skills become reliable tools that serve both you a
 A dog with solid life skills is a dog who can participate more fully in family life, explore more of the world safely, and handle life's inevitable changes with confidence and grace. These aren't just training achievements—they're the building pieces of a rich, fulfilling partnership between human and dog.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "/attached_assets/generated_images/Real_world_obedience_skills_290ee4d5.png",
         readTime: "8 min read",
         tags: ["obedience", "skills", "training", "four building blocks"]
       },
@@ -818,7 +818,7 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 **Watch your dog, not just their breed label.** The goal is to find what genuinely fulfills your specific dog's needs.
 
 When you honor your dog's genetic blueprint and provide appropriate outlets, you're not just managing behavior—you're creating a partnership based on understanding and mutual satisfaction.`,
-        imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.png",
         readTime: "12 min read",
         tags: ["breed drives", "genetics", "fulfillment", "behavior", "training"]
       },
@@ -876,7 +876,7 @@ Dogs who have all four foundational elements in place become calm because their 
 This comprehensive approach isn't just training—it's building a complete life together based on mutual understanding, clear communication, and genuine care for your dog's total wellbeing. When you provide your dog with physical health, mental fulfillment, clear communication, and practical skills, you're not just modifying behavior—you're creating the foundation for a relationship that will bring deep satisfaction and joy for years to come.
 
 The investment in building these foundations properly pays dividends throughout your dog's entire life, creating not just better behavior, but a truly harmonious partnership between human and canine companions.`,
-        imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+        imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.png",
         readTime: "12 min read",
         tags: ["four building blocks", "balance", "framework", "complete guide"]
       }
