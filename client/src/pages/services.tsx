@@ -17,7 +17,8 @@ import {
   CheckCircle,
   TreePine,
   Camera,
-  ClipboardList
+  ClipboardList,
+  MapPinned
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -38,7 +39,7 @@ export default function ServicesPage() {
     "Initial Assessment": ClipboardList,
     "In-Home Obedience": Home,
     "Virtual Consultation": Phone,
-    "Local Walk": Footprints,
+    "Local Walk": MapPinned,
     "Adventure Walk": Footprints,
     "Walk and Train": Footprints,
   };
