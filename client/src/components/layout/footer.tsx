@@ -156,9 +156,9 @@ export default function Footer() {
             © 2024 Canine Confidence. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <button className="text-white hover:text-primary-blue transition-colors text-sm">
+            <Link href="/privacy" className="text-white hover:text-primary-blue transition-colors text-sm">
               Privacy Policy
-            </button>
+            </Link>
             <button className="text-white hover:text-primary-blue transition-colors text-sm">
               Terms of Service
             </button>

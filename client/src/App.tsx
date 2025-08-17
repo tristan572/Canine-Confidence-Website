@@ -14,6 +14,7 @@ import Blog from "@/pages/blog";
 import BlogDetail from "@/pages/blog-detail";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
+import Privacy from "@/pages/privacy";
 import Admin from "@/pages/admin";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
@@ -42,6 +43,7 @@ function Router() {
         <Route path="/blog/:id" component={BlogDetail} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/privacy" component={Privacy} />
         <Route path="/admin" component={Admin} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/payment-success" component={PaymentSuccess} />
