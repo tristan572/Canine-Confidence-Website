@@ -531,7 +531,7 @@ These behaviors aren't moral failings or dominance displays—they're symptoms o
 A fulfilled dog is naturally more focused, more cooperative, and more peaceful in daily life. When your dog's mind is engaged and their drives are satisfied, they have the mental and emotional capacity to focus on what you're asking of them. They become partners in the training process rather than resistant participants.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "/attached_assets/generated_images/Staffy_mental_enrichment_activities_15f3fd71.png",
+        imageUrl: "/attached_assets/generated_images/Border_Collie_mental_stimulation_666374d6.png",
         readTime: "10 min read",
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"]
       },
@@ -593,7 +593,7 @@ Inconsistent communication creates confusion, stress, and what looks like disobe
 Clarity isn't about achieving perfection—it's about creating predictability. Dogs thrive when they know what things mean, when they can trust that the rules won't change arbitrarily, and when they can predict the consequences of their choices. This predictability creates confidence, and confident dogs are naturally more cooperative, more focused, and more enjoyable to live with.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "/attached_assets/generated_images/Staffy_training_communication_session_a934205a.png",
+        imageUrl: "/attached_assets/generated_images/Golden_Retriever_communication_training_1d6a9e14.png",
         readTime: "9 min read",
         tags: ["communication", "clarity", "markers", "four building blocks"]
       },
@@ -659,7 +659,7 @@ When properly developed, life skills become reliable tools that serve both you a
 A dog with solid life skills is a dog who can participate more fully in family life, explore more of the world safely, and handle life's inevitable changes with confidence and grace. These aren't just training achievements—they're the building pieces of a rich, fulfilling partnership between human and dog.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "/attached_assets/generated_images/Staffy_public_obedience_skills_a2db0b2c.png",
+        imageUrl: "/attached_assets/generated_images/Australian_Shepherd_public_obedience_11c6c97e.png",
         readTime: "8 min read",
         tags: ["obedience", "skills", "training", "four building blocks"]
       },
