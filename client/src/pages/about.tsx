@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
-import aboutHeroImage from "@assets/image_1750049391709.png";
-import aboutTrainingImage from "@assets/image_1750049687824.png";
+import aboutHeroImage from "@assets/generated_images/Training_technique_demonstration_2fb75984.png";
+import aboutTrainingImage from "@assets/generated_images/Successful_training_results_57dbd829.png";
 
 export default function AboutPage() {
   return (

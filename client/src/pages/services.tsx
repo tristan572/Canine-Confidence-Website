@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import servicesHeroImage from "@assets/image_1750049481697.png";
+import servicesHeroImage from "@assets/generated_images/Outdoor_group_training_session_1370bfdd.png";
 import { 
   GraduationCap, 
   Footprints, 

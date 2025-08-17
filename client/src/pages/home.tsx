@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import heroImage from "@assets/image_1750049053389.png";
+import heroImage from "@assets/generated_images/Professional_dog_training_session_f425b74f.png";
 import testimonialsImage from "@assets/image_1750049431855.png";
 import { 
   GraduationCap, 
