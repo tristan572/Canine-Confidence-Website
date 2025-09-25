@@ -117,7 +117,16 @@ export default function ServicesPage() {
             {services?.map((service) => {
               const IconComponent = serviceIcons[service.name as keyof typeof serviceIcons] || GraduationCap;
               return (
-                <Card key={service.id} className="bg-light-grey card-hover border border-gray-100">
+                <Card key={service.id} className="bg-light-grey card-hover border border-gray-100 overflow-hidden">
+                  {service.imageUrl && (
+                    <div className="h-48 w-full">
+                      <img 
+                        src={service.imageUrl} 
+                        alt={`${service.name} training service`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                   <CardContent className="p-8">
                     <div className="bg-primary-blue p-3 rounded-lg w-fit mb-6">
                       <IconComponent className="h-6 w-6 text-white" />
