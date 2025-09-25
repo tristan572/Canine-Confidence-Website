@@ -10,6 +10,7 @@ export const services = pgTable("services", {
   location: text("location").notNull(),
   price: text("price").notNull(),
   category: text("category").notNull(),
+  imageUrl: text("image_url"),
   features: text("features").array(),
 });
 

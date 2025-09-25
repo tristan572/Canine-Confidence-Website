@@ -15,7 +15,16 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
 
   return (
     <>
-      <Card className="bg-light-grey card-hover border border-gray-100">
+      <Card className="bg-light-grey card-hover border border-gray-100 overflow-hidden">
+        {service.imageUrl && (
+          <div className="h-48 w-full">
+            <img 
+              src={service.imageUrl} 
+              alt={`${service.name} training service`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
         <CardContent className="p-8">
           <div className="bg-primary-blue p-3 rounded-lg w-fit mb-6">
             <Icon className="h-6 w-6 text-white" />
