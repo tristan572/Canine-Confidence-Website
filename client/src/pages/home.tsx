@@ -6,9 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import heroImage from "@assets/DSC_0171_1758792971820.jpg";
 import testimonialsImage from "@assets/DSC_0096_1758792971820.jpg";
-import successStory1 from "@assets/stock_images/happy_dog_owner_with_716a3472.jpg";
-import successStory2 from "@assets/stock_images/professional_dog_tra_6383ec6b.jpg";
-import successStory3 from "@assets/stock_images/dog_training_success_ded45e14.jpg";
 import { 
   GraduationCap, 
   Footprints, 
@@ -344,98 +341,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Success Stories Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Heart className="w-4 h-4" />
-              Success Stories
-            </div>
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Real Training Transformations</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              See the incredible progress our clients and their dogs have achieved through our personalized training programs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
-              <div className="h-64 w-full">
-                <img 
-                  src={successStory1} 
-                  alt="Happy dog owner celebrating successful training completion"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Building Confidence</h3>
-                <p className="text-medium-grey mb-4">
-                  From anxious to assured - watch how our training programs transform both dogs and their families through trust and understanding.
-                </p>
-                <div className="flex items-center text-sm text-green-600 font-medium">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  <span>100% Success Rate</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
-              <div className="h-64 w-full">
-                <img 
-                  src={successStory2} 
-                  alt="Professional trainer conducting group training session with multiple dogs"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Group Success</h3>
-                <p className="text-medium-grey mb-4">
-                  Our group training sessions create socialized, well-behaved dogs who thrive in any environment with proper guidance.
-                </p>
-                <div className="flex items-center text-sm text-green-600 font-medium">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  <span>Social Skills Mastered</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
-              <div className="h-64 w-full">
-                <img 
-                  src={successStory3} 
-                  alt="Before and after training transformation showing remarkable progress"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Lasting Results</h3>
-                <p className="text-medium-grey mb-4">
-                  Witness remarkable transformations that create harmonious homes and confident dogs through our proven methods.
-                </p>
-                <div className="flex items-center text-sm text-green-600 font-medium">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  <span>Lifetime Support Included</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-medium-grey mb-6">Ready to start your own success story?</p>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="btn-primary px-8">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Start Your Journey
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-md">
-                <ConsultationForm />
-              </DialogContent>
-            </Dialog>
-          </div>
-        </div>
-      </section>
 
       {/* Products Coming Soon Section */}
       <section className="py-20 bg-light-grey">
