@@ -4,8 +4,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import heroImage from "@assets/generated_images/Professional_dog_training_session_f425b74f.png";
-import testimonialsImage from "@assets/image_1750049431855.png";
+import heroImage from "@assets/DSC_0171_1758792971820.jpg";
+import testimonialsImage from "@assets/DSC_0096_1758792971820.jpg";
 import { 
   GraduationCap, 
   Footprints, 
@@ -128,7 +128,7 @@ export default function HomePage() {
             <div className="relative">
               <img 
                 src={heroImage} 
-                alt="Professional dog trainer building confidence through interactive training with happy dogs" 
+                alt="Professional dog trainer working hands-on with a Staffordshire Terrier in natural outdoor setting, demonstrating personalized training approach" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
@@ -548,7 +548,7 @@ export default function HomePage() {
             <div className="relative">
               <img 
                 src={testimonialsImage} 
-                alt="Successful training session demonstrating positive reinforcement and play-based learning methods" 
+                alt="Professional dog trainer demonstrating advanced training techniques with French Bulldog using specialized equipment in secure training facility" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
