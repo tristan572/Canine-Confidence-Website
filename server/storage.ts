@@ -260,7 +260,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/DSC_0171_1758792971820.jpg",
+        imageUrl: "/attached_assets/image_1750048904991.png",
         features: [
           "6 x in-home private sessions",
           "Socialisation protocols",
@@ -341,7 +341,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/DSC_0096_1758792971820.jpg",
+        imageUrl: "/attached_assets/image_1750049391709.png",
         features: [
           "5 x individual private sessions",
           "Customised training approach",
@@ -361,7 +361,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/IMG_0076_1758798863394.jpeg",
+        imageUrl: "/attached_assets/image_1750049431855.png",
         features: [
           "5 x 30-minute home sessions",
           "Essential commands training",
@@ -380,7 +380,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/DSC_0171_1758792971820.jpg",
+        imageUrl: "/attached_assets/image_1750049481697.png",
         features: [
           "5 x 40-minute sessions",
           "Home pickup service included",
@@ -399,7 +399,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/DSC_0096_1758792971820.jpg",
+        imageUrl: "/attached_assets/image_1750049520029.png",
         features: [
           "5 x 60-minute adventure sessions",
           "Collection from home",
@@ -418,7 +418,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/IMG_0076_1758798863394.jpeg",
+        imageUrl: "/attached_assets/image_1750049687824.png",
         features: [
           "5 x 30-minute local walks",
           "Direct from your home",
