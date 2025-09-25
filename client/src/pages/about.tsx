@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
-import aboutHeroImage from "@assets/generated_images/Training_technique_demonstration_2fb75984.png";
+import aboutHeroImage from "@assets/IMG_0076_1758798863394.jpeg";
 import aboutTrainingImage from "@assets/generated_images/Successful_training_results_57dbd829.png";
 
 export default function AboutPage() {
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <div className="relative">
               <img 
                 src={aboutHeroImage} 
-                alt="Professional dog trainer in Brisbane working with happy dogs using trust-based methods" 
+                alt="Professional dog trainer demonstrating hands-on training techniques with dogs in Brisbane, showcasing personalized approach and expert guidance" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
