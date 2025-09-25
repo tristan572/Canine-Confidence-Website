@@ -189,6 +189,15 @@ export default function HomePage() {
                       BEST VALUE
                     </div>
                   )}
+                  {pkg.imageUrl && (
+                    <div className="h-48 w-full">
+                      <img 
+                        src={pkg.imageUrl} 
+                        alt={`${pkg.name} training session`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                   <CardContent className="p-8">
                     <div className="text-center mb-6">
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
