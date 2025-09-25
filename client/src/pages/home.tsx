@@ -342,66 +342,6 @@ export default function HomePage() {
       </section>
 
 
-      {/* Products Coming Soon Section */}
-      <section className="py-20 bg-light-grey">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100">
-            <div className="w-16 h-16 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
-              <ClipboardList className="w-8 h-8 text-primary-blue" />
-            </div>
-            
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Training Products</h2>
-            <p className="text-xl text-medium-grey mb-8 max-w-2xl mx-auto">
-              We're carefully curating a selection of professional-grade training equipment and toys that we personally recommend and use in our training programs.
-            </p>
-            
-            <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-6 py-3 rounded-full text-lg font-medium mb-8">
-              <Clock className="w-5 h-5" />
-              Coming Soon
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 text-left max-w-2xl mx-auto">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-charcoal">Long Lines & Training Leads</h4>
-                  <p className="text-sm text-medium-grey">Professional equipment for recall training</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-charcoal">Interactive Toys</h4>
-                  <p className="text-sm text-medium-grey">Mental stimulation and enrichment tools</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-blue rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 className="font-semibold text-charcoal">Training Treats</h4>
-                  <p className="text-sm text-medium-grey">High-value rewards for effective training</p>
-                </div>
-              </div>
-            </div>
-            
-            <p className="text-medium-grey mt-8">
-              Want to be notified when our products launch? 
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="text-primary-blue hover:underline ml-1">
-                    Get in touch
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Blog Preview Section */}
       <section className="py-20 bg-white">
