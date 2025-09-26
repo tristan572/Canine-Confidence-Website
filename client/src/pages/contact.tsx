@@ -214,7 +214,11 @@ export default function ContactPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: 0409521358
               </Button>
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg">
+              <Button 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg"
+                onClick={() => window.open('https://canineconfidence.simplybook.net', '_blank')}
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Now
               </Button>
