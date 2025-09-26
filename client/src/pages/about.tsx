@@ -284,7 +284,7 @@ export default function AboutPage() {
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+                <Button variant="outline" size="lg" className="border-white bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-lg">
                   <Phone className="mr-2 h-5 w-5" />
                   Free Consultation
                 </Button>
