@@ -113,7 +113,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$90",
         category: "assessment",
-        imageUrl: "/attached_assets/stock_images/professional_dog_tra_7097f5da.jpg",
+        imageUrl: "/attached_assets/image_1750048904991.png",
         features: ["Comprehensive evaluation", "Personalised training plan", "Written recommendations", "Ongoing support guidance"]
       },
 
@@ -124,7 +124,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/stock_images/dog_trainer_providin_bcb7ac6d.jpg",
+        imageUrl: "/attached_assets/image_1750049391709.png",
         features: ["Individual, private sessions", "Customised training", "In-depth understanding of methods", "Modern techniques", "Lasting results", "Ongoing phone support"]
       },
       {
@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/stock_images/professional_dog_tra_f3d83df7.jpg",
+        imageUrl: "/attached_assets/image_1750049431855.png",
         features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
       },
       {
@@ -144,7 +144,7 @@ export class MemStorage implements IStorage {
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/stock_images/dog_trainer_walking__523860d9.jpg",
+        imageUrl: "/attached_assets/image_1750049481697.png",
         features: ["Home pickup service", "General obedience reinforcement", "Loose lead walking practice", "Real-world environment training", "Transition from indoor to outdoor skills"]
       },
       {
@@ -164,7 +164,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/stock_images/dog_enjoying_adventu_a28a0384.jpg",
+        imageUrl: "/attached_assets/image_1750049520029.png",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
       },
       {
