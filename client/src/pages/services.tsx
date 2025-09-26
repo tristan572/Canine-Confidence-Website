@@ -218,7 +218,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-charcoal mb-6">Our Training Philosophy</h2>
           <p className="text-lg text-medium-grey mb-8">
-            We believe training should be an enjoyable, engaging experience that creates genuine fulfillment for your dog. When dogs feel secure through clear expectations and positive communication, they naturally become more confident and eager to learn. This approach builds lasting happiness for both dogs and their families.
+            We believe training should be an enjoyable, engaging experience that creates genuine fulfillment for your dog. When dogs feel secure through clear expectations and consistent communication, they naturally become more confident and eager to learn. This approach builds lasting happiness for both dogs and their families.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl">
