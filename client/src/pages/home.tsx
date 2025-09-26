@@ -4,8 +4,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import heroImage from "@assets/DSC_0171_1758792971820.jpg";
-import testimonialsImage from "@assets/DSC_0096_1758792971820.jpg";
+import heroImage from "@assets/DSC_0096_1758792971820.jpg";
+import testimonialsImage from "@assets/DSC_0171_1758792971820.jpg";
 import { 
   GraduationCap, 
   Footprints, 
