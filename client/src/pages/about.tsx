@@ -28,7 +28,7 @@ export default function AboutPage() {
             About Canine Confidence
           </h1>
           <p className="text-xl text-medium-grey mb-8">
-            We believe dog training should be about more than commands and corrections—it's about creating harmony between dogs and families through understanding, fulfillment, and connection. Every dog deserves to be genuinely living their best life.
+            We believe dog training should be about more than commands and corrections. It's about creating harmony between dogs and families through understanding, fulfillment, and connection. Every dog deserves to be genuinely living their best life.
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Play is at the centre of our approach. It's more than just a reward—it's how we connect, communicate, and build joy into the training process, making it a positive, engaging experience that creates results that last.
+              Play is at the centre of our approach. It's more than just a reward. It's how we connect, communicate, and build joy into the training process, making it a positive, engaging experience that creates results that last.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function AboutPage() {
                   Every dog is unique and every family is different, which is why we don't rely on cookie-cutter methods or quick fixes. Instead, we focus on building a deep partnership between dog and owner, taking the time to understand your dog's individual needs, genetics, and personality.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  We tailor our training so that it fits your lifestyle as well as your dog's natural way of learning. We're not about quick solutions that mask behaviour—those approaches often create more stress and confusion for both dogs and owners.
+                  We tailor our training so that it fits your lifestyle as well as your dog's natural way of learning. We're not about quick solutions that mask behaviour. Those approaches often create more stress and confusion for both dogs and owners.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   Instead, we are committed to helping dogs become fulfilled and confident while giving owners the tools and knowledge they need to lead with clarity and consistency. This creates a foundation that strengthens the relationship and makes life together easier, happier, and more rewarding.
