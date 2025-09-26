@@ -11,7 +11,11 @@ import {
   Phone,
   MapPin,
   Clock,
-  Glasses
+  Glasses,
+  Search,
+  FileText,
+  Handshake,
+  HeartHandshake
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -222,7 +226,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-6 h-6 text-primary-blue" />
+                <Search className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Assessment</h3>
               <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's behavior, needs, and goals.</p>
@@ -230,7 +234,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-6 h-6 text-primary-blue" />
+                <FileText className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Custom Plan</h3>
               <p className="text-sm text-medium-grey">Personalized training program designed specifically for your dog.</p>
@@ -238,7 +242,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-primary-blue" />
+                <Handshake className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Training</h3>
               <p className="text-sm text-medium-grey">Hands-on sessions with both dog and owner to build skills and confidence.</p>
@@ -246,7 +250,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShieldCheck className="w-6 h-6 text-primary-blue" />
+                <HeartHandshake className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Support</h3>
               <p className="text-sm text-medium-grey">Ongoing guidance and support to maintain and improve results.</p>
