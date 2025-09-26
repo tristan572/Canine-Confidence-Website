@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 md:justify-between">
+        <div className="flex items-center py-3">
           {/* Mobile Layout */}
           <div className="md:hidden flex items-center justify-between w-full">
             <Link href="/" className="flex items-center group" aria-label="Canine Confidence home" data-testid="link-brand">
@@ -108,64 +108,67 @@ export default function Navbar() {
             </Sheet>
           </div>
           
-          {/* Desktop Logo */}
-          <Link href="/" className="hidden md:flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 shrink-0 pr-2 md:pr-4 group" aria-label="Canine Confidence home" data-testid="link-brand">
-            <img
-              src={logoImage}
-              alt="Canine Confidence logo"
-              className="block h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
-              data-testid="img-logo"
-            />
-            <div className="whitespace-nowrap">
-              <span className="text-base lg:text-lg font-semibold text-charcoal block leading-tight">
-                Brisbane Dog Training
-              </span>
+          {/* Desktop Layout - Three Column */}
+          <div className="hidden md:flex items-center justify-between w-full">
+            {/* Desktop Logo */}
+            <Link href="/" className="flex items-center gap-3 lg:gap-4 shrink-0 group" aria-label="Canine Confidence home" data-testid="link-brand">
+              <img
+                src={logoImage}
+                alt="Canine Confidence logo"
+                className="block h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+                data-testid="img-logo"
+              />
+              <div className="whitespace-nowrap">
+                <span className="text-base lg:text-lg font-semibold text-charcoal block leading-tight">
+                  Brisbane Dog Training
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="flex items-center space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
+                    isActive(item.href)
+                      ? "text-primary-blue bg-blue-50"
+                      : "text-gray-700 hover:text-primary-blue hover:bg-gray-50"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
-          </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center md:space-x-4 lg:space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
-                  isActive(item.href)
-                    ? "text-primary-blue bg-blue-50"
-                    : "text-gray-700 hover:text-primary-blue hover:bg-gray-50"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+            {/* Desktop CTA Buttons */}
+            <div className="flex items-center space-x-3 shrink-0">
+              <ShoppingCart sessionId={getCartSessionId()} />
+              
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue">
+                    <Phone className="w-3.5 h-3.5 mr-1.5" />
+                    Consultation
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
 
-          {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3">
-            <ShoppingCart sessionId={getCartSessionId()} />
-            
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue">
-                  <Phone className="w-3.5 h-3.5 mr-1.5" />
-                  Consultation
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-md">
-                <ConsultationForm />
-              </DialogContent>
-            </Dialog>
-
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="sm" className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm">
-                  Book Now
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                <BookingForm />
-              </DialogContent>
-            </Dialog>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button size="sm" className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm">
+                    Book Now
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                  <BookingForm />
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
 
         </div>
