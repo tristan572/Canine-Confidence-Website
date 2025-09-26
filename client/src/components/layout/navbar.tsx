@@ -40,14 +40,11 @@ export default function Navbar() {
             <img
               src={logoImage}
               alt="Canine Confidence logo"
-              className="block h-20 md:h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+              className="block h-12 md:h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
               data-testid="img-logo"
             />
             <div className="whitespace-nowrap">
-              <span className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight leading-tight text-charcoal block">
-                Canine Confidence
-              </span>
-              <span className="text-xs sm:text-sm md:text-xs lg:text-sm text-gray-600 block leading-snug mt-0.5">
+              <span className="text-base sm:text-lg md:text-base lg:text-lg font-semibold text-charcoal block leading-tight">
                 Brisbane Dog Training
               </span>
             </div>
