@@ -220,7 +220,7 @@ export default function ContactPage() {
               </Button>
               <Button 
                 onClick={() => setShowBookingWidget(true)}
-                className="btn-primary px-8 py-4 text-lg"
+                className="bg-white text-primary-blue hover:bg-gray-50 border border-white px-8 py-4 text-lg"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Now
