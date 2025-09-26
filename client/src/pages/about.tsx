@@ -10,7 +10,8 @@ import {
   CheckCircle,
   Phone,
   MapPin,
-  Clock
+  Clock,
+  Glasses
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -118,7 +119,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-8 text-center border border-gray-100">
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShieldCheck className="w-8 h-8 text-white" />
+                <Glasses className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Clarity in Life</h3>
               <p className="text-medium-grey">
