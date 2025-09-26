@@ -8,7 +8,7 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ShoppingCart from "@/components/ui/shopping-cart";
 import { getCartSessionId } from "@/lib/cart";
-import logoImage from "@assets/Business logo 1_1749266952529.jpg";
+import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -36,14 +36,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 shrink-0 pr-2 md:pr-4 group">
-            <div className="h-20 w-20 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-full overflow-hidden ring-1 ring-gray-200 shadow-md group-hover:shadow-lg transition-shadow">
-              <img 
-                src={logoImage} 
-                alt="Canine Confidence" 
-                className="h-full w-full object-contain bg-white"
-              />
-            </div>
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 shrink-0 pr-2 md:pr-4 group" aria-label="Canine Confidence home" data-testid="link-brand">
+            <img
+              src={logoImage}
+              alt="Canine Confidence logo"
+              className="block h-20 md:h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+              data-testid="img-logo"
+            />
             <div className="whitespace-nowrap">
               <span className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight leading-tight text-charcoal block">
                 Canine Confidence
