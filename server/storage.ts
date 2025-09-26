@@ -148,16 +148,6 @@ export class MemStorage implements IStorage {
         features: ["Home pickup service", "General obedience reinforcement", "Loose lead walking practice", "Real-world environment training", "Transition from indoor to outdoor skills"]
       },
       {
-        name: "Local Walk",
-        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
-        duration: "30 minutes",
-        location: "From client's home",
-        price: "$45",
-        category: "walking",
-        imageUrl: "/attached_assets/image_1750049687824.png",
-        features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates"]
-      },
-      {
         name: "Adventure Walk",
         description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
         duration: "60 minutes", 
@@ -166,6 +156,16 @@ export class MemStorage implements IStorage {
         category: "walking",
         imageUrl: "/attached_assets/image_1750049520029.png",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
+      },
+      {
+        name: "Local Walk",
+        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
+        duration: "30 minutes",
+        location: "From client's home",
+        price: "$45",
+        category: "walking",
+        imageUrl: "/attached_assets/image_1750049687824.png",
+        features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates"]
       },
       {
         name: "Virtual Consultation",
