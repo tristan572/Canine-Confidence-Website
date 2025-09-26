@@ -200,13 +200,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Emergency Contact Section */}
+      {/* Ready to Start Section */}
       <section className="py-16 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Need Immediate Help?</h2>
+            <h2 className="text-3xl font-bold text-white">Ready to Begin Your Dog's Journey?</h2>
             <p className="text-xl text-blue-100">
-              For urgent behavioral issues or emergencies, don't hesitate to call us directly.
+              Let's chat about your dog's unique needs and start building the partnership you've been looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">
@@ -219,7 +219,7 @@ export default function ContactPage() {
               </Button>
             </div>
             <p className="text-blue-100 text-sm">
-              Available 7 days a week for urgent matters
+              We're here to help you and your dog thrive together
             </p>
           </div>
         </div>
