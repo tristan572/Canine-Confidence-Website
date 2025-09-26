@@ -227,32 +227,32 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-6 h-6 text-primary-blue" />
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Assessment</h3>
               <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's behaviour, needs, and goals.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-6 h-6 text-primary-blue" />
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Custom Plan</h3>
               <p className="text-sm text-medium-grey">Personalised training program designed specifically for your dog.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-primary-blue" />
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Training</h3>
               <p className="text-sm text-medium-grey">Hands-on sessions with both dog and owner to build skills and confidence.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <HeartHandshake className="w-6 h-6 text-primary-blue" />
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <HeartHandshake className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Support</h3>
               <p className="text-sm text-medium-grey">Ongoing guidance and support to maintain and improve results.</p>
