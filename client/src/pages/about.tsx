@@ -16,7 +16,8 @@ import {
   FileText,
   Handshake,
   HeartHandshake,
-  TrendingUp
+  TrendingUp,
+  Calendar
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -261,18 +262,18 @@ export default function AboutPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-charcoal mb-6">Ready to Start?</h2>
-          <p className="text-xl text-medium-grey mb-12">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Start?</h2>
+          <p className="text-xl text-white/90 mb-12">
             Begin your journey toward genuine partnership with your dog. Discover how fulfilling and joyful training can be when it's built on understanding, play, and connection.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" className="bg-primary-blue hover:bg-blue-600 text-white px-8 py-4 text-lg">
-                  <Phone className="mr-2 h-5 w-5" />
+                <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-50 px-8 py-4 text-lg">
+                  <Calendar className="mr-2 h-5 w-5" />
                   Book Training Session
                 </Button>
               </DialogTrigger>
@@ -283,7 +284,8 @@ export default function AboutPage() {
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline" size="lg" className="border-primary-blue text-primary-blue hover:bg-blue-50 px-8 py-4 text-lg">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+                  <Phone className="mr-2 h-5 w-5" />
                   Free Consultation
                 </Button>
               </DialogTrigger>
@@ -295,26 +297,26 @@ export default function AboutPage() {
 
           <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-primary-blue" />
+              <MapPin className="w-5 h-5 text-white" />
               <div>
-                <div className="font-semibold text-charcoal">Service Area</div>
-                <div className="text-medium-grey">North Brisbane & Surrounds</div>
+                <div className="font-semibold text-white">Service Area</div>
+                <div className="text-white/90">North Brisbane & Surrounds</div>
               </div>
             </div>
             
             <div className="flex items-center space-x-3">
-              <Clock className="w-5 h-5 text-primary-blue" />
+              <Clock className="w-5 h-5 text-white" />
               <div>
-                <div className="font-semibold text-charcoal">Availability</div>
-                <div className="text-medium-grey">6 Days a Week</div>
+                <div className="font-semibold text-white">Availability</div>
+                <div className="text-white/90">6 Days a Week</div>
               </div>
             </div>
             
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-primary-blue" />
+              <Phone className="w-5 h-5 text-white" />
               <div>
-                <div className="font-semibold text-charcoal">Response Time</div>
-                <div className="text-medium-grey">Within 24 Hours</div>
+                <div className="font-semibold text-white">Response Time</div>
+                <div className="text-white/90">Within 24 Hours</div>
               </div>
             </div>
           </div>
