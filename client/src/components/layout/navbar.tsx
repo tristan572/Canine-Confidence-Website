@@ -108,30 +108,25 @@ export default function Navbar() {
             </Sheet>
           </div>
           
-          {/* Desktop Layout - Three Column */}
-          <div className="hidden md:grid grid-cols-[auto,1fr,auto] items-center w-full">
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-center justify-between w-full">
             {/* Desktop Logo */}
-            <Link href="/" className="flex items-center gap-3 lg:gap-4 shrink-0 group" aria-label="Canine Confidence home" data-testid="link-brand">
+            <Link href="/" className="flex items-center shrink-0 group" aria-label="Canine Confidence home" data-testid="link-brand">
               <img
                 src={logoImage}
                 alt="Canine Confidence logo"
                 className="block h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
                 data-testid="img-logo"
               />
-              <div className="whitespace-nowrap">
-                <span className="hidden lg:block text-base lg:text-lg font-semibold text-charcoal leading-tight">
-                  Brisbane Dog Training
-                </span>
-              </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 min-w-0">
+            <div className="flex items-center space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative md:px-2 lg:px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
                     isActive(item.href)
                       ? "text-primary-blue bg-blue-50"
                       : "text-gray-700 hover:text-primary-blue hover:bg-gray-50"
@@ -143,24 +138,12 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTA Buttons */}
-            <div className="flex items-center space-x-2 shrink-0">
+            <div className="flex items-center space-x-3 shrink-0">
               <ShoppingCart sessionId={getCartSessionId()} />
               
-              {/* Consultation - Icon only on md, full text on lg */}
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="ghost" size="icon" className="md:flex lg:hidden text-primary-blue hover:bg-blue-50">
-                    <Phone className="w-4 h-4" />
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
-              
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline" size="sm" className="hidden lg:inline-flex border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue">
+                  <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue">
                     <Phone className="w-3.5 h-3.5 mr-1.5" />
                     Consultation
                   </Button>
