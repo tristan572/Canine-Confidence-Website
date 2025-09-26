@@ -460,7 +460,7 @@ Overstimulated dogs don't just get tired—they become hyperactive, mouthy, and 
 
 ### Pain: The Hidden Training Saboteur
 
-Pain is perhaps the most overlooked factor in training difficulties. Dogs are incredibly stoic creatures who instinctively hide discomfort, making it easy to miss subtle signs that something is wrong. If your dog's behavior suddenly changes, if they become resistant to handling, or if training that once worked suddenly stops being effective, pain should be your first consideration.
+Pain is perhaps the most overlooked factor in training difficulties. Dogs are incredibly stoic creatures who instinctively hide discomfort, making it easy to miss subtle signs that something is wrong. If your dog's behaviour suddenly changes, if they become resistant to handling, or if training that once worked suddenly stops being effective, pain should be your first consideration.
 
 Watch for the quiet indicators: reluctance to jump up or down, changes in posture, increased irritability, or obsessive licking of a particular body part. Both acute injuries and chronic conditions like arthritis, digestive issues, or structural problems can dramatically impact your dog's ability to learn and cooperate. A dog in pain simply cannot give you their best effort, no matter how much they want to please you.
 
@@ -472,13 +472,13 @@ Early detection prevents long-term suffering and expensive interventions down th
 
 ### Targeted Supplementation
 
-While whole, species-appropriate food should provide most of what your dog needs, certain supplements can support optimal health. Omega-3 fatty acids help manage inflammation and promote coat health. Probiotics support digestive function, which increasingly research shows affects mood and behavior. For active or aging dogs, joint supplements can help maintain mobility and comfort.
+While whole, species-appropriate food should provide most of what your dog needs, certain supplements can support optimal health. Omega-3 fatty acids help manage inflammation and promote coat health. Probiotics support digestive function, which increasingly research shows affects mood and behaviour. For active or aging dogs, joint supplements can help maintain mobility and comfort.
 
 The key is working with your veterinarian to identify your dog's specific needs rather than giving supplements "just in case."
 
 ## Why Health Cannot Be Compromised
 
-The reality is simple: a dog in pain won't respond normally to leash pressure, play, or commands without experiencing distress. Poor sleep leads to over-arousal, emotional instability, and erratic behavior. Medical issues often masquerade as behavioural problems, leading owners to try to "train through" what is actually a health concern.
+The reality is simple: a dog in pain won't respond normally to leash pressure, play, or commands without experiencing distress. Poor sleep leads to over-arousal, emotional instability, and erratic behaviour. Medical issues often masquerade as behavioural problems, leading owners to try to "train through" what is actually a health concern.
 
 When something feels "off" with your dog, resist the urge to immediately seek behavioural solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
 
@@ -568,17 +568,17 @@ The third window is calmness—low arousal, peaceful relaxation that teaches pat
 
 The fourth window is structured learning—focused effort with clear expectations and consistent follow-through. During this time, your dog knows that responses to commands are non-negotiable, and that concentrated effort is expected.
 
-Teaching your dog to enter and exit these states smoothly creates emotional balance, better behavior, and a deeper bond between you. This becomes the framework for daily life, not just a training concept. Your dog learns when it's time to be focused, when it's time to relax, when it's time to explore, and when it's time to work.
+Teaching your dog to enter and exit these states smoothly creates emotional balance, better behaviour, and a deeper bond between you. This becomes the framework for daily life, not just a training concept. Your dog learns when it's time to be focused, when it's time to relax, when it's time to explore, and when it's time to work.
 
 ## The Power of Precise Markers
 
 Words like "yes," "wrong," and "no" aren't just instructions—they're communication packages that give your dog multiple pieces of information in one precise moment. These markers are like pressing the shutter button on a camera, taking a snapshot of the exact moment your dog makes a choice.
 
-When you say "yes," you're not just indicating approval—you're telling your dog they made the right choice, that they should remember this behavior, and that a reward is coming. This creates a positive association with the specific action they just performed.
+When you say "yes," you're not just indicating approval—you're telling your dog they made the right choice, that they should remember this behaviour, and that a reward is coming. This creates a positive association with the specific action they just performed.
 
 "Wrong" serves as a gentle redirect, essentially telling your dog that this particular choice won't lead to rewards, but there's no big consequence. It's an invitation to try something else without creating stress or anxiety about making mistakes.
 
-"No" carries more weight—it indicates that a behavior needs to stop immediately and shouldn't be repeated. This marker is followed by a fair but clear consequence that helps your dog understand the seriousness of the boundary they've crossed.
+"No" carries more weight—it indicates that a behaviour needs to stop immediately and shouldn't be repeated. This marker is followed by a fair but clear consequence that helps your dog understand the seriousness of the boundary they've crossed.
 
 This system works because dogs live in the moment. These markers "freeze" the exact second your dog makes a choice, making your communication more efficient, fairer, and less emotional. Instead of lengthy explanations or emotional reactions, you can give clear, timely feedback that your dog can understand and act upon.
 
@@ -630,7 +630,7 @@ A reliable recall—coming when called—is perhaps the most important safety sk
 
 Loose-leash walking allows for calm navigation through the world together. A dog who can walk peacefully beside you opens up possibilities for shared adventures, stress-free vet visits, and enjoyable neighborhood exploration.
 
-Teaching your dog to go to a specific place and settle there creates boundaries and provides a tool for managing situations when calm behavior is required. This skill is invaluable when guests arrive, during meals, or anytime you need your dog to be calm and contained without being confined.
+Teaching your dog to go to a specific place and settle there creates boundaries and provides a tool for managing situations when calm behaviour is required. This skill is invaluable when guests arrive, during meals, or anytime you need your dog to be calm and contained without being confined.
 
 Leave it and impulse control skills keep your dog safe from potentially dangerous items while teaching them that not everything interesting is available to them. This extends to food, objects, other animals, and even people—teaching appropriate boundaries in all areas of life.
 
@@ -652,7 +652,7 @@ This level of reliability doesn't happen overnight, and it requires ongoing main
 
 ## The Progressive Development Process
 
-Building truly reliable skills follows a natural progression that respects your dog's learning process and builds confidence along the way. Initially, skills are taught in calm, controlled environments where your dog can focus and succeed. As they become confident with the basic behavior, challenges are gradually added—different locations, mild distractions, varying levels of excitement or arousal.
+Building truly reliable skills follows a natural progression that respects your dog's learning process and builds confidence along the way. Initially, skills are taught in calm, controlled environments where your dog can focus and succeed. As they become confident with the basic behaviour, challenges are gradually added—different locations, mild distractions, varying levels of excitement or arousal.
 
 The key is building success upon success rather than overwhelming your dog with challenges they're not ready for. Each step should feel achievable, and your dog should experience frequent success and positive reinforcement throughout the process.
 
@@ -674,7 +674,7 @@ Remember that skills are indeed the final piece of the puzzle, not the starting 
         excerpt: "Every dog has natural instincts bred into them for centuries. Learn how to identify your dog's drives and provide fulfilling activities that satisfy their genetic needs.",
         content: `# Understanding Your Dog's Genetic Drives: A Breed-Specific Guide
 
-Your dog's behavior isn't random—it's driven by thousands of years of selective breeding. Understanding these genetic drives is the key to a fulfilled, balanced dog who cooperates with you instead of working against you.
+Your dog's behaviour isn't random—it's driven by thousands of years of selective breeding. Understanding these genetic drives is the key to a fulfilled, balanced dog who cooperates with you instead of working against you.
 
 ## Why Genetic Drives Matter
 
@@ -823,10 +823,10 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 
 **Watch your dog, not just their breed label.** The goal is to find what genuinely fulfills your specific dog's needs.
 
-When you honor your dog's genetic blueprint and provide appropriate outlets, you're not just managing behavior—you're creating a partnership based on understanding and mutual satisfaction.`,
+When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
         imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.png",
         readTime: "12 min read",
-        tags: ["breed drives", "genetics", "fulfillment", "behavior", "training"]
+        tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"]
       },
       {
         title: "Creating Balance: A Complete Framework for Canine Harmony",
@@ -845,7 +845,7 @@ These four foundational elements aren't separate training methods that can be ap
 
 The order in which these elements are addressed matters tremendously. You cannot successfully skip steps or build them out of sequence without creating problems that will undermine your long-term success.
 
-Attempting to teach life skills to an unhealthy dog creates unreliable, stressful training sessions where both dog and owner become frustrated. Demanding obedience from an unfulfilled dog leads to constant battles and frequent regression as the dog's unmet needs drive problematic behaviors. Training without clear communication systems results in confused, anxious responses that lack consistency. Skipping lifestyle and fulfillment needs creates destructive, restless behavior that persists despite what appears to be "good" training.
+Attempting to teach life skills to an unhealthy dog creates unreliable, stressful training sessions where both dog and owner become frustrated. Demanding obedience from an unfulfilled dog leads to constant battles and frequent regression as the dog's unmet needs drive problematic behaviours. Training without clear communication systems results in confused, anxious responses that lack consistency. Skipping lifestyle and fulfillment needs creates destructive, restless behaviour that persists despite what appears to be "good" training.
 
 Building systematically, however, creates lasting balance and genuine partnership that serves both dog and owner throughout their lives together.
 
@@ -879,9 +879,9 @@ This isn't a one-time process that you complete and then forget about. True bala
 
 Dogs who have all four foundational elements in place become calm because their fundamental needs are consistently met. They become confident because they understand their world and their place in it. They become cooperative because the relationship itself is fulfilling and rewarding for them. They become capable because they possess the skills necessary to succeed in various situations.
 
-This comprehensive approach isn't just training—it's building a complete life together based on mutual understanding, clear communication, and genuine care for your dog's total wellbeing. When you provide your dog with physical health, mental fulfillment, clear communication, and practical skills, you're not just modifying behavior—you're creating the foundation for a relationship that will bring deep satisfaction and joy for years to come.
+This comprehensive approach isn't just training—it's building a complete life together based on mutual understanding, clear communication, and genuine care for your dog's total wellbeing. When you provide your dog with physical health, mental fulfillment, clear communication, and practical skills, you're not just modifying behaviour—you're creating the foundation for a relationship that will bring deep satisfaction and joy for years to come.
 
-The investment in building these foundations properly pays dividends throughout your dog's entire life, creating not just better behavior, but a truly harmonious partnership between human and canine companions.`,
+The investment in building these foundations properly pays dividends throughout your dog's entire life, creating not just better behaviour, but a truly harmonious partnership between human and canine companions.`,
         imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.png",
         readTime: "12 min read",
         tags: ["four building blocks", "balance", "framework", "complete guide"]

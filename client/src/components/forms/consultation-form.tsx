@@ -58,7 +58,7 @@ export default function ConsultationForm() {
       <DialogHeader className="mb-6">
         <DialogTitle className="text-2xl font-bold text-charcoal">Request Free Consultation</DialogTitle>
         <DialogDescription className="text-medium-grey">
-          Get personalized advice in a quick 15-minute phone consultation at no cost.
+          Get personalised advice in a quick 15-minute phone consultation at no cost.
         </DialogDescription>
       </DialogHeader>
 

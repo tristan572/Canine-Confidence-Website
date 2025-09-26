@@ -176,7 +176,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">5+ Years Professional Experience</h3>
-                    <p className="text-medium-grey">Certified professional dog trainer with extensive experience in behavior modification and obedience training.</p>
+                    <p className="text-medium-grey">Certified professional dog trainer with extensive experience in behaviour modification and obedience training.</p>
                   </div>
                 </div>
 
@@ -206,7 +206,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">Modern, Science-Based Methods</h3>
-                    <p className="text-medium-grey">Using the latest research in canine behavior and learning to ensure effective, humane training.</p>
+                    <p className="text-medium-grey">Using the latest research in canine behaviour and learning to ensure effective, humane training.</p>
                   </div>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function AboutPage() {
                 <Search className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Assessment</h3>
-              <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's behavior, needs, and goals.</p>
+              <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's behaviour, needs, and goals.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">

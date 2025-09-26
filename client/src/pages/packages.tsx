@@ -314,7 +314,7 @@ export default function PackagesPage() {
                   Training Packages
                 </h1>
                 <p className="text-xl md:text-2xl text-white">
-                  Thoughtfully designed programs that honor your dog's individuality while building the skills and confidence they need to thrive through genuine, lasting partnerships.
+                  Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive through genuine, lasting partnerships.
                 </p>
               </div>
               
