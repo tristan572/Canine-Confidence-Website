@@ -34,17 +34,90 @@ export default function Navbar() {
   return (
     <nav className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 shrink-0 pr-2 md:pr-4 group" aria-label="Canine Confidence home" data-testid="link-brand">
+        <div className="flex justify-between items-center py-3 md:justify-between">
+          {/* Mobile Layout */}
+          <div className="md:hidden flex items-center justify-between w-full">
+            <Link href="/" className="flex items-center group" aria-label="Canine Confidence home" data-testid="link-brand">
+              <img
+                src={logoImage}
+                alt="Canine Confidence logo"
+                className="block h-12 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+                data-testid="img-logo"
+              />
+            </Link>
+            
+            <div className="absolute left-1/2 transform -translate-x-1/2">
+              <span className="text-base font-semibold text-charcoal whitespace-nowrap">
+                Brisbane Dog Training
+              </span>
+            </div>
+            
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px]">
+                <div className="flex flex-col space-y-4 mt-8">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`font-medium transition-colors py-2 ${
+                        isActive(item.href)
+                          ? "text-primary-blue"
+                          : "text-charcoal hover:text-primary-blue"
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  
+                  <div className="pt-4 space-y-3">
+                    <div className="flex justify-center">
+                      <ShoppingCart sessionId={getCartSessionId()} />
+                    </div>
+                    
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="w-full border-primary-blue text-primary-blue hover:bg-light-blue">
+                          <Phone className="w-4 h-4 mr-2" />
+                          Free Consultation
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-md">
+                        <ConsultationForm />
+                      </DialogContent>
+                    </Dialog>
+
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="w-full btn-primary">
+                          Book Now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                        <BookingForm />
+                      </DialogContent>
+                    </Dialog>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+          
+          {/* Desktop Logo */}
+          <Link href="/" className="hidden md:flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 shrink-0 pr-2 md:pr-4 group" aria-label="Canine Confidence home" data-testid="link-brand">
             <img
               src={logoImage}
               alt="Canine Confidence logo"
-              className="block h-12 md:h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+              className="block h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
               data-testid="img-logo"
             />
             <div className="whitespace-nowrap">
-              <span className="text-base sm:text-lg md:text-base lg:text-lg font-semibold text-charcoal block leading-tight">
+              <span className="text-base lg:text-lg font-semibold text-charcoal block leading-tight">
                 Brisbane Dog Training
               </span>
             </div>
@@ -95,61 +168,6 @@ export default function Navbar() {
             </Dialog>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px]">
-              <div className="flex flex-col space-y-4 mt-8">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`font-medium transition-colors py-2 ${
-                      isActive(item.href)
-                        ? "text-primary-blue"
-                        : "text-charcoal hover:text-primary-blue"
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                
-                <div className="pt-4 space-y-3">
-                  <div className="flex justify-center">
-                    <ShoppingCart sessionId={getCartSessionId()} />
-                  </div>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" className="w-full border-primary-blue text-primary-blue hover:bg-light-blue">
-                        <Phone className="w-4 h-4 mr-2" />
-                        Free Consultation
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <ConsultationForm />
-                    </DialogContent>
-                  </Dialog>
-
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button className="w-full btn-primary">
-                        Book Now
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                      <BookingForm />
-                    </DialogContent>
-                  </Dialog>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
         </div>
       </div>
     </nav>
