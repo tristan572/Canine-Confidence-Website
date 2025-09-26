@@ -7,7 +7,8 @@ import {
   MapPin, 
   Clock, 
   MessageCircle,
-  HeadphonesIcon
+  HeadphonesIcon,
+  Calendar
 } from "lucide-react";
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -214,8 +215,8 @@ export default function ContactPage() {
                 Call Now: 0409521358
               </Button>
               <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Text for Quick Response
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Now
               </Button>
             </div>
             <p className="text-blue-100 text-sm">
