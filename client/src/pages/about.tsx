@@ -98,7 +98,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-8 text-center border border-gray-100">
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-white" />
+                <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Skills</h3>
               <p className="text-medium-grey">
@@ -118,7 +118,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-8 text-center border border-gray-100">
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
+                <ShieldCheck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Clarity in Life</h3>
               <p className="text-medium-grey">
