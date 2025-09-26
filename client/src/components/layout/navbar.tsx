@@ -36,26 +36,26 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="h-16 w-16 rounded-full shadow-md group-hover:shadow-lg transition-shadow overflow-hidden">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 shrink-0 pr-2 md:pr-4 group">
+            <div className="h-20 w-20 md:h-14 md:w-14 lg:h-16 lg:w-16 rounded-full overflow-hidden ring-1 ring-gray-200 shadow-md group-hover:shadow-lg transition-shadow">
               <img 
                 src={logoImage} 
                 alt="Canine Confidence" 
-                className="h-full w-full object-cover scale-150"
+                className="h-full w-full object-contain bg-white"
               />
             </div>
-            <div>
-              <span className="text-xl font-bold text-charcoal block leading-none">
+            <div className="whitespace-nowrap">
+              <span className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight leading-tight text-charcoal block">
                 Canine Confidence
               </span>
-              <span className="text-sm text-gray-600 block leading-none mt-0.5">
+              <span className="text-xs sm:text-sm md:text-xs lg:text-sm text-gray-600 block leading-snug mt-0.5">
                 Brisbane Dog Training
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center md:space-x-4 lg:space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -72,7 +72,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center md:space-x-2 lg:space-x-3">
             <ShoppingCart sessionId={getCartSessionId()} />
             
             <Dialog>
