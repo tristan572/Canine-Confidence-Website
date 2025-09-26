@@ -84,7 +84,7 @@ export default function HomePage() {
                   Where Dogs <span className="text-primary-blue">Thrive</span>
                 </h1>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Unique training solutions designed to build confidence in both dogs and their owners through considerate, relationship-focused methods.
+                  Creating harmony between dogs and families through understanding, fulfillment, and play-centered connection. We believe dogs should be genuinely living their best lives, not just following commands.
                 </p>
               </div>
               
@@ -158,7 +158,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-4xl font-bold text-charcoal mb-4">Comprehensive Training Packages</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Tailored training that fulfills your dog's genetic needs while empowering you with clear communication tools to build an unbreakable bond and create harmony in the household.
+              Every dog is unique, every family is different. We don't use cookie-cutter methods—instead, we build deep partnerships through play-based learning that's tailored to your dog's genetics, personality, and your lifestyle.
             </p>
           </div>
 
@@ -271,7 +271,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Services</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Professional dog training in Brisbane, where trust, play, and clear communication builds stronger bonds. We help you create lasting behavioural foundations using modern methods that fulfils your dog's genetic desires and brings balance to your home.
+              Training becomes a joyful experience when play is at the center. Dogs learn to love working with their humans, and owners discover how rewarding it is to guide their dogs. This creates results that last because it's built on genuine connection.
             </p>
           </div>
 
@@ -358,7 +358,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Free Training Advice</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Expert tips, guides, and insights to help you understand your dog better and build a stronger relationship together.
+              Understanding your dog's individual needs and natural learning style is key to building the confident, fulfilled relationship you both deserve.
             </p>
           </div>
 
@@ -401,7 +401,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Ready to Build Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Start your dog's training journey today with a free consultation or book your first session online.
+                Begin building a deeper partnership with your dog through our play-centered, individualized approach that creates lasting harmony.
               </p>
             </div>
 
@@ -456,7 +456,7 @@ export default function HomePage() {
                 </div>
                 <h2 className="text-4xl font-bold text-charcoal">What Our Clients Say</h2>
                 <p className="text-xl text-medium-grey">
-                  Real stories from dog owners who've experienced the transformation through our training programs.
+                  Real stories from families who've discovered the joy of true partnership with their dogs through our individualized approach.
                 </p>
               </div>
 
