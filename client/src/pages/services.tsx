@@ -19,7 +19,9 @@ import {
   Camera,
   ClipboardList,
   MapPinned,
-  Mountain
+  Mountain,
+  Heart,
+  Brain
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -221,19 +223,28 @@ export default function ServicesPage() {
             We believe training should be an enjoyable, engaging experience that creates genuine fulfillment for your dog. When dogs feel secure through clear expectations and consistent communication, they naturally become more confident and eager to learn. This approach builds lasting happiness for both dogs and their families.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl">
+            <div className="bg-white p-6 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-white" />
+              </div>
               <h3 className="font-semibold text-charcoal mb-2">Play-Based Learning</h3>
               <p className="text-medium-grey text-sm">
                 We use play not just as a reward, but as a way to teach, connect, and motivate your dog.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl">
+            <div className="bg-white p-6 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
               <h3 className="font-semibold text-charcoal mb-2">Thoughtful Approach</h3>
               <p className="text-medium-grey text-sm">
                 We understand your dog's natural learning style and work with their genetics to create genuine fulfillment.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl">
+            <div className="bg-white p-6 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-white" />
+              </div>
               <h3 className="font-semibold text-charcoal mb-2">Owner Education</h3>
               <p className="text-medium-grey text-sm">
                 We empower you with the tools and understanding to continue training at home.
