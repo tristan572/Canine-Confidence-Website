@@ -224,8 +224,8 @@ export default function ServicesPage() {
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-primary-blue" />
               </div>
               <h3 className="font-semibold text-charcoal mb-2">Play-Based Learning</h3>
               <p className="text-medium-grey text-sm">
@@ -233,8 +233,8 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-primary-blue" />
               </div>
               <h3 className="font-semibold text-charcoal mb-2">Thoughtful Approach</h3>
               <p className="text-medium-grey text-sm">
@@ -242,8 +242,8 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-primary-blue" />
               </div>
               <h3 className="font-semibold text-charcoal mb-2">Owner Education</h3>
               <p className="text-medium-grey text-sm">
