@@ -401,7 +401,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Ready to Build Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Begin building a deeper partnership with your dog through our play-centered, individualized approach that creates lasting harmony.
+                Begin building a deeper partnership with your dog through our play-centered, considerate approach that creates lasting harmony.
               </p>
             </div>
 
