@@ -15,7 +15,8 @@ import {
   Search,
   FileText,
   Handshake,
-  HeartHandshake
+  HeartHandshake,
+  TrendingUp
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -242,7 +243,7 @@ export default function AboutPage() {
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Handshake className="w-6 h-6 text-primary-blue" />
+                <TrendingUp className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Training</h3>
               <p className="text-sm text-medium-grey">Hands-on sessions with both dog and owner to build skills and confidence.</p>
