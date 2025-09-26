@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
     const serviceData: InsertService[] = [
       {
         name: "Initial Assessment",
-        description: "Every dog is unique, so we start by understanding your dog's individual needs, genetics, and personality. This isn't a cookie-cutter assessment—we take the time to create a deeply personalized plan that builds genuine partnership between you and your dog, focusing on what they truly need to thrive.",
+        description: "Get to know your dog and understand their unique needs.  We'll assess behaviour and temperament and then create a personalised plan that focuses on true genetic fulfilment, confidence and bond building, communication clarity and empowering you with skills to maintain lasting behavioural change",
         duration: "60 minutes",
         location: "In-home assessment",
         price: "$90",
@@ -119,7 +119,7 @@ export class MemStorage implements IStorage {
 
       {
         name: "One-on-One Coaching",
-        description: "Build a deep partnership with your dog through personalized coaching sessions where play is the foundation. We don't just teach commands—we help you understand your dog's natural learning style and tailor our approach to fit both your dog's needs and your lifestyle, creating joy in the training process.",
+        description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioural changes.",
         duration: "60 minutes",
         location: "In-home or suitable environment",
         price: "$120",
@@ -129,7 +129,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "In-Home Obedience",
-        description: "Rather than quick fixes, we focus on building essential skills through play-based learning in your dog's familiar environment. Each session is tailored to your dog's unique learning style, ensuring they develop genuine understanding and confidence in their responses.",
+        description: "Basic obedience training, completed by the trainer, in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
         duration: "30 minutes",
         location: "In-home training",
         price: "$60",
@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Walk and Train",
-        description: "Real-world training that builds on the foundation we've created together. We understand that every dog learns differently, so we tailor each walk to reinforce the specific skills your dog needs while ensuring they feel confident and connected in new environments. This creates lasting results because it's built on understanding, not just repetition.",
+        description: "Walk and Train is a specialised service where we visit your home, pick up your dog, and reinforce general obedience skills and loose lead walking while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
         duration: "40 minutes",
         location: "Home pickup and local area",
         price: "$60",
@@ -149,7 +149,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Local Walk",
-        description: "More than just exercise—these walks provide the genetic fulfillment your dog needs to thrive. We understand that each dog has unique enrichment needs, so we tailor every walk to include activities that engage their natural instincts, ensuring they return home both physically tired and mentally satisfied.",
+        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
         duration: "30 minutes",
         location: "From client's home",
         price: "$45",
@@ -159,7 +159,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Adventure Walk",
-        description: "These adventures are designed to fulfill your dog's genetic needs in ways that create genuine happiness. Rather than a one-size-fits-all approach, we choose locations and activities based on your dog's breed, personality, and natural instincts, ensuring they experience the kind of enrichment that makes them truly thrive.",
+        description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
         duration: "60 minutes", 
         location: "Local parks, forests, or beaches",
         price: "$80",
@@ -169,7 +169,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Virtual Consultation",
-        description: "Personalized guidance that recognizes your unique situation. We don't believe in cookie-cutter advice—each consultation is tailored to understand your dog's individual needs and your family's lifestyle, providing practical solutions that create lasting harmony in your home.",
+        description: "One-hour video consultation perfect for troubleshooting specific issues, follow-up support, or getting started with training guidance from the comfort of your home.",
         duration: "60 minutes",
         location: "Video call (Zoom)",
         price: "$100",
@@ -254,7 +254,7 @@ export class MemStorage implements IStorage {
     const packageData: InsertPackage[] = [
       {
         name: "Puppy Foundation Package",
-        description: "Every puppy is unique, so we tailor this program to your puppy's individual personality and your family's lifestyle. Through play-centered learning, we build the foundation for a lifetime of joyful partnership during the critical early weeks when your puppy is most receptive to learning.",
+        description: "Complete early development program only for puppies, 8-20 weeks. Have personalised advice delivered by an expert in-home. Program is developed to build confidence, learning and play foundations, social skills, and basic manners during the critical learning period.",
         price: "$550",
         originalPrice: "$650",
         duration: "6 weeks",
@@ -335,7 +335,7 @@ export class MemStorage implements IStorage {
       // },
       {
         name: "5 x One-on-One Coaching",
-        description: "Deep partnership building through personalized coaching where play transforms training into connection. We don't use cookie-cutter methods—each session is tailored to your dog's genetics, personality, and your lifestyle, creating genuine understanding and lasting results that both you and your dog will love.",
+        description: "Unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals, with ongoing feedback and dedicated support throughout your journey. Perfect for those seeking steady improvement, this package delivers exceptional value and ensures effective learning for both you and your dog.",
         price: "$550",
         originalPrice: "$600",
         duration: "5 sessions",
@@ -355,7 +355,7 @@ export class MemStorage implements IStorage {
 
       {
         name: "5 x In-Home Obedience",
-        description: "Rather than quick fixes, we focus on building genuine understanding through play-based learning in your dog's familiar environment. Each session is individualized to your dog's natural learning style, ensuring they develop confidence and clarity in their responses while you're at work.",
+        description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning. Each session is tailored to your dog's unique needs and can take place while you are at work, ensuring efficient, stress-free training in a familiar environment for optimal results.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -374,7 +374,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Walk and Train",
-        description: "Building on the foundation we've created together, each walk is tailored to reinforce the specific skills your dog needs. We understand every dog learns differently, so we adapt our approach to ensure they feel confident and connected in real-world environments, creating results that last.",
+        description: "Our Five Walk and Trains Package offers practical dog training with convenience. We pick up your dog from home and reinforce obedience and loose lead walking skills during real-world strolls. Ideal for progressing from in-home training, this package ensures confidence building, practical application and lasting results.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -393,7 +393,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Adventure Walks",
-        description: "These adventures are designed around your dog's individual genetic needs and personality. Rather than one-size-fits-all outings, we choose locations and activities that fulfill what your specific dog truly needs to thrive, ensuring they experience genuine happiness and fulfillment.",
+        description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",
@@ -412,7 +412,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Local Walks",
-        description: "More than just exercise—each walk is tailored to provide the specific enrichment your dog needs to feel genuinely fulfilled. We understand that every dog has unique genetic requirements, so we customize activities to engage their natural instincts and ensure they return home both satisfied and happy."
+        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog stays happy and active.",
         price: "$215",
         originalPrice: "$225",
         duration: "5 sessions",
