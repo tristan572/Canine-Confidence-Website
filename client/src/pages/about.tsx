@@ -295,8 +295,8 @@ export default function AboutPage() {
             </Dialog>
           </div>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
-            <div className="flex items-center space-x-3">
+          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
+            <div className="flex items-center justify-center space-x-3">
               <MapPin className="w-5 h-5 text-white" />
               <div>
                 <div className="font-semibold text-white">Service Area</div>
@@ -304,7 +304,7 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center space-x-3">
               <Clock className="w-5 h-5 text-white" />
               <div>
                 <div className="font-semibold text-white">Availability</div>
@@ -312,7 +312,7 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center space-x-3">
               <Phone className="w-5 h-5 text-white" />
               <div>
                 <div className="font-semibold text-white">Response Time</div>
