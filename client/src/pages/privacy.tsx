@@ -32,7 +32,7 @@ export default function Privacy() {
                     <p>We may collect the following personal information when you use our services:</p>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                       <li>Name and contact information (email, phone number, address)</li>
-                      <li>Dog information (name, breed, age, behavioral history)</li>
+                      <li>Dog information (name, breed, age, behavioural history)</li>
                       <li>Payment information for booking and purchasing services</li>
                       <li>Communication preferences and service requirements</li>
                     </ul>
@@ -64,7 +64,7 @@ export default function Privacy() {
                     <li>Process bookings and payments</li>
                     <li>Communicate with you about appointments and services</li>
                     <li>Send relevant training tips and business updates (with your consent)</li>
-                    <li>Analyze website usage to improve user experience</li>
+                    <li>Analyse website usage to improve user experience</li>
                     <li>Comply with legal obligations</li>
                   </ul>
                 </div>
@@ -122,7 +122,7 @@ export default function Privacy() {
                   <p className="mb-4">We use cookies and similar technologies to:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Remember your preferences and improve your experience</li>
-                    <li>Analyze website traffic and usage patterns</li>
+                    <li>Analyse website traffic and usage patterns</li>
                     <li>Provide relevant content and advertisements</li>
                   </ul>
                   <p className="mt-4">You can control cookie settings through your browser preferences.</p>

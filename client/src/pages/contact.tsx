@@ -118,7 +118,7 @@ export default function ContactPage() {
                   <div className="flex-1">
                     <h3 className="font-semibold text-charcoal mb-2">Free Phone Consultation</h3>
                     <p className="text-medium-grey mb-4">
-                      Not sure which service is right for you? Get personalized advice in a quick 15-minute phone consultation at no cost.
+                      Not sure which service is right for you? Get personalised advice in a quick 15-minute phone consultation at no cost.
                     </p>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -163,7 +163,7 @@ export default function ContactPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">How soon can we start training?</h3>
               <p className="text-medium-grey text-sm">
-                We typically have availability within 1-2 weeks of your initial consultation. For urgent behavioral issues, we may be able to accommodate earlier sessions.
+                We typically have availability within 1-2 weeks of your initial consultation. For urgent behavioural issues, we may be able to accommodate earlier sessions.
               </p>
             </Card>
 
@@ -191,7 +191,7 @@ export default function ContactPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">Do you work with aggressive dogs?</h3>
               <p className="text-medium-grey text-sm">
-                We specialize in dog behavioral modification, however we do not handle cases involving human aggression. Please get in contact to ensure we can properly assess your situation and provide appropriate references if needed.
+                We specialise in dog behavioural modification, however we do not handle cases involving human aggression. Please get in contact to ensure we can properly assess your situation and provide appropriate references if needed.
               </p>
             </Card>
 

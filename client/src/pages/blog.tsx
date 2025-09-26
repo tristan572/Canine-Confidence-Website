@@ -210,7 +210,7 @@ export default function BlogPage() {
             <Card className="bg-white p-6 text-center card-hover">
               <h3 className="font-semibold text-charcoal mb-2">Behavior Issues</h3>
               <p className="text-medium-grey text-sm mb-4">
-                Solutions for common behavioral problems
+                Solutions for common behavioural problems
               </p>
               <Button variant="outline" size="sm">
                 View Articles

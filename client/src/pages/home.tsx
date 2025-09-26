@@ -128,7 +128,7 @@ export default function HomePage() {
             <div className="relative">
               <img 
                 src={heroImage} 
-                alt="Professional dog trainer working hands-on with a Staffordshire Terrier in natural outdoor setting, demonstrating personalized training approach" 
+                alt="Professional dog trainer working hands-on with a Staffordshire Terrier in natural outdoor setting, demonstrating personalised training approach" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
@@ -309,7 +309,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Free Phone Consultation</h3>
                   <p className="text-blue-100 mb-6">
-                    Not sure which service is right for you? Get personalized advice in a quick 15-minute phone consultation at no cost.
+                    Not sure which service is right for you? Get personalised advice in a quick 15-minute phone consultation at no cost.
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-sm text-blue-100">
@@ -456,7 +456,7 @@ export default function HomePage() {
                 </div>
                 <h2 className="text-4xl font-bold text-charcoal">What Our Clients Say</h2>
                 <p className="text-xl text-medium-grey">
-                  Real stories from families who've discovered the joy of true partnership with their dogs through our individualized approach.
+                  Real stories from families who've discovered the joy of true partnership with their dogs through our individualised approach.
                 </p>
               </div>
 
@@ -498,7 +498,7 @@ export default function HomePage() {
             <div className="relative">
               <img 
                 src={testimonialsImage} 
-                alt="Professional dog trainer demonstrating advanced training techniques with French Bulldog using specialized equipment in secure training facility" 
+                alt="Professional dog trainer demonstrating advanced training techniques with French Bulldog using specialised equipment in secure training facility" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               

@@ -450,13 +450,13 @@ A dog in pain, discomfort, or poor health can't be expected to focus, cooperate,
 
 Your dog's diet is the cornerstone of their physical and mental wellbeing. Just like humans, dogs perform better when they're properly fueled. Puppies especially need extra nutritional support for their rapidly growing brains and bodies. The best approach combines raw, air-dried, or freeze-dried foods that maintain maximum nutrient density with minimal processing.
 
-While high-quality kibble can supplement this foundation for financial or practical reasons, the goal should always be nutrient-dense, species-appropriate food. Poor nutrition doesn't just affect your dog's coat or energy levels—it shows up as behavioral issues, hyperactivity, and can lead to serious illness years down the track. When dogs feel good from the inside out, they're naturally more cooperative and focused.
+While high-quality kibble can supplement this foundation for financial or practical reasons, the goal should always be nutrient-dense, species-appropriate food. Poor nutrition doesn't just affect your dog's coat or energy levels—it shows up as behavioural issues, hyperactivity, and can lead to serious illness years down the track. When dogs feel good from the inside out, they're naturally more cooperative and focused.
 
 ### Rest and Recovery: The Overlooked Essential
 
 Most people underestimate how much sleep dogs actually need. Depending on their age and breed, dogs require between 12 and 20 hours of sleep daily. This isn't laziness—it's biological necessity. Their nervous systems need this time to process information, recover from stimulation, and prepare for the next day.
 
-Overstimulated dogs don't just get tired—they become hyperactive, mouthy, and difficult to manage. Many behavioral issues that owners attribute to "stubbornness" or "disobedience" are actually signs of a dog who hasn't had adequate recovery time. Providing structured downtime and creating calm spaces where your dog can truly relax is essential for their emotional regulation and learning capacity.
+Overstimulated dogs don't just get tired—they become hyperactive, mouthy, and difficult to manage. Many behavioural issues that owners attribute to "stubbornness" or "disobedience" are actually signs of a dog who hasn't had adequate recovery time. Providing structured downtime and creating calm spaces where your dog can truly relax is essential for their emotional regulation and learning capacity.
 
 ### Pain: The Hidden Training Saboteur
 
@@ -478,9 +478,9 @@ The key is working with your veterinarian to identify your dog's specific needs 
 
 ## Why Health Cannot Be Compromised
 
-The reality is simple: a dog in pain won't respond normally to leash pressure, play, or commands without experiencing distress. Poor sleep leads to over-arousal, emotional instability, and erratic behavior. Medical issues often masquerade as behavioral problems, leading owners to try to "train through" what is actually a health concern.
+The reality is simple: a dog in pain won't respond normally to leash pressure, play, or commands without experiencing distress. Poor sleep leads to over-arousal, emotional instability, and erratic behavior. Medical issues often masquerade as behavioural problems, leading owners to try to "train through" what is actually a health concern.
 
-When something feels "off" with your dog, resist the urge to immediately seek behavioral solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
+When something feels "off" with your dog, resist the urge to immediately seek behavioural solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
         imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.png",
@@ -528,7 +528,7 @@ These activities are particularly valuable because they're naturally calming for
 
 ## The Cost of Unmet Needs
 
-Mental fulfillment isn't optional—it's essential for your dog's wellbeing and your relationship with them. Dogs with unmet lifestyle needs often display behaviors that owners interpret as disobedience or behavioral problems: excessive barking, destructive behaviors, escape attempts, or over-excitement and reactivity in everyday situations.
+Mental fulfillment isn't optional—it's essential for your dog's wellbeing and your relationship with them. Dogs with unmet lifestyle needs often display behaviors that owners interpret as disobedience or behavioural problems: excessive barking, destructive behaviors, escape attempts, or over-excitement and reactivity in everyday situations.
 
 These behaviors aren't moral failings or dominance displays—they're symptoms of a dog whose fundamental needs aren't being met. When we address the underlying need for mental stimulation and purpose, these problematic behaviors often resolve themselves without direct training.
 
@@ -873,7 +873,7 @@ The building process follows the natural sequence: address health concerns first
 
 ## Maintaining Long-Term Balance
 
-This isn't a one-time process that you complete and then forget about. True balance requires ongoing attention to all four areas throughout your dog's life. Health needs change as dogs age, and regular monitoring ensures problems are caught early. Genetic drives don't disappear and require consistent fulfillment to prevent behavioral problems from developing. Communication systems need reinforcement and refinement as you and your dog encounter new situations together. Life skills require regular practice and proofing to maintain reliability across different environments and circumstances.
+This isn't a one-time process that you complete and then forget about. True balance requires ongoing attention to all four areas throughout your dog's life. Health needs change as dogs age, and regular monitoring ensures problems are caught early. Genetic drives don't disappear and require consistent fulfillment to prevent behavioural problems from developing. Communication systems need reinforcement and refinement as you and your dog encounter new situations together. Life skills require regular practice and proofing to maintain reliability across different environments and circumstances.
 
 ## The Partnership Payoff
 
