@@ -893,6 +893,22 @@ The investment in building these foundations properly pays dividends throughout 
     // Seed testimonials
     const testimonialData: InsertTestimonial[] = [
       {
+        clientName: "Donna M.",
+        dogName: "Winnie",
+        rating: 5,
+        reviewText: "I enjoyed Tristan's expertise and insights about the benefits of play-based learning (for me as well as Winnie! :-) ) together with his understanding of the importance of working with my 10 month old puppy's strengths & positive characteristics while also attending to his challenges",
+        service: "Training",
+        location: null
+      },
+      {
+        clientName: "Belinda M.",
+        dogName: "Gracie",
+        rating: 5,
+        reviewText: "Tristan was really informative and has given me some great tools to help train my dog Gracie. Would highly recommend him!",
+        service: "Training",
+        location: null
+      },
+      {
         clientName: "Steph and Jonathan A.",
         dogName: null,
         rating: 5,
@@ -929,22 +945,6 @@ The investment in building these foundations properly pays dividends throughout 
         dogName: null,
         rating: 5,
         reviewText: "Thank you to Tristian for helping us get started on dog training at short notice for our new puppy. Tristian is very knowledgeable on all aspects of dog training and has great communication. We found the training session valuable and look foward to putting what we have learnt into practice. We highly recommend Tristian if you are looking for a dog trainer.",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Donna M.",
-        dogName: "Winnie",
-        rating: 5,
-        reviewText: "I enjoyed Tristan's expertise and insights about the benefits of play-based learning (for me as well as Winnie! :-) ) together with his understanding of the importance of working with my 10 month old puppy's strengths & positive characteristics while also attending to his challenges",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Belinda M.",
-        dogName: "Gracie",
-        rating: 5,
-        reviewText: "Tristan was really informative and has given me some great tools to help train my dog Gracie. Would highly recommend him!",
         service: "Training",
         location: null
       }

@@ -380,7 +380,7 @@ export default function HomePage() {
                 </div>
               ) : testimonials && testimonials.length > 0 ? (
                 <div className="space-y-6">
-                  {testimonials.slice(0, 2).map((testimonial) => (
+                  {testimonials.slice(0, 4).map((testimonial) => (
                     <TestimonialCard key={testimonial.id} testimonial={testimonial} />
                   ))}
                 </div>
