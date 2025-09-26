@@ -218,7 +218,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-charcoal mb-6">Our Training Philosophy</h2>
           <p className="text-lg text-medium-grey mb-8">
-            Every dog is unique, and every family's needs are different. That's why we take the time to understand your dog's individual genetics, personality, and natural learning style. Through play-centered methods and genuine partnership building, we create training experiences that honor your dog's individuality while helping both of you feel confident and connected.
+            We believe training should be an enjoyable, engaging experience that creates genuine fulfillment for your dog. When dogs feel secure through clear expectations and positive communication, they naturally become more confident and eager to learn. This approach builds lasting happiness for both dogs and their families.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl">
