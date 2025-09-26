@@ -121,7 +121,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
@@ -138,14 +138,14 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTA Buttons */}
-            <div className="flex items-center space-x-3 shrink-0">
+            <div className="flex items-center space-x-2 shrink-0">
               <ShoppingCart sessionId={getCartSessionId()} />
               
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue">
-                    <Phone className="w-3.5 h-3.5 mr-1.5" />
-                    Consultation
+                  <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue text-xs">
+                    <Phone className="w-3 h-3 mr-1" />
+                    Consult
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
@@ -155,7 +155,7 @@ export default function Navbar() {
 
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="sm" className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm">
+                  <Button size="sm" className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm text-xs px-3">
                     Book Now
                   </Button>
                 </DialogTrigger>
