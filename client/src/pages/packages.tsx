@@ -314,7 +314,7 @@ export default function PackagesPage() {
                   Training Packages
                 </h1>
                 <p className="text-xl md:text-2xl text-white">
-                  Comprehensive training programs designed to transform your dog's behaviour and strengthen your bond
+                  Thoughtfully designed programs that honor your dog's individuality while building the skills and confidence they need to thrive. No quick fixes—just genuine, lasting partnerships.
                 </p>
               </div>
               
@@ -386,7 +386,7 @@ export default function PackagesPage() {
               Why Choose Our Training Packages?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our structured programs provide comprehensive solutions and lasting behaviour change, for great value.
+              We take the time to understand your dog's genetics, personality, and learning style, creating a tailored approach that fits your lifestyle and builds real fulfillment for your dog.
             </p>
           </div>
 
