@@ -40,13 +40,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Our Mission</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Every dog is unique and every family is different, which is why we don't rely on cookie-cutter methods or quick fixes. Instead, we focus on building a deep partnership between dog and owner, taking the time to understand your dog's individual needs, genetics, and personality.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  We tailor our training so that it fits your lifestyle as well as your dog's natural way of learning. Our mission is not about quick solutions that mask behaviour—those approaches often create more stress and confusion for both dogs and owners.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  Instead, we are committed to helping dogs become fulfilled and confident while giving owners the tools and knowledge they need to lead with clarity and consistency. This creates a foundation that strengthens the relationship and makes life together easier, happier, and more rewarding.
+                  At Canine Confidence, we truly care about the wellbeing of every dog and family we work with. Our passion is to see dogs thrive and to help owners feel proud, capable, and connected. When dogs and humans understand one another, both lives are enriched.
                 </p>
               </div>
               
@@ -158,7 +152,13 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Why Choose Canine Confidence?</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we truly care about the wellbeing of every dog and family we work with. Our passion is to see dogs thrive and to help owners feel proud, capable, and connected. When dogs and humans understand one another, both lives are enriched.
+                  Every dog is unique and every family is different, which is why we don't rely on cookie-cutter methods or quick fixes. Instead, we focus on building a deep partnership between dog and owner, taking the time to understand your dog's individual needs, genetics, and personality.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  We tailor our training so that it fits your lifestyle as well as your dog's natural way of learning. We're not about quick solutions that mask behaviour—those approaches often create more stress and confusion for both dogs and owners.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  Instead, we are committed to helping dogs become fulfilled and confident while giving owners the tools and knowledge they need to lead with clarity and consistency. This creates a foundation that strengthens the relationship and makes life together easier, happier, and more rewarding.
                 </p>
               </div>
 

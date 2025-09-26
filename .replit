@@ -47,9 +47,5 @@ externalPort = 3002
 localPort = 41697
 externalPort = 3001
 
-[[ports]]
-localPort = 42179
-externalPort = 3003
-
 [agent]
 integrations = ["javascript_stripe:1.0.0"]
