@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import BookingWidget from "@/components/ui/booking-widget";
 import { 
   Phone, 
   Mail, 
@@ -13,8 +14,11 @@ import {
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
 import contactHeroImage from "@assets/image_1750049297197.png";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [showBookingWidget, setShowBookingWidget] = useState(false);
+  
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -215,9 +219,8 @@ export default function ContactPage() {
                 Call Now: 0409521358
               </Button>
               <Button 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg"
-                onClick={() => window.open('https://canineconfidence.simplybook.net', '_blank')}
+                onClick={() => setShowBookingWidget(true)}
+                className="btn-primary px-8 py-4 text-lg"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Now
@@ -229,6 +232,11 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      
+      <BookingWidget 
+        isOpen={showBookingWidget} 
+        onClose={() => setShowBookingWidget(false)} 
+      />
     </div>
   );
 }
