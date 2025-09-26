@@ -27,7 +27,7 @@ export default function AboutPage() {
             About Canine Confidence
           </h1>
           <p className="text-xl text-medium-grey mb-8">
-            With over 5 years of experience and 80 five-star reviews on the Madpaws platform, we're passionate about helping dogs and their humans live in harmony through modern training methods based in play, trust, and genetic fulfillment.
+            We believe dog training should be about more than commands and corrections—it's about creating harmony between dogs and families through understanding, fulfillment, and connection. Every dog deserves to be genuinely living their best life.
           </p>
         </div>
       </section>
@@ -40,13 +40,13 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Our Mission</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we're passionate about helping dogs and their humans live in harmony. Our mission is to transform dogs and their families' lives through our unique methods focusing on bond, trust, clarity, and fulfilment.
+                  Every dog is unique and every family is different, which is why we don't rely on cookie-cutter methods or quick fixes. Instead, we focus on building a deep partnership between dog and owner, taking the time to understand your dog's individual needs, genetics, and personality.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  We believe every dog and owner combination is unique, which is why we personalise plans for each individual partnership. We're truly dedicated to successful outcomes and seeing through until the end, offering ongoing support for the life of the dog.
+                  We tailor our training so that it fits your lifestyle as well as your dog's natural way of learning. Our mission is not about quick solutions that mask behaviour—those approaches often create more stress and confusion for both dogs and owners.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Play is at the heart of everything we do. We use it not just as a reward, but as a way to teach, connect, and motivate. Our approach focuses heavily on play with true care for the animal, ensuring your dog's genetic needs are met while building lasting confidence.
+                  Instead, we are committed to helping dogs become fulfilled and confident while giving owners the tools and knowledge they need to lead with clarity and consistency. This creates a foundation that strengthens the relationship and makes life together easier, happier, and more rewarding.
                 </p>
               </div>
               
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              We believe in building confidence through play, skills, genetic fulfillment, and clarity—creating lasting bonds between dogs and their families.
+              Play is at the centre of our approach. It's more than just a reward—it's how we connect, communicate, and build joy into the training process, making it a positive, engaging experience that creates results that last.
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Play-Based Learning</h3>
               <p className="text-medium-grey">
-                We use play not just as a reward, but as the primary method to teach, connect, and motivate. Play is the framework that strengthens bonds and builds lasting relationships.
+                Through play, dogs learn to love working with their humans, and humans discover how much fun it can be to teach and guide their dogs. Training becomes a positive, engaging experience rather than a stressful task.
               </p>
             </Card>
 
@@ -158,7 +158,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Why Choose Canine Confidence?</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  With a proven track record in North Brisbane, we've helped hundreds of dogs and their families build stronger, happier relationships through science-backed training methods.
+                  At Canine Confidence, we truly care about the wellbeing of every dog and family we work with. Our passion is to see dogs thrive and to help owners feel proud, capable, and connected. When dogs and humans understand one another, both lives are enriched.
                 </p>
               </div>
 
@@ -214,7 +214,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Approach</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Every training program is tailored to your dog's unique needs, personality, and genetic fulfillment requirements.
+              We take the time to understand your dog's individual needs, genetics, and personality, creating a personalized approach that fits both your dog's natural learning style and your family's lifestyle.
             </p>
           </div>
 
@@ -259,7 +259,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-charcoal mb-6">Ready to Start?</h2>
           <p className="text-xl text-medium-grey mb-12">
-            Take the first step towards building a stronger relationship with your dog. We're here to help you succeed.
+            Begin your journey toward genuine partnership with your dog. Discover how fulfilling and joyful training can be when it's built on understanding, play, and connection.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
