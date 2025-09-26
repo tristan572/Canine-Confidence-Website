@@ -228,9 +228,9 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl">
-              <h3 className="font-semibold text-charcoal mb-2">Positive Methods</h3>
+              <h3 className="font-semibold text-charcoal mb-2">Thoughtful Approach</h3>
               <p className="text-medium-grey text-sm">
-                Science-based, humane training techniques that create lasting behavioral change.
+                We understand your dog's natural learning style and work with their genetics to create genuine fulfillment.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl">
