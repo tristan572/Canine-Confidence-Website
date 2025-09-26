@@ -183,7 +183,7 @@ export default function ServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Free Phone Consultation</h3>
                 <p className="text-blue-100 mb-6">
-                  Not sure which service is right for you? Get personalized advice in a quick 15-minute phone consultation at no cost.
+                  Not sure which service is right for you? Get personalised advice in a quick 15-minute phone consultation at no cost.
                 </p>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-blue-100">

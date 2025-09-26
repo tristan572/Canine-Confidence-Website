@@ -74,7 +74,7 @@ export default function AboutPage() {
             <div className="relative">
               <img 
                 src={aboutHeroImage} 
-                alt="Professional dog trainer demonstrating hands-on training techniques with dogs in Brisbane, showcasing personalized approach and expert guidance" 
+                alt="Professional dog trainer demonstrating hands-on training techniques with dogs in Brisbane, showcasing personalised approach and expert guidance" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
@@ -221,7 +221,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Approach</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              We take the time to understand your dog's individual needs, genetics, and personality, creating a personalized approach that fits both your dog's natural learning style and your family's lifestyle.
+              We take the time to understand your dog's individual needs, genetics, and personality, creating a personalised approach that fits both your dog's natural learning style and your family's lifestyle.
             </p>
           </div>
 
@@ -239,7 +239,7 @@ export default function AboutPage() {
                 <FileText className="w-6 h-6 text-primary-blue" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Custom Plan</h3>
-              <p className="text-sm text-medium-grey">Personalized training program designed specifically for your dog.</p>
+              <p className="text-sm text-medium-grey">Personalised training program designed specifically for your dog.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
