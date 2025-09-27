@@ -425,9 +425,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Free Training Advice</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Understanding your dog's individual needs and natural learning style is key to building the confident, fulfilled relationship you both deserve.
-            </p>
+            <p className="text-xl text-medium-grey max-w-3xl mx-auto">Understanding your dog's individual needs and how to effectively communicate is key to building the confident, fulfilled relationship you both deserve.</p>
           </div>
 
           {blogLoading ? (
