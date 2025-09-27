@@ -313,9 +313,7 @@ export default function PackagesPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-white">
                   Training Packages
                 </h1>
-                <p className="text-xl md:text-2xl text-white">
-                  Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive through genuine, lasting partnerships.
-                </p>
+                <p className="text-xl md:text-2xl text-white">Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive in life.</p>
               </div>
               
               <div className="flex flex-wrap gap-4">
@@ -344,7 +342,6 @@ export default function PackagesPage() {
           </div>
         </div>
       </section>
-
       {/* Packages Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -377,7 +374,6 @@ export default function PackagesPage() {
           )}
         </div>
       </section>
-
       {/* Why Choose Our Packages Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
