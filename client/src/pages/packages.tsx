@@ -209,10 +209,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
               <Clock className="w-4 h-4" />
               {pkg.duration}
             </div>
-            <div className="flex items-center gap-1">
-              <Users className="w-4 h-4" />
-              {pkg.sessions} sessions
-            </div>
+            
           </div>
         </CardHeader>
 
