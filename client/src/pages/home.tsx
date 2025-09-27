@@ -147,7 +147,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Training Packages Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,7 +263,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -349,7 +347,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -361,9 +358,7 @@ export default function HomePage() {
                   Client Reviews
                 </div>
                 <h2 className="text-4xl font-bold text-charcoal">What Our Clients Say</h2>
-                <p className="text-xl text-medium-grey">
-                  Real stories from families who've discovered the joy of true partnership with their dogs through our individualised approach.
-                </p>
+                <p className="text-xl text-medium-grey">Real stories from families who've discovered the joy of true partnership with their dogs through our playful and effective approach.</p>
               </div>
 
               {testimonialsLoading ? (
@@ -425,7 +420,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Blog Preview Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -467,7 +461,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -517,7 +510,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <BookingWidget 
         isOpen={showBookingWidget} 
         onClose={() => setShowBookingWidget(false)} 
