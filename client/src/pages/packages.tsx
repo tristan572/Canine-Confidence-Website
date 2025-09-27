@@ -379,7 +379,7 @@ export default function PackagesPage() {
               Why Choose Our Training Packages?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to understand your dog's genetics, personality, and learning style, creating a tailored approach that fits your lifestyle and builds real fulfillment for your dog.
+              We take the time to understand your dog's genetics, personality, and learning style, creating a tailored approach that fits your lifestyle and builds real fulfillment for your dog. Our cost-effective packages ensure regular training sessions, which creates real results because all training requires consistency in action.
             </p>
           </div>
 
