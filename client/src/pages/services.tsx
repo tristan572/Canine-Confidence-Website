@@ -80,9 +80,7 @@ export default function ServicesPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl font-bold text-charcoal">
-                  Professional Dog Training Services
-                </h1>
+                <h1 className="text-5xl font-bold text-charcoal">Professional Dog Training Services in Brisbane</h1>
                 <p className="text-xl text-medium-grey">
                   Every dog is unique, every family is different. That's why we don't believe in cookie-cutter training methods. Our approach centers on play, connection, and understanding your dog's individual needs to build genuine partnerships that create confidence and joy for both you and your dog.
                 </p>
@@ -111,7 +109,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,7 +211,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Training Philosophy Section */}
       <section className="py-20 bg-light-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -253,7 +249,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       <BookingWidget 
         isOpen={showBookingWidget} 
         onClose={() => setShowBookingWidget(false)} 
