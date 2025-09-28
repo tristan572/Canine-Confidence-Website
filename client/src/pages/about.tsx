@@ -30,11 +30,14 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-6">
-            A Different Path to Dog Training
+          <h1 className="text-5xl font-bold text-charcoal mb-4">
+            About Us
           </h1>
+          <h2 className="text-3xl font-semibold text-charcoal mb-6">
+            A Different Path to Dog Training
+          </h2>
           <p className="text-xl text-medium-grey mb-8">
-            I didn't grow up with dogs, and I didn't have a "problem dog" that pushed me into training. For me, it's always been simple—I just love dogs. Wherever I went, I found myself connecting with them, and they seemed to connect with me. That natural bond was always there.
+            I'm Tristan, the owner of Canine Confidence. I didn't grow up with dogs, and I didn't have a "problem dog" that pushed me into training. For me, it's always been simple—I just love dogs. Wherever I went, I found myself connecting with them, and they seemed to connect with me. That natural bond was always there.
           </p>
         </div>
       </section>
