@@ -31,10 +31,10 @@ export default function AboutPage() {
       <section className="hero-gradient py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-charcoal mb-6">
-            About Canine Confidence
+            A Different Path to Dog Training
           </h1>
           <p className="text-xl text-medium-grey mb-8">
-            We believe dog training should be about more than commands and corrections. It's about creating harmony between dogs and families through understanding, fulfillment, and connection. Every dog deserves to be genuinely living their best life.
+            I didn't grow up with dogs, and I didn't have a "problem dog" that pushed me into training. For me, it's always been simple—I just love dogs. Wherever I went, I found myself connecting with them, and they seemed to connect with me. That natural bond was always there.
           </p>
         </div>
       </section>
@@ -45,9 +45,12 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Our Mission</h2>
+                <h2 className="text-4xl font-bold text-charcoal">Turning Passion Into Purpose</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we truly care about the wellbeing of every dog and family we work with. Our passion is to see dogs thrive and to help owners feel proud, capable, and connected. When dogs and humans understand one another, both lives are enriched.
+                  In 2020, life threw me a curveball when I was made redundant from my job. It made me realise how quickly things can change, and how important it is to spend your time doing something you truly love. For me, that meant finally pursuing dog training.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  As soon as I made the decision, I dove straight in. I began working with dogs in 2020 and by 2022 I became a nationally accredited dog trainer through the National Dog Trainers Federation (NDTF). From the beginning, my focus has been on creating a better life for family dogs and the people who love them.
                 </p>
               </div>
               
@@ -61,8 +64,8 @@ export default function AboutPage() {
                   <div className="text-sm text-medium-grey">Fully Covered</div>
                 </Card>
                 <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">5+</div>
-                  <div className="text-sm text-medium-grey">Years Experience</div>
+                  <div className="text-3xl font-bold text-primary-blue mb-2">2020</div>
+                  <div className="text-sm text-medium-grey">Started Training</div>
                 </Card>
                 <Card className="bg-white p-6 border border-gray-100">
                   <div className="text-3xl font-bold text-primary-blue mb-2">North Brisbane</div>
@@ -86,9 +89,9 @@ export default function AboutPage() {
       <section className="py-20 bg-light-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Philosophy</h2>
+            <h2 className="text-4xl font-bold text-charcoal mb-4">The Canine Confidence Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Play is at the centre of our approach. It's more than just a reward. It's how we connect, communicate, and build joy into the training process, making it a positive, engaging experience that creates results that last.
+              At Canine Confidence, we believe dog training should be about more than commands and corrections. It's about creating harmony between dogs and families through understanding, fulfilment, and connection. Every dog deserves to be genuinely living their best life.
             </p>
           </div>
 
@@ -157,15 +160,15 @@ export default function AboutPage() {
 
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Why Choose Canine Confidence?</h2>
+                <h2 className="text-4xl font-bold text-charcoal">Why I Train Differently</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Every dog is unique and every family is different, which is why we don't rely on cookie-cutter methods or quick fixes. Instead, we focus on building a deep partnership between dog and owner, taking the time to understand your dog's individual needs, genetics, and personality.
+                  Many trainers focus heavily on commands, corrections, and "fixing" dogs. But what I've learned is that when you tap into a dog's natural drives—through play, engagement, and genetic fulfilment—you don't just train a dog, you build harmony.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  We tailor our training so that it fits your lifestyle as well as your dog's natural way of learning. We're not about quick solutions that mask behaviour. Those approaches often create more stress and confusion for both dogs and owners.
+                  My own dog, Cleo, has thrived with this approach. She's never been destructive, anxious, or difficult around the home because her needs are met. She gets to play, connect, and live the kind of life every dog deserves.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Instead, we are committed to helping dogs become fulfilled and confident while giving owners the tools and knowledge they need to lead with clarity and consistency. This creates a foundation that strengthens the relationship and makes life together easier, happier, and more rewarding.
+                  That's what I want for every dog and family I work with: a dog that feels fulfilled and content, a household that's calm, happy, and free from the stress of problem behaviours, and a bond built on trust, communication, and fun.
                 </p>
               </div>
 
@@ -175,8 +178,8 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">5+ Years Professional Experience</h3>
-                    <p className="text-medium-grey">Certified professional dog trainer with extensive experience in behaviour modification and obedience training.</p>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">NDTF Certified Professional</h3>
+                    <p className="text-medium-grey">Nationally accredited dog trainer through the National Dog Trainers Federation, certified in 2022 with a focus on genetic fulfilment and play-based learning.</p>
                   </div>
                 </div>
 
@@ -264,9 +267,9 @@ export default function AboutPage() {
       {/* Contact Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Start?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Begin?</h2>
           <p className="text-xl text-white/90 mb-12">
-            Begin your journey toward genuine partnership with your dog. Discover how fulfilling and joyful training can be when it's built on understanding, play, and connection.
+            If you want a dog who listens, engages, and fits beautifully into your family life—not through force or frustration, but through play, clarity, and fulfilment—then you're in the right place. Let's build your dog's confidence and your peace of mind.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
