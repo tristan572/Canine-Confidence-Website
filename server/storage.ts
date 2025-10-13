@@ -253,8 +253,8 @@ export class MemStorage implements IStorage {
     // Seed packages
     const packageData: InsertPackage[] = [
       {
-        name: "Puppy Foundation Package",
-        description: "Complete early development program only for puppies, 8-20 weeks. Have personalised advice delivered by an expert in-home. Program is developed to build confidence, learning and play foundations, social skills, and basic manners during the critical learning period.",
+        name: "Puppy Foundation Program",
+        description: "Complete early development program for puppies only, 8-20 weeks. Have personalised advice delivered by an expert in-home. Program is developed to build confidence, learning and play foundations, social skills, and basic manners during the critical learning period. Included for free is a comprehensive Puppy Raising guide.",
         price: "$480",
         originalPrice: "$720",
         duration: "6 weeks",
@@ -265,10 +265,10 @@ export class MemStorage implements IStorage {
           "6 x in-home private sessions",
           "Socialisation protocols",
           "House training guidance and set up",
-          "Basic commands (sit, stay, come etc)",
+          "Basic commands (sit, stay, come, place etc)",
           "Foundations of learning and playing",
-          "Take-home training materials",
-          "Plus much more"
+          "Take-home training plan",
+          "Comprehensive 50+ page Puppy Raising guide"
         ],
         isPopular: true
       },
