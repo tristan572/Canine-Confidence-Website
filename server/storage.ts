@@ -279,7 +279,7 @@ export class MemStorage implements IStorage {
         duration: "1 week",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/image_1750049481697.png",
+        imageUrl: "/attached_assets/f9d0e0bed2d8123f95c61fa8d8e8b4c1_1760358687060.jpeg",
         features: [
           "Engagement and basic obedience",
           "Foundations and communication",
