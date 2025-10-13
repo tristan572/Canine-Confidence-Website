@@ -272,6 +272,24 @@ export class MemStorage implements IStorage {
         ],
         isPopular: true
       },
+      {
+        name: "Loose Leash Walking Program",
+        description: "A program designed to have your dog walking nicely by your side, without all the stressful pulling and resisting. This program is lead by the trainer who lays the foundations and then transfers the skills to you. This delivers an outcome that's effective, efficient and affordable. Please book the Reactivity program if your dog is barking and lunging at dogs or people.",
+        price: "$340",
+        duration: "1 week",
+        sessions: 5,
+        category: "obedience",
+        imageUrl: "/attached_assets/image_1750049481697.png",
+        features: [
+          "Engagement and basic obedience",
+          "Foundations and communication",
+          "Confidence building and genetic fulfilment",
+          "Handling skills",
+          "Four Building Blocks of a Balanced Dog guide",
+          "Results guaranteed"
+        ],
+        isPopular: true
+      },
       // Hidden packages - pending implementation
       // {
       //   name: "Behaviour Transformation Package",
