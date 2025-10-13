@@ -290,6 +290,26 @@ export class MemStorage implements IStorage {
         ],
         isPopular: true
       },
+      {
+        name: "Reactivity Rehabilitation Program",
+        description: "Comprehensive program specifically designed for dogs showing reactivity towards other dogs, people, or environmental triggers. Whether your dog barks, lunges, or becomes anxious in certain situations, this program addresses the root causes and creates lasting behavioural change. This intensive package combines dedicated trainer-only sessions to build foundational skills with owner coaching sessions to ensure life-long skill retention. The result is efficient, effective rehabilitation that transforms reactive dogs into calm, confident companions who can navigate the world with ease.",
+        price: "$990",
+        duration: "15 sessions",
+        sessions: 15,
+        category: "behaviour",
+        imageUrl: "/attached_assets/image_1750049297197.png",
+        features: [
+          "Training plan and homework supplied",
+          "Foundations and communication",
+          "Management techniques",
+          "Confidence building and genetic fulfilment",
+          "Impulse control",
+          "Counter-conditioning",
+          "Four Building Blocks of a Balanced Dog guide",
+          "Lifetime support guarantee"
+        ],
+        isPopular: true
+      },
       // Hidden packages - pending implementation
       // {
       //   name: "Behaviour Transformation Package",
