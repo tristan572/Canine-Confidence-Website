@@ -113,7 +113,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$90",
         category: "assessment",
-        imageUrl: "/attached_assets/image_1750048904991.png",
+        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260.jpg",
         features: ["Comprehensive evaluation", "Personalised training plan", "Written recommendations", "Ongoing support guidance"]
       },
 
