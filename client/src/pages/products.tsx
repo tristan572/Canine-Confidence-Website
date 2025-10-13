@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Package, Clock, Star } from "lucide-react";
-import productsImage from "@assets/stock_images/high_quality_dog_lea_ec3bf9ad.jpg";
 
 export default function ProductsPage() {
   const upcomingProducts = [
@@ -66,8 +65,8 @@ export default function ProductsPage() {
 
             <div className="relative">
               <img 
-                src={productsImage} 
-                alt="Professional dog training equipment including leashes and collars"
+                src="/attached_assets/F2CCD03F-F0E2-4A96-B411-2D1B602E7C73.jpg_1760360884952.webp" 
+                alt="Colourful braided tug toys with green balls for dog training"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
