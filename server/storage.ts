@@ -255,7 +255,7 @@ export class MemStorage implements IStorage {
       {
         name: "Puppy Foundation Package",
         description: "Complete early development program only for puppies, 8-20 weeks. Have personalised advice delivered by an expert in-home. Program is developed to build confidence, learning and play foundations, social skills, and basic manners during the critical learning period.",
-        price: "$550",
+        price: "$480",
         originalPrice: "$650",
         duration: "6 weeks",
         sessions: 6,
