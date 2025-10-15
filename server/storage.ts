@@ -420,7 +420,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/image_1750049481697.png",
+        imageUrl: "/attached_assets/timur-shakerzianov-rbNt2HNhfpM-unsplash_1760531420538.jpg",
         features: [
           "5 x 40-minute sessions",
           "Home pickup service included",
