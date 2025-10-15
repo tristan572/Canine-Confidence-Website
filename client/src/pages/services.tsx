@@ -132,12 +132,13 @@ export default function ServicesPage() {
               return (
                 <Card key={service.id} className="bg-light-grey card-hover border border-gray-100 overflow-hidden">
                   {service.imageUrl && (
-                    <div className="h-48 w-full">
+                    <div className="relative h-64 w-full overflow-hidden">
                       <img 
                         src={service.imageUrl} 
                         alt={`${service.name} training service`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                   )}
                   <CardContent className="p-8">
