@@ -154,7 +154,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049520029.png",
+        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.jpg",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
       },
       {
@@ -439,7 +439,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/image_1750049520029.png",
+        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.jpg",
         features: [
           "5 x 60-minute adventure sessions",
           "Collection from home",
