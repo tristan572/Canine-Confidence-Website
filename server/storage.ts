@@ -274,7 +274,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Loose Leash Walking Program",
-        description: "A program designed to have your dog walking nicely by your side, without all the stressful pulling and resisting. This program is lead by the trainer who lays the foundations and then transfers the skills to you. This delivers an outcome that's effective, efficient and affordable. Please book the Reactivity program if your dog is barking and lunging at dogs or people.",
+        description: "A program designed to have your dog walking nicely by your side, without all the stressful pulling and resisting. This program is lead by the trainer who lays the foundations and then transfers the skills to you. This delivers an outcome that's effective, efficient and affordable. Please book the From Chaos to Calm program if your dog is barking and lunging at dogs or people.",
         price: "$340",
         originalPrice: "$360",
         duration: "1 week",
@@ -292,7 +292,7 @@ export class MemStorage implements IStorage {
         isPopular: true
       },
       {
-        name: "Reactivity Rehabilitation Program",
+        name: "From Chaos to Calm Program",
         description: "Comprehensive program specifically designed for dogs showing reactivity towards other dogs, people, or environmental triggers. Whether your dog barks, lunges, or becomes anxious in certain situations, this program addresses the root causes and creates lasting behavioural change. This intensive package combines dedicated trainer-only sessions to build foundational skills with owner coaching sessions to ensure life-long skill retention. The result is efficient, effective rehabilitation that transforms reactive dogs into calm, confident companions who can navigate the world with ease.",
         price: "$990",
         originalPrice: "$1080",

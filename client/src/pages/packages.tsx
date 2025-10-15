@@ -304,7 +304,7 @@ export default function PackagesPage() {
     <div className="min-h-screen bg-gray-50">
       <SEO 
         title="Dog Training Packages Brisbane"
-        description="Affordable dog training packages in Brisbane. Puppy Foundation Program, Loose Leash Walking, Reactivity Rehabilitation, and coaching packages. Expert training with lasting results and savings up to $240."
+        description="Affordable dog training packages in Brisbane. Puppy Foundation Program, Loose Leash Walking, From Chaos to Calm, and coaching packages. Expert training with lasting results and savings up to $240."
         canonical="/packages"
         keywords={[
           'dog training packages Brisbane',
