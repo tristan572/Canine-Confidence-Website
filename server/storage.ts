@@ -135,7 +135,7 @@ export class MemStorage implements IStorage {
         price: "$60",
         category: "training",
         imageUrl: "/attached_assets/image_1750049431855.png",
-        features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
+        features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing"]
       },
       {
         name: "Walk and Train",
