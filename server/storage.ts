@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049431855.png",
+        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
         features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
       },
       {
@@ -401,7 +401,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/image_1750049431855.png",
+        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
         features: [
           "5 x 30-minute home sessions",
           "Essential commands training",
