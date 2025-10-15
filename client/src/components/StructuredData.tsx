@@ -65,12 +65,11 @@ export function LocalBusinessSchema() {
 interface ServiceSchemaProps {
   name: string;
   description: string;
-  price: string;
-  duration?: string;
+  price?: string;
 }
 
-export function ServiceSchema({ name, description, price, duration }: ServiceSchemaProps) {
-  const schema = {
+export function ServiceSchema({ name, description, price }: ServiceSchemaProps) {
+  const schema: any = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": name,
@@ -85,18 +84,18 @@ export function ServiceSchema({ name, description, price, duration }: ServiceSch
         "@type": "State",
         "name": "Queensland"
       }
-    },
-    "offers": {
+    }
+  };
+
+  // Only add price if it's a single numeric value (not a range)
+  if (price && /^\$?\d+$/.test(price.trim())) {
+    schema.offers = {
       "@type": "Offer",
       "price": price.replace(/[^0-9.]/g, ''),
       "priceCurrency": "AUD",
       "availability": "https://schema.org/InStock",
       "url": "https://canineconfidence.com.au/services"
-    }
-  };
-
-  if (duration) {
-    schema["duration"] = duration;
+    };
   }
 
   return (
