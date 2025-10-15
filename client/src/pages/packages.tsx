@@ -193,13 +193,12 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
         )}
         
         {pkg.imageUrl && (
-          <div className="relative h-48 w-full">
+          <div className="relative h-48 w-full bg-gray-100">
             <img 
               src={pkg.imageUrl} 
               alt={`${pkg.name} training session`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         )}
         
