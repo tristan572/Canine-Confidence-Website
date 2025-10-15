@@ -128,7 +128,7 @@ export class MemStorage implements IStorage {
         features: ["Individual, private sessions", "Customised training", "In-depth understanding of methods", "Modern techniques", "Lasting results", "Ongoing phone support"]
       },
       {
-        name: "In-Home Obedience",
+        name: "In-Home Train and Play",
         description: "Basic obedience training, completed by the trainer, in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
         duration: "30 minutes",
         location: "In-home training",
@@ -394,7 +394,7 @@ export class MemStorage implements IStorage {
       },
 
       {
-        name: "5 x In-Home Obedience",
+        name: "5 x In-Home Train and Plays",
         description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning. Each session is tailored to your dog's unique needs and can take place while you are at work, ensuring efficient, stress-free training in a familiar environment for optimal results.",
         price: "$280",
         originalPrice: "$300",
