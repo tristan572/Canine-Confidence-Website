@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
 import servicesHeroImage from "@assets/generated_images/Outdoor_group_training_session_1370bfdd.png";
 import { 
   GraduationCap, 
@@ -74,6 +75,19 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Dog Training Services Brisbane"
+        description="Professional dog training services in North Brisbane. Assessment, coaching, in-home training, walk & train, and adventure walks. Play-based methods focused on genetic fulfillment and lasting results."
+        canonical="/services"
+        keywords={[
+          'dog training services Brisbane',
+          'puppy training North Brisbane',
+          'in-home dog training',
+          'walk and train Brisbane',
+          'dog behaviour assessment',
+          'adventure dog walks Brisbane'
+        ]}
+      />
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

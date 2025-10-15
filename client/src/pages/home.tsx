@@ -4,6 +4,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
+import { LocalBusinessSchema } from "@/components/StructuredData";
 import heroImage from "@assets/DSC_0096_1758792971820.jpg";
 import testimonialsImage from "@assets/DSC_0171_1758792971820.jpg";
 import { 
@@ -74,6 +76,22 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Professional Dog Training Brisbane"
+        description="Transform your dog's behaviour with Canine Confidence. NDTF certified dog training in North Brisbane focusing on play-based learning, genetic fulfillment, and lasting results. Book your free consultation today."
+        canonical="/"
+        keywords={[
+          'dog training North Brisbane',
+          'puppy training',
+          'dog behaviour specialist',
+          'certified dog trainer Brisbane',
+          'play-based dog training',
+          'positive reinforcement training',
+          'dog obedience Brisbane',
+          'reactive dog training'
+        ]}
+      />
+      <LocalBusinessSchema />
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

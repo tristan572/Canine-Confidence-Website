@@ -1,0 +1,11 @@
+# Robots.txt for Canine Confidence - Dog Training Brisbane
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://canineconfidence.com.au/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
 import { 
   ShieldCheck, 
   Award, 
@@ -27,6 +28,18 @@ import aboutTrainingImage from "@assets/generated_images/Successful_training_res
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About Tristan - NDTF Certified Dog Trainer"
+        description="Meet Tristan, North Brisbane's NDTF certified dog trainer. From redundancy in 2020 to certification in 2022, discover the personal journey behind Canine Confidence's unique play-based training approach."
+        canonical="/about"
+        keywords={[
+          'NDTF certified dog trainer',
+          'North Brisbane dog trainer',
+          'professional dog trainer Brisbane',
+          'certified animal behaviourist',
+          'play-based training specialist'
+        ]}
+      />
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

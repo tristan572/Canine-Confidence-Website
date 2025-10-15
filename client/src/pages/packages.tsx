@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
 import { Star, Clock, Users, CheckCircle, Calendar } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import type { Package } from "@shared/schema";
@@ -301,6 +302,19 @@ export default function PackagesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title="Dog Training Packages Brisbane"
+        description="Affordable dog training packages in Brisbane. Puppy Foundation Program, Loose Leash Walking, Reactivity Rehabilitation, and coaching packages. Expert training with lasting results and savings up to $240."
+        canonical="/packages"
+        keywords={[
+          'dog training packages Brisbane',
+          'puppy training program',
+          'loose leash walking program',
+          'reactivity training Brisbane',
+          'dog training deals Brisbane',
+          'affordable dog training packages'
+        ]}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

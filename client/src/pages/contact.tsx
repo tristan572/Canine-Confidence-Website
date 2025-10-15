@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { SEO } from "@/components/SEO";
 import BookingWidget from "@/components/ui/booking-widget";
 import { 
   Phone, 
@@ -21,6 +22,17 @@ export default function ContactPage() {
   
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Contact Us - Dog Training Brisbane"
+        description="Contact Canine Confidence for professional dog training in North Brisbane. Book a free consultation, call 0409521358, or visit us. Serving Brisbane families and their dogs."
+        canonical="/contact"
+        keywords={[
+          'dog trainer contact Brisbane',
+          'book dog training Brisbane',
+          'dog training consultation',
+          'North Brisbane dog trainer contact'
+        ]}
+      />
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
