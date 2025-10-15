@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
+        imageUrl: "/attached_assets/image_1750049431855.png",
         features: ["Home environment", "Essential commands", "Play-based learning", "Quick progress"]
       },
       {
@@ -154,7 +154,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.jpg",
+        imageUrl: "/attached_assets/image_1750049520029.png",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
       },
       {
