@@ -129,7 +129,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "In-Home Train and Play",
-        description: "Basic obedience training, completed by the trainer, in your home environment. Short, focused sessions that teach essential commands while keeping your dog engaged through play and positive interaction.",
+        description: "In-home Train and Play delivers effective dog training right to your doorstep, providing a comfortable and stress-free environment for your pet. Our skilled trainers focus on general obedience or specific behavioural needs using a program tailored to your dog's unique personality and situation. With flexible scheduling and session-based pricing, we ensure convenient, personalised training that fits your lifestyle—helping your dog become a well-mannered, happy companion at home. This service does not require owners to be home and it is recommended to book multiple sessions a week for maximum effectiveness.",
         duration: "30 minutes",
         location: "In-home training",
         price: "$60",
