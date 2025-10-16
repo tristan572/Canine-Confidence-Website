@@ -130,7 +130,7 @@ export default function ContactPage() {
                   <div className="flex-1">
                     <h3 className="font-semibold text-charcoal mb-2">Free Phone Consultation</h3>
                     <p className="text-medium-grey mb-4">
-                      Not sure which service is right for you? Get personalised advice in a quick 15-minute phone consultation at no cost.
+                      Unsure about the right service for your needs? Schedule a complimentary, no-obligation call with our knowledgeable team. During your Free Phone Consult, we'll help you clarify your options, answer your questions, and provide advice tailored to your situation. Whether you need general guidance or specific recommendations, we're here to support you—at absolutely no cost, so you can make confident, informed decisions.
                     </p>
                     <Dialog>
                       <DialogTrigger asChild>

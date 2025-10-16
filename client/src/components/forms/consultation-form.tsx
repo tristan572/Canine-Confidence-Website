@@ -58,7 +58,7 @@ export default function ConsultationForm() {
       <DialogHeader className="mb-6">
         <DialogTitle className="text-2xl font-bold text-charcoal">Request Free Consultation</DialogTitle>
         <DialogDescription className="text-medium-grey">
-          Get personalised advice in a quick 15-minute phone consultation at no cost.
+          Unsure about the right service for your needs? Schedule a complimentary, no-obligation call with our knowledgeable team. During your Free Phone Consult, we'll help you clarify your options, answer your questions, and provide advice tailored to your situation. Whether you need general guidance or specific recommendations, we're here to support you—at absolutely no cost, so you can make confident, informed decisions.
         </DialogDescription>
       </DialogHeader>
 
