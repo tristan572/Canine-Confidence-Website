@@ -45,13 +45,13 @@ Preferred communication style: Simple, everyday language.
 - **Testimonials**: Customer reviews and feedback
 
 ### Frontend Pages
-- **Home**: Landing page with service highlights and booking widget
+- **Home**: Landing page with service highlights, testimonials (prominently displayed after hero), and booking widget
 - **Services**: Detailed service listings with booking integration
 - **Packages**: Training package offerings with online booking
 - **Products**: E-commerce catalog with cart functionality
 - **Blog**: Content marketing with search and filtering
 - **About**: Company information and team details
-- **Contact**: Contact forms and business information
+- **Contact**: Contact forms, business information, interactive service area map, and video consultation details
 - **Checkout**: Stripe-powered payment processing
 - **Admin**: Content management and booking widget setup
 
@@ -84,7 +84,25 @@ Preferred communication style: Simple, everyday language.
 2. Dynamic content rendering with search and filtering
 3. SEO-optimized content structure
 
+## Business Information
+
+### Service Area
+- **Location**: Boondall, Brisbane 4034
+- **Service Radius**: 20km from base location
+- **Travel Policy**: Travel beyond 10km may incur additional charges
+- **Remote Services**: Video consultations available worldwide
+
+### Interactive Map
+- Leaflet.js integration with OpenStreetMap
+- Visual 20km radius display
+- Located on Contact page for client convenience
+
 ## External Dependencies
+
+### Mapping
+- **Leaflet**: Open-source interactive maps
+- **react-leaflet**: React wrapper for Leaflet (v4.2.1)
+- **OpenStreetMap**: Free map tiles (no API keys required)
 
 ### Payment Processing
 - **Stripe**: Complete payment processing integration
