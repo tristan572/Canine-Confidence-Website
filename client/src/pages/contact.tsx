@@ -10,7 +10,8 @@ import {
   Clock, 
   MessageCircle,
   HeadphonesIcon,
-  Calendar
+  Calendar,
+  Video
 } from "lucide-react";
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -120,6 +121,17 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-light-blue p-3 rounded-lg">
+                    <Video className="h-6 w-6 text-primary-blue" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-charcoal mb-1">Video Consultations</div>
+                    <div className="text-medium-grey mb-1">Available Worldwide</div>
+                    <div className="text-sm text-medium-grey">Remote training via video call</div>
+                  </div>
+                </div>
               </div>
 
               {/* Free Consultation Card */}
@@ -171,9 +183,12 @@ export default function ContactPage() {
               Service Coverage
             </div>
             <h2 className="text-3xl font-bold text-charcoal mb-4">Our Service Area</h2>
-            <p className="text-lg text-medium-grey max-w-3xl mx-auto">
+            <p className="text-lg text-medium-grey max-w-3xl mx-auto mb-4">
               Based in Boondall, Brisbane, we provide mobile dog training services within a 20km radius. 
               Our service area covers North Brisbane and surrounding suburbs. We come to you for your convenience!
+            </p>
+            <p className="text-medium-grey max-w-3xl mx-auto">
+              <strong>Note:</strong> Travel beyond 10km may incur additional charges. We're also available worldwide for video call consultations and training sessions!
             </p>
           </div>
           
@@ -215,7 +230,7 @@ export default function ContactPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What areas do you service?</h3>
               <p className="text-medium-grey text-sm">
-                Based in Boondall, we service a 20km radius covering North Brisbane and surrounding suburbs. Check out the interactive map above to see if you're in our service area!
+                Based in Boondall, we service a 20km radius covering North Brisbane and surrounding suburbs. Travel beyond 10km may incur additional charges. Check out the interactive map above to see if you're in our service area! We also offer video consultations worldwide for remote training.
               </p>
             </Card>
 
