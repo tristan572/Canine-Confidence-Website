@@ -135,7 +135,7 @@ export class MemStorage implements IStorage {
         price: "$60",
         category: "training",
         imageUrl: "/attached_assets/image_1750049431855.png",
-        features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing"]
+        features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
         name: "Walk and Train",
@@ -145,7 +145,7 @@ export class MemStorage implements IStorage {
         price: "$60",
         category: "training",
         imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.jpg",
-        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home"]
+        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
         name: "Adventure Walk",
@@ -155,7 +155,7 @@ export class MemStorage implements IStorage {
         price: "$80",
         category: "walking",
         imageUrl: "/attached_assets/image_1750049520029.png",
-        features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care"]
+        features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care", "Tools and treats included"]
       },
       {
         name: "Local Walk",
@@ -165,7 +165,7 @@ export class MemStorage implements IStorage {
         price: "$45",
         category: "walking",
         imageUrl: "/attached_assets/image_1750049687824.png",
-        features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates"]
+        features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
       },
       {
         name: "Virtual Consultation",
