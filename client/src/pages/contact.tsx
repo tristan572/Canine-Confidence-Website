@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
+import ServiceAreaMap from "@/components/ui/service-area-map";
 import contactHeroImage from "@assets/image_1750049297197.png";
 import { useState } from "react";
 
@@ -101,7 +102,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Service Area</div>
-                    <div className="text-medium-grey mb-1">North Brisbane & Surrounding Areas</div>
+                    <div className="text-medium-grey mb-1">20km radius from Boondall, Brisbane</div>
                     <div className="text-sm text-medium-grey">Mobile service - we come to you!</div>
                   </div>
                 </div>
@@ -161,6 +162,31 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Service Area Map Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <MapPin className="w-4 h-4" />
+              Service Coverage
+            </div>
+            <h2 className="text-3xl font-bold text-charcoal mb-4">Our Service Area</h2>
+            <p className="text-lg text-medium-grey max-w-3xl mx-auto">
+              Based in Boondall, Brisbane, we provide mobile dog training services within a 20km radius. 
+              Our service area covers North Brisbane and surrounding suburbs. We come to you for your convenience!
+            </p>
+          </div>
+          
+          <ServiceAreaMap />
+          
+          <div className="mt-8 text-center">
+            <p className="text-medium-grey">
+              Not sure if you're in our service area? <a href="tel:0409521358" className="text-primary-blue hover:underline font-medium">Give us a call</a> and we'll be happy to check!
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-light-grey">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,7 +215,7 @@ export default function ContactPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What areas do you service?</h3>
               <p className="text-medium-grey text-sm">
-                We provide mobile training services throughout Brisbane and surrounding areas. Extended travel may incur additional fees.
+                Based in Boondall, we service a 20km radius covering North Brisbane and surrounding suburbs. Check out the interactive map above to see if you're in our service area!
               </p>
             </Card>
 
