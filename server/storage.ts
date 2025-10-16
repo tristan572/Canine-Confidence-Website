@@ -139,13 +139,13 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Walk and Train",
-        description: "Walk and Train is a specialised service where we visit your home, pick up your dog, and reinforce general obedience skills and loose lead walking while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
+        description: "Walk and Train is a specialised service where we visit your home, walk from there or drive to a close location, and reinforce any behaviours of the clients choice while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
         duration: "40 minutes",
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
         imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.jpg",
-        features: ["Home pickup service", "General obedience reinforcement", "Loose lead walking practice", "Real-world environment training", "Transition from indoor to outdoor skills"]
+        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home"]
       },
       {
         name: "Adventure Walk",
