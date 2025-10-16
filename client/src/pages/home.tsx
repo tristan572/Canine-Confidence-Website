@@ -165,6 +165,79 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                  <Star className="w-4 h-4" />
+                  Client Reviews
+                </div>
+                <h2 className="text-4xl font-bold text-charcoal">What Our Clients Say</h2>
+                <p className="text-xl text-medium-grey">Real stories from families who've discovered the joy of true partnership with their dogs through our playful and effective approach.</p>
+              </div>
+
+              {testimonialsLoading ? (
+                <div className="space-y-6">
+                  {[...Array(2)].map((_, i) => (
+                    <Card key={i} className="animate-pulse">
+                      <CardContent className="p-6">
+                        <div className="h-4 bg-gray-200 rounded mb-4"></div>
+                        <div className="h-16 bg-gray-200 rounded mb-4"></div>
+                        <div className="h-4 bg-gray-200 rounded w-32"></div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              ) : testimonials && testimonials.length > 0 ? (
+                <div className="space-y-6">
+                  {testimonials.slice(0, 4).map((testimonial) => (
+                    <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <p className="text-medium-grey">
+                    More reviews available on our{" "}
+                    <a 
+                      href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-blue hover:underline"
+                    >
+                      Madpaws profile
+                    </a>.
+                  </p>
+                </div>
+              )}
+            </div>
+            
+            <div className="relative">
+              <img 
+                src={testimonialsImage} 
+                alt="Professional dog trainer demonstrating advanced training techniques with French Bulldog using specialised equipment in secure training facility" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+              
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <span className="text-sm font-semibold text-charcoal">5.0/5</span>
+                </div>
+                <p className="text-sm text-medium-grey">
+                  "Professional, effective training that really works!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Training Packages Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -362,79 +435,6 @@ export default function HomePage() {
                 View All Services
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <Star className="w-4 h-4" />
-                  Client Reviews
-                </div>
-                <h2 className="text-4xl font-bold text-charcoal">What Our Clients Say</h2>
-                <p className="text-xl text-medium-grey">Real stories from families who've discovered the joy of true partnership with their dogs through our playful and effective approach.</p>
-              </div>
-
-              {testimonialsLoading ? (
-                <div className="space-y-6">
-                  {[...Array(2)].map((_, i) => (
-                    <Card key={i} className="animate-pulse">
-                      <CardContent className="p-6">
-                        <div className="h-4 bg-gray-200 rounded mb-4"></div>
-                        <div className="h-16 bg-gray-200 rounded mb-4"></div>
-                        <div className="h-4 bg-gray-200 rounded w-32"></div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              ) : testimonials && testimonials.length > 0 ? (
-                <div className="space-y-6">
-                  {testimonials.slice(0, 4).map((testimonial) => (
-                    <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-medium-grey">
-                    More reviews available on our{" "}
-                    <a 
-                      href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-blue hover:underline"
-                    >
-                      Madpaws profile
-                    </a>.
-                  </p>
-                </div>
-              )}
-            </div>
-            
-            <div className="relative">
-              <img 
-                src={testimonialsImage} 
-                alt="Professional dog trainer demonstrating advanced training techniques with French Bulldog using specialised equipment in secure training facility" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
-              />
-              
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-charcoal">5.0/5</span>
-                </div>
-                <p className="text-sm text-medium-grey">
-                  "Professional, effective training that really works!"
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
