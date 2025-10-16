@@ -119,13 +119,13 @@ export class MemStorage implements IStorage {
 
       {
         name: "One-on-One Coaching",
-        description: "Intensive personalised coaching sessions that instruct owners how to train and live with their dog along every step of their journey together. Strengthen the bond between you and your dog using modern techniques based in play and positive engagement to achieve lasting behavioural changes.",
+        description: "Our One-on-One Coaching service brings personalised dog training directly to you, either in your home or at a convenient public location. We teach you effective techniques, ensuring you gain the skills needed to successfully train and build a strong relationship with your dog, for life long results. This cost-effective option maximizes your involvement, empowering you as the primary trainer while providing support every step of the way.",
         duration: "60 minutes",
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
         imageUrl: "/attached_assets/image_1750049391709.png",
-        features: ["Individual, private sessions", "Customised training", "In-depth understanding of methods", "Modern techniques", "Lasting results", "Ongoing phone support"]
+        features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
         name: "In-Home Train and Play",
