@@ -8,7 +8,7 @@ import { SEO } from "@/components/SEO";
 import { Star, Clock, Users, CheckCircle, Calendar } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import type { Package } from "@shared/schema";
-import packagesHeroImage from "@assets/IMG_0084_1758974180047.jpeg";
+import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
 
 declare global {
   interface Window {
