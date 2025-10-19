@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import servicesHeroImage from "@assets/IMG_0237_1760870095911.jpeg";
+import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import { 
   GraduationCap, 
   Footprints, 
