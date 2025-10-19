@@ -217,7 +217,7 @@ export default function HomePage() {
             <div className="relative">
               <img 
                 src={testimonialsImage} 
-                alt="Professional dog trainer demonstrating advanced training techniques with French Bulldog using specialised equipment in secure training facility" 
+                alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               

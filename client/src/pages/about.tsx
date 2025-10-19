@@ -93,7 +93,7 @@ export default function AboutPage() {
             <div className="relative">
               <img 
                 src={aboutHeroImage} 
-                alt="Professional dog trainer demonstrating hands-on training techniques with dogs in Brisbane, showcasing personalised approach and expert guidance" 
+                alt="Tristan, NDTF certified dog trainer, working with dogs in North Brisbane using play-based training methods and genetic fulfillment approach" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

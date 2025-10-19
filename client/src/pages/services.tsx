@@ -116,7 +116,7 @@ export default function ServicesPage() {
             <div className="relative">
               <img 
                 src={servicesHeroImage} 
-                alt="Tristan, certified dog trainer, providing professional dog training services in Brisbane" 
+                alt="Tristan, NDTF certified professional dog trainer, providing play-based training services in North Brisbane with positive reinforcement methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

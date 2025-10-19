@@ -53,7 +53,7 @@ export default function ContactPage() {
             <div className="relative">
               <img 
                 src={contactHeroImage} 
-                alt="Happy confident dog after successful training showing the results of professional dog training" 
+                alt="Happy confident dog enjoying life after successful training with Canine Confidence in North Brisbane, demonstrating effective play-based training results" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

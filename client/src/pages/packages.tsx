@@ -346,7 +346,7 @@ export default function PackagesPage() {
             <div className="relative">
               <img 
                 src={packagesHeroImage} 
-                alt="Active dog training session showing enrichment and play-based learning" 
+                alt="Professional dog training program in North Brisbane featuring play-based enrichment activities and genetic fulfillment training methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
