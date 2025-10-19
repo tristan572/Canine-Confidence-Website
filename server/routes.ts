@@ -9,6 +9,11 @@ import {
   insertCartItemSchema,
   insertPackageSchema 
 } from "@shared/schema";
+import { 
+  sendBookingNotification, 
+  sendConsultationNotification, 
+  sendContactFormNotification 
+} from "./email";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error('Missing required Stripe secret: STRIPE_SECRET_KEY');
@@ -125,6 +130,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertBookingSchema.parse(req.body);
       const booking = await storage.createBooking(validatedData);
+      
+      // Send email notification
+      try {
+        await sendBookingNotification(booking);
+      } catch (emailError) {
+        console.error('Failed to send booking email notification:', emailError);
+        // Don't fail the request if email fails
+      }
+      
       res.status(201).json(booking);
     } catch (error) {
       if (error instanceof Error) {
@@ -149,6 +163,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertConsultationSchema.parse(req.body);
       const consultation = await storage.createConsultation(validatedData);
+      
+      // Send email notification
+      try {
+        await sendConsultationNotification(consultation);
+      } catch (emailError) {
+        console.error('Failed to send consultation email notification:', emailError);
+        // Don't fail the request if email fails
+      }
+      
       res.status(201).json(consultation);
     } catch (error) {
       if (error instanceof Error) {
@@ -164,6 +187,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);
+      
+      // Send email notification
+      try {
+        await sendContactFormNotification(submission);
+      } catch (emailError) {
+        console.error('Failed to send contact form email notification:', emailError);
+        // Don't fail the request if email fails
+      }
+      
       res.status(201).json(submission);
     } catch (error) {
       if (error instanceof Error) {
