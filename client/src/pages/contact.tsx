@@ -226,7 +226,7 @@ export default function ContactPage() {
                 data-testid="link-facebook-contact"
                 className="group"
               >
-                <div className="bg-white hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all transform hover:scale-105">
+                <div className="bg-white group-hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all duration-300 transform group-hover:scale-105">
                   <Facebook className="h-12 w-12 text-primary-blue mx-auto mb-3" />
                   <div className="text-charcoal font-semibold">Facebook</div>
                   <div className="text-sm text-medium-grey mt-1">@canineconfidence</div>
@@ -241,7 +241,7 @@ export default function ContactPage() {
                 data-testid="link-instagram-contact"
                 className="group"
               >
-                <div className="bg-white hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all transform hover:scale-105">
+                <div className="bg-white group-hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all duration-300 transform group-hover:scale-105">
                   <Instagram className="h-12 w-12 text-primary-blue mx-auto mb-3" />
                   <div className="text-charcoal font-semibold">Instagram</div>
                   <div className="text-sm text-medium-grey mt-1">@canineconfidence</div>
