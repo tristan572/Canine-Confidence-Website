@@ -22,8 +22,8 @@ import {
 } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
-import aboutHeroImage from "@assets/IMG_0076_1758798863394.jpeg";
-import aboutTrainingImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import aboutHeroImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import aboutTrainingImage from "@assets/IMG_0076_1758798863394.jpeg";
 
 export default function AboutPage() {
   return (
@@ -93,7 +93,7 @@ export default function AboutPage() {
             <div className="relative">
               <img 
                 src={aboutHeroImage} 
-                alt="Tristan, NDTF certified dog trainer, working with dogs in North Brisbane using play-based training methods and genetic fulfillment approach" 
+                alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
