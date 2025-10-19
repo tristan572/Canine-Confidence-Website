@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import { 
@@ -107,6 +107,8 @@ export default function ServicesPage() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-md">
+                    <DialogTitle>Free Consultation</DialogTitle>
+                    <DialogDescription>Schedule a complimentary consultation to discuss your dog's training needs and explore our services.</DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
@@ -218,6 +220,8 @@ export default function ServicesPage() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-md">
+                    <DialogTitle>Request Free Phone Call</DialogTitle>
+                    <DialogDescription>Get complimentary advice tailored to your situation with our 15-minute phone consultation.</DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>

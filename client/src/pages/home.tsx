@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
 import heroImage from "@assets/IMG_0177_1760877958185.jpeg";
@@ -122,6 +122,8 @@ export default function HomePage() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-md">
+                    <DialogTitle>Free Phone Consultation</DialogTitle>
+                    <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs and find the right solution for your family.</DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
@@ -347,6 +349,8 @@ export default function HomePage() {
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
+                  <DialogTitle>Free Phone Consultation</DialogTitle>
+                  <DialogDescription>Get personalised recommendations for your dog's training needs with a complimentary 15-minute phone consultation.</DialogDescription>
                   <ConsultationForm />
                 </DialogContent>
               </Dialog>
@@ -421,6 +425,8 @@ export default function HomePage() {
                       </Button>
                     </DialogTrigger>
                     <DialogContent className="max-w-md">
+                      <DialogTitle>Request Free Phone Call</DialogTitle>
+                      <DialogDescription>Schedule a 15-minute complimentary consultation to discuss your training needs and get expert advice.</DialogDescription>
                       <ConsultationForm />
                     </DialogContent>
                   </Dialog>
@@ -504,6 +510,8 @@ export default function HomePage() {
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
+                  <DialogTitle>Request Free Call</DialogTitle>
+                  <DialogDescription>Connect with us for a complimentary consultation to discuss how we can help you and your dog.</DialogDescription>
                   <ConsultationForm />
                 </DialogContent>
               </Dialog>

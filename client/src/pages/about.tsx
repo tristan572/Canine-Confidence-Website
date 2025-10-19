@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { 
   ShieldCheck, 
@@ -302,6 +302,8 @@ export default function AboutPage() {
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
+                <DialogTitle>Book Training Session</DialogTitle>
+                <DialogDescription>Select a training package and book your session through our secure booking system.</DialogDescription>
                 <BookingForm />
               </DialogContent>
             </Dialog>
@@ -314,6 +316,8 @@ export default function AboutPage() {
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
+                <DialogTitle>Free Consultation</DialogTitle>
+                <DialogDescription>Connect with us for a complimentary consultation to discuss your dog's training needs and how we can help.</DialogDescription>
                 <ConsultationForm />
               </DialogContent>
             </Dialog>

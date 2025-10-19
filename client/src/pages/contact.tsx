@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import BookingWidget from "@/components/ui/booking-widget";
 import { 
@@ -152,6 +152,8 @@ export default function ContactPage() {
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="max-w-md">
+                        <DialogTitle>Free Phone Consultation</DialogTitle>
+                        <DialogDescription>Schedule a complimentary 15-minute phone consultation for personalised advice and recommendations.</DialogDescription>
                         <ConsultationForm />
                       </DialogContent>
                     </Dialog>
