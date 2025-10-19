@@ -166,7 +166,7 @@ export default function AboutPage() {
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
-              <div className="absolute -bottom-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
+              <div className="absolute -top-6 -left-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
                 <div className="text-center">
                   <div className="text-lg font-bold mb-1">We're not just here to train dogs</div>
                   <div className="text-blue-100 text-sm">We create real relationships and real confidence that lasts.</div>
