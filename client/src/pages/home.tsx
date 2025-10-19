@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import heroImage from "@assets/IMG_0231_1760868802171.jpeg";
+import heroImage from "@assets/IMG_0177_1760877958185.jpeg";
 import testimonialsImage from "@assets/DSC_0171_1758792971820.jpg";
 import { 
   GraduationCap, 
