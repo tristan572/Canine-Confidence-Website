@@ -23,7 +23,7 @@ import {
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
 import aboutHeroImage from "@assets/IMG_0076_1758798863394.jpeg";
-import aboutTrainingImage from "@assets/generated_images/Successful_training_results_57dbd829.png";
+import aboutTrainingImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
 
 export default function AboutPage() {
   return (
