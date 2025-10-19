@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import servicesHeroImage from "@assets/generated_images/Outdoor_group_training_session_1370bfdd.png";
+import servicesHeroImage from "@assets/IMG_0237_1760870095911.jpeg";
 import { 
   GraduationCap, 
   Footprints, 
@@ -116,7 +116,7 @@ export default function ServicesPage() {
             <div className="relative">
               <img 
                 src={servicesHeroImage} 
-                alt="Professional dog training session showing positive reinforcement techniques" 
+                alt="Tristan, certified dog trainer, providing professional dog training services in Brisbane" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
