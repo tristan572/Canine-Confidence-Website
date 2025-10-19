@@ -11,7 +11,9 @@ import {
   MessageCircle,
   HeadphonesIcon,
   Calendar,
-  Video
+  Video,
+  Facebook,
+  Instagram
 } from "lucide-react";
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -200,6 +202,58 @@ export default function ContactPage() {
             <p className="text-medium-grey">
               Not sure if you're in our service area? <a href="tel:0409521358" className="text-primary-blue hover:underline font-medium">Give us a call</a> and we'll be happy to check!
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Section */}
+      <section className="py-20 bg-gradient-to-br from-primary-blue to-blue-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">Connect With Us</h2>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                Follow our journey, see training success stories, and get daily tips on building confidence with your dog!
+              </p>
+            </div>
+            
+            <div className="flex justify-center gap-6">
+              <a 
+                href="https://facebook.canineconfidence.com.au" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
+                data-testid="link-facebook-contact"
+                className="group"
+              >
+                <div className="bg-white hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all transform hover:scale-105">
+                  <Facebook className="h-12 w-12 text-primary-blue mx-auto mb-3" />
+                  <div className="text-charcoal font-semibold">Facebook</div>
+                  <div className="text-sm text-medium-grey mt-1">@canineconfidence</div>
+                </div>
+              </a>
+              
+              <a 
+                href="https://instagram.canineconfidence.com.au" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
+                data-testid="link-instagram-contact"
+                className="group"
+              >
+                <div className="bg-white hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all transform hover:scale-105">
+                  <Instagram className="h-12 w-12 text-primary-blue mx-auto mb-3" />
+                  <div className="text-charcoal font-semibold">Instagram</div>
+                  <div className="text-sm text-medium-grey mt-1">@canineconfidence</div>
+                </div>
+              </a>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+              <p className="text-white text-lg">
+                <strong>Join our community!</strong> See before-and-after transformations, training videos, and expert tips to help your dog thrive.
+              </p>
+            </div>
           </div>
         </div>
       </section>
