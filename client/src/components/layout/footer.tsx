@@ -29,15 +29,28 @@ export default function Footer() {
               Building confidence through play, trust, and clear communication while creating lasting bonds between dogs and their families.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary-blue">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary-blue">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary-blue">
-                <Youtube className="h-5 w-5" />
-              </Button>
+              <a 
+                href="https://facebook.canineconfidence.com.au" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit our Facebook page"
+                data-testid="link-facebook"
+              >
+                <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary-blue">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+              </a>
+              <a 
+                href="https://instagram.canineconfidence.com.au" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
+                data-testid="link-instagram"
+              >
+                <Button variant="ghost" size="icon" className="text-gray-300 hover:text-primary-blue">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
 
