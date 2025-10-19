@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import heroImage from "@assets/DSC_0096_1758792971820.jpg";
+import heroImage from "@assets/IMG_0231_1760868086349.jpeg";
 import testimonialsImage from "@assets/DSC_0171_1758792971820.jpg";
 import { 
   GraduationCap, 
@@ -146,7 +146,7 @@ export default function HomePage() {
             <div className="relative">
               <img 
                 src={heroImage} 
-                alt="Professional dog trainer working hands-on with a Staffordshire Terrier in natural outdoor setting, demonstrating personalised training approach" 
+                alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
