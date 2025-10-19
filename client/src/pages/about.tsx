@@ -162,7 +162,7 @@ export default function AboutPage() {
             <div className="relative">
               <img 
                 src={aboutTrainingImage} 
-                alt="Brisbane dog training environment showing professional leash training techniques" 
+                alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
               
