@@ -113,6 +113,18 @@ Preferred communication style: Simple, everyday language.
 - **SimplyBook.me**: Third-party booking widget integration
 - Custom widget configuration for branded experience
 
+### Email Notifications
+- **Resend**: Transactional email service for form notifications
+- **Service**: Automatic email alerts to info@canineconfidence.com.au
+- **Notifications sent for**:
+  - Booking requests (all customer and dog details)
+  - Free consultation requests (contact info and concerns)
+  - Contact form submissions (general inquiries)
+- **Security**: All user input is HTML-escaped to prevent injection attacks
+- **Configuration**: RESEND_API_KEY stored as environment secret
+- **Important**: The "from" domain (noreply@canineconfidence.com.au) MUST be verified in Resend before production deployment. Without domain verification, emails will fail to send.
+- **Implementation**: Email service in `server/email.ts`, integrated into API routes with graceful error handling
+
 ### UI and Styling
 - **Tailwind CSS**: Utility-first CSS framework
 - **Radix UI**: Accessible component primitives
