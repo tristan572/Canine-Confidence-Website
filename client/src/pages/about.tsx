@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -26,6 +27,10 @@ import aboutHeroImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_
 import aboutTrainingImage from "@assets/IMG_0076_1758798863394.jpeg";
 
 export default function AboutPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <SEO 
