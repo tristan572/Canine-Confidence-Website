@@ -123,14 +123,10 @@ export default function ProductsPage() {
 
           {/* Call to Action */}
           <Card className="bg-primary-blue text-white p-8 max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-semibold mb-4">Get Product Recommendations Now</h3>
-            <p className="text-blue-100 mb-6">
-              While our online store is being prepared, get personalised product recommendations 
-              during your training session or free consultation.
+            <h3 className="text-2xl font-semibold mb-4">Get Product Recommendations</h3>
+            <p className="text-blue-100">
+              While our online store is being prepared, get personalised product recommendations during your training session.
             </p>
-            <Button className="bg-white text-primary-blue hover:bg-gray-50">
-              Book Free Consultation
-            </Button>
           </Card>
         </div>
       </section>
