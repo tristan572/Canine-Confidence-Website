@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,15 +6,49 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Search } from "lucide-react";
 import BlogCard from "@/components/ui/blog-card";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 import type { BlogPost } from "@shared/schema";
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState("");
+  const [email, setEmail] = useState("");
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog"],
   });
+
+  const subscribeMutation = useMutation({
+    mutationFn: async (email: string) => {
+      const response = await apiRequest("POST", "/api/subscribers", { email });
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Successfully subscribed!",
+        description: "You'll receive our weekly training tips and updates.",
+      });
+      setEmail("");
+      queryClient.invalidateQueries({ queryKey: ["/api/subscribers"] });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Subscription failed",
+        description: error.message || "This email may already be subscribed.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      subscribeMutation.mutate(email);
+    }
+  };
 
   // Get all unique tags from blog posts
   const allTags = blogPosts?.reduce((tags: string[], post) => {
@@ -170,16 +204,25 @@ export default function BlogPage() {
           <p className="text-xl text-blue-100 mb-8">
             Subscribe to our newsletter for weekly training tips, success stories, and expert advice delivered straight to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Input
               type="email"
               placeholder="Enter your email"
               className="bg-white text-charcoal"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              data-testid="input-newsletter-email"
             />
-            <Button className="bg-white text-primary-blue hover:bg-gray-50 whitespace-nowrap">
-              Subscribe
+            <Button 
+              type="submit"
+              className="bg-white text-primary-blue hover:bg-gray-50 whitespace-nowrap"
+              disabled={subscribeMutation.isPending}
+              data-testid="button-newsletter-subscribe"
+            >
+              {subscribeMutation.isPending ? "Subscribing..." : "Subscribe"}
             </Button>
-          </div>
+          </form>
           <p className="text-blue-100 text-sm mt-4">
             No spam, unsubscribe anytime. We respect your privacy.
           </p>
