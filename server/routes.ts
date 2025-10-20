@@ -7,7 +7,8 @@ import {
   insertConsultationSchema, 
   insertContactSubmissionSchema,
   insertCartItemSchema,
-  insertPackageSchema 
+  insertPackageSchema,
+  insertSubscriberSchema
 } from "@shared/schema";
 import { 
   sendBookingNotification, 
@@ -203,6 +204,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({ message: "Failed to submit contact form" });
       }
+    }
+  });
+
+  // Newsletter subscribers routes
+  app.post("/api/subscribers", async (req, res) => {
+    try {
+      const validatedData = insertSubscriberSchema.parse(req.body);
+      const subscriber = await storage.createSubscriber(validatedData);
+      res.status(201).json(subscriber);
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(400).json({ message: error.message });
+      } else {
+        res.status(500).json({ message: "Failed to subscribe to newsletter" });
+      }
+    }
+  });
+
+  app.get("/api/subscribers", async (req, res) => {
+    try {
+      const subscribers = await storage.getSubscribers();
+      res.json(subscribers);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch subscribers" });
     }
   });
 
