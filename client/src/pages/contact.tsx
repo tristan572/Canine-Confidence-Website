@@ -153,7 +153,7 @@ export default function ContactPage() {
                           Request Free Call
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-md">
+                      <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                         <DialogTitle>Free Phone Consultation</DialogTitle>
                         <DialogDescription>Schedule a complimentary 15-minute phone consultation for personalised advice and recommendations.</DialogDescription>
                         <ConsultationForm />

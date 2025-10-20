@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Dog, Phone } from "lucide-react";
 import BookingForm from "@/components/forms/booking-form";
 import ConsultationForm from "@/components/forms/consultation-form";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import ShoppingCart from "@/components/ui/shopping-cart";
 import { getCartSessionId } from "@/lib/cart";
 import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
@@ -87,7 +87,9 @@ export default function Navbar() {
                           Free Consultation
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-md">
+                      <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
+                        <DialogTitle>Free Phone Consultation</DialogTitle>
+                        <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs.</DialogDescription>
                         <ConsultationForm />
                       </DialogContent>
                     </Dialog>

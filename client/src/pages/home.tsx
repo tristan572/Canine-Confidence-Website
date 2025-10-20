@@ -121,7 +121,7 @@ export default function HomePage() {
                       Free Phone Consult
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-md">
+                  <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                     <DialogTitle>Free Phone Consultation</DialogTitle>
                     <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs and find the right solution for your family.</DialogDescription>
                     <ConsultationForm />

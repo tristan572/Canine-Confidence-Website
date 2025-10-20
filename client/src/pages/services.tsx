@@ -219,7 +219,7 @@ export default function ServicesPage() {
                       Request Call
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-md">
+                  <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                     <DialogTitle>Request Free Phone Call</DialogTitle>
                     <DialogDescription>Get complimentary advice tailored to your situation with our 15-minute phone consultation.</DialogDescription>
                     <ConsultationForm />

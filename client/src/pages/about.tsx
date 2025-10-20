@@ -315,7 +315,7 @@ export default function AboutPage() {
                   Free Consultation
                 </Button>
               </DialogTrigger>
-              <DialogContent className="max-w-2xl">
+              <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                 <DialogTitle>Free Consultation</DialogTitle>
                 <DialogDescription>Connect with us for a complimentary consultation to discuss your dog's training needs and how we can help.</DialogDescription>
                 <ConsultationForm />
