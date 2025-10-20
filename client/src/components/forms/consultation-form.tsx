@@ -55,10 +55,10 @@ export default function ConsultationForm() {
 
   return (
     <div className="max-w-md mx-auto">
-      <DialogHeader className="mb-6">
+      <DialogHeader className="mb-4">
         <DialogTitle className="text-2xl font-bold text-charcoal">Request Free Consultation</DialogTitle>
         <DialogDescription className="text-medium-grey">
-          Unsure about the right service for your needs? Schedule a complimentary, no-obligation call with our knowledgeable team. During your Free Phone Consult, we'll help you clarify your options, answer your questions, and provide advice tailored to your situation. Whether you need general guidance or specific recommendations, we're here to support you—at absolutely no cost, so you can make confident, informed decisions.
+          Get personalized advice with a complimentary 15-minute phone call. We'll answer your questions and help you find the right solution for your dog.
         </DialogDescription>
       </DialogHeader>
 
