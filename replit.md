@@ -43,17 +43,18 @@ Preferred communication style: Simple, everyday language.
 - **Contact Submissions**: General contact form submissions
 - **Cart Items**: E-commerce shopping cart functionality
 - **Testimonials**: Customer reviews and feedback
+- **Subscribers**: Newsletter email subscribers with subscription dates
 
 ### Frontend Pages
 - **Home**: Landing page with service highlights, testimonials (prominently displayed after hero), and booking widget
 - **Services**: Detailed service listings with booking integration
 - **Packages**: Training package offerings with online booking
 - **Products**: E-commerce catalog with cart functionality
-- **Blog**: Content marketing with search and filtering
+- **Blog**: Content marketing with search, filtering, and newsletter subscription form
 - **About**: Company information and team details
 - **Contact**: Contact forms, business information, interactive service area map, and video consultation details
 - **Checkout**: Stripe-powered payment processing
-- **Admin**: Content management and booking widget setup
+- **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export
 
 ### API Endpoints
 - Services CRUD operations
@@ -64,6 +65,7 @@ Preferred communication style: Simple, everyday language.
 - Shopping cart operations
 - Stripe payment processing
 - Contact form submissions
+- Newsletter subscription management
 
 ## Data Flow
 
@@ -83,6 +85,7 @@ Preferred communication style: Simple, everyday language.
 1. Blog posts stored in database with rich metadata
 2. Dynamic content rendering with search and filtering
 3. SEO-optimized content structure
+4. Newsletter subscription system with email collection and CSV export for integration with email marketing platforms
 
 ## Business Information
 
