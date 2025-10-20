@@ -221,7 +221,7 @@ export default function ContactPage() {
             
             <div className="flex justify-center gap-6">
               <a 
-                href="https://facebook.canineconfidence.com.au" 
+                href="https://www.facebook.com/p/Canine-Confidence-61571910674491/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Visit our Facebook page"
@@ -236,7 +236,7 @@ export default function ContactPage() {
               </a>
               
               <a 
-                href="https://instagram.canineconfidence.com.au" 
+                href="https://www.instagram.com/canine_confidence" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Visit our Instagram page"
@@ -246,7 +246,7 @@ export default function ContactPage() {
                 <div className="bg-white group-hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all duration-300 transform group-hover:scale-105">
                   <Instagram className="h-12 w-12 text-primary-blue mx-auto mb-3" />
                   <div className="text-charcoal font-semibold">Instagram</div>
-                  <div className="text-sm text-medium-grey mt-1">@canineconfidence</div>
+                  <div className="text-sm text-medium-grey mt-1">@canine_confidence</div>
                 </div>
               </a>
             </div>

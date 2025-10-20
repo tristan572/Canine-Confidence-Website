@@ -32,7 +32,7 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-3">
                 <a 
-                  href="https://facebook.canineconfidence.com.au" 
+                  href="https://www.facebook.com/p/Canine-Confidence-61571910674491/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="Visit our Facebook page"
@@ -42,7 +42,7 @@ export default function Footer() {
                   <Facebook className="h-6 w-6 text-white" />
                 </a>
                 <a 
-                  href="https://instagram.canineconfidence.com.au" 
+                  href="https://www.instagram.com/canine_confidence" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="Visit our Instagram page"
