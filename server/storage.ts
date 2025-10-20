@@ -1,5 +1,5 @@
 import { 
-  services, products, packages, blogPosts, bookings, consultations, contactSubmissions, cartItems, testimonials,
+  services, products, packages, blogPosts, bookings, consultations, contactSubmissions, cartItems, testimonials, subscribers,
   type Service, type InsertService,
   type Product, type InsertProduct,
   type Package, type InsertPackage,
@@ -8,7 +8,8 @@ import {
   type Consultation, type InsertConsultation,
   type ContactSubmission, type InsertContactSubmission,
   type CartItem, type InsertCartItem,
-  type Testimonial, type InsertTestimonial
+  type Testimonial, type InsertTestimonial,
+  type Subscriber, type InsertSubscriber
 } from "@shared/schema";
 
 export interface IStorage {
@@ -58,6 +59,10 @@ export interface IStorage {
   getTestimonials(): Promise<Testimonial[]>;
   getTestimonial(id: number): Promise<Testimonial | undefined>;
   createTestimonial(testimonial: InsertTestimonial): Promise<Testimonial>;
+
+  // Subscribers
+  getSubscribers(): Promise<Subscriber[]>;
+  createSubscriber(subscriber: InsertSubscriber): Promise<Subscriber>;
 }
 
 export class MemStorage implements IStorage {
@@ -70,6 +75,7 @@ export class MemStorage implements IStorage {
   private contactSubmissions: Map<number, ContactSubmission>;
   private cartItems: Map<number, CartItem>;
   private testimonials: Map<number, Testimonial>;
+  private subscribers: Map<number, Subscriber>;
   private currentServiceId: number;
   private currentProductId: number;
   private currentPackageId: number;
@@ -79,6 +85,7 @@ export class MemStorage implements IStorage {
   private currentContactSubmissionId: number;
   private currentCartItemId: number;
   private currentTestimonialId: number;
+  private currentSubscriberId: number;
 
   constructor() {
     this.services = new Map();
@@ -90,6 +97,7 @@ export class MemStorage implements IStorage {
     this.contactSubmissions = new Map();
     this.cartItems = new Map();
     this.testimonials = new Map();
+    this.subscribers = new Map();
     this.currentServiceId = 1;
     this.currentProductId = 1;
     this.currentPackageId = 1;
@@ -99,6 +107,7 @@ export class MemStorage implements IStorage {
     this.currentContactSubmissionId = 1;
     this.currentCartItemId = 1;
     this.currentTestimonialId = 1;
+    this.currentSubscriberId = 1;
 
     this.seedData();
   }
@@ -1182,6 +1191,22 @@ The investment in building these foundations properly pays dividends throughout 
     };
     this.testimonials.set(id, newTestimonial);
     return newTestimonial;
+  }
+
+  async getSubscribers(): Promise<Subscriber[]> {
+    return Array.from(this.subscribers.values()).filter(s => s.isActive);
+  }
+
+  async createSubscriber(subscriber: InsertSubscriber): Promise<Subscriber> {
+    const id = this.currentSubscriberId++;
+    const newSubscriber: Subscriber = {
+      ...subscriber,
+      id,
+      subscribedAt: new Date(),
+      isActive: true
+    };
+    this.subscribers.set(id, newSubscriber);
+    return newSubscriber;
   }
 }
 
