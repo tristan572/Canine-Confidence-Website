@@ -212,7 +212,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Connect With Us</h2>
-              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              <p className="text-xl text-white font-medium max-w-2xl mx-auto">
                 Follow our journey, see training success stories, and get daily tips on building confidence with your dog!
               </p>
             </div>
