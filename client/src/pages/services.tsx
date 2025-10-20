@@ -99,20 +99,6 @@ export default function ServicesPage() {
                   Every dog is unique, every family is different. That's why we don't believe in cookie-cutter training methods. Our approach centers on play, connection, and understanding your dog's individual needs to build genuine partnerships that create confidence and joy for both you and your dog.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
-                      Free Consultation
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md">
-                    <DialogTitle>Free Consultation</DialogTitle>
-                    <DialogDescription>Schedule a complimentary consultation to discuss your dog's training needs and explore our services.</DialogDescription>
-                    <ConsultationForm />
-                  </DialogContent>
-                </Dialog>
-              </div>
             </div>
             
             <div className="relative">
