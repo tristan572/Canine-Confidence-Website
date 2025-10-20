@@ -325,9 +325,11 @@ export default function ContactPage() {
               Let's chat about your dog's unique needs and start building the partnership you've been looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: 0409521358
+              <Button asChild className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">
+                <a href="tel:0409521358">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now: 0409521358
+                </a>
               </Button>
               <Button 
                 onClick={() => setShowBookingWidget(true)}
