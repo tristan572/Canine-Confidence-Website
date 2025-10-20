@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { insertConsultationSchema } from "@shared/schema";
 
@@ -55,13 +54,6 @@ export default function ConsultationForm() {
 
   return (
     <div className="max-w-md mx-auto">
-      <DialogHeader className="mb-4">
-        <DialogTitle className="text-2xl font-bold text-charcoal">Request Free Consultation</DialogTitle>
-        <DialogDescription className="text-medium-grey">
-          Get personalized advice with a complimentary 15-minute phone call. We'll answer your questions and help you find the right solution for your dog.
-        </DialogDescription>
-      </DialogHeader>
-
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
