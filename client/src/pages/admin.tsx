@@ -1,15 +1,21 @@
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { ExternalLink, Code, FileText, Settings } from "lucide-react";
+import { ExternalLink, Code, FileText, Settings, Users, Download } from "lucide-react";
+import type { Subscriber } from "@shared/schema";
 
 export default function AdminPage() {
   const [bookingWidgetCode, setBookingWidgetCode] = useState("");
   const { toast } = useToast();
+
+  const { data: subscribers, isLoading: subscribersLoading } = useQuery<Subscriber[]>({
+    queryKey: ["/api/subscribers"],
+  });
 
   const handleSaveBookingWidget = () => {
     // This would save the booking widget code to your site
@@ -17,6 +23,42 @@ export default function AdminPage() {
     toast({
       title: "Instructions Ready",
       description: "Booking widget integration steps are ready below.",
+    });
+  };
+
+  const handleExportSubscribers = () => {
+    if (!subscribers || subscribers.length === 0) {
+      toast({
+        title: "No subscribers",
+        description: "There are no subscribers to export yet.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Create CSV content
+    const csvContent = [
+      ["Email", "Subscribed Date"],
+      ...subscribers.map(sub => [
+        sub.email,
+        sub.subscribedAt ? new Date(sub.subscribedAt).toLocaleDateString() : "N/A"
+      ])
+    ].map(row => row.join(",")).join("\n");
+
+    // Create and download file
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `newsletter-subscribers-${new Date().toISOString().split('T')[0]}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+
+    toast({
+      title: "Export successful",
+      description: `Exported ${subscribers.length} subscriber(s) to CSV.`,
     });
   };
 
@@ -31,8 +73,9 @@ export default function AdminPage() {
         </div>
 
         <Tabs defaultValue="booking" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="booking">Booking Integration</TabsTrigger>
+            <TabsTrigger value="subscribers">Newsletter Subscribers</TabsTrigger>
             <TabsTrigger value="content">Content Updates</TabsTrigger>
           </TabsList>
 
@@ -80,6 +123,85 @@ export default function AdminPage() {
                     Your booking buttons will open the SimplyBook.me interface directly on your site, 
                     keeping customers engaged without redirecting them away.
                   </p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="subscribers" className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="h-5 w-5" />
+                  Newsletter Subscribers
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold">
+                      Total Subscribers: {subscribersLoading ? "..." : subscribers?.length || 0}
+                    </h3>
+                    <p className="text-sm text-medium-grey">
+                      Manage your newsletter subscriber list and export for use with email marketing platforms.
+                    </p>
+                  </div>
+                  <Button 
+                    onClick={handleExportSubscribers}
+                    disabled={subscribersLoading || !subscribers || subscribers.length === 0}
+                    data-testid="button-export-subscribers"
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Export CSV
+                  </Button>
+                </div>
+
+                {subscribersLoading ? (
+                  <div className="text-center py-8">
+                    <p className="text-medium-grey">Loading subscribers...</p>
+                  </div>
+                ) : subscribers && subscribers.length > 0 ? (
+                  <div className="border rounded-lg overflow-hidden">
+                    <div className="max-h-96 overflow-y-auto">
+                      <table className="w-full">
+                        <thead className="bg-light-grey sticky top-0">
+                          <tr>
+                            <th className="text-left p-3 font-semibold">Email</th>
+                            <th className="text-left p-3 font-semibold">Subscribed Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {subscribers.map((subscriber) => (
+                            <tr key={subscriber.id} className="border-t hover:bg-light-grey">
+                              <td className="p-3">{subscriber.email}</td>
+                              <td className="p-3">
+                                {subscriber.subscribedAt 
+                                  ? new Date(subscriber.subscribedAt).toLocaleDateString()
+                                  : "N/A"}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center py-12 bg-light-grey rounded-lg">
+                    <Users className="h-12 w-12 text-medium-grey mx-auto mb-4" />
+                    <p className="text-medium-grey">No subscribers yet.</p>
+                    <p className="text-sm text-medium-grey mt-2">
+                      Subscribers from your blog page will appear here.
+                    </p>
+                  </div>
+                )}
+
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-charcoal mb-2">How to use your subscriber list</h4>
+                  <ol className="text-sm text-medium-grey space-y-2 list-decimal list-inside">
+                    <li>Click "Export CSV" to download your subscriber list</li>
+                    <li>Import the CSV into your preferred email marketing platform (Mailchimp, ConvertKit, MailerLite, etc.)</li>
+                    <li>Create and send your newsletter campaigns from that platform</li>
+                  </ol>
                 </div>
               </CardContent>
             </Card>
