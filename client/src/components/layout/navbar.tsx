@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Dog, Phone } from "lucide-react";
-import BookingForm from "@/components/forms/booking-form";
+import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import ShoppingCart from "@/components/ui/shopping-cart";
@@ -13,6 +13,7 @@ import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
 export default function Navbar() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showBookingWidget, setShowBookingWidget] = useState(false);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -94,16 +95,15 @@ export default function Navbar() {
                       </DialogContent>
                     </Dialog>
 
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="w-full btn-primary">
-                          Book Now
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                        <BookingForm />
-                      </DialogContent>
-                    </Dialog>
+                    <Button 
+                      className="w-full btn-primary"
+                      onClick={() => {
+                        setShowBookingWidget(true);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      Book Now
+                    </Button>
                   </div>
                 </div>
               </SheetContent>
@@ -155,21 +155,23 @@ export default function Navbar() {
                 </DialogContent>
               </Dialog>
 
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button size="sm" className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm text-xs px-3">
-                    Book Now
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                  <BookingForm />
-                </DialogContent>
-              </Dialog>
+              <Button 
+                size="sm" 
+                className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm text-xs px-3"
+                onClick={() => setShowBookingWidget(true)}
+              >
+                Book Now
+              </Button>
             </div>
           </div>
 
         </div>
       </div>
+      
+      <BookingWidget 
+        isOpen={showBookingWidget} 
+        onClose={() => setShowBookingWidget(false)} 
+      />
     </nav>
   );
 }
