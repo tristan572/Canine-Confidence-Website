@@ -21,12 +21,15 @@ import {
   TrendingUp,
   Calendar
 } from "lucide-react";
-import BookingForm from "@/components/forms/booking-form";
+import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
+import { useState } from "react";
 import aboutHeroImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
 import aboutTrainingImage from "@assets/IMG_0076_1758798863394.jpeg";
 
 export default function AboutPage() {
+  const [showBookingWidget, setShowBookingWidget] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -294,19 +297,14 @@ export default function AboutPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-50 px-8 py-4 text-lg">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book Training Session
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl">
-                <DialogTitle>Book Training Session</DialogTitle>
-                <DialogDescription>Select a training package and book your session through our secure booking system.</DialogDescription>
-                <BookingForm />
-              </DialogContent>
-            </Dialog>
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-700 hover:bg-gray-50 px-8 py-4 text-lg"
+              onClick={() => setShowBookingWidget(true)}
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+              Book Training Session
+            </Button>
 
             <Dialog>
               <DialogTrigger asChild>
@@ -350,6 +348,11 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
+      <BookingWidget 
+        isOpen={showBookingWidget} 
+        onClose={() => setShowBookingWidget(false)} 
+      />
     </div>
   );
 }
