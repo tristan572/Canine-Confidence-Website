@@ -137,7 +137,7 @@ export class MemStorage implements IStorage {
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
-        name: "In-Home Train and Play",
+        name: "In-home Day Train",
         description: "**Training Done For You**\n\nThis is our premium convenience service that delivers effective, focused training right to your doorstep. We take the stress and time commitment out of dog training by working with your dog one-on-one in the comfortable, familiar environment of your home. No need for you to be present!\n\nOur skilled trainers focus on your specific goals, whether it's general obedience (manners, recall) or targeted behavioural needs (jumping, counter-surfing). Every session is tailored to your dog's unique personality using our fun, play-based approach.\n\nWith session-based pricing and flexible scheduling, this service is designed to fit your busy lifestyle, ensuring your dog quickly becomes a well-mannered, happy companion at home. For maximum and fastest results, we recommend booking multiple sessions per week.",
         duration: "30 minutes",
         location: "In-home training",

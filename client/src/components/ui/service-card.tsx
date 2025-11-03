@@ -20,7 +20,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
       "One-on-One Private Coaching": 7,
       "Virtual Coaching and Support": 10,
       "Walk and Train": 6,
-      "In-Home Train and Play": 8,
+      "In-home Day Train": 8,
       "Adventure Walk and Training": 5,
       "Local Walk": 4,
     };
