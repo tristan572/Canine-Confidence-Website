@@ -179,6 +179,35 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
 
 const PackageCard = ({ pkg }: { pkg: Package }) => {
   const [showBookingWidget, setShowBookingWidget] = useState(false);
+  const [showBookingDialog, setShowBookingDialog] = useState(false);
+
+  const getPackageBookingUrl = () => {
+    const packageMap: Record<string, number> = {
+      "The Confident Start Program": 6,
+    };
+    
+    const packageId = packageMap[pkg.name];
+    return packageId 
+      ? `https://canineconfidence.simplybook.net/v2/#packages/${packageId}`
+      : null;
+  };
+
+  const handleBookClick = () => {
+    const directUrl = getPackageBookingUrl();
+    if (directUrl) {
+      setShowBookingDialog(true);
+    } else {
+      setShowBookingWidget(true);
+    }
+  };
+
+  const handleContinueToBooking = () => {
+    const directUrl = getPackageBookingUrl();
+    if (directUrl) {
+      window.open(directUrl, '_blank');
+    }
+    setShowBookingDialog(false);
+  };
 
   return (
     <>
@@ -244,7 +273,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
           </div>
 
           <Button 
-            onClick={() => setShowBookingWidget(true)}
+            onClick={handleBookClick}
             className="w-full btn-primary text-lg py-3"
           >
             <Calendar className="w-5 h-5 mr-2" />
@@ -252,6 +281,40 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
           </Button>
         </CardContent>
       </Card>
+
+      {/* Direct Booking Dialog */}
+      <Dialog open={showBookingDialog} onOpenChange={setShowBookingDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleContinueToBooking}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowBookingDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <PackageBookingWidget 
         isOpen={showBookingWidget} 
