@@ -21,6 +21,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
       "Virtual Coaching and Support": 10,
       "Walk and Train": 6,
       "In-Home Train and Play": 8,
+      "Adventure Walk and Training": 5,
     };
     
     const serviceId = serviceMap[service.name];
