@@ -189,6 +189,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
       "From Chaos to Calm Program": 9,
       "The Focused Progress Plan": 2,
       "5 x In-Home Train and Plays": 1,
+      "The Real World Reliability Package": 3,
     };
     
     const packageId = packageMap[pkg.name];
