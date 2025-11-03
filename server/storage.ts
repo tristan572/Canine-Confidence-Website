@@ -138,7 +138,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "In-Home Train and Play",
-        description: "In-home Train and Play delivers effective dog training right to your doorstep, providing a comfortable and stress-free environment for your pet. Our skilled trainers focus on general obedience or specific behavioural needs using a program tailored to your dog's unique personality and situation. With flexible scheduling and session-based pricing, we ensure convenient, personalised training that fits your lifestyle—helping your dog become a well-mannered, happy companion at home. This service does not require owners to be home and it is recommended to book multiple sessions a week for maximum effectiveness.",
+        description: "**Training Done For You**\n\nThis is our premium convenience service that delivers effective, focused training right to your doorstep. We take the stress and time commitment out of dog training by working with your dog one-on-one in the comfortable, familiar environment of your home. No need for you to be present!\n\nOur skilled trainers focus on your specific goals, whether it's general obedience (manners, recall) or targeted behavioural needs (jumping, counter-surfing). Every session is tailored to your dog's unique personality using our fun, play-based approach.\n\nWith session-based pricing and flexible scheduling, this service is designed to fit your busy lifestyle, ensuring your dog quickly becomes a well-mannered, happy companion at home. For maximum and fastest results, we recommend booking multiple sessions per week.",
         duration: "30 minutes",
         location: "In-home training",
         price: "$60",
@@ -404,7 +404,7 @@ export class MemStorage implements IStorage {
 
       {
         name: "5 x In-Home Train and Plays",
-        description: "Five focused obedience sessions completed by our trainer in your home environment, teaching essential commands through play-based learning. Each session is tailored to your dog's unique needs and can take place while you are at work, ensuring efficient, stress-free training in a familiar environment for optimal results.",
+        description: "**Training Done For You**\n\nThis is our premium convenience service that delivers effective, focused training right to your doorstep. We take the stress and time commitment out of dog training by working with your dog one-on-one in the comfortable, familiar environment of your home. No need for you to be present!\n\nOur skilled trainers focus on your specific goals, whether it's general obedience (manners, recall) or targeted behavioural needs (jumping, counter-surfing). Every session is tailored to your dog's unique personality using our fun, play-based approach.\n\nWith session-based pricing and flexible scheduling, this service is designed to fit your busy lifestyle, ensuring your dog quickly becomes a well-mannered, happy companion at home. For maximum and fastest results, we recommend booking multiple sessions per week.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
