@@ -281,8 +281,8 @@ export class MemStorage implements IStorage {
         isPopular: true
       },
       {
-        name: "Loose Leash Walking Program",
-        description: "A program designed to have your dog walking nicely by your side, without all the stressful pulling and resisting. This program is lead by the trainer who lays the foundations and then transfers the skills to you. This delivers an outcome that's effective, efficient and affordable. Please book the From Chaos to Calm program if your dog is barking and lunging at dogs or people.",
+        name: "The Connected Companion Walk",
+        description: "Stop the struggle and start enjoying your walks.\n\nThis intensive program is designed to eliminate stressful pulling and resisting, giving you back your shoulders and your peace of mind. We deliver effective, efficient, and affordable results by building a lasting foundation of focus, connection, and clear communication in just one week.\n\n**How Our Unique Program Works:**\n\n**Trainer-Led Foundations (4 Sessions):** Your dog works directly with our expert trainer over four focused sessions to build the correct habits, neutralise negative associations with the collar, and establish the core communication system.\n\n**Owner Coaching & Skill Transfer (1 Session):** We dedicate the final session entirely to coaching you. You'll master the advanced lead handling skills and the communication protocols, ensuring the brilliant results transfer straight into your hands.\n\n**Change the Collar Connection:** We focus on the dog's emotional response to the collar and lead, transforming resistance and struggle into positive and co-operative engagement.\n\n**Clarity-First Communication:** We build a crystal-clear communication system that teaches your dog exactly what you want on a walk, eliminating confusion and ensuring they choose to walk nicely by your side.\n\n**Important Note:** Please book the From Chaos To Calm Program if your dog is barking and lunging at dogs or people.",
         price: "$340",
         originalPrice: "$360",
         duration: "1 week",
@@ -290,12 +290,12 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839.jpg",
         features: [
-          "Engagement and basic obedience",
-          "Foundations and communication",
-          "Confidence building and genetic fulfilment",
-          "Handling skills",
-          "Four Building Blocks of a Balanced Dog guide",
-          "Results guaranteed"
+          "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
+          "Foundations of High-Level Engagement and Obedience on the move",
+          "Master Advanced Lead Handling Skills for ultimate control and comfort",
+          "Tailored Protocol to shift your dog's feelings about the collar and lead",
+          "Results Guaranteed or we continue until the core goal is met",
+          "BONUS: The essential guide: 'The Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: true
       },
