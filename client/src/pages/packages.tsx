@@ -185,6 +185,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
   const getPackageBookingUrl = () => {
     const packageMap: Record<string, number> = {
       "The Confident Start Program": 6,
+      "The Connected Companion Walk": 13,
     };
     
     const packageId = packageMap[pkg.name];
