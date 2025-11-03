@@ -117,7 +117,7 @@ export class MemStorage implements IStorage {
     const serviceData: InsertService[] = [
       {
         name: "Initial Canine Success Assessment",
-        description: "Stop Guessing, Start Training\n\nFeeling confused about where to start? Have you tried standard training with limited success? This session is the crucial first step to creating lasting, positive change by diagnosing the root cause of your dog's behaviour, not just treating the symptoms.\n\nPerfect for: All new clients, whether you're starting an obedience program, working through a specific challenge (like reactivity, digging, or anxiety), or just looking to build a deeper bond with your dog.",
+        description: "**Stop Guessing, Start Training**\n\nFeeling confused about where to start? Have you tried standard training with limited success? This session is the crucial first step to creating lasting, positive change by diagnosing the root cause of your dog's behaviour, not just treating the symptoms.\n\n**Perfect for:** All new clients, whether you're starting an obedience program, working through a specific challenge (like reactivity, digging, or anxiety), or just looking to build a deeper bond with your dog.",
         duration: "60 minutes",
         location: "In-home assessment",
         price: "$90",
