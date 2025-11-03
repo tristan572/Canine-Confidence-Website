@@ -164,7 +164,7 @@ export class MemStorage implements IStorage {
         price: "$80",
         category: "walking",
         imageUrl: "/attached_assets/image_1750049520029.png",
-        features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Affection and care", "Tools and treats included"]
+        features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
         name: "Local Walk",
