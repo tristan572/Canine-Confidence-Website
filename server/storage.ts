@@ -400,7 +400,7 @@ export class MemStorage implements IStorage {
       },
 
       {
-        name: "5 x In-Home Train and Plays",
+        name: "In-home Day Train Five Pack",
         description: "This is our premium, flexible convenience service that delivers expert, focused training right to your doorstep, saving you time and effort. This commitment allows the trainer to deeply understand your dog over five dedicated sessions, leading to more consistent, reliable progress across any goal—from manners to enrichment. No need for you to be present!\n\n**What the 5x Commitment Delivers:**\n\n**Ultimate Flexibility for Any Goal:** Use these five sessions for any in-home need—whether you want to build foundational obedience, tackle specific behaviours, or simply ensure your dog receives fulfilling enrichment and play throughout your busy week.\n\n**Deeper Trainer-Dog Connection:** Committing to five sessions allows your dedicated trainer to really get to know your dog's unique personality and learning style. This intimate understanding ensures training is perfectly tailored for maximum confidence and fastest results.\n\n**Consistency for Reliable Skills:** The repetition of five sessions ensures consistent implementation of our clarity-based system, building stronger, more reliable habits that last, regardless of the training focus.\n\n**Affordable Convenience:** Secure this essential service with a total saving of $20 on five private, done-for-you sessions. It's the easiest and quickest way to guarantee your dog's progress and fulfilment.",
         price: "$280",
         originalPrice: "$300",

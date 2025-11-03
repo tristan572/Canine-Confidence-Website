@@ -188,7 +188,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
       "The Connected Companion Walk": 13,
       "From Chaos to Calm Program": 9,
       "The Focused Progress Plan": 2,
-      "5 x In-Home Train and Plays": 1,
+      "In-home Day Train Five Pack": 1,
       "The Real World Reliability Package": 3,
       "The Adventure Five Pack": 4,
       "The Neighbourhood Enrichment Five Pack": 5,
