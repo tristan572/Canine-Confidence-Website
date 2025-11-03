@@ -262,8 +262,8 @@ export class MemStorage implements IStorage {
     // Seed packages
     const packageData: InsertPackage[] = [
       {
-        name: "Puppy Foundation Program",
-        description: "Complete early development program for puppies only, 8-20 weeks. Have personalised advice delivered by an expert in-home. Program is developed to build confidence, learning and play foundations, social skills, and basic manners during the critical learning period. Included for free is a comprehensive Puppy Raising guide.",
+        name: "The Confident Start Program",
+        description: "The ultimate in-home early development program for puppies (8-20 weeks).\n\nWe build the essential foundations of confidence, connection, and clear communication during your puppy's critical learning period. Stop worrying about house training and biting, and start enjoying the happy, harmonious relationship you dreamed of.\n\n**Why This Program is the Confident Choice:**\n\n**Customised, In-Home Coaching:** Receive personalised, one-on-one sessions delivered by an expert in the comfort of your own home, ensuring fast, effective learning tailored to your lifestyle.\n\n**Build Foundational Clarity:** Establish a crystal-clear communication system from day one, giving your puppy the confidence and guidance they need to succeed in their new world.\n\n**Play-Based Connection:** We teach you how to use engaging, fulfilling play to establish deep trust, enhance cooperation, and eliminate problem behaviors before they start.\n\n**Essential Life Skills:** Master crucial social skills, house-training protocols, and foundational manners (including reliable recall and settling on place).",
         price: "$480",
         originalPrice: "$720",
         duration: "6 weeks",
@@ -271,13 +271,12 @@ export class MemStorage implements IStorage {
         category: "puppy",
         imageUrl: "/attached_assets/image_1750048904991.png",
         features: [
-          "6 x in-home private sessions",
-          "Socialisation protocols",
-          "House training guidance and set up",
-          "Basic commands (sit, stay, come, place etc)",
-          "Foundations of learning and playing",
-          "Take-home training plan",
-          "Comprehensive 50+ page Puppy Raising guide"
+          "6 x Private, In-Home Expert Sessions (Save $240)",
+          "Personalised Socialisation Protocols & Exposure Plan",
+          "Step-by-Step House Training Guidance & Setup",
+          "The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations",
+          "Take-Home Training Plan after every session",
+          "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)"
         ],
         isPopular: true
       },
