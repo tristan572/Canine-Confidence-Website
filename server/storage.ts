@@ -436,7 +436,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Adventure Walk and Training",
-        description: "**The Ultimate Outing**\n\nGive your dog the ultimate high-value experience! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with adventure, exercise, and integrated skill work.\n\nThis premium service is designed to be highly fulfilling, allowing your dog to safely enjoy running, sniffing, playing, and safe exploration in exciting, real-world locations. While on the adventure, our handlers will focus on reinforcing key real-world skills like reliable recall, loose-leash foundations, and impulse control under heavy distraction.\n\nYour dog returns home happy, thoroughly exercised, mentally stimulated, and better behaved. This is more than a walk—it's a premium journey that leaves your pet fulfilled and content.",
+        description: "Accelerate your dog's journey towards real-world reliability.\n\nThis premium five-session commitment is the most effective way to expose your dog to varied environments and distractions, ensuring they progress quickly and build strong, reliable habits on key skills. We handle the hard work for you, setting the highest possible foundation for success.\n\n**What the 5x Commitment Delivers:**\n\n**Building Reliable Habits:** Five consecutive adventures allow us to progressively expose your dog to a huge variety of real-world environments (forests, beaches, parks). This repetition is essential for helping your dog automatically focus on you, even when highly distracted.\n\n**Proofing Skills Under Distraction:** We focus on reinforcing key real-world skills like reliable recall, loose-lead foundations, and impulse control under heavy distraction. This package is the crucial step in teaching your dog to focus on you when it matters most.\n\n**Ultimate Mental and Physical Fulfilment:** This service is designed to be highly fulfilling. Your dog safely enjoys five sessions of running, sniffing, playing, and exploration, ensuring they return home thoroughly exercised, mentally stimulated, and happy.\n\n**Smart Savings:** This package ensures you maintain training momentum with a saving of $25 compared to booking five single sessions individually.",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",
@@ -444,12 +444,11 @@ export class MemStorage implements IStorage {
         category: "adventure",
         imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.jpg",
         features: [
-          "5 x 60-minute adventure sessions",
-          "Collection from home",
-          "Adventure locations variety",
-          "Video updates provided",
-          "Enrichment activities focus",
-          "Fun, play, and affection"
+          "5 x Adventure Outings (Each session is an hour of adventure and integrated training)",
+          "Premium Home Pick-up Service included",
+          "Targeted reinforcement of Recall and Impulse Control under distraction",
+          "Focus on safe exploration, fun, and fulfilling play",
+          "Video and feedback after every session, including key tips for you"
         ],
         isPopular: false
       },
