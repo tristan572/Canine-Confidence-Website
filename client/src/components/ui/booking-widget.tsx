@@ -29,12 +29,9 @@ export default function BookingWidget({ isOpen, onClose, serviceId }: BookingWid
         
         // Create the services widget
         try {
-          const baseUrl = "https://canineconfidence.simplybook.net/v2/";
-          const widgetUrl = serviceId ? `${baseUrl}#book/service/${serviceId}` : baseUrl;
-          
           widgetInstanceRef.current = new window.SimplybookWidget({
             "widget_type": "iframe",
-            "url": widgetUrl,
+            "url": "https://canineconfidence.simplybook.net",
             "theme": "simple_beauty_theme",
             "theme_settings": {
               "sb_base_color": "#2563EB",
