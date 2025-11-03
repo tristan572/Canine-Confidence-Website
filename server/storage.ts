@@ -157,8 +157,8 @@ export class MemStorage implements IStorage {
         features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
-        name: "Adventure Walk",
-        description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
+        name: "Adventure Walk and Training",
+        description: "**The Ultimate Outing**\n\nGive your dog the ultimate high-value experience! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with adventure, exercise, and integrated skill work.\n\nThis premium service is designed to be highly fulfilling, allowing your dog to safely enjoy running, sniffing, playing, and safe exploration in exciting, real-world locations. While on the adventure, our handlers will focus on reinforcing key real-world skills like reliable recall, loose-leash foundations, and impulse control under heavy distraction.\n\nYour dog returns home happy, thoroughly exercised, mentally stimulated, and better behaved. This is more than a walk—it's a premium journey that leaves your pet fulfilled and content.",
         duration: "60 minutes", 
         location: "Local parks, forests, or beaches",
         price: "$80",
@@ -441,8 +441,8 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
-        name: "5 x Adventure Walks",
-        description: "Give your dog the ultimate outing with our Adventure Walk service! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with excitement. Your dog will enjoy running, sniffing, playing, swimming, and lots of loving attention. Adventure Walks offer maximum enrichment and fun, leaving your pet happy, exercised, and thoroughly fulfilled!",
+        name: "5 x Adventure Walk and Training",
+        description: "**The Ultimate Outing**\n\nGive your dog the ultimate high-value experience! We'll pick up your furry friend and whisk them away to a local forest, park, or beach for an hour packed with adventure, exercise, and integrated skill work.\n\nThis premium service is designed to be highly fulfilling, allowing your dog to safely enjoy running, sniffing, playing, and safe exploration in exciting, real-world locations. While on the adventure, our handlers will focus on reinforcing key real-world skills like reliable recall, loose-leash foundations, and impulse control under heavy distraction.\n\nYour dog returns home happy, thoroughly exercised, mentally stimulated, and better behaved. This is more than a walk—it's a premium journey that leaves your pet fulfilled and content.",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",

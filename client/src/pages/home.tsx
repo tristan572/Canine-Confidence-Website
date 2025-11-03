@@ -71,7 +71,7 @@ export default function HomePage() {
     "Professional Walks": Route,
     "Walk & Train Sessions": Footprints,
     "House Visits": Home,
-    "Adventure Walk": Mountain,
+    "Adventure Walk and Training": Mountain,
   };
 
   return (

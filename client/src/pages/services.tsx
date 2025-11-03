@@ -46,7 +46,7 @@ export default function ServicesPage() {
     "In-Home Obedience": Home,
     "Virtual Coaching and Support": Phone,
     "Local Walk": MapPinned,
-    "Adventure Walk": Mountain,
+    "Adventure Walk and Training": Mountain,
     "Walk and Train": Footprints,
   };
 
