@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { SEO } from "@/components/SEO";
 import { Star, Clock, Users, CheckCircle, Calendar } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
+import ReactMarkdown from "react-markdown";
 import type { Package } from "@shared/schema";
 import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
 
@@ -244,7 +245,9 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
         </CardHeader>
 
         <CardContent className="space-y-6">
-          <p className="text-gray-600 text-center">{pkg.description}</p>
+          <div className="text-gray-600 text-left prose prose-sm max-w-none">
+            <ReactMarkdown>{pkg.description}</ReactMarkdown>
+          </div>
 
           <div className="text-center">
             <div className="flex items-center justify-center gap-2">
