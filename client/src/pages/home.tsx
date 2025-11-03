@@ -35,6 +35,7 @@ import ServiceCard from "@/components/ui/service-card";
 import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
+import ReactMarkdown from "react-markdown";
 import type { Service, Product, BlogPost, Package, Testimonial } from "@shared/schema";
 
 export default function HomePage() {
@@ -293,7 +294,9 @@ export default function HomePage() {
                   <CardContent className="p-8">
                     <div className="text-center mb-6">
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
-                      <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
+                      <div className="text-gray-600 text-sm mb-4 prose prose-sm max-w-none text-left">
+                        <ReactMarkdown>{pkg.description}</ReactMarkdown>
+                      </div>
                       
                       <div className="flex items-center justify-center gap-2">
                         <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
