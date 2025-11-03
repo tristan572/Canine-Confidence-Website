@@ -19,6 +19,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
       "Initial Canine Success Assessment": 16,
       "One-on-One Private Coaching": 7,
       "Virtual Coaching and Support": 10,
+      "Walk and Train": 6,
     };
     
     const serviceId = serviceMap[service.name];
