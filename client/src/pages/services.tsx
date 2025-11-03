@@ -29,6 +29,9 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
 
 export default function ServicesPage() {
+  const [selectedServiceId, setSelectedServiceId] = useState<number | null>(null);
+  const [showBookingDialog, setShowBookingDialog] = useState(false);
+
   const { data: services, isLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
@@ -167,18 +170,8 @@ export default function ServicesPage() {
                     </div>
                     <Button 
                       onClick={() => {
-                        const serviceMap: Record<string, number> = {
-                          "Initial Canine Success Assessment": 16,
-                          "One-on-One Private Coaching": 7,
-                        };
-                        console.log('Services page - Service name:', service.name);
-                        const serviceId = serviceMap[service.name];
-                        console.log('Services page - Service ID:', serviceId);
-                        const url = serviceId 
-                          ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
-                          : "https://canineconfidence.simplybook.net/v2/";
-                        console.log('Services page - URL:', url);
-                        window.open(url, '_blank');
+                        setSelectedServiceId(service.id);
+                        setShowBookingDialog(true);
                       }}
                       className="w-full btn-primary"
                     >
@@ -268,6 +261,53 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <Dialog open={showBookingDialog} onOpenChange={setShowBookingDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={() => {
+                const selectedService = services?.find(s => s.id === selectedServiceId);
+                if (selectedService) {
+                  const serviceMap: Record<string, number> = {
+                    "Initial Canine Success Assessment": 16,
+                    "One-on-One Private Coaching": 7,
+                  };
+                  const serviceId = serviceMap[selectedService.name];
+                  const url = serviceId 
+                    ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
+                    : "https://canineconfidence.simplybook.net/v2/";
+                  window.open(url, '_blank');
+                }
+                setShowBookingDialog(false);
+              }}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowBookingDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

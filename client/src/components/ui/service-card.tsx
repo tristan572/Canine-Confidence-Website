@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Clock, MapPin, DollarSign, Calendar, type LucideIcon } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type { Service } from "@shared/schema";
@@ -10,6 +12,8 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
+  const [showDialog, setShowDialog] = useState(false);
+
   const getBookingUrl = () => {
     const serviceMap: Record<string, number> = {
       "Initial Canine Success Assessment": 16,
@@ -20,6 +24,11 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
     return serviceId 
       ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
       : "https://canineconfidence.simplybook.net/v2/";
+  };
+
+  const handleContinue = () => {
+    setShowDialog(false);
+    window.open(getBookingUrl(), '_blank');
   };
 
   return (
@@ -57,7 +66,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
             </div>
           </div>
           <Button 
-            onClick={() => window.open(getBookingUrl(), '_blank')}
+            onClick={() => setShowDialog(true)}
             className="w-full btn-primary"
             data-testid={`button-book-${service.id}`}
           >
@@ -66,6 +75,39 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
           </Button>
         </CardContent>
       </Card>
+
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleContinue}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
