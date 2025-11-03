@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, DollarSign, Calendar, type LucideIcon } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
+import ReactMarkdown from "react-markdown";
 import type { Service } from "@shared/schema";
 
 interface ServiceCardProps {
@@ -30,7 +31,9 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
             <Icon className="h-6 w-6 text-white" />
           </div>
           <h3 className="text-xl font-semibold text-charcoal mb-4">{service.name}</h3>
-          <p className="text-medium-grey mb-6">{service.description}</p>
+          <div className="text-medium-grey mb-6 prose prose-sm max-w-none">
+            <ReactMarkdown>{service.description}</ReactMarkdown>
+          </div>
           <div className="space-y-2 mb-6">
             <div className="flex items-center text-sm text-medium-grey">
               <Clock className="w-4 h-4 mr-2" />
