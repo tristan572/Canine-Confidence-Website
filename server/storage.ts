@@ -177,8 +177,8 @@ export class MemStorage implements IStorage {
         features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
       },
       {
-        name: "Virtual Consultation",
-        description: "One-hour video consultation perfect for troubleshooting specific issues, follow-up support, or getting started with training guidance from the comfort of your home.",
+        name: "Virtual Coaching and Support",
+        description: "**Expert Help, Wherever You Are**\n\nGet the answers and support you need without the travel time! Our Zoom Call service offers convenient, personalised, one-on-one guidance right on your phone or computer.\n\nThis is ideal for quick skill refinement, specific problem-solving, or follow-up questions on techniques covered in previous sessions. We can troubleshoot minor issues, review your training videos, or create a plan for the next steps in your dog's development.\n\nExperience flexible coaching that fits your schedule, is accessible globally, and provides expert support from the comfort of your home. It's the perfect, cost-effective way to keep your training progress moving forward.",
         duration: "60 minutes",
         location: "Video call (Zoom)",
         price: "$100",

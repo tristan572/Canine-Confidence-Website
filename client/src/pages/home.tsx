@@ -66,7 +66,7 @@ export default function HomePage() {
     "One-on-One Coaching": User,
     "In-Home Obedience": Home,
     "Walk and Train": Footprints,
-    "Virtual Consultation": Phone,
+    "Virtual Coaching and Support": Phone,
     "Local Walk": MapPinned,
     "Professional Walks": Route,
     "Walk & Train Sessions": Footprints,

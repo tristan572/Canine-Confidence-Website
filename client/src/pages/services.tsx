@@ -44,7 +44,7 @@ export default function ServicesPage() {
     "House Visits": Home,
     "Initial Assessment": ClipboardList,
     "In-Home Obedience": Home,
-    "Virtual Consultation": Phone,
+    "Virtual Coaching and Support": Phone,
     "Local Walk": MapPinned,
     "Adventure Walk": Mountain,
     "Walk and Train": Footprints,
@@ -279,6 +279,7 @@ export default function ServicesPage() {
                   const serviceMap: Record<string, number> = {
                     "Initial Canine Success Assessment": 16,
                     "One-on-One Private Coaching": 7,
+                    "Virtual Coaching and Support": 10,
                   };
                   const serviceId = serviceMap[selectedService.name];
                   const url = serviceId 
