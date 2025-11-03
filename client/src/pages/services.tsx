@@ -281,6 +281,7 @@ export default function ServicesPage() {
                     "One-on-One Private Coaching": 7,
                     "Virtual Coaching and Support": 10,
                     "Walk and Train": 6,
+                    "In-Home Train and Play": 8,
                   };
                   const serviceId = serviceMap[selectedService.name];
                   const url = serviceId 
