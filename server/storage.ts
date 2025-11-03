@@ -381,8 +381,8 @@ export class MemStorage implements IStorage {
       //   isPopular: false
       // },
       {
-        name: "5 x One-on-One Coaching",
-        description: "Unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals, with ongoing feedback and dedicated support throughout your journey. Perfect for those seeking steady improvement, this package delivers exceptional value and ensures effective learning for both you and your dog.",
+        name: "The Focused Progress Plan",
+        description: "Achieve the reliable, lasting results you've been searching for.\n\nThis is your opportunity to unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals—whether that's achieving perfect manners, tackling a specific behaviour, or deepening your bond.\n\n**Why Commit to the Focused Progress Plan?**\n\n**Dedicated, Personalised Coaching:** Receive five private sessions with ongoing feedback and support. This commitment ensures we move beyond troubleshooting into real proficiency and confidence for any issue you choose to focus on.\n\n**Built-in Momentum & Reliability:** This package is designed to harness the power of regular coaching, ensuring effective learning for both you and your dog. We build reliable skills that hold up in real-world distractions.\n\n**Clarity-First Philosophy:** We focus on giving your dog the clear communication they need and giving you an in-depth understanding of our methods, leading to consistent, stress-free improvement.\n\n**Exceptional Value:** This five-session commitment ensures effective, self-paced learning and provides exceptional value, saving you $50 compared to booking sessions individually.",
         price: "$550",
         originalPrice: "$600",
         duration: "5 sessions",
@@ -390,12 +390,11 @@ export class MemStorage implements IStorage {
         category: "behaviour,obedience",
         imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278.jpg",
         features: [
-          "5 x individual private sessions",
-          "Customised training approach",
-          "In-depth understanding of methods",
-          "Modern techniques focus",
-          "Lasting results guarantee",
-          "Ongoing phone support between sessions"
+          "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
+          "Customised Training Approach and problem-solving strategy",
+          "In-Depth Understanding of Methods (Clarity, Connection, Play and more)",
+          "Dedicated Ongoing Support between sessions",
+          "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: false
       },
