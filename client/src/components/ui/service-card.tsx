@@ -17,6 +17,12 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
     };
     
     const serviceId = serviceMap[service.name];
+    console.log('Service name:', service.name);
+    console.log('Service ID:', serviceId);
+    console.log('Booking URL:', serviceId 
+      ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
+      : "https://canineconfidence.simplybook.net/v2/");
+    
     return serviceId 
       ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
       : "https://canineconfidence.simplybook.net/v2/";
