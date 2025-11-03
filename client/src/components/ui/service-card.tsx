@@ -60,7 +60,8 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
 
       <BookingWidget 
         isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
+        onClose={() => setShowBookingWidget(false)}
+        serviceId={service.name === "Initial Canine Success Assessment" ? 16 : undefined}
       />
     </>
   );

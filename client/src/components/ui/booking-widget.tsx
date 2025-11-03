@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 interface BookingWidgetProps {
   isOpen: boolean;
   onClose: () => void;
+  serviceId?: number;
 }
 
 declare global {
@@ -13,7 +14,7 @@ declare global {
   }
 }
 
-export default function BookingWidget({ isOpen, onClose }: BookingWidgetProps) {
+export default function BookingWidget({ isOpen, onClose, serviceId }: BookingWidgetProps) {
   const [showWidget, setShowWidget] = useState(false);
   const widgetContainerRef = useRef<HTMLDivElement>(null);
   const widgetInstanceRef = useRef<any>(null);
@@ -57,7 +58,7 @@ export default function BookingWidget({ isOpen, onClose }: BookingWidgetProps) {
             "app_config": {
               "clear_session": 0,
               "allow_switch_to_ada": 0,
-              "predefined": []
+              "predefined": serviceId ? { service: serviceId } : {}
             }
           });
         } catch (error) {
