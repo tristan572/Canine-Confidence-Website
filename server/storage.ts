@@ -401,7 +401,7 @@ export class MemStorage implements IStorage {
 
       {
         name: "5 x In-Home Train and Plays",
-        description: "**Training Done For You**\n\nThis is our premium convenience service that delivers effective, focused training right to your doorstep. We take the stress and time commitment out of dog training by working with your dog one-on-one in the comfortable, familiar environment of your home. No need for you to be present!\n\nOur skilled trainers focus on your specific goals, whether it's general obedience (manners, recall) or targeted behavioural needs (jumping, counter-surfing). Every session is tailored to your dog's unique personality using our fun, play-based approach.\n\nWith session-based pricing and flexible scheduling, this service is designed to fit your busy lifestyle, ensuring your dog quickly becomes a well-mannered, happy companion at home. For maximum and fastest results, we recommend booking multiple sessions per week.",
+        description: "This is our premium, flexible convenience service that delivers expert, focused training right to your doorstep, saving you time and effort. This commitment allows the trainer to deeply understand your dog over five dedicated sessions, leading to more consistent, reliable progress across any goal—from manners to enrichment. No need for you to be present!\n\n**What the 5x Commitment Delivers:**\n\n**Ultimate Flexibility for Any Goal:** Use these five sessions for any in-home need—whether you want to build foundational obedience, tackle specific behaviours, or simply ensure your dog receives fulfilling enrichment and play throughout your busy week.\n\n**Deeper Trainer-Dog Connection:** Committing to five sessions allows your dedicated trainer to really get to know your dog's unique personality and learning style. This intimate understanding ensures training is perfectly tailored for maximum confidence and fastest results.\n\n**Consistency for Reliable Skills:** The repetition of five sessions ensures consistent implementation of our clarity-based system, building stronger, more reliable habits that last, regardless of the training focus.\n\n**Affordable Convenience:** Secure this essential service with a total saving of $20 on five private, done-for-you sessions. It's the easiest and quickest way to guarantee your dog's progress and fulfilment.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -409,12 +409,10 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
         features: [
-          "5 x 30-minute home sessions",
-          "Essential commands training",
-          "Play-based learning approach",
-          "Home environment comfort",
-          "Quick progress tracking",
-          "Trainer-led instruction"
+          "5 x Private, In-Home Training Sessions (Done by the trainer)",
+          "Completely Flexible Focus—use for obedience, foundations, behaviour modification, or fulfilment",
+          "Customised Training Plan focusing on your current priorities",
+          "Ongoing Feedback and video updates"
         ],
         isPopular: false
       },
