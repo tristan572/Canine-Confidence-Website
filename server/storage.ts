@@ -116,14 +116,14 @@ export class MemStorage implements IStorage {
     // Seed services
     const serviceData: InsertService[] = [
       {
-        name: "Initial Assessment",
-        description: "Get to know your dog and understand their unique needs.  We'll assess behaviour and temperament and then create a personalised plan that focuses on true genetic fulfilment, confidence and bond building, communication clarity and empowering you with skills to maintain lasting behavioural change",
+        name: "Initial Canine Success Assessment",
+        description: "Stop Guessing, Start Training\n\nFeeling confused about where to start? Have you tried standard training with limited success? This session is the crucial first step to creating lasting, positive change by diagnosing the root cause of your dog's behaviour, not just treating the symptoms.\n\nPerfect for: All new clients, whether you're starting an obedience program, working through a specific challenge (like reactivity, digging, or anxiety), or just looking to build a deeper bond with your dog.",
         duration: "60 minutes",
         location: "In-home assessment",
         price: "$90",
         category: "assessment",
         imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260.jpg",
-        features: ["Comprehensive evaluation", "Personalised training plan", "Written recommendations", "Ongoing support guidance"]
+        features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to our training system, designed to save you time and money"]
       },
 
       {
