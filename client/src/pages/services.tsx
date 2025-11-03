@@ -166,7 +166,17 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <Button 
-                      onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+                      onClick={() => {
+                        const serviceMap: Record<string, number> = {
+                          "Initial Canine Success Assessment": 16,
+                          "One-on-One Private Coaching": 7,
+                        };
+                        const serviceId = serviceMap[service.name];
+                        const url = serviceId 
+                          ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
+                          : "https://canineconfidence.simplybook.net/v2/";
+                        window.open(url, '_blank');
+                      }}
                       className="w-full btn-primary"
                     >
                       Book Session
