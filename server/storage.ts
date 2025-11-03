@@ -148,7 +148,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Walk and Train",
-        description: "Walk and Train is a specialised service where we visit your home, walk from there or drive to a close location, and reinforce any behaviours of the clients choice while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
+        description: "**Building Confidence and Calm on Leash**\n\nIs your dog's walk the most stressful part of your day? Our specialised Walk & Train service is the perfect solution for owners struggling with pulling, lunging, or reactivity outside the home. This is not just a dog walk—it's focused, professional training delivered one-on-one by an expert.\n\nWe visit your home, then walk in your neighbourhood or drive to a nearby location, using real-world distractions to build rock-solid focus and manners. We reinforce the behaviours of your choice while teaching your dog to navigate the world calmly.\n\nPerfect for transitioning your established indoor skills into reliable, real-world responses, ensuring you finally get to enjoy a peaceful stroll with a well-mannered, confident companion. This service is designed for lasting results and is the ideal follow-up to our In-home Train and Play and private coaching sessions.",
         duration: "40 minutes",
         location: "Home pickup and local area",
         price: "$60",
@@ -423,7 +423,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Walk and Train",
-        description: "Walk and Train is a specialised service where we visit your home, walk from there or drive to a close location, and reinforce any behaviours of the clients choice while on a stroll. This service is perfect for transitioning your dog's established indoor training to real-world environments, ensuring reliable responses outside the home. Start with our in-home training sessions, then elevate your dog's skills with our Walk and Train experience for lasting results.",
+        description: "**Building Confidence and Calm on Leash**\n\nIs your dog's walk the most stressful part of your day? Our specialised Walk & Train service is the perfect solution for owners struggling with pulling, lunging, or reactivity outside the home. This is not just a dog walk—it's focused, professional training delivered one-on-one by an expert.\n\nWe visit your home, then walk in your neighbourhood or drive to a nearby location, using real-world distractions to build rock-solid focus and manners. We reinforce the behaviours of your choice while teaching your dog to navigate the world calmly.\n\nPerfect for transitioning your established indoor skills into reliable, real-world responses, ensuring you finally get to enjoy a peaceful stroll with a well-mannered, confident companion. This service is designed for lasting results and is the ideal follow-up to our In-home Train and Play and private coaching sessions.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
