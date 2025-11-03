@@ -188,6 +188,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
       "The Connected Companion Walk": 13,
       "From Chaos to Calm Program": 9,
       "The Focused Progress Plan": 2,
+      "5 x In-Home Train and Plays": 1,
     };
     
     const packageId = packageMap[pkg.name];
