@@ -29,38 +29,24 @@ export default function BookingWidget({ isOpen, onClose, serviceId }: BookingWid
         
         // Create the services widget
         try {
-          widgetInstanceRef.current = new window.SimplybookWidget({
+          const config: any = {
             "widget_type": "iframe",
             "url": "https://canineconfidence.simplybook.net",
-            "theme": "simple_beauty_theme",
+            "theme": "default",
             "theme_settings": {
-              "sb_base_color": "#2563EB",
-              "header_color": "#ffffff",
-              "timeline_hide_unavailable": "1",
-              "hide_past_days": "0",
               "timeline_show_end_time": "0",
-              "timeline_modern_display": "as_slots",
-              "display_item_mode": "block",
-              "body_bg_color": "#ffffff",
-              "sb_review_image": "",
-              "dark_font_color": "#374151",
+              "sb_base_color": "#2563EB",
+              "body_bg_color": "#f7f7f7",
+              "dark_font_color": "#494949",
               "light_font_color": "#ffffff",
-              "btn_color_1": "#2563EB",
-              "sb_company_label_color": "#374151",
-              "hide_img_mode": "0",
-              "show_sidebar": "1",
-              "sb_busy": "#E5E7EB",
-              "sb_available": "#DBEAFE"
+              "btn_color_1": "#2563EB"
             },
             "timeline": "modern",
             "datepicker": "top_calendar",
-            "is_rtl": false,
-            "app_config": {
-              "clear_session": 0,
-              "allow_switch_to_ada": 0,
-              "predefined": serviceId ? { event: serviceId } : {}
-            }
-          });
+            "is_rtl": false
+          };
+
+          widgetInstanceRef.current = new window.SimplybookWidget(config);
         } catch (error) {
           console.error('Error creating services widget:', error);
         }
@@ -73,11 +59,11 @@ export default function BookingWidget({ isOpen, onClose, serviceId }: BookingWid
       script.src = '//widget.simplybook.net/v2/widget/widget.js';
       script.type = 'text/javascript';
       script.onload = () => {
-        setTimeout(loadWidget, 500);
+        setTimeout(loadWidget, 1000);
       };
       document.head.appendChild(script);
     } else {
-      setTimeout(loadWidget, 500);
+      setTimeout(loadWidget, 1000);
     }
 
     return () => {
