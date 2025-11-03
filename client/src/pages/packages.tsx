@@ -190,6 +190,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
       "The Focused Progress Plan": 2,
       "5 x In-Home Train and Plays": 1,
       "The Real World Reliability Package": 3,
+      "5 x Adventure Walk and Training": 4,
     };
     
     const packageId = packageMap[pkg.name];
