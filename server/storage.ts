@@ -301,7 +301,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "From Chaos to Calm Program",
-        description: "Comprehensive program specifically designed for dogs showing reactivity towards other dogs, people, or environmental triggers. Whether your dog barks, lunges, or becomes anxious in certain situations, this program addresses the root causes and creates lasting behavioural change. This intensive package combines dedicated trainer-only sessions to build foundational skills with owner coaching sessions to ensure life-long skill retention. The result is efficient, effective rehabilitation that transforms reactive dogs into calm, confident companions who can navigate the world with ease.",
+        description: "Stop the barking, lunging, and anxiety. Start enjoying your life together.\n\nThis intensive, comprehensive program is specifically designed for dogs showing reactivity towards other dogs, people, or environmental triggers. We don't just mask the behaviour; we address the root causes to create lasting, foundational change.\n\n**How Our Rehabilitation Program Works:**\n\n**Targeted, Dual-Phase Approach:** This package efficiently combines dedicated trainer-only sessions to build solid foundational skills with owner coaching sessions to ensure lifelong skill retention and real-world success.\n\n**Addressing Root Causes:** We focus on your dog's underlying anxiety and / or impulse control. Our methods include advanced counter-conditioning techniques to fundamentally change how your dog feels about triggers.\n\n**Building Confidence & Trust:** We empower your dog with confidence-building exercises and establish clear, consistent communication, transforming them into a calm, self-assured companion who can navigate the world with ease.\n\n**Maximum Efficiency:** The entire intensive program is delivered over three consecutive weeks (saving you $90 compared to single session purchases).",
         price: "$990",
         originalPrice: "$1080",
         duration: "15 sessions",
@@ -309,14 +309,13 @@ export class MemStorage implements IStorage {
         category: "behaviour",
         imageUrl: "/attached_assets/image_1750049297197.png",
         features: [
-          "Training plan and homework supplied",
-          "Foundations and communication",
-          "Management techniques",
-          "Confidence building and genetic fulfilment",
-          "Impulse control",
-          "Counter-conditioning",
-          "Four Building Blocks of a Balanced Dog guide",
-          "Lifetime support guarantee"
+          "Intensive Sessions focusing on effective, lasting behavioural change",
+          "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
+          "Master Real-World Management Techniques for immediate safety and peace of mind",
+          "Advanced Impulse Control and Counter-Conditioning protocols",
+          "Personalised Training Plan and Homework supplied",
+          "Dedicated Ongoing Support from your trainer",
+          "BONUS: The essential guide: 'Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: true
       },
