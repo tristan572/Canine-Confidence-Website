@@ -283,6 +283,7 @@ export default function ServicesPage() {
                     "Walk and Train": 6,
                     "In-Home Train and Play": 8,
                     "Adventure Walk and Training": 5,
+                    "Local Walk": 4,
                   };
                   const serviceId = serviceMap[selectedService.name];
                   const url = serviceId 
