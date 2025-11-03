@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, DollarSign, Calendar, type LucideIcon } from "lucide-react";
-import BookingWidget from "@/components/ui/booking-widget";
 import ReactMarkdown from "react-markdown";
 import type { Service } from "@shared/schema";
 
@@ -12,7 +10,17 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
+  const getBookingUrl = () => {
+    const serviceMap: Record<string, number> = {
+      "Initial Canine Success Assessment": 16,
+      "One-on-One Private Coaching": 7,
+    };
+    
+    const serviceId = serviceMap[service.name];
+    return serviceId 
+      ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
+      : "https://canineconfidence.simplybook.net/v2/";
+  };
 
   return (
     <>
@@ -49,24 +57,15 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
             </div>
           </div>
           <Button 
-            onClick={() => setShowBookingWidget(true)}
+            onClick={() => window.open(getBookingUrl(), '_blank')}
             className="w-full btn-primary"
+            data-testid={`button-book-${service.id}`}
           >
             <Calendar className="w-4 h-4 mr-2" />
             Book Session
           </Button>
         </CardContent>
       </Card>
-
-      <BookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)}
-        serviceId={
-          service.name === "Initial Canine Success Assessment" ? 16 :
-          service.name === "One-on-One Private Coaching" ? 7 :
-          undefined
-        }
-      />
     </>
   );
 }
