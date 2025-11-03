@@ -186,6 +186,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
     const packageMap: Record<string, number> = {
       "The Confident Start Program": 6,
       "The Connected Companion Walk": 13,
+      "From Chaos to Calm Program": 9,
     };
     
     const packageId = packageMap[pkg.name];
