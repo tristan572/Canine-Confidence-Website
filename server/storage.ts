@@ -168,7 +168,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Local Walk",
-        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
+        description: "**Reliable, Budget-Friendly Exercise**\n\nLocal Walk is your convenient, budget-friendly dog walking solution. Our reliable, professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep.\n\nWhether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
         duration: "30 minutes",
         location: "From client's home",
         price: "$45",
@@ -461,7 +461,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "5 x Local Walks",
-        description: "Local Walk is your convenient, budget-friendly dog walking solution. Our professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep. Whether you have a busy schedule or just need a helping hand, Local Walk ensures your dog stays happy and active.",
+        description: "**Reliable, Budget-Friendly Exercise**\n\nLocal Walk is your convenient, budget-friendly dog walking solution. Our reliable, professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep.\n\nWhether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
         price: "$215",
         originalPrice: "$225",
         duration: "5 sessions",
