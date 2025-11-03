@@ -171,10 +171,13 @@ export default function ServicesPage() {
                           "Initial Canine Success Assessment": 16,
                           "One-on-One Private Coaching": 7,
                         };
+                        console.log('Services page - Service name:', service.name);
                         const serviceId = serviceMap[service.name];
+                        console.log('Services page - Service ID:', serviceId);
                         const url = serviceId 
                           ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
                           : "https://canineconfidence.simplybook.net/v2/";
+                        console.log('Services page - URL:', url);
                         window.open(url, '_blank');
                       }}
                       className="w-full btn-primary"
