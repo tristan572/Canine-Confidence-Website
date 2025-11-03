@@ -453,8 +453,8 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
-        name: "5 x Local Walks",
-        description: "**Reliable, Budget-Friendly Exercise**\n\nLocal Walk is your convenient, budget-friendly dog walking solution. Our reliable, professional dog handlers come directly to your home, providing your pet with essential exercise, stimulation, and fun right from your doorstep.\n\nWhether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
+        name: "The Neighbourhood Enrichment Five Pack",
+        description: "Your reliable, budget-friendly solution for essential well-being.\n\nThis five-session package guarantees your dog receives consistent exercise, stimulation, and fun, all delivered right to your doorstep by our professional dog handlers. It's the simplest way to ensure a happy, active dog, even on your busiest days.\n\n**What the 5x Commitment Delivers:**\n\n**Reliable, Consistent Care:** By committing to five sessions, you establish a consistent routine that your dog can count on. This regularity is key to reducing stress and maintaining good manners throughout the week.\n\n**Structured Enrichment Walks:** Our walks are more than just a stroll. We ensure your dog gets plenty of essential sniffing time (mental stimulation) and attentive care, making every outing a fulfilling experience that leaves your pet content.\n\n**Ultimate Convenience & Simplicity:** Our professional handlers come directly to your home, ensuring your pet enjoys a healthy walk and essential exercise without you having to be present. It's the perfect helping hand for busy schedules.\n\n**Budget-Friendly Value:** This package offers the most convenient and reliable service while providing savings compared to booking single sessions.",
         price: "$215",
         originalPrice: "$225",
         duration: "5 sessions",
@@ -462,12 +462,10 @@ export class MemStorage implements IStorage {
         category: "adventure",
         imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673.jpeg",
         features: [
-          "5 x 30-minute local walks",
-          "Direct from your home",
-          "Enrichment activities included",
-          "Fun and play focus",
-          "Affection and care provided",
-          "Photo or video updates"
+          "5 x Local Walk Sessions focused on essential exercise and mental stimulation",
+          "Reliable Home Pick-up Service included",
+          "Focus on Sniffing, Exercise, and Attentive Care",
+          "Ideal for maintaining routine and providing daily fulfilment"
         ],
         isPopular: false
       }
