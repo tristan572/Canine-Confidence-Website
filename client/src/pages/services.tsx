@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
+import ReactMarkdown from "react-markdown";
 import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import { 
   GraduationCap, 
@@ -134,7 +135,9 @@ export default function ServicesPage() {
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-charcoal mb-4">{service.name}</h3>
-                    <p className="text-medium-grey mb-6">{service.description}</p>
+                    <div className="text-medium-grey mb-6 prose prose-sm max-w-none">
+                      <ReactMarkdown>{service.description}</ReactMarkdown>
+                    </div>
                     
                     {service.features && service.features.length > 0 && (
                       <div className="mb-6">
