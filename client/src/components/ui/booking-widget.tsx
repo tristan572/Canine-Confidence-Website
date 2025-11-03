@@ -58,7 +58,7 @@ export default function BookingWidget({ isOpen, onClose, serviceId }: BookingWid
             "app_config": {
               "clear_session": 0,
               "allow_switch_to_ada": 0,
-              "predefined": serviceId ? { service: serviceId } : {}
+              "predefined": serviceId ? { event: serviceId } : {}
             }
           });
         } catch (error) {
