@@ -3,7 +3,6 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Dog, Phone } from "lucide-react";
-import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import ShoppingCart from "@/components/ui/shopping-cart";
@@ -13,7 +12,6 @@ import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
 export default function Navbar() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -158,7 +156,7 @@ export default function Navbar() {
               <Button 
                 size="sm" 
                 className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm text-xs px-3"
-                onClick={() => setShowBookingWidget(true)}
+                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
               >
                 Book Now
               </Button>
@@ -168,10 +166,6 @@ export default function Navbar() {
         </div>
       </div>
       
-      <BookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
-      />
     </nav>
   );
 }

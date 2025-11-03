@@ -25,12 +25,10 @@ import {
   Heart,
   Brain
 } from "lucide-react";
-import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
 
 export default function ServicesPage() {
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
   const { data: services, isLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
@@ -168,7 +166,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <Button 
-                      onClick={() => setShowBookingWidget(true)}
+                      onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
                       className="w-full btn-primary"
                     >
                       Book Session
@@ -257,10 +255,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <BookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
-      />
     </div>
   );
 }
