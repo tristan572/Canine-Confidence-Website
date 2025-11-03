@@ -417,8 +417,8 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
-        name: "5 x Walk and Train",
-        description: "**Building Confidence and Calm on Leash**\n\nIs your dog's walk the most stressful part of your day? Our specialised Walk & Train service is the perfect solution for owners struggling with pulling, lunging, or reactivity outside the home. This is not just a dog walk—it's focused, professional training delivered one-on-one by an expert.\n\nWe visit your home, then walk in your neighbourhood or drive to a nearby location, using real-world distractions to build rock-solid focus and manners. We reinforce the behaviours of your choice while teaching your dog to navigate the world calmly.\n\nPerfect for transitioning your established indoor skills into reliable, real-world responses, ensuring you finally get to enjoy a peaceful stroll with a well-mannered, confident companion. This service is designed for lasting results and is the ideal follow-up to our In-home Train and Play and private coaching sessions.",
+        name: "The Real World Reliability Package",
+        description: "Move beyond the backyard and achieve true reliability.\n\nOur premium Five Walk and Trains Package offers the ultimate practical convenience, combining expert training with real-world exposure. We walk your dog from home and reinforce essential obedience and loose lead walking skills during real-world strolls. This commitment ensures skills are proofed against distractions for lasting results.\n\n**What the 5x Commitment Delivers:**\n\n**Real-World Reliability:** This package is ideal for progressing from in-home work. Five sessions ensure your dog's skills are progressively being tested in distracting environments (traffic, people, sounds), transitioning their obedience seamlessly from indoors to outdoors.\n\n**Confidence Building & Clarity:** The consistent practice builds your dog's confidence in new situations while reinforcing the clear communication system they need to succeed on lead.\n\n**Loose Lead Mastery:** We focus specifically on loose lead walking practice and general obedience reinforcement, eliminating frustration and ensuring your dog learns to walk co-operatively at all times.\n\n**Ultimate Convenience:** We come to you! Enjoy the results of expert training without the time commitment. Our home pickup service is included in every session.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -426,12 +426,11 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.jpg",
         features: [
-          "5 x 40-minute sessions",
-          "Home pickup service included",
-          "General obedience reinforcement",
-          "Loose lead walking practice",
-          "Real-world environment training",
-          "Indoor to outdoor skill transition"
+          "5 x 40-Minute Sessions (Trainer-led, done for you)",
+          "Home Pickup Service Included at no extra charge",
+          "Targeted General Obedience Reinforcement (manners on the go)",
+          "Dedicated Loose Lead Walking Practice and technique mastery",
+          "Training focused on real-world environment application and distraction proofing"
         ],
         isPopular: false
       },
