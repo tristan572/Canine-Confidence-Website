@@ -18,7 +18,7 @@ export function SEO({
   keywords = []
 }: SEOProps) {
   const siteUrl = 'https://canineconfidence.com.au';
-  const fullTitle = `${title} | Canine Confidence - Dog Training Brisbane`;
+  const fullTitle = `${title} | Canine Confidence, North Brisbane`;
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : undefined;
   
   const defaultKeywords = [
