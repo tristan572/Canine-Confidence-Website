@@ -100,8 +100,11 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
-                  Where Dogs <span className="text-primary-blue">Thrive</span>
+                  Expert Dog Training in Boondall & North Brisbane
                 </h1>
+                <h2 className="text-3xl lg:text-4xl font-semibold text-primary-blue leading-tight">
+                  Canine Confidence Where Dogs Thrive
+                </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
                   Creating harmony between dogs and families through understanding, fulfillment, and play-centered connection. We believe dogs should be genuinely living their best lives, not just following commands.
                 </p>
