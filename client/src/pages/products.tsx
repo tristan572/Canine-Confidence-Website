@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Package, Clock, Star } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 export default function ProductsPage() {
   const upcomingProducts = [
@@ -18,6 +19,18 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Dog Training Tools & Recommended Gear"
+        description="Professional training equipment and toys coming soon to Canine Confidence. Trainer-approved gear for effective training sessions in Brisbane."
+        canonical="/products"
+        keywords={[
+          'dog training equipment Brisbane',
+          'training toys',
+          'dog leashes',
+          'training collars',
+          'dog training gear'
+        ]}
+      />
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
