@@ -111,17 +111,9 @@ export default function HomePage() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={() => setShowBookingWidget(true)}
-                  className="btn-primary text-lg px-8 py-4"
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Start Training Today
-                </Button>
-
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
+                    <Button className="btn-primary text-lg px-8 py-4">
                       Free Phone Consult
                     </Button>
                   </DialogTrigger>
@@ -131,6 +123,15 @@ export default function HomePage() {
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
+
+                <Button 
+                  onClick={() => setShowBookingWidget(true)}
+                  variant="outline"
+                  className="btn-secondary text-lg px-8 py-4"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Start Training Today
+                </Button>
               </div>
 
               <div className="flex items-center space-x-8 pt-4">
