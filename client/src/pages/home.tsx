@@ -99,11 +99,11 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
-                  Expert Dog Training in Boondall & North Brisbane
+                <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+                  Boondall and North Brisbane's Most Trusted <span className="text-primary-blue">Dog</span> Trainer
                 </h1>
-                <h2 className="text-3xl lg:text-4xl font-semibold text-primary-blue leading-tight">
-                  Canine Confidence Where Dogs Thrive
+                <h2 className="text-3xl lg:text-4xl font-semibold text-charcoal leading-tight">
+                  Canine Confidence: <span className="text-primary-blue">Where Dogs THRIVE</span>
                 </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
                   Creating harmony between dogs and families through understanding, fulfillment, and play-centered connection. We believe dogs should be genuinely living their best lives, not just following commands.
