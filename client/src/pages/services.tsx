@@ -78,7 +78,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Dog Training Services Brisbane"
+        title="Obedience Training Boondall"
         description="Professional dog training services in North Brisbane. Assessment, coaching, in-home training, walk & train, and adventure walks. Play-based methods focused on genetic fulfillment and lasting results."
         canonical="/services"
         keywords={[
