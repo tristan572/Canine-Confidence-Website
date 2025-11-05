@@ -53,7 +53,7 @@ export default function AboutPage() {
             About Us
           </h1>
           <h2 className="text-3xl font-semibold text-charcoal mb-6">
-            A Different Path to Dog Training
+            A <span className="text-primary-blue">Different</span> Path to Dog Training
           </h2>
           <p className="text-xl text-medium-grey mb-8">
             I'm Tristan, the owner of Canine Confidence. I didn't grow up with dogs, and I didn't have a "problem dog" that pushed me into training. For me, it's always been simple—I just love dogs. Wherever I went, I found myself connecting with them, and they seemed to connect with me. That natural bond was always there.
@@ -111,7 +111,7 @@ export default function AboutPage() {
       <section className="py-20 bg-light-grey">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">The Canine Confidence Philosophy</h2>
+            <h2 className="text-4xl font-bold text-charcoal mb-4">The Canine <span className="text-primary-blue">Confidence</span> Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
               At Canine Confidence, we believe dog training should be about more than commands and corrections. It's about creating harmony between dogs and families through understanding, fulfilment, and connection. Every dog deserves to be genuinely living their best life.
             </p>
