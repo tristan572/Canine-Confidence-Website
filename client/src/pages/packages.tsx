@@ -395,7 +395,7 @@ export default function PackagesPage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-white">
-                  Training Packages
+                  North Brisbane Dog Training Packages : Find Your Perfect Fit
                 </h1>
                 <p className="text-xl md:text-2xl text-white">Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive in life.</p>
               </div>
