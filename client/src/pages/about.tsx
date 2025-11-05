@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Turning Passion Into Purpose</h2>
+                <h2 className="text-4xl font-bold text-charcoal">Turning <span className="text-primary-blue">Passion Into Purpose</span></h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   In 2020, life threw me a curveball when I was made redundant from my job. It made me realise how quickly things can change, and how important it is to spend your time doing something you truly love. For me, that meant finally pursuing dog training.
                 </p>
@@ -182,7 +182,7 @@ export default function AboutPage() {
 
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Why I Train Differently</h2>
+                <h2 className="text-4xl font-bold text-charcoal">Why I Train <span className="text-primary-blue">Differently</span></h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   Many trainers focus heavily on commands, corrections, and "fixing" dogs. But what I've learned is that when you tap into a dog's natural drives—through play, engagement, and genetic fulfilment—you don't just train a dog, you build harmony.
                 </p>
