@@ -182,7 +182,7 @@ export default function AboutPage() {
 
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Why I Train <span className="text-primary-blue">Differently</span></h2>
+                <h2 className="text-4xl font-bold text-charcoal">Why I Train Differently</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   Many trainers focus heavily on commands, corrections, and "fixing" dogs. But what I've learned is that when you tap into a dog's natural drives—through play, engagement, and genetic fulfilment—you don't just train a dog, you build harmony.
                 </p>
