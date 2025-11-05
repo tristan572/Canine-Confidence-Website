@@ -389,29 +389,29 @@ export default function PackagesPage() {
         ]}
       />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
+      <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-white">
-                  North Brisbane Dog Training Packages : Find Your Perfect Fit
+                <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
+                  North Brisbane Dog Training Packages : Find Your <span className="text-primary-blue">Perfect</span> Fit
                 </h1>
-                <p className="text-xl md:text-2xl text-white">Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive in life.</p>
+                <p className="text-xl text-medium-grey">Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive in life.</p>
               </div>
               
               <div className="flex flex-wrap gap-4">
-                <div className="bg-white/20 rounded-lg px-6 py-3">
-                  <div className="text-2xl font-bold text-white">200+</div>
-                  <div className="text-sm text-white">Confident Clients</div>
+                <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
+                  <div className="text-2xl font-bold text-charcoal">200+</div>
+                  <div className="text-sm text-medium-grey">Confident Clients</div>
                 </div>
-                <div className="bg-white/20 rounded-lg px-6 py-3">
-                  <div className="text-2xl font-bold text-white">100%</div>
-                  <div className="text-sm text-white">Happier Dogs</div>
+                <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
+                  <div className="text-2xl font-bold text-charcoal">100%</div>
+                  <div className="text-sm text-medium-grey">Happier Dogs</div>
                 </div>
-                <div className="bg-white/20 rounded-lg px-6 py-3">
-                  <div className="text-2xl font-bold text-white">5★</div>
-                  <div className="text-sm text-white">Average Rating</div>
+                <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
+                  <div className="text-2xl font-bold text-charcoal">5★</div>
+                  <div className="text-sm text-medium-grey">Average Rating</div>
                 </div>
               </div>
             </div>
