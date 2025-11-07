@@ -93,7 +93,7 @@ export default function SandgatePage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/1/count/1/', '_blank')}
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/3/count/1/', '_blank')}
                   className="btn-primary text-lg px-8 py-4"
                   data-testid="button-book-assessment-hero"
                 >
@@ -344,7 +344,7 @@ export default function SandgatePage() {
                 </p>
                 <div className="text-3xl font-bold text-primary-blue mb-6">$90</div>
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/1/count/1/', '_blank')}
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/3/count/1/', '_blank')}
                   className="btn-primary w-full"
                   data-testid="button-book-assessment-adult"
                 >
