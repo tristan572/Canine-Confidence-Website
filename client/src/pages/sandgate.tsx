@@ -93,8 +93,9 @@ export default function SandgatePage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/1/count/1/', '_blank')}
                   className="btn-primary text-lg px-8 py-4"
+                  data-testid="button-book-assessment-hero"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Book Your Assessment
@@ -126,8 +127,12 @@ export default function SandgatePage() {
                 The Bayside '<span className="text-primary-blue">Adventure Walk</span>'
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                This is our signature, one-on-one training session conducted by a professional trainer in the most challenging (and rewarding) local environments. Your dog gets the enrichment of an adventure while having their obedience skills proofed against real-world distractions.
+                This is our signature one-on-one training session conducted by a professional trainer in the most challenging (and rewarding) local environments. Perfect for dogs that need real exercise and beach play, or those needing obedience proofed against real-world distractions.
               </p>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <p className="text-blue-800 font-semibold text-xl">$80 per session</p>
+                <p className="text-blue-700">Great for dogs that just need a good time - they get to play on the beach and run!</p>
+              </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -199,13 +204,17 @@ export default function SandgatePage() {
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
                         <span className="text-medium-grey">Dogs who need cafe manners training</span>
                       </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">High-energy dogs needing beach exercise and play</span>
+                      </li>
                     </ul>
                   </div>
 
                   <div className="pt-4 border-t border-gray-200">
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Local Expertise</h3>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">Beach Fun & Exercise</h3>
                     <p className="text-medium-grey">
-                      We know every distraction point from the Sandgate mudflats to Shorncliffe Pier. Your dog will be trained in the exact environments where you live and walk daily.
+                      Not every session is about strict training. Some dogs just need a great time running and playing on the beach. We combine exercise, enrichment, and fun in the beautiful bayside environment.
                     </p>
                   </div>
                 </div>
@@ -337,7 +346,7 @@ export default function SandgatePage() {
                 <Button 
                   onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/1/count/1/', '_blank')}
                   className="btn-primary w-full"
-                  data-testid="button-book-assessment"
+                  data-testid="button-book-assessment-adult"
                 >
                   Book Assessment
                 </Button>
