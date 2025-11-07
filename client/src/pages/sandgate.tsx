@@ -352,7 +352,7 @@ export default function SandgatePage() {
               Getting Started with <span className="text-primary-blue">Training</span>
             </h2>
             <p className="text-xl text-medium-grey">
-              For established dogs or to begin your Adventure Walk package, we require a professional assessment to create a tailored program. Puppies can start the Confident Start Program directly.
+              For adolescent or adult dogs to begin your Adventure Walk package, we require a professional assessment to create a tailored program. Puppies can start the Confident Start Program directly.
             </p>
           </div>
 
