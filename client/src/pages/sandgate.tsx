@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { Waves, MapPin, Phone, Check } from "lucide-react";
+import { Waves, MapPin, Phone, Check, Calendar } from "lucide-react";
 import sandgateHero from "@assets/stock_images/shorncliffe_pier_san_cc4bcd4d.jpg";
 
 const SandgateLocalBusinessSchema = () => {
@@ -401,24 +401,27 @@ export default function SandgatePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white relative">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-            Ready for calm walks and a confident Bayside companion?
-          </h2>
-          <p className="text-lg sm:text-xl mb-8 text-white">
-            Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
-          </p>
-          <Button 
-            onClick={() => setShowPackagesDialog(true)}
-            size="lg"
-            className="bg-amber-400 text-slate-900 hover:bg-amber-500 font-bold text-base sm:text-lg px-8 sm:px-10 py-6 w-full sm:w-auto shadow-2xl border-2 border-amber-500"
-            data-testid="button-book-now-cta"
-          >
-            <Phone className="w-5 h-5 mr-2" />
-            Book Now
-          </Button>
+      <section className="py-20 bg-primary-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">
+                Ready for calm walks and a confident Bayside companion?
+              </h2>
+              <p className="text-xl text-white opacity-90">
+                Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
+              </p>
+            </div>
+
+            <Button 
+              onClick={() => setShowPackagesDialog(true)}
+              className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+              data-testid="button-book-now-cta"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Book Now
+            </Button>
+          </div>
         </div>
       </section>
 
