@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check, Calendar } from "lucide-react";
 import sandgateHero from "@assets/stock_images/shorncliffe_pier_san_cc4bcd4d.jpg";
+import ConsultationForm from "@/components/forms/consultation-form";
 
 const SandgateLocalBusinessSchema = () => {
   const schema = {
@@ -413,14 +414,29 @@ export default function SandgatePage() {
               </p>
             </div>
 
-            <Button 
-              onClick={() => setShowPackagesDialog(true)}
-              className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
-              data-testid="button-book-now-cta"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Now
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={() => setShowPackagesDialog(true)}
+                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+                data-testid="button-book-now-cta"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Now
+              </Button>
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors">
+                    Request Free Call
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogTitle>Request Free Call</DialogTitle>
+                  <DialogDescription>Connect with us for a complimentary consultation to discuss how we can help you and your dog in the Sandgate area.</DialogDescription>
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
         </div>
       </section>
