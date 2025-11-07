@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } 
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart } from "lucide-react";
-import sandgateHero from "@assets/stock_images/shorncliffe_pier_san_cc4bcd4d.jpg";
+import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
 import ConsultationForm from "@/components/forms/consultation-form";
 
 const SandgateLocalBusinessSchema = () => {
