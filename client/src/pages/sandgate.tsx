@@ -70,7 +70,7 @@ export default function SandgatePage() {
 
   const handleBookConfidentStart = () => {
     setShowConfidentStartDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/package/6/', '_blank');
+    window.open('https://canineconfidence.simplybook.net/v2/#packages/6', '_blank');
   };
 
   return (
