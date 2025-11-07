@@ -397,19 +397,20 @@ export default function SandgatePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary-blue to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Ready for calm walks and a confident Bayside companion?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-lg sm:text-xl mb-8 text-white font-medium">
             Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
           </p>
           <Button 
             onClick={() => setShowAssessmentDialog(true)}
             size="lg"
-            className="bg-white text-primary-blue hover:bg-gray-100 text-lg px-8 py-4"
+            className="bg-white text-primary-blue hover:bg-gray-100 text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto shadow-lg"
             data-testid="button-book-now-cta"
           >
-            Book Your Assessment or Puppy Program Today
+            <Phone className="w-5 h-5 mr-2" />
+            Book Now
           </Button>
         </div>
       </section>
