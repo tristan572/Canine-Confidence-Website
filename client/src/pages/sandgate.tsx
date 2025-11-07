@@ -1,0 +1,388 @@
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
+import { Link } from "wouter";
+import { Waves, MapPin, Phone, Check } from "lucide-react";
+import sandgateHero from "@assets/stock_images/shorncliffe_pier_san_cc4bcd4d.jpg";
+
+const SandgateLocalBusinessSchema = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Canine Confidence - Sandgate Dog Training",
+    "description": "Professional dog training services in Sandgate, Shorncliffe, and Brighton. Specialising in bayside training with real-world distractions including foreshore recall, cafe manners, and loose-leash walking.",
+    "url": "https://canineconfidence.com.au/dog-training-sandgate",
+    "telephone": "+61409521358",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Serving Sandgate, Shorncliffe & Brighton",
+      "addressLocality": "Sandgate",
+      "addressRegion": "QLD",
+      "postalCode": "4017",
+      "addressCountry": "AU"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Sandgate"
+      },
+      {
+        "@type": "City",
+        "name": "Shorncliffe"
+      },
+      {
+        "@type": "City",
+        "name": "Brighton"
+      }
+    ],
+    "priceRange": "$$",
+    "image": sandgateHero
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+};
+
+export default function SandgatePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen">
+      <SEO 
+        title="Sandgate Dog Training"
+        description="Professional dog training in Sandgate, Shorncliffe & Brighton. Master foreshore recall, cafe manners, and loose-leash walking. Expert bayside training with real-world distractions."
+        canonical="https://canineconfidence.com.au/dog-training-sandgate"
+        keywords={[
+          'dog training Sandgate',
+          'dog trainer Shorncliffe',
+          'dog training Brighton Brisbane',
+          'Sandgate foreshore dog training',
+          'bayside dog trainer',
+          'Shorncliffe pier dog training'
+        ]}
+      />
+      <SandgateLocalBusinessSchema />
+
+      {/* Hero Section */}
+      <section className="hero-gradient py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <MapPin className="w-5 h-5 text-primary-blue" />
+                  <span className="text-primary-blue font-semibold">Sandgate, Shorncliffe & Brighton</span>
+                </div>
+                <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+                  Sandgate, Shorncliffe & Brighton Dog Training: <span className="text-primary-blue">Coastal Confidence</span>
+                </h1>
+                <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal">
+                  Bayside Dog Training for the Real World: Mastering Seagulls, Bikes, and Crowds
+                </h2>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  If you live by the water, you know a well-behaved dog isn't a luxury—it's essential. We specialise in building focus and control amidst the unique distractions of the Bayside area: the pier crowds, passing bikes, and those tempting seagulls. Our training proofs your dog's obedience against the highest real-world challenges.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+                  className="btn-primary text-lg px-8 py-4"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Book Your Assessment
+                </Button>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src={sandgateHero} 
+                alt="Shorncliffe Pier and Sandgate foreshore - professional dog training location in Brisbane bayside suburbs" 
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service 1: Bayside Adventure Walk */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+                <Waves className="w-4 h-4" />
+                Signature Service
+              </div>
+              <h2 className="text-4xl font-bold text-charcoal">
+                The Bayside '<span className="text-primary-blue">Adventure Walk</span>'
+              </h2>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                This is our signature, one-on-one training session conducted by a professional trainer in the most challenging (and rewarding) local environments. Your dog gets the enrichment of an adventure while having their obedience skills proofed against real-world distractions.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Foreshore Focus</h3>
+                    <p className="text-medium-grey">We train specifically on the Sandgate Foreshore off-leash mudflats (between Second Avenue and Zeehan St) for reliable recall and impulse control, even with other dogs running past.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Proofing Distractions</h3>
+                    <p className="text-medium-grey">Your dog learns to ignore high-value distractions like moving bikes, passing crowds, and pesky seagulls while walking calmly on Flinders Parade.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Cafe Manners</h3>
+                    <p className="text-medium-grey">We practise calming "Settle" and "Place" behaviours, ensuring your dog can relax while you enjoy your favourite calamari from the local Fishmonger.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Leash Mastery</h3>
+                    <p className="text-medium-grey">Perfecting your loose-leash walk along Shorncliffe Pier where distractions are at their peak.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <p className="text-medium-grey mb-4">
+                  Learn more about our <Link href="/services" className="text-primary-blue hover:underline font-semibold">Adventure Walk and Training service</Link>.
+                </p>
+                <Button 
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/8/count/1/', '_blank')}
+                  className="btn-primary"
+                  data-testid="button-book-adventure-walk"
+                >
+                  Book Adventure Walk Training
+                </Button>
+              </div>
+            </div>
+
+            <Card className="bg-light-grey border-0">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-charcoal mb-4">Perfect For:</h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Dogs who pull on the leash near the foreshore</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Reactive dogs around bikes and crowds</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Seagull chasers needing impulse control</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Dogs who need cafe manners training</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="pt-4 border-t border-gray-200">
+                    <h3 className="text-xl font-bold text-charcoal mb-2">Local Expertise</h3>
+                    <p className="text-medium-grey">
+                      We know every distraction point from the Sandgate mudflats to Shorncliffe Pier. Your dog will be trained in the exact environments where you live and walk daily.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Service 2: Confident Start Program */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <Card className="bg-white border-0 shadow-xl">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-charcoal mb-4">Program Includes:</h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">6 private, one-hour, in-home lessons (valued at $720)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Bite inhibition and gentle play</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Toilet training mastery</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Handling and grooming preparation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Structure and routine establishment</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Recall and focus for future off-leash safety</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <p className="text-green-800 font-semibold mb-1">SPECIAL OFFER</p>
+                    <p className="text-green-700">Enrol now and receive our Dog Raising Guide (PDF) completely free.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+                Perfect for Puppies
+              </div>
+              <h2 className="text-4xl font-bold text-charcoal">
+                'The <span className="text-primary-blue">Confident Start</span> Program' (Puppies)
+              </h2>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                Give your new puppy the vital social and obedience foundation they need to thrive in the busy Bayside community. This premium program ensures you bypass common puppy issues and raise a calm, confident companion. No initial assessment required to start.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Premium Value</h3>
+                    <p className="text-medium-grey">The 6 private, one-hour, in-home lessons are valued at $720 for comprehensive one-on-one training.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Foundation for Life</h3>
+                    <p className="text-medium-grey">Covers essential skills: bite inhibition, toilet training, handling, and establishing structure in the home.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-charcoal mb-1">Recall & Focus</h3>
+                    <p className="text-medium-grey">Focused training to build the trust and response needed for future off-leash safety on the foreshore, preparing them for the crowds and bikes of the Bayside.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <p className="text-medium-grey mb-4">
+                  View full details on our <Link href="/packages" className="text-primary-blue hover:underline font-semibold">Packages page</Link>.
+                </p>
+                <Button 
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/package/6/', '_blank')}
+                  className="btn-primary"
+                  data-testid="button-book-confident-start"
+                >
+                  Enrol in Confident Start Program
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Started Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-charcoal mb-4">
+              Getting Started with <span className="text-primary-blue">Training</span>
+            </h2>
+            <p className="text-xl text-medium-grey">
+              For established dogs or to begin your Adventure Walk package, we require a professional assessment to create a tailored program. Puppies can start the Confident Start Program directly.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-light-grey border-0">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold text-charcoal mb-4">For Adult Dogs</h3>
+                <p className="text-medium-grey mb-6">
+                  Initial Canine Success Assessment required to create your tailored training program.
+                </p>
+                <div className="text-3xl font-bold text-primary-blue mb-6">$90</div>
+                <Button 
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/1/count/1/', '_blank')}
+                  className="btn-primary w-full"
+                  data-testid="button-book-assessment"
+                >
+                  Book Assessment
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold text-charcoal mb-4">For Puppies</h3>
+                <p className="text-medium-grey mb-6">
+                  Start the Confident Start Program immediately. No assessment required.
+                </p>
+                <div className="text-3xl font-bold text-primary-blue mb-6">Start Today</div>
+                <Button 
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/package/6/', '_blank')}
+                  className="btn-primary w-full"
+                  data-testid="button-enrol-puppy"
+                >
+                  Enrol Puppy Program
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-primary-blue to-blue-700 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready for calm walks and a confident Bayside companion?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
+          </p>
+          <Button 
+            onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+            size="lg"
+            className="bg-white text-primary-blue hover:bg-gray-100 text-lg px-8 py-4"
+            data-testid="button-book-now-cta"
+          >
+            Book Your Assessment or Puppy Program Today
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+}

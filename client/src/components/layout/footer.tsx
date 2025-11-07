@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ConsultationForm from "@/components/forms/consultation-form";
 import logoImage from "@assets/Business logo 1_1749266952529.jpg";
+import { serviceAreas } from "@/config/locations";
 
 export default function Footer() {
   return (
@@ -55,35 +56,20 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Service Areas */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold">Service Areas</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/services" className="text-white hover:text-primary-blue transition-colors">
-                  Behaviour Modification
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white hover:text-primary-blue transition-colors">
-                  Walk & Train
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white hover:text-primary-blue transition-colors">
-                  One-on-One Coaching
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white hover:text-primary-blue transition-colors">
-                  Professional Walks
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-white hover:text-primary-blue transition-colors">
-                  House Visits
-                </Link>
-              </li>
+              {serviceAreas.map((area) => (
+                <li key={area.slug}>
+                  <Link 
+                    href={area.isLive ? area.slug : "/"} 
+                    className="text-white hover:text-primary-blue transition-colors"
+                  >
+                    {area.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
