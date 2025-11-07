@@ -144,7 +144,7 @@ export default function SandgatePage() {
                 Signature Service
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                The Bayside '<span className="text-primary-blue">Adventure Walk</span>'
+                The Bayside <span className="text-primary-blue">Adventure Walk</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
                 This is our signature one-on-one training session conducted by a professional trainer in the most challenging (and rewarding) local environments. Perfect for dogs that need real exercise and beach play, or those needing obedience proofed against real-world distractions.
@@ -253,7 +253,7 @@ export default function SandgatePage() {
                 Perfect for Puppies
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                'The <span className="text-primary-blue">Confident Start</span> Program' (Puppies)
+                The <span className="text-primary-blue">Confident Start</span> Program
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
                 Give your new puppy the vital social and obedience foundation they need to thrive in the busy Bayside community. This premium program ensures you bypass common puppy issues and raise a calm, confident companion. No initial assessment required to start.
