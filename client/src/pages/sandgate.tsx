@@ -228,47 +228,6 @@ export default function SandgatePage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <Card className="bg-white border-0 shadow-xl">
-              <CardContent className="p-8">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Program Includes:</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">6 private, one-hour, in-home lessons (valued at $720)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Bite inhibition and gentle play</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Toilet training mastery</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Handling and grooming preparation</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Structure and routine establishment</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Recall and focus for future off-leash safety</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <p className="text-green-800 font-semibold mb-1">SPECIAL OFFER</p>
-                    <p className="text-green-700">Enrol now and receive our Dog Raising Guide (PDF) completely free.</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
                 Perfect for Puppies
@@ -319,6 +278,47 @@ export default function SandgatePage() {
                 </Button>
               </div>
             </div>
+
+            <Card className="bg-white border-0 shadow-xl">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-charcoal mb-4">Program Includes:</h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">6 private, one-hour, in-home lessons (valued at $720)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Bite inhibition and gentle play</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Toilet training mastery</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Handling and grooming preparation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Structure and routine establishment</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Recall and focus for future off-leash safety</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <p className="text-green-800 font-semibold mb-1">SPECIAL OFFER</p>
+                    <p className="text-green-700">Enrol now and receive our Dog Raising Guide (PDF) completely free.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
