@@ -86,6 +86,7 @@ export default function SandgatePage() {
         title="Sandgate Dog Training"
         description="Professional dog training in Sandgate, Shorncliffe & Brighton. Master foreshore recall, cafe manners, and loose-leash walking. Expert bayside training with real-world distractions."
         canonical="https://canineconfidence.com.au/dog-training-sandgate"
+        ogImage="/attached_assets/IMG_0358_1762512636150.jpeg"
         keywords={[
           'dog training Sandgate',
           'dog trainer Shorncliffe',
@@ -133,7 +134,7 @@ export default function SandgatePage() {
             <div className="relative">
               <img 
                 src={sandgateHero} 
-                alt="Shorncliffe Pier and Sandgate foreshore - professional dog training location in Brisbane bayside suburbs" 
+                alt="Dog training at Shorncliffe Pier, Sandgate - where your dog learns real-world skills on Brisbane's bayside foreshore" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>

@@ -32,7 +32,7 @@ export function SEO({
     'dog obedience training Brisbane'
   ];
   
-  const allKeywords = [...new Set([...keywords, ...defaultKeywords])].join(', ');
+  const allKeywords = Array.from(new Set([...keywords, ...defaultKeywords])).join(', ');
 
   return (
     <Helmet>
