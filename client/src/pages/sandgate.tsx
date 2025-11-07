@@ -302,40 +302,41 @@ export default function SandgatePage() {
             <Card className="bg-white border-0 shadow-xl">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Program Includes:</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">6 private, one-hour, in-home lessons (valued at $720)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Bite inhibition and gentle play</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Toilet training mastery</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Handling and grooming preparation</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Structure and routine establishment</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Recall and focus for future off-leash safety</span>
-                      </li>
-                    </ul>
+                  <div className="text-center pb-4 border-b">
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">Program Includes:</h3>
+                    <div className="flex items-center justify-center gap-3">
+                      <span className="text-4xl font-bold text-primary-blue">$480</span>
+                      <span className="text-xl text-medium-grey line-through">$720</span>
+                    </div>
+                    <p className="text-green-600 font-semibold mt-2">Save $240</p>
                   </div>
 
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <p className="text-green-800 font-semibold mb-1">SPECIAL OFFER</p>
-                    <p className="text-green-700">Enrol now and receive our Dog Raising Guide (PDF) completely free.</p>
-                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-medium-grey">6 x Private, In-Home Expert Sessions (Save $240)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-medium-grey">Personalised Socialisation Protocols & Exposure Plan</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-medium-grey">Step-by-Step House Training Guidance & Setup</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-medium-grey">The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-medium-grey">Take-Home Training Plan after every session</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                      <span className="text-medium-grey font-semibold">BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)</span>
+                    </li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>
