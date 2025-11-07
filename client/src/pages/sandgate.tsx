@@ -53,6 +53,7 @@ export default function SandgatePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showAdventureDialog, setShowAdventureDialog] = useState(false);
   const [showConfidentStartDialog, setShowConfidentStartDialog] = useState(false);
+  const [showPackagesDialog, setShowPackagesDialog] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -71,6 +72,11 @@ export default function SandgatePage() {
   const handleBookConfidentStart = () => {
     setShowConfidentStartDialog(false);
     window.open('https://canineconfidence.simplybook.net/v2/#packages/6', '_blank');
+  };
+
+  const handleBookPackages = () => {
+    setShowPackagesDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#packages', '_blank');
   };
 
   return (
@@ -405,7 +411,7 @@ export default function SandgatePage() {
             Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
           </p>
           <Button 
-            onClick={() => setShowAssessmentDialog(true)}
+            onClick={() => setShowPackagesDialog(true)}
             size="lg"
             className="bg-amber-400 text-slate-900 hover:bg-amber-500 font-bold text-base sm:text-lg px-8 sm:px-10 py-6 w-full sm:w-auto shadow-2xl border-2 border-amber-500"
             data-testid="button-book-now-cta"
@@ -502,6 +508,39 @@ export default function SandgatePage() {
             
             <Button 
               onClick={() => setShowConfidentStartDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showPackagesDialog} onOpenChange={setShowPackagesDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can browse all available training packages and services, choose your preferred option, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleBookPackages}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowPackagesDialog(false)}
               variant="outline"
               className="w-full py-3"
             >
