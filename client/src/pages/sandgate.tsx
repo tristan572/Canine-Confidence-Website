@@ -150,8 +150,8 @@ export default function SandgatePage() {
                 This is our signature one-on-one training session conducted by a professional trainer in the most challenging (and rewarding) local environments. Perfect for dogs that need real exercise and beach play, or those needing obedience proofed against real-world distractions.
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <p className="text-blue-800 font-semibold text-xl">$80 per session</p>
-                <p className="text-blue-700">Great for dogs that just need a good time - they get to play on the beach and run!</p>
+                <p className="text-blue-800 font-semibold text-xl">Available for all dogs. $80, per hour session.</p>
+                <p className="text-blue-700">5 session packages available for great savings. Let your dog have the time of their life while also learning new skills!</p>
               </div>
 
               <div className="space-y-4">
