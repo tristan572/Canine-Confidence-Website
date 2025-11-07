@@ -263,46 +263,67 @@ export default function SandgatePage() {
               <h2 className="text-4xl font-bold text-charcoal">
                 The <span className="text-primary-blue">Confident Start</span> Program
               </h2>
+              <h3 className="text-2xl font-semibold text-charcoal">
+                Stop Stressing, Start Thriving: Your Puppy's Best Life Starts at Home
+              </h3>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Give your new puppy the vital social and obedience foundation they need to thrive in the busy Bayside community. This premium program ensures you bypass common puppy issues and raise a calm, confident companion. No initial assessment required to start.
+                Most puppy classes focus on basic commands in a crowded hall. We bring customised, private training directly to your Bayside home. Your puppy doesn't need to learn to sit in a sterile classroom; they need to learn to live calmly and confidently in your specific environment.
+              </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                Our 6-session private program is designed to build the foundations for an unbreakable bond and ensure your puppy develops into a calm, reliable Bayside companion. You'll move past common puppy challenges quickly, establishing immediate peace and a shared language.
               </p>
 
               <div className="space-y-4">
+                <h4 className="text-xl font-bold text-charcoal">Key Skills for a Confident Bayside Life:</h4>
+                
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Premium Value</h3>
-                    <p className="text-medium-grey">The 6 private, one-hour, in-home lessons are valued at $720 for comprehensive one-on-one training.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Positive Handling & Vet Prep</h5>
+                    <p className="text-medium-grey">We specifically work on comfortable handling techniques, making nail trims, ear cleaning, and future vet visits stress-free experiences.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Foundation for Life</h3>
-                    <p className="text-medium-grey">Covers essential skills: bite inhibition, toilet training, handling, and establishing structure in the home.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Separation Confidence</h5>
+                    <p className="text-medium-grey">We build the skills needed for your puppy to be happy and calm when left alone, preventing anxiety and destructive behaviours common in new homes.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Recall & Focus</h3>
-                    <p className="text-medium-grey">Focused training to build the trust and response needed for future off-leash safety on the foreshore, preparing them for the crowds and bikes of the Bayside.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Building Environmental Confidence</h5>
+                    <p className="text-medium-grey">We guide you through structured desensitisation to handle common Sandgate sights and sounds—like skateboards on the footpath, strong winds by the foreshore, and loud crowds—ensuring your puppy can handle anything in the future.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h5 className="font-semibold text-charcoal mb-1">Learning How to Learn</h5>
+                    <p className="text-medium-grey">We don't just teach tricks; we teach your puppy how to focus and love learning. This mastery of foundational focus makes all future obedience training effortless.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h5 className="font-semibold text-charcoal mb-1">In-Home Success</h5>
+                    <p className="text-medium-grey">Training occurs in your actual home, yard, and family environment. This means faster and more reliable toilet training, and quick establishment of appropriate play and settling habits where they matter most.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
-                <p className="text-medium-grey mb-4">
-                  View full details on our <Link href="/packages" className="text-primary-blue hover:underline font-semibold">Packages page</Link>.
-                </p>
                 <Button 
                   onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-confident-start"
                 >
-                  Enrol in Confident Start Program
+                  Enrol in The Confident Start Program Today
                 </Button>
               </div>
             </div>
@@ -311,7 +332,10 @@ export default function SandgatePage() {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">Program Includes:</h3>
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">The Confident Start Program: The Value</h3>
+                    <p className="text-medium-grey mb-4">
+                      This exclusive program includes 6 private, one-hour, in-home sessions. You gain the convenience and customised results that eliminate the stress of generalised training.
+                    </p>
                     <div className="flex items-center justify-center gap-3">
                       <span className="text-4xl font-bold text-primary-blue">$480</span>
                       <span className="text-xl text-medium-grey line-through">$720</span>
@@ -319,32 +343,40 @@ export default function SandgatePage() {
                     <p className="text-green-600 font-semibold mt-2">Save $240</p>
                   </div>
 
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                      <span className="text-medium-grey">6 x Private, In-Home Expert Sessions (Save $240)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                      <span className="text-medium-grey">Personalised Socialisation Protocols & Exposure Plan</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                      <span className="text-medium-grey">Step-by-Step House Training Guidance & Setup</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                      <span className="text-medium-grey">The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                      <span className="text-medium-grey">Take-Home Training Plan after every session</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                      <span className="text-medium-grey font-semibold">BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)</span>
-                    </li>
-                  </ul>
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+                    <p className="text-green-800 font-semibold text-center mb-2">🎁 BONUS INCLUDED</p>
+                    <p className="text-green-700 text-center">
+                      Enrol today and receive our <strong>Dog Raising Guide (PDF)</strong> completely free, giving you the detailed strategy and resources used by professionals to maintain your puppy's success.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-3">What You Get:</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">6 x Private, One-Hour, In-Home Sessions</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Comprehensive One-on-One Training with Dedicated Professional</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">Customised Training Plan for Your Home Environment</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                        <span className="text-medium-grey">FREE Dog Raising Guide PDF (Value $50)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="text-center pt-4">
+                    <p className="text-medium-grey italic">
+                      Ready to bypass the stress of group classes and raise a calm, confident Bayside companion?
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
