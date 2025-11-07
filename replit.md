@@ -55,6 +55,9 @@ Preferred communication style: Simple, everyday language.
 - **Contact**: Contact forms, business information, interactive service area map, and video consultation details
 - **Checkout**: Stripe-powered payment processing
 - **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export
+- **Location Pages**: SEO-optimized suburb-specific pages for local search rankings
+  - Sandgate/Shorncliffe (/dog-training-sandgate) - Live
+  - Future locations: Boondall, Northgate, Ascot, Aspley, Chermside (planned)
 
 ### API Endpoints
 - Services CRUD operations
@@ -162,3 +165,31 @@ Preferred communication style: Simple, everyday language.
 - Production: Static file serving with Express
 - Environment-specific logging and error handling
 - Replit-specific development features and banner integration
+
+## Local SEO Strategy
+
+### Location Pages
+- **Purpose**: Suburb-specific landing pages for local search engine optimization
+- **Structure**: Each location page targets specific suburbs with localized content
+- **Configuration**: Centralized location management in `client/src/config/locations.ts`
+- **Features**:
+  - LocalBusiness schema with suburb-specific data
+  - Absolute canonical URLs for proper SEO signaling
+  - Suburb-specific copy highlighting local landmarks and challenges
+  - Direct booking links to SimplyBook.me services/packages
+  - Internal links to main services and packages pages
+  
+### Current Locations
+- **Sandgate/Shorncliffe** (/dog-training-sandgate)
+  - Features: Bayside Adventure Walk, Confident Start Program
+  - Local highlights: Shorncliffe Pier, Sandgate Foreshore, Flinders Parade
+  - Target keywords: "dog training Sandgate", "dog trainer Shorncliffe"
+
+### Scalability
+- Location configuration in `client/src/config/locations.ts` defines all service areas
+- Footer Service Areas section automatically generated from config
+- Adding new location pages requires:
+  1. Create new page component (copy from sandgate.tsx template)
+  2. Add route to App.tsx
+  3. Update location config `isLive: true`
+  4. Customize content for suburb-specific landmarks and challenges
