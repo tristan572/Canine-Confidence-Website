@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check } from "lucide-react";
@@ -49,9 +50,28 @@ const SandgateLocalBusinessSchema = () => {
 };
 
 export default function SandgatePage() {
+  const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
+  const [showAdventureDialog, setShowAdventureDialog] = useState(false);
+  const [showConfidentStartDialog, setShowConfidentStartDialog] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleBookAssessment = () => {
+    setShowAssessmentDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#book/service/3/count/1/', '_blank');
+  };
+
+  const handleBookAdventure = () => {
+    setShowAdventureDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#book/service/8/count/1/', '_blank');
+  };
+
+  const handleBookConfidentStart = () => {
+    setShowConfidentStartDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#book/package/6/', '_blank');
+  };
 
   return (
     <div className="min-h-screen">
@@ -93,7 +113,7 @@ export default function SandgatePage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/3/count/1/', '_blank')}
+                  onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary text-lg px-8 py-4"
                   data-testid="button-book-assessment-hero"
                 >
@@ -173,7 +193,7 @@ export default function SandgatePage() {
                   Learn more about our <Link href="/services" className="text-primary-blue hover:underline font-semibold">Adventure Walk and Training service</Link>.
                 </p>
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/8/count/1/', '_blank')}
+                  onClick={() => setShowAdventureDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-adventure-walk"
                 >
@@ -270,7 +290,7 @@ export default function SandgatePage() {
                   View full details on our <Link href="/packages" className="text-primary-blue hover:underline font-semibold">Packages page</Link>.
                 </p>
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/package/6/', '_blank')}
+                  onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-confident-start"
                 >
@@ -344,7 +364,7 @@ export default function SandgatePage() {
                 </p>
                 <div className="text-3xl font-bold text-primary-blue mb-6">$90</div>
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/service/3/count/1/', '_blank')}
+                  onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary w-full"
                   data-testid="button-book-assessment-adult"
                 >
@@ -361,7 +381,7 @@ export default function SandgatePage() {
                 </p>
                 <div className="text-3xl font-bold text-primary-blue mb-6">Start Today</div>
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/#book/package/6/', '_blank')}
+                  onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary w-full"
                   data-testid="button-enrol-puppy"
                 >
@@ -383,7 +403,7 @@ export default function SandgatePage() {
             Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
           </p>
           <Button 
-            onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+            onClick={() => setShowAssessmentDialog(true)}
             size="lg"
             className="bg-white text-primary-blue hover:bg-gray-100 text-lg px-8 py-4"
             data-testid="button-book-now-cta"
@@ -392,6 +412,106 @@ export default function SandgatePage() {
           </Button>
         </div>
       </section>
+
+      {/* Security Dialogs */}
+      <Dialog open={showAssessmentDialog} onOpenChange={setShowAssessmentDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleBookAssessment}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowAssessmentDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showAdventureDialog} onOpenChange={setShowAdventureDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleBookAdventure}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowAdventureDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showConfidentStartDialog} onOpenChange={setShowConfidentStartDialog}>
+        <DialogContent className="max-w-md w-full p-6">
+          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+            Secure Booking System
+          </DialogTitle>
+          <DialogDescription className="text-gray-600 mb-6">
+            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+          </DialogDescription>
+          
+          <div className="space-y-4">
+            <Button 
+              onClick={handleBookConfidentStart}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+            >
+              Continue to Secure Booking
+            </Button>
+            
+            <Button 
+              onClick={() => setShowConfidentStartDialog(false)}
+              variant="outline"
+              className="w-full py-3"
+            >
+              Cancel
+            </Button>
+          </div>
+          
+          <div className="mt-4 text-xs text-gray-500 text-center">
+            <p>🔒 Secure SSL encrypted booking system</p>
+            <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
