@@ -67,7 +67,7 @@ export default function SandgatePage() {
 
   const handleBookAdventure = () => {
     setShowAdventureDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/service/8/count/1/', '_blank');
+    window.open('https://canineconfidence.simplybook.net/v2/#book/service/5', '_blank');
   };
 
   const handleBookConfidentStart = () => {
