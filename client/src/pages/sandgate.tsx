@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { Waves, MapPin, Phone, Check, Calendar } from "lucide-react";
+import { Waves, MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart } from "lucide-react";
 import sandgateHero from "@assets/stock_images/shorncliffe_pier_san_cc4bcd4d.jpg";
 import ConsultationForm from "@/components/forms/consultation-form";
 
@@ -436,6 +436,21 @@ export default function SandgatePage() {
                   <ConsultationForm />
                 </DialogContent>
               </Dialog>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
+              <div className="flex items-center">
+                <ShieldCheck className="w-5 h-5 mr-2" />
+                <span>Fully Insured</span>
+              </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                <span>Certified Professional</span>
+              </div>
+              <div className="flex items-center">
+                <Heart className="w-5 h-5 mr-2" />
+                <span>Satisfaction Guaranteed</span>
+              </div>
             </div>
           </div>
         </div>
