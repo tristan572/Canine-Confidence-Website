@@ -57,7 +57,8 @@ Preferred communication style: Simple, everyday language.
 - **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export
 - **Location Pages**: SEO-optimized suburb-specific pages for local search rankings
   - Sandgate/Shorncliffe (/dog-training-sandgate) - Live
-  - Future locations: Boondall, Northgate, Ascot, Aspley, Chermside (planned)
+  - Northgate (/dog-training-northgate) - Live
+  - Future locations: Boondall, Ascot, Aspley, Chermside (planned)
 
 ### API Endpoints
 - Services CRUD operations
@@ -184,6 +185,12 @@ Preferred communication style: Simple, everyday language.
   - Features: Bayside Adventure Walk, Confident Start Program
   - Local highlights: Shorncliffe Pier, Sandgate Foreshore, Flinders Parade
   - Target keywords: "dog training Sandgate", "dog trainer Shorncliffe"
+
+- **Northgate** (/dog-training-northgate)
+  - Features: Kalinga Park Walk & Train, 1-on-1 Coaching Sessions, Initial Canine Success Assessment
+  - Local highlights: Kalinga Park, Kedron Brook bikeway, Nundah
+  - Target keywords: "dog training Northgate", "dog trainer Nundah", "Kalinga Park dog training"
+  - Services: Walk & Train (Service ID 6), Private Coaching (Service ID 7), Assessment (Service ID 16)
 
 ### Scalability
 - Location configuration in `client/src/config/locations.ts` defines all service areas

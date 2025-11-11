@@ -19,6 +19,7 @@ import Admin from "@/pages/admin";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
 import Sandgate from "@/pages/sandgate";
+import Northgate from "@/pages/northgate";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -49,6 +50,7 @@ function Router() {
         <Route path="/checkout" component={Checkout} />
         <Route path="/payment-success" component={PaymentSuccess} />
         <Route path="/dog-training-sandgate" component={Sandgate} />
+        <Route path="/dog-training-northgate" component={Northgate} />
         <Route component={NotFound} />
       </Switch>
     </>

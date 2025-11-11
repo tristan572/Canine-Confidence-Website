@@ -18,7 +18,7 @@ export const serviceAreas: LocationArea[] = [
   {
     name: "Northgate",
     slug: "/dog-training-northgate",
-    isLive: false
+    isLive: true
   },
   {
     name: "Ascot",
