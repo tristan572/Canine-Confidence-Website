@@ -106,10 +106,10 @@ export default function NorthgatePage() {
                   <span className="text-primary-blue font-semibold">Northgate, Nundah & Kalinga</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  Northgate Dog Training: <span className="text-primary-blue">Results-Driven Behaviour Change</span>
+                  Northgate Dog Training: <span className="text-primary-blue">Real-Life Behaviour Modification</span>
                 </h1>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Northgate locals demand real results. Whether your dog pulls relentlessly on the Kedron Brook bikeway or lunges at every dog in Kalinga Park, our proven Walk & Train and 1-on-1 Coaching programs deliver measurable, lasting transformation.
+                  Northgate locals demand real results. Whether your dog pulls relentlessly on the Kedron Brook bikeway or barks at every dog in Kalinga Park, our proven Walk & Train and 1-on-1 Coaching programs deliver measurable, lasting transformation.
                 </p>
               </div>
 
