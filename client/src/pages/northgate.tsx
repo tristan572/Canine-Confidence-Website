@@ -261,32 +261,18 @@ export default function NorthgatePage() {
                       <div className="text-2xl font-bold text-primary-blue">$60</div>
                     </div>
 
-                    <div className="border-2 border-green-500 rounded-lg p-4 bg-green-50">
-                      <div className="flex items-center justify-between mb-2">
-                        <div>
-                          <p className="font-semibold text-charcoal">High-Volume Package</p>
-                          <p className="text-sm text-medium-grey">4 Sessions</p>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$220</div>
-                          <p className="text-sm text-green-700">$55 per session</p>
-                        </div>
-                      </div>
-                      <p className="text-green-700 font-semibold text-center">Save $20</p>
-                    </div>
-
                     <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
                       <div className="flex items-center justify-between mb-2">
                         <div>
-                          <p className="font-semibold text-charcoal">Intensive Package</p>
-                          <p className="text-sm text-medium-grey">8 Sessions</p>
+                          <p className="font-semibold text-charcoal">Package Deal</p>
+                          <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$430</div>
-                          <p className="text-sm text-green-700">$53.75 per session</p>
+                          <div className="text-2xl font-bold text-primary-blue">$280</div>
+                          <p className="text-sm text-green-700">$56 per session</p>
                         </div>
                       </div>
-                      <p className="text-green-700 font-semibold text-center">Save $50 - Best Value!</p>
+                      <p className="text-green-700 font-semibold text-center">Save $20 - Best Value!</p>
                     </div>
                   </div>
 
@@ -471,18 +457,18 @@ export default function NorthgatePage() {
               </Dialog>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 pt-8">
-              <div className="flex flex-col items-center gap-3">
-                <ShieldCheck className="w-12 h-12 text-blue-100" />
-                <p className="text-white font-semibold">NDTF Certified Professional</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
+              <div className="flex items-center">
+                <ShieldCheck className="w-5 h-5 mr-2" />
+                <span>Fully Insured</span>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <Award className="w-12 h-12 text-blue-100" />
-                <p className="text-white font-semibold">Proven Track Record</p>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                <span>Certified Professional</span>
               </div>
-              <div className="flex flex-col items-center gap-3">
-                <Heart className="w-12 h-12 text-blue-100" />
-                <p className="text-white font-semibold">Force-Free Methods</p>
+              <div className="flex items-center">
+                <Heart className="w-5 h-5 mr-2" />
+                <span>Satisfaction Guaranteed</span>
               </div>
             </div>
           </div>
