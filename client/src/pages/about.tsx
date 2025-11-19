@@ -53,10 +53,10 @@ export default function AboutPage() {
             About Us
           </h1>
           <h2 className="text-3xl font-semibold text-charcoal mb-6">
-            A <span className="text-primary-blue">Different</span> Path to Dog Training
+            From <span className="text-primary-blue">Passion</span> to Obsession
           </h2>
           <p className="text-xl text-medium-grey mb-8">
-            I'm Tristan, the owner of Canine Confidence. I didn't grow up with dogs, and I didn't have a "problem dog" that pushed me into training. For me, it's always been simple—I just love dogs. Wherever I went, I found myself connecting with them, and they seemed to connect with me. That natural bond was always there.
+            My journey into dog behaviour started in 2016 when I began training my own dog. I became fascinated by the process, but for years, it was just a serious passion alongside a standard 9-to-5.
           </p>
         </div>
       </section>
@@ -67,12 +67,18 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Turning <span className="text-primary-blue">Passion Into Purpose</span></h2>
+                <h2 className="text-4xl font-bold text-charcoal">The <span className="text-primary-blue">Turning Point</span></h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  In 2020, life threw me a curveball when I was made redundant from my job. It made me realise how quickly things can change, and how important it is to spend your time doing something you truly love. For me, that meant finally pursuing dog training.
+                  That changed in 2020. When I was made redundant, I saw it as the push I needed to turn that passion into a career. I didn't want to be another backyard trainer; I wanted to master the craft.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  As soon as I made the decision, I dove straight in. I began working with dogs in 2020 and by 2022 I became a nationally accredited dog trainer through the National Dog Trainers Federation (NDTF). From the beginning, my focus has been on creating a better life for family dogs and the people who love them.
+                  Since then, I have been relentless. I formalised my skills by earning my Certificate III in Dog Behaviour and Training through the National Dog Trainers Federation (NDTF), but that was just the baseline.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  I have spent every day since 2020 immersing myself in the industry—devouring books, podcasts, online courses, and travelling to seminars to learn from the best in the field.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  At Canine Confidence, you get the benefit of that obsession. I don't rely on "natural bonds" or guesswork. I rely on a deep, constantly evolving knowledge of canine psychology to build clear structure and communication for your dog.
                 </p>
               </div>
               
