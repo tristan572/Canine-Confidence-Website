@@ -158,9 +158,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Glasses className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Structure & Clarity</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Predictability & Clarity</h3>
               <p className="text-medium-grey">
-                Anxiety comes from confusion. We provide clear rules and consistent boundaries so your dog knows exactly what is expected of them. When expectations are predictable, your dog feels secure, confident, and calm.
+                Anxiety comes from confusion. We provide clear expectations and consistent boundaries so your dog knows exactly what is expected of them. When expectations are predictable, your dog feels secure, confident, and calm.
               </p>
             </Card>
           </div>
