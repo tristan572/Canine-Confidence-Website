@@ -78,7 +78,7 @@ export default function AboutPage() {
                   I have spent every day since 2020 immersing myself in the industry—devouring books, podcasts, online courses, and travelling to seminars to learn from the best in the field.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, you get the benefit of that obsession. I don't rely on "natural bonds" or guesswork. I rely on a deep, constantly evolving knowledge of canine psychology to build clear structure and communication for your dog.
+                  At Canine Confidence, you get the benefit of that obsession. I don't rely on "natural bonds" or guesswork. I rely on advanced canine psychology and continuous professional study to handle complex behavioural challenges and build an unbreakable bond with your dog.
                 </p>
               </div>
               
