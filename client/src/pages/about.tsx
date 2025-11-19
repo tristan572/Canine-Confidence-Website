@@ -210,8 +210,8 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">90+ Five-Star Reviews</h3>
-                    <p className="text-medium-grey">Consistently rated 5 stars on Madpaws by satisfied clients who've seen real, lasting results.</p>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">Verified Results</h3>
+                    <p className="text-medium-grey">Over 100+ 5-Star Outcomes. View detailed testimonials from North Brisbane families on our Client Results Page.</p>
                   </div>
                 </div>
 
