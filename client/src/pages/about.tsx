@@ -72,10 +72,10 @@ export default function AboutPage() {
                   That changed in 2020. When I was made redundant, I saw it as the push I needed to turn that passion into a career. I didn't want to be another backyard trainer; I wanted to master the craft.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Since then, I have been relentless. I formalised my skills by earning my Certificate III in Dog Behaviour and Training through the National Dog Trainers Federation (NDTF), but that was just the baseline.
+                  Since then, I have been relentless. I formalised my skills by earning my Certificate III in Dog Behaviour and Training through the National Dog Trainers Federation (NDTF), but that certification was just the starting point.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  I have spent every day since 2020 immersing myself in the industry—devouring theory from books, podcasts, online courses, and travelling to seminars. However, this academic knowledge is only the foundation. The real expertise comes from the countless dogs I have worked with across North Brisbane, as hands-on experience and real-world application always outweigh the textbook.
+                  I have spent every day since 2020 immersing myself in the industry—devouring theory from books, podcasts, online courses, and travelling to seminars. However, this academic knowledge is only the theory. The real expertise comes from the countless dogs I have worked with across North Brisbane, as hands-on experience and real-world application always outweigh the textbook.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
                   At Canine Confidence, you get the benefit of that obsession. I don't rely on "natural bonds" or guesswork. I rely on advanced canine psychology and continuous professional study to handle complex behavioural challenges and build an unbreakable bond with your dog.
