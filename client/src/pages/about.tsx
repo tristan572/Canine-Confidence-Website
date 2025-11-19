@@ -119,7 +119,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">The Canine <span className="text-primary-blue">Confidence</span> Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              At Canine Confidence, we believe dog training should be about more than commands and corrections. It's about creating harmony between dogs and families through understanding, fulfilment, and connection. Every dog deserves to be genuinely living their best life.
+              At Canine Confidence, training goes beyond basic commands and corrections. It is about building a bond based on real understanding. By focusing on the mechanics of how dogs learn and what they need biologically, we create a relationship built on clarity, not just compliance.
             </p>
           </div>
 
@@ -130,7 +130,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Play-Based Learning</h3>
               <p className="text-medium-grey">
-                Through play, dogs learn to love working with their humans, and humans discover how much fun it can be to teach and guide their dogs. Training becomes a positive, engaging experience rather than a stressful task.
+                We use play as our primary engine for engagement. When a dog works for a game rather than just a treat or to avoid a correction, their motivation skyrockets. We turn training from a stressful chore into a shared activity that builds a powerful bond.
               </p>
             </Card>
 
@@ -138,9 +138,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Skills</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Real-World Skills</h3>
               <p className="text-medium-grey">
-                We give dogs the essential skills they need to navigate through our world safely and in harmony with us, building confidence for life's everyday challenges.
+                We don't just train for the living room; we train for reality. We equip your dog with the essential life skills they need to navigate the modern world safely, ensuring they can handle public environments with confidence.
               </p>
             </Card>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
-                Every dog has genetic needs that must be met for true happiness. We identify and fulfil these needs as a priority.
+                Most behavioural issues stem from frustration. We identify what your dog was bred to do and provide a constructive outlet for that energy. By meeting their biological needs first, we eliminate the root cause of many problem behaviours.
               </p>
             </Card>
 
@@ -158,9 +158,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Glasses className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Clarity in Life</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-4">Structure & Clarity</h3>
               <p className="text-medium-grey">
-                Clear expectations and consistent communication create an environment where dogs feel secure and confident because they understand what's expected of them.
+                Anxiety comes from confusion. We provide clear rules and consistent boundaries so your dog knows exactly what is expected of them. When expectations are predictable, your dog feels secure, confident, and calm.
               </p>
             </Card>
           </div>
