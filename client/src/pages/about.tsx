@@ -246,7 +246,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Approach</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              We take the time to understand your dog's individual needs, genetics, and personality, creating a personalised approach that fits both your dog's natural learning style and your family's lifestyle.
+              We take the time to understand your dog's individual needs, genetics, and personality, creating a bespoke strategy that fits both your dog's natural learning style and your family's lifestyle.
             </p>
           </div>
 
@@ -255,32 +255,32 @@ export default function AboutPage() {
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Search className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Assessment</h3>
-              <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's behaviour, needs, and goals.</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Behavioural Audit</h3>
+              <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's current behaviour, needs, and specific goals.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <FileText className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Custom Plan</h3>
-              <p className="text-sm text-medium-grey">Personalised training program designed specifically for your dog.</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Personalised Strategy</h3>
+              <p className="text-sm text-medium-grey">A customised training program designed specifically for your dog's learning style.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Training</h3>
-              <p className="text-sm text-medium-grey">Hands-on sessions with both dog and owner to build skills and confidence.</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Hands-On Skill Transfer</h3>
+              <p className="text-sm text-medium-grey">Focused sessions with both dog and owner to build practical skills and confidence.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <HeartHandshake className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Support</h3>
-              <p className="text-sm text-medium-grey">Ongoing guidance and support to maintain and improve results.</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Sustained Results</h3>
+              <p className="text-sm text-medium-grey">Ongoing guidance and support to maintain and improve long-term behaviour.</p>
             </Card>
           </div>
         </div>
