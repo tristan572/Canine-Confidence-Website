@@ -190,13 +190,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Why I Train Differently</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Many trainers focus heavily on commands, corrections, and "fixing" dogs. But what I've learned is that when you tap into a dog's natural drives—through play, engagement, and genetic fulfilment—you don't just train a dog, you build harmony.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  My own dog, Cleo, has thrived with this approach. She's never been destructive, anxious, or difficult around the home because her needs are met. She gets to play, connect, and live the kind of life every dog deserves.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  That's what I want for every dog and family I work with: a dog that feels fulfilled and content, a household that's calm, happy, and free from the stress of problem behaviours, and a bond built on trust, communication, and fun.
+                  Many trainers focus solely on commands, corrections, and simply "fixing" symptoms. I focus on the root cause. I learned that when you tap into a dog's natural drives—through play, engagement, and genetic fulfilment—you don't just train a dog, you build an unbreakable bond. My own dog, Cleo, is proof of this approach. She has never been destructive or highly anxious because her needs are met consistently. That is the outcome I work towards for every family: a fulfilled, confident dog, and a household free from the stress of unpredictable behaviour.
                 </p>
               </div>
 
