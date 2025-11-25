@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -16,12 +16,8 @@ import {
   Home, 
   Phone, 
   ShieldCheck, 
-  Award, 
-  Heart,
   Clock,
   MapPin,
-  DollarSign,
-  Target,
   Calendar,
   CheckCircle,
   Star,
@@ -30,11 +26,13 @@ import {
   Mountain
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
-import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceCard from "@/components/ui/service-card";
-import ProductCard from "@/components/ui/product-card";
-import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
+
+// Lazy load heavy components for mobile performance
+const ConsultationForm = lazy(() => import("@/components/forms/consultation-form"));
+const ProductCard = lazy(() => import("@/components/ui/product-card"));
+const BlogCard = lazy(() => import("@/components/ui/blog-card"));
 import type { Service, Product, BlogPost, Package, Testimonial } from "@shared/schema";
 
 export default function HomePage() {
@@ -48,9 +46,7 @@ export default function HomePage() {
     queryKey: ["/api/packages"],
   });
 
-  const { data: products, isLoading: productsLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-  });
+  // Products query removed for mobile performance (not used on home page)
 
   const { data: blogPosts, isLoading: blogLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog"],
@@ -119,7 +115,9 @@ export default function HomePage() {
                   <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                     <DialogTitle>Free Phone Consultation</DialogTitle>
                     <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs and find the right solution for your family.</DialogDescription>
-                    <ConsultationForm />
+                    <Suspense fallback={<div className="p-4 text-center text-sm text-medium-grey">Loading form...</div>}>
+                      <ConsultationForm />
+                    </Suspense>
                   </DialogContent>
                 </Dialog>
 
@@ -435,7 +433,9 @@ export default function HomePage() {
                     <DialogContent className="max-w-md">
                       <DialogTitle>Request Free Phone Call</DialogTitle>
                       <DialogDescription>Schedule a 15-minute complimentary consultation to discuss your training needs and get expert advice.</DialogDescription>
-                      <ConsultationForm />
+                      <Suspense fallback={<div className="p-4 text-center text-sm text-medium-grey">Loading form...</div>}>
+                        <ConsultationForm />
+                      </Suspense>
                     </DialogContent>
                   </Dialog>
                 </CardContent>
@@ -520,7 +520,9 @@ export default function HomePage() {
                 <DialogContent className="max-w-md">
                   <DialogTitle>Request Free Call</DialogTitle>
                   <DialogDescription>Connect with us for a complimentary consultation to discuss how we can help you and your dog.</DialogDescription>
-                  <ConsultationForm />
+                  <Suspense fallback={<div className="p-4 text-center text-sm text-medium-grey">Loading form...</div>}>
+                    <ConsultationForm />
+                  </Suspense>
                 </DialogContent>
               </Dialog>
             </div>
