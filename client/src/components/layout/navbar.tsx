@@ -98,7 +98,7 @@ export default function Navbar() {
                     <Button 
                       className="w-full btn-primary"
                       onClick={() => {
-                        setShowBookingWidget(true);
+                        window.open('https://canineconfidence.simplybook.net/v2/', '_blank');
                         setMobileMenuOpen(false);
                       }}
                     >
