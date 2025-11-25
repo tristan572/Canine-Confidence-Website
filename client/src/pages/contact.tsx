@@ -56,7 +56,7 @@ export default function ContactPage() {
               <img 
                 src={contactHeroImage} 
                 alt="Happy confident dog enjoying life after successful training with Canine Confidence in North Brisbane, demonstrating effective play-based training results" 
-                className="rounded-2xl shadow-2xl w-full h-full object-contain"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover object-center"
                 width={600}
                 height={400}
                 loading="lazy"

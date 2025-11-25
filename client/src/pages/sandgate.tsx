@@ -135,7 +135,7 @@ export default function SandgatePage() {
               <img 
                 src={sandgateHero} 
                 alt="Dog training at Shorncliffe Pier, Sandgate - where your dog learns real-world skills on Brisbane's bayside foreshore" 
-                className="rounded-2xl shadow-2xl w-full h-full object-contain"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover object-center"
                 width={600}
                 height={400}
                 loading="lazy"
