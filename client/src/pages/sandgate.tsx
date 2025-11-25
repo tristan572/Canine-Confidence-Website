@@ -131,11 +131,11 @@ export default function SandgatePage() {
               </div>
             </div>
             
-            <div className="relative" style={{ aspectRatio: '3/2' }}>
+            <div className="relative">
               <img 
                 src={sandgateHero} 
                 alt="Dog training at Shorncliffe Pier, Sandgate - where your dog learns real-world skills on Brisbane's bayside foreshore" 
-                className="rounded-2xl shadow-2xl w-full h-full object-cover object-center"
+                className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
                 loading="lazy"

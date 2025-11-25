@@ -52,11 +52,11 @@ export default function ContactPage() {
               </div>
             </div>
             
-            <div className="relative" style={{ aspectRatio: '3/2' }}>
+            <div className="relative">
               <img 
                 src={contactHeroImage} 
                 alt="Happy confident dog enjoying life after successful training with Canine Confidence in North Brisbane, demonstrating effective play-based training results" 
-                className="rounded-2xl shadow-2xl w-full h-full object-cover object-center"
+                className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
                 loading="lazy"

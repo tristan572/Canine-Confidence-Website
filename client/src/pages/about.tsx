@@ -102,11 +102,11 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="relative" style={{ aspectRatio: '3/2' }}>
+            <div className="relative">
               <img 
                 src={aboutHeroImage} 
                 alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach" 
-                className="rounded-2xl shadow-2xl w-full h-full object-cover object-center"
+                className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
                 loading="lazy"
@@ -175,11 +175,11 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative" style={{ aspectRatio: '3/2' }}>
+            <div className="relative">
               <img 
                 src={aboutTrainingImage} 
                 alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods" 
-                className="rounded-2xl shadow-2xl w-full h-full object-cover object-center"
+                className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
                 loading="lazy"
