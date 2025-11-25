@@ -11,31 +11,29 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets with long-term caching
-app.use('/attached_assets', express.static('attached_assets', {
-  maxAge: '1y', // 1 year for content-addressed assets
-  immutable: true,
-  etag: false
-}));
+// Serve attached assets - standard caching
+app.use('/attached_assets', express.static('attached_assets'));
 
-// Cache headers middleware - CRITICAL for performance
+// Simple, proven cache headers for optimal performance
 app.use((req, res, next) => {
-  // Add cache headers for versioned static assets (Vite hashed files)
-  if (req.path.match(/\.[a-z0-9]{8,}\.(js|css|woff2|webp|svg|ico)$/i)) {
+  const path = req.path;
+  
+  // Hashed assets from Vite - can cache aggressively
+  if (/\/[a-z0-9]{8,}\.(js|css|woff2|webp|svg|ico)($|\?)/.test(path)) {
     res.set({
-      'Cache-Control': 'public, max-age=31536000' // 1 year for hashed files
+      'Cache-Control': 'public, max-age=31536000, immutable'
     });
   }
-  // Add cache headers for API responses
-  else if (req.path.startsWith('/api')) {
+  // API endpoints - short cache for freshness
+  else if (path.startsWith('/api/')) {
     res.set({
-      'Cache-Control': 'public, max-age=60' // 60 seconds for API (shorter for freshness)
+      'Cache-Control': 'public, max-age=300' // 5 minutes
     });
   }
-  // HTML pages with validation - shorter cache for freshness
-  else if (req.path === '/' || req.path.endsWith('.html')) {
+  // HTML and other documents - must validate
+  else {
     res.set({
-      'Cache-Control': 'public, max-age=300, must-revalidate' // 5 minutes for HTML
+      'Cache-Control': 'public, max-age=3600, must-revalidate' // 1 hour
     });
   }
   next();
