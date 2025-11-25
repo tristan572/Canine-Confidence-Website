@@ -16,15 +16,17 @@ import {
   Home, 
   Phone, 
   ShieldCheck, 
+  Award,
+  Heart,
   Clock,
   MapPin,
+  DollarSign,
   Calendar,
   CheckCircle,
   Star,
   ClipboardList,
   MapPinned,
-  Mountain,
-  DollarSign
+  Mountain
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ConsultationForm from "@/components/forms/consultation-form";
@@ -528,10 +530,12 @@ export default function HomePage() {
                 <span>Fully Insured</span>
               </div>
               <div className="flex items-center">
-                <span>✓ Certified Professional</span>
+                <Award className="w-5 h-5 mr-2" />
+                <span>Certified Professional</span>
               </div>
               <div className="flex items-center">
-                <span>✓ Satisfaction Guaranteed</span>
+                <Heart className="w-5 h-5 mr-2" />
+                <span>Satisfaction Guaranteed</span>
               </div>
             </div>
           </div>
