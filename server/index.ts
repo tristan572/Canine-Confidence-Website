@@ -1,11 +1,8 @@
 import express, { type Request, Response, NextFunction } from "express";
 import compression from "compression";
-import path from "path";
-import { fileURLToPath } from "url";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 // Enable gzip compression - CRITICAL for TTFB
@@ -14,30 +11,32 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets - use absolute path for production reliability
-const assetsPath = path.join(__dirname, '..', 'attached_assets');
-app.use('/attached_assets', express.static(assetsPath));
+// Serve attached assets with long-term caching
+app.use('/attached_assets', express.static('attached_assets', {
+  maxAge: '1y', // 1 year for content-addressed assets
+  immutable: true,
+  etag: false
+}));
 
-// Simple, proven cache headers for optimal performance
+// Cache headers middleware - CRITICAL for performance
 app.use((req, res, next) => {
-  const path = req.path;
-  
-  // Hashed assets from Vite - can cache aggressively
-  if (/\/[a-z0-9]{8,}\.(js|css|woff2|webp|svg|ico)($|\?)/.test(path)) {
+  // Add cache headers for static assets
+  if (req.path.match(/\.(js|css|woff2|png|jpg|jpeg|webp|svg|ico)$/)) {
     res.set({
-      'Cache-Control': 'public, max-age=31536000, immutable'
+      'Cache-Control': 'public, max-age=31536000, immutable', // 1 year for hashed assets
+      'ETag': '' // Disable ETags for static assets
     });
   }
-  // API endpoints - short cache for freshness
-  else if (path.startsWith('/api/')) {
+  // Add cache headers for API responses
+  else if (req.path.startsWith('/api')) {
     res.set({
-      'Cache-Control': 'public, max-age=300' // 5 minutes
+      'Cache-Control': 'public, max-age=300, must-revalidate' // 5 minutes for API
     });
   }
-  // HTML and other documents - must validate
-  else {
+  // HTML pages with validation
+  else if (req.path === '/' || req.path.endsWith('.html')) {
     res.set({
-      'Cache-Control': 'public, max-age=3600, must-revalidate' // 1 hour
+      'Cache-Control': 'public, max-age=3600, must-revalidate' // 1 hour for HTML
     });
   }
   next();

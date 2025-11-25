@@ -122,7 +122,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$90",
         category: "assessment",
-        imageUrl: "/attached_assets/IMG_0076_1758798863394.jpeg",
+        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260.jpg",
         features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to our training system, designed to save you time and money"]
       },
 
@@ -133,7 +133,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/IMG_0237_1760870579906.jpeg",
+        imageUrl: "/attached_assets/image_1750049391709.png",
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
@@ -143,7 +143,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/IMG_0231_1760868802171.jpeg",
+        imageUrl: "/attached_assets/image_1750049431855.png",
         features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
@@ -153,7 +153,7 @@ export class MemStorage implements IStorage {
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.webp",
+        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.jpg",
         features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
@@ -163,7 +163,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.webp",
+        imageUrl: "/attached_assets/image_1750049520029.png",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
@@ -173,7 +173,7 @@ export class MemStorage implements IStorage {
         location: "From client's home",
         price: "$45",
         category: "walking",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.webp",
+        imageUrl: "/attached_assets/image_1750049687824.png",
         features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
       },
       {
@@ -269,7 +269,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/IMG_0177_1760877958185.webp",
+        imageUrl: "/attached_assets/image_1750048904991.png",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised Socialisation Protocols & Exposure Plan",
@@ -288,7 +288,7 @@ export class MemStorage implements IStorage {
         duration: "1 week",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/IMG_0084_1760870993102.jpeg",
+        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839.jpg",
         features: [
           "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
           "Foundations of High-Level Engagement and Obedience on the move",
@@ -307,7 +307,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/F2CCD03F-F0E2-4A96-B411-2D1B602E7C73.jpg_1760360884952.webp",
+        imageUrl: "/attached_assets/image_1750049297197.png",
         features: [
           "Intensive Sessions focusing on effective, lasting behavioural change",
           "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
@@ -388,7 +388,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/timur-shakerzianov-rbNt2HNhfpM-unsplash_1760531420538.webp",
+        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278.jpg",
         features: [
           "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
           "Customised Training Approach and problem-solving strategy",
@@ -407,7 +407,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.webp",
+        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
         features: [
           "5 x Private, In-Home Training Sessions (Done by the trainer)",
           "Completely Flexible Focus—use for obedience, foundations, behaviour modification, or fulfilment",

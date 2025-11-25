@@ -31,8 +31,8 @@ export function LocalBusinessSchema() {
       "geoRadius": "30000"
     },
     "priceRange": "$90 - $990",
-    "image": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.webp",
-    "logo": "https://canineconfidence.com.au/attached_assets/canine_confidence_logo_clean_1758887288824.webp",
+    "image": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.jpg",
+    "logo": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.jpg",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

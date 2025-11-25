@@ -35,6 +35,7 @@ import ServiceCard from "@/components/ui/service-card";
 import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
+import ReactMarkdown from "react-markdown";
 import type { Service, Product, BlogPost, Package, Testimonial } from "@shared/schema";
 
 export default function HomePage() {
@@ -153,7 +154,7 @@ export default function HomePage() {
               <img 
                 src={heroImage} 
                 alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
-                className="hero-image rounded-2xl shadow-2xl w-full"
+                className="rounded-2xl shadow-2xl w-full h-auto"
                 loading="eager"
               />
               
@@ -225,7 +226,7 @@ export default function HomePage() {
               <img 
                 src={testimonialsImage} 
                 alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
-                className="testimonial-image rounded-2xl shadow-2xl w-full"
+                className="rounded-2xl shadow-2xl w-full h-auto"
                 loading="lazy"
               />
               
@@ -299,8 +300,8 @@ export default function HomePage() {
                   <CardContent className="p-8">
                     <div className="text-center mb-6">
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
-                      <div className="text-gray-600 text-sm mb-4 text-left">
-                        {pkg.description}
+                      <div className="text-gray-600 text-sm mb-4 prose prose-sm max-w-none text-left">
+                        <ReactMarkdown>{pkg.description}</ReactMarkdown>
                       </div>
                       
                       <div className="flex items-center justify-center gap-2">

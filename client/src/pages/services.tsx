@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import ReactMarkdown from "react-markdown";
-import servicesHeroImage from "@assets/IMG_0237_1760870095911.jpeg";
+import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import { 
   GraduationCap, 
   Footprints, 
@@ -107,7 +107,7 @@ export default function ServicesPage() {
               <img 
                 src={servicesHeroImage} 
                 alt="Tristan, NDTF certified professional dog trainer, providing play-based training services in North Brisbane with positive reinforcement methods" 
-                className="service-image rounded-2xl shadow-2xl w-full"
+                className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
           </div>
