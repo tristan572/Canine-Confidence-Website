@@ -152,11 +152,11 @@ Preferred communication style: Simple, everyday language.
 - **Dynamic imports**: Each page loads on-demand when navigated to
 
 ### Image Optimization
-- **LCP optimization**: Hero images use `loading="eager"` for fastest paint
+- **LCP optimization**: Hero images use `loading="eager"` and `decoding="sync"` for fastest paint
+- **Image compression**: All images compressed to ~85% quality at max 1200px width (reduced from ~70MB to ~8.5MB)
 - **Lazy loading**: Below-fold images use `loading="lazy"` to defer loading
 - **Aspect ratios**: All image containers have explicit aspect-ratio CSS to prevent CLS
 - **Dimensions**: All images specify width/height to reserve space during load
-- **Async decoding**: Images use `decoding="async"` to avoid blocking main thread
 
 ### Resource Hints (index.html)
 - **Preconnect**: fonts.googleapis.com, fonts.gstatic.com, replit.com

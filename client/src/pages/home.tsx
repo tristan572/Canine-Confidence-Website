@@ -6,8 +6,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import heroImage from "@assets/IMG_0177_1760877958185.jpeg";
-import testimonialsImage from "@assets/DSC_0171_1758792971820.jpg";
+import heroImageJpeg from "@assets/IMG_0177_1760877958185.jpeg";
+import heroImage800 from "@assets/IMG_0177_hero_800.webp";
+import heroImage1200 from "@assets/IMG_0177_hero_1200.webp";
+import testimonialsImageJpeg from "@assets/DSC_0171_1758792971820.jpg";
+import testimonialsImage800 from "@assets/DSC_0171_testimonials_800.webp";
+import testimonialsImage1200 from "@assets/DSC_0171_testimonials_1200.webp";
 import { 
   GraduationCap, 
   Footprints, 
@@ -151,15 +155,22 @@ export default function HomePage() {
             </div>
             
             <div className="relative" style={{ aspectRatio: '3/2' }}>
-              <img 
-                src={heroImage} 
-                alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
-                className="rounded-2xl shadow-2xl w-full h-full object-cover"
-                width={600}
-                height={400}
-                loading="eager"
-                decoding="sync"
-              />
+              <picture>
+                <source 
+                  type="image/webp"
+                  srcSet={`${heroImage800} 800w, ${heroImage1200} 1200w`}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <img 
+                  src={heroImageJpeg} 
+                  alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
+                  className="rounded-2xl shadow-2xl w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
                 <div className="flex items-center space-x-3">
@@ -226,15 +237,22 @@ export default function HomePage() {
             </div>
             
             <div className="relative" style={{ aspectRatio: '3/2' }}>
-              <img 
-                src={testimonialsImage} 
-                alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
-                className="rounded-2xl shadow-2xl w-full h-full object-cover"
-                width={600}
-                height={400}
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source 
+                  type="image/webp"
+                  srcSet={`${testimonialsImage800} 800w, ${testimonialsImage1200} 1200w`}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <img 
+                  src={testimonialsImageJpeg} 
+                  alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
+                  className="rounded-2xl shadow-2xl w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">
                 <div className="flex items-center gap-2 mb-2">
