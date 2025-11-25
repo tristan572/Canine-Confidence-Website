@@ -6,8 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import heroImage from "@assets/IMG_0177_1760877958185.webp";
-import testimonialsImage from "@assets/DSC_0171_1758792971820.webp";
+import heroImage from "@assets/IMG_0177_1760877958185.jpeg";
+import testimonialsImage from "@assets/DSC_0171_1758792971820.jpg";
 import { 
   GraduationCap, 
   Footprints, 
@@ -155,7 +155,6 @@ export default function HomePage() {
                 src={heroImage} 
                 alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
-                loading="eager"
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
@@ -227,7 +226,6 @@ export default function HomePage() {
                 src={testimonialsImage} 
                 alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
-                loading="lazy"
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">
