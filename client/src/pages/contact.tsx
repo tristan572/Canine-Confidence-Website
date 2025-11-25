@@ -18,7 +18,7 @@ import {
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
-import contactHeroImage from "@assets/image_1750049297197.png";
+import contactHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import { useState } from "react";
 
 export default function ContactPage() {
