@@ -110,14 +110,17 @@ export default function BlogDetailPage() {
 
             {/* Featured Image */}
             {blogPost.imageUrl && (
-              <img 
-                src={blogPost.imageUrl} 
-                alt={blogPost.title}
-                className="w-full h-96 object-cover rounded-xl mb-8"
-                width={800}
-                height={384}
-                loading="lazy"
-              />
+              <div className="w-full mb-8" style={{ aspectRatio: '800/384' }}>
+                <img 
+                  src={blogPost.imageUrl} 
+                  alt={blogPost.title}
+                  className="w-full h-full object-cover rounded-xl"
+                  width={800}
+                  height={384}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             )}
 
             {/* Excerpt */}

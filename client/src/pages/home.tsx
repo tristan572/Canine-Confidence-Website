@@ -150,13 +150,15 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative" style={{ aspectRatio: '3/2' }}>
               <img 
                 src={heroImage} 
                 alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover"
                 width={600}
                 height={400}
+                fetchPriority="high"
+                decoding="async"
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
@@ -223,14 +225,15 @@ export default function HomePage() {
               )}
             </div>
             
-            <div className="relative">
+            <div className="relative" style={{ aspectRatio: '3/2' }}>
               <img 
                 src={testimonialsImage} 
                 alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover"
                 width={600}
                 height={400}
                 loading="lazy"
+                decoding="async"
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">

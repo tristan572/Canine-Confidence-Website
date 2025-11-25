@@ -103,13 +103,15 @@ export default function ServicesPage() {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative" style={{ aspectRatio: '3/2' }}>
               <img 
                 src={servicesHeroImage} 
                 alt="Tristan, NDTF certified professional dog trainer, providing play-based training services in North Brisbane with positive reinforcement methods" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-2xl shadow-2xl w-full h-full object-cover"
                 width={600}
                 height={400}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

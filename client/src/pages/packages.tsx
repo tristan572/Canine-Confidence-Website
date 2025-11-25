@@ -230,7 +230,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
         )}
         
         {pkg.imageUrl && (
-          <div className="relative h-64 w-full overflow-hidden">
+          <div className="relative w-full overflow-hidden" style={{ aspectRatio: '400/256' }}>
             <img 
               src={pkg.imageUrl} 
               alt={`${pkg.name} training session`}
@@ -238,6 +238,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
               width={400}
               height={256}
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>

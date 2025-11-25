@@ -21,14 +21,17 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Card className="bg-light-grey card-hover border border-gray-100">
       {post.imageUrl && (
-        <img 
-          src={post.imageUrl} 
-          alt={post.title}
-          className="w-full h-48 object-cover"
-          width={400}
-          height={192}
-          loading="lazy"
-        />
+        <div className="w-full" style={{ aspectRatio: '400/192' }}>
+          <img 
+            src={post.imageUrl} 
+            alt={post.title}
+            className="w-full h-full object-cover"
+            width={400}
+            height={192}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       )}
       <CardContent className="p-6">
         <div className="flex items-center text-sm text-medium-grey mb-3">

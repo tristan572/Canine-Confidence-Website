@@ -52,14 +52,17 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="bg-white card-hover border border-gray-100">
       {product.imageUrl && (
-        <img 
-          src={product.imageUrl} 
-          alt={product.name}
-          className="w-full h-48 object-cover"
-          width={400}
-          height={192}
-          loading="lazy"
-        />
+        <div className="w-full" style={{ aspectRatio: '400/192' }}>
+          <img 
+            src={product.imageUrl} 
+            alt={product.name}
+            className="w-full h-full object-cover"
+            width={400}
+            height={192}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       )}
       <CardContent className="p-6">
         <h3 className="text-lg font-semibold text-charcoal mb-2">{product.name}</h3>

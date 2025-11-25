@@ -40,7 +40,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
     <>
       <Card className="bg-light-grey card-hover border border-gray-100 overflow-hidden">
         {service.imageUrl && (
-          <div className="h-48 w-full">
+          <div className="w-full" style={{ aspectRatio: '400/192' }}>
             <img 
               src={service.imageUrl} 
               alt={`${service.name} training service`}
@@ -48,6 +48,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
               width={400}
               height={192}
               loading="lazy"
+              decoding="async"
             />
           </div>
         )}
