@@ -23,8 +23,8 @@ import {
 } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { useState } from "react";
-import aboutHeroImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
-import aboutTrainingImage from "@assets/IMG_0076_1758798863394.jpeg";
+import aboutHeroImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.webp";
+import aboutTrainingImage from "@assets/IMG_0076_1758798863394.webp";
 
 export default function AboutPage() {
   
@@ -107,6 +107,7 @@ export default function AboutPage() {
                 src={aboutHeroImage} 
                 alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                loading="eager"
               />
             </div>
           </div>
@@ -176,6 +177,7 @@ export default function AboutPage() {
                 src={aboutTrainingImage} 
                 alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                loading="lazy"
               />
               
               <div className="absolute -top-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
