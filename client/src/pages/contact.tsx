@@ -18,7 +18,8 @@ import {
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
-import contactHeroImage from "@assets/image_1750049297197.png";
+import contactHeroImageWebp from "@assets/image_1750049297197.webp";
+import contactHeroImageJpeg from "@assets/image_1750049297197.jpg";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -53,15 +54,21 @@ export default function ContactPage() {
             </div>
             
             <div className="relative">
-              <img 
-                src={contactHeroImage} 
-                alt="Happy confident dog enjoying life after successful training with Canine Confidence in North Brisbane, demonstrating effective play-based training results" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
-                width={600}
-                height={400}
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source 
+                  type="image/webp"
+                  srcSet={contactHeroImageWebp}
+                />
+                <img 
+                  src={contactHeroImageJpeg} 
+                  alt="Happy confident dog enjoying life after successful training with Canine Confidence in North Brisbane, demonstrating effective play-based training results" 
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </div>

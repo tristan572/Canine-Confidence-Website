@@ -23,8 +23,10 @@ import {
 } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { useState } from "react";
-import aboutHeroImage from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
-import aboutTrainingImage from "@assets/IMG_0076_1758798863394.jpeg";
+import aboutHeroImageWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
+import aboutHeroImageJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import aboutTrainingImageWebp from "@assets/IMG_0076_1758798863394_opt.webp";
+import aboutTrainingImageJpeg from "@assets/IMG_0076_1758798863394.jpeg";
 
 export default function AboutPage() {
   
@@ -103,15 +105,21 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <img 
-                src={aboutHeroImage} 
-                alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
-                width={600}
-                height={400}
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source 
+                  type="image/webp"
+                  srcSet={aboutHeroImageWebp}
+                />
+                <img 
+                  src={aboutHeroImageJpeg} 
+                  alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach" 
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -176,15 +184,21 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img 
-                src={aboutTrainingImage} 
-                alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
-                width={600}
-                height={400}
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source 
+                  type="image/webp"
+                  srcSet={aboutTrainingImageWebp}
+                />
+                <img 
+                  src={aboutTrainingImageJpeg} 
+                  alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods" 
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               
               <div className="absolute -top-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
                 <div className="text-center">
