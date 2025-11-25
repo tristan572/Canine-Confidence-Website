@@ -44,7 +44,7 @@ export default function Navbar() {
                 data-testid="img-logo"
                 width={60}
                 height={48}
-                fetchPriority="high"
+                loading="eager"
                 decoding="async"
               />
             </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
                 data-testid="img-logo"
                 width={80}
                 height={64}
-                fetchPriority="high"
+                loading="eager"
                 decoding="async"
               />
             </Link>

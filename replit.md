@@ -144,6 +144,30 @@ Preferred communication style: Simple, everyday language.
 - **ESBuild**: Production bundling
 - **Drizzle Kit**: Database migration and management
 
+## Performance Optimizations
+
+### Code Splitting
+- **Route-based code splitting**: All pages are lazy-loaded using React.lazy() and Suspense
+- **Reduced initial JS bundle**: Only essential code loads on first visit
+- **Dynamic imports**: Each page loads on-demand when navigated to
+
+### Image Optimization
+- **LCP optimization**: Hero images use `loading="eager"` for fastest paint
+- **Lazy loading**: Below-fold images use `loading="lazy"` to defer loading
+- **Aspect ratios**: All image containers have explicit aspect-ratio CSS to prevent CLS
+- **Dimensions**: All images specify width/height to reserve space during load
+- **Async decoding**: Images use `decoding="async"` to avoid blocking main thread
+
+### Resource Hints (index.html)
+- **Preconnect**: fonts.googleapis.com, fonts.gstatic.com, replit.com
+- **DNS Prefetch**: canineconfidence.simplybook.net
+- **Preload**: Hero image and fonts for faster LCP
+- **Critical CSS**: Inline styles for above-the-fold content
+
+### Caching Strategy
+- **Static assets**: 1-year cache for attached_assets directory
+- **Immutable files**: JS/CSS bundles with hash-based naming
+
 ## Deployment Strategy
 
 ### Build Process

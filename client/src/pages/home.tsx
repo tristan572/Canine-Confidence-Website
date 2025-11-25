@@ -157,7 +157,7 @@ export default function HomePage() {
                 className="rounded-2xl shadow-2xl w-full h-full object-cover"
                 width={600}
                 height={400}
-                fetchPriority="high"
+                loading="eager"
                 decoding="async"
               />
               
