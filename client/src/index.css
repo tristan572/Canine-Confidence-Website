@@ -121,4 +121,15 @@
     content-visibility: auto;
     contain-intrinsic-size: auto 500px;
   }
+
+  /* GPU-accelerated animations for better performance */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    will-change: opacity;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+  }
 }
