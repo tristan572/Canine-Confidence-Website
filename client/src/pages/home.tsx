@@ -155,6 +155,8 @@ export default function HomePage() {
                 src={heroImage} 
                 alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                width={600}
+                height={400}
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
@@ -226,6 +228,9 @@ export default function HomePage() {
                 src={testimonialsImage} 
                 alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                width={600}
+                height={400}
+                loading="lazy"
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">
@@ -292,6 +297,9 @@ export default function HomePage() {
                         src={pkg.imageUrl} 
                         alt={`${pkg.name} training session`}
                         className="w-full h-full object-cover"
+                        width={400}
+                        height={192}
+                        loading="lazy"
                       />
                     </div>
                   )}

@@ -6,8 +6,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets
-app.use('/attached_assets', express.static('attached_assets'));
+// Serve attached assets with cache headers for 1 year
+app.use('/attached_assets', express.static('attached_assets', {
+  maxAge: '1y',
+  etag: false,
+  lastModified: false
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();

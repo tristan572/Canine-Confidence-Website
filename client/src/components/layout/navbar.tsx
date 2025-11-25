@@ -42,6 +42,8 @@ export default function Navbar() {
                 alt="Canine Confidence logo"
                 className="block h-12 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
                 data-testid="img-logo"
+                width={60}
+                height={48}
               />
             </Link>
             
@@ -117,6 +119,8 @@ export default function Navbar() {
                 alt="Canine Confidence logo"
                 className="block h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
                 data-testid="img-logo"
+                width={80}
+                height={64}
               />
             </Link>
 

@@ -81,6 +81,8 @@ export default function ProductsPage() {
                 src="/attached_assets/F2CCD03F-F0E2-4A96-B411-2D1B602E7C73.jpg_1760360884952.webp" 
                 alt="Colourful braided tug toys with green balls for dog training"
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                width={600}
+                height={400}
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">

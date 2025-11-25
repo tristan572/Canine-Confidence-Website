@@ -235,6 +235,9 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
               src={pkg.imageUrl} 
               alt={`${pkg.name} training session`}
               className="w-full h-full object-cover object-center"
+              width={400}
+              height={256}
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
@@ -421,6 +424,8 @@ export default function PackagesPage() {
                 src={packagesHeroImage} 
                 alt="Professional dog training program in North Brisbane featuring play-based enrichment activities and genetic fulfillment training methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                width={600}
+                height={400}
               />
             </div>
           </div>

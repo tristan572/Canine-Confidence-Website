@@ -56,6 +56,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           src={product.imageUrl} 
           alt={product.name}
           className="w-full h-48 object-cover"
+          width={400}
+          height={192}
+          loading="lazy"
         />
       )}
       <CardContent className="p-6">

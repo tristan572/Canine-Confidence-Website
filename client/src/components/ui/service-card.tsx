@@ -45,6 +45,9 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
               src={service.imageUrl} 
               alt={`${service.name} training service`}
               className="w-full h-full object-cover"
+              width={400}
+              height={192}
+              loading="lazy"
             />
           </div>
         )}

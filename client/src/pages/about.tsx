@@ -107,6 +107,8 @@ export default function AboutPage() {
                 src={aboutHeroImage} 
                 alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                width={600}
+                height={400}
               />
             </div>
           </div>
@@ -176,6 +178,9 @@ export default function AboutPage() {
                 src={aboutTrainingImage} 
                 alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
+                width={600}
+                height={400}
+                loading="lazy"
               />
               
               <div className="absolute -top-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">

@@ -114,6 +114,9 @@ export default function BlogDetailPage() {
                 src={blogPost.imageUrl} 
                 alt={blogPost.title}
                 className="w-full h-96 object-cover rounded-xl mb-8"
+                width={800}
+                height={384}
+                loading="lazy"
               />
             )}
 
