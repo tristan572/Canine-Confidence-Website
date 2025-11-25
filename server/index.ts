@@ -1,8 +1,11 @@
 import express, { type Request, Response, NextFunction } from "express";
 import compression from "compression";
+import path from "path";
+import { fileURLToPath } from "url";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 // Enable gzip compression - CRITICAL for TTFB
@@ -11,8 +14,9 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets - standard caching
-app.use('/attached_assets', express.static('attached_assets'));
+// Serve attached assets - use absolute path for production reliability
+const assetsPath = path.join(__dirname, '..', 'attached_assets');
+app.use('/attached_assets', express.static(assetsPath));
 
 // Simple, proven cache headers for optimal performance
 app.use((req, res, next) => {
