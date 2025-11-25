@@ -20,23 +20,22 @@ app.use('/attached_assets', express.static('attached_assets', {
 
 // Cache headers middleware - CRITICAL for performance
 app.use((req, res, next) => {
-  // Add cache headers for static assets
-  if (req.path.match(/\.(js|css|woff2|png|jpg|jpeg|webp|svg|ico)$/)) {
+  // Add cache headers for versioned static assets (Vite hashed files)
+  if (req.path.match(/\.[a-z0-9]{8,}\.(js|css|woff2|webp|svg|ico)$/i)) {
     res.set({
-      'Cache-Control': 'public, max-age=31536000, immutable', // 1 year for hashed assets
-      'ETag': '' // Disable ETags for static assets
+      'Cache-Control': 'public, max-age=31536000' // 1 year for hashed files
     });
   }
   // Add cache headers for API responses
   else if (req.path.startsWith('/api')) {
     res.set({
-      'Cache-Control': 'public, max-age=300, must-revalidate' // 5 minutes for API
+      'Cache-Control': 'public, max-age=60' // 60 seconds for API (shorter for freshness)
     });
   }
-  // HTML pages with validation
+  // HTML pages with validation - shorter cache for freshness
   else if (req.path === '/' || req.path.endsWith('.html')) {
     res.set({
-      'Cache-Control': 'public, max-age=3600, must-revalidate' // 1 hour for HTML
+      'Cache-Control': 'public, max-age=300, must-revalidate' // 5 minutes for HTML
     });
   }
   next();
