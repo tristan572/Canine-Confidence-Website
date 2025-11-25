@@ -116,8 +116,8 @@ export default function AboutPage() {
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
-                  loading="lazy"
-                  decoding="async"
+                  loading="eager"
+                  decoding="sync"
                 />
               </picture>
             </div>
