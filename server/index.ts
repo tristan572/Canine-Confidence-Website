@@ -1,13 +1,46 @@
 import express, { type Request, Response, NextFunction } from "express";
+import compression from "compression";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Enable gzip compression - CRITICAL for TTFB
+app.use(compression());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets
-app.use('/attached_assets', express.static('attached_assets'));
+// Serve attached assets with long-term caching
+app.use('/attached_assets', express.static('attached_assets', {
+  maxAge: '1y', // 1 year for content-addressed assets
+  immutable: true,
+  etag: false
+}));
+
+// Cache headers middleware - CRITICAL for performance
+app.use((req, res, next) => {
+  // Add cache headers for static assets
+  if (req.path.match(/\.(js|css|woff2|png|jpg|jpeg|webp|svg|ico)$/)) {
+    res.set({
+      'Cache-Control': 'public, max-age=31536000, immutable', // 1 year for hashed assets
+      'ETag': '' // Disable ETags for static assets
+    });
+  }
+  // Add cache headers for API responses
+  else if (req.path.startsWith('/api')) {
+    res.set({
+      'Cache-Control': 'public, max-age=300, must-revalidate' // 5 minutes for API
+    });
+  }
+  // HTML pages with validation
+  else if (req.path === '/' || req.path.endsWith('.html')) {
+    res.set({
+      'Cache-Control': 'public, max-age=3600, must-revalidate' // 1 hour for HTML
+    });
+  }
+  next();
+});
 
 app.use((req, res, next) => {
   const start = Date.now();
