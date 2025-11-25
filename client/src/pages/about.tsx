@@ -186,10 +186,10 @@ export default function AboutPage() {
                 decoding="async"
               />
               
-              <div className="absolute -top-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
+              <div className="absolute bottom-4 right-4 md:bottom-auto md:right-auto md:-top-6 md:-right-6 bg-primary-blue p-3 md:p-6 rounded-xl shadow-lg text-white max-w-xs">
                 <div className="text-center">
-                  <div className="text-lg font-bold mb-1">We're not just here to train dogs</div>
-                  <div className="text-blue-100 text-sm">We create real relationships and real confidence that lasts.</div>
+                  <div className="text-sm md:text-lg font-bold mb-1">We're not just here to train dogs</div>
+                  <div className="text-blue-100 text-xs md:text-sm">We create real relationships and real confidence that lasts.</div>
                 </div>
               </div>
             </div>
