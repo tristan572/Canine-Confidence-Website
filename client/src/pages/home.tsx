@@ -23,7 +23,10 @@ import {
   Star,
   ClipboardList,
   MapPinned,
-  Mountain
+  Mountain,
+  DollarSign,
+  Award,
+  Heart
 } from "lucide-react";
 import BookingWidget from "@/components/ui/booking-widget";
 import ServiceCard from "@/components/ui/service-card";
