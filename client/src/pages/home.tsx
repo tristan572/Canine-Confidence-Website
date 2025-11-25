@@ -254,7 +254,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Training Packages Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -377,7 +377,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Services</h2>
@@ -463,7 +463,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Blog Preview Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Free Training Advice</h2>
@@ -502,7 +502,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-primary-blue">
+      <section className="py-20 bg-primary-blue content-visibility-auto">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
