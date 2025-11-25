@@ -307,7 +307,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/F2CCD03F-F0E2-4A96-B411-2D1B602E7C73.jpg_1760360884952.webp",
+        imageUrl: "/attached_assets/IMG_0177_1760877958185.webp",
         features: [
           "Intensive Sessions focusing on effective, lasting behavioural change",
           "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
@@ -388,7 +388,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278.jpg",
+        imageUrl: "/attached_assets/F2CCD03F-F0E2-4A96-B411-2D1B602E7C73.jpg_1760360884952.webp",
         features: [
           "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
           "Customised Training Approach and problem-solving strategy",
@@ -407,7 +407,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
+        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.webp",
         features: [
           "5 x Private, In-Home Training Sessions (Done by the trainer)",
           "Completely Flexible Focus—use for obedience, foundations, behaviour modification, or fulfilment",
@@ -424,7 +424,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.jpg",
+        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.webp",
         features: [
           "5 x 40-Minute Sessions (Trainer-led, done for you)",
           "Home Pickup Service Included at no extra charge",
@@ -442,7 +442,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.jpg",
+        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.webp",
         features: [
           "5 x Adventure Outings (Each session is an hour of adventure and integrated training)",
           "Premium Home Pick-up Service included",
@@ -460,7 +460,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673.jpeg",
+        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.webp",
         features: [
           "5 x Local Walk Sessions focused on essential exercise and mental stimulation",
           "Reliable Home Pick-up Service included",
