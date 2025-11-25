@@ -1,5 +1,5 @@
 import { Switch, Route, useLocation } from "wouter";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -14,13 +14,23 @@ import Blog from "@/pages/blog";
 import BlogDetail from "@/pages/blog-detail";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
-import Privacy from "@/pages/privacy";
-import Admin from "@/pages/admin";
 import Checkout from "@/pages/checkout";
 import PaymentSuccess from "@/pages/payment-success";
 import Sandgate from "@/pages/sandgate";
 import Northgate from "@/pages/northgate";
-import NotFound from "@/pages/not-found";
+
+// Lazy load non-critical pages
+const Privacy = lazy(() => import("@/pages/privacy"));
+const Admin = lazy(() => import("@/pages/admin"));
+const NotFound = lazy(() => import("@/pages/not-found"));
+
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="text-center">
+      <div className="text-2xl font-bold text-charcoal mb-4">Loading...</div>
+    </div>
+  </div>
+);
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -45,13 +55,31 @@ function Router() {
         <Route path="/blog/:id" component={BlogDetail} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/privacy" component={Privacy} />
-        <Route path="/admin" component={Admin} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/payment-success" component={PaymentSuccess} />
         <Route path="/dog-training-sandgate" component={Sandgate} />
         <Route path="/dog-training-northgate" component={Northgate} />
-        <Route component={NotFound} />
+        <Route path="/privacy">
+          {() => (
+            <Suspense fallback={<LoadingFallback />}>
+              <Privacy />
+            </Suspense>
+          )}
+        </Route>
+        <Route path="/admin">
+          {() => (
+            <Suspense fallback={<LoadingFallback />}>
+              <Admin />
+            </Suspense>
+          )}
+        </Route>
+        <Route>
+          {() => (
+            <Suspense fallback={<LoadingFallback />}>
+              <NotFound />
+            </Suspense>
+          )}
+        </Route>
       </Switch>
     </>
   );
