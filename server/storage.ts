@@ -133,7 +133,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049391709.png",
+        imageUrl: "/attached_assets/image_1750049391709.jpg",
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
@@ -143,7 +143,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049431855.png",
+        imageUrl: "/attached_assets/image_1750049431855.jpg",
         features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
@@ -163,7 +163,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049520029.png",
+        imageUrl: "/attached_assets/image_1750049520029.jpg",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
@@ -269,7 +269,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/image_1750048904991.png",
+        imageUrl: "/attached_assets/image_1750048904991.jpg",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised Socialisation Protocols & Exposure Plan",
