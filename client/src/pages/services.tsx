@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import ReactMarkdown from "react-markdown";
-import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
+import servicesHeroImage from "@assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.webp";
 import { 
   GraduationCap, 
   Footprints, 
