@@ -84,7 +84,7 @@ export default function ProductsPage() {
                 width={600}
                 height={400}
                 loading="eager"
-                decoding="sync"
+                decoding="async"
               />
               
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">

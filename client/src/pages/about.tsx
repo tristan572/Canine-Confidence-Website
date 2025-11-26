@@ -117,7 +117,7 @@ export default function AboutPage() {
                   width={600}
                   height={400}
                   loading="eager"
-                  decoding="sync"
+                  decoding="async"
                 />
               </picture>
             </div>
