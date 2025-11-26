@@ -16,5 +16,8 @@ npx esbuild server/index.ts \
   --define:process.env.NODE_ENV=\"production\" \
   --outfile=dist/index.js
 
+echo "Cleaning up dev dependencies for production..."
+npm install --omit=dev --no-save
+
 echo "Build complete!"
 ls -lh dist/index.js dist/public/index.html
