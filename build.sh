@@ -17,7 +17,6 @@ npx esbuild server/index.ts \
   --external:postcss \
   --external:tailwindcss \
   --external:typescript \
-  --external:vite \
   --external:tsx \
   --external:drizzle-kit \
   --external:autoprefixer \
