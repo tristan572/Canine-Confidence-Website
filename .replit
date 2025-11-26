@@ -102,4 +102,3 @@ integrations = ["javascript_stripe:1.0.0"]
 [userenv]
 
 [userenv.production]
-NPM_CONFIG_PRODUCTION = "false"

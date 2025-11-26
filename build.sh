@@ -2,7 +2,7 @@
 set -e
 
 echo "Installing dependencies..."
-npm install --production=false
+npm install
 
 echo "Building frontend with Vite..."
 npx vite build
