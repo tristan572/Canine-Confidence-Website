@@ -7,25 +7,10 @@ npx vite build
 echo "Building backend with esbuild..."
 npx esbuild server/index.ts \
   --platform=node \
+  --packages=external \
   --bundle \
   --format=esm \
-  --outfile=server.js \
-  --external:@types/\* \
-  --external:@tailwindcss/\* \
-  --external:@replit/\* \
-  --external:esbuild \
-  --external:postcss \
-  --external:tailwindcss \
-  --external:typescript \
-  --external:tsx \
-  --external:drizzle-kit \
-  --external:autoprefixer \
-  --external:@babel/preset-typescript \
-  --external:lightningcss
-
-echo "Linking public directory..."
-rm -f public
-ln -s dist/public public
+  --outfile=dist/index.js
 
 echo "Build complete!"
-ls -lh server.js public
+ls -lh dist/index.js dist/public/index.html
