@@ -98,7 +98,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <h1 className="text-5xl font-bold text-charcoal"><span className="text-primary-blue">Tailored</span> Dog Training Services in North Brisbane</h1>
                 <p className="text-xl text-medium-grey">
-                  We don't believe in cookie-cutter training methods that only focus on commands. We use a personalised strategy based on canine psychology and play to deliver three things: Confidence for your dog, Clarity for you, and an Unbreakable Bond for your family.
+                  We don't believe in cookie-cutter training methods that only focus on commands. We use a personalised strategy based on canine psychology and play to deliver three things: confidence for your dog, clarity for you, and an unbreakable bond for your family.
                 </p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">The Confidence Difference</h3>
               <p className="text-medium-grey">
-                Training should be high-value engagement that creates behaviour-specific fulfilment for your dog. When dogs feel secure through Clarity and consistent boundaries, they naturally build Confidence and motivation. This approach builds lasting change and the Unbreakable Bond you are looking for.
+                Training should be high-value engagement that creates behaviour-specific fulfilment for your dog. When dogs feel secure through clarity and consistent boundaries, they naturally build confidence and motivation. This approach builds lasting change and the unbreakable bond you are looking for.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">
@@ -268,7 +268,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">Owner Mastery</h3>
               <p className="text-medium-grey">
-                We empower you with the Clarity and practical tools necessary to maintain and advance your dog's training well beyond our sessions.
+                We empower you with the clarity and practical tools necessary to maintain and advance your dog's training well beyond our sessions.
               </p>
             </div>
           </div>

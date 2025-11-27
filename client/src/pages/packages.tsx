@@ -401,7 +401,7 @@ export default function PackagesPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
                   North Brisbane Dog Training Packages: Your Complete <span className="text-primary-blue">Behaviour</span> Solution
                 </h1>
-                <p className="text-xl text-medium-grey">Skip the guesswork. Our packages are not generic solutions—they are meticulously crafted programs designed around your dog's behaviour-specific needs and your North Brisbane lifestyle. We build Confidence through Clarity to ensure lasting results and an Unbreakable Bond for your family.</p>
+                <p className="text-xl text-medium-grey">Skip the guesswork. Our packages are not generic solutions—they are meticulously crafted programs designed around your dog's behaviour-specific needs and your North Brisbane lifestyle. We build confidence through clarity to ensure lasting results and an unbreakable bond for your family.</p>
               </div>
               
               <div className="flex flex-wrap gap-4">
@@ -472,7 +472,7 @@ export default function PackagesPage() {
               Why Our Packages Deliver Lasting Change
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to analyse your dog's genetics and learning profile, creating a behaviour-specific approach that fits your Brisbane lifestyle and delivers Confidence and Behaviour-Specific Fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the Unbreakable Bond you are looking for.
+              We take the time to analyse your dog's genetics and learning profile, creating a behaviour-specific approach that fits your Brisbane lifestyle and delivers confidence and behaviour-specific fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the unbreakable bond you are looking for.
             </p>
           </div>
 
@@ -483,7 +483,7 @@ export default function PackagesPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Methodology for Results</h3>
               <p className="text-gray-600">
-                Proven, effective techniques that focus on building Confidence and the Unbreakable Bond between dog and handler.
+                Proven, effective techniques that focus on building confidence and the unbreakable bond between dog and handler.
               </p>
             </div>
 
