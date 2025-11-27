@@ -110,7 +110,7 @@ export default function HomePage() {
                   Canine Confidence: <span className="text-primary-blue">Building Confident Dogs through Clarity and Play</span>
                 </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Based in Boondall, we move beyond basic obedience. We use advanced, play-centered methods and canine psychology to give your dog the clear communication they need. The result is a fulfilled dog and an unbreakable bond, not just compliance.
+                  Based in Boondall, we move beyond basic obedience. We use advanced, play-centred methods and canine psychology to give your dog the clear communication they need. The result is a fulfilled dog and an unbreakable bond, not just compliance.
                 </p>
               </div>
               
@@ -526,7 +526,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Ready to Build Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Begin building a deeper partnership with your dog through our play-centered, considerate approach that creates lasting harmony.
+                Begin building a deeper partnership with your dog through our play-centred, considerate approach that creates lasting harmony.
               </p>
             </div>
 
