@@ -173,7 +173,7 @@ export class MemStorage implements IStorage {
         location: "From client's home",
         price: "$45",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049687824.png",
+        imageUrl: "/attached_assets/image_1750049687824.jpg",
         features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
       },
       {
@@ -307,7 +307,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/image_1750049297197.png",
+        imageUrl: "/attached_assets/image_1750049297197.jpg",
         features: [
           "Intensive Sessions focusing on effective, lasting behavioural change",
           "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
