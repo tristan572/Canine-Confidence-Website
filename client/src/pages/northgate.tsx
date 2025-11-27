@@ -422,10 +422,10 @@ export default function NorthgatePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">
-                Ready to Transform Your Dog's Behaviour in Northgate?
+                Ready to Build Real Confidence?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Join Northgate, Nundah, and Kalinga dog owners who've achieved real results with our proven training programs.
+                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
               </p>
             </div>
 

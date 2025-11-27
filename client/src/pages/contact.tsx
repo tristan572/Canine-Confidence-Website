@@ -331,9 +331,9 @@ export default function ContactPage() {
       <section className="py-16 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Ready to Begin Your Dog's Journey?</h2>
+            <h2 className="text-3xl font-bold text-white">Ready to Build Real Confidence?</h2>
             <p className="text-xl text-blue-100">
-              Let's chat about your dog's unique needs and start building the partnership you've been looking for.
+              Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button asChild className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">

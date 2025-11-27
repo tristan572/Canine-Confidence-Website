@@ -444,10 +444,10 @@ export default function SandgatePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">
-                Ready for calm walks and a confident Bayside companion?
+                Ready to Build Real Confidence?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Join the growing community of Sandgate, Shorncliffe, and Brighton dog owners who've transformed their walks along the foreshore.
+                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
               </p>
             </div>
 

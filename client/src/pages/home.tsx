@@ -524,9 +524,9 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">Ready to Build Confidence?</h2>
+              <h2 className="text-4xl font-bold text-white">Ready to Build Real Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Begin building a deeper partnership with your dog through our play-centred, considerate approach that creates lasting harmony.
+                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
               </p>
             </div>
 

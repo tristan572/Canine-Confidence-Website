@@ -311,9 +311,9 @@ export default function AboutPage() {
       {/* Contact Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Begin?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Real Confidence?</h2>
           <p className="text-xl text-white/90 mb-12">
-            If you want a dog who listens, engages, and fits beautifully into your family life—not through force or frustration, but through play, clarity, and fulfilment—then you're in the right place. Let's build your dog's confidence and your peace of mind.
+            Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
