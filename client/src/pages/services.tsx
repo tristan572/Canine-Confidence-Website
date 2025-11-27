@@ -232,37 +232,43 @@ export default function ServicesPage() {
       </section>
       {/* Training Philosophy Section */}
       <section className="py-20 bg-light-grey">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-charcoal mb-6">Our Training Philosophy</h2>
-          <p className="text-lg text-medium-grey mb-8">
-            We believe training should be an enjoyable, engaging experience that creates genuine fulfillment for your dog. When dogs feel secure through clear expectations and consistent communication, they naturally become more confident and eager to learn. This approach builds lasting happiness for both dogs and their families.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-white" />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Our Method: The Confidence Difference</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-xl">
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-charcoal mb-2">Play-Based Learning</h3>
-              <p className="text-medium-grey text-sm">
-                We use play not just as a reward, but as a way to teach, connect, and motivate your dog.
+              <h3 className="text-xl font-semibold text-charcoal mb-3">The Confidence Difference</h3>
+              <p className="text-medium-grey">
+                Training should be high-value engagement that creates behaviour-specific fulfilment for your dog. When dogs feel secure through Clarity and consistent boundaries, they naturally build Confidence and motivation. This approach builds lasting change and the Unbreakable Bond you are looking for.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-white" />
+            <div className="bg-white p-8 rounded-xl">
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
+                <Heart className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-charcoal mb-2">Thoughtful Approach</h3>
-              <p className="text-medium-grey text-sm">
-                We understand your dog's natural learning style and work with their genetics to create genuine fulfillment.
+              <h3 className="text-xl font-semibold text-charcoal mb-3">Play as Engagement Engine</h3>
+              <p className="text-medium-grey">
+                We use play not just as a reward, but as a mechanism to accelerate learning, build motivation, and create high-level engagement with the owner.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-8 h-8 text-white" />
+            <div className="bg-white p-8 rounded-xl">
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
+                <TreePine className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-charcoal mb-2">Owner Education</h3>
-              <p className="text-medium-grey text-sm">
-                We empower you with the tools and understanding to continue training at home.
+              <h3 className="text-xl font-semibold text-charcoal mb-3">Genetic Fulfilment</h3>
+              <p className="text-medium-grey">
+                We base our behaviour-specific plans on understanding your dog's genetics and individual learning style, delivering unrivalled fulfilment that addresses the root cause of problem behaviour.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-xl">
+              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
+                <GraduationCap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-charcoal mb-3">Owner Mastery</h3>
+              <p className="text-medium-grey">
+                We empower you with the Clarity and practical tools necessary to maintain and advance your dog's training well beyond our sessions.
               </p>
             </div>
           </div>
