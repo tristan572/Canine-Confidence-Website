@@ -93,7 +93,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl font-bold text-charcoal"><span className="text-primary-blue">Tailored</span> Dog Training Services in North Brisbane</h1>
