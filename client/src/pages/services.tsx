@@ -241,7 +241,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">The Confidence Difference</h3>
               <p className="text-medium-grey">
-                Training should be high-value engagement that creates behaviour-specific fulfilment for your dog. When dogs feel secure through clarity and consistent boundaries, they naturally build confidence and motivation. This approach builds lasting change and the unbreakable bond you are looking for.
+                Training should be high-value engagement that creates behaviour-specific fulfilment for your dog. When dogs feel secure through clarity and consistent boundaries, they naturally build confidence and motivation. This approach builds lasting change and the strong bond you are looking for.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">
