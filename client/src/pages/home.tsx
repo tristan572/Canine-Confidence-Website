@@ -6,10 +6,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import heroImageJpeg from "@assets/IMG_0177_1760877958185.jpeg";
+import heroImageJpeg from "@assets/IMG_0177_fallback_opt.jpg";
+import heroImage400 from "@assets/IMG_0177_hero_400_opt.webp";
 import heroImage800 from "@assets/IMG_0177_hero_800_opt.webp";
 import heroImage1200 from "@assets/IMG_0177_hero_1200_opt.webp";
-import testimonialsImageJpeg from "@assets/DSC_0171_1758792971820.jpg";
+import testimonialsImageJpeg from "@assets/DSC_0171_fallback_opt.jpg";
+import testimonialsImage400 from "@assets/DSC_0171_testimonials_400_opt.webp";
 import testimonialsImage800 from "@assets/DSC_0171_testimonials_800_opt.webp";
 import testimonialsImage1200 from "@assets/DSC_0171_testimonials_1200_opt.webp";
 import { 
@@ -158,8 +160,8 @@ export default function HomePage() {
               <picture>
                 <source 
                   type="image/webp"
-                  srcSet={`${heroImage800} 800w, ${heroImage1200} 1200w`}
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  srcSet={`${heroImage400} 400w, ${heroImage800} 800w, ${heroImage1200} 1200w`}
+                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 50vw"
                 />
                 <img 
                   src={heroImageJpeg} 
@@ -241,8 +243,8 @@ export default function HomePage() {
               <picture>
                 <source 
                   type="image/webp"
-                  srcSet={`${testimonialsImage800} 800w, ${testimonialsImage1200} 1200w`}
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  srcSet={`${testimonialsImage400} 400w, ${testimonialsImage800} 800w, ${testimonialsImage1200} 1200w`}
+                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 50vw"
                 />
                 <img 
                   src={testimonialsImageJpeg} 
