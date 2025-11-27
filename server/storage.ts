@@ -122,7 +122,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$90",
         category: "assessment",
-        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260.webp",
+        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260_opt.webp",
         features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to our training system, designed to save you time and money"]
       },
 
@@ -133,7 +133,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049391709.webp",
+        imageUrl: "/attached_assets/image_1750049391709_opt.webp",
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
@@ -143,7 +143,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049431855.webp",
+        imageUrl: "/attached_assets/image_1750049431855_opt.webp",
         features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
@@ -153,7 +153,7 @@ export class MemStorage implements IStorage {
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.webp",
+        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023_opt.webp",
         features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
@@ -163,7 +163,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049520029.webp",
+        imageUrl: "/attached_assets/image_1750049520029_opt.webp",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
@@ -173,7 +173,7 @@ export class MemStorage implements IStorage {
         location: "From client's home",
         price: "$45",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049687824.webp",
+        imageUrl: "/attached_assets/image_1750049687824_opt.webp",
         features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
       },
       {
@@ -183,7 +183,7 @@ export class MemStorage implements IStorage {
         location: "Video call (Zoom)",
         price: "$100",
         category: "consultation",
-        imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6.webp",
+        imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6_opt.webp",
         features: ["Convenient video call", "Problem solving", "Follow-up support", "Training guidance"]
       }
     ];
@@ -198,7 +198,7 @@ export class MemStorage implements IStorage {
         price: "45.00",
         priceRange: "$35 - $55",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/professional_dog_tra_68cb0c20.webp",
+        imageUrl: "/attached_assets/stock_images/professional_dog_tra_68cb0c20_opt.webp",
         inStock: true
       },
       {
@@ -207,7 +207,7 @@ export class MemStorage implements IStorage {
         price: "30.00",
         priceRange: "$25 - $35",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad.webp",
+        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad_opt.webp",
         inStock: true
       },
       {
@@ -216,7 +216,7 @@ export class MemStorage implements IStorage {
         price: "40.00",
         priceRange: "$30 - $50",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad.webp",
+        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad_opt.webp",
         inStock: true
       },
       {
@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
         price: "20.00",
         priceRange: "$15 - $25",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/dog_training_balls_a_46124b17.webp",
+        imageUrl: "/attached_assets/stock_images/dog_training_balls_a_46124b17_opt.webp",
         inStock: true
       },
       {
@@ -234,7 +234,7 @@ export class MemStorage implements IStorage {
         price: "25.00",
         priceRange: "$20 - $35",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/interactive_tug_toy__f1fbf953.webp",
+        imageUrl: "/attached_assets/stock_images/interactive_tug_toy__f1fbf953_opt.webp",
         inStock: true
       },
       {
@@ -269,7 +269,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/image_1750048904991.webp",
+        imageUrl: "/attached_assets/image_1750048904991_opt.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised Socialisation Protocols & Exposure Plan",
@@ -288,7 +288,7 @@ export class MemStorage implements IStorage {
         duration: "1 week",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839.webp",
+        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839_opt.webp",
         features: [
           "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
           "Foundations of High-Level Engagement and Obedience on the move",
@@ -307,7 +307,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/image_1750049297197.webp",
+        imageUrl: "/attached_assets/image_1750049297197_opt.webp",
         features: [
           "Intensive Sessions focusing on effective, lasting behavioural change",
           "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
@@ -367,7 +367,7 @@ export class MemStorage implements IStorage {
       //   duration: "4 weeks",
       //   sessions: 12,
       //   category: "behaviour",
-      //   imageUrl: "/attached_assets/image_1750049297197.webp",
+      //   imageUrl: "/attached_assets/image_1750049297197_opt.webp",
       //   features: [
       //     "Training plan and homework supplied",
       //     "Foundations and communication",
@@ -388,7 +388,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278.webp",
+        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278_opt.webp",
         features: [
           "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
           "Customised Training Approach and problem-solving strategy",
@@ -407,7 +407,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.webp",
+        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769_opt.webp",
         features: [
           "5 x Private, In-Home Training Sessions (Done by the trainer)",
           "Completely Flexible Focus—use for obedience, foundations, behaviour modification, or fulfilment",
@@ -424,7 +424,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.webp",
+        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287_opt.webp",
         features: [
           "5 x 40-Minute Sessions (Trainer-led, done for you)",
           "Home Pickup Service Included at no extra charge",
@@ -442,7 +442,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.webp",
+        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107_opt.webp",
         features: [
           "5 x Adventure Outings (Each session is an hour of adventure and integrated training)",
           "Premium Home Pick-up Service included",
@@ -460,7 +460,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673.webp",
+        imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673_opt.webp",
         features: [
           "5 x Local Walk Sessions focused on essential exercise and mental stimulation",
           "Reliable Home Pick-up Service included",

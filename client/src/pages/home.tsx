@@ -7,11 +7,11 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
 import heroImageJpeg from "@assets/IMG_0177_1760877958185.jpeg";
-import heroImage800 from "@assets/IMG_0177_hero_800.webp";
-import heroImage1200 from "@assets/IMG_0177_hero_1200.webp";
+import heroImage800 from "@assets/IMG_0177_hero_800_opt.webp";
+import heroImage1200 from "@assets/IMG_0177_hero_1200_opt.webp";
 import testimonialsImageJpeg from "@assets/DSC_0171_1758792971820.jpg";
-import testimonialsImage800 from "@assets/DSC_0171_testimonials_800.webp";
-import testimonialsImage1200 from "@assets/DSC_0171_testimonials_1200.webp";
+import testimonialsImage800 from "@assets/DSC_0171_testimonials_800_opt.webp";
+import testimonialsImage1200 from "@assets/DSC_0171_testimonials_1200_opt.webp";
 import { 
   GraduationCap, 
   Footprints, 
@@ -169,6 +169,7 @@ export default function HomePage() {
                   height={400}
                   loading="eager"
                   decoding="async"
+                  fetchPriority="high"
                 />
               </picture>
               
