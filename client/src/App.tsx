@@ -7,9 +7,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
-import Home from "@/pages/home";
-import Services from "@/pages/services";
-import Packages from "@/pages/packages";
+const Home = lazy(() => import("@/pages/home"));
+const Services = lazy(() => import("@/pages/services"));
+const Packages = lazy(() => import("@/pages/packages"));
 
 const Products = lazy(() => import("@/pages/products"));
 const Blog = lazy(() => import("@/pages/blog"));

@@ -16,9 +16,9 @@
     <!-- Preload critical hero image for LCP optimization -->
     <link rel="preload" as="image" href="/attached_assets/IMG_0177_hero_800.webp" type="image/webp" fetchpriority="high" />
     
-    <!-- Non-blocking font loading with font-display: swap -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    <!-- Font loading with font-display: swap for better CLS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     
     <!-- Critical CSS inline for above-the-fold content -->
     <style>
