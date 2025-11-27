@@ -197,8 +197,8 @@ export default function HomePage() {
                   <Star className="w-4 h-4" />
                   Client Reviews
                 </div>
-                <h2 className="text-4xl font-bold text-charcoal">What Our Clients Say</h2>
-                <p className="text-xl text-medium-grey">Real stories from families who've discovered the joy of true partnership with their dogs through our playful and effective approach.</p>
+                <h2 className="text-4xl font-bold text-charcoal">Over 100+ 5-Star Outcomes</h2>
+                <p className="text-xl text-medium-grey">Read the real stories from North Brisbane families who have achieved lasting behaviour change and built an unbreakable bond through our clear, play-centred approach.</p>
               </div>
 
               {testimonialsLoading ? (
