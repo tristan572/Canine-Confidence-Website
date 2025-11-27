@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -35,8 +35,9 @@ import {
   MapPinned,
   Mountain
 } from "lucide-react";
-import BookingWidget from "@/components/ui/booking-widget";
-import ConsultationForm from "@/components/forms/consultation-form";
+
+const BookingWidget = lazy(() => import("@/components/ui/booking-widget"));
+const ConsultationForm = lazy(() => import("@/components/forms/consultation-form"));
 import ServiceCard from "@/components/ui/service-card";
 import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
@@ -144,7 +145,9 @@ export default function HomePage() {
                   <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                     <DialogTitle>Free Phone Consultation</DialogTitle>
                     <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs and find the right solution for your family.</DialogDescription>
-                    <ConsultationForm />
+                    <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+                      <ConsultationForm />
+                    </Suspense>
                   </DialogContent>
                 </Dialog>
 
@@ -409,7 +412,9 @@ export default function HomePage() {
                 <DialogContent className="max-w-md">
                   <DialogTitle>Free Phone Consultation</DialogTitle>
                   <DialogDescription>Get personalised recommendations for your dog's training needs with a complimentary 15-minute phone consultation.</DialogDescription>
-                  <ConsultationForm />
+                  <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+                    <ConsultationForm />
+                  </Suspense>
                 </DialogContent>
               </Dialog>
             </div>
@@ -485,7 +490,9 @@ export default function HomePage() {
                     <DialogContent className="max-w-md">
                       <DialogTitle>Request Free Phone Call</DialogTitle>
                       <DialogDescription>Schedule a 15-minute complimentary consultation to discuss your training needs and get expert advice.</DialogDescription>
-                      <ConsultationForm />
+                      <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+                        <ConsultationForm />
+                      </Suspense>
                     </DialogContent>
                   </Dialog>
                 </CardContent>
@@ -570,7 +577,9 @@ export default function HomePage() {
                 <DialogContent className="max-w-md">
                   <DialogTitle>Request Free Call</DialogTitle>
                   <DialogDescription>Connect with us for a complimentary consultation to discuss how we can help you and your dog.</DialogDescription>
-                  <ConsultationForm />
+                  <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+                    <ConsultationForm />
+                  </Suspense>
                 </DialogContent>
               </Dialog>
             </div>
@@ -592,10 +601,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <BookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
-      />
+      <Suspense fallback={null}>
+        <BookingWidget 
+          isOpen={showBookingWidget} 
+          onClose={() => setShowBookingWidget(false)} 
+        />
+      </Suspense>
     </div>
   );
 }

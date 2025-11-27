@@ -21,16 +21,38 @@
     <!-- Critical CSS inline for above-the-fold content -->
     <style>
       *{margin:0;padding:0;box-sizing:border-box}
-      body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5}
+      body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.5;background:#fff}
       #root{min-height:100vh;display:flex;flex-direction:column}
       .min-h-screen{min-height:100vh}.flex{display:flex}.flex-col{flex-direction:column}
       .flex-1{flex:1 1 0%}.items-center{align-items:center}.justify-center{justify-content:center}
       .animate-spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+      .hero-gradient{background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%)}
+      .text-charcoal{color:#374151}.text-primary-blue{color:#2563eb}.text-medium-grey{color:#6b7280}
+      .bg-white{background:#fff}.py-20{padding-top:5rem;padding-bottom:5rem}
+      .max-w-7xl{max-width:80rem;margin-left:auto;margin-right:auto}.px-4{padding-left:1rem;padding-right:1rem}
+      .grid{display:grid}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.gap-12{gap:3rem}
+      .space-y-8>:not([hidden])~:not([hidden]){margin-top:2rem}.space-y-4>:not([hidden])~:not([hidden]){margin-top:1rem}
+      .text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-5xl{font-size:3rem;line-height:1}
+      .font-bold{font-weight:700}.leading-tight{line-height:1.25}
+      .text-xl{font-size:1.25rem;line-height:1.75rem}.leading-relaxed{line-height:1.625}
+      .rounded-2xl{border-radius:1rem}.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+      .w-full{width:100%}.h-auto{height:auto}
+      @media(min-width:1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
     </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Non-blocking CSS loading for production builds -->
+    <script>
+      (function(){
+        var css = document.querySelector('link[rel="stylesheet"][href*="assets/index"]');
+        if(css) {
+          css.media = 'print';
+          css.onload = function() { this.media = 'all'; };
+        }
+      })();
+    </script>
     <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" async></script>
   </body>
