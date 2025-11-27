@@ -107,10 +107,10 @@ export default function HomePage() {
                   North Brisbane's Most <span className="text-primary-blue">Trusted</span> Dog Trainer
                 </h1>
                 <h2 className="text-3xl lg:text-4xl font-semibold text-charcoal leading-tight">
-                  Canine Confidence: <span className="text-primary-blue">Where Dogs THRIVE</span>
+                  Canine Confidence: <span className="text-primary-blue">Building Confident Dogs through Clarity and Play</span>
                 </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Based in Boondall, we create harmony between dogs and families through understanding, fulfillment, and play-centered connection. We believe dogs should be genuinely living their best lives, not just following commands.
+                  Based in Boondall, we move beyond basic obedience. We use advanced, play-centered methods and canine psychology to give your dog the clear communication they need. The result is a fulfilled dog and an unbreakable bond, not just compliance.
                 </p>
               </div>
               
