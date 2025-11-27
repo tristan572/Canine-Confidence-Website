@@ -198,7 +198,7 @@ export default function HomePage() {
                   Client Reviews
                 </div>
                 <h2 className="text-4xl font-bold text-charcoal">Over 100+ 5-Star Outcomes</h2>
-                <p className="text-xl text-medium-grey">Read the real stories from North Brisbane families who have achieved lasting behaviour change and built an unbreakable bond through our clear, play-centred approach.</p>
+                <p className="text-xl text-medium-grey">Read the real stories from North Brisbane families who have achieved lasting behaviour change and strengthened their bond through our clear, play-centred approach.</p>
               </div>
 
               {testimonialsLoading ? (
