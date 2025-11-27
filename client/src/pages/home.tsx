@@ -400,7 +400,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Services</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Training isn't a chore—it's high-value engagement. By placing our play-based methodology at the centre of our approach, we accelerate your dog's learning and focus. This professional methodology ensures lasting results and builds the unbreakable bond that lasts a lifetime.
+              Training isn't a chore—it's high-value engagement. By placing our play-based methodology at the centre of our approach, we accelerate your dog's learning and focus. This professional methodology ensures lasting results and builds a strong, trusting bond.
             </p>
           </div>
 
