@@ -469,10 +469,10 @@ export default function PackagesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Why Choose Our Training Packages?
+              Why Our Packages Deliver Lasting Change
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to understand your dog's genetics, personality, and learning style, creating a tailored approach that fits your lifestyle and builds real fulfillment for your dog. Our cost-effective packages ensure regular training sessions, which creates real results because all training requires consistency in action.
+              We take the time to analyse your dog's genetics and learning profile, creating a behaviour-specific approach that fits your Brisbane lifestyle and delivers Confidence and Behaviour-Specific Fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the Unbreakable Bond you are looking for.
             </p>
           </div>
 
@@ -481,9 +481,9 @@ export default function PackagesPage() {
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Proven Methods</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Methodology for Results</h3>
               <p className="text-gray-600">
-                Proven, effective training techniques that focus on building trust and confidence between dog and handler.
+                Proven, effective techniques that focus on building Confidence and the Unbreakable Bond between dog and handler.
               </p>
             </div>
 
@@ -491,9 +491,9 @@ export default function PackagesPage() {
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Personalised Approach</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Behaviour-Specific Plan</h3>
               <p className="text-gray-600">
-                Every program is tailored to your dog's unique personality and learning style
+                Every program is individualised and behaviour-specific, tailored to your dog's learning style and inherent drives.
               </p>
             </div>
 
@@ -501,9 +501,9 @@ export default function PackagesPage() {
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Ongoing Support</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Lifetime Commitment</h3>
               <p className="text-gray-600">
-                Continued guidance and support throughout your training journey and dog's life
+                Continued guidance and support for the life of your dog, ensuring long-term success.
               </p>
             </div>
           </div>
