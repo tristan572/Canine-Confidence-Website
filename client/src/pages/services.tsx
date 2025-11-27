@@ -17,7 +17,7 @@ import {
   MapPin,
   DollarSign,
   CheckCircle,
-  TreePine,
+  Dna,
   Camera,
   ClipboardList,
   MapPinned,
@@ -255,7 +255,7 @@ export default function ServicesPage() {
             </div>
             <div className="bg-white p-8 rounded-xl">
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
-                <TreePine className="w-6 h-6 text-white" />
+                <Dna className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
