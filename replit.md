@@ -146,22 +146,29 @@ Preferred communication style: Simple, everyday language.
 
 ## Performance Optimizations
 
-### Code Splitting
-- **Route-based code splitting**: All pages are lazy-loaded using React.lazy() and Suspense
-- **Reduced initial JS bundle**: Only essential code loads on first visit
-- **Dynamic imports**: Each page loads on-demand when navigated to
-
-### Image Optimization
-- **LCP optimization**: Hero images use `loading="eager"` and `decoding="sync"` for fastest paint
-- **Image compression**: All images compressed to ~85% quality at max 1200px width (reduced from ~70MB to ~8.5MB)
+### Image Optimization (WebP)
+- **WebP conversion**: All images converted to WebP format with 65-75% quality
+- **Responsive images**: 400w, 800w, 1200w variants with srcset for different screen sizes
+- **Hero optimization**: 60KB (400w mobile), 114KB (800w desktop), optimized JPEG fallback (114KB)
+- **LCP optimization**: Hero images use `loading="eager"`, `fetchpriority="high"`, and responsive preloads
 - **Lazy loading**: Below-fold images use `loading="lazy"` to defer loading
-- **Aspect ratios**: All image containers have explicit aspect-ratio CSS to prevent CLS
-- **Dimensions**: All images specify width/height to reserve space during load
+- **Dimensions**: All images specify width/height to prevent layout shift (CLS)
+
+### JavaScript Bundle Optimization
+- **Removed ReactMarkdown**: Plain JSX used for package descriptions (saves ~50KB)
+- **Deferred queries**: Non-critical API calls (testimonials, products, blog) load after initial paint using requestIdleCallback
+- **Critical queries only**: Services and packages load immediately for above-fold content
+
+### Font Optimization
+- **Self-hosted Inter fonts**: Eliminated render-blocking Google Fonts CSS
+- **Font files**: /attached_assets/inter-latin-{400,500,600,700}.woff2
+- **font-display: swap**: Text renders immediately with fallback font
+- **Font preload**: Primary font (400 weight) preloaded in index.html
 
 ### Resource Hints (index.html)
-- **Preconnect**: fonts.googleapis.com, fonts.gstatic.com, replit.com
+- **Preconnect**: replit.com
 - **DNS Prefetch**: canineconfidence.simplybook.net
-- **Preload**: Hero image and fonts for faster LCP
+- **Preload**: Hero image (responsive with media queries) and Inter font
 - **Critical CSS**: Inline styles for above-the-fold content
 
 ### Caching Strategy

@@ -49,8 +49,15 @@ export default function HomePage() {
   
   // Load deferred content after initial paint
   useEffect(() => {
-    const id = requestIdleCallback(() => setLoadDeferred(true), { timeout: 1000 });
-    return () => cancelIdleCallback(id);
+    // Use requestIdleCallback with setTimeout fallback for Safari
+    const callback = () => setLoadDeferred(true);
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(callback, { timeout: 1000 });
+      return () => window.cancelIdleCallback(id);
+    } else {
+      const id = setTimeout(callback, 100);
+      return () => clearTimeout(id);
+    }
   }, []);
   
   // Critical queries - load immediately for above-fold content
