@@ -281,7 +281,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-4xl font-bold text-charcoal mb-4">Comprehensive Training Packages</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Every dog is unique, every family is different. That's why we don't use one-size-fits-all approaches. We build deep partnerships through play-based learning that's tailored to your dog's genetics, personality, and your lifestyle.
+              Stop wasting time on generic, one-size-fits-all training that fails to address the root cause. Our packages are a personalised strategy, meticulously tailored to your dog's genetics, individual behaviour, and your Brisbane lifestyle. We use our play-centred methodology to achieve lasting behaviour change and build an unbreakable bond that lasts a lifetime.
             </p>
           </div>
 
