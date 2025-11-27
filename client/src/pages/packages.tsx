@@ -483,7 +483,7 @@ export default function PackagesPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Methodology for Results</h3>
               <p className="text-gray-600">
-                Proven, effective techniques that focus on building confidence and the unbreakable bond between dog and handler.
+                Proven, effective techniques that focus on building confidence and clarity between dog and handler.
               </p>
             </div>
 
