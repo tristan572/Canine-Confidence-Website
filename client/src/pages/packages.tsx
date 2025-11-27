@@ -472,7 +472,7 @@ export default function PackagesPage() {
               Why Our Packages Deliver Lasting Change
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to analyse your dog's genetics and learning profile, creating a behaviour-specific approach that fits your Brisbane lifestyle and delivers confidence and behaviour-specific fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the unbreakable bond you are looking for.
+              We take the time to analyse your dog's genetics and learning profile, creating a behaviour-specific approach that fits your Brisbane lifestyle and delivers confidence and behaviour-specific fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
             </p>
           </div>
 
