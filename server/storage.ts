@@ -122,7 +122,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$90",
         category: "assessment",
-        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260.jpg",
+        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260.webp",
         features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to our training system, designed to save you time and money"]
       },
 
@@ -133,7 +133,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049391709.jpg",
+        imageUrl: "/attached_assets/image_1750049391709.webp",
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
@@ -143,7 +143,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049431855.jpg",
+        imageUrl: "/attached_assets/image_1750049431855.webp",
         features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
@@ -153,7 +153,7 @@ export class MemStorage implements IStorage {
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.jpg",
+        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023.webp",
         features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
@@ -163,7 +163,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049520029.jpg",
+        imageUrl: "/attached_assets/image_1750049520029.webp",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
@@ -173,7 +173,7 @@ export class MemStorage implements IStorage {
         location: "From client's home",
         price: "$45",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049687824.jpg",
+        imageUrl: "/attached_assets/image_1750049687824.webp",
         features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
       },
       {
@@ -183,7 +183,7 @@ export class MemStorage implements IStorage {
         location: "Video call (Zoom)",
         price: "$100",
         category: "consultation",
-        imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6.jpg",
+        imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6.webp",
         features: ["Convenient video call", "Problem solving", "Follow-up support", "Training guidance"]
       }
     ];
@@ -198,7 +198,7 @@ export class MemStorage implements IStorage {
         price: "45.00",
         priceRange: "$35 - $55",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/professional_dog_tra_68cb0c20.jpg",
+        imageUrl: "/attached_assets/stock_images/professional_dog_tra_68cb0c20.webp",
         inStock: true
       },
       {
@@ -207,7 +207,7 @@ export class MemStorage implements IStorage {
         price: "30.00",
         priceRange: "$25 - $35",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad.jpg",
+        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad.webp",
         inStock: true
       },
       {
@@ -216,7 +216,7 @@ export class MemStorage implements IStorage {
         price: "40.00",
         priceRange: "$30 - $50",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad.jpg",
+        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad.webp",
         inStock: true
       },
       {
@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
         price: "20.00",
         priceRange: "$15 - $25",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/dog_training_balls_a_46124b17.jpg",
+        imageUrl: "/attached_assets/stock_images/dog_training_balls_a_46124b17.webp",
         inStock: true
       },
       {
@@ -234,7 +234,7 @@ export class MemStorage implements IStorage {
         price: "25.00",
         priceRange: "$20 - $35",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/interactive_tug_toy__f1fbf953.jpg",
+        imageUrl: "/attached_assets/stock_images/interactive_tug_toy__f1fbf953.webp",
         inStock: true
       },
       {
@@ -269,7 +269,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/image_1750048904991.jpg",
+        imageUrl: "/attached_assets/image_1750048904991.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised Socialisation Protocols & Exposure Plan",
@@ -288,7 +288,7 @@ export class MemStorage implements IStorage {
         duration: "1 week",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839.jpg",
+        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839.webp",
         features: [
           "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
           "Foundations of High-Level Engagement and Obedience on the move",
@@ -307,7 +307,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/image_1750049297197.jpg",
+        imageUrl: "/attached_assets/image_1750049297197.webp",
         features: [
           "Intensive Sessions focusing on effective, lasting behavioural change",
           "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
@@ -328,7 +328,7 @@ export class MemStorage implements IStorage {
       //   duration: "8 weeks", 
       //   sessions: 8,
       //   category: "behaviour",
-      //   imageUrl: "/attached_assets/image_1750048973571.png",
+      //   imageUrl: "/attached_assets/image_1750048973571.webp",
       //   features: [
       //     "8 x 1-hour sessions",
       //     "Detailed behaviour assessment",
@@ -348,7 +348,7 @@ export class MemStorage implements IStorage {
       //   duration: "8 weeks",
       //   sessions: 8,
       //   category: "obedience",
-      //   imageUrl: "/attached_assets/image_1750049053389.png",
+      //   imageUrl: "/attached_assets/image_1750049053389.webp",
       //   features: [
       //     "8 x private 1-hour sessions",
       //     "Training plan and homework guide",
@@ -367,7 +367,7 @@ export class MemStorage implements IStorage {
       //   duration: "4 weeks",
       //   sessions: 12,
       //   category: "behaviour",
-      //   imageUrl: "/attached_assets/image_1750049297197.png",
+      //   imageUrl: "/attached_assets/image_1750049297197.webp",
       //   features: [
       //     "Training plan and homework supplied",
       //     "Foundations and communication",
@@ -388,7 +388,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278.jpg",
+        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278.webp",
         features: [
           "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
           "Customised Training Approach and problem-solving strategy",
@@ -407,7 +407,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.jpg",
+        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769.webp",
         features: [
           "5 x Private, In-Home Training Sessions (Done by the trainer)",
           "Completely Flexible Focus—use for obedience, foundations, behaviour modification, or fulfilment",
@@ -424,7 +424,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.jpg",
+        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287.webp",
         features: [
           "5 x 40-Minute Sessions (Trainer-led, done for you)",
           "Home Pickup Service Included at no extra charge",
@@ -442,7 +442,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.jpg",
+        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107.webp",
         features: [
           "5 x Adventure Outings (Each session is an hour of adventure and integrated training)",
           "Premium Home Pick-up Service included",
@@ -460,7 +460,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673.jpeg",
+        imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673.webp",
         features: [
           "5 x Local Walk Sessions focused on essential exercise and mental stimulation",
           "Reliable Home Pick-up Service included",
@@ -523,7 +523,7 @@ The reality is simple: a dog in pain won't respond normally to leash pressure, p
 When something feels "off" with your dog, resist the urge to immediately seek behavioural solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
-        imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.png",
+        imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.webp",
         readTime: "8 min read",
         tags: ["health", "foundation", "wellness", "four building blocks"]
       },
@@ -577,7 +577,7 @@ These behaviors aren't moral failings or dominance displays—they're symptoms o
 A fulfilled dog is naturally more focused, more cooperative, and more peaceful in daily life. When your dog's mind is engaged and their drives are satisfied, they have the mental and emotional capacity to focus on what you're asking of them. They become partners in the training process rather than resistant participants.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "/attached_assets/generated_images/Border_Collie_mental_stimulation_666374d6.png",
+        imageUrl: "/attached_assets/generated_images/Border_Collie_mental_stimulation_666374d6.webp",
         readTime: "10 min read",
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"]
       },
@@ -639,7 +639,7 @@ Inconsistent communication creates confusion, stress, and what looks like disobe
 Clarity isn't about achieving perfection—it's about creating predictability. Dogs thrive when they know what things mean, when they can trust that the rules won't change arbitrarily, and when they can predict the consequences of their choices. This predictability creates confidence, and confident dogs are naturally more cooperative, more focused, and more enjoyable to live with.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "/attached_assets/generated_images/Golden_Retriever_communication_training_1d6a9e14.png",
+        imageUrl: "/attached_assets/generated_images/Golden_Retriever_communication_training_1d6a9e14.webp",
         readTime: "9 min read",
         tags: ["communication", "clarity", "markers", "four building blocks"]
       },
@@ -705,7 +705,7 @@ When properly developed, life skills become reliable tools that serve both you a
 A dog with solid life skills is a dog who can participate more fully in family life, explore more of the world safely, and handle life's inevitable changes with confidence and grace. These aren't just training achievements—they're the building pieces of a rich, fulfilling partnership between human and dog.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "/attached_assets/generated_images/Australian_Shepherd_public_obedience_11c6c97e.png",
+        imageUrl: "/attached_assets/generated_images/Australian_Shepherd_public_obedience_11c6c97e.webp",
         readTime: "8 min read",
         tags: ["obedience", "skills", "training", "four building blocks"]
       },
@@ -864,7 +864,7 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 **Watch your dog, not just their breed label.** The goal is to find what genuinely fulfills your specific dog's needs.
 
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
-        imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.png",
+        imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.webp",
         readTime: "12 min read",
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"]
       },
@@ -922,7 +922,7 @@ Dogs who have all four foundational elements in place become calm because their 
 This comprehensive approach isn't just training—it's building a complete life together based on mutual understanding, clear communication, and genuine care for your dog's total wellbeing. When you provide your dog with physical health, mental fulfillment, clear communication, and practical skills, you're not just modifying behaviour—you're creating the foundation for a relationship that will bring deep satisfaction and joy for years to come.
 
 The investment in building these foundations properly pays dividends throughout your dog's entire life, creating not just better behaviour, but a truly harmonious partnership between human and canine companions.`,
-        imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.png",
+        imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.webp",
         readTime: "12 min read",
         tags: ["four building blocks", "balance", "framework", "complete guide"]
       }
