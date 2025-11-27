@@ -98,7 +98,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <h1 className="text-5xl font-bold text-charcoal"><span className="text-primary-blue">Tailored</span> Dog Training Services in North Brisbane</h1>
                 <p className="text-xl text-medium-grey">
-                  Every dog is unique, every family is different. That's why we don't believe in cookie-cutter training methods. Our approach centers on play, connection, and understanding your dog's individual needs to build genuine partnerships that create confidence and joy for both you and your dog.
+                  We don't believe in cookie-cutter training methods that only focus on commands. We use a personalised strategy based on canine psychology and play to deliver three things: Confidence for your dog, Clarity for you, and an Unbreakable Bond for your family.
                 </p>
               </div>
             </div>
