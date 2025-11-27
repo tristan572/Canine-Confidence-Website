@@ -399,9 +399,9 @@ export default function PackagesPage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
-                  North Brisbane Dog Training Packages : Find Your <span className="text-primary-blue">Perfect</span> Fit
+                  North Brisbane Dog Training Packages: Your Complete <span className="text-primary-blue">Behaviour</span> Solution
                 </h1>
-                <p className="text-xl text-medium-grey">Thoughtfully designed programs that honour your dog's individuality while building the skills and confidence they need to thrive in life.</p>
+                <p className="text-xl text-medium-grey">Skip the guesswork. Our packages are not generic solutions—they are meticulously crafted programs designed around your dog's behaviour-specific needs and your North Brisbane lifestyle. We build Confidence through Clarity to ensure lasting results and an Unbreakable Bond for your family.</p>
               </div>
               
               <div className="flex flex-wrap gap-4">
