@@ -66,7 +66,7 @@ export default function AboutPage() {
       {/* Main About Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">The <span className="text-primary-blue">Turning Point</span></h2>
@@ -182,7 +182,7 @@ export default function AboutPage() {
       {/* Experience Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <picture>
                 <source 
