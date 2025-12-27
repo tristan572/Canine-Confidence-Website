@@ -339,34 +339,78 @@ export default function ChermsidePage() {
         </div>
       </section>
 
-      {/* Getting Started Section */}
+      {/* Urban Assessment Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">
-              Getting Started with <span className="text-primary-blue">Training</span>
-            </h2>
-            <p className="text-xl text-medium-grey">
-              All new adult dog clients start with an Initial Canine Success Assessment. This 60-minute session diagnoses your dog's current behaviour and creates a tailored training plan for your specific urban challenges.
-            </p>
-          </div>
-
-          <Card className="bg-light-grey border-0">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold text-charcoal mb-4">Initial Canine Success Assessment</h3>
-              <p className="text-medium-grey mb-6">
-                Essential for diagnosing your dog's behaviour, setting realistic goals, and determining the optimal training approach for apartment living and urban environments.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-charcoal">
+                Stop Guessing. <span className="text-primary-blue">Start Training.</span>
+              </h2>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                Every dog is an individual, and every urban living situation is unique. A generic "puppy school" won't address the specific triggers of a reactive dog living in a Chermside apartment.
               </p>
-              <div className="text-4xl font-bold text-primary-blue mb-6">$90</div>
-              <Button 
-                onClick={() => setShowAssessmentDialog(true)}
-                className="btn-primary px-8"
-                data-testid="button-book-assessment-section"
-              >
-                Book Assessment
-              </Button>
-            </CardContent>
-          </Card>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                Before we start, we conduct a 1-on-1 Urban Suitability Assessment. This is a logical, deep-dive evaluation of your dog's genetics, current temperament, and your specific living environment.
+              </p>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-charcoal">What the assessment covers:</h3>
+                
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-1">Trigger Identification</h4>
+                    <p className="text-medium-grey">Pinpointing exactly what causes your dog to lose focus or react.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-1">Environmental Analysis</h4>
+                    <p className="text-medium-grey">Assessing your local walking routes and home setup.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-1">A Clear Roadmap</h4>
+                    <p className="text-medium-grey">A constructive, step-by-step plan to achieve neutrality and reliability.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <Button 
+                  onClick={() => setShowAssessmentDialog(true)}
+                  className="btn-primary px-8"
+                  data-testid="button-book-assessment-section"
+                >
+                  Book Your Urban Assessment
+                </Button>
+              </div>
+            </div>
+
+            <Card className="bg-light-grey border-0">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div className="text-center pb-4 border-b">
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">Urban Suitability Assessment</h3>
+                    <div className="text-4xl font-bold text-primary-blue">$90</div>
+                    <p className="text-medium-grey mt-2">60-minute 1-on-1 evaluation</p>
+                  </div>
+
+                  <div className="pt-4">
+                    <p className="text-medium-grey text-center italic">
+                      Direct, expert guidance for Chermside dog owners.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
