@@ -22,6 +22,7 @@ const Checkout = lazy(() => import("@/pages/checkout"));
 const PaymentSuccess = lazy(() => import("@/pages/payment-success"));
 const Sandgate = lazy(() => import("@/pages/sandgate"));
 const Northgate = lazy(() => import("@/pages/northgate"));
+const Chermside = lazy(() => import("@/pages/chermside"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function ScrollToTop() {
@@ -65,6 +66,7 @@ function Router() {
           <Route path="/payment-success" component={PaymentSuccess} />
           <Route path="/dog-training-sandgate" component={Sandgate} />
           <Route path="/dog-training-northgate" component={Northgate} />
+          <Route path="/dog-training-chermside" component={Chermside} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>

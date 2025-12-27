@@ -223,6 +223,13 @@ Preferred communication style: Simple, everyday language.
   - Target keywords: "dog training Northgate", "dog trainer Nundah", "Kalinga Park dog training"
   - Services: Walk & Train (Service ID 6), Private Coaching (Service ID 7), Assessment (Service ID 16)
 
+- **Chermside** (/dog-training-chermside)
+  - Features: Urban dog training, apartment living skills, 1-on-1 Coaching Sessions
+  - Local highlights: Westfield Chermside, 7th Brigade Park, Gympie Road
+  - Target keywords: "dog training Chermside", "dog trainer Kedron", "apartment dog training Brisbane"
+  - Focus: Urban neutrality, elevator/hallway etiquette, threshold control, real-world proofing
+  - Services: Private Coaching (Service ID 7), Assessment (Service ID 16)
+
 ### Scalability
 - Location configuration in `client/src/config/locations.ts` defines all service areas
 - Footer Service Areas section automatically generated from config

@@ -33,6 +33,6 @@ export const serviceAreas: LocationArea[] = [
   {
     name: "Chermside",
     slug: "/dog-training-chermside",
-    isLive: false
+    isLive: true
   }
 ];
