@@ -19,7 +19,9 @@ export function SEO({
 }: SEOProps) {
   const siteUrl = 'https://canineconfidence.com.au';
   const fullTitle = `${title} | Canine Confidence, North Brisbane`;
-  const canonicalUrl = canonical ? `${siteUrl}${canonical}` : undefined;
+  const canonicalUrl = canonical 
+    ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`)
+    : undefined;
   
   const defaultKeywords = [
     'dog training Brisbane',

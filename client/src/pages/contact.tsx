@@ -30,7 +30,7 @@ export default function ContactPage() {
       <SEO 
         title="Contact Dog Trainer"
         description="Contact Canine Confidence for professional dog training in North Brisbane. Book a free consultation, call 0409521358, or visit us. Serving Brisbane families and their dogs."
-        canonical="/contact"
+        canonical="https://canineconfidence.com.au/contact"
         keywords={[
           'dog trainer contact Brisbane',
           'book dog training Brisbane',

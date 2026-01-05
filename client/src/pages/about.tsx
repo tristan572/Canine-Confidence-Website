@@ -39,7 +39,7 @@ export default function AboutPage() {
       <SEO 
         title="About Tristan - NDTF Certified Dog Trainer"
         description="Meet Tristan, North Brisbane's NDTF certified dog trainer. From redundancy in 2020 to certification in 2022, discover the personal journey behind Canine Confidence's unique play-based training approach."
-        canonical="/about"
+        canonical="https://canineconfidence.com.au/about"
         keywords={[
           'NDTF certified dog trainer',
           'North Brisbane dog trainer',

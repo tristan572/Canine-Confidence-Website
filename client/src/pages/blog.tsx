@@ -115,7 +115,7 @@ export default function BlogPage() {
       <SEO 
         title="Dog Training Advice and Tips"
         description="Expert dog training tips, guides, and insights from Canine Confidence. Learn to understand your dog better and build a stronger relationship through play-based training methods."
-        canonical="/blog"
+        canonical="https://canineconfidence.com.au/blog"
         keywords={[
           'dog training tips',
           'dog training advice Brisbane',

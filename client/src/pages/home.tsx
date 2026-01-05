@@ -106,7 +106,7 @@ export default function HomePage() {
       <SEO 
         title="Professional Dog Training Boondall"
         description="Transform your dog's behaviour with Canine Confidence. NDTF certified dog training in North Brisbane focusing on play-based learning, genetic fulfillment, and lasting results. Book your free consultation today."
-        canonical="/"
+        canonical="https://canineconfidence.com.au/"
         keywords={[
           'dog training North Brisbane',
           'puppy training',

@@ -80,7 +80,7 @@ export default function ServicesPage() {
       <SEO 
         title="Obedience Training Boondall"
         description="Professional dog training services in North Brisbane. Assessment, coaching, in-home training, walk & train, and adventure walks. Play-based methods focused on genetic fulfillment and lasting results."
-        canonical="/services"
+        canonical="https://canineconfidence.com.au/services"
         keywords={[
           'dog training services Brisbane',
           'puppy training North Brisbane',

@@ -22,7 +22,7 @@ export default function ProductsPage() {
       <SEO 
         title="Dog Training Tools & Recommended Gear"
         description="Professional training equipment and toys coming soon to Canine Confidence. Trainer-approved gear for effective training sessions in Brisbane."
-        canonical="/products"
+        canonical="https://canineconfidence.com.au/products"
         keywords={[
           'dog training equipment Brisbane',
           'training toys',

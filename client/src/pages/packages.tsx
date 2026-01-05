@@ -382,7 +382,7 @@ export default function PackagesPage() {
       <SEO 
         title="Dog Training Packages and Pricing"
         description="Affordable dog training packages in Brisbane. Puppy Foundation Program, Loose Leash Walking, From Chaos to Calm, and coaching packages. Expert training with lasting results and savings up to $240."
-        canonical="/packages"
+        canonical="https://canineconfidence.com.au/packages"
         keywords={[
           'dog training packages Brisbane',
           'puppy training program',
