@@ -941,10 +941,10 @@ The investment in building these foundations properly pays dividends throughout 
         location: null
       },
       {
-        clientName: "Belinda M.",
-        dogName: "Gracie",
+        clientName: "Manpreet Kharbarh",
+        dogName: null,
         rating: 5,
-        reviewText: "Tristan was really informative and has given me some great tools to help train my dog Gracie. Would highly recommend him!",
+        reviewText: "My cavoodle is nuts about Tristan! Ever since Tristan has been working with my dog, he's doing so well with his behaviour. Tristan is a wealth of knowledge too, you can tell he loves what he does, he loves sharing his knowledge with you and most importantly, he genuinely cares about our dog.",
         service: "Training",
         location: null
       },

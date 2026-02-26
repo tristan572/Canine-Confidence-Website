@@ -108,6 +108,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/local-resources" className="text-white hover:text-primary-blue transition-colors">
+                  Local Resources
+                </Link>
+              </li>
+              <li>
                 <Dialog>
                   <DialogTrigger asChild>
                     <button className="text-white hover:text-primary-blue transition-colors text-left">
