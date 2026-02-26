@@ -957,10 +957,10 @@ The investment in building these foundations properly pays dividends throughout 
         location: null
       },
       {
-        clientName: "Caitlyn F.",
-        dogName: "Koda",
+        clientName: "Brodie Sloan",
+        dogName: "Rae",
         rating: 5,
-        reviewText: "He was great, very friendly. He helped us a lot with training and was great with koda. Can't wait for our future sessions.",
+        reviewText: "Tristan has been absolutely wonderful with our dog Rae. He has helped improve her ability to walk calmly on a leash and, just as importantly, taught us how to better understand Rae and her cues, which has made walking her genuinely enjoyable again.\n\nWe've also booked Tristan to come while we're at work to train and walk Rae, and we really appreciate how he keeps us updated with photos and videos throughout each session. It gives us so much peace of mind.\n\nWe truly value Tristan's knowledge and guidance and have seen huge improvements in Rae's leash walking and overall obedience in such a short time. Highly recommend him to anyone looking for a knowledgeable, patient, and effective dog trainer.",
         service: "Training",
         location: null
       },
