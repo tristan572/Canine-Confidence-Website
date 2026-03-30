@@ -1,3 +1,4 @@
+import path from "path";
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import Stripe from "stripe";
@@ -375,6 +376,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  const httpServer = createServer(app);
+  // Lead magnet landing page
+  app.get("/rescuedogsafety-net", (_req, res) => {
+    res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-safety-net.html"));
+  });
+
+    const httpServer = createServer(app);
   return httpServer;
 }

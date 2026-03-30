@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Safety Net: Your First 7 Days with Your Rescue Dog | Canine Confidence</title>
+  <meta name="description" content="A free guide for new rescue dog owners. Learn the 4 key principles to set your dog up for success in the first week." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a2e4a;
+      --cyan: #2ab4d0;
+      --cyan-light: #e8f7fb;
+      --text: #2c3e50;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background: #f9fafb;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: white;
+      border-bottom: 3px solid var(--cyan);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .site-header img { height: 44px; width: auto; }
+    .header-book-btn {
+      background: var(--cyan);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--cyan);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 6vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── Gate (email form) ── */
+    .gate {
+      background: white;
+      border-radius: 12px;
+      padding: 32px 24px;
+      margin: -24px 20px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+    .gate h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .gate p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .gate-form { display: flex; flex-direction: column; gap: 12px; }
+    .gate-form input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .gate-form input:focus { border-color: var(--cyan); }
+    .gate-form button {
+      width: 100%;
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .gate-form button:hover { background: var(--cyan); }
+    .gate-privacy {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ── Content (hidden until unlocked) ── */
+    .content { display: none; }
+    .content.unlocked { display: block; }
+
+    /* ── Sections ── */
+    .section {
+      padding: 32px 20px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .section p { margin-bottom: 14px; color: var(--text); }
+
+    /* ── Callout ── */
+    .callout {
+      background: var(--navy);
+      color: white;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .callout::before {
+      content: '"';
+      font-size: 48px;
+      color: var(--cyan);
+      position: absolute;
+      top: 8px; left: 14px;
+      line-height: 1;
+    }
+    .callout p { padding-left: 28px; color: white; margin: 0; }
+
+    /* ── Principle cards ── */
+    .principle-card {
+      background: white;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--cyan);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .principle-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .principle-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .principle-card p { font-size: 14px; margin: 0 0 10px; }
+    .principle-card ul {
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .principle-card ul li { margin-bottom: 6px; }
+
+    /* ── Tips list ── */
+    .tips-list { list-style: none; padding: 0; }
+    .tips-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+    }
+    .tips-list li:last-child { border-bottom: none; }
+    .tips-list .icon { color: var(--cyan); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── Schedule ── */
+    .schedule-block {
+      background: var(--cyan-light);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+    .schedule-block h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+    .schedule-block ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .schedule-block ul li {
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .schedule-block ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+
+    /* ── Checklist ── */
+    .checklist-day {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .checklist-day h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .checklist-day h4 span {
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .check-item:last-child { border-bottom: none; }
+    .check-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: var(--cyan);
+      cursor: pointer;
+    }
+    .check-item label { cursor: pointer; line-height: 1.4; }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 8px 0;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--navy);
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .cta-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 28px;
+      font-size: 15px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: white;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    .cta-phone {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    .cta-logo { margin-top: 32px; opacity: 0.7; }
+    .cta-logo img { height: 40px; width: auto; }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: #111;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+    .site-footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+    /* ── Success message ── */
+    .success-msg {
+      background: #d1fae5;
+      border: 1px solid #6ee7b7;
+      color: #065f46;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      display: none;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <img src="/attached_assets/canine_confidence_logo_clean_1758887288824.png" alt="Canine Confidence" />
+  <a href="https://canineconfidence.com.au/packages" class="header-book-btn">Book a Session</a>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-tag">Free Guide for New Rescue Owners</div>
+  <h1>The Safety Net:<br/><span>Your First 7 Days</span><br/>with Your Rescue Dog</h1>
+  <p>The simple framework that helps rescue dogs settle in faster and feel secure from day one.</p>
+</section>
+
+<!-- Email Gate -->
+<div class="gate" id="gate">
+  <h2>Get Instant Access</h2>
+  <p>Enter your email and start reading now. We'll also send you weekly tips from Tristan at Canine Confidence.</p>
+  <form class="gate-form" id="gateForm">
+    <input type="email" id="emailInput" placeholder="Your email address" required autocomplete="email" />
+    <button type="submit">Get the Guide →</button>
+    <p class="gate-privacy">🔒 No spam. Unsubscribe anytime.</p>
+  </form>
+  <div class="success-msg" id="successMsg">✅ You're in! Scroll down to read your guide.</div>
+</div>
+
+<!-- Content (locked until email submitted) -->
+<div class="content" id="content">
+
+  <!-- Intro -->
+  <div class="section">
+    <div class="section-label">Introduction</div>
+    <h2>The First Week Sets the Foundation</h2>
+    <p>Bringing home a rescue dog is exciting. It is also, for the dog, one of the most disorienting experiences of their life. A new home, new smells, new people, new rules — all at once, with no context.</p>
+    <p>Most owners respond to this with love and freedom. They want the dog to know it is safe. They let the dog explore everywhere, sleep anywhere, and do whatever feels natural.</p>
+    <p>That instinct is understandable. It is also, in most cases, the thing that makes the first month much harder than it needs to be.</p>
+    <div class="callout"><p>The biggest mistake new rescue owners make is giving too much freedom too soon. Structure is not a punishment. It is the thing that tells a dog: this place is safe, predictable, and mine.</p></div>
+    <p>This guide gives you the four principles that make the first week work. They are simple. They are free. And they make everything that comes after significantly easier.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Principle 1 -->
+  <div class="section">
+    <div class="section-label">Principle 1 of 4</div>
+    <h2>Management First. Training Later.</h2>
+    <div class="principle-card">
+      <div class="principle-number">Why it matters</div>
+      <h3>Prevent problems before they start</h3>
+      <p>Every problem you prevent is a habit that never forms. Management tools are not punishment — they are prevention. They stop problems before they start, which means less stress for the dog, less frustration for you, and no bad habits to undo.</p>
+      <ul>
+        <li>Prevent, do not react. Every problem you prevent is a habit that never forms.</li>
+        <li>Freedom is earned, not given. A dog who earns access to the house respects it. A dog handed full access on Day 1 will test every boundary.</li>
+        <li>Structure creates freedom. The more structure now, the more genuine freedom later.</li>
+      </ul>
+    </div>
+    <div class="principle-card">
+      <div class="principle-number">How to do it</div>
+      <h3>The Drag Lead Protocol</h3>
+      <ul>
+        <li>Attach a lightweight 0.5–1 metre lead (handle cut off) to your dog's collar indoors</li>
+        <li>Do not hold it — just let it drag. It gives you easy, low-stress control without grabbing or chasing</li>
+        <li>Remove it when you cannot supervise (crate or pen instead)</li>
+        <li>Use it for the first 2–4 weeks while your dog learns the rules of the house</li>
+      </ul>
+    </div>
+    <div class="principle-card">
+      <div class="principle-number">Also use</div>
+      <h3>The Two-Room Rule</h3>
+      <ul>
+        <li>Restrict your dog to 1–2 rooms for the first week</li>
+        <li>Use baby gates or doors to block off the rest of the house</li>
+        <li>Expand access gradually as they demonstrate calm, settled behaviour</li>
+        <li>A dog who earns each room respects the whole house more</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Principle 2 -->
+  <div class="section">
+    <div class="section-label">Principle 2 of 4</div>
+    <h2>Build a Daily Rhythm</h2>
+    <p>Dogs thrive on predictability. A simple daily rhythm removes guesswork for your dog and decision fatigue for you. It does not need to be rigid — just consistent enough that your dog starts to know what comes next.</p>
+    <div class="callout"><p>Predictability is the fastest path to a calm dog. When a dog knows what is coming, they stop scanning for threats and start relaxing into the day.</p></div>
+
+    <div class="schedule-block">
+      <h4>Morning</h4>
+      <ul>
+        <li>Toilet break immediately on waking (before any food or attention)</li>
+        <li>Structured walk (20–30 min depending on breed/age)</li>
+        <li>Breakfast in the crate or designated spot</li>
+        <li>Rest period — do not engage immediately after eating</li>
+      </ul>
+    </div>
+    <div class="schedule-block">
+      <h4>Midday</h4>
+      <ul>
+        <li>Short toilet break</li>
+        <li>Low-key enrichment (sniff work, Kong, chew)</li>
+        <li>Rest in crate or pen</li>
+      </ul>
+    </div>
+    <div class="schedule-block">
+      <h4>Afternoon / Evening</h4>
+      <ul>
+        <li>Second walk or structured play session</li>
+        <li>Dinner in the crate or designated spot</li>
+        <li>Calm wind-down — avoid high-energy play in the hour before bed</li>
+        <li>Final toilet break, then settle for the night</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Principle 3 -->
+  <div class="section">
+    <div class="section-label">Principle 3 of 4</div>
+    <h2>Understand the Decompression Window</h2>
+    <p>Most rescue dogs are not "themselves" for the first 2–12 weeks. They are in survival mode — reading every cue, suppressing natural behaviour, trying to work out if this place is permanent.</p>
+    <p>This is called the decompression window. It is normal. It is not a personality assessment.</p>
+    <ul class="tips-list">
+      <li><span class="icon">✓</span><span>Shut down, low energy, not very interested in food or play — this is decompression, not sadness. Give them time.</span></li>
+      <li><span class="icon">✓</span><span>Overly hyper, bouncing off walls, can't settle — also decompression. Often mistaken for "high energy dog." Structure and rest fix this faster than more exercise.</span></li>
+      <li><span class="icon">✓</span><span>Perfect the first week, then "falls apart" in week two or three — this is the dog realising they are staying. Their real personality emerges. Totally normal.</span></li>
+      <li><span class="icon">✓</span><span>Showing fear, avoidance, or low-level aggression — do not push through it with forced socialisation. Give space, use management, let them set the pace.</span></li>
+    </ul>
+    <div class="callout"><p>Do not assess your dog's personality in the first month. You are seeing their coping strategy, not who they are.</p></div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- 7-Day Checklist -->
+  <div class="section">
+    <div class="section-label">Your Action Plan</div>
+    <h2>7-Day Checklist</h2>
+    <p>Work through this each day. Tick as you go. Keep it simple — the goal is consistency, not perfection.</p>
+
+    <div class="checklist-day">
+      <h4><span>1</span>Day 1 — Arrival Day</h4>
+      <div class="check-item"><input type="checkbox" id="c1a"><label for="c1a">Attach drag lead before dog leaves the car</label></div>
+      <div class="check-item"><input type="checkbox" id="c1b"><label for="c1b">Show dog their space (2-room rule starts now)</label></div>
+      <div class="check-item"><input type="checkbox" id="c1c"><label for="c1c">Keep visitors and excitement to a minimum</label></div>
+      <div class="check-item"><input type="checkbox" id="c1d"><label for="c1d">First toilet break before entry</label></div>
+      <div class="check-item"><input type="checkbox" id="c1e"><label for="c1e">Let dog settle — do not overwhelm with attention</label></div>
+    </div>
+
+    <div class="checklist-day">
+      <h4><span>2</span>Days 2–3 — Settling In</h4>
+      <div class="check-item"><input type="checkbox" id="c2a"><label for="c2a">Morning toilet break → walk → breakfast routine established</label></div>
+      <div class="check-item"><input type="checkbox" id="c2b"><label for="c2b">Drag lead on during all supervised indoor time</label></div>
+      <div class="check-item"><input type="checkbox" id="c2c"><label for="c2c">Crate or pen used when unsupervised</label></div>
+      <div class="check-item"><input type="checkbox" id="c2d"><label for="c2d">No off-lead backyard access without supervision yet</label></div>
+      <div class="check-item"><input type="checkbox" id="c2e"><label for="c2e">Observe: is your dog eating, toileting, sleeping normally?</label></div>
+    </div>
+
+    <div class="checklist-day">
+      <h4><span>3</span>Days 4–5 — Routine Locked In</h4>
+      <div class="check-item"><input type="checkbox" id="c3a"><label for="c3a">Daily rhythm consistent: walk, eat, rest pattern</label></div>
+      <div class="check-item"><input type="checkbox" id="c3b"><label for="c3b">Begin basic sit/wait/name recognition practice (5 min only)</label></div>
+      <div class="check-item"><input type="checkbox" id="c3c"><label for="c3c">Crate acceptance improving? Dog settling without protest?</label></div>
+      <div class="check-item"><input type="checkbox" id="c3d"><label for="c3d">Note any behaviours to monitor (reactivity, guarding, anxiety)</label></div>
+    </div>
+
+    <div class="checklist-day">
+      <h4><span>4</span>Days 6–7 — Review</h4>
+      <div class="check-item"><input type="checkbox" id="c4a"><label for="c4a">Is your dog calmer at the end of the week than the start?</label></div>
+      <div class="check-item"><input type="checkbox" id="c4b"><label for="c4b">Any concerning behaviours emerging that need professional input?</label></div>
+      <div class="check-item"><input type="checkbox" id="c4c"><label for="c4c">Plan week 2: gradual freedom expansion as earned</label></div>
+      <div class="check-item"><input type="checkbox" id="c4d"><label for="c4d">Book an assessment session if you need a tailored plan</label></div>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<!-- CTA (always visible after gate) -->
+<div id="ctaSection" style="display:none;">
+  <div class="cta-section">
+    <h2>Want a Tailored Plan for Your Dog?</h2>
+    <p>Every rescue dog is different. If you want a structured training plan built specifically for your dog's history and behaviour, book a one-on-one assessment with Tristan.</p>
+    <a href="https://canineconfidence.com.au/packages" class="cta-btn">Book an Assessment →</a>
+    <a href="tel:+61XXXXXXXXXX" class="cta-phone">Or call us directly</a>
+    <div class="cta-logo">
+      <img src="/attached_assets/canine_confidence_logo_clean_1758887288824.png" alt="Canine Confidence" />
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>© 2025 Canine Confidence | Brisbane, QLD | <a href="https://canineconfidence.com.au/privacy">Privacy Policy</a></p>
+</footer>
+
+<script>
+  const ZOHO_WEBHOOK = ''; // will be filled in after Tally/Zoho setup
+
+  document.getElementById('gateForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value.trim();
+    if (!email) return;
+
+    const btn = this.querySelector('button');
+    btn.textContent = 'Just a moment...';
+    btn.disabled = true;
+
+    // Send to Zoho webhook if configured
+    if (ZOHO_WEBHOOK) {
+      try {
+        await fetch(ZOHO_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, source: 'rescue-dog-safety-net', date: new Date().toISOString() })
+        });
+      } catch(err) { /* fail silently */ }
+    }
+
+    // Unlock content
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('content').classList.add('unlocked');
+    document.getElementById('ctaSection').style.display = 'block';
+    document.getElementById('gate').style.borderBottom = '3px solid #2ab4d0';
+    btn.style.display = 'none';
+    document.getElementById('emailInput').style.display = 'none';
+
+    // Smooth scroll to content
+    setTimeout(() => {
+      document.getElementById('content').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 400);
+  });
+</script>
+
+</body>
+</html>
