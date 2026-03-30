@@ -16,5 +16,8 @@ npx esbuild server/index.ts \
   --define:process.env.NODE_ENV=\"production\" \
   --outfile=dist/index.js
 
+echo "Copying server static files..."
+cp server/rescue-dog-safety-net.html dist/
+
 echo "Build complete!"
-ls -lh dist/index.js dist/public/index.html
+ls -lh dist/index.js dist/public/index.html dist/rescue-dog-safety-net.html
