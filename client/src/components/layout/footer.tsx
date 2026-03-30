@@ -144,7 +144,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary-blue" />
-                <span className="text-white">North Brisbane, QLD</span>
+                <span className="text-white">44 Leona St, Boondall, QLD</span>
               </li>
               <li className="flex items-start space-x-2 mt-3">
                 <div className="h-4 w-4 mt-0.5">
