@@ -592,6 +592,19 @@
 <script>
   const ZOHO_WEBHOOK = ''; // will be filled in after Tally/Zoho setup
 
+  // Auto-unlock if coming from Tally with ?access=true
+  function unlockContent() {
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('content').classList.add('unlocked');
+    document.getElementById('ctaSection').style.display = 'block';
+    document.getElementById('gate').style.display = 'none';
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('access') === 'true') {
+    unlockContent();
+  }
+
   document.getElementById('gateForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const email = document.getElementById('emailInput').value.trim();
@@ -613,12 +626,7 @@
     }
 
     // Unlock content
-    document.getElementById('successMsg').style.display = 'block';
-    document.getElementById('content').classList.add('unlocked');
-    document.getElementById('ctaSection').style.display = 'block';
-    document.getElementById('gate').style.borderBottom = '3px solid #2ab4d0';
-    btn.style.display = 'none';
-    document.getElementById('emailInput').style.display = 'none';
+    unlockContent();
 
     // Smooth scroll to content
     setTimeout(() => {
