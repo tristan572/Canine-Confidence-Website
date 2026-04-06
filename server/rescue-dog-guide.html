@@ -604,7 +604,11 @@
  document.getElementById('gate').style.display = 'none';
  }
 
- unlockContent();
+ const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('access') === 'true') {
+  unlockContent();
+  history.replaceState(null, '', window.location.pathname);
+}
 
  document.getElementById('gateForm').addEventListener('submit', async function(e) {
  e.preventDefault();
