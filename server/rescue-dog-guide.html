@@ -625,7 +625,7 @@ if (urlParams.get('access') === 'true') {
  await fetch(ZOHO_WEBHOOK, {
  method: 'POST',
  headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ email, source: 'rescue-dog-safety-net', date: new Date().toISOString() })
+ body: JSON.stringify({ email, source: 'rescue-dog-guide', date: new Date().toISOString() })
  });
  } catch(err) { /* fail silently */ }
  }
