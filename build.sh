@@ -17,7 +17,7 @@ npx esbuild server/index.ts \
   --outfile=dist/index.js
 
 echo "Copying server static files..."
-cp server/rescue-guide-net.html dist/
+cp server/rescue-dog-guide-net.html dist/
 
 echo "Build complete!"
-ls -lh dist/index.js dist/public/index.html dist/rescue-guide-net.html
+ls -lh dist/index.js dist/public/index.html dist/rescue-dog-guide-net.html
