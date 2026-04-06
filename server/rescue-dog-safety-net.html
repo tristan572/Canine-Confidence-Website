@@ -605,10 +605,7 @@
  document.getElementById('gate').style.display = 'none';
  }
 
- const urlParams = new URLSearchParams(window.location.search);
- if (urlParams.get('access') === 'true') {
  unlockContent();
- }
 
  document.getElementById('gateForm').addEventListener('submit', async function(e) {
  e.preventDefault();
