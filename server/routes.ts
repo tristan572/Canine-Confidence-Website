@@ -377,8 +377,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Lead magnet landing page
-  app.get("/rescuedogsafety-net", (_req, res) => {
-    res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-safety-net.html"));
+  app.get("/rescuedogguide", (_req, res) => {
+    res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-guide.html"));
   });
 
     const httpServer = createServer(app);
