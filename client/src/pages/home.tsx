@@ -126,10 +126,10 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  North Brisbane <span className="text-primary-blue">Dog Training</span> That Actually Sticks
+                  North Brisbane <span className="text-primary-blue">Dog Training</span> That Sticks
                 </h1>
                 <h2 className="text-3xl lg:text-4xl font-semibold text-charcoal leading-tight">
-                  The Dog You Pictured <span className="text-primary-blue">When You Got Them</span>
+                  The Dog You Always Pictured
                 </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
                   Dogs trained at Canine Confidence come away calm, focused, and connected to their owner. I work in-home and out in the real world — using play, clarity, and honest feedback to build something that lasts.
