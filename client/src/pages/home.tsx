@@ -133,6 +133,7 @@ export default function HomePage() {
                 </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
                   Dogs trained at Canine Confidence come away calm, focused, and connected to their owner. I work in-home and out in the real world — using play, clarity, and honest feedback to build something that lasts.
+                </p> 
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
