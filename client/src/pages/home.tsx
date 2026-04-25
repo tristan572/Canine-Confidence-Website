@@ -126,14 +126,13 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  North Brisbane's Most <span className="text-primary-blue">Trusted</span> Dog Trainer
+                  North Brisbane <span className="text-primary-blue">Dog Training</span> That Actually Sticks
                 </h1>
                 <h2 className="text-3xl lg:text-4xl font-semibold text-charcoal leading-tight">
-                  Canine Confidence: <span className="text-primary-blue">Building Confident Dogs through Clarity and Play</span>
+                  The Dog You Pictured <span className="text-primary-blue">When You Got Them</span>
                 </h2>
                 <p className="text-xl text-medium-grey leading-relaxed">
-                  Based in Boondall, we move beyond basic obedience. We use advanced, play-centred methods and canine psychology to give your dog the clear communication they need. The result is a fulfilled dog and an unbreakable bond, not just compliance.
-                </p>
+                  Dogs trained at Canine Confidence come away calm, focused, and connected to their owner. I work in-home and out in the real world — using play, clarity, and honest feedback to build something that lasts.
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
