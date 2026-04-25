@@ -223,8 +223,8 @@ export default function HomePage() {
                   <Star className="w-4 h-4" />
                   Client Reviews
                 </div>
-                <h2 className="text-4xl font-bold text-charcoal">Over 100+ 5-Star Outcomes</h2>
-                <p className="text-xl text-medium-grey">Read the real stories from North Brisbane families who have achieved lasting behaviour change and strengthened their bond through our clear, play-centred approach.</p>
+                <h2 className="text-4xl font-bold text-charcoal">Over 100 5-Star Reviews</h2>
+                <p className="text-xl text-medium-grey">Real dogs. Real owners. Real results.</p>
               </div>
 
               {testimonialsLoading ? (
