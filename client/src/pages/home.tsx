@@ -126,7 +126,7 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  North Brisbane <span className="text-primary-blue">Dog Training</span> That Sticks
+                  North Brisbane <span className="text-primary-blue">Dog Training</span> That Lasts
                 </h1>
                 <h2 className="text-3xl lg:text-4xl font-semibold text-charcoal leading-tight">
                   The Dog You Always Pictured
