@@ -381,14 +381,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-guide.html"));
   });
 
- // THE FIX: Direct link support for all website pages
+// 1. Tell the server to serve actual files (CSS, JS, Images) from the public folder first
+  app.use(path.resolve(import.meta.dirname, "public"), (_req, res, next) => {
+    next();
+  });
+
+  // 2. THE FIX: Only catch requests that AREN'T files or API calls
   app.get("*", (req, res) => {
-    // If it's an API request that doesn't exist, let it 404 normally
     if (req.path.startsWith('/api')) {
       return res.status(404).json({ message: "API endpoint not found" });
     }
+
+    // If the request is for a file (like .js or .css), don't send index.html
+    if (req.path.includes('.')) {
+      return res.status(404).end();
+    }
     
-    // Send the main website file located in the 'public' folder
     res.sendFile(path.resolve(import.meta.dirname, "public", "index.html"));
   });
 
