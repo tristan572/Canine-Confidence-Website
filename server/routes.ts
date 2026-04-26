@@ -381,6 +381,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-guide.html"));
   });
 
-const httpServer = createServer(app);
-  return httpServer;
-}
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("*", (req, res, next) => {
+  if (path.extname(req.path)) {
+    return next();
+  }
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
