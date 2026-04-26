@@ -24,9 +24,12 @@ function serveStatic(app: express.Express) {
 
   app.use(express.static(distPath));
 
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
-  });
+ app.get("*", (req, res, next) => {
+  if (path.extname(req.path)) {
+    return next();
+  }
+  res.sendFile(path.resolve(distPath, "index.html"));
+});
 }
 
 const app = express();
