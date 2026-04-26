@@ -381,13 +381,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-guide.html"));
   });
 
-  app.get("*", (req, res) => {
-    if (req.path.startsWith('/api')) {
-      return res.status(404).json({ message: "API endpoint not found" });
-    }
-    res.sendFile(path.resolve(import.meta.dirname, "..", "client", "dist", "index.html"));
-  });
-
-  const httpServer = createServer(app);
+ const httpServer = createServer(app);
   return httpServer;
 }
