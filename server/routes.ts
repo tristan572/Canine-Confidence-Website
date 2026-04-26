@@ -389,3 +389,7 @@ app.get("*", (req, res, next) => {
   }
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+  
+const httpServer = createServer(app);
+  return httpServer;
+}
