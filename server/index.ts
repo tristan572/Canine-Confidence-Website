@@ -24,8 +24,8 @@ function serveStatic(app: express.Express) {
 
   app.use(express.static(distPath));
 
- app.get("*", (req, res, next) => {
-  if (path.extname(req.path)) {
+ app.use((req, res, next) => {
+  if (req.method !== "GET" || path.extname(req.path)) {
     return next();
   }
   res.sendFile(path.resolve(distPath, "index.html"));
