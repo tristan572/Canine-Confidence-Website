@@ -381,6 +381,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-guide.html"));
   });
 
- const httpServer = createServer(app);
+ // THE FIX: Direct link support for all website pages
+  app.get("*", (req, res) => {
+    // If it's an API request that doesn't exist, let it 404 normally
+    if (req.path.startsWith('/api')) {
+      return res.status(404).json({ message: "API endpoint not found" });
+    }
+    
+    // Send the main website file located in the 'public' folder
+    res.sendFile(path.resolve(import.meta.dirname, "public", "index.html"));
+  });
+
+  const httpServer = createServer(app);
   return httpServer;
 }
