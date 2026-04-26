@@ -380,15 +380,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/rescuedogguide", (_req, res) => {
     res.sendFile(path.resolve(import.meta.dirname, "rescue-dog-guide.html"));
   });
-
-app.use(express.static(path.join(import.meta.dirname, "public")));
-
-app.get("*", (req, res, next) => {
-  if (path.extname(req.path)) {
-    return next();
-  }
-  res.sendFile(path.join(import.meta.dirname, "public", "index.html"));
-});
   
 const httpServer = createServer(app);
   return httpServer;
