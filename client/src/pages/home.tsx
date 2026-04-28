@@ -248,7 +248,7 @@ export default function HomePage() {
               ) : (
                 <div className="text-center py-12">
                   <p className="text-medium-grey">
-                    More reviews available on our{" "}
+                    More reviews available on my{" "}
                     <a 
                       href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
                       target="_blank"
@@ -556,7 +556,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Ready to Build Real Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an connection that keeps growing.
+                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an connection that keeps growing.
               </p>
             </div>
 
@@ -577,7 +577,7 @@ export default function HomePage() {
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
                   <DialogTitle>Request Free Call</DialogTitle>
-                  <DialogDescription>Connect with us for a complimentary consultation to discuss how we can help you and your dog.</DialogDescription>
+                  <DialogDescription>Connect with us for a complimentary consultation to discuss how I can help you and your dog.</DialogDescription>
                   <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
                     <ConsultationForm />
                   </Suspense>
