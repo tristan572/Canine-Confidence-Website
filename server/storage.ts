@@ -310,7 +310,7 @@ export class MemStorage implements IStorage {
         imageUrl: "/attached_assets/image_1750049297197_opt.webp",
         features: [
           "Intensive Sessions focusing on effective, lasting behavioural change",
-          "Crystal-Clear Communication foundations to reduce your dog's confusion and anxiety",
+          "Clear Communication Foundations to reduce your dog's confusion and anxiety",
           "Master Real-World Management Techniques for immediate safety and peace of mind",
           "Advanced Impulse Control and Counter-Conditioning protocols",
           "Personalised Training Plan and Homework supplied",
