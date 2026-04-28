@@ -128,7 +128,7 @@ export class MemStorage implements IStorage {
 
       {
         name: "One-on-One Private Coaching",
-        description: "**The Ultimate in Convenience and Results**\n\nThis is fully personalised dog training brought directly to you, held either in your home (where most problems happen) or at a public location relevant to your goals (like a park for leash manners).\n\nWe don't just train your dog—we coach you as the primary handler, ensuring you master the effective techniques needed for success. This approach maximises your involvement for lifelong results and a stronger, clearer relationship.\n\nYou'll walk away from every session empowered with the skills and confidence to handle any situation.",
+        description: "**The Ultimate in Convenience and Results**\n\nThis is fully personalised dog training brought directly to you, held either in your home (where most problems happen) or at a public location relevant to your goals (like a park for leash manners).\n\nWe don't just train your dog—I coach you as the primary handler, ensuring you master the effective techniques needed for success. This approach maximises your involvement for lifelong results and a stronger, clearer relationship.\n\nYou'll walk away from every session empowered with the skills and confidence to handle any situation.",
         duration: "60 minutes",
         location: "In-home or suitable environment",
         price: "$120",
