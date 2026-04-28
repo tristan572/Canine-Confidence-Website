@@ -116,7 +116,7 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll access my secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -303,7 +303,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll access my secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -464,15 +464,15 @@ export default function PackagesPage() {
           )}
         </div>
       </section>
-      {/* Why Choose Our Packages Section */}
+      {/* Why Choose my Packages Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Why Our Packages Deliver Lasting Change
+              Why My Packages Deliver Lasting Change
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to analyse your dog's genetics and learning profile, creating an approach built around your dog that fits your Brisbane lifestyle and delivers confidence and genuine fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
+              I take the time to analyse your dog's genetics and learning profile, creating an approach built around your dog that fits your Brisbane lifestyle and delivers confidence and genuine fulfilment. my value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
             </p>
           </div>
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
