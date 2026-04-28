@@ -401,7 +401,7 @@ export default function PackagesPage() {
                 <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight">
                   North Brisbane Dog Training Packages: Your Complete <span className="text-primary-blue">Behaviour</span> Solution
                 </h1>
-                <p className="text-xl text-medium-grey">Skip the guesswork. Our packages are not generic solutions—they are meticulously crafted programs designed around your dog's behaviour-specific needs and your North Brisbane lifestyle. We build confidence through clarity to ensure lasting results and an unbreakable bond for your family.</p>
+                <p className="text-xl text-medium-grey">Each program is built around your dog — their genetics, their drives, and how your household actually runs. No guesswork, no one-size-fits-all. Just clarity, consistency, and results that hold up in the real world.</p>
               </div>
               
               <div className="flex flex-wrap gap-4">
@@ -410,8 +410,8 @@ export default function PackagesPage() {
                   <div className="text-sm text-medium-grey">Confident Clients</div>
                 </div>
                 <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
-                  <div className="text-2xl font-bold text-charcoal">100%</div>
-                  <div className="text-sm text-medium-grey">Happier Dogs</div>
+                  <div className="text-2xl font-bold text-charcoal">100+</div>
+                  <div className="text-sm text-medium-grey">Five-Star Reviews</div>
                 </div>
                 <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
                   <div className="text-2xl font-bold text-charcoal">5★</div>

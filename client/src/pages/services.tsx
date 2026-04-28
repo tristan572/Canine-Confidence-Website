@@ -98,7 +98,7 @@ export default function ServicesPage() {
               <div className="space-y-4">
                 <h1 className="text-5xl font-bold text-charcoal"><span className="text-primary-blue">Tailored</span> Dog Training Services in North Brisbane</h1>
                 <p className="text-xl text-medium-grey">
-                  We don't believe in cookie-cutter training methods that only focus on commands. We use a personalised strategy based on canine psychology and play to deliver three things: confidence for your dog, clarity for you, and an unbreakable bond for your family.
+                  I work with each dog as an individual. That means looking at genetics, drives, and how your household actually runs — then building training around that. The result is a dog that's calm, clear, and genuinely connected to you.
                 </p>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Free Phone Consultation</h3>
                 <p className="text-blue-100 mb-6">
-                  Unsure about the right service for your needs? Schedule a complimentary, no-obligation call with our knowledgeable team. During your Free Phone Consult, we'll help you clarify your options, answer your questions, and provide advice tailored to your situation. Whether you need general guidance or specific recommendations, we're here to support you—at absolutely no cost, so you can make confident, informed decisions.
+                  Not sure which service fits? Book a free 15-minute call and I'll help you work out what your dog actually needs — no obligation, no sales pitch.
                 </p>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-blue-100">

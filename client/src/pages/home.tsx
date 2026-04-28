@@ -172,8 +172,8 @@ export default function HomePage() {
                   <div className="text-sm text-medium-grey">Confident Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-charcoal">100%</div>
-                  <div className="text-sm text-medium-grey">Happier Dogs</div>
+                  <div className="text-2xl font-bold text-charcoal">100+</div>
+                  <div className="text-sm text-medium-grey">Five-Star Reviews</div>
                 </div>
               </div>
             </div>
@@ -426,9 +426,9 @@ export default function HomePage() {
       <section className="py-20 bg-white content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Our Training Services</h2>
+            <h2 className="text-4xl font-bold text-charcoal mb-4">Training Services</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Training isn't a chore—it's high-value engagement. By placing our play-based methodology at the centre of our approach, we accelerate your dog's learning and focus. This professional methodology ensures lasting results and builds a strong, trusting bond.
+              Training isn't a chore—it's high-value engagement. By placing play at the centre of the work, I accelerate your dog's learning and focus. That builds the kind of clarity that lasts.
             </p>
           </div>
 
@@ -466,7 +466,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Free Phone Consultation</h3>
                   <p className="text-blue-100 mb-6">
-                    Unsure about the right service for your needs? Schedule a complimentary, no-obligation call with our knowledgeable team. During your Free Phone Consult, we'll help you clarify your options, answer your questions, and provide advice tailored to your situation. Whether you need general guidance or specific recommendations, we're here to support you—at absolutely no cost, so you can make confident, informed decisions.
+                    Not sure which service fits? Book a free 15-minute call and I'll help you work out what your dog actually needs — no obligation, no sales pitch.
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-sm text-blue-100">
@@ -556,7 +556,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Ready to Build Real Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an connection that keeps growing.
               </p>
             </div>
 
