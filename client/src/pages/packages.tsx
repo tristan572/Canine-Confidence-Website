@@ -472,11 +472,10 @@ export default function PackagesPage() {
               Why Our Packages Deliver Lasting Change
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to analyse your dog's genetics and learning profile, creating a an approach built around your dog that fits your Brisbane lifestyle and delivers confidence and genuine fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
+              We take the time to analyse your dog's genetics and learning profile, creating an approach built around your dog that fits your Brisbane lifestyle and delivers confidence and genuine fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
