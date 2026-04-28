@@ -410,8 +410,8 @@ export default function PackagesPage() {
                   <div className="text-sm text-medium-grey">Confident Clients</div>
                 </div>
                 <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
-                  <div className="text-2xl font-bold text-charcoal">100+</div>
-                  <div className="text-sm text-medium-grey">Five-Star Reviews</div>
+                  <div className="text-2xl font-bold text-charcoal">100%</div>
+                  <div className="text-sm text-medium-grey">Happier Dogs</div>
                 </div>
                 <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
                   <div className="text-2xl font-bold text-charcoal">5★</div>
@@ -472,7 +472,7 @@ export default function PackagesPage() {
               Why Our Packages Deliver Lasting Change
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We take the time to analyse your dog's genetics and learning profile, creating a behaviour-specific approach that fits your Brisbane lifestyle and delivers confidence and behaviour-specific fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
+              We take the time to analyse your dog's genetics and learning profile, creating a an approach built around your dog that fits your Brisbane lifestyle and delivers confidence and genuine fulfilment. Our value-driven packages guarantee the consistency required to achieve lasting results and the strong bond you are looking for.
             </p>
           </div>
 
@@ -491,9 +491,9 @@ export default function PackagesPage() {
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Behaviour-Specific Plan</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">A Plan Built Around Your Dog</h3>
               <p className="text-gray-600">
-                Every program is individualised and behaviour-specific, tailored to your dog's learning style and inherent drives.
+                Every program is built specifically for your dog, tailored to your dog's learning style and inherent drives.
               </p>
             </div>
 

@@ -172,8 +172,8 @@ export default function HomePage() {
                   <div className="text-sm text-medium-grey">Confident Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-charcoal">100+</div>
-                  <div className="text-sm text-medium-grey">Five-Star Reviews</div>
+                  <div className="text-2xl font-bold text-charcoal">100%</div>
+                  <div className="text-sm text-medium-grey">Happier Dogs</div>
                 </div>
               </div>
             </div>
