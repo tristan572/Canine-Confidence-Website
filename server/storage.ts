@@ -435,7 +435,7 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
-        name: "The Adventure Five Pack",
+        name: "The Adventure Pack",
         description: "Accelerate your dog's journey towards real-world reliability.\n\nThis premium five-session commitment is the most effective way to expose your dog to varied environments and distractions, ensuring they progress quickly and build strong, reliable habits on key skills. I handle the hard work for you, setting the highest possible foundation for success.\n\n**What the 5x Commitment Delivers:**\n\n**Building Reliable Habits:** Five consecutive adventures allows me to progressively expose your dog to a huge variety of real-world environments (forests, beaches, parks). This repetition is essential for helping your dog automatically focus on you, even when highly distracted.\n\n**Proofing Skills Under Distraction:** I focus on reinforcing key real-world skills like reliable recall, loose-lead foundations, and impulse control under heavy distraction. This package is the crucial step in teaching your dog to focus on you when it matters most.\n\n**Ultimate Mental and Physical Fulfilment:** This service is designed to be highly fulfilling. Your dog safely enjoys five sessions of running, sniffing, playing, and exploration, ensuring they return home thoroughly exercised, mentally stimulated, and happy.\n\n**Smart Savings:** This package ensures you maintain training momentum with a saving of $25 compared to booking five single sessions individually.",
         price: "$375",
         originalPrice: "$400",
@@ -453,7 +453,7 @@ export class MemStorage implements IStorage {
         isPopular: false
       },
       {
-        name: "The Neighbourhood Enrichment Five Pack",
+        name: "The Neighbourhood Enrichment Pack",
         description: "Your reliable, budget-friendly solution for essential well-being.\n\nThis five-session package guarantees your dog receives consistent exercise, stimulation, and fun, all delivered right to your doorstep by a professional dog handler. It's the simplest way to ensure a happy, active dog, even on your busiest days.\n\n**What the 5x Commitment Delivers:**\n\n**Reliable, Consistent Care:** By committing to five sessions, you establish a consistent routine that your dog can count on. This regularity is key to reducing stress and maintaining good manners throughout the week.\n\n**Structured Enrichment Walks:** My walks are more than just a stroll. I ensure your dog gets plenty of essential sniffing time (mental stimulation) and attentive care, making every outing a fulfilling experience that leaves your dog content.\n\n**Ultimate Convenience & Simplicity:** I come directly to your home, ensuring your dog enjoys a healthy walk and essential exercise without you having to be present. It's the perfect helping hand for busy schedules.\n\n**Budget-Friendly Value:** This package offers the most convenient and reliable service while providing savings compared to booking single sessions.",
         price: "$215",
         originalPrice: "$225",
