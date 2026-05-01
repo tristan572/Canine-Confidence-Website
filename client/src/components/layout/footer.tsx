@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white">
-              Building confidence through clarity and play, resulting in a strong, trusting bond with your dog.
+              Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
             </p>
             <div className="mt-6">
               <h4 className="text-white font-semibold mb-3">Follow Us</h4>
