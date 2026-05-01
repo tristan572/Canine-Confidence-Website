@@ -250,7 +250,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">Play as Engagement Engine</h3>
               <p className="text-medium-grey">
-                We use play not just as a reward, but as a mechanism to accelerate learning, build motivation, and create high-level engagement with the owner.
+                I use play not just as a reward, but as a mechanism to accelerate learning, build motivation, and create high-level engagement with the owner.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">
@@ -259,7 +259,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
-                We base our behaviour-specific plans on understanding your dog's genetics and individual learning style, delivering unrivalled fulfilment that addresses the root cause of problem behaviour.
+                I base our tailored plans on understanding your dog's genetics and individual learning style, delivering unrivalled fulfilment that addresses the root cause of problem behaviour.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">
@@ -268,7 +268,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">Owner Mastery</h3>
               <p className="text-medium-grey">
-                We empower you with the clarity and practical tools necessary to maintain and advance your dog's training well beyond our sessions.
+                I empower you with the clarity and practical tools necessary to maintain and advance your dog's training well beyond our sessions.
               </p>
             </div>
           </div>
