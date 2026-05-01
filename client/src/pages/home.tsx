@@ -34,7 +34,8 @@ import {
   Star,
   ClipboardList,
   MapPinned,
-  Mountain
+  Mountain,
+    Brain
 } from "lucide-react";
 
 const BookingWidget = lazy(() => import("@/components/ui/booking-widget"));
@@ -99,6 +100,9 @@ export default function HomePage() {
     "Walk & Train Sessions": Footprints,
     "House Visits": Home,
     "Adventure Walk and Training": Mountain,
+      "Initial Canine Success Assessment": ClipboardList,
+      "One-on-One Private Coaching": Brain,
+      "In-home Day Train": Home,
   };
 
   return (
