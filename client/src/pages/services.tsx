@@ -47,7 +47,7 @@ export default function ServicesPage() {
     "Virtual Coaching and Support": Phone,
     "Local Walk": MapPinned,
     "Adventure Walk and Training": Mountain,
-    "Walk and Train": Footprints,
+    "Walk and Train": Footprints,  "Initial Canine Success Assessment": ClipboardList,  "One-on-One Private Coaching": Brain,  "In-home Day Train": Home,  "Initial Canine Success Assessment": ClipboardList,
   };
 
   if (isLoading) {
