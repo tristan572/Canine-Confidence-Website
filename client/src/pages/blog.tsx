@@ -113,7 +113,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Dog Training Advice and Tips"
+                title="Dog Training Tips & Advice | Canine Confidence"
         description="Expert dog training tips, guides, and insights from Canine Confidence. Learn to understand your dog better and build a stronger relationship through play-based training methods."
         canonical="https://canineconfidence.com.au/blog"
         keywords={[
