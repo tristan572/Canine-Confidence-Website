@@ -13,7 +13,7 @@ export function SEO({
   title, 
   description, 
   canonical, 
-  ogImage = '/attached_assets/image_1750048904991.webp',
+  ogImage = '/og-image.png',
   ogType = 'website',
   keywords = []
 }: SEOProps) {
