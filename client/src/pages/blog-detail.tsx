@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 import ReactMarkdown from 'react-markdown';
-
+import { SEO } from "@/components/SEO";
 export default function BlogDetailPage() {
   const [match, params] = useRoute("/blog/:id");
   const postId = params?.id ? parseInt(params.id) : null;
@@ -72,6 +72,7 @@ export default function BlogDetailPage() {
 
   return (
     <div className="min-h-screen py-20">
+            <SEO title="Health: The Foundation of Dog Training | Canine Confidence" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link to="/blog">
