@@ -109,7 +109,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <SEO 
                 title="Dog Training North Brisbane | Canine Confidence"
-        description="Transform your dog's behaviour with Canine Confidence. NDTF certified dog training in North Brisbane focusing on play-based learning, genetic fulfillment, and lasting results. Book your free consultation today."
+                description="Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity, and real-world results. Free 15-min consult."
         canonical="https://canineconfidence.com.au/"
         keywords={[
           'dog training North Brisbane',
