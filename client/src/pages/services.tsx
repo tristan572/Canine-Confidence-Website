@@ -68,7 +68,7 @@ export default function ServicesPage() {
                   <div className="h-10 bg-gray-200 rounded"></div>
                 </CardContent>
               </Card>
-            ))}
+            ))
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <SEO 
                 title="Dog Training Services | North Brisbane | Canine Confidence"
-        description="Professional dog training services in North Brisbane. Assessment, coaching, in-home training, walk & train, and adventure walks. Play-based methods focused on genetic fulfillment and lasting results."
+                description="Pulling on lead, ignoring recall, jumping on guests? I offer in-home dog training, walk & train, and adventure sessions across Brisbane's Northside."
         canonical="https://canineconfidence.com.au/services"
         keywords={[
           'dog training services Brisbane',
