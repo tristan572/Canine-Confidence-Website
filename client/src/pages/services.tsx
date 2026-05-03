@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
+import { ServiceSchema } from "@/components/StructuredData";
 import ReactMarkdown from "react-markdown";
 import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import { 
@@ -90,6 +91,9 @@ export default function ServicesPage() {
           'adventure dog walks Brisbane'
         ]}
       />
+      {services?.map((service) => (
+        <ServiceSchema key={service.id} name={service.name} description={service.description} price={service.price} />
+      ))}
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
