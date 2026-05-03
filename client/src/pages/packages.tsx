@@ -381,7 +381,7 @@ export default function PackagesPage() {
     <div className="min-h-screen bg-gray-50">
       <SEO 
                 title="Dog Training Packages North Brisbane | Canine Confidence"
-        description="Affordable dog training packages in Brisbane. Puppy Foundation Program, Loose Leash Walking, From Chaos to Calm, and coaching packages. Expert training with lasting results and savings up to $240."
+                description="Training packages for every stage — from puppy foundations to off-lead freedom. Clear pricing, lasting results. Based in Boondall, serving North Brisbane."
         canonical="https://canineconfidence.com.au/packages"
         keywords={[
           'dog training packages Brisbane',
