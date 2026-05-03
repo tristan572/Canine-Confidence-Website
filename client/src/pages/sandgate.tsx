@@ -83,7 +83,7 @@ export default function SandgatePage() {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Sandgate Dog Training"
+                title="Dog Training Sandgate & Shorncliffe | Canine Confidence"
         description="Professional dog training in Sandgate, Shorncliffe & Brighton. Master foreshore recall, cafe manners, and loose-leash walking. Expert bayside training with real-world distractions."
         canonical="https://canineconfidence.com.au/dog-training-sandgate"
         ogImage="/attached_assets/IMG_0358_1762512636150.webp"
