@@ -52,7 +52,7 @@ export default function AboutPage() {
       <section className="hero-gradient py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-charcoal mb-4">
-            About Us
+            About Tristan
           </h1>
           <h2 className="text-3xl font-semibold text-charcoal mb-6">
             From <span className="text-primary-blue">Passion</span> to Obsession
