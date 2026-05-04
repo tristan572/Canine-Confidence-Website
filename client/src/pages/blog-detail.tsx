@@ -8,14 +8,14 @@ import type { BlogPost } from "@shared/schema";
 import ReactMarkdown from 'react-markdown';
 import { SEO } from "@/components/SEO";
 export default function BlogDetailPage() {
-  const [match, params] = useRoute("/blog/:id");
-  const postId = params?.id ? parseInt(params.id) : null;
+  const [match, params] = useRoute("/blog/:slug");
+  const postId = params?.id ? params.slug ?? null;
 
   const { data: blogPost, isLoading, error } = useQuery<BlogPost>({
     queryKey: ["/api/blog", postId],
     queryFn: async () => {
       if (!postId) throw new Error("Invalid post ID");
-      const response = await fetch(`/api/blog/${postId}`);
+      const response = await fetch(`/api/blog/slug/${postId}`);
       if (!response.ok) throw new Error("Failed to fetch blog post");
       return response.json();
     },
