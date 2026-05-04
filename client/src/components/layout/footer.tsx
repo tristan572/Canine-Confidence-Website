@@ -168,7 +168,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white text-sm">
-            © 2024 Canine Confidence. All rights reserved.
+            © 2026 Canine Confidence. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-white hover:text-primary-blue transition-colors text-sm">
