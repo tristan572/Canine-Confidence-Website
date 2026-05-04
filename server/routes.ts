@@ -24,36 +24,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Services routes
-    // Sitemap
-  app.get("/sitemap.xml", async (req, res) => {
-    try {
-      const posts = await storage.getBlogPosts();
-      const base = "https://canineconfidence.com.au";
-      const staticPages = [
-        { url: "/", priority: "1.0", changefreq: "weekly" },
-        { url: "/services", priority: "0.9", changefreq: "monthly" },
-        { url: "/about", priority: "0.8", changefreq: "monthly" },
-        { url: "/contact", priority: "0.8", changefreq: "monthly" },
-        { url: "/blog", priority: "0.7", changefreq: "weekly" },
-      ];
-      const blogPages = posts.map((p) => ({
-        url: `/blog/${p.slug}`,
-        priority: "0.6",
-        changefreq: "monthly",
-      }));
-      const allPages = [...staticPages, ...blogPages];
-      const urls = allPages.map((p) =>
-        `  <url>\n    <loc>${base}${p.url}</loc>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>`
-      ).join("\n");
-      const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
-      res.setHeader("Content-Type", "application/xml");
-      res.send(xml);
-    } catch (error) {
-      res.status(500).send("Failed to generate sitemap");
-    }
-  });
-
-app.get("/api/services", async (req, res) => {
+  app.get("/api/services", async (req, res) => {
     try {
       const services = await storage.getServices();
       res.json(services);
