@@ -33,6 +33,7 @@ export interface IStorage {
   // Blog Posts
   getBlogPosts(): Promise<BlogPost[]>;
   getBlogPost(id: number): Promise<BlogPost | undefined>;
+  getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
 
   // Bookings
@@ -525,7 +526,8 @@ When something feels "off" with your dog, resist the urge to immediately seek be
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
         imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.webp",
         readTime: "8 min read",
-        tags: ["health", "foundation", "wellness", "four building blocks"]
+        tags: ["health", "foundation", "wellness", "four building blocks"],
+        slug: "health-foundation-dog-training"
       },
       {
         title: "Lifestyle: Fulfilling Your Dog's Mind and Purpose",
@@ -579,7 +581,8 @@ A fulfilled dog is naturally more focused, more cooperative, and more peaceful i
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
         imageUrl: "/attached_assets/generated_images/Border_Collie_mental_stimulation_666374d6.webp",
         readTime: "10 min read",
-        tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"]
+        tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
+        slug: "lifestyle-fulfilling-your-dogs-mind"
       },
       {
         title: "Clear Communication: Building Confidence Through Understanding",
@@ -641,7 +644,8 @@ Clarity isn't about achieving perfection—it's about creating predictability. D
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
         imageUrl: "/attached_assets/generated_images/Golden_Retriever_communication_training_1d6a9e14.webp",
         readTime: "9 min read",
-        tags: ["communication", "clarity", "markers", "four building blocks"]
+        tags: ["communication", "clarity", "markers", "four building blocks"],
+        slug: "clear-communication-building-confidence"
       },
       {
         title: "Life Skills: Building Obedience That Works Everywhere",
@@ -707,7 +711,8 @@ A dog with solid life skills is a dog who can participate more fully in family l
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
         imageUrl: "/attached_assets/generated_images/Australian_Shepherd_public_obedience_11c6c97e.webp",
         readTime: "8 min read",
-        tags: ["obedience", "skills", "training", "four building blocks"]
+        tags: ["obedience", "skills", "training", "four building blocks"],
+        slug: "life-skills-obedience-that-works-everywhere"
       },
       {
         title: "Understanding Your Dog's Genetic Drives: A Breed-Specific Guide",
@@ -866,7 +871,8 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
         imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.webp",
         readTime: "12 min read",
-        tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"]
+        tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
+        slug: "understanding-your-dogs-genetic-drives"
       },
       {
         title: "Creating Balance: A Complete Framework for Canine Harmony",
@@ -924,7 +930,8 @@ This comprehensive approach isn't just training—it's building a complete life 
 The investment in building these foundations properly pays dividends throughout your dog's entire life, creating not just better behaviour, but a truly harmonious partnership between human and canine companions.`,
         imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.webp",
         readTime: "12 min read",
-        tags: ["four building blocks", "balance", "framework", "complete guide"]
+        tags: ["four building blocks", "balance", "framework", "complete guide"],
+        slug: "creating-balance-complete-framework"
       }
     ];
 
@@ -1060,6 +1067,10 @@ The investment in building these foundations properly pays dividends throughout 
 
   async getBlogPost(id: number): Promise<BlogPost | undefined> {
     return this.blogPosts.get(id);
+  }
+
+  async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+    return Array.from(this.blogPosts.values()).find(p => p.slug === slug);
   }
 
   async createBlogPost(post: InsertBlogPost): Promise<BlogPost> {
