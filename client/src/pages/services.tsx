@@ -69,7 +69,7 @@ export default function ServicesPage() {
                   <div className="h-10 bg-gray-200 rounded"></div>
                 </CardContent>
               </Card>
-            ))
+            ))}
           </div>
         </div>
       </div>
