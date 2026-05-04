@@ -560,7 +560,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">Ready to Build Real Confidence?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an connection that keeps growing.
+                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring a connection that keeps growing.
               </p>
             </div>
 
