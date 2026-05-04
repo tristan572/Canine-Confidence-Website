@@ -43,7 +43,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
         <h3 className="text-xl font-semibold text-charcoal mb-3">{post.title}</h3>
         <p className="text-medium-grey mb-4">{post.excerpt}</p>
-        <Link to={`/blog/${post.id}`}>
+        <Link to={`/blog/${post.slug}`}>
           <Button variant="ghost" className="text-primary-blue hover:text-secondary-blue p-0 font-medium">
             Read More →
           </Button>
