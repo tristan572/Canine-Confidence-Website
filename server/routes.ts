@@ -4,7 +4,7 @@ import { createServer, type Server } from "http";
 import Stripe from "stripe";
 import { storage } from "./storage";
 import { 
-  insertBookingSchema,  
+  insertBookingSchema, 
   insertConsultationSchema, 
   insertContactSubmissionSchema,
   insertCartItemSchema,
