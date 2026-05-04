@@ -105,7 +105,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Blog posts routes
-  app.get("/api/blog", async (req, res) => {
+  // Blog slug redirects (301 permanent)
+  app.get("/blog/1", (req, res) => res.redirect(301, "/blog/health-foundation-dog-training"));
+  app.get("/blog/2", (req, res) => res.redirect(301, "/blog/lifestyle-fulfilling-your-dogs-mind"));
+  app.get("/blog/3", (req, res) => res.redirect(301, "/blog/clear-communication-building-confidence"));
+  app.get("/blog/4", (req, res) => res.redirect(301, "/blog/life-skills-obedience-that-works-everywhere"));
+  app.get("/blog/5", (req, res) => res.redirect(301, "/blog/understanding-your-dogs-genetic-drives"));
+  app.get("/blog/6", (req, res) => res.redirect(301, "/blog/creating-balance-complete-framework"));
+
+  // Blog post by slug
+  app.get("/api/blog/slug/:slug", async (req, res) => {
+    try {
+      const post = await storage.getBlogPostBySlug(req.params.slug);
+      if (!post) return res.status(404).json({ message: "Blog post not found" });
+      res.json(post);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch blog post" });
+    }
+  });
+
+    app.get("/api/blog", async (req, res) => {
     try {
       const posts = await storage.getBlogPosts();
       res.json(posts);
