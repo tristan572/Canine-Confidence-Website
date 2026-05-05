@@ -83,7 +83,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold text-charcoal">Contact Information</h2>
                 <p className="text-lg text-medium-grey">
-                  We'd love to hear from you! Get in touch with us using any of the methods below.
+                  I'd love to hear from you! Get in touch using any of the methods below.
                 </p>
               </div>
 
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Email</div>
                     <div className="text-medium-grey mb-1">info@canineconfidence.com.au</div>
-                    <div className="text-sm text-medium-grey">We'll respond within 24 hours</div>
+                    <div className="text-sm text-medium-grey">I'll respond within 24 hours</div>
                   </div>
                 </div>
 
@@ -117,7 +117,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Service Area</div>
                     <div className="text-medium-grey mb-1">20km radius from Boondall, Brisbane</div>
-                    <div className="text-sm text-medium-grey">Mobile service - we come to you!</div>
+                    <div className="text-sm text-medium-grey">Mobile service - I come to you!</div>
                   </div>
                 </div>
 
@@ -178,9 +178,9 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-light-grey p-8 rounded-xl">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-charcoal mb-2">Send us a Message</h3>
+                <h3 className="text-2xl font-bold text-charcoal mb-2">Send Me a Message</h3>
                 <p className="text-medium-grey">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and I'll get back to you as soon as possible.
                 </p>
               </div>
               <ContactForm />
@@ -197,13 +197,13 @@ export default function ContactPage() {
               <MapPin className="w-4 h-4" />
               Service Coverage
             </div>
-            <h2 className="text-3xl font-bold text-charcoal mb-4">Our Service Area</h2>
+            <h2 className="text-3xl font-bold text-charcoal mb-4">My Service Area</h2>
             <p className="text-lg text-medium-grey max-w-3xl mx-auto mb-4">
-              Based in Boondall, Brisbane, we provide mobile dog training services within a 20km radius. 
-              Our service area covers North Brisbane and surrounding suburbs. We come to you for your convenience!
+              Based in Boondall, Brisbane, I provide mobile dog training services within a 20km radius.
+              My service area covers North Brisbane and surrounding suburbs. I come to you for your convenience!
             </p>
             <p className="text-medium-grey max-w-3xl mx-auto">
-              <strong>Note:</strong> Travel beyond 10km may incur additional charges. We're also available worldwide for video call consultations and training sessions!
+              <strong>Note:</strong> Travel beyond 10km may incur additional charges. I'm also available worldwide for video call consultations and training sessions!
             </p>
           </div>
           
@@ -211,7 +211,7 @@ export default function ContactPage() {
           
           <div className="mt-8 text-center">
             <p className="text-medium-grey">
-              Not sure if you're in our service area? <a href="tel:0409521358" className="text-primary-blue hover:underline font-medium">Give us a call</a> and we'll be happy to check!
+              Not sure if you're in my service area? <a href="tel:0409521358" className="text-primary-blue hover:underline font-medium">Give me a call</a> and I'll be happy to check!
             </p>
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function ContactPage() {
                 href="https://www.facebook.com/p/Canine-Confidence-61571910674491/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                aria-label="Visit our Facebook page"
+                aria-label="Visit my Facebook page"
                 data-testid="link-facebook-contact"
                 className="group"
               >
@@ -250,7 +250,7 @@ export default function ContactPage() {
                 href="https://www.instagram.com/canine_confidence" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                aria-label="Visit our Instagram page"
+                aria-label="Visit my Instagram page"
                 data-testid="link-instagram-contact"
                 className="group"
               >
@@ -264,7 +264,7 @@ export default function ContactPage() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
               <p className="text-white text-lg">
-                <strong>Join our community!</strong> See before-and-after transformations, training videos, and expert tips to help your dog thrive.
+                <strong>Join my community!</strong> See before-and-after transformations, training videos, and expert tips to help your dog thrive.
               </p>
             </div>
           </div>
@@ -277,50 +277,50 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-charcoal mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-medium-grey">
-              Quick answers to common questions about our services.
+              Quick answers to common questions about my services.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="bg-white p-6">
-              <h3 className="font-semibold text-charcoal mb-3">How soon can we start training?</h3>
+              <h3 className="font-semibold text-charcoal mb-3">How soon can I start training?</h3>
               <p className="text-medium-grey text-sm">
-                We typically have availability within 1-2 weeks of your initial consultation. For urgent behavioural issues, we may be able to accommodate earlier sessions.
+                I typically have availability within 1-2 weeks of your initial consultation. For urgent behavioural issues, I may be able to accommodate earlier sessions.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">Do you offer package deals?</h3>
               <p className="text-medium-grey text-sm">
-                Yes! We offer multi-session packages that provide better value and ensure consistent progress. We'll discuss options during your consultation.
+                Yes! I offer multi-session packages that provide better value and ensure consistent progress. I'll discuss options during your consultation.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What areas do you service?</h3>
               <p className="text-medium-grey text-sm">
-                Based in Boondall, we service a 20km radius covering North Brisbane and surrounding suburbs. Travel beyond 10km may incur additional charges. Check out the interactive map above to see if you're in our service area! We also offer video consultations worldwide for remote training.
+                Based in Boondall, I service a 20km radius covering North Brisbane and surrounding suburbs. Travel beyond 10km may incur additional charges. Check out the interactive map above to see if you're in my service area! I also offer video consultations worldwide for remote training.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What's your cancellation policy?</h3>
               <p className="text-medium-grey text-sm">
-                We require 24 hours notice for cancellations. Sessions cancelled with less notice may incur a cancellation fee.
+                I require 24 hours notice for cancellations. Sessions cancelled with less notice may incur a cancellation fee.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">Do you work with aggressive dogs?</h3>
               <p className="text-medium-grey text-sm">
-                We specialise in dog behavioural modification, however we do not handle cases involving human aggression. Please get in contact to ensure we can properly assess your situation and provide appropriate references if needed.
+                I specialise in dog behavioural modification, however I do not handle cases involving human aggression. Please get in contact to ensure I can properly assess your situation and provide appropriate references if needed.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What payment methods do you accept?</h3>
               <p className="text-medium-grey text-sm">
-                We accept all major payment methods through our secure online scheduling system. Payment is required upfront before sessions to confirm your booking.
+                I accept all major payment methods through my secure online scheduling system. Payment is required upfront before sessions to confirm your booking.
               </p>
             </Card>
           </div>
@@ -333,7 +333,7 @@ export default function ContactPage() {
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-white">Ready to Build Real Confidence?</h2>
             <p className="text-xl text-blue-100">
-              Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+              Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button asChild className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">

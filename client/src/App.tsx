@@ -11,12 +11,12 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import Packages from "@/pages/packages";
 
-const Products = lazy(() => import("@/pages/products"));
 const Blog = lazy(() => import("@/pages/blog"));
 const BlogDetail = lazy(() => import("@/pages/blog-detail"));
 const About = lazy(() => import("@/pages/about"));
 const Contact = lazy(() => import("@/pages/contact"));
 const Privacy = lazy(() => import("@/pages/privacy"));
+const Terms = lazy(() => import("@/pages/terms"));
 const Admin = lazy(() => import("@/pages/admin"));
 const Checkout = lazy(() => import("@/pages/checkout"));
 const PaymentSuccess = lazy(() => import("@/pages/payment-success"));
@@ -56,12 +56,12 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/services" component={Services} />
           <Route path="/packages" component={Packages} />
-          <Route path="/products" component={Products} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:id" component={BlogDetail} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/privacy" component={Privacy} />
+          <Route path="/terms" component={Terms} />
           <Route path="/admin" component={Admin} />
           <Route path="/checkout" component={Checkout} />
           <Route path="/payment-success" component={PaymentSuccess} />

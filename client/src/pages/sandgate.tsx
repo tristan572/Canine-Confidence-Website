@@ -159,7 +159,7 @@ export default function SandgatePage() {
                 The Bayside <span className="text-primary-blue">Adventure Walk</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                This is our signature one-on-one training and enrichment session conducted by a professional trainer in the most challenging (and rewarding) local environments. Perfect for dogs that need real exercise and fullfilment, or those needing obedience proofed against real-world distractions.
+                This is my signature one-on-one training and enrichment session conducted in the most challenging (and rewarding) local environments. Perfect for dogs that need real exercise and fullfilment, or those needing obedience proofed against real-world distractions.
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <p className="text-blue-800 font-semibold text-xl">Available for all dogs. $80, per hour session.</p>
@@ -171,7 +171,7 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Foreshore Focus</h3>
-                    <p className="text-medium-grey">We train specifically on the Sandgate Foreshore off-leash mudflats (between Second Avenue and Zeehan St) for reliable recall and impulse control, even with other dogs running past.</p>
+                    <p className="text-medium-grey">I train specifically on the Sandgate Foreshore off-leash mudflats (between Second Avenue and Zeehan St) for reliable recall and impulse control, even with other dogs running past.</p>
                   </div>
                 </div>
 
@@ -202,7 +202,7 @@ export default function SandgatePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about our <Link href="/services" className="text-primary-blue hover:underline font-semibold">Adventure Walk and Training service</Link>.
+                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">Adventure Walk and Training service</Link>.
                 </p>
                 <Button 
                   onClick={() => setShowAdventureDialog(true)}
@@ -246,7 +246,7 @@ export default function SandgatePage() {
                   <div className="pt-4 border-t border-gray-200">
                     <h3 className="text-xl font-bold text-charcoal mb-2">Beach Fun & Exercise</h3>
                     <p className="text-medium-grey">
-                      Not every session is about strict training. Some dogs just need a great time running and playing on the beach. We combine exercise, enrichment, and fun in the beautiful bayside environment.
+                      Not every session is about strict training. Some dogs just need a great time running and playing on the beach. I combine exercise, enrichment, and fun in the beautiful bayside environment.
                     </p>
                   </div>
                 </div>
@@ -284,7 +284,7 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Positive Handling & Vet Prep</h5>
-                    <p className="text-medium-grey">We specifically work on comfortable handling techniques, making nail trims, ear cleaning, and future vet visits stress-free experiences.</p>
+                    <p className="text-medium-grey">I specifically work on comfortable handling techniques, making nail trims, ear cleaning, and future vet visits stress-free experiences.</p>
                   </div>
                 </div>
 
@@ -447,7 +447,7 @@ export default function SandgatePage() {
                 Ready to Build Real Confidence?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
               </p>
             </div>
 

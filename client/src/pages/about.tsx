@@ -208,7 +208,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">Verified Results</h3>
-                    <p className="text-medium-grey">Over 100 5-Star Reviews. View detailed testimonials from North Brisbane families in our Client Reviews section, on the home page.</p>
+                    <p className="text-medium-grey">Over 100 5-Star Reviews. View detailed testimonials from North Brisbane families in my Client Reviews section, on the home page.</p>
                   </div>
                 </div>
 

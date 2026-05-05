@@ -43,7 +43,7 @@ export default function BookingForm({ preselectedService }: BookingFormProps) {
               <MapPin className="h-5 w-5 text-primary-blue" />
               <div>
                 <h3 className="font-semibold text-charcoal">Your Location or Ours</h3>
-                <p className="text-sm text-medium-grey">In-home visits or meet at our training locations</p>
+                <p className="text-sm text-medium-grey">In-home visits or meet at my training locations</p>
               </div>
             </div>
           </div>

@@ -53,8 +53,8 @@ export default function ProductsPage() {
               </div>
               <h2 className="text-4xl font-bold text-charcoal mb-4">Coming Soon</h2>
               <p className="text-lg text-medium-grey mb-8 max-w-2xl">
-                We're carefully curating a selection of professional training products to complement our services. 
-                Each item will be personally tested and approved by our trainers.
+                I'm carefully curating a selection of professional training products to complement my services.
+                Each item will be personally tested and approved by me.
               </p>
 
               {/* Product Categories Preview */}
@@ -113,7 +113,7 @@ export default function ProductsPage() {
               </div>
               <h3 className="font-semibold text-charcoal mb-2">Trainer Approved</h3>
               <p className="text-medium-grey text-sm">
-                Every product personally tested by our certified trainers
+                Every product personally tested by me
               </p>
             </div>
 

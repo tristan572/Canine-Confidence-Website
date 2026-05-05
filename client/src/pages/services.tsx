@@ -237,7 +237,7 @@ export default function ServicesPage() {
       {/* Training Philosophy Section */}
       <section className="py-20 bg-light-grey">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Our Method: The Confidence Difference</h2>
+          <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">My Method: The Confidence Difference</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl">
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">

@@ -35,7 +35,7 @@ export default function ContactForm() {
     onSuccess: () => {
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+        description: "I'll get back to you within 24 hours.",
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/contact"] });

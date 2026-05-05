@@ -12,7 +12,7 @@ export default function Privacy() {
               Privacy Policy
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+              Your privacy is important to me. This policy explains how I collect, use, and protect your information.
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
               Last updated: {new Date().toLocaleDateString()}
@@ -24,12 +24,12 @@ export default function Privacy() {
               {/* Information We Collect */}
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Information We Collect
+                  Information I Collect
                 </h2>
                 <div className="space-y-4 text-gray-700 dark:text-gray-300">
                   <div>
                     <h3 className="text-lg font-medium mb-2">Personal Information</h3>
-                    <p>We may collect the following personal information when you use our services:</p>
+                    <p>I may collect the following personal information when you use my services:</p>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                       <li>Name and contact information (email, phone number, address)</li>
                       <li>Dog information (name, breed, age, behavioural history)</li>
@@ -39,11 +39,11 @@ export default function Privacy() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-2">Automatically Collected Information</h3>
-                    <p>When you visit our website, we automatically collect:</p>
+                    <p>When you visit my website, I automatically collect:</p>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                       <li>Browser type and version</li>
                       <li>Device information and IP address</li>
-                      <li>Pages visited and time spent on our site</li>
+                      <li>Pages visited and time spent on my site</li>
                       <li>Referring website information</li>
                     </ul>
                   </div>
@@ -55,12 +55,12 @@ export default function Privacy() {
               {/* How We Use Your Information */}
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  How We Use Your Information
+                  How I Use Your Information
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <p className="mb-4">We use your information to:</p>
+                  <p className="mb-4">I use your information to:</p>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Provide and improve our dog training services</li>
+                    <li>Provide and improve my dog training services</li>
                     <li>Process bookings and payments</li>
                     <li>Communicate with you about appointments and services</li>
                     <li>Send relevant training tips and business updates (with your consent)</li>
@@ -79,16 +79,16 @@ export default function Privacy() {
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300 space-y-3">
                   <p>
-                    <strong>Training Session Documentation:</strong> During training sessions, we may take photos or videos to document your dog's progress and demonstrate training techniques.
+                    <strong>Training Session Documentation:</strong> During training sessions, I may take photos or videos to document your dog's progress and demonstrate training techniques.
                   </p>
                   <p>
-                    <strong>Social Media Use:</strong> These photos and videos may be used on our social media platforms, website, and marketing materials to showcase our training methods and success stories.
+                    <strong>Social Media Use:</strong> These photos and videos may be used on my social media platforms, website, and marketing materials to showcase my training methods and success stories.
                   </p>
                   <p>
-                    <strong>Privacy Protection:</strong> We will not share any sensitive or private information about you or your family. We focus solely on training-related content that demonstrates positive outcomes.
+                    <strong>Privacy Protection:</strong> I will not share any sensitive or private information about you or your family. I focus solely on training-related content that demonstrates positive outcomes.
                   </p>
                   <p>
-                    <strong>Consent:</strong> By booking our services, you consent to this use of photos and videos. If you prefer not to have photos/videos taken or shared, please inform us before your session begins.
+                    <strong>Consent:</strong> By booking my services, you consent to this use of photos and videos. If you prefer not to have photos/videos taken or shared, please inform me before your session begins.
                   </p>
                 </div>
               </section>
@@ -101,12 +101,12 @@ export default function Privacy() {
                   Information Sharing
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <p className="mb-4">We do not sell or rent your personal information. We may share information only in these circumstances:</p>
+                  <p className="mb-4">I do not sell or rent your personal information. I may share information only in these circumstances:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>With your explicit consent</li>
                     <li>To comply with legal requirements or court orders</li>
-                    <li>With trusted service providers who help us operate our business (payment processors, booking systems)</li>
-                    <li>To protect our rights, property, or safety, or that of our clients</li>
+                    <li>With trusted service providers who help me operate my business (payment processors, booking systems)</li>
+                    <li>To protect my rights, property, or safety, or that of my clients</li>
                   </ul>
                 </div>
               </section>
@@ -119,7 +119,7 @@ export default function Privacy() {
                   Cookies and Tracking
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <p className="mb-4">We use cookies and similar technologies to:</p>
+                  <p className="mb-4">I use cookies and similar technologies to:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Remember your preferences and improve your experience</li>
                     <li>Analyse website traffic and usage patterns</li>
@@ -137,7 +137,7 @@ export default function Privacy() {
                   Data Security
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <p className="mb-4">We implement appropriate security measures to protect your information:</p>
+                  <p className="mb-4">I implement appropriate security measures to protect your information:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Secure SSL encryption for data transmission</li>
                     <li>Regular security audits and updates</li>
@@ -161,7 +161,7 @@ export default function Privacy() {
                     <li>Request corrections to inaccurate information</li>
                     <li>Request deletion of your information (subject to legal requirements)</li>
                     <li>Opt out of marketing communications</li>
-                    <li>Request that we stop using photos/videos of your training sessions</li>
+                    <li>Request that I stop using photos/videos of your training sessions</li>
                   </ul>
                 </div>
               </section>
@@ -174,13 +174,13 @@ export default function Privacy() {
                   Third-Party Services
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <p className="mb-4">Our website may use third-party services:</p>
+                  <p className="mb-4">My website may use third-party services:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li><strong>Payment Processing:</strong> Stripe for secure payment handling</li>
                     <li><strong>Booking System:</strong> SimplyBook.me for appointment scheduling</li>
-                    <li><strong>Analytics:</strong> Website analytics to improve our services</li>
+                    <li><strong>Analytics:</strong> Website analytics to improve my services</li>
                   </ul>
-                  <p className="mt-4">These services have their own privacy policies, which we encourage you to review.</p>
+                  <p className="mt-4">These services have their own privacy policies, which I encourage you to review.</p>
                 </div>
               </section>
 
@@ -193,7 +193,7 @@ export default function Privacy() {
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
                   <p>
-                    Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
+                    My services are not directed to children under 13. I do not knowingly collect personal information from children under 13. If you believe I have collected information from a child under 13, please contact me immediately.
                   </p>
                 </div>
               </section>
@@ -207,7 +207,7 @@ export default function Privacy() {
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
                   <p>
-                    We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date. We encourage you to review this policy periodically.
+                    I may update this privacy policy from time to time. I will notify you of any changes by posting the new policy on this page and updating the "Last updated" date. I encourage you to review this policy periodically.
                   </p>
                 </div>
               </section>
@@ -221,11 +221,11 @@ export default function Privacy() {
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
                   <p className="mb-4">
-                    If you have any questions about this privacy policy or our privacy practices, please contact us:
+                    If you have any questions about this privacy policy or my privacy practices, please contact me:
                   </p>
                   <div className="space-y-2">
                     <p><strong>Email:</strong> info@canineconfidence.com.au</p>
-                    <p><strong>Phone:</strong> Available through our contact form</p>
+                    <p><strong>Phone:</strong> Available through my contact form</p>
                     <p><strong>Address:</strong> North Brisbane, Queensland</p>
                   </div>
                   <Button className="mt-4" onClick={() => window.location.href = '/contact'}>

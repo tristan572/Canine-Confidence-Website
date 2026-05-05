@@ -30,13 +30,13 @@ export default function Footer() {
               Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
             </p>
             <div className="mt-6">
-              <h4 className="text-white font-semibold mb-3">Follow Us</h4>
+              <h4 className="text-white font-semibold mb-3">Follow Me</h4>
               <div className="flex space-x-3">
                 <a 
                   href="https://www.facebook.com/p/Canine-Confidence-61571910674491/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="Visit our Facebook page"
+                  aria-label="Visit my Facebook page"
                   data-testid="link-facebook"
                   className="bg-primary-blue hover:bg-blue-700 p-3 rounded-lg transition-colors"
                 >
@@ -46,7 +46,7 @@ export default function Footer() {
                   href="https://www.instagram.com/canine_confidence" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="Visit our Instagram page"
+                  aria-label="Visit my Instagram page"
                   data-testid="link-instagram"
                   className="bg-primary-blue hover:bg-blue-700 p-3 rounded-lg transition-colors"
                 >
@@ -89,17 +89,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="text-white hover:text-primary-blue transition-colors">
-                  About Us
+                  About
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="text-white hover:text-primary-blue transition-colors">
                   Training Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-white hover:text-primary-blue transition-colors">
-                  Products
                 </Link>
               </li>
               <li>
@@ -174,7 +169,7 @@ export default function Footer() {
             <Link href="/privacy" className="text-white hover:text-primary-blue transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="/contact" className="text-white hover:text-primary-blue transition-colors text-sm">
+            <Link href="/terms" className="text-white hover:text-primary-blue transition-colors text-sm">
               Terms & Conditions
             </Link>
           </div>

@@ -214,7 +214,7 @@ export default function NorthgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Leash Reactivity Rehabilitation</h3>
-                    <p className="text-medium-grey">We work on fulfilment and impulse control while creating clarity in expectations, teaching dogs to not react at every dog passing by.</p>
+                    <p className="text-medium-grey">I work on fulfilment and impulse control while creating clarity in expectations, teaching dogs to not react at every dog passing by.</p>
                   </div>
                 </div>
 
@@ -237,7 +237,7 @@ export default function NorthgatePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about our <Link href="/services" className="text-primary-blue hover:underline font-semibold">Walk & Train service</Link>.
+                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">Walk & Train service</Link>.
                 </p>
                 <Button 
                   onClick={() => setShowWalkTrainDialog(true)}
@@ -314,7 +314,7 @@ export default function NorthgatePage() {
                 <span className="text-primary-blue">1-on-1 Coaching</span> Sessions
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                For owners who want to be deeply involved in the process, our intensive, 60-minute private sessions focus on teaching you the professional handling skills and techniques needed for long-term success.
+                For owners who want to be deeply involved in the process, my intensive, 60-minute private sessions focus on teaching you the professional handling skills and techniques needed for long-term success.
               </p>
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -357,7 +357,7 @@ export default function NorthgatePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about our <Link href="/services" className="text-primary-blue hover:underline font-semibold">private coaching services</Link>.
+                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">private coaching services</Link>.
                 </p>
                 <Button 
                   onClick={() => setShowCoachingDialog(true)}
@@ -425,7 +425,7 @@ export default function NorthgatePage() {
                 Ready to Build Real Confidence?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Stop the frustration caused by confusion and inconsistency. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
               </p>
             </div>
 
@@ -556,7 +556,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to view all available packages and services.
+            You'll be redirected to my secure booking system to view all available packages and services.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button

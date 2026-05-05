@@ -158,7 +158,7 @@ export default function ChermsidePage() {
                 Solving the <span className="text-primary-blue">"Apartment Dog"</span> Challenges
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Living in a unit or townhouse near Westfield Chermside requires a specific set of skills. We help you address the unique challenges of high-density living that standard training programs simply don't cover.
+                Living in a unit or townhouse near Westfield Chermside requires a specific set of skills. I help you address the unique challenges of high-density living that standard training programs simply don't cover.
               </p>
 
               <div className="space-y-4">
@@ -189,7 +189,7 @@ export default function ChermsidePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about our <Link href="/services" className="text-primary-blue hover:underline font-semibold">private coaching services</Link>.
+                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">private coaching services</Link>.
                 </p>
                 <Button 
                   onClick={() => setShowCoachingDialog(true)}
@@ -299,19 +299,19 @@ export default function ChermsidePage() {
             <Card className="bg-white border-0 shadow-xl">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">Our Approach</h3>
+                  <h3 className="text-2xl font-bold text-charcoal mb-4">My Approach</h3>
                   
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                     <h4 className="font-semibold text-blue-800 text-xl mb-2">Logical, Results-Driven Methods</h4>
                     <p className="text-blue-700">
-                      I don't offer fluff or "quick-fix" gimmicks. My approach is rooted in biological fulfilment and clear communication. We use play-centred training to build a working relationship where your dog wants to engage with you, making the distractions of Chermside irrelevant.
+                      I don't offer fluff or "quick-fix" gimmicks. My approach is rooted in biological fulfilment and clear communication. I use play-centred training to build a working relationship where your dog wants to engage with you, making the distractions of Chermside irrelevant.
                     </p>
                   </div>
 
                   <div className="pt-4 border-t">
                     <h4 className="font-semibold text-charcoal mb-3 text-xl">Direct. Constructive. Effective.</h4>
                     <p className="text-medium-grey mb-4">
-                      We give you the tools to handle a high-drive dog in a high-density suburb.
+                      I give you the tools to handle a high-drive dog in a high-density suburb.
                     </p>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
@@ -423,7 +423,7 @@ export default function ChermsidePage() {
                 Ready to Build Urban Confidence?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Stop the frustration of managing a reactive dog in Chermside's busiest areas. Experience our proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                Stop the frustration of managing a reactive dog in Chermside's busiest areas. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
               </p>
             </div>
 
@@ -529,7 +529,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to view all available packages and services.
+            You'll be redirected to my secure booking system to view all available packages and services.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button

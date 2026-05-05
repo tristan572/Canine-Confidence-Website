@@ -264,7 +264,7 @@ export class MemStorage implements IStorage {
     const packageData: InsertPackage[] = [
       {
         name: "The Confident Start Program",
-        description: "The ultimate in-home early development program for puppies (8-20 weeks).\n\nTogether with you, I build the essential foundations of confidence, connection, and clear communication during your puppy's critical learning period. Stop worrying about house training and biting, and start enjoying the confident, connected relationship you worked toward.\n\n**Why This Program is the Confident Choice:**\n\n**Customised, In-Home Coaching:** Receive personalised, one-on-one sessions delivered by an expert in the comfort of your own home, ensuring fast, effective learning tailored to your lifestyle.\n\n**Build Foundational Clarity:** Establish a clear shared language from day one, giving your puppy the confidence and guidance they need to succeed in their new world.\n\n**Play-Based Connection:** I teach you how to use engaging, fulfilling play to establish deep trust, enhance cooperation, and eliminate problem behaviors before they start.\n\n**Essential Life Skills:** Master crucial social skills, house-training protocols, and foundational manners (including reliable recall and settling on place).",
+        description: "The ultimate in-home early development program for puppies (8-20 weeks).\n\nTogether with you, I build the essential foundations of confidence, connection, and clear communication during your puppy's critical learning period. Stop worrying about house training and biting, and start enjoying the confident, connected relationship you worked toward.\n\n**Why This Program is the Confident Choice:**\n\n**Customised, In-Home Coaching:** Receive personalised, one-on-one sessions delivered by an expert in the comfort of your own home, ensuring fast, effective learning tailored to your lifestyle.\n\n**Build Foundational Clarity:** Establish a clear shared language from day one, giving your puppy the confidence and guidance they need to succeed in their new world.\n\n**Play-Based Connection:** I teach you how to use engaging, fulfilling play to establish deep trust, enhance cooperation, and eliminate problem behaviours before they start.\n\n**Essential Life Skills:** Master crucial social skills, house-training protocols, and foundational manners (including reliable recall and settling on place).",
         price: "$480",
         originalPrice: "$720",
         duration: "6 weeks",
@@ -540,11 +540,11 @@ Once physical health is in check, your dog needs a healthy mind and purpose. Wit
 
 Every breed, and indeed every individual dog, has natural drives that were carefully cultivated through generations of selective breeding. These instincts don't disappear just because your dog lives in a suburban home rather than on a working farm. The herding dog still wants to control movement, the retriever still craves the satisfaction of carrying and delivering objects, and the guardian breed still feels compelled to protect their territory.
 
-When we ignore these genetic blueprints, we're essentially asking our dogs to suppress fundamental aspects of who they are. This suppression doesn't lead to calm, obedient dogs—it leads to frustrated, anxious animals who will find their own outlets for these drives, usually in ways we don't appreciate.
+When I ignore these genetic blueprints, I'm essentially asking my dogs to suppress fundamental aspects of who they are. This suppression doesn't lead to calm, obedient dogs—it leads to frustrated, anxious animals who will find their own outlets for these drives, usually in ways I don't appreciate.
 
 ## The Power of Appropriate Expression
 
-The solution isn't to provide your Border Collie with a flock of sheep or give your Labrador a job as a hunting companion. Instead, we can create meaningful activities that satisfy these drives in ways that work within our modern lifestyles. When dogs get appropriate outlets for their genetic needs, something remarkable happens: they become more cooperative, more focused, and more willing to work with us rather than against us.
+The solution isn't to provide your Border Collie with a flock of sheep or give your Labrador a job as a hunting companion. Instead, I can create meaningful activities that satisfy these drives in ways that work within my modern lifestyle. When dogs get appropriate outlets for their genetic needs, something remarkable happens: they become more cooperative, more focused, and more willing to work with me rather than against me.
 
 Working breeds need jobs that challenge both their minds and bodies. High-energy dogs require outlets that allow them to express their natural instincts in structured ways. Even lower-drive dogs benefit from activities that connect with their breeding purpose, as this builds confidence and satisfaction that carries over into every other aspect of their lives.
 
@@ -572,7 +572,7 @@ These activities are particularly valuable because they're naturally calming for
 
 Mental fulfillment isn't optional—it's essential for your dog's wellbeing and your relationship with them. Dogs with unmet lifestyle needs often display behaviors that owners interpret as disobedience or behavioural problems: excessive barking, destructive behaviors, escape attempts, or over-excitement and reactivity in everyday situations.
 
-These behaviors aren't moral failings or dominance displays—they're symptoms of a dog whose fundamental needs aren't being met. When we address the underlying need for mental stimulation and purpose, these problematic behaviors often resolve themselves without direct training.
+These behaviors aren't moral failings or dominance displays—they're symptoms of a dog whose fundamental needs aren't being met. When I address the underlying need for mental stimulation and purpose, these problematic behaviors often resolve themselves without direct training.
 
 ## Building the Foundation for Everything Else
 
@@ -589,7 +589,7 @@ This is why lifestyle and fulfillment must come before demanding obedience or tr
         excerpt: "Even the healthiest, most fulfilled dog will struggle without clarity. Learn how to create clear communication that builds confidence and eliminates confusion.",
         content: `# Clear Communication: Building Confidence Through Understanding
 
-Even the healthiest, most fulfilled dog will struggle to fit into our lives without clear communication. Dogs need to understand what is expected of them, what their boundaries are, and how to interpret our feedback. Without this clarity, even the most well-intentioned dogs will constantly make mistakes, leading to frustration for everyone involved.
+Even the healthiest, most fulfilled dog will struggle to fit into my life without clear communication. Dogs need to understand what is expected of them, what their boundaries are, and how to interpret my feedback. Without this clarity, even the most well-intentioned dogs will constantly make mistakes, leading to frustration for everyone involved.
 
 The fundamental truth is simple: confusion creates anxiety, while clarity creates confidence.
 
@@ -607,7 +607,7 @@ The first window is engagement—a time for interactive play and connection betw
 
 The second window is exploration—essentially off-duty time when your dog can sniff, wander, investigate, and just be a dog. This self-directed decompression time is crucial for their mental health. Dogs need time to process their environment through their nose, to move at their own pace, and to make choices about what interests them.
 
-The third window is calmness—low arousal, peaceful relaxation that teaches patience and emotional control. This window is non-negotiable because dogs must learn to settle and be calm in our human world. This isn't just lying down; it's a state of mental and emotional settling that allows their nervous system to recover and reset.
+The third window is calmness—low arousal, peaceful relaxation that teaches patience and emotional control. This window is non-negotiable because dogs must learn to settle and be calm in my human world. This isn't just lying down; it's a state of mental and emotional settling that allows their nervous system to recover and reset.
 
 The fourth window is structured learning—focused effort with clear expectations and consistent follow-through. During this time, your dog knows that responses to commands are non-negotiable, and that concentrated effort is expected.
 
@@ -723,7 +723,7 @@ Your dog's behaviour isn't random—it's driven by thousands of years of selecti
 
 ## Why Genetic Drives Matter
 
-When dogs don't get appropriate outlets for their natural instincts, they create their own "jobs"—usually ones we don't appreciate:
+When dogs don't get appropriate outlets for their natural instincts, they create their own "jobs"—usually ones I don't appreciate:
 - Herding dogs nip at children and chase cars
 - Hunting dogs destroy the house searching for "prey"
 - Guardian breeds become overprotective or aggressive

@@ -35,7 +35,7 @@ const categories: ResourceCategory[] = [
       },
       {
         name: "Get Listed Here",
-        description: "Are you a local vet? We'd love to recommend trusted veterinary partners to our clients. Reach out to discuss a community partnership.",
+        description: "Are you a local vet? I'd love to recommend trusted veterinary partners to my clients. Reach out to discuss a community partnership.",
         suburb: "North Brisbane",
         placeholder: true,
       },
@@ -55,7 +55,7 @@ const categories: ResourceCategory[] = [
       },
       {
         name: "Get Listed Here",
-        description: "Do you run a local pet shop? We actively recommend quality suppliers to our training clients. Get in touch to explore a partnership.",
+        description: "Do you run a local pet shop? I actively recommend quality suppliers to my training clients. Get in touch to explore a partnership.",
         suburb: "North Brisbane",
         placeholder: true,
       },
@@ -75,7 +75,7 @@ const categories: ResourceCategory[] = [
       },
       {
         name: "Get Listed Here",
-        description: "Are you a groomer who prioritises calm, fear-free handling? We'd love to refer our clients to you. Contact us to connect.",
+        description: "Are you a groomer who prioritises calm, fear-free handling? I'd love to refer my clients to you. Contact me to connect.",
         suburb: "North Brisbane",
         placeholder: true,
       },
@@ -142,7 +142,7 @@ export default function LocalResourcesPage() {
             A curated guide to trusted local businesses and dog-friendly spots in North Brisbane — because raising a great dog takes a whole community.
           </p>
           <p className="text-base text-medium-grey max-w-2xl mx-auto">
-            We only recommend businesses that share our values: genuine care for dogs, quality service, and a commitment to the animals in their care.
+            I only recommend businesses that share my values: genuine care for dogs, quality service, and a commitment to the animals in their care.
           </p>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function LocalResourcesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Are You a Local Business?</h2>
           <p className="text-blue-100 text-lg mb-0">
-            We love connecting our clients with trusted local professionals. If you'd like to be featured here,{" "}
+            I love connecting my clients with trusted local professionals. If you'd like to be featured here,{" "}
             <a href="/contact" className="text-white underline font-semibold hover:text-blue-200 transition-colors">
               get in touch
             </a>{" "}
@@ -236,7 +236,7 @@ export default function LocalResourcesPage() {
             Know a Great Local Business?
           </h2>
           <p className="text-lg text-medium-grey mb-8">
-            If you've had a great experience with a vet, groomer, or pet shop in the area, we'd love to hear about them. Help us grow this resource for the North Brisbane dog community.
+            If you've had a great experience with a vet, groomer, or pet shop in the area, I'd love to hear about them. Help me grow this resource for the North Brisbane dog community.
           </p>
           <a
             href="/contact"

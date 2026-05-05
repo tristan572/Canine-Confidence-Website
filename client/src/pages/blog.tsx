@@ -30,7 +30,7 @@ export default function BlogPage() {
     onSuccess: () => {
       toast({
         title: "Successfully subscribed!",
-        description: "You'll receive our weekly training tips and updates.",
+        description: "You'll receive my weekly training tips and updates.",
       });
       setEmail("");
       queryClient.invalidateQueries({ queryKey: ["/api/subscribers"] });
@@ -249,7 +249,7 @@ export default function BlogPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-charcoal mb-4">Popular Training Topics</h2>
             <p className="text-lg text-medium-grey">
-              Explore our most popular training guides and resources
+              Explore my most popular training guides and resources
             </p>
           </div>
 
