@@ -9,7 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import { SEO } from "@/components/SEO";
 export default function BlogDetailPage() {
   const [match, params] = useRoute("/blog/:slug");
-  const postId = params?.id ? params.slug ?? null;
+    const postId = params?.slug ?? null;
 
   const { data: blogPost, isLoading, error } = useQuery<BlogPost>({
     queryKey: ["/api/blog", postId],
