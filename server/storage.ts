@@ -526,6 +526,7 @@ When something feels "off" with your dog, resist the urge to immediately seek be
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
         imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.webp",
         readTime: "8 min read",
+        publishedAt: new Date("2025-10-01"),
         tags: ["health", "foundation", "wellness", "four building blocks"],
         slug: "health-foundation-dog-training"
       },
@@ -581,6 +582,7 @@ A fulfilled dog is naturally more focused, more cooperative, and more peaceful i
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
         imageUrl: "/attached_assets/generated_images/Border_Collie_mental_stimulation_666374d6.webp",
         readTime: "10 min read",
+        publishedAt: new Date("2025-10-08"),
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
         slug: "lifestyle-fulfilling-your-dogs-mind"
       },
@@ -644,6 +646,7 @@ Clarity isn't about achieving perfection—it's about creating predictability. D
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
         imageUrl: "/attached_assets/generated_images/Golden_Retriever_communication_training_1d6a9e14.webp",
         readTime: "9 min read",
+        publishedAt: new Date("2025-10-15"),
         tags: ["communication", "clarity", "markers", "four building blocks"],
         slug: "clear-communication-building-confidence"
       },
@@ -711,6 +714,7 @@ A dog with solid life skills is a dog who can participate more fully in family l
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
         imageUrl: "/attached_assets/generated_images/Australian_Shepherd_public_obedience_11c6c97e.webp",
         readTime: "8 min read",
+        publishedAt: new Date("2025-10-22"),
         tags: ["obedience", "skills", "training", "four building blocks"],
         slug: "life-skills-obedience-that-works-everywhere"
       },
@@ -871,6 +875,7 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
         imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.webp",
         readTime: "12 min read",
+        publishedAt: new Date("2025-11-05"),
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
         slug: "understanding-your-dogs-genetic-drives"
       },
@@ -930,8 +935,71 @@ This comprehensive approach isn't just training—it's building a complete life 
 The investment in building these foundations properly pays dividends throughout your dog's entire life, creating not just better behaviour, but a truly harmonious partnership between human and canine companions.`,
         imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.webp",
         readTime: "12 min read",
+        publishedAt: new Date("2025-11-19"),
         tags: ["four building blocks", "balance", "framework", "complete guide"],
         slug: "creating-balance-complete-framework"
+      },
+      {
+        title: "Your Dog Isn't Doing It to Spite You",
+        excerpt: "Spite isn't in a dog's toolkit. Here's what's actually driving the behaviour — and why the fix is simpler than you think.",
+        content: `The bin gets raided the moment you leave the room. The cushion gets destroyed within minutes of you stepping out the door. You catch your dog mid-act and you'd swear they know exactly what they're doing.
+
+It's a natural read. But it's the wrong one.
+
+The spite theory feels logical. It isn't.
+
+Spite requires a dog to understand that a specific action will cause you distress, and to choose that action because they want that outcome. That's a level of social cognition dogs don't have.
+
+Dogs are perceptive. They read body language, tone, and timing better than most owners realise. But reading your mood is very different from engineering revenge.
+
+What looks like spite is almost always simpler: a behaviour that has worked before.
+
+## What's actually driving the behaviour
+
+Dogs learn through consequence. A behaviour that produces something good — food, entertainment, attention, access, relief — gets repeated. A behaviour that produces nothing, or produces something the dog dislikes, fades.
+
+That's the whole system.
+
+Raiding the bin worked once. The food was good. The opportunity came around again. It was tried again. Every time it works, the behaviour gets stronger.
+
+Destroying a cushion is genuinely satisfying for a bored, under-stimulated dog. It uses the mouth, releases tension, and fills time. If nothing stops it, it keeps happening.
+
+Your dog isn't waiting for you to leave because they want to punish you for leaving. They're waiting because your absence removes the one variable that usually interrupts the fun.
+
+That's a management problem and a fulfilment problem. It's almost never a spite problem.
+
+## Why the cause changes the fix
+
+This is where the distinction actually matters.
+
+If you believe it's spite, you focus on corrections after the fact. Stern voice. Frustration. The problem is that the behaviour already happened. The dog got the payoff before the correction arrived. And ten minutes later, the dog can't connect your reaction to something they did while you were gone. They connect it to whatever they were doing when you walked in — which is usually nothing.
+
+So the corrections teach nothing useful. The behaviour continues. The "he knows what he's doing" theory gets reinforced. The cycle runs.
+
+If you understand it's about access, opportunity, and unmet needs, you approach it completely differently.
+
+## What to do instead
+
+Start with management. If the bin is getting raided, move the bin. If the cushions are targets, close the door. This isn't surrendering. It's stopping the behaviour from practising itself into a deeper habit.
+
+Then look at fulfilment. Most destructive behaviour in dogs is a lifestyle problem. The dog is under-stimulated, or not getting enough of what they're actually wired for — chewing, movement, real engagement with their owner. Address the root, and a lot of the surface behaviour resolves without much formal training at all.
+
+Then build structure. A dog with clear routines, real skills, and a strong relationship with its owner has fewer reasons to self-entertain in ways that cause damage.
+
+This doesn't happen overnight. But it builds quickly when the foundations are right.
+
+## Ready to get clear?
+
+If your dog is doing something you can't explain, it's worth getting a real read on what's driving it.
+
+The Initial Canine Success Assessment is a 60-minute in-home session. You walk away understanding what's behind the behaviour, and with a plan to address it.
+
+Start with a free 15-minute call. No pitch. Just a conversation about what your dog actually needs.`,
+        imageUrl: "/attached_assets/stock_images/Guilty Dog.png",
+        readTime: "6 min read",
+        publishedAt: new Date("2026-05-05"),
+        tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
+        slug: "your-dog-isnt-doing-it-to-spite-you"
       }
     ];
 
@@ -1073,12 +1141,12 @@ The investment in building these foundations properly pays dividends throughout 
     return Array.from(this.blogPosts.values()).find(p => p.slug === slug);
   }
 
-  async createBlogPost(post: InsertBlogPost): Promise<BlogPost> {
+  async createBlogPost(post: InsertBlogPost & { publishedAt?: Date }): Promise<BlogPost> {
     const id = this.currentBlogPostId++;
-    const newPost: BlogPost = { 
-      ...post, 
-      id, 
-      publishedAt: new Date() 
+    const newPost: BlogPost = {
+      ...post,
+      id,
+      publishedAt: post.publishedAt ?? new Date()
     };
     this.blogPosts.set(id, newPost);
     return newPost;
