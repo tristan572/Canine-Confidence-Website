@@ -48,7 +48,7 @@ export default function ContactPage() {
                   Get in Touch
                 </h1>
                 <p className="text-xl text-medium-grey">
-                  Ready to start your dog's transformation? We're here to help with any questions about our training services.
+                  Have a question or ready to book? I'll get back to you within 24 hours.
                 </p>
               </div>
             </div>
@@ -94,8 +94,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Phone</div>
-                    <div className="text-medium-grey mb-1">0409521358</div>
-                    <div className="text-sm text-medium-grey">Available Monday - Saturday, 8AM - 8PM</div>
+                    <div className="text-medium-grey mb-1">0409 521 358</div>
+                    <div className="text-sm text-medium-grey">Available Monday to Saturday, 8AM to 8PM</div>
                   </div>
                 </div>
 
@@ -117,7 +117,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Service Area</div>
                     <div className="text-medium-grey mb-1">20km radius from Boondall, Brisbane</div>
-                    <div className="text-sm text-medium-grey">Mobile service - I come to you!</div>
+                    <div className="text-sm text-medium-grey">Mobile service — I come to you</div>
                   </div>
                 </div>
 
@@ -128,8 +128,8 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Business Hours</div>
                     <div className="text-medium-grey space-y-1">
-                      <div>Monday - Friday: 5:30 AM - 8:00 PM</div>
-                      <div>Saturday: 9:00 AM - 5:00 PM</div>
+                      <div>Monday to Friday: 5:30AM to 8PM</div>
+                      <div>Saturday: 7AM to 5PM</div>
                       <div>Sunday: Closed</div>
                     </div>
                   </div>
@@ -141,8 +141,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Video Consultations</div>
-                    <div className="text-medium-grey mb-1">Available Worldwide</div>
-                    <div className="text-sm text-medium-grey">Remote training via video call</div>
+                    <div className="text-medium-grey mb-1">Available World-wide</div>
                   </div>
                 </div>
               </div>
@@ -203,7 +202,7 @@ export default function ContactPage() {
               My service area covers North Brisbane and surrounding suburbs. I come to you for your convenience!
             </p>
             <p className="text-medium-grey max-w-3xl mx-auto">
-              <strong>Note:</strong> Travel beyond 10km may incur additional charges. I'm also available worldwide for video call consultations and training sessions!
+              <strong>Note:</strong> Travel beyond 10km may incur additional charges. I'm also available worldwide for video call consultations.
             </p>
           </div>
           
