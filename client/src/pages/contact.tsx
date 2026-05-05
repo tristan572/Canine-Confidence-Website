@@ -322,6 +322,29 @@ export default function ContactPage() {
                 I accept all major payment methods through my secure online scheduling system. Payment is required upfront before sessions to confirm your booking.
               </p>
             </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">How many sessions will I need?</h3>
+              <p className="text-medium-grey text-sm">
+                It depends on the dog, the issue, and how consistently you practise between sessions. A puppy starting from scratch typically needs six to ten sessions to build solid foundations. A reactive or anxious dog with established habits usually takes longer — ten to twenty sessions is a realistic range for most cases.
+              </p>
+              <p className="text-medium-grey text-sm mt-2">
+                After the Initial Canine Success Assessment, I'll give you a clearer picture of what we're working with and how long it's likely to take. I'd rather give you an honest estimate than a number that sounds good.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">Do I need to be present for training?</h3>
+              <p className="text-medium-grey text-sm">
+                Coaching sessions are built around you as much as your dog. If the aim is for you to handle your dog confidently, you need to be part of the session — that's where the skill transfer happens.
+              </p>
+              <p className="text-medium-grey text-sm mt-2">
+                Walks, Day Train, and handling sessions don't require you to be present. I work directly with your dog and build the foundations. For Day Train sessions, I'll walk you through what we covered at the end so you can maintain it at home.
+              </p>
+              <p className="text-medium-grey text-sm mt-2">
+                When you book, I'll let you know what's needed for your specific service.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
