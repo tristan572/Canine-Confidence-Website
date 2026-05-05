@@ -279,24 +279,23 @@ export class MemStorage implements IStorage {
           "Take-Home Training Plan after every session",
           "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)"
         ],
-        isPopular: true
+        isPopular: false
       },
       {
-        name: "The Connected Companion Walk",
-        description: "Stop the struggle and start enjoying your walks.\n\nThis intensive program is designed to eliminate stressful pulling and resisting, giving you back your shoulders and your peace of mind. I deliver effective, efficient, and affordable results by building a lasting foundation of focus, connection, and clear communication in just one week.\n\n**How My Unique Program Works:**\n\n**Trainer-Led Foundations (4 Sessions):** Your dog works directly with an expert trainer over four focused sessions to build the correct habits, neutralise negative associations with the collar, and establish the core communication system.\n\n**Owner Coaching & Skill Transfer (1 Session):** I dedicate the final session entirely to coaching you. You'll master the advanced lead handling skills and the communication protocols, ensuring the brilliant results transfer straight into your hands.\n\n**Change the Collar Connection:** I focus on the dog's emotional response to the collar and lead, transforming resistance and struggle into positive and co-operative engagement.\n\n**Clarity-First Communication:** I build clear, consistent communication that teaches your dog exactly what you want on a walk, eliminating confusion and ensuring they choose to walk nicely by your side.\n\n**Important Note:** Please book the From Chaos To Calm Program if your dog is barking and lunging at dogs or people.",
-        price: "$340",
-        originalPrice: "$360",
-        duration: "1 week",
+        name: "The Focused Progress Plan",
+        description: "Achieve the reliable, lasting results you've been searching for.\n\nThis is your opportunity to unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals—whether that's achieving perfect manners, tackling a specific behaviour, or deepening your bond.\n\n**Why Commit to the Focused Progress Plan?**\n\n**Dedicated, Personalised Coaching:** Receive five private sessions with ongoing feedback and support. This commitment ensures you move beyond troubleshooting into real proficiency and confidence for any issue you choose to focus on.\n\n**Built-in Momentum & Reliability:** This package is designed to harness the power of regular coaching, ensuring effective learning for both you and your dog. I build reliable skills that hold up in real-world distractions.\n\n**Clarity-First Philosophy:** I focus on giving your dog the clear communication they need and giving you an in-depth understanding of my methods, leading to consistent, stress-free improvement.\n\n**Exceptional Value:** This five-session commitment ensures effective, self-paced learning and provides exceptional value, saving you $50 compared to booking sessions individually.",
+        price: "$550",
+        originalPrice: "$600",
+        duration: "5 sessions",
         sessions: 5,
-        category: "obedience",
-        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839_opt.webp",
+        category: "behaviour,obedience",
+        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278_opt.webp",
         features: [
-          "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
-          "Foundations of High-Level Engagement and Obedience on the move",
-          "Master Advanced Lead Handling Skills for ultimate control and comfort",
-          "Tailored Protocol to shift your dog's feelings about the collar and lead",
-          "Results Guaranteed or I continue until the core goal is met",
-          "BONUS: The essential guide: 'The Building Blocks of a Balanced Dog' (Included Free!)"
+          "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
+          "Customised Training Approach and problem-solving strategy",
+          "In-Depth Understanding of Methods (Clarity, Connection, Play and more)",
+          "Dedicated Ongoing Support between sessions",
+          "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: true
       },
@@ -316,7 +315,7 @@ export class MemStorage implements IStorage {
           "Advanced Impulse Control and Counter-Conditioning protocols",
           "Personalised Training Plan and Homework supplied",
           "Dedicated Ongoing Support from your trainer",
-          "BONUS: The essential guide: 'Four Building Blocks of a Balanced Dog' (Included Free!)"
+          "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: true
       },
@@ -382,19 +381,20 @@ export class MemStorage implements IStorage {
       //   isPopular: false
       // },
       {
-        name: "The Focused Progress Plan",
-        description: "Achieve the reliable, lasting results you've been searching for.\n\nThis is your opportunity to unlock consistent progress and benefit from five personalised, one-on-one coaching sessions tailored to your unique goals—whether that's achieving perfect manners, tackling a specific behaviour, or deepening your bond.\n\n**Why Commit to the Focused Progress Plan?**\n\n**Dedicated, Personalised Coaching:** Receive five private sessions with ongoing feedback and support. This commitment ensures you move beyond troubleshooting into real proficiency and confidence for any issue you choose to focus on.\n\n**Built-in Momentum & Reliability:** This package is designed to harness the power of regular coaching, ensuring effective learning for both you and your dog. I build reliable skills that hold up in real-world distractions.\n\n**Clarity-First Philosophy:** I focus on giving your dog the clear communication they need and giving you an in-depth understanding of my methods, leading to consistent, stress-free improvement.\n\n**Exceptional Value:** This five-session commitment ensures effective, self-paced learning and provides exceptional value, saving you $50 compared to booking sessions individually.",
-        price: "$550",
-        originalPrice: "$600",
-        duration: "5 sessions",
+        name: "The Connected Companion Walk",
+        description: "Stop the struggle and start enjoying your walks.\n\nThis intensive program is designed to eliminate stressful pulling and resisting, giving you back your shoulders and your peace of mind. I deliver effective, efficient, and affordable results by building a lasting foundation of focus, connection, and clear communication in just one week.\n\n**How My Unique Program Works:**\n\n**Trainer-Led Foundations (4 Sessions):** Your dog works directly with an expert trainer over four focused sessions to build the correct habits, neutralise negative associations with the collar, and establish the core communication system.\n\n**Owner Coaching & Skill Transfer (1 Session):** I dedicate the final session entirely to coaching you. You'll master the advanced lead handling skills and the communication protocols, ensuring the brilliant results transfer straight into your hands.\n\n**Change the Collar Connection:** I focus on the dog's emotional response to the collar and lead, transforming resistance and struggle into positive and co-operative engagement.\n\n**Clarity-First Communication:** I build clear, consistent communication that teaches your dog exactly what you want on a walk, eliminating confusion and ensuring they choose to walk nicely by your side.\n\n**Important Note:** Please book the From Chaos To Calm Program if your dog is barking and lunging at dogs or people.",
+        price: "$340",
+        originalPrice: "$360",
+        duration: "1 week",
         sessions: 5,
-        category: "behaviour,obedience",
-        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278_opt.webp",
+        category: "obedience",
+        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839_opt.webp",
         features: [
-          "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
-          "Customised Training Approach and problem-solving strategy",
-          "In-Depth Understanding of Methods (Clarity, Connection, Play and more)",
-          "Dedicated Ongoing Support between sessions",
+          "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
+          "Foundations of High-Level Engagement and Obedience on the move",
+          "Master Advanced Lead Handling Skills for ultimate control and comfort",
+          "Tailored Protocol to shift your dog's feelings about the collar and lead",
+          "Results Guaranteed or I continue until the core goal is met",
           "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: false
