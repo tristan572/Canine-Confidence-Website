@@ -151,7 +151,7 @@ export default function Footer() {
                   <div className="font-medium">Business Hours</div>
                   <div className="text-sm mt-1 space-y-1">
                     <div>Mon-Fri: 5:30am - 8pm</div>
-                    <div>Saturday: 9am - 5pm</div>
+                    <div>Saturday: 7am - 5pm</div>
                     <div>Sunday: Closed</div>
                   </div>
                 </div>
