@@ -5,7 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import { Star, Clock, Users, CheckCircle, Calendar } from "lucide-react";
+import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign } from "lucide-react";
+import ConsultationForm from "@/components/forms/consultation-form";
 import { apiRequest } from "@/lib/queryClient";
 import ReactMarkdown from "react-markdown";
 import type { Package } from "@shared/schema";
@@ -454,6 +455,45 @@ export default function PackagesPage() {
             {filteredPackages.map((pkg: Package) => (
               <PackageCard key={pkg.id} pkg={pkg} />
             ))}
+
+            {/* Free Consultation Card */}
+            <Card className="bg-primary-blue text-white card-hover">
+              <CardContent className="p-8">
+                <div className="bg-white p-3 rounded-lg w-fit mb-6">
+                  <Phone className="h-6 w-6 text-primary-blue" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Free Phone Consultation</h3>
+                <p className="text-blue-100 mb-6">
+                  Not sure which package fits? Book a free 15-minute call and I'll help you work out what your dog actually needs — no obligation, no sales pitch.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-blue-100">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>15 minutes</span>
+                  </div>
+                  <div className="flex items-center text-sm text-blue-100">
+                    <Phone className="w-4 h-4 mr-2" />
+                    <span>Phone call</span>
+                  </div>
+                  <div className="flex items-center text-sm text-white font-semibold">
+                    <DollarSign className="w-4 h-4 mr-2" />
+                    <span>Completely Free</span>
+                  </div>
+                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="w-full bg-white text-primary-blue hover:bg-gray-50">
+                      Request Call
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
+                    <DialogTitle>Request Free Phone Call</DialogTitle>
+                    <DialogDescription>Book a free 15-minute call to talk through which package is right for your dog.</DialogDescription>
+                    <ConsultationForm />
+                  </DialogContent>
+                </Dialog>
+              </CardContent>
+            </Card>
           </div>
 
           {filteredPackages.length === 0 && !isLoading && (

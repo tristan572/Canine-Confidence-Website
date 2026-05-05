@@ -558,35 +558,37 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">Ready to Build Real Confidence?</h2>
+              <h2 className="text-4xl font-bold text-white">Most dog problems have a clear cause.</h2>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring a connection that keeps growing.
+                A free 15-minute call is enough to work out what's going on and whether I can help.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => setShowBookingWidget(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Your First Session
-              </Button>
-
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors">
-                    Request Free Call
+                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Book a Free Call
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
-                  <DialogTitle>Request Free Call</DialogTitle>
-                  <DialogDescription>Connect with us for a complimentary consultation to discuss how I can help you and your dog.</DialogDescription>
+                  <DialogTitle>Book a Free Call</DialogTitle>
+                  <DialogDescription>Book a free 15-minute call to talk through what's going on with your dog.</DialogDescription>
                   <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
                     <ConsultationForm />
                   </Suspense>
                 </DialogContent>
               </Dialog>
+
+              <Button
+                variant="outline"
+                onClick={() => setShowBookingWidget(true)}
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Your First Session
+              </Button>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">

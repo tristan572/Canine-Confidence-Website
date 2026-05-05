@@ -141,25 +141,6 @@ export default function ConsultationForm() {
             )}
           />
 
-          <FormField
-            control={form.control}
-            name="concerns"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>What would you like to discuss?</FormLabel>
-                <FormControl>
-                  <Textarea 
-                    placeholder="Describe your concerns or training goals..."
-                    className="resize-none"
-                    rows={3}
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
           <Button 
             type="submit" 
             disabled={consultationMutation.isPending}
