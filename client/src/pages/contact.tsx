@@ -154,9 +154,9 @@ export default function ContactPage() {
                     <HeadphonesIcon className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-charcoal mb-2">Free Phone Consultation</h3>
+                    <h3 className="font-semibold text-charcoal mb-2">Book a Free Call</h3>
                     <p className="text-medium-grey mb-4">
-                      Unsure about the right service for your needs? Schedule a complimentary, no-obligation call with our knowledgeable team. During your Free Phone Consult, we'll help you clarify your options, answer your questions, and provide advice tailored to your situation. Whether you need general guidance or specific recommendations, we're here to support you—at absolutely no cost, so you can make confident, informed decisions.
+                      Not sure where to start? A 15-minute call is enough to work out what your dog needs and whether I'm the right fit. No obligation. Just a straightforward conversation.
                     </p>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -331,28 +331,26 @@ export default function ContactPage() {
       <section className="py-16 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Ready to Build Real Confidence?</h2>
+            <h2 className="text-3xl font-bold text-white">Still thinking it over?</h2>
             <p className="text-xl text-blue-100">
-              Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+              Call me directly and I'll work out if I can help — no forms, no wait.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg">
+              <Button asChild className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
                 <a href="tel:0409521358">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Now: 0409521358
+                  0409 521 358
                 </a>
               </Button>
-              <Button 
+              <Button
+                variant="outline"
                 onClick={() => setShowBookingWidget(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 border border-white px-8 py-4 text-lg"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Now
               </Button>
             </div>
-            <p className="text-blue-100 text-sm">
-              We're here to help you and your dog thrive together
-            </p>
           </div>
         </div>
       </section>
