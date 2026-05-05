@@ -37,10 +37,10 @@ export default function AboutPage() {
             About Tristan
           </h1>
           <h2 className="text-3xl font-semibold text-charcoal mb-6">
-            From <span className="text-primary-blue">Passion</span> to Obsession
+            From Hobby to <span className="text-primary-blue">Obsession</span>
           </h2>
           <p className="text-xl text-medium-grey mb-8">
-            My involvement in dog behaviour started in 2016 when I began training my own dog. I became fascinated by the process, but for years, it was just a serious passion alongside a standard 9-to-5.
+            I started training my own dog in 2016. What began as a weekend hobby turned into something I couldn't stop thinking about.
           </p>
         </div>
       </section>
@@ -53,16 +53,19 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">The <span className="text-primary-blue">Turning Point</span></h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  That changed in 2020. When I was made redundant, I saw it as the push I needed to turn that passion into a career. I didn't want to be another backyard trainer; I wanted to master the craft.
+                  For years I kept it alongside a regular job. Then in 2020, I was made redundant. I took it as the push I'd been waiting for.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Since then, I have been relentless. I formalised my skills by earning my Certificate III in Dog Behaviour and Training through the National Dog Trainers Federation (NDTF), but that certification was just the starting point.
+                  I didn't want to be another backyard trainer. I wanted to actually understand dogs.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  I have spent every day since 2020 immersing myself in the industry—devouring theory from books, podcasts, online courses, and travelling to seminars. However, this academic knowledge is only the theory. The real expertise comes from the countless dogs I have worked with across North Brisbane, as hands-on experience and real-world application always outweigh the textbook.
+                  I formalised my training through the National Dog Trainers Federation, earning my Certificate III in Dog Behaviour and Training. The certificate was the starting point, not the destination.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, you get the benefit of that obsession. I don't rely on "natural bonds" or guesswork. I rely on applied canine psychology and continuous professional study to handle complex behavioural challenges and build genuine trust with your dog.
+                  Since then I've spent every day immersed in the field. Books, podcasts, seminars, courses, and more importantly, dogs. Hundreds of them, across North Brisbane. That's where real understanding comes from.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  At Canine Confidence, you get the benefit of that obsession. I don't rely on guesswork or generic methods. I rely on applied canine behaviour, continuous study, and honest communication with every dog I work with.
                 </p>
               </div>
 
@@ -110,7 +113,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-charcoal mb-4">The Canine <span className="text-primary-blue">Confidence</span> Philosophy</h2>
             <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Training goes beyond basic commands and corrections. It is about building a bond based on real understanding. By focusing on the mechanics of how dogs learn and what they need biologically, I create a relationship built on clarity, not just compliance.
+              Training is about more than commands. It's about understanding what a dog actually needs and building a relationship on that foundation. When the foundations are right, behaviour follows.
             </p>
           </div>
 
@@ -121,7 +124,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Play-Based Learning</h3>
               <p className="text-medium-grey">
-                I use play as my primary engine for engagement. When a dog works for a game rather than just a treat or to avoid a correction, their motivation skyrockets. I turn training from a stressful chore into a shared activity that builds a powerful bond.
+                Play is my primary training tool. A dog that works for a game is more motivated, more focused, and more engaged than one working only for food or to avoid a correction. It turns training into something your dog genuinely wants to do.
               </p>
             </Card>
 
@@ -131,7 +134,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Real-World Skills</h3>
               <p className="text-medium-grey">
-                I don't just train for the living room; I train for reality. I equip your dog with the essential life skills they need to navigate the modern world safely, ensuring they can handle public environments with confidence.
+                I don't train for the living room. I train for real life. Busy footpaths, cafés, parks, guests at the door. Your dog needs to handle the world, not just perform in ideal conditions.
               </p>
             </Card>
 
@@ -141,7 +144,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
-                Most behavioural issues stem from frustration. I identify what your dog was bred to do and provide a constructive outlet for that energy. By meeting their biological needs first, I eliminate the root cause of many problem behaviours.
+                Most behavioural issues start with frustration. I identify what your dog is bred to do and give them a constructive outlet for that drive. When biological needs are met, a lot of the problem behaviour disappears on its own.
               </p>
             </Card>
 
@@ -151,7 +154,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Predictability & Clarity</h3>
               <p className="text-medium-grey">
-                Anxiety comes from confusion. I provide clear expectations and consistent boundaries so your dog knows exactly what is expected of them. When expectations are predictable, your dog feels secure, confident, and calm.
+                Anxiety comes from confusion. Clear expectations and consistent boundaries give your dog a framework they can rely on. When a dog knows what's expected, they settle.
               </p>
             </Card>
           </div>
@@ -178,7 +181,7 @@ export default function AboutPage() {
               <div className="absolute -top-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
                 <div className="text-center">
                   <div className="text-lg font-bold mb-1">I'm not just here to train dogs</div>
-                  <div className="text-blue-100 text-sm">I create real relationships and real confidence that lasts.</div>
+                  <div className="text-blue-100 text-sm">A trained dog isn't the goal. A dog you can actually live with is.</div>
                 </div>
               </div>
             </div>
@@ -187,7 +190,13 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-charcoal">Why I Train Differently</h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Many trainers focus solely on commands, corrections, and simply "fixing" symptoms. I focus on the root cause. I learned that when you tap into a dog's natural drives—through play, engagement, and genetic fulfilment—you don't just train a dog, you build a relationship your dog can depend on. My own dog, Cleo, is proof of this approach. She has never been destructive or highly anxious because her needs are met consistently. That is the outcome I work towards for every family: a fulfilled, confident dog, and a household free from the stress of unpredictable behaviour.
+                  Most trainers work on symptoms. I work on the cause.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  When you understand what a dog is wired for and give them a real outlet for it, training becomes straightforward. My own dog Cleo is the clearest example. She's never been destructive or highly anxious because her needs are consistently met.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  That's the outcome I work towards for every client: a fulfilled dog, and a household that actually feels calm.
                 </p>
               </div>
 
@@ -198,7 +207,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">NDTF Certified Professional</h3>
-                    <p className="text-medium-grey">Nationally accredited dog trainer through the National Dog Trainers Federation, certified in 2022 with a focus on genetic fulfilment and play-based learning.</p>
+                    <p className="text-medium-grey">Nationally accredited through the National Dog Trainers Federation, with a focus on genetic fulfilment and play-based learning.</p>
                   </div>
                 </div>
 
@@ -207,8 +216,8 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Verified Results</h3>
-                    <p className="text-medium-grey">Over 100 5-Star Reviews. View detailed testimonials from North Brisbane families in my Client Reviews section, on the home page.</p>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">100+ Five-Star Reviews</h3>
+                    <p className="text-medium-grey">Verified across Google and Madpaws from North Brisbane families.</p>
                   </div>
                 </div>
 
@@ -217,8 +226,8 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Lifetime Support</h3>
-                    <p className="text-medium-grey">I'm committed to your success with ongoing support for the life of your dog.</p>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">Ongoing Support</h3>
+                    <p className="text-medium-grey">Committed to your dog's progress for the long term, not just the sessions.</p>
                   </div>
                 </div>
 
@@ -227,8 +236,8 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Modern, Results-Based Methods</h3>
-                    <p className="text-medium-grey">Using the latest research in canine behaviour and learning to ensure effective, humane training.</p>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">Results-Based Methods</h3>
+                    <p className="text-medium-grey">Grounded in current canine behaviour science and applied in the real world.</p>
                   </div>
                 </div>
               </div>
@@ -253,7 +262,7 @@ export default function AboutPage() {
                 <Search className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Behavioural Audit</h3>
-              <p className="text-sm text-medium-grey">Comprehensive evaluation of your dog's current behaviour, needs, and specific goals.</p>
+              <p className="text-sm text-medium-grey">A thorough look at your dog's current behaviour, history, and what's actually driving it.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
@@ -261,7 +270,7 @@ export default function AboutPage() {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Personalised Strategy</h3>
-              <p className="text-sm text-medium-grey">A customised training program designed specifically for your dog's learning style.</p>
+              <p className="text-sm text-medium-grey">A training plan built around your dog's drives, learning style, and your household.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
@@ -269,7 +278,7 @@ export default function AboutPage() {
                 <Users className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Hands-On Skill Transfer</h3>
-              <p className="text-sm text-medium-grey">Focused sessions with both dog and owner to build practical skills and confidence.</p>
+              <p className="text-sm text-medium-grey">Practical sessions where you learn to lead, not just watch.</p>
             </Card>
 
             <Card className="bg-white p-6 text-center border border-gray-100">
@@ -277,7 +286,7 @@ export default function AboutPage() {
                 <HeartHandshake className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Sustained Results</h3>
-              <p className="text-sm text-medium-grey">Ongoing guidance and support to maintain and improve long-term behaviour.</p>
+              <p className="text-sm text-medium-grey">Ongoing guidance so progress holds up in real life.</p>
             </Card>
           </div>
         </div>
@@ -286,29 +295,21 @@ export default function AboutPage() {
       {/* Contact Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Real Confidence?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to get started?</h2>
           <p className="text-xl text-white/90 mb-12">
-            Stop the frustration caused by confusion and inconsistency. Experience my proven, play-based approach that delivers confidence through clarity, ensuring a bond that lasts a lifetime.
+            Book a free 15-minute call. We'll talk through what's going on with your dog and work out whether we're a good fit.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-blue-700 hover:bg-gray-50 px-8 py-4 text-lg"
-              onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
-            >
-              <Calendar className="mr-2 h-5 w-5" />
-              Book Training Session
-            </Button>
+          <div className="flex justify-center">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="outline" size="lg" className="border-white bg-white/10 text-white hover:bg-white/20 px-8 py-4 text-lg">
+                <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-50 px-8 py-4 text-lg">
                   <Phone className="mr-2 h-5 w-5" />
-                  Free Consultation
+                  Book a Free Call
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                 <DialogTitle>Free Consultation</DialogTitle>
-                <DialogDescription>Connect with me for a complimentary consultation to discuss your dog's training needs and how I can help.</DialogDescription>
+                <DialogDescription>Book a free 15-minute call to talk through what's going on with your dog.</DialogDescription>
                 <ConsultationForm />
               </DialogContent>
             </Dialog>
