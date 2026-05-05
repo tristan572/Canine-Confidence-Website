@@ -109,25 +109,36 @@ export default function SandgatePage() {
                   <span className="text-primary-blue font-semibold">Sandgate, Shorncliffe & Brighton</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  Sandgate, Shorncliffe & Brighton Dog Training: <span className="text-primary-blue">Coastal Confidence</span>
+                  Sandgate, Shorncliffe & Brighton Dog Training
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal">
-                  Bayside Dog Training for the Real World: Mastering Seagulls, Bikes, and Crowds
+                  Coastal Confidence
                 </h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  If you live by the water, you know a well-behaved dog isn't a luxury—it's essential. We specialise in building focus and control amidst the unique distractions of the Bayside area: the pier crowds, passing bikes, and those tempting seagulls. Our training proofs your dog's obedience against the highest real-world challenges.
+                  Bayside living is brilliant. Walking your dog there shouldn't be a battle.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  Seagulls, bikes, pier crowds, off-lead dogs on the foreshore — the Sandgate strip is one of Brisbane's most distracting environments for a dog. I train yours to handle it.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed font-medium">
+                  Real-world focus, built for where you actually live.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary text-lg px-8 py-4"
-                  data-testid="button-book-assessment-hero"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Book Your Assessment
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="btn-primary text-lg px-8 py-4" data-testid="button-book-assessment-hero">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Book a Free Call
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
+                    <DialogTitle>Book a Free Call</DialogTitle>
+                    <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
+                    <ConsultationForm />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
             
@@ -159,11 +170,10 @@ export default function SandgatePage() {
                 The Bayside <span className="text-primary-blue">Adventure Walk</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                This is my signature one-on-one training and enrichment session conducted in the most challenging (and rewarding) local environments. Perfect for dogs that need real exercise and fullfilment, or those needing obedience proofed against real-world distractions.
+                A one-on-one training and enrichment session built around the Sandgate foreshore. Real exercise, real fulfilment, real-world skills — in the environment where it actually needs to hold up.
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <p className="text-blue-800 font-semibold text-xl">Available for all dogs. $80, per hour session.</p>
-                <p className="text-blue-700">5 session packages available for great savings. Let your dog have the time of their life while also learning new skills!</p>
+                <p className="text-blue-800 font-semibold text-xl">$80 per 60-minute session. Five-session packages available.</p>
               </div>
 
               <div className="space-y-4">
@@ -171,7 +181,7 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Foreshore Focus</h3>
-                    <p className="text-medium-grey">I train specifically on the Sandgate Foreshore off-leash mudflats (between Second Avenue and Zeehan St) for reliable recall and impulse control, even with other dogs running past.</p>
+                    <p className="text-medium-grey">I work on the Sandgate Foreshore off-lead mudflats between Second Avenue and Zeehan Street — reliable recall and impulse control, even with other dogs running past.</p>
                   </div>
                 </div>
 
@@ -179,15 +189,15 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Proofing Distractions</h3>
-                    <p className="text-medium-grey">Your dog learns to ignore high-value distractions like moving bikes, passing crowds, and pesky seagulls while walking calmly on Flinders Parade.</p>
+                    <p className="text-medium-grey">Your dog learns to ignore moving bikes, passing crowds, and seagulls while walking calmly on Flinders Parade.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Cafe Manners</h3>
-                    <p className="text-medium-grey">We practise calming "Settle" and "Place" behaviours, ensuring your dog can relax while you enjoy your favourite calamari from the local Fishmonger.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Café Manners</h3>
+                    <p className="text-medium-grey">I practise Settle and Place behaviours so your dog can hold it while you enjoy a calamari from the local Fishmonger.</p>
                   </div>
                 </div>
 
@@ -195,21 +205,18 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Leash Mastery</h3>
-                    <p className="text-medium-grey">Perfecting your loose-leash walk along Shorncliffe Pier where distractions are at their peak.</p>
+                    <p className="text-medium-grey">Loose-lead walking along Shorncliffe Pier, where distractions are at their peak.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
-                <p className="text-medium-grey mb-4">
-                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">Adventure Walk and Training service</Link>.
-                </p>
-                <Button 
+                <Button
                   onClick={() => setShowAdventureDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-adventure-walk"
                 >
-                  Book Adventure Walk Training
+                  Book Adventure Walk
                 </Button>
               </div>
             </div>
@@ -267,24 +274,25 @@ export default function SandgatePage() {
               <h2 className="text-4xl font-bold text-charcoal">
                 The <span className="text-primary-blue">Confident Start</span> Program
               </h2>
-              <h3 className="text-2xl font-semibold text-charcoal">
-                Stop Stressing, Start Thriving: Your Puppy's Best Life Starts at Home
-              </h3>
-              <p className="text-lg text-medium-grey leading-relaxed">
-                Most puppy classes focus on basic commands in a crowded hall. We bring customised, private training directly to your Bayside home. Your puppy doesn't need to learn to sit in a sterile classroom; they need to learn to live calmly and confidently in your specific environment.
+              <p className="text-lg text-medium-grey leading-relaxed font-medium">
+                The first six months shape the next fifteen years.
               </p>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Our 6-session private program is designed to build the foundations for an unbreakable bond and ensure your puppy develops into a calm, reliable Bayside companion. You'll move past common puppy challenges quickly, establishing immediate peace and a shared language.
+                Most puppy owners start with group classes. Group classes teach basic commands in a hall full of distractions. What they don't teach is how your puppy should behave in your home, your yard, and your street.
+              </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                That's what this program is built around.
+              </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                Six private sessions, delivered in your Bayside home. We work on the foundations that actually matter — calm settling, clear communication, and the confidence to handle real life.
               </p>
 
               <div className="space-y-4">
-                <h4 className="text-xl font-bold text-charcoal">Key Skills for a Confident Bayside Life:</h4>
-                
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">Positive Handling & Vet Prep</h5>
-                    <p className="text-medium-grey">I specifically work on comfortable handling techniques, making nail trims, ear cleaning, and future vet visits stress-free experiences.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Handling and Vet Prep</h5>
+                    <p className="text-medium-grey">I work through comfortable handling from day one. Nail trims, ear checks, being restrained calmly. The earlier this is normal, the easier every vet visit becomes.</p>
                   </div>
                 </div>
 
@@ -292,42 +300,42 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Separation Confidence</h5>
-                    <p className="text-medium-grey">We build the skills needed for your puppy to be happy and calm when left alone, preventing anxiety and destructive behaviours common in new homes.</p>
+                    <p className="text-medium-grey">I build your puppy's ability to be alone without falling apart. Started early, done gradually, it becomes a non-issue.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">Building Environmental Confidence</h5>
-                    <p className="text-medium-grey">We guide you through structured desensitisation to handle common Sandgate sights and sounds—like skateboards on the footpath, strong winds by the foreshore, and loud crowds—ensuring your puppy can handle anything in the future.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Environmental Confidence</h5>
+                    <p className="text-medium-grey">Structured exposure to what Sandgate actually throws at a dog — skateboards on the footpath, strong winds off the foreshore, busy crowds. Your puppy learns the world is manageable.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">Learning How to Learn</h5>
-                    <p className="text-medium-grey">We don't just teach tricks; we teach your puppy how to focus and love learning. This mastery of foundational focus makes all future obedience training effortless.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">How to Learn</h5>
+                    <p className="text-medium-grey">Before commands, your puppy needs to understand how to focus and take feedback. I build that foundation first. Everything else gets easier once it's in place.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">In-Home Success</h5>
-                    <p className="text-medium-grey">Training occurs in your actual home, yard, and family environment. This means faster and more reliable toilet training, and quick establishment of appropriate play and settling habits where they matter most.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">In-Home Training</h5>
+                    <p className="text-medium-grey">Sessions happen in your actual environment. Toilet training, settling habits, and boundaries are built where they need to hold — not transferred from a classroom.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
-                <Button 
+                <Button
                   onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-confident-start"
                 >
-                  Enrol in The Confident Start Program Today
+                  Book The Confident Start Program
                 </Button>
               </div>
             </div>
@@ -336,51 +344,56 @@ export default function SandgatePage() {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">The Confident Start Program: The Value</h3>
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">The Confident Start Program</h3>
                     <p className="text-medium-grey mb-4">
-                      This exclusive program includes 6 private, one-hour, in-home sessions. You gain the convenience and customised results that eliminate the stress of generalised training.
+                      6 private, one-hour, in-home sessions.
                     </p>
                     <div className="flex items-center justify-center gap-3">
                       <span className="text-4xl font-bold text-primary-blue">$480</span>
                       <span className="text-xl text-medium-grey line-through">$720</span>
                     </div>
-                    <p className="text-green-600 font-semibold mt-2">Save $240</p>
-                  </div>
-
-                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
-                    <p className="text-green-800 font-semibold text-center mb-2">🎁 BONUS INCLUDED</p>
-                    <p className="text-green-700 text-center">
-                      Enrol today and receive our <strong>Dog Raising Guide (PDF)</strong> completely free, giving you the detailed strategy and resources used by professionals to maintain your puppy's success.
-                    </p>
+                    <p className="text-green-600 font-semibold mt-2">Save $240 on individual session pricing.</p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-3">What You Get:</h4>
+                    <h4 className="font-semibold text-charcoal mb-3">What's included:</h4>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">6 x Private, One-Hour, In-Home Sessions</span>
+                        <span className="text-medium-grey">6 x 60-minute private in-home sessions</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Comprehensive One-on-One Training with Dedicated Professional</span>
+                        <span className="text-medium-grey">Customised training plan for your home and environment</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Customised Training Plan for Your Home Environment</span>
+                        <span className="text-medium-grey">Direct access to me between sessions for questions</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">FREE Dog Raising Guide PDF (Value $50)</span>
+                        <span className="text-medium-grey">My Real-Life Dog Raising Guide PDF, included at no extra cost</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="text-center pt-4">
-                    <p className="text-medium-grey italic">
-                      Ready to bypass the stress of group classes and raise a calm, confident Bayside companion?
-                    </p>
-                  </div>
+                  <p className="text-medium-grey text-sm">
+                    The guide covers everything from socialisation and handling to toilet training and daily structure — written specifically for new dog owners.
+                  </p>
+
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button className="w-full btn-primary">
+                        <Phone className="w-4 h-4 mr-2" />
+                        Book a Free Call
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
+                      <DialogTitle>Book a Free Call</DialogTitle>
+                      <DialogDescription>Book a free 15-minute call to talk through what your puppy needs.</DialogDescription>
+                      <ConsultationForm />
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </CardContent>
             </Card>
@@ -393,22 +406,19 @@ export default function SandgatePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-charcoal mb-4">
-              Getting Started with <span className="text-primary-blue">Training</span>
+              How to Get Started
             </h2>
-            <p className="text-xl text-medium-grey">
-              For adolescent or adult dogs to begin your Adventure Walk package, we require a professional assessment to create a tailored program. Puppies can start the Confident Start Program directly.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-light-grey border-0">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold text-charcoal mb-4">For Adult Dogs</h3>
+                <h3 className="text-2xl font-bold text-charcoal mb-4">For Adult and Adolescent Dogs</h3>
                 <p className="text-medium-grey mb-6">
-                  Initial Canine Success Assessment required to create your tailored training program.
+                  I start with an Initial Canine Success Assessment. One 60-minute session to assess your dog, identify what's driving the behaviour, and build a tailored plan before we begin.
                 </p>
                 <div className="text-3xl font-bold text-primary-blue mb-6">$90</div>
-                <Button 
+                <Button
                   onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary w-full"
                   data-testid="button-book-assessment-adult"
@@ -422,15 +432,15 @@ export default function SandgatePage() {
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold text-charcoal mb-4">For Puppies</h3>
                 <p className="text-medium-grey mb-6">
-                  Start the Confident Start Program immediately. No assessment required.
+                  The Confident Start Program needs no prior assessment. Book directly and we get started.
                 </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">Start Today</div>
-                <Button 
+                <div className="text-3xl font-bold text-primary-blue mb-6">$480 for 6 sessions</div>
+                <Button
                   onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary w-full"
                   data-testid="button-enrol-puppy"
                 >
-                  Enrol Puppy Program
+                  Book Puppy Program
                 </Button>
               </CardContent>
             </Card>
@@ -444,35 +454,37 @@ export default function SandgatePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">
-                Ready to Build Real Confidence?
+                Ready to enjoy the foreshore again?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                A free 15-minute call is all it takes to work out what your dog needs and where to start.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Book a Free Call
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogTitle>Book a Free Call</DialogTitle>
+                  <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
+
+              <Button
+                variant="outline"
                 onClick={() => setShowPackagesDialog(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
                 data-testid="button-book-now-cta"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Now
               </Button>
-
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors">
-                    Request Free Call
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Request Free Call</DialogTitle>
-                  <DialogDescription>Connect with us for a complimentary consultation to discuss how we can help you and your dog in the Sandgate area.</DialogDescription>
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
@@ -482,11 +494,7 @@ export default function SandgatePage() {
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 mr-2" />
-                <span>Certified Professional</span>
-              </div>
-              <div className="flex items-center">
-                <Heart className="w-5 h-5 mr-2" />
-                <span>Satisfaction Guaranteed</span>
+                <span>NDTF Certified</span>
               </div>
             </div>
           </div>
