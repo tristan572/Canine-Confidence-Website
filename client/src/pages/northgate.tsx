@@ -169,11 +169,11 @@ export default function NorthgatePage() {
 
             <Card className="bg-light-grey border-0">
               <CardContent className="p-8">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                  <div className="flex items-baseline gap-2 mb-4">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                  <div className="mb-2">
                     <span className="text-4xl font-bold text-primary-blue">$90</span>
-                    <span className="text-lg text-medium-grey">· One-off session</span>
                   </div>
+                  <p className="text-lg text-medium-grey mb-4">One-off Initial Canine Success Assessment</p>
                   <Button
                     onClick={() => setShowAssessmentDialog(true)}
                     className="btn-primary w-full"
