@@ -167,23 +167,21 @@ export default function NorthgatePage() {
               </p>
             </div>
 
-            <Card className="bg-light-grey border-0">
-              <CardContent className="p-8">
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-primary-blue">$90</span>
-                  </div>
-                  <p className="text-lg text-medium-grey mb-4">One-off Initial Canine Success Assessment</p>
-                  <Button
-                    onClick={() => setShowAssessmentDialog(true)}
-                    className="btn-primary w-full"
-                    data-testid="button-book-assessment-section"
-                  >
-                    Book Your Assessment
-                  </Button>
+            <div className="flex justify-center">
+              <div className="inline-flex items-center gap-4 bg-blue-50 border border-blue-200 rounded-lg px-6 py-4">
+                <div>
+                  <span className="text-2xl font-bold text-primary-blue">$90</span>
+                  <span className="text-sm text-medium-grey ml-2">One-off Initial Canine Success Assessment</span>
                 </div>
-              </CardContent>
-            </Card>
+                <Button
+                  onClick={() => setShowAssessmentDialog(true)}
+                  className="btn-primary"
+                  data-testid="button-book-assessment-section"
+                >
+                  Book Your Assessment
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -263,7 +261,7 @@ export default function NorthgatePage() {
                     <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
                       <div className="flex items-center justify-between mb-2">
                         <div>
-                          <p className="font-semibold text-charcoal">Package Deal</p>
+                          <p className="font-semibold text-charcoal">The Real World Reliability Package</p>
                           <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
@@ -271,7 +269,7 @@ export default function NorthgatePage() {
                           <p className="text-sm text-green-700">$56 per session</p>
                         </div>
                       </div>
-                      <p className="text-green-700 font-semibold text-center">Save $20 per session on the package rate.</p>
+                      <p className="text-green-700 font-semibold text-center">Save $20 across the package.</p>
                     </div>
                   </div>
 
@@ -309,60 +307,48 @@ export default function NorthgatePage() {
                 Owner Skill Building
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                <span className="text-primary-blue">1-on-1 Coaching</span> Sessions
+                <span className="text-primary-blue">One-on-One Coaching</span> Sessions
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                For owners who want to be deeply involved in the process, my intensive, 60-minute private sessions focus on teaching you the professional handling skills and techniques needed for long-term success.
+                For owners who want to understand what they're doing and why.
+              </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                These 60-minute sessions are built around you as much as your dog. I teach you the timing, body language, and communication mechanics that make training actually stick — so you're not dependent on me showing up every week.
               </p>
 
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="font-semibold text-blue-800 text-xl mb-2">Coaching Goal:</h3>
-                <p className="text-blue-700">
-                  We guide you through the training process, teaching you the timing and mechanics required to maintain and generalise the behaviours.
-                </p>
-              </div>
-
               <div className="space-y-4">
-                <h4 className="text-xl font-bold text-charcoal">Focus:</h4>
-                <p className="text-medium-grey">
-                  Perfect for developing owner confidence and addressing specific, complex issues within the home environment or on structured outdoor sessions.
-                </p>
-
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">Professional Handling Skills</h5>
-                    <p className="text-medium-grey">Learn exact timing, body language, and communication techniques used by professional trainers.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Handling Mechanics</h5>
+                    <p className="text-medium-grey">The exact timing and technique that makes the difference between a dog that listens and one that doesn't.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">Complex Issue Resolution</h5>
-                    <p className="text-medium-grey">Deep dive into specific behavioural challenges with personalised solutions tailored to your dog.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Complex Behaviour Work</h5>
+                    <p className="text-medium-grey">Reactivity, anxiety, recall, impulse control. Addressed directly, with a clear explanation of what's driving it.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h5 className="font-semibold text-charcoal mb-1">Long-Term Success</h5>
-                    <p className="text-medium-grey">Build the skills to maintain and generalise behaviours yourself, ensuring lasting results.</p>
+                    <h5 className="font-semibold text-charcoal mb-1">Skills That Transfer</h5>
+                    <p className="text-medium-grey">You leave each session knowing how to maintain and build on what we covered. The goal is your independence, not mine.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
-                <p className="text-medium-grey mb-4">
-                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">private coaching services</Link>.
-                </p>
-                <Button 
+                <Button
                   onClick={() => setShowCoachingDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-coaching"
                 >
-                  Book 1-on-1 Coaching Session
+                  Book a Coaching Session
                 </Button>
               </div>
             </div>
@@ -371,11 +357,27 @@ export default function NorthgatePage() {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Session Format:</h3>
-                    <div className="bg-white rounded-lg p-4 mb-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-semibold text-charcoal">60-Minute Private Session</span>
-                        <span className="text-2xl font-bold text-primary-blue">$120</span>
+                    <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between p-4 bg-white rounded-lg">
+                        <div>
+                          <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
+                        </div>
+                        <div className="text-2xl font-bold text-primary-blue">$120</div>
+                      </div>
+
+                      <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                        <div className="flex items-center justify-between mb-2">
+                          <div>
+                            <p className="font-semibold text-charcoal">The Focused Progress Plan</p>
+                            <p className="text-sm text-medium-grey">5 Sessions</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-primary-blue">$550</div>
+                            <p className="text-sm text-green-700">$110 per session</p>
+                          </div>
+                        </div>
+                        <p className="text-green-700 font-semibold text-center">Save $50 across the package.</p>
                       </div>
                     </div>
                   </div>
@@ -404,7 +406,7 @@ export default function NorthgatePage() {
 
                   <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
                     <p className="text-purple-800 font-semibold text-center">
-                      Empower yourself with professional training skills
+                      The goal is a dog that responds to you — not just to me.
                     </p>
                   </div>
                 </div>
@@ -420,40 +422,39 @@ export default function NorthgatePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">
-                Ready to Build Real Confidence?
+                Ready to walk Kedron Brook without the battle?
               </h2>
               <p className="text-xl text-white opacity-90">
-                Stop the frustration caused by confusion and inconsistency. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                A free 15-minute call is enough to work out what your dog needs and where to start.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => setShowPackagesDialog(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
-                data-testid="button-book-now-cta"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Now
-              </Button>
-
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button 
-                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold"
-                    data-testid="button-request-call-cta"
+                  <Button
+                    className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+                    data-testid="button-free-call-cta"
                   >
-                    Request Free Call
+                    Book a Free Call
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
-                  <DialogTitle>Request Free Call</DialogTitle>
+                  <DialogTitle>Book a Free Call</DialogTitle>
                   <DialogDescription>
-                    Tell us about your dog and we'll call you back to discuss the best training approach.
+                    Book a free 15-minute call to talk through what your dog needs.
                   </DialogDescription>
                   <ConsultationForm />
                 </DialogContent>
               </Dialog>
+
+              <Button
+                onClick={() => setShowPackagesDialog(true)}
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold"
+                data-testid="button-book-now-cta"
+              >
+                Book Now
+              </Button>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
@@ -463,11 +464,7 @@ export default function NorthgatePage() {
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 mr-2" />
-                <span>Certified Professional</span>
-              </div>
-              <div className="flex items-center">
-                <Heart className="w-5 h-5 mr-2" />
-                <span>Satisfaction Guaranteed</span>
+                <span>NDTF Certified</span>
               </div>
             </div>
           </div>
