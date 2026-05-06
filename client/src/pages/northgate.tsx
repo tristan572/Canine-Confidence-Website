@@ -106,16 +106,18 @@ export default function NorthgatePage() {
                   <span className="text-primary-blue font-semibold">Northgate, Nundah & Kalinga</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  Northgate & Nundah Dog Training:<br />
-                  <span className="text-primary-blue">Reliable, Real-life Obedience</span>
+                  Northgate & Nundah Dog Training: Reliable, Real-life Obedience
                 </h1>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Northgate locals demand real results. Whether your dog pulls relentlessly on the Kedron Brook bikeway or barks at every dog in Kalinga Park, our proven Walk & Train and 1-on-1 Coaching programs deliver measurable, lasting transformation.
+                  If your dog pulls on the Kedron Brook bikeway or loses it at every dog in Kalinga Park, the problem isn't the location. It's that the training hasn't been built for real-world conditions.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed font-medium">
+                  My Walk and Train and One-on-One Coaching programs are.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
+                <Button
                   onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary text-lg px-8 py-4"
                   data-testid="button-book-assessment-hero"
@@ -125,7 +127,7 @@ export default function NorthgatePage() {
                 </Button>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button 
+                    <Button
                       className="btn-secondary text-lg px-8 py-4"
                       data-testid="button-request-call-hero"
                     >
@@ -135,7 +137,7 @@ export default function NorthgatePage() {
                   <DialogContent className="max-w-md">
                     <DialogTitle>Request Free Call</DialogTitle>
                     <DialogDescription>
-                      Tell us about your dog and we'll call you back to discuss the best training approach.
+                      Book a free 15-minute call to talk through what your dog needs.
                     </DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
@@ -151,41 +153,34 @@ export default function NorthgatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                Required First Step
-              </div>
               <h2 className="text-4xl font-bold text-charcoal mb-4">
-                Step 1: The <span className="text-primary-blue">Canine Success Assessment</span>
+                The <span className="text-primary-blue">Canine Success Assessment</span>
               </h2>
+              <p className="text-xl text-medium-grey mb-4">
+                Every adult dog is different. Before any training begins, I need to understand what's actually driving the behaviour — not just what it looks like from the outside.
+              </p>
+              <p className="text-xl text-medium-grey mb-4">
+                This 60-minute session covers your dog's history, current challenges, and what you want life to look like on the other side. You leave with a clear picture of what's going on and a specific plan to address it.
+              </p>
               <p className="text-xl text-medium-grey">
-                All new adult dog clients must start here. This 60-minute session is essential for diagnosing your dog's current behaviour, setting realistic goals, and determining the optimal training plan (Walk & Train or 1-on-1 Coaching) for their specific needs.
+                It's also how I work out whether Walk and Train, One-on-One Coaching, or a combination of both is the right fit for your dog.
               </p>
             </div>
 
             <Card className="bg-light-grey border-0">
               <CardContent className="p-8">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Assessment Goal:</h3>
-                    <p className="text-lg text-medium-grey">
-                      Create a customised, immediate action plan to tackle your primary obedience challenge, including complex issues like leash reactivity.
-                    </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <div className="flex items-baseline gap-2 mb-4">
+                    <span className="text-4xl font-bold text-primary-blue">$90</span>
+                    <span className="text-lg text-medium-grey">· One-off session</span>
                   </div>
-
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <p className="text-blue-800 font-semibold text-xl mb-2">Next Step: Required gateway to booking all further sessions and packages.</p>
-                    <div className="flex items-baseline gap-2 mb-4">
-                      <span className="text-4xl font-bold text-primary-blue">$90</span>
-                      <span className="text-lg text-medium-grey">One-Off Initial Canine Success Assessment</span>
-                    </div>
-                    <Button 
-                      onClick={() => setShowAssessmentDialog(true)}
-                      className="btn-primary w-full"
-                      data-testid="button-book-assessment-section"
-                    >
-                      Book Assessment Now
-                    </Button>
-                  </div>
+                  <Button
+                    onClick={() => setShowAssessmentDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-assessment-section"
+                  >
+                    Book Your Assessment
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -203,10 +198,13 @@ export default function NorthgatePage() {
                 High-Frequency Results
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                The Kalinga Park <span className="text-primary-blue">'Walk & Train'</span>
+                The Kalinga Park <span className="text-primary-blue">Walk and Train</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Designed for busy owners who need consistency and real-world proofing. Our trainers take your dog for focused, 40-minute training sessions in Kalinga Park, Nundah, or along the Kedron Brook. We handle the repetition; you see the results.
+                Designed for busy owners who need consistency without having to be there for every session.
+              </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                I take your dog for focused 40-minute training sessions in Kalinga Park, Nundah, or along the Kedron Brook. I handle the repetition. You see the results.
               </p>
 
               <div className="space-y-4">
@@ -214,14 +212,14 @@ export default function NorthgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Leash Reactivity Rehabilitation</h3>
-                    <p className="text-medium-grey">I work on fulfilment and impulse control while creating clarity in expectations, teaching dogs to not react at every dog passing by.</p>
+                    <p className="text-medium-grey">I work on fulfilment and impulse control while building clarity around expectations — teaching dogs not to react at every dog that passes.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Loose-Leash Mastery</h3>
+                    <h3 className="font-semibold text-charcoal mb-1">Loose-Lead Mastery</h3>
                     <p className="text-medium-grey">Stopping the pulling while passing joggers and cyclists on the bikeway.</p>
                   </div>
                 </div>
@@ -229,8 +227,8 @@ export default function NorthgatePage() {
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Unbreakable Focus</h3>
-                    <p className="text-medium-grey">Proofing commands against the high distraction of the Kalinga Park off-leash area.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Focus Under Distraction</h3>
+                    <p className="text-medium-grey">Proofing commands in the Kalinga Park off-lead area, where distractions are constant and the training actually has to hold.</p>
                   </div>
                 </div>
               </div>
@@ -273,7 +271,7 @@ export default function NorthgatePage() {
                           <p className="text-sm text-green-700">$56 per session</p>
                         </div>
                       </div>
-                      <p className="text-green-700 font-semibold text-center">Save $20 - Best Value!</p>
+                      <p className="text-green-700 font-semibold text-center">Save $20 per session on the package rate.</p>
                     </div>
                   </div>
 
