@@ -591,7 +591,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
+            <div className="flex items-center justify-center gap-12 pt-8 text-blue-100">
               <div className="flex items-center">
                 <ShieldCheck className="w-5 h-5 mr-2" />
                 <span>Fully Insured</span>
@@ -599,10 +599,6 @@ export default function HomePage() {
               <div className="flex items-center">
                 <Award className="w-5 h-5 mr-2" />
                 <span>Certified Professional</span>
-              </div>
-              <div className="flex items-center">
-                <Heart className="w-5 h-5 mr-2" />
-                <span>Satisfaction Guaranteed</span>
               </div>
             </div>
           </div>
