@@ -524,7 +524,7 @@ The reality is simple: a dog in pain won't respond normally to leash pressure, p
 When something feels "off" with your dog, resist the urge to immediately seek behavioural solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
-        imageUrl: "/attached_assets/generated_images/Healthy_dog_nutrition_foundation_9e9d6454.webp",
+        imageUrl: "/attached_assets/health-foundation_1760531575107.png",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-01"),
         tags: ["health", "foundation", "wellness", "four building blocks"],
