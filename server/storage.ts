@@ -644,7 +644,7 @@ Inconsistent communication creates confusion, stress, and what looks like disobe
 Clarity isn't about achieving perfection—it's about creating predictability. Dogs thrive when they know what things mean, when they can trust that the rules won't change arbitrarily, and when they can predict the consequences of their choices. This predictability creates confidence, and confident dogs are naturally more cooperative, more focused, and more enjoyable to live with.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "/attached_assets/generated_images/Golden_Retriever_communication_training_1d6a9e14.webp",
+        imageUrl: "/attached_assets/clear-communication_1760531575107.png",
         readTime: "9 min read",
         publishedAt: new Date("2025-10-15"),
         tags: ["communication", "clarity", "markers", "four building blocks"],
