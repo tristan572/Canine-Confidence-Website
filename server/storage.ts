@@ -873,7 +873,7 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 **Watch your dog, not just their breed label.** The goal is to find what genuinely fulfills your specific dog's needs.
 
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
-        imageUrl: "/attached_assets/generated_images/Dog_breed_genetic_drives_f7a3abc3.webp",
+        imageUrl: "/attached_assets/genetic-drives_1760531575107.png",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-05"),
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
