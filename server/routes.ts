@@ -231,6 +231,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/subscribers", async (req, res) => {
     try {
       const validatedData = insertSubscriberSchema.parse(req.body);
+
+      // Add subscriber to MailerLite
+      const mailerLiteApiKey = process.env.MAILERLITE_API_KEY;
+      const mailerLiteGroupId = process.env.MAILERLITE_GROUP_ID;
+
+      if (mailerLiteApiKey && mailerLiteGroupId) {
+        const mlResponse = await fetch("https://connect.mailerlite.com/api/subscribers", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${mailerLiteApiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: validatedData.email,
+            groups: [mailerLiteGroupId],
+          }),
+        });
+
+        if (!mlResponse.ok) {
+          const errorData = await mlResponse.json() as { message?: string };
+          // 409 means already subscribed — treat as success
+          if (mlResponse.status !== 409) {
+            throw new Error(errorData.message || "Failed to add to mailing list");
+          }
+        }
+      }
+
       const subscriber = await storage.createSubscriber(validatedData);
       res.status(201).json(subscriber);
     } catch (error) {
