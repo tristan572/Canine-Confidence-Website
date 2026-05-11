@@ -712,7 +712,7 @@ When properly developed, life skills become reliable tools that serve both you a
 A dog with solid life skills is a dog who can participate more fully in family life, explore more of the world safely, and handle life's inevitable changes with confidence and grace. These aren't just training achievements—they're the building pieces of a rich, fulfilling partnership between human and dog.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "/attached_assets/generated_images/Australian_Shepherd_public_obedience_11c6c97e.webp",
+        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107.png",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-22"),
         tags: ["obedience", "skills", "training", "four building blocks"],
