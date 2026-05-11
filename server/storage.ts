@@ -940,6 +940,74 @@ The investment in building these foundations properly pays dividends throughout 
         slug: "creating-balance-complete-framework"
       },
       {
+        title: "Adolescence: The Hardest Stage No One Warns You About",
+        excerpt: "Your once-perfect puppy stopped listening at 9 months. Here's what's actually happening — and what to do before the bad habits become permanent.",
+        content: `Your puppy used to come when called. They used to settle. They used to walk on lead without much drama.
+
+Now they ignore you. Now they pull. Now they react to dogs they used to play with happily. And you're wondering what happened.
+
+What happened is adolescence.
+
+## The puppy you raised has left the building
+
+Somewhere between 6 and 18 months, depending on the dog, adolescence kicks in. The brain is rewiring. The body is in a strange middle phase. Not a puppy. Not yet an adult. The hormones are doing what hormones do.
+
+The dog in front of you is genuinely different to the one you had a few months ago. Not because they've forgotten everything. Because the foundations are being stress-tested under new conditions.
+
+This is the stage where most "good puppies" become "difficult dogs." Not because the puppy training failed. Because training that worked in low-distraction environments doesn't automatically hold up against a teenage brain.
+
+## What's actually happening
+
+Three things shift at the same time.
+
+The world becomes more interesting. Smells matter more. Other dogs matter more. The environment has more pull than the owner does. The puppy who used to focus on you now has competing priorities.
+
+Impulse control becomes harder. The brain hasn't fully matured. Adolescent dogs genuinely struggle to override a strong impulse, even when they know what they should do.
+
+Confidence shifts unpredictably. Some adolescent dogs get bolder and start testing. Others get more sensitive and start reacting to things that never bothered them before. Sometimes the same dog does both, in different contexts.
+
+None of this is bad behaviour. It's normal development. But it's also the stage where habits set for life.
+
+## Why this stage matters more than puppyhood
+
+Puppyhood is foundational. Adolescence is where those foundations get tested.
+
+If you taught your puppy to come when called in the kitchen, adolescence is when you find out whether the recall actually holds when there's another dog in the park.
+
+If you taught your puppy to walk on a loose lead in the backyard, adolescence is when you find out whether the lead manners hold when something interesting walks past.
+
+The habits that get practised during this window, good or bad, become the adult dog's defaults.
+
+A dog that practises pulling for six months pulls forever. A dog that practises ignoring recall in adolescence becomes an adult who ignores recall. A dog that practises reactivity at the gate every morning becomes a reactive adult.
+
+The reverse is also true. A dog that gets clean reps of the right behaviour through this stage walks into adulthood with those behaviours locked in.
+
+## What the work looks like at this stage
+
+It's different to puppy work. Less novelty. More proofing. Fewer new commands. More strengthening of the basics under harder conditions.
+
+Engagement gets prioritised. You become the thing the dog wants to check in with, not a distraction from the world. Play and fulfilment do the heavy lifting here.
+
+Impulse control gets built deliberately. Sit and wait at doors. Hold a down while distractions move past. Stay still while the food bowl is being prepared. Small reps, every day, in real contexts.
+
+Boundaries get clarified. The rules that were soft in puppyhood get firmer. Not harsher. Clearer. The dog learns that requests are non-negotiable, and that's actually freeing for them.
+
+## Don't wait it out
+
+The most common mistake at this stage is hoping it passes.
+
+It does pass. Eventually. But it leaves behind whatever the dog has been practising for the last six to twelve months. By the time owners get serious, the habits are usually well-established and the work takes longer than it needed to.
+
+If your dog is in the adolescent window and things are slipping, that's the time to act.
+
+A free 15-minute call is the simplest place to start. We'll talk through what you're seeing, what's normal, and what's worth working on now.`,
+        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107.png",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-05-11"),
+        tags: ["adolescence", "puppies", "behaviour", "training", "development"],
+        slug: "adolescence-the-hardest-stage"
+      },
+      {
         title: "Your Dog Isn't Doing It to Spite You",
         excerpt: "Spite isn't in a dog's toolkit. Here's what's actually driving the behaviour — and why the fix is simpler than you think.",
         content: `The bin gets raided the moment you leave the room. The cushion gets destroyed within minutes of you stepping out the door. You catch your dog mid-act and you'd swear they know exactly what they're doing.
