@@ -580,7 +580,7 @@ These behaviors aren't moral failings or dominance displays—they're symptoms o
 A fulfilled dog is naturally more focused, more cooperative, and more peaceful in daily life. When your dog's mind is engaged and their drives are satisfied, they have the mental and emotional capacity to focus on what you're asking of them. They become partners in the training process rather than resistant participants.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "/attached_assets/generated_images/Border_Collie_mental_stimulation_666374d6.webp",
+        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107.png",
         readTime: "10 min read",
         publishedAt: new Date("2025-10-08"),
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
