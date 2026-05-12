@@ -112,7 +112,7 @@ export default function ChermsidePage() {
                   If your dog is reactive, anxious, or just can't settle when the world gets loud, that's not a training failure. It's a gap in the environment you've trained in.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  I work with dogs in the places they actually live — busy streets, apartment blocks, shopping precincts. The goal isn't perfect behaviour in a sterile setting. It's a dog that knows how to switch off when Chermside demands it.
+                  I work with dogs in the places they actually live: busy streets, apartment blocks, shopping precincts. The goal isn't perfect behaviour in a sterile setting. It's a dog that knows how to switch off when Chermside demands it.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed font-medium">
                   Start with a free 15-minute phone call. No commitment, just clarity.
@@ -164,7 +164,7 @@ export default function ChermsidePage() {
                 Training for High-Density Living
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Apartment and townhouse dogs face a different daily reality. Shared corridors, lift doors, neighbours at close range, constant foot traffic outside the front door. These aren't edge cases — they're Tuesday.
+                Apartment and townhouse dogs face a different daily reality. Shared corridors, lift doors, neighbours at close range, constant foot traffic outside the front door. These aren't edge cases. They're Tuesday.
               </p>
 
               <div className="space-y-4">
@@ -172,7 +172,7 @@ export default function ChermsidePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Lifts and shared spaces</h3>
-                    <p className="text-medium-grey">Most dogs aren't taught how to hold themselves in a confined space with a stranger. I work on calm neutrality in exactly those situations — so getting to the car park doesn't become a production.</p>
+                    <p className="text-medium-grey">Most dogs aren't taught how to hold themselves in a confined space with a stranger. I work on calm neutrality in exactly those situations, so getting to the car park doesn't become a production.</p>
                   </div>
                 </div>
 
@@ -180,7 +180,7 @@ export default function ChermsidePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Threshold control</h3>
-                    <p className="text-medium-grey">Door bolting, barking at footsteps in the hall, losing it every time someone passes — threshold work teaches your dog that the boundary of your home is a calm place, not a launch point.</p>
+                    <p className="text-medium-grey">Door bolting, barking at footsteps in the hall, losing it every time someone passes. Threshold work teaches your dog that the boundary of your home is a calm place, not a launch point.</p>
                   </div>
                 </div>
 
@@ -188,7 +188,7 @@ export default function ChermsidePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Urban distraction tolerance</h3>
-                    <p className="text-medium-grey">Buses, sirens, shopping trolleys, foot traffic. The goal isn't ignoring everything — it's a dog that notices, processes, and moves on without you having to manage every moment.</p>
+                    <p className="text-medium-grey">Buses, sirens, shopping trolleys, foot traffic. The goal isn't ignoring everything. It's a dog that notices, processes, and moves on without you having to manage every moment.</p>
                   </div>
                 </div>
               </div>
@@ -353,7 +353,7 @@ export default function ChermsidePage() {
                 Every dog is different. The plan should be too.
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Before any training begins, I need to understand your dog — their genetics, their triggers, how they move through your specific environment. A session at the dog park tells me very little. A proper assessment tells me everything.
+                Before any training begins, I need to understand your dog: their genetics, their triggers, how they move through your specific environment. A proper assessment tells me everything.
               </p>
               <p className="text-lg text-medium-grey leading-relaxed">
                 The Initial Canine Success Assessment is a 60-minute, one-on-one session. You walk away with a clear picture of what's driving your dog's behaviour and a structured plan to address it.
@@ -434,7 +434,7 @@ export default function ChermsidePage() {
                 Your dog can handle Chermside. They just need the right foundation.
               </h2>
               <p className="text-xl text-white opacity-90">
-                If walks feel like damage control and your building's corridor is a source of dread, that's worth fixing. A calm, connected dog isn't a personality type — it's a skill set. One you can build.
+                If walks feel like damage control and your building's corridor is a source of dread, that's worth fixing. A calm, connected dog isn't a personality type. It's a skill set. One you can build.
               </p>
             </div>
 
