@@ -1,9 +1,9 @@
 import { Link } from "wouter";
-import { Dog, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import ConsultationForm from "@/components/forms/consultation-form";
-import logoImage from "@assets/Business logo 1_1749266952529.jpg";
+import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
 import { serviceAreas } from "@/config/locations";
 
 export default function Footer() {
@@ -14,17 +14,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="text-white">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">CC</span>
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold">Canine</div>
-                    <div className="text-lg font-semibold text-blue-400">CONFIDENCE</div>
-                  </div>
-                </div>
-              </div>
+              <img
+                src={logoImage}
+                alt="Canine Confidence logo"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-white">
               Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
