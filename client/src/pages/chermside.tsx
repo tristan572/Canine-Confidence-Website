@@ -431,40 +431,39 @@ export default function ChermsidePage() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-white">
-                Ready to Build Urban Confidence?
+                Your dog can handle Chermside. They just need the right foundation.
               </h2>
               <p className="text-xl text-white opacity-90">
-                Stop the frustration of managing a reactive dog in Chermside's busiest areas. Experience my proven, play-centred approach that delivers confidence through clarity, ensuring an unbreakable bond that lasts a lifetime.
+                If walks feel like damage control and your building's corridor is a source of dread, that's worth fixing. A calm, connected dog isn't a personality type — it's a skill set. One you can build.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => setShowPackagesDialog(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
-                data-testid="button-book-now-cta"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Now
-              </Button>
-
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button 
+                  <Button
                     className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold"
                     data-testid="button-request-call-cta"
                   >
-                    Request Free Call
+                    Book a free call
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
-                  <DialogTitle>Request Free Call</DialogTitle>
+                  <DialogTitle>Book a Free Call</DialogTitle>
                   <DialogDescription>
                     Tell us about your dog and we'll call you back to discuss the best training approach.
                   </DialogDescription>
                   <ConsultationForm />
                 </DialogContent>
               </Dialog>
+
+              <Button
+                onClick={() => setShowAssessmentDialog(true)}
+                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+                data-testid="button-book-now-cta"
+              >
+                Book now
+              </Button>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
@@ -475,10 +474,6 @@ export default function ChermsidePage() {
               <div className="flex items-center">
                 <Award className="w-5 h-5 mr-2" />
                 <span>Certified Professional</span>
-              </div>
-              <div className="flex items-center">
-                <Heart className="w-5 h-5 mr-2" />
-                <span>Satisfaction Guaranteed</span>
               </div>
             </div>
           </div>
