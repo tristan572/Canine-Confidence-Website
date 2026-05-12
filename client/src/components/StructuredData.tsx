@@ -12,8 +12,10 @@ export function LocalBusinessSchema() {
     "email": "info@canineconfidence.com.au",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Brisbane",
+      "streetAddress": "44 Leona St",
+      "addressLocality": "Boondall",
       "addressRegion": "QLD",
+      "postalCode": "4034",
       "addressCountry": "AU"
     },
     "geo": {

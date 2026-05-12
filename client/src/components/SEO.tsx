@@ -17,7 +17,7 @@ export function SEO({
   ogType = 'website',
   keywords = []
 }: SEOProps) {
-  const siteUrl = 'https://canineconfidence.com.au';
+  const siteUrl = 'https://www.canineconfidence.com.au';
     const fullTitle = title;
   const canonicalUrl = canonical 
     ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`)
