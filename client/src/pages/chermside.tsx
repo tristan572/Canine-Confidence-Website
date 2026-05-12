@@ -262,43 +262,54 @@ export default function ChermsidePage() {
                 Real-World Proofing at <span className="text-primary-blue">7th Brigade Park</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Traditional training often falls apart the moment you leave your backyard. We take our sessions to where the distractions are real. We work with you at 7th Brigade Park and the surrounding urban precincts to proof your dog's obedience against:
+                A dog that listens in your lounge room isn't the goal. The goal is a dog that listens when it actually matters.
               </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                I run sessions at 7th Brigade Park and the surrounding streets because that's where the real work happens. Other dogs, cyclists, kids on scooters, unfamiliar surfaces, noise. If your dog can hold focus here, they can hold it anywhere.
+              </p>
+              <p className="text-lg font-semibold text-charcoal">What we work on:</p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="bg-primary-blue text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">1</div>
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">High-Level Distractions</h3>
-                    <p className="text-medium-grey">Other dogs, cyclists, and kids on scooters—the real challenges you face every day.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Distraction tolerance</h3>
+                    <p className="text-medium-grey">Staying connected to you when the environment is genuinely competing for your dog's attention.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="bg-primary-blue text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">2</div>
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Environmental Stress</h3>
-                    <p className="text-medium-grey">Training your dog to feel secure on different surfaces and in loud environments.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Environmental confidence</h3>
+                    <p className="text-medium-grey">Different surfaces, loud spaces, unpredictable movement. A settled dog doesn't need a quiet setting.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="bg-primary-blue text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">3</div>
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Reliable Recall</h3>
-                    <p className="text-medium-grey">Ensuring "Come" means "Come," even when there are dozens of other dogs nearby.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Reliable recall</h3>
+                    <p className="text-medium-grey">"Come" has to mean come, even when there are ten other dogs in the park.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
-                <Button 
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary"
-                  data-testid="button-book-assessment-park"
-                >
-                  Start Your Training Journey
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="btn-primary" data-testid="button-book-assessment-park">
+                      Book a free call to get started
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <DialogTitle>Book a Free Call</DialogTitle>
+                    <DialogDescription>
+                      Tell us about your dog and we'll discuss the best training approach for you.
+                    </DialogDescription>
+                    <ConsultationForm />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 
