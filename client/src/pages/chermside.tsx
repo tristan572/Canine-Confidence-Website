@@ -350,50 +350,50 @@ export default function ChermsidePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-charcoal">
-                Stop Guessing. <span className="text-primary-blue">Start Training.</span>
+                Every dog is different. The plan should be too.
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Every dog is an individual, and every urban living situation is unique. A generic "puppy school" won't address the specific triggers of a reactive dog living in a Chermside apartment.
+                Before any training begins, I need to understand your dog — their genetics, their triggers, how they move through your specific environment. A session at the dog park tells me very little. A proper assessment tells me everything.
               </p>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Before we start, we conduct a 1-on-1 Urban Suitability Assessment. This is a logical, deep-dive evaluation of your dog's genetics, current temperament, and your specific living environment.
+                The Initial Canine Success Assessment is a 60-minute, one-on-one session. You walk away with a clear picture of what's driving your dog's behaviour and a structured plan to address it.
               </p>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-charcoal">What the assessment covers:</h3>
-                
+                <h3 className="text-xl font-bold text-charcoal">What it covers:</h3>
+
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Trigger Identification</h4>
-                    <p className="text-medium-grey">Pinpointing exactly what causes your dog to lose focus or react.</p>
+                    <h4 className="font-semibold text-charcoal mb-1">Trigger identification</h4>
+                    <p className="text-medium-grey">Exactly what causes your dog to react, and why.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Environmental Analysis</h4>
-                    <p className="text-medium-grey">Assessing your local walking routes and home setup.</p>
+                    <h4 className="font-semibold text-charcoal mb-1">Environment review</h4>
+                    <p className="text-medium-grey">Your walking routes, your home setup, the specific demands of where you live.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-charcoal mb-1">A Clear Roadmap</h4>
-                    <p className="text-medium-grey">A constructive, step-by-step plan to achieve neutrality and reliability.</p>
+                    <h4 className="font-semibold text-charcoal mb-1">A training roadmap</h4>
+                    <p className="text-medium-grey">A step-by-step plan built around your dog and your situation, not a template.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
-                <Button 
+                <Button
                   onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary px-8"
                   data-testid="button-book-assessment-section"
                 >
-                  Book Your Urban Assessment
+                  Book your assessment
                 </Button>
               </div>
             </div>
