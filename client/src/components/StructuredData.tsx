@@ -42,7 +42,9 @@ export function LocalBusinessSchema() {
       }
     ],
     "sameAs": [
-      "https://www.facebook.com/canineconfidence"
+      "https://www.facebook.com/p/Canine-Confidence-61571910674491/",
+      "https://www.instagram.com/canine_confidence/",
+      "https://share.google/NJfyc690NWAMVb3LX"
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
