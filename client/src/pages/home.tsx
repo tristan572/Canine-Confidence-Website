@@ -182,7 +182,7 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative hero-img-wrapper">
               <picture>
                 <source 
                   type="image/webp"
