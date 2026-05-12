@@ -21,9 +21,9 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Card className="bg-light-grey card-hover border border-gray-100">
       {post.imageUrl && (
-        <div className="w-full" style={{ aspectRatio: '400/192' }}>
-          <img 
-            src={post.imageUrl} 
+        <div className="w-full bg-gray-100 rounded-t-lg overflow-hidden" style={{ aspectRatio: '400/192' }}>
+          <img
+            src={post.imageUrl}
             alt={post.title}
             className="w-full h-full object-cover"
             width={400}

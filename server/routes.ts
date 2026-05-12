@@ -127,6 +127,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     app.get("/api/blog", async (req, res) => {
     try {
       const posts = await storage.getBlogPosts();
+      res.set("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
       res.json(posts);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch blog posts" });
