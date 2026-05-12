@@ -100,16 +100,22 @@ export default function ChermsidePage() {
                   <span className="text-primary-blue font-semibold">Chermside, Kedron & Stafford Heights</span>
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  Chermside Dog Training for the <span className="text-primary-blue">Urban Environment</span>
+                  Chermside Dog Training
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal">
-                  Is Your Dog Ready for Chermside Life?
+                  Dogs in dense suburbs face a different problem.
                 </h2>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  Living in a high-density hub like Chermside offers convenience, but it demands a higher level of "urban neutrality" from your dog. If your dog is struggling with the sensory overload of apartment living or the busy corridors of Gympie Road, standard obedience classes in a quiet field won't solve your problems.
+                  Tight footpaths. Trolleys, prams, other dogs around every corner. The sensory load of Westfield on a Saturday. None of that is something your dog was prepared for in a quiet oval with ten other puppies.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, we specialise in training dogs to thrive in Brisbane's busiest suburbs. We don't just teach "sit"; we teach your dog how to switch off and remain calm in the middle of the Chermside hustle.
+                  If your dog is reactive, anxious, or just can't settle when the world gets loud, that's not a training failure. It's a gap in the environment you've trained in.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed">
+                  I work with dogs in the places they actually live — busy streets, apartment blocks, shopping precincts. The goal isn't perfect behaviour in a sterile setting. It's a dog that knows how to switch off when Chermside demands it.
+                </p>
+                <p className="text-lg text-medium-grey leading-relaxed font-medium">
+                  Start with a free 15-minute phone call. No commitment, just clarity.
                 </p>
               </div>
 
