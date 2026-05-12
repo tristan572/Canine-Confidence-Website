@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-600 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8"
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
@@ -130,7 +130,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-primary-blue mt-0.5" />
                 <div className="text-white">
                   <div>0409521358</div>
-                  <div className="text-xs text-gray-300">Mon-Sat: 8am - 8pm</div>
+                  <div className="text-xs text-gray-300">Phone hours: Mon-Sat, 8am - 8pm</div>
                 </div>
               </li>
               <li className="flex items-center space-x-2">
@@ -148,7 +148,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="text-white">
-                  <div className="font-medium">Business Hours</div>
+                  <div className="font-medium">Training Hours</div>
                   <div className="text-sm mt-1 space-y-1">
                     <div>Mon-Fri: 5:30am - 8pm</div>
                     <div>Saturday: 7am - 5pm</div>
