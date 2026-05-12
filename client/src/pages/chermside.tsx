@@ -316,38 +316,26 @@ export default function ChermsidePage() {
             <Card className="bg-white border-0 shadow-xl">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">My Approach</h3>
-                  
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h4 className="font-semibold text-blue-800 text-xl mb-2">Logical, Results-Driven Methods</h4>
-                    <p className="text-blue-700">
-                      I don't offer fluff or "quick-fix" gimmicks. My approach is rooted in biological fulfilment and clear communication. I use play-centred training to build a working relationship where your dog wants to engage with you, making the distractions of Chermside irrelevant.
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-charcoal">My Approach</h3>
 
-                  <div className="pt-4 border-t">
-                    <h4 className="font-semibold text-charcoal mb-3 text-xl">Direct. Constructive. Effective.</h4>
-                    <p className="text-medium-grey mb-4">
-                      I give you the tools to handle a high-drive dog in a high-density suburb.
-                    </p>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Play-centred methodology</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Biological fulfilment focus</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Clear communication building</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Real-world environment training</span>
-                      </li>
-                    </ul>
+                  <p className="text-medium-grey leading-relaxed">
+                    The method is built around what dogs actually need: biological fulfilment, play-based learning, and communication that's clear enough for the dog to trust.
+                  </p>
+                  <p className="text-medium-grey leading-relaxed">
+                    When those foundations are in place, a dog doesn't need a quiet environment to behave. They need to understand what's being asked of them and have a reason to do it.
+                  </p>
+                  <p className="text-medium-grey leading-relaxed">
+                    I give you the tools to handle your dog in the environment you actually live in. Not in theory. In the street outside your home.
+                  </p>
+
+                  <div className="pt-4 border-t border-gray-200">
+                    <div className="flex flex-wrap gap-2">
+                      {["Play-based learning", "Fulfilment-led", "Real-world proofing", "Skill transfer to the owner"].map((tag) => (
+                        <span key={tag} className="bg-blue-50 text-blue-700 text-sm font-medium px-3 py-1 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </CardContent>
