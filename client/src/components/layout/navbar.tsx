@@ -5,8 +5,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Dog, Phone } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import ShoppingCart from "@/components/ui/shopping-cart";
-import { getCartSessionId } from "@/lib/cart";
 import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
 
 export default function Navbar() {
@@ -78,10 +76,6 @@ export default function Navbar() {
                   ))}
                   
                   <div className="pt-4 space-y-3">
-                    <div className="flex justify-center">
-                      <ShoppingCart sessionId={getCartSessionId()} />
-                    </div>
-                    
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button variant="outline" className="w-full border-primary-blue text-primary-blue hover:bg-light-blue">
@@ -137,8 +131,6 @@ export default function Navbar() {
 
             {/* Desktop CTA Buttons */}
             <div className="flex items-center space-x-2 shrink-0">
-              <ShoppingCart sessionId={getCartSessionId()} />
-              
               <Dialog>
                 <DialogTrigger asChild>
                   <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue text-xs">
