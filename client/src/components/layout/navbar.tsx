@@ -133,9 +133,9 @@ export default function Navbar() {
             <div className="flex items-center space-x-2 shrink-0">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-blue-50 hover:border-primary-blue text-xs">
-                    <Phone className="w-3 h-3 mr-1" />
-                    Consult
+                  <Button className="bg-primary-blue hover:bg-blue-700 text-white font-semibold shadow-sm">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Free Consult
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
