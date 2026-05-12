@@ -322,7 +322,7 @@ export default function ChermsidePage() {
                     The method is built around what dogs actually need: biological fulfilment, play-based learning, and communication that's clear enough for the dog to trust.
                   </p>
                   <p className="text-medium-grey leading-relaxed">
-                    When those foundations are in place, a dog doesn't need a quiet environment to behave. They need to understand what's being asked of them and have a reason to do it.
+                    When those foundations are in place, a dog doesn't need a quiet environment to behave. They understand what's being asked of them and have a reason to do it.
                   </p>
                   <p className="text-medium-grey leading-relaxed">
                     I give you the tools to handle your dog in the environment you actually live in. Not in theory. In the street outside your home.
