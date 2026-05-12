@@ -96,15 +96,6 @@ export default function Navbar() {
                       </DialogContent>
                     </Dialog>
 
-                    <Button 
-                      className="w-full btn-primary"
-                      onClick={() => {
-                        window.open('https://canineconfidence.simplybook.net/v2/', '_blank');
-                        setMobileMenuOpen(false);
-                      }}
-                    >
-                      Book Now
-                    </Button>
                   </div>
                 </div>
               </SheetContent>
@@ -160,13 +151,6 @@ export default function Navbar() {
                 </DialogContent>
               </Dialog>
 
-              <Button 
-                size="sm" 
-                className="bg-primary-blue hover:bg-blue-600 text-white shadow-sm text-xs px-3"
-                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
-              >
-                Book Now
-              </Button>
             </div>
           </div>
 
