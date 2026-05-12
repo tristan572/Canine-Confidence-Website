@@ -239,7 +239,7 @@ export default function ChermsidePage() {
                   <div className="pt-4 border-t border-gray-200">
                     <h3 className="text-xl font-bold text-charcoal mb-2">Urban Neutrality Training</h3>
                     <p className="text-medium-grey">
-                      We teach your dog to be calm and composed in the busiest environments—essential for stress-free apartment living in Chermside.
+                      I teach your dog to be calm and composed in the busiest environments—essential for stress-free apartment living in Chermside.
                     </p>
                   </div>
                 </div>
