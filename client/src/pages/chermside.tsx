@@ -402,15 +402,21 @@ export default function ChermsidePage() {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">Urban Suitability Assessment</h3>
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
                     <div className="text-4xl font-bold text-primary-blue">$90</div>
-                    <p className="text-medium-grey mt-2">60-minute 1-on-1 evaluation</p>
+                    <p className="text-medium-grey mt-2">60 minutes</p>
                   </div>
 
-                  <div className="pt-4">
-                    <p className="text-medium-grey text-center italic">
-                      Direct, expert guidance for Chermside dog owners.
+                  <div className="pt-4 space-y-4">
+                    <p className="text-medium-grey">
+                      One session. A clear picture of your dog, their triggers, and the plan to move forward.
                     </p>
+                    <Button
+                      onClick={() => setShowAssessmentDialog(true)}
+                      className="btn-primary w-full"
+                    >
+                      Book now
+                    </Button>
                   </div>
                 </div>
               </CardContent>
