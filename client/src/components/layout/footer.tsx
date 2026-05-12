@@ -14,11 +14,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img
-                src={logoImage}
-                alt="Canine Confidence logo"
-                className="h-10 w-auto"
-              />
+              <div className="bg-white rounded-lg px-3 py-2 inline-flex">
+                <img
+                  src={logoImage}
+                  alt="Canine Confidence logo"
+                  className="h-10 w-auto"
+                />
+              </div>
             </div>
             <p className="text-white">
               Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
