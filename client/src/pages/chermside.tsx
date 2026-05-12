@@ -161,48 +161,48 @@ export default function ChermsidePage() {
                 Urban Specialisation
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                Solving the <span className="text-primary-blue">"Apartment Dog"</span> Challenges
+                Training for High-Density Living
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Living in a unit or townhouse near Westfield Chermside requires a specific set of skills. I help you address the unique challenges of high-density living that standard training programs simply don't cover.
+                Apartment and townhouse dogs face a different daily reality. Shared corridors, lift doors, neighbours at close range, constant foot traffic outside the front door. These aren't edge cases — they're Tuesday.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Elevator & Hallway Etiquette</h3>
-                    <p className="text-medium-grey">Transforming reactive lunging or fearful "pancaking" into calm neutrality when meeting neighbours in confined spaces.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Lifts and shared spaces</h3>
+                    <p className="text-medium-grey">Most dogs aren't taught how to hold themselves in a confined space with a stranger. I work on calm neutrality in exactly those situations — so getting to the car park doesn't become a production.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Threshold Control</h3>
-                    <p className="text-medium-grey">Stopping the door-bolting and frantic barking every time someone walks past your apartment door.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Threshold control</h3>
+                    <p className="text-medium-grey">Door bolting, barking at footsteps in the hall, losing it every time someone passes — threshold work teaches your dog that the boundary of your home is a calm place, not a launch point.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">The "Urban On-Switch"</h3>
-                    <p className="text-medium-grey">Teaching your dog to ignore the constant distractions of buses, sirens, and heavy foot traffic so you can enjoy your local coffee run.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Urban distraction tolerance</h3>
+                    <p className="text-medium-grey">Buses, sirens, shopping trolleys, foot traffic. The goal isn't ignoring everything — it's a dog that notices, processes, and moves on without you having to manage every moment.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">private coaching services</Link>.
+                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">coaching services</Link>.
                 </p>
-                <Button 
+                <Button
                   onClick={() => setShowCoachingDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-coaching"
                 >
-                  Book 1-on-1 Coaching Session
+                  Book a 1-on-1 Coaching Session
                 </Button>
               </div>
             </div>
