@@ -230,60 +230,6 @@ export default function BlogPage() {
           </p>
         </div>
       </section>
-
-      {/* Featured Topics Section */}
-      <section className="py-20 bg-light-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-charcoal mb-4">Popular Training Topics</h2>
-            <p className="text-lg text-medium-grey">
-              Explore my most popular training guides and resources
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-white p-6 text-center card-hover">
-              <h3 className="font-semibold text-charcoal mb-2">Basic Commands</h3>
-              <p className="text-medium-grey text-sm mb-4">
-                Foundation training every dog should know
-              </p>
-              <Button variant="outline" size="sm">
-                View Articles
-              </Button>
-            </Card>
-
-            <Card className="bg-white p-6 text-center card-hover">
-              <h3 className="font-semibold text-charcoal mb-2">Behaviour Issues</h3>
-              <p className="text-medium-grey text-sm mb-4">
-                Solutions for common behavioural problems
-              </p>
-              <Button variant="outline" size="sm">
-                View Articles
-              </Button>
-            </Card>
-
-            <Card className="bg-white p-6 text-center card-hover">
-              <h3 className="font-semibold text-charcoal mb-2">Puppy Training</h3>
-              <p className="text-medium-grey text-sm mb-4">
-                Get your puppy started on the right path
-              </p>
-              <Button variant="outline" size="sm">
-                View Articles
-              </Button>
-            </Card>
-
-            <Card className="bg-white p-6 text-center card-hover">
-              <h3 className="font-semibold text-charcoal mb-2">Advanced Training</h3>
-              <p className="text-medium-grey text-sm mb-4">
-                Take your dog's skills to the next level
-              </p>
-              <Button variant="outline" size="sm">
-                View Articles
-              </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
