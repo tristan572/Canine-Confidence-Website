@@ -165,44 +165,6 @@ export default function NorthgatePage() {
         </div>
       </section>
 
-      {/* Step 1: Initial Assessment */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-charcoal mb-4">
-                The <span className="text-primary-blue">Canine Success Assessment</span>
-              </h2>
-              <p className="text-xl text-medium-grey mb-4">
-                Every adult dog is different. Before any training begins, I need to understand what's actually driving the behaviour — not just what it looks like from the outside.
-              </p>
-              <p className="text-xl text-medium-grey mb-4">
-                This 60-minute session covers your dog's history, current challenges, and what you want life to look like on the other side. You leave with a clear picture of what's going on and a specific plan to address it.
-              </p>
-              <p className="text-xl text-medium-grey">
-                It's also how I work out whether Walk and Train, One-on-One Coaching, or a combination of both is the right fit for your dog.
-              </p>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="inline-flex items-center gap-4 bg-blue-50 border border-blue-200 rounded-lg px-6 py-4">
-                <div>
-                  <span className="text-2xl font-bold text-primary-blue">$90</span>
-                  <span className="text-sm text-medium-grey ml-2">One-off Initial Canine Success Assessment</span>
-                </div>
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary"
-                  data-testid="button-book-assessment-section"
-                >
-                  Book Your Assessment
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Service 1: Walk & Train */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -426,6 +388,87 @@ export default function NorthgatePage() {
                       The goal is a dog that responds to you — not just to me.
                     </p>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Assessment Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-charcoal">
+                Every dog is different. The plan should be too.
+              </h2>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                Every adult dog is different. Before any training begins, I need to understand what's actually driving the behaviour, not just what it looks like from the outside.
+              </p>
+              <p className="text-lg text-medium-grey leading-relaxed">
+                This 60-minute session covers your dog's history, current challenges, and what you want life to look like on the other side. You leave with a clear picture of what's going on and a specific plan to address it.
+              </p>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-charcoal">What it covers:</h3>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-1">Trigger identification</h4>
+                    <p className="text-medium-grey">Exactly what causes your dog to react, and why.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-1">Environment review</h4>
+                    <p className="text-medium-grey">Your walking routes, your home setup, the specific demands of where you live.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-charcoal mb-1">A training roadmap</h4>
+                    <p className="text-medium-grey">A step-by-step plan built around your dog and your situation, not a template.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4 hidden lg:block">
+                <Button
+                  onClick={() => setShowAssessmentDialog(true)}
+                  className="btn-primary px-8"
+                  data-testid="button-book-assessment-section"
+                >
+                  Book your assessment
+                </Button>
+              </div>
+            </div>
+
+            <Card className="bg-white border-0 shadow-xl">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div className="text-center pb-4 border-b">
+                    <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
+                    <div className="text-4xl font-bold text-primary-blue">$90</div>
+                    <p className="text-medium-grey mt-2">60 minutes · One-off session</p>
+                  </div>
+
+                  <p className="text-medium-grey">
+                    One session. A clear picture of your dog, their triggers, and the plan to move forward. It's also how I work out whether Walk and Train, One-on-One Coaching, or a combination of both is the right fit.
+                  </p>
+
+                  <Button
+                    onClick={() => setShowAssessmentDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-assessment-card"
+                  >
+                    Book Your Assessment
+                  </Button>
                 </div>
               </CardContent>
             </Card>
