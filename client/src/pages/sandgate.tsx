@@ -204,7 +204,7 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Café Manners</h3>
-                    <p className="text-medium-grey">I practise Settle and Place behaviours so your dog can hold it while you enjoy a calamari from the local Fishmonger.</p>
+                    <p className="text-medium-grey">I practise Settle and Place behaviours so your dog can hold it while you enjoy Brisbane's best calamari from the local Fishmonger.</p>
                   </div>
                 </div>
 
