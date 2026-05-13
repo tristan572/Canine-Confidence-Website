@@ -139,6 +139,13 @@ export default function SandgatePage() {
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
+                <Button
+                  onClick={() => setShowAssessmentDialog(true)}
+                  className="btn-secondary text-lg px-8 py-4"
+                  data-testid="button-book-assessment-hero-secondary"
+                >
+                  Book Assessment
+                </Button>
               </div>
             </div>
             
@@ -197,7 +204,7 @@ export default function SandgatePage() {
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Café Manners</h3>
-                    <p className="text-medium-grey">I practise Settle and Place behaviours so your dog can hold it while you enjoy a calamari from the local Fishmonger.</p>
+                    <p className="text-medium-grey">I practise Settle and Place behaviours so your dog can hold it while you enjoy Brisbane's best calamari from the local Fishmonger.</p>
                   </div>
                 </div>
 
@@ -221,12 +228,35 @@ export default function SandgatePage() {
               </div>
             </div>
 
-            <Card className="bg-light-grey border-0">
+            <Card className="bg-white border-0 shadow-xl">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Perfect For:</h3>
-                    <ul className="space-y-3">
+                  <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                      <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
+                      <div className="text-2xl font-bold text-primary-blue">$80</div>
+                    </div>
+
+                    <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                      <div className="flex items-center justify-between mb-2">
+                        <div>
+                          <p className="font-semibold text-charcoal">The Adventure Pack</p>
+                          <p className="text-sm text-medium-grey">5 Sessions</p>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-primary-blue">$375</div>
+                          <p className="text-sm text-green-700">$75 per session</p>
+                        </div>
+                      </div>
+                      <p className="text-green-700 font-semibold text-center">Save $25 across the package.</p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t">
+                    <h4 className="font-semibold text-charcoal mb-3">Perfect For:</h4>
+                    <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
                         <span className="text-medium-grey">Dogs who pull on the leash near the foreshore</span>
@@ -237,25 +267,18 @@ export default function SandgatePage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Seagull chasers needing impulse control</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">Dogs who need cafe manners training</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-primary-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-medium-grey">High-energy dogs needing beach exercise and play</span>
+                        <span className="text-medium-grey">High-energy dogs needing beach exercise and real-world proofing</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="pt-4 border-t border-gray-200">
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Beach Fun & Exercise</h3>
-                    <p className="text-medium-grey">
-                      Not every session is about strict training. Some dogs just need a great time running and playing on the beach. I combine exercise, enrichment, and fun in the beautiful bayside environment.
-                    </p>
-                  </div>
+                  <Button
+                    onClick={() => setShowAdventureDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-adventure-card"
+                  >
+                    Book Adventure Walk
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -381,19 +404,13 @@ export default function SandgatePage() {
                     The guide covers everything from socialisation and handling to toilet training and daily structure — written specifically for new dog owners.
                   </p>
 
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button className="w-full btn-primary">
-                        <Phone className="w-4 h-4 mr-2" />
-                        Book a Free Call
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
-                      <DialogTitle>Book a Free Call</DialogTitle>
-                      <DialogDescription>Book a free 15-minute call to talk through what your puppy needs.</DialogDescription>
-                      <ConsultationForm />
-                    </DialogContent>
-                  </Dialog>
+                  <Button
+                    onClick={() => setShowConfidentStartDialog(true)}
+                    className="w-full btn-primary"
+                    data-testid="button-book-confident-start-card"
+                  >
+                    Book The Confident Start Program
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -410,11 +427,11 @@ export default function SandgatePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <Card className="bg-light-grey border-0">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-charcoal mb-4">For Adult and Adolescent Dogs</h3>
-                <p className="text-medium-grey mb-6">
+                <p className="text-medium-grey mb-6 flex-1">
                   I start with an Initial Canine Success Assessment. One 60-minute session to assess your dog, identify what's driving the behaviour, and build a tailored plan before we begin.
                 </p>
                 <div className="text-3xl font-bold text-primary-blue mb-6">$90</div>
@@ -429,9 +446,9 @@ export default function SandgatePage() {
             </Card>
 
             <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-charcoal mb-4">For Puppies</h3>
-                <p className="text-medium-grey mb-6">
+                <p className="text-medium-grey mb-6 flex-1">
                   The Confident Start Program needs no prior assessment. Book directly and we get started.
                 </p>
                 <div className="text-3xl font-bold text-primary-blue mb-6">$480 for 6 sessions</div>
