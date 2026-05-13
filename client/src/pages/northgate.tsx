@@ -53,7 +53,9 @@ const NorthgateLocalBusinessSchema = () => {
 export default function NorthgatePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showWalkTrainDialog, setShowWalkTrainDialog] = useState(false);
+  const [showWalkTrainPackageDialog, setShowWalkTrainPackageDialog] = useState(false);
   const [showCoachingDialog, setShowCoachingDialog] = useState(false);
+  const [showCoachingPackageDialog, setShowCoachingPackageDialog] = useState(false);
   const [showPackagesDialog, setShowPackagesDialog] = useState(false);
 
   useEffect(() => {
@@ -73,6 +75,16 @@ export default function NorthgatePage() {
   const handleBookCoaching = () => {
     setShowCoachingDialog(false);
     window.open('https://canineconfidence.simplybook.net/v2/#book/service/7', '_blank');
+  };
+
+  const handleBookWalkTrainPackage = () => {
+    setShowWalkTrainPackageDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#packages/3', '_blank');
+  };
+
+  const handleBookCoachingPackage = () => {
+    setShowCoachingPackageDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#packages/2', '_blank');
   };
 
   const handleBookPackages = () => {
@@ -269,6 +281,14 @@ export default function NorthgatePage() {
                       </li>
                     </ul>
                   </div>
+
+                  <Button
+                    onClick={() => setShowWalkTrainPackageDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-walk-train-package"
+                  >
+                    Book The Real World Reliability Package
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -388,6 +408,14 @@ export default function NorthgatePage() {
                       The goal is a dog that responds to you — not just to me.
                     </p>
                   </div>
+
+                  <Button
+                    onClick={() => setShowCoachingPackageDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-coaching-package"
+                  >
+                    Book The Focused Progress Plan
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -625,6 +653,56 @@ export default function NorthgatePage() {
               onClick={handleBookPackages}
               className="btn-primary"
               data-testid="button-continue-packages"
+            >
+              Continue to Secure Booking
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showWalkTrainPackageDialog} onOpenChange={setShowWalkTrainPackageDialog}>
+        <DialogContent className="max-w-md">
+          <DialogTitle>Continue to Secure Booking</DialogTitle>
+          <DialogDescription>
+            You'll be redirected to our secure booking system to purchase The Real World Reliability Package (5 sessions, $280).
+          </DialogDescription>
+          <div className="flex gap-3 justify-end mt-4">
+            <Button
+              variant="outline"
+              onClick={() => setShowWalkTrainPackageDialog(false)}
+              data-testid="button-cancel-walk-train-package"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleBookWalkTrainPackage}
+              className="btn-primary"
+              data-testid="button-continue-walk-train-package"
+            >
+              Continue to Secure Booking
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showCoachingPackageDialog} onOpenChange={setShowCoachingPackageDialog}>
+        <DialogContent className="max-w-md">
+          <DialogTitle>Continue to Secure Booking</DialogTitle>
+          <DialogDescription>
+            You'll be redirected to our secure booking system to purchase The Focused Progress Plan (5 sessions, $550).
+          </DialogDescription>
+          <div className="flex gap-3 justify-end mt-4">
+            <Button
+              variant="outline"
+              onClick={() => setShowCoachingPackageDialog(false)}
+              data-testid="button-cancel-coaching-package"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleBookCoachingPackage}
+              className="btn-primary"
+              data-testid="button-continue-coaching-package"
             >
               Continue to Secure Booking
             </Button>
