@@ -403,16 +403,6 @@ export default function ChermsidePage() {
                   </div>
                 </div>
               </div>
-
-              <div className="pt-4">
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary px-8"
-                  data-testid="button-book-assessment-section"
-                >
-                  Book your assessment
-                </Button>
-              </div>
             </div>
 
             <Card className="bg-light-grey border-0">
