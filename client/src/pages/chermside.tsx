@@ -54,6 +54,7 @@ export default function ChermsidePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showCoachingDialog, setShowCoachingDialog] = useState(false);
   const [showPackagesDialog, setShowPackagesDialog] = useState(false);
+  const [showWalkTrainDialog, setShowWalkTrainDialog] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -67,6 +68,11 @@ export default function ChermsidePage() {
   const handleBookCoaching = () => {
     setShowCoachingDialog(false);
     window.open('https://canineconfidence.simplybook.net/v2/#book/service/7', '_blank');
+  };
+
+  const handleBookWalkTrain = () => {
+    setShowWalkTrainDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#book/service/6', '_blank');
   };
 
   const handleBookPackages = () => {
@@ -313,20 +319,13 @@ export default function ChermsidePage() {
               </div>
 
               <div className="pt-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="btn-primary" data-testid="button-book-assessment-park">
-                      Book a free call to get started
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md">
-                    <DialogTitle>Book a Free Call</DialogTitle>
-                    <DialogDescription>
-                      Tell us about your dog and we'll discuss the best training approach for you.
-                    </DialogDescription>
-                    <ConsultationForm />
-                  </DialogContent>
-                </Dialog>
+                <Button
+                  onClick={() => setShowWalkTrainDialog(true)}
+                  className="btn-primary"
+                  data-testid="button-book-walk-train-park"
+                >
+                  Book a Walk and Train
+                </Button>
               </div>
             </div>
 
@@ -566,6 +565,31 @@ export default function ChermsidePage() {
               onClick={handleBookPackages}
               className="btn-primary"
               data-testid="button-continue-packages"
+            >
+              Continue to Secure Booking
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showWalkTrainDialog} onOpenChange={setShowWalkTrainDialog}>
+        <DialogContent className="max-w-md">
+          <DialogTitle>Continue to Secure Booking</DialogTitle>
+          <DialogDescription>
+            You'll be redirected to our secure booking system to schedule your Walk and Train session.
+          </DialogDescription>
+          <div className="flex gap-3 justify-end mt-4">
+            <Button
+              variant="outline"
+              onClick={() => setShowWalkTrainDialog(false)}
+              data-testid="button-cancel-walk-train"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleBookWalkTrain}
+              className="btn-primary"
+              data-testid="button-continue-walk-train"
             >
               Continue to Secure Booking
             </Button>
