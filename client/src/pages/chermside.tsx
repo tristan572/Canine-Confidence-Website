@@ -208,8 +208,8 @@ export default function ChermsidePage() {
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal mb-1">Environmental confidence</h3>
-                    <p className="text-medium-grey">Different surfaces, loud spaces, unpredictable movement. A settled dog doesn't need a quiet setting.</p>
+                    <h3 className="font-semibold text-charcoal mb-1">Environmental Confidence</h3>
+                    <p className="text-medium-grey">Different smells, sights, spaces and unpredictable action. A confident dog doesn't need a quiet setting.</p>
                   </div>
                 </div>
 
