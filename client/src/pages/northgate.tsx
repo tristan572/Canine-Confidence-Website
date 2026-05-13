@@ -269,6 +269,14 @@ export default function NorthgatePage() {
                       </li>
                     </ul>
                   </div>
+
+                  <Button
+                    onClick={() => setShowWalkTrainDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-walk-train-card"
+                  >
+                    Book Walk & Train Sessions
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -388,6 +396,14 @@ export default function NorthgatePage() {
                       The goal is a dog that responds to you — not just to me.
                     </p>
                   </div>
+
+                  <Button
+                    onClick={() => setShowCoachingDialog(true)}
+                    className="btn-primary w-full"
+                    data-testid="button-book-coaching-card"
+                  >
+                    Book a Coaching Session
+                  </Button>
                 </div>
               </CardContent>
             </Card>
