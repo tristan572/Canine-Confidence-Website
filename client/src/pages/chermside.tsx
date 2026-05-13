@@ -479,7 +479,7 @@ export default function ChermsidePage() {
                 className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
                 data-testid="button-book-now-cta"
               >
-                Book now
+                Book Assessment
               </Button>
             </div>
 

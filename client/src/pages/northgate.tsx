@@ -119,20 +119,13 @@ export default function NorthgatePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary text-lg px-8 py-4"
-                  data-testid="button-book-assessment-hero"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Book Your Assessment
-                </Button>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button
-                      className="btn-secondary text-lg px-8 py-4"
+                      className="btn-primary text-lg px-8 py-4"
                       data-testid="button-request-call-hero"
                     >
+                      <Phone className="w-5 h-5 mr-2" />
                       Request Free Call
                     </Button>
                   </DialogTrigger>
@@ -144,6 +137,13 @@ export default function NorthgatePage() {
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
+                <Button
+                  onClick={() => setShowAssessmentDialog(true)}
+                  className="btn-secondary text-lg px-8 py-4"
+                  data-testid="button-book-assessment-hero"
+                >
+                  Book Assessment
+                </Button>
               </div>
             </div>
 
