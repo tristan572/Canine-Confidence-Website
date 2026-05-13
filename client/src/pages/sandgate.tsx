@@ -179,9 +179,6 @@ export default function SandgatePage() {
               <p className="text-lg text-medium-grey leading-relaxed">
                 A one-on-one training and enrichment session built around the Sandgate foreshore. Real exercise, real fulfilment, real-world skills — in the environment where it actually needs to hold up.
               </p>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <p className="text-blue-800 font-semibold text-xl">$80 per 60-minute session. Five-session packages available.</p>
-              </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
