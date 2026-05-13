@@ -6,6 +6,8 @@ import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart, Users, Footprints } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
+import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
+import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
 
 const NorthgateLocalBusinessSchema = () => {
   const schema = {
@@ -98,7 +100,7 @@ export default function NorthgatePage() {
       {/* Hero Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 mb-4">
@@ -143,6 +145,21 @@ export default function NorthgatePage() {
                   </DialogContent>
                 </Dialog>
               </div>
+            </div>
+
+            <div className="relative hidden lg:block">
+              <picture>
+                <source type="image/webp" srcSet={tristanPortraitWebp} />
+                <img
+                  src={tristanPortraitJpeg}
+                  alt="Tristan, NDTF certified dog trainer, with his dog"
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  width={600}
+                  height={400}
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </div>
