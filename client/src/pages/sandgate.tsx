@@ -53,6 +53,7 @@ const SandgateLocalBusinessSchema = () => {
 export default function SandgatePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showAdventureDialog, setShowAdventureDialog] = useState(false);
+  const [showAdventurePackageDialog, setShowAdventurePackageDialog] = useState(false);
   const [showConfidentStartDialog, setShowConfidentStartDialog] = useState(false);
   const [showPackagesDialog, setShowPackagesDialog] = useState(false);
 
@@ -68,6 +69,11 @@ export default function SandgatePage() {
   const handleBookAdventure = () => {
     setShowAdventureDialog(false);
     window.open('https://canineconfidence.simplybook.net/v2/#book/service/5', '_blank');
+  };
+
+  const handleBookAdventurePackage = () => {
+    setShowAdventurePackageDialog(false);
+    window.open('https://canineconfidence.simplybook.net/v2/#packages/4', '_blank');
   };
 
   const handleBookConfidentStart = () => {
@@ -179,9 +185,6 @@ export default function SandgatePage() {
               <p className="text-lg text-medium-grey leading-relaxed">
                 A one-on-one training and enrichment session built around the Sandgate foreshore. Real exercise, real fulfilment, real-world skills — in the environment where it actually needs to hold up.
               </p>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <p className="text-blue-800 font-semibold text-xl">$80 per 60-minute session. Five-session packages available.</p>
-              </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -273,11 +276,11 @@ export default function SandgatePage() {
                   </div>
 
                   <Button
-                    onClick={() => setShowAdventureDialog(true)}
+                    onClick={() => setShowAdventurePackageDialog(true)}
                     className="btn-primary w-full"
-                    data-testid="button-book-adventure-card"
+                    data-testid="button-book-adventure-package-card"
                   >
-                    Book Adventure Walk
+                    Book The Adventure Pack
                   </Button>
                 </div>
               </CardContent>
@@ -560,16 +563,16 @@ export default function SandgatePage() {
           <DialogDescription className="text-gray-600 mb-6">
             You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
           </DialogDescription>
-          
+
           <div className="space-y-4">
-            <Button 
+            <Button
               onClick={handleBookAdventure}
               className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
             >
               Continue to Secure Booking
             </Button>
-            
-            <Button 
+
+            <Button
               onClick={() => setShowAdventureDialog(false)}
               variant="outline"
               className="w-full py-3"
@@ -577,10 +580,35 @@ export default function SandgatePage() {
               Cancel
             </Button>
           </div>
-          
+
           <div className="mt-4 text-xs text-gray-500 text-center">
             <p>🔒 Secure SSL encrypted booking system</p>
             <p>📅 Real-time availability • 💳 Secure payments</p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={showAdventurePackageDialog} onOpenChange={setShowAdventurePackageDialog}>
+        <DialogContent className="max-w-md">
+          <DialogTitle>Continue to Secure Booking</DialogTitle>
+          <DialogDescription>
+            You'll be redirected to our secure booking system to purchase The Adventure Pack (5 sessions, $375).
+          </DialogDescription>
+          <div className="flex gap-3 justify-end mt-4">
+            <Button
+              variant="outline"
+              onClick={() => setShowAdventurePackageDialog(false)}
+              data-testid="button-cancel-adventure-package"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleBookAdventurePackage}
+              className="btn-primary"
+              data-testid="button-continue-adventure-package"
+            >
+              Continue to Secure Booking
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
