@@ -319,7 +319,7 @@ export default function NorthgatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
                 <Users className="w-4 h-4" />
                 Owner Skill Building
               </div>
@@ -421,8 +421,8 @@ export default function NorthgatePage() {
                     </ul>
                   </div>
 
-                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                    <p className="text-purple-800 font-semibold text-center">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p className="text-primary-blue font-semibold text-center">
                       The goal is a dog that responds to you — not just to me.
                     </p>
                   </div>
