@@ -391,6 +391,54 @@ export default function ContactPage() {
                 Be honest with me on the call. A plan you'll actually do beats a perfect plan you won't.
               </p>
             </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">How soon can I start training?</h3>
+              <p className="text-medium-grey text-sm">
+                I typically have availability within 1-2 weeks of your initial consultation. For urgent behavioural issues, I may be able to accommodate earlier sessions.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">Do you offer package deals?</h3>
+              <p className="text-medium-grey text-sm">
+                Yes! I offer multi-session packages that provide better value and ensure consistent progress. I'll discuss options during your consultation.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">What areas do you service?</h3>
+              <p className="text-medium-grey text-sm">
+                Based in Boondall, I service a 20km radius covering North Brisbane and surrounding suburbs. Travel beyond 10km may incur additional charges. Check out the interactive map above to see if you're in my service area! I also offer video consultations worldwide for remote training.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">Do you work with aggressive dogs?</h3>
+              <p className="text-medium-grey text-sm">
+                I specialise in dog behavioural modification, however I do not handle cases involving human aggression. Please get in contact to ensure I can properly assess your situation and provide appropriate references if needed.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">What payment methods do you accept?</h3>
+              <p className="text-medium-grey text-sm">
+                I accept all major payment methods through my secure online scheduling system. Payment is required upfront before sessions to confirm your booking.
+              </p>
+            </Card>
+
+            <Card className="bg-white p-6">
+              <h3 className="font-semibold text-charcoal mb-3">Do I need to be present for training?</h3>
+              <p className="text-medium-grey text-sm">
+                Coaching sessions are built around you as much as your dog. If the aim is for you to handle your dog confidently, you need to be part of the session — that's where the skill transfer happens.
+              </p>
+              <p className="text-medium-grey text-sm mt-2">
+                Walks, Day Train, and handling sessions don't require you to be present. I work directly with your dog and build the foundations. For Day Train sessions, I'll walk you through what we covered at the end so you can maintain it at home.
+              </p>
+              <p className="text-medium-grey text-sm mt-2">
+                When you book, I'll let you know what's needed for your specific service.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
