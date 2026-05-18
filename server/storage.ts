@@ -528,28 +528,8 @@ Acute injuries and chronic issues both count. Arthritis. Gut problems. Structura
 
 Regular check-ups aren't just for when things go wrong. They're how you maintain the foundation.
 
-Even young, seemingly healthy dogs benefit from baseline bloodwork. It establishes a normal for that specific dog, which makes future problems easier to spot.
-
-Early detection prevents long-term suffering and expensive interventions. Your vet is your partner in keeping the dog feeling good enough to engage fully with everything else.
-
-## Supplements, used well
-
-Whole, species-appropriate food does most of the work. But some supplements help.
-
-Omega-3s for inflammation and coat. Probiotics for gut health, which research increasingly links to mood and behaviour. Joint support for active or ageing dogs.
-
-The key is identifying what this specific dog needs, in consultation with your vet. Not throwing supplements at the wall.
-
-## Why health can't be skipped
-
-A dog in pain won't respond normally to lead pressure, play, or commands without distress. Poor sleep creates over-arousal and emotional instability. Medical issues regularly disguise themselves as behavioural problems, which is why so many owners end up trying to train through something a vet should have caught.
-
-When something feels off, don't reach for behavioural solutions first. Check the body.
-
-When your dog feels good physically, everything else becomes possible. They can focus. They can learn. They can regulate. They can actually partner with you.
-
-Health isn't just the first step. It's the foundation that holds everything else up.`,
-        imageUrl: "/attached_assets/health-foundation_1760531575107.png",
+When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
+        imageUrl: "/attached_assets/health-foundation_1760531575107_opt.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-01"),
         tags: ["health", "foundation", "wellness", "four building blocks"],
@@ -604,28 +584,8 @@ When you become your dog's main source of fun, you become the most relevant thin
 
 Scenting is a biological need for all dogs. Their nose is their primary way of understanding the world.
 
-Simple games go a long way. Hiding treats around the house. Scatter feeding. Basic "find it" exercises.
-
-These aren't just enrichment. They're calming. Unlike high-energy exercise, which can ramp up arousal, scent work tends to put dogs into a focused, settled state. It helps them decompress.
-
-## What unmet needs actually look like
-
-Mental fulfilment isn't optional. Dogs whose needs aren't met show it.
-
-Excessive barking. Destruction. Escape attempts. Over-excitement and reactivity in everyday situations.
-
-That's not disobedience. It's not dominance. It's a dog whose fundamental needs aren't being met, telling you so in the only way they can.
-
-Sort the underlying need and a lot of these "problems" resolve without direct training.
-
-## Why this comes before obedience
-
-A fulfilled dog is naturally more focused, more cooperative, and more settled.
-
-When the mind is engaged and the drives are met, your dog has the mental and emotional capacity to focus on what you're asking. They become a partner in training, not a resistant participant.
-
-This is why lifestyle and fulfilment come before demanding obedience. Find what genuinely drives this particular dog. Build in appropriate outlets. Then everything else gets easier.`,
-        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107.png",
+This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
+        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107_opt.webp",
         readTime: "10 min read",
         publishedAt: new Date("2025-10-08"),
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
@@ -688,18 +648,8 @@ Teaching the dog to respond to lead pressure rather than just tolerate it change
 
 When the dog learns to yield to gentle pressure, to slow when they feel tension, to check in when they're unsure, the lead becomes a calm, reliable bridge. That awareness transfers everywhere else.
 
-## Why this changes everything
-
-Dogs without clear communication are constantly guessing. They usually guess wrong.
-
-That creates a cycle of corrections, frustration, and confusion that wears down the relationship. Inconsistent communication doesn't produce disobedience. It produces a dog who doesn't understand what's being asked. That distinction matters.
-
-Clarity isn't about being perfect. It's about being predictable. Dogs thrive when they know what words mean, when the rules don't change without warning, and when they can predict what their choices lead to.
-
-Predictability creates confidence. Confident dogs are cooperative dogs. And cooperative dogs are the kind you actually want to live with.
-
-When communication is clear, training stops being adversarial. The dog becomes an active participant because they understand what success looks like and how to get there.`,
-        imageUrl: "/attached_assets/clear-communication_1760531575107.png",
+When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
+        imageUrl: "/attached_assets/clear-communication_1760531575107_opt.webp",
         readTime: "9 min read",
         publishedAt: new Date("2025-10-15"),
         tags: ["communication", "clarity", "markers", "four building blocks"],
@@ -775,20 +725,8 @@ Reliable skills follow a natural progression. You don't get there by demanding e
 
 Skills get taught in calm, quiet environments first. The dog needs to succeed before they can be challenged. As the basic behaviour becomes confident, you start adding variables. Different locations. Mild distractions. Higher arousal.
 
-The key is building success on success. Each step should feel achievable. Lots of positive reinforcement along the way. Push too fast and the foundation cracks.
-
-Skills also need ongoing maintenance through the dog's whole life. They get rusty without use. They need adapting as the dog encounters new situations.
-
-## The freedom skills create
-
-When the work is done properly, life skills become reliable tools that serve both of you for life. They build the trust and communication that makes every other part of the relationship easier.
-
-A dog with real life skills can participate more fully in family life. Explore more of the world safely. Handle change without falling apart.
-
-Skills are the last piece of the framework, not the starting point. Built on health, fulfilment, and clear communication, they become natural expressions of the dog's willingness to cooperate. Not behaviours that need to be constantly forced.
-
-That's the difference between a dog you live with and a dog you manage.`,
-        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107.png",
+Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
+        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107_opt.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-22"),
         tags: ["obedience", "skills", "training", "four building blocks"],
@@ -915,26 +853,8 @@ Once the dog gets the game:
 - Sessions during natural energy peaks
 - Use fulfilled drives to power training motivation later
 
-## What proper fulfilment looks like
-
-Dogs whose drives are met become:
-
-- **More cooperative.** Their needs are handled, so they can focus on yours.
-- **Less destructive.** No need to invent their own jobs.
-- **More confident.** Working within their natural wiring builds self-assurance.
-- **Better trained.** Fulfilled dogs are attentive dogs.
-- **Calmer.** Mental and physical satisfaction leads to actual rest.
-
-## The dog in front of you matters more than the label
-
-Breed tendencies are real. They're also generalisations.
-
-Some Border Collies have low drive. Some Labs prefer scent work to retrieving. Some Pugs surprise everyone with how much they want to work.
-
-Watch your dog, not just their breed label. The goal isn't to fit them into a category. It's to find what genuinely fulfils this specific animal.
-
-Provide the outlets that match the wiring. You stop managing behaviour and start building cooperation.`,
-        imageUrl: "/attached_assets/genetic-drives_1760531575107.png",
+When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
+        imageUrl: "/attached_assets/genetic-drives_1760531575107_opt.webp",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-05"),
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
@@ -1070,7 +990,7 @@ Every dog I work with, regardless of the presenting problem, gets this foundatio
 Build the windows at home. Take the work outside from there.
 
 If you're not sure where your dog's gaps are, a free 15-minute phone call is the right place to start.`,
-        imageUrl: "/attached_assets/dog-resting-settle_1760531575107.png",
+        imageUrl: "/attached_assets/dog-resting-settle_1760531575107_opt.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-18"),
         tags: ["calm", "settle", "behaviour", "training", "foundations"],
@@ -1138,7 +1058,7 @@ It does pass. Eventually. But it leaves behind whatever the dog has been practis
 If your dog is in the adolescent window and things are slipping, that's the time to act.
 
 A free 15-minute call is the simplest place to start. We'll talk through what you're seeing, what's normal, and what's worth working on now.`,
-        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107.png",
+        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107_opt.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-11"),
         tags: ["adolescence", "puppies", "behaviour", "training", "development"],
@@ -1200,7 +1120,7 @@ If your dog is doing something you can't explain, it's worth getting a real read
 The Initial Canine Success Assessment is a 60-minute in-home session. You walk away understanding what's behind the behaviour, and with a plan to address it.
 
 Start with a free 15-minute call. No pitch. Just a conversation about what your dog actually needs.`,
-        imageUrl: "/attached_assets/stock_images/Guilty Dog.png",
+        imageUrl: "/attached_assets/Guilty Dog_opt.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-05-05"),
         tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
