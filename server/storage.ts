@@ -524,7 +524,7 @@ The reality is simple: a dog in pain won't respond normally to leash pressure, p
 When something feels "off" with your dog, resist the urge to immediately seek behavioural solutions. Start by checking their physical wellbeing. You cannot and should not attempt to train over pain or illness.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
-        imageUrl: "/attached_assets/health-foundation_1760531575107.png",
+        imageUrl: "/attached_assets/health-foundation_1760531575107_opt.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-01"),
         tags: ["health", "foundation", "wellness", "four building blocks"],
@@ -580,7 +580,7 @@ These behaviors aren't moral failings or dominance displays—they're symptoms o
 A fulfilled dog is naturally more focused, more cooperative, and more peaceful in daily life. When your dog's mind is engaged and their drives are satisfied, they have the mental and emotional capacity to focus on what you're asking of them. They become partners in the training process rather than resistant participants.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107.png",
+        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107_opt.webp",
         readTime: "10 min read",
         publishedAt: new Date("2025-10-08"),
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
@@ -644,7 +644,7 @@ Inconsistent communication creates confusion, stress, and what looks like disobe
 Clarity isn't about achieving perfection—it's about creating predictability. Dogs thrive when they know what things mean, when they can trust that the rules won't change arbitrarily, and when they can predict the consequences of their choices. This predictability creates confidence, and confident dogs are naturally more cooperative, more focused, and more enjoyable to live with.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "/attached_assets/clear-communication_1760531575107.png",
+        imageUrl: "/attached_assets/clear-communication_1760531575107_opt.webp",
         readTime: "9 min read",
         publishedAt: new Date("2025-10-15"),
         tags: ["communication", "clarity", "markers", "four building blocks"],
@@ -712,7 +712,7 @@ When properly developed, life skills become reliable tools that serve both you a
 A dog with solid life skills is a dog who can participate more fully in family life, explore more of the world safely, and handle life's inevitable changes with confidence and grace. These aren't just training achievements—they're the building pieces of a rich, fulfilling partnership between human and dog.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107.png",
+        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107_opt.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-22"),
         tags: ["obedience", "skills", "training", "four building blocks"],
@@ -873,7 +873,7 @@ While breed tendencies are real, every dog is unique. Some Border Collies have l
 **Watch your dog, not just their breed label.** The goal is to find what genuinely fulfills your specific dog's needs.
 
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
-        imageUrl: "/attached_assets/genetic-drives_1760531575107.png",
+        imageUrl: "/attached_assets/genetic-drives_1760531575107_opt.webp",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-05"),
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
@@ -993,7 +993,7 @@ Every dog I work with, regardless of the presenting problem, gets this foundatio
 Build the windows at home. Take the work outside from there.
 
 If you're not sure where your dog's gaps are, a free 15-minute phone call is the right place to start.`,
-        imageUrl: "/attached_assets/dog-resting-settle_1760531575107.png",
+        imageUrl: "/attached_assets/dog-resting-settle_1760531575107_opt.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-18"),
         tags: ["calm", "settle", "behaviour", "training", "foundations"],
@@ -1061,7 +1061,7 @@ It does pass. Eventually. But it leaves behind whatever the dog has been practis
 If your dog is in the adolescent window and things are slipping, that's the time to act.
 
 A free 15-minute call is the simplest place to start. We'll talk through what you're seeing, what's normal, and what's worth working on now.`,
-        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107.png",
+        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107_opt.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-11"),
         tags: ["adolescence", "puppies", "behaviour", "training", "development"],
@@ -1123,7 +1123,7 @@ If your dog is doing something you can't explain, it's worth getting a real read
 The Initial Canine Success Assessment is a 60-minute in-home session. You walk away understanding what's behind the behaviour, and with a plan to address it.
 
 Start with a free 15-minute call. No pitch. Just a conversation about what your dog actually needs.`,
-        imageUrl: "/attached_assets/stock_images/Guilty Dog.png",
+        imageUrl: "/attached_assets/Guilty Dog_opt.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-05-05"),
         tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
