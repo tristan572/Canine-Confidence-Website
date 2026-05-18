@@ -1017,6 +1017,66 @@ Build the blocks. Live the balance.`,
         slug: "creating-balance-complete-framework"
       },
       {
+        title: "The Four Windows: Why Your Dog Needs to Know How to Switch Off",
+        excerpt: "Most dogs are only taught to go. The settle window is the foundation most owners skip — and why it matters before anything else.",
+        content: `Your dog can probably sit. It might have a decent recall in the backyard.
+
+But can it switch off?
+
+Not crash from exhaustion. Switch off — move from active to genuinely low-arousal, on cue, in your lounge room, while something interesting is happening nearby.
+
+For most dogs, the answer is no. Not because they're difficult. Because nobody taught them.
+
+## Tired and calm aren't the same thing
+
+Owners often arrive at their first session having already done two walks and a trip to the park. The dog is still wired.
+
+Tired and calm are not the same state. A dog can be physically spent and still unable to settle. What you're seeing in that moment isn't excess energy. It's a dog that's never been given a cue to land on.
+
+Calm is a skill. Like a recall or a loose lead walk, it has to be taught deliberately and expected consistently.
+
+## The four windows your dog moves through
+
+I work with four states in every dog's day.
+
+Ready — engaged, interactive, working with the handler. Play, training, bonded focus. This is where real learning happens.
+
+Free — off duty. Sniffing, wandering, self-directed decompression. The dog gets to be a dog.
+
+Settle — low arousal. Calm. The dog genuinely switches off. Not because it's forced to, but because it understands the expectation.
+
+Work — structured obedience. Non-negotiable follow-through. Positions held until the handler releases them. This is where impulse control is built and where real-world reliability comes from.
+
+Most dogs I see are living in two of these. Ready and Free. Settle and Work are missing.
+
+The result is a dog that's either switched on or completely checked out. It can't calm down on cue. It can't hold a position when it matters. It hits the first distraction and the wheels fall off.
+
+## Why the settle window gets skipped
+
+Because it's invisible until it's missing.
+
+Play is enjoyable, so owners do it. Walks are obvious, so they happen. Obedience is visible — sit, drop, stay — so it gets some attention.
+
+But teaching a dog to genuinely switch off doesn't feel like training. It feels like doing nothing. So it doesn't get done.
+
+What owners miss is that the dog who can settle is the dog who can cope. Cope with a busy café. Cope with guests walking through the front door. Cope with another dog passing on the footpath without reacting. The ability to move into low arousal on cue is one of the most practical things a dog can develop.
+
+## Why this comes before everything else
+
+A dog that can't switch off at home isn't ready for the café. It isn't ready to work reliably outside, because the arousal level is already too high before you've started.
+
+Every dog I work with, regardless of the presenting problem, gets this foundation first. Not because settle solves everything — because a dog that can move into genuine calm on cue is a dog whose nervous system is actually available to work with.
+
+Build the windows at home. Take the work outside from there.
+
+If you're not sure where your dog's gaps are, a free 15-minute phone call is the right place to start.`,
+        imageUrl: "/attached_assets/dog-resting-settle_1760531575107.png",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-05-18"),
+        tags: ["calm", "settle", "behaviour", "training", "foundations"],
+        slug: "the-four-windows-switch-off"
+      },
+      {
         title: "Adolescence: The Hardest Stage No One Warns You About",
         excerpt: "Your once-perfect puppy stopped listening at 9 months. Here's what's actually happening — and what to do before the bad habits become permanent.",
         content: `Your puppy used to come when called. They used to settle. They used to walk on lead without much drama.
