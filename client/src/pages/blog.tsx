@@ -216,7 +216,7 @@ export default function BlogPage() {
             Get Training Tips Delivered
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Subscribe to our newsletter for weekly training tips, success stories, and expert advice delivered straight to your inbox.
+            Get new blog posts delivered straight to your inbox. Training tips, dog behaviour insights, and practical advice — free, no spam.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Input
