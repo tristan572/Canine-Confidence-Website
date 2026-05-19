@@ -232,7 +232,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/rss.xml", async (req, res) => {
     try {
       const posts = await storage.getBlogPosts();
-      const siteUrl = "https://canineconfidence.com.au";
+      const siteUrl = "https://www.canineconfidence.com.au";
 
       const items = posts.map(post => {
         const pubDate = post.publishedAt ? new Date(post.publishedAt).toUTCString() : new Date().toUTCString();
