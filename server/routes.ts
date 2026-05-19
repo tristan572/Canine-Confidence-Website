@@ -227,6 +227,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // RSS Feed
+  app.get("/rss.xml", async (req, res) => {
+    try {
+      const posts = await storage.getBlogPosts();
+      const siteUrl = "https://canineconfidence.com.au";
+
+      const items = posts.map(post => {
+        const pubDate = post.publishedAt ? new Date(post.publishedAt).toUTCString() : new Date().toUTCString();
+        const postUrl = `${siteUrl}/blog/${post.slug}`;
+        return `
+    <item>
+      <title><![CDATA[${post.title}]]></title>
+      <link>${postUrl}</link>
+      <guid isPermaLink="true">${postUrl}</guid>
+      <description><![CDATA[${post.excerpt}]]></description>
+      <pubDate>${pubDate}</pubDate>
+      ${post.imageUrl ? `<enclosure url="${siteUrl}${post.imageUrl}" type="image/png" length="0"/>` : ""}
+    </item>`;
+      }).join("");
+
+      const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Canine Confidence Blog</title>
+    <link>${siteUrl}/blog</link>
+    <description>Dog training tips, behaviour insights, and practical advice from Canine Confidence.</description>
+    <language>en-au</language>
+    <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+    ${items}
+  </channel>
+</rss>`;
+
+      res.set("Content-Type", "application/rss+xml; charset=utf-8");
+      res.send(rss);
+    } catch (error) {
+      res.status(500).send("Failed to generate RSS feed");
+    }
+  });
+
   // Newsletter subscribers routes
   app.post("/api/subscribers", async (req, res) => {
     try {
