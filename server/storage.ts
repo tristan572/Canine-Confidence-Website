@@ -1123,7 +1123,7 @@ If your dog is doing something you can't explain, it's worth getting a real read
 The Initial Canine Success Assessment is a 60-minute in-home session. You walk away understanding what's behind the behaviour, and with a plan to address it.
 
 Start with a free 15-minute call. No pitch. Just a conversation about what your dog actually needs.`,
-        imageUrl: "/attached_assets/Guilty Dog_opt.webp",
+        imageUrl: "/attached_assets/guilty-dog_1779699487.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-05-05"),
         tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
