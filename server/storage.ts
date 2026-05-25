@@ -1128,6 +1128,64 @@ Start with a free 15-minute call. No pitch. Just a conversation about what your 
         publishedAt: new Date("2026-05-05"),
         tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
         slug: "your-dog-isnt-doing-it-to-spite-you"
+      },
+      {
+        title: "Stubborn Dogs Aren't the Problem",
+        excerpt: "Plenty of dogs are stubborn. That's not what's holding training back. Here's what stubbornness actually tells you, and what to do with it.",
+        content: `There's a sentence I hear in nearly every initial assessment. "My dog is stubborn." Sometimes it's said with a laugh. Sometimes with frustration. Sometimes it's the thing that finally pushed the owner to ring me.
+
+I never argue with it. Plenty of dogs are stubborn. The issue isn't whether the label is true. The issue is what owners do with it once they've decided it fits.
+
+## Stubborn isn't a flaw, it's information
+
+Selection pressure made certain breeds independent on purpose. Terriers had to make decisions underground without input from the handler standing on the surface. Scent hounds were bred to commit to a track even when called off it. Livestock guardians were built to assess a threat and act before the shepherd noticed. That's not bad behaviour. That's the job they were drawn for.
+
+Plenty of family dogs without working credentials are stubborn too. A two-year-old Staffy who's spent eighteen months learning that ignoring a recall ends with a treat thirty seconds later has every reason to keep ignoring. From the dog's perspective, they're not being difficult. They're being consistent.
+
+So when an owner tells me their dog is stubborn, I usually agree. The dog isn't wrong. They're working the system that's been built around them.
+
+What gets owners stuck is treating the label as the answer.
+
+"My dog is stubborn" can become the explanation for everything. Why recall doesn't hold. Why the dog ignores them at the park. Why three different trainers haven't shifted the behaviour. Stubbornness becomes a personality fact, like brown eyes or floppy ears, and the conversation stops there.
+
+But stubbornness isn't a fixed trait. It's a signal. It tells you something specific about what the dog values, where your leverage is short, and what they've already learned works.
+
+A dog who blows off recall at the park isn't broken. They're showing you that the squirrel, the smell, or the other dog is worth more than what you're holding. That's useful. Now you know where the gap is.
+
+## What "stubborn" actually tells you
+
+In practice, stubborn usually means one of three things.
+
+**The dog doesn't value what you're offering in this moment.** Treats matter at home where there's nothing else going on. At the park, surrounded by every smell in Brisbane, a piece of kibble doesn't compete with the environment. The reward you've picked is too small for the job.
+
+**The dog has practised getting their way.** Behaviour that's been reinforced gets repeated. If pulling on the lead has worked for two years, pulling is the default strategy. The dog isn't being defiant. They're using what works.
+
+**The dog doesn't actually understand what you're asking.** Most dogs know "sit" in the kitchen. Fewer know "sit" on a slippery cafe floor with traffic going past. The cue hasn't generalised. From the dog's side, your request might as well be in a different language.
+
+None of this is a character flaw. All of it is fixable.
+
+## Building leverage instead of fighting the label
+
+The work starts with the relationship.
+
+I find what each dog actually values. For some dogs it's food. For others it's a tug toy. For a lot of the strong-willed ones, it's the chance to chase, fight a rag, or run hard at something. Once I know what lights them up, I've got currency.
+
+Then I build clarity. The dog learns what each cue means, in stages, in environments that get gradually harder. Sit at home. Sit at the front door. Sit on the footpath. Sit at the cafe. Not all at once. Step by step, until the cue holds in the noise.
+
+And I stop reinforcing the patterns that aren't serving them. Not with punishment. With clean information. The behaviour that used to work doesn't anymore. The new one pays.
+
+A stubborn dog who understands the conversation, sees the value, and gets honest feedback usually softens fast. Not because they've changed personality. Because the system around them finally makes sense.
+
+## Where to start
+
+If your dog is described as stubborn often enough that it's become the explanation, the issue isn't the dog. It's the gap between what you're asking and what they're understanding. Increase the motivation and make it simple.
+
+That's a fixable gap. The free 15-minute phone consult is where I'd start. No commitment, just a conversation about what's actually going on.`,
+        imageUrl: null,
+        readTime: "5 min read",
+        publishedAt: new Date("2026-05-25"),
+        tags: ["behaviour", "training", "stubbornness", "motivation"],
+        slug: "stubborn-dogs-arent-the-problem"
       }
     ];
 
