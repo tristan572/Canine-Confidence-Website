@@ -1181,7 +1181,7 @@ A stubborn dog who understands the conversation, sees the value, and gets honest
 If your dog is described as stubborn often enough that it's become the explanation, the issue isn't the dog. It's the gap between what you're asking and what they're understanding. Increase the motivation and make it simple.
 
 That's a fixable gap. The free 15-minute phone consult is where I'd start. No commitment, just a conversation about what's actually going on.`,
-        imageUrl: null,
+        imageUrl: "/attached_assets/stubborn-dog-pulling_1779699487.png",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-25"),
         tags: ["behaviour", "training", "stubbornness", "motivation"],
