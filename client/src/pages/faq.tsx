@@ -172,13 +172,6 @@ export default function FAQPage() {
             </Card>
 
             <Card className="bg-white p-6">
-              <h3 className="font-semibold text-charcoal mb-3">Do you work with aggressive dogs?</h3>
-              <p className="text-medium-grey text-sm">
-                I specialise in dog behavioural modification, however I do not handle cases involving human aggression. Please get in contact to ensure I can properly assess your situation and provide appropriate references if needed.
-              </p>
-            </Card>
-
-            <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What payment methods do you accept?</h3>
               <p className="text-medium-grey text-sm">
                 I accept all major payment methods through my secure online scheduling system. Payment is required upfront before sessions to confirm your booking.
