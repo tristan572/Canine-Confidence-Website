@@ -92,7 +92,10 @@ export default function FAQPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">How often should we book sessions?</h3>
               <p className="text-medium-grey text-sm">
-                Weekly or fortnightly works for most people. Weekly while you're learning the foundations, fortnightly once you're rolling.
+                Weekly or fortnightly works for coaching sessions. Weekly while you're learning the foundations, fortnightly once you're rolling.
+              </p>
+              <p className="text-medium-grey text-sm mt-2">
+                In-home day trains should be 4-5 times a week as I'm doing the hands on training so it needs to be regular for best results.
               </p>
             </Card>
 
