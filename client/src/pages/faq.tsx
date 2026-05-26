@@ -184,7 +184,7 @@ export default function FAQPage() {
                 Coaching sessions are built around you as much as your dog. If the aim is for you to handle your dog confidently, you need to be part of the session — that's where the skill transfer happens.
               </p>
               <p className="text-medium-grey text-sm mt-2">
-                Walks, Day Train, and handling sessions don't require you to be present. I work directly with your dog and build the foundations. For Day Train sessions, I'll walk you through what we covered at the end so you can maintain it at home.
+                Walks and In-home Day Trains don't require you to be present. I work directly with your dog and build the foundations. For Day Train sessions, I'll walk you through what we covered at the end so you can maintain it at home.
               </p>
               <p className="text-medium-grey text-sm mt-2">
                 When you book, I'll let you know what's needed for your specific service.
