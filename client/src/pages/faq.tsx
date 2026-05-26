@@ -158,6 +158,9 @@ export default function FAQPage() {
               <p className="text-medium-grey text-sm">
                 I typically have availability within 1-2 weeks of your initial consultation. For urgent behavioural issues, I may be able to accommodate earlier sessions.
               </p>
+              <p className="text-medium-grey text-sm mt-2">
+                Please note that a minimum of 24 hours notice is required for all bookings.
+              </p>
             </Card>
 
             <Card className="bg-white p-6">
