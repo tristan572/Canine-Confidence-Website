@@ -52,7 +52,7 @@ export default function FAQPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What if my dog is reactive?</h3>
               <p className="text-medium-grey text-sm">
-                That's a lot of the work I do. Reactive dogs aren't broken. They're overstimulated, under-rested, or missing information. I sort the foundations, then work on the behaviour itself.
+                That's a lot of the work I do. Reactive dogs aren't broken. They're either overstimulated, fearful or frustrated. I sort the foundations, then work on the behaviour itself.
               </p>
               <p className="text-medium-grey text-sm mt-2">
                 If your dog has bitten a human before, mention it on the call. We'll plan accordingly.
