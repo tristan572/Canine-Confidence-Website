@@ -24,6 +24,7 @@ const Sandgate = lazy(() => import("@/pages/sandgate"));
 const Northgate = lazy(() => import("@/pages/northgate"));
 const Chermside = lazy(() => import("@/pages/chermside"));
 const LocalResources = lazy(() => import("@/pages/local-resources"));
+const FAQ = lazy(() => import("@/pages/faq"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function ScrollToTop() {
@@ -69,6 +70,7 @@ function Router() {
           <Route path="/dog-training-northgate" component={Northgate} />
           <Route path="/dog-training-chermside" component={Chermside} />
           <Route path="/local-resources" component={LocalResources} />
+          <Route path="/faq" component={FAQ} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>
