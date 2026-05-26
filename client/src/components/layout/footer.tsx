@@ -99,6 +99,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/faq" className="text-white hover:text-primary-blue transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <Dialog>
                   <DialogTrigger asChild>
                     <button className="text-white hover:text-primary-blue transition-colors text-left">
