@@ -1127,6 +1127,58 @@ Start with a free 15-minute call. No pitch. Just a conversation about what your 
         slug: "your-dog-isnt-doing-it-to-spite-you"
       },
       {
+        title: "Why You Should Let Your Dog Win at Tug",
+        excerpt: "The \"never let your dog win\" rule is outdated. Here's what winning actually does for your dog and why it matters for training.",
+        content: `You've probably heard it. Never let your dog win at tug. It'll make them dominant, pushy, or hard to control.
+
+It's repeated often enough that most owners just accept it. Then they wonder why their dog has no interest in the game.
+
+## Where the rule came from
+
+The idea sits inside a broader dominance framework that's been largely walked back by anyone paying attention. The thinking went: if the dog wins the toy, it perceives itself as higher in the pack hierarchy and becomes harder to manage.
+
+The evidence for this was always thin. What we do know is that dogs aren't running a social ledger every time they grab a rope toy. They're playing. And play has rules that are a lot simpler than dominance theory suggests.
+
+## What winning actually does
+
+Winning builds confidence. It keeps the dog engaged. It gives the dog a reason to come back.
+
+Think about it from the dog's perspective. If every game ends the same way, you take the toy, the fun stops, the dog loses, what's the incentive to keep playing? Some dogs push through anyway. Many don't. They disengage, they stop offering the game, or they grab the toy and run with it because at least that way they get to keep it for a minute.
+
+The win is what makes the contest worth having. Without it, there's no game. There's just a human taking things off a dog.
+
+## The trap of always winning
+
+Owners who follow the "never let them win" rule often end up with dogs that are flat in play, disengaged in training, or possessive about toys because the only time they get to keep one is when they've stolen it.
+
+That's not a confidence problem. That's a play problem that was trained in.
+
+## How to do it properly
+
+The win needs to feel earned. Hand the toy over too easily and it loses meaning. The dog learns the game has no real contest and the value drops. What you want is a genuine back and forth, some real resistance, and then a genuine victory that could win an Oscar. That sequence is what lights a dog up.
+
+Let them win often. Make them work for it. End the game while they still want more, not after they've lost interest. That last part matters. You control when the game ends, not the dog. That's the structure inside the freedom.
+
+Over time this builds a dog that's keen to play, confident in the contest, and actively looking to engage with you. That dog is easier to train, easier to redirect, and more connected in real-world situations where you actually need their attention.
+
+## Why tug is one of the best training tools you have
+
+The engagement built through tug transfers directly into training. A dog that loves playing with you will work harder, recover faster from mistakes, and stay more focused under distraction.
+
+Tug also gives you a non-food reward that works in environments where food doesn't. High-distraction walks, reactive triggers, anywhere the dog's arousal makes treats irrelevant.
+
+Most of the dogs I work with, tug becomes a core part of the training. Not as a side note but as the engine.
+
+If your dog has gone flat in play or won't engage with toys, it's worth looking at whether the game has ever actually been worth playing for them.
+
+A free 15-minute call is a good place to start. canineconfidence.com.au`,
+        imageUrl: "/attached_assets/tug-game-dog-trainer_opt.webp",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-06-01"),
+        tags: ["play", "tug", "training", "engagement", "behaviour"],
+        slug: "why-you-should-let-your-dog-win-at-tug"
+      },
+      {
         title: "Stubborn Dogs Aren't the Problem",
         excerpt: "Plenty of dogs are stubborn. That's not what's holding training back. Here's what stubbornness actually tells you, and what to do with it.",
         content: `There's a sentence I hear in nearly every initial assessment. "My dog is stubborn." Sometimes it's said with a laugh. Sometimes with frustration. Sometimes it's the thing that finally pushed the owner to ring me.
