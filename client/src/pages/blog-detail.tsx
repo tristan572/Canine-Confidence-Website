@@ -72,7 +72,11 @@ export default function BlogDetailPage() {
 
   return (
     <div className="min-h-screen py-20">
-                        <SEO title={`${blogPost.title} | Canine Confidence`} description={blogPost.excerpt} />
+                        <SEO
+          title={blogPost.metaTitle ?? `${blogPost.title} | Canine Confidence`}
+          description={blogPost.excerpt}
+          canonical={`https://canineconfidence.com.au/blog/${blogPost.slug}`}
+        />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link to="/blog">
