@@ -1237,7 +1237,7 @@ If you're a dog owner in north Brisbane and something on this list sounds famili
 Based in Boondall, I work with dogs and owners across Brisbane's north side.
 
 Book via the link in the menu.`,
-        imageUrl: null,
+        imageUrl: "/attached_assets/dog-unmet-needs-brisbane_opt.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-08"),
         tags: ["behaviour", "unmet needs", "Brisbane", "dog training"],
