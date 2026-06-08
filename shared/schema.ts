@@ -49,6 +49,7 @@ export const blogPosts = pgTable("blog_posts", {
   readTime: text("read_time").notNull(),
   slug: text("slug").notNull().default(""),
   tags: text("tags").array(),
+  metaTitle: text("meta_title"),
 });
 
 export const bookings = pgTable("bookings", {

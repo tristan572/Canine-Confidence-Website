@@ -1183,6 +1183,65 @@ That's a fixable gap. The free 15-minute phone consult is where I'd start. No co
         publishedAt: new Date("2026-05-25"),
         tags: ["behaviour", "training", "stubbornness", "motivation"],
         slug: "stubborn-dogs-arent-the-problem"
+      },
+      {
+        title: "Your Dog Isn't the Problem. It's Having a Problem.",
+        metaTitle: "Why Your Dog Acts Out — and What's Actually Missing | Canine Confidence Brisbane",
+        excerpt: "Jumping, chewing, digging, barking — most Brisbane dog behaviour problems come down to one thing. Here's what your dog actually needs, and where to start.",
+        content: `Most behaviour people call "crazy" is just an unmet need wearing a dog suit.
+
+Jumping on furniture. Chewing things they shouldn't. Digging holes in the backyard. Barking at everything. Pulling so hard on the lead the walk becomes a battle.
+
+These aren't personality traits. They're outputs. What the dog does when nobody has set up a framework for what to do instead.
+
+## Why "difficult" dogs usually aren't
+
+In six years of working with dogs across Brisbane, the pattern is consistent. The dog labelled difficult, destructive, or just plain crazy is almost never actually any of those things. They're a dog, in a home that wasn't set up for a dog.
+
+That's not a criticism of owners. Most people get a dog without anyone telling them what dogs actually need beyond food, water, and walks. And walks, as it turns out, only cover one part of the picture.
+
+## The four things dogs need to function
+
+Dogs need four things to live well and behave predictably:
+
+**Physical fulfilment.** Not just exercise, but the right kind for their breed and drive level. A walk around the block doesn't cut it for a working breed with a high activity drive. They need something that actually depletes the tank.
+
+**Mental engagement.** Dogs are problem-solvers. When nothing in their environment gives them a problem to solve, they make one. Usually involving your furniture.
+
+**A clear communication system.** Dogs aren't born understanding what we want. They need a consistent language: a marker for right, a marker for wrong, and the patience to teach them both. Without it, the dog is guessing. Guessing dogs are stressed dogs.
+
+**An outlet for breed drives.** A Staffy needs to tug. A Border Collie needs movement-based training or a mental challenge to work through. A Beagle needs to sniff. When those drives have nowhere to go, they find somewhere. It's not optional for the dog. It's just biology.
+
+## What happens when the needs aren't met
+
+The energy goes somewhere. It always does.
+
+Chewing is often understimulation. Jumping is often unmet drive. Barking at the fence is often a dog that's been left to pattern that behaviour because there was nothing else to do. Reactivity on the lead is sometimes arousal that was never taught to come down.
+
+None of this is malice. Dogs don't misbehave to frustrate you. They respond to what their environment is asking of them, and when the environment is offering nothing, they get creative.
+
+## This isn't a training problem. It's a setup problem.
+
+This is the part most people miss. Training the dog to stop jumping, stop barking, stop pulling is one layer. But if the underlying needs aren't being met, you're chasing symptoms.
+
+Addressing the setup means asking: what does this dog actually need, and is the daily routine providing it? Often the answer changes everything without a single formal training session.
+
+That said, you still need the communication system. Because once the needs are met, you need a way to direct the dog toward the right behaviour when it matters.
+
+## Where to start
+
+Start with observation. Watch the dog for a week. When does the behaviour happen? What did the day look like before it? What's missing?
+
+If you're a dog owner in north Brisbane and something on this list sounds familiar, the free 15-minute call exists for exactly that. No pitch. Just an honest answer about what your dog actually needs.
+
+Based in Boondall, I work with dogs and owners across Brisbane's north side.
+
+Book via the link in the menu.`,
+        imageUrl: null,
+        readTime: "4 min read",
+        publishedAt: new Date("2026-06-08"),
+        tags: ["behaviour", "unmet needs", "Brisbane", "dog training"],
+        slug: "why-dogs-act-out-unmet-needs-brisbane"
       }
     ];
 
