@@ -1237,6 +1237,61 @@ That's a fixable gap. The free 15-minute phone consult is where I'd start. No co
         slug: "stubborn-dogs-arent-the-problem"
       },
       {
+        title: "Why Socialising Your Puppy Has Nothing to Do With Meeting More Dogs",
+        metaTitle: "Why Socialising Your Puppy Has Nothing to Do With Meeting More Dogs | Canine Confidence Brisbane",
+        excerpt: "Most puppy socialisation advice is wrong. Here's what your puppy actually needs to build real confidence in Brisbane's busy suburbs.",
+        content: `Most puppy owners have heard the same advice: get your puppy out there, let them meet as many dogs and people as possible, and the rest will sort itself out.
+
+It sounds reasonable. It's mostly wrong.
+
+## What Does Socialisation Actually Mean?
+
+Socialisation isn't about volume. It's about how your puppy processes the world around them. The goal is a dog who can see something unfamiliar and move on without falling apart. Not a dog who needs to interact with every person, dog, and distraction they encounter.
+
+There's a difference between a puppy who's been exposed to the world and a puppy who's learned to handle it.
+
+## Why More Dogs Doesn't Mean More Confidence
+
+When you let a puppy greet every dog they see, you're not building confidence. You're building a pattern. Your puppy learns that other dogs are always accessible, always exciting, and worth pulling toward on every walk.
+
+By adolescence, that pattern becomes a problem. A dog who expects to get to every dog on lead will start reacting when they can't. What looked like sociability at 10 weeks becomes frustration reactivity at 8 months.
+
+The other risk is flooding. Too many experiences, too fast, without time to process. A puppy who's overwhelmed doesn't learn that the world is safe. They learn that the world is a lot — and start shutting down or overreacting to manage it.
+
+## What a Well-Socialised Puppy Really Looks Like
+
+A well-socialised puppy notices things and moves on. That's it.
+
+They see a dog across the street, register it, and keep walking. They hear a loud noise, flick their ears, and get on with it. They walk into a new environment, sniff around, and settle.
+
+That calm, curious neutrality is the goal. Not enthusiasm. Not indifference. Neutrality.
+
+## How to Expose Your Puppy to the World Without Overwhelming Them
+
+Let your puppy observe before they interact. Sit near a busy footpath. Watch dogs from across the oval. Walk through a shopping centre car park without stopping to greet anyone.
+
+Watch their body language. Ears forward and relaxed, curious movement, easy breathing — that's a puppy processing well. Whale eyes, tight body, tucking back — that's a puppy who needs more distance, not more exposure.
+
+The rule of thumb: if they can't settle and recover in the environment, the environment is too much. Pull back, find the distance where they're comfortable, and work from there.
+
+You also want to remain your puppy's main source of engagement. Occasional well-managed interactions with calm, appropriate dogs are fine. But if every walk revolves around greeting other dogs, you've handed that role to every stranger's pet.
+
+## What to Do If Your Puppy Is Already Struggling
+
+If your puppy barks, lunges, or shuts down around other dogs, that's information. It doesn't mean you've failed. It means the foundations need attention before the exposure continues.
+
+Start at home. Build confidence through play. Establish clear communication. Then reintroduce the world at a pace your puppy can actually handle.
+
+If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. We work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
+
+Book directly at canineconfidence.com.au.`,
+        imageUrl: "/attached_assets/puppy-watching-park-socialisation_opt.webp",
+        readTime: "6 min read",
+        publishedAt: new Date("2026-06-15"),
+        tags: ["puppy", "socialisation", "confidence", "puppy training", "Brisbane"],
+        slug: "puppy-socialisation-not-about-meeting-more-dogs"
+      },
+      {
         title: "Your Dog Isn't the Problem. It's Having a Problem.",
         metaTitle: "Why Your Dog Acts Out — and What's Actually Missing | Canine Confidence Brisbane",
         excerpt: "Jumping, chewing, digging, barking — most Brisbane dog behaviour problems come down to one thing. Here's what your dog actually needs, and where to start.",
