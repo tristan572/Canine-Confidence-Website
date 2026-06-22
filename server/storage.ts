@@ -1292,6 +1292,52 @@ Book directly at canineconfidence.com.au.`,
         slug: "puppy-socialisation-not-about-meeting-more-dogs"
       },
       {
+        title: "Why Your Dog Ignores You on Walks (and the Two-Minute Fix Before You Leave the House)",
+        metaTitle: "Why Your Dog Ignores You on Walks — Two-Minute Fix | Canine Confidence Brisbane",
+        excerpt: "Why dogs tune out on walks, and the simple routine that fixes it before you even leave the house.",
+        content: `Your dog sits perfectly in the kitchen. The second the lead comes out, it's a different animal. Pulling at the door, spinning, dragging you down the driveway before you've even locked it behind you.
+
+You've probably been trying everything you can, when walking. You've just been starting the walk in the wrong place.
+
+## Why the first ten seconds matter
+
+Most owners think a walk starts when they step outside. It actually starts the moment the lead touches the collar. That's the first signal your dog gets that something's about to happen, and it's the first chance you have to decide who's setting the tone.
+
+If the dog drags you out the gate, that's the whole walk decided already. You spend the next forty minutes managing a dog that's already over threshold, instead of walking one that's checked in with you.
+
+## What's actually happening
+
+Dogs are quick to read patterns. If lead on always means rushing straight out the door, the dog learns that sequence and runs it every time. Excitement builds before you've even left the house, and there's nothing to bring it back down.
+
+This isn't about obedience for its own sake. It's about giving the dog a moment to switch from "off duty" to "engaged with you" before the world outside gives it a hundred other things to focus on instead.
+
+## The two-minute fix
+
+Before you open the door:
+
+- Clip the lead on.
+- Ask for a sit.
+- Wait a beat. A few seconds of stillness is enough.
+- Release and walk out together, not the dog first.
+
+That's it. You're not asking for a long down-stay or a complicated routine. You're asking for one small moment of focus before the door opens, so the dog leaves the house with you, not ahead of you.
+
+If your dog won't sit calmly with the lead on, that's useful information too. It usually means the excitement is already too high before you've started, and that's worth working on specifically rather than pushing through it.
+
+## How this carries into the rest of the walk
+
+A dog that checks in with you at the door is far more likely to check in with you at the letterbox, the corner, the dog across the street. You haven't just fixed the first ten seconds. You've set the expectation for the whole walk.
+
+It won't fix everything overnight. But it's the easiest, fastest change most owners can make, and it's usually the first thing I work on with a new client because everything else builds on it.
+
+If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. We'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
+        imageUrl: "/attached_assets/dog-walk-blog-post.png",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-06-22"),
+        tags: ["walks", "leash walking", "training", "behaviour", "quick tips"],
+        slug: "why-your-dog-ignores-you-on-walks"
+      },
+      {
         title: "Your Dog Isn't the Problem. It's Having a Problem.",
         metaTitle: "Why Your Dog Acts Out — and What's Actually Missing | Canine Confidence Brisbane",
         excerpt: "Jumping, chewing, digging, barking — most Brisbane dog behaviour problems come down to one thing. Here's what your dog actually needs, and where to start.",
