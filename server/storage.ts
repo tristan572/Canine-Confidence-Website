@@ -1395,6 +1395,42 @@ Book via the link in the menu.`,
         publishedAt: new Date("2026-06-08"),
         tags: ["behaviour", "unmet needs", "Brisbane", "dog training"],
         slug: "why-dogs-act-out-unmet-needs-brisbane"
+      },
+      {
+        title: "Why I Use Different Dog Training Tools for Different Dogs in Brisbane",
+        excerpt: "A Northside Brisbane dog trainer explains how he matches training tools — flirt poles, flexi leads, tugs and more — to the job each dog needs, not a one-size-fits-all kit. Because the question isn't 'what's the best tool.' It's 'what job do I need this tool to do, for this dog.'",
+        content: `# Why I Use Different Dog Training Tools for Different Dogs in Brisbane
+
+*A Northside Brisbane dog trainer explains how he matches training tools — flirt poles, flexi leads, tugs and more — to the job each dog needs, not a one-size-fits-all kit.*
+
+## Why doesn't every dog get the same training tools?
+
+Because the question isn't "what's the best tool." It's "what job do I need this tool to do, for this dog."
+
+Sometimes that means two very different dogs end up using the same tool for opposite reasons.
+
+## What's actually in my kit, and why
+
+**Flirt pole.** First thing out of the bag with a lot of new dogs. A high-drive dog chases it because it moves like prey. A nervous dog uses the exact same tool to engage with me from a safe distance, no pressure to come close. Same toy, two different jobs. The pole and rope also do the movement work for me, so I'm not manufacturing the same energy a tug would need.
+
+**Flexi lead.** My favourite tool, and the most misunderstood. Used with a bit of common sense, it gives the dog real freedom to sniff and explore while I still have instant pressure on the collar the moment I need it. That combination solves more leash walking problems than people expect.
+
+**Drag line.** Light, long, dragging behind the dog during play or back-tied work. Lets me redirect or interrupt without grabbing the dog or the collar.
+
+**Biothane leads.** Can be glamorous but I love them because they are functional. Rinses clean, doesn't hold water, sand or smell, survives Brisbane humidity.
+
+**Chuckit! Kick It ball and Starmark Swing 'n Fling Chewball.** Some dogs ignore every toy you put in front of them until one of these clicks. The Chewball in particular is close to indestructible — floats, bounces, works for tug or fetch.
+
+## How do you know which tool a dog actually needs?
+
+You watch the dog, not the trend. That's what the Initial Canine Success Assessment is built around — figuring out what actually motivates your dog before we build a plan around it.
+
+Tristan`,
+        imageUrl: "/attached_assets/cleo-ball_opt.webp",
+        readTime: "3 min read",
+        publishedAt: new Date("2026-06-29"),
+        tags: ["tools", "equipment", "Brisbane", "dog training", "flirt pole"],
+        slug: "right-tool-for-the-right-dog-brisbane"
       }
     ];
 
