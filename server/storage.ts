@@ -1431,6 +1431,66 @@ Tristan`,
         publishedAt: new Date("2026-06-29"),
         tags: ["tools", "equipment", "Brisbane", "dog training", "flirt pole"],
         slug: "right-tool-for-the-right-dog-brisbane"
+      },
+      {
+        title: "What Cavoodle Owners Get Right (and What Catches Most People Out)",
+        excerpt: "A Northside Brisbane trainer on what Cavoodles actually need, and the trait that trips up even switched-on owners.",
+        content: `# What Cavoodle Owners Get Right (and What Catches Most People Out)
+
+## Every Cavoodle is really two dogs. Poodle and Cavalier, blended.
+
+Different jobs, different wiring, blended into one dog.
+
+Cavoodles aren't bred to a fixed standard. That's why two Cavoodles from the same litter can land completely differently on the drive spectrum.
+
+The mix is why Cavoodles are everywhere in Brisbane. It's also why so many owners get surprised six months in.
+
+## The poodle side wants a job
+
+Poodles were bred to retrieve, problem-solve, and work closely with a handler all day.
+
+The more poodle in your dog, the more that shows up. Not as bad behaviour. As a dog that needs its brain used, not just its legs.
+
+Running covers the body. It doesn't cover the mind. Scent work, short training sessions, and structured play do the rest.
+
+Skip that part, and the same intelligence turns into barking, chewing, or a dog that won't settle.
+
+## The cavalier side wants you
+
+Cavaliers were bred purely for companionship. Built to stay close, built to bond hard.
+
+That's the trait everyone falls in love with. It's also the trait behind most of the separation anxiety and velcro behaviour I see in this breed.
+
+The dog isn't broken. It's doing exactly what it was bred to do, in a world that expects it to also cope alone for eight hours a day.
+
+## Where it actually goes wrong
+
+Most owners give plenty of affection. Most give plenty of exercise.
+
+What's usually missing is mental work and calm alone time. Those two things don't come naturally to most households, so they get skipped.
+
+When they're missing, barking, chewing, and reactivity often follow.
+
+## What actually works
+
+Three things, done consistently:
+
+- **Mental work daily.** Scent games, short training reps, a bit of structured engagement. Five minutes counts.
+- **Calm alone time, taught early.** Not ignored, not flooded. Built gradually, so being alone stops feeling like a threat.
+- **Clear communication.** A dog that understands what's expected feels less anxious day to day.
+
+## The window that matters
+
+The first year is when these habits set. Not because older dogs can't learn. Because it's easier to build the right pattern early than to unwind the wrong one later.
+
+If you've got a Cavoodle under 12 months, this is the easiest window you'll get.
+
+Tristan`,
+        imageUrl: "/attached_assets/cavoodle-running_opt.webp",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-07-07"),
+        tags: ["Cavoodle", "breed drives", "puppy", "behaviour", "Brisbane"],
+        slug: "what-cavoodle-owners-get-right"
       }
     ];
 
