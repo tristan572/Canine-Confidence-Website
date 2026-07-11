@@ -230,15 +230,7 @@ export default function HomePage() {
                   >
                     20+ Reviews on Google
                   </a>
-                  {" · "}
-                  <a
-                    href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary-blue transition-colors"
-                  >
-                    90+ Five-Star on Madpaws
-                  </a>
+                  {" · 90+ Five-Star on Madpaws"}
                 </h2>
                 <p className="text-xl text-medium-grey">Real dogs. Real owners. Real results.</p>
               </div>
