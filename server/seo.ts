@@ -100,18 +100,6 @@ const STATIC_META: Record<string, PageMeta> = {
     canonicalPath: "/admin",
     noindex: true,
   },
-  "/checkout": {
-    title: "Checkout | Canine Confidence",
-    description: "Complete your purchase from Canine Confidence.",
-    canonicalPath: "/checkout",
-    noindex: true,
-  },
-  "/payment-success": {
-    title: "Payment Successful | Canine Confidence",
-    description: "Your payment was successful.",
-    canonicalPath: "/payment-success",
-    noindex: true,
-  },
 };
 
 const NOT_FOUND_META: PageMeta = {
@@ -163,6 +151,50 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://share.google/NJfyc690NWAMVb3LX",
   ],
 };
+
+interface SitemapEntry {
+  path: string;
+  changefreq: string;
+  priority: string;
+}
+
+const STATIC_SITEMAP_ENTRIES: SitemapEntry[] = [
+  { path: "", changefreq: "weekly", priority: "1.0" },
+  { path: "/services", changefreq: "monthly", priority: "0.9" },
+  { path: "/packages", changefreq: "monthly", priority: "0.9" },
+  { path: "/blog", changefreq: "weekly", priority: "0.8" },
+  { path: "/about", changefreq: "monthly", priority: "0.8" },
+  { path: "/contact", changefreq: "monthly", priority: "0.8" },
+  { path: "/faq", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-chermside", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-sandgate", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-northgate", changefreq: "monthly", priority: "0.7" },
+  { path: "/local-resources", changefreq: "monthly", priority: "0.6" },
+  { path: "/privacy", changefreq: "yearly", priority: "0.2" },
+  { path: "/terms", changefreq: "yearly", priority: "0.2" },
+];
+
+// Built from storage on each request (like /rss.xml already does) so new blog
+// posts and local pages appear without hand-editing a static XML file.
+export function buildSitemapXml(blogPosts: { slug: string }[]): string {
+  const blogEntries: SitemapEntry[] = blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    changefreq: "monthly",
+    priority: "0.6",
+  }));
+
+  const urls = [...STATIC_SITEMAP_ENTRIES, ...blogEntries]
+    .map(
+      (entry) => `  <url>
+    <loc>${SITE_URL}${entry.path}</loc>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`,
+    )
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+}
 
 function escapeHtml(value: string): string {
   return value

@@ -56,16 +56,24 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Service Areas</h3>
             <ul className="space-y-2">
-              {serviceAreas.map((area) => (
-                <li key={area.slug}>
-                  <Link 
-                    href={area.isLive ? area.slug : "/"} 
-                    className="text-white hover:text-primary-blue transition-colors"
-                  >
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
+              {serviceAreas.map((area) =>
+                area.isLive ? (
+                  <li key={area.slug}>
+                    <Link
+                      href={area.slug}
+                      className="text-white hover:text-primary-blue transition-colors"
+                    >
+                      {area.name}
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={area.slug}>
+                    <span className="text-gray-400" title="Page coming soon">
+                      {area.name}
+                    </span>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
