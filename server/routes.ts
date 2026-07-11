@@ -11,11 +11,12 @@ import {
   insertPackageSchema,
   insertSubscriberSchema
 } from "@shared/schema";
-import { 
-  sendBookingNotification, 
-  sendConsultationNotification, 
-  sendContactFormNotification 
+import {
+  sendBookingNotification,
+  sendConsultationNotification,
+  sendContactFormNotification
 } from "./email";
+import { requireAdminAuth } from "./adminAuth";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error('Missing required Stripe secret: STRIPE_SECRET_KEY');
@@ -171,7 +172,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/bookings", async (req, res) => {
+  app.get("/api/bookings", requireAdminAuth, async (req, res) => {
     try {
       const bookings = await storage.getBookings();
       res.json(bookings);
@@ -309,7 +310,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/subscribers", async (req, res) => {
+  app.get("/api/subscribers", requireAdminAuth, async (req, res) => {
     try {
       const subscribers = await storage.getSubscribers();
       res.json(subscribers);

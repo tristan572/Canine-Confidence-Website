@@ -394,7 +394,7 @@ export class MemStorage implements IStorage {
           "Foundations of High-Level Engagement and Obedience on the move",
           "Master Advanced Lead Handling Skills for ultimate control and comfort",
           "Tailored Protocol to shift your dog's feelings about the collar and lead",
-          "Results Guaranteed or I continue until the core goal is met",
+          "I continue until the core goal is met",
           "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: false

@@ -2,6 +2,8 @@ import express, { type Request, Response, NextFunction } from "express";
 import fs from "fs";
 import path from "path";
 import { registerRoutes } from "./routes";
+import { requireAdminAuth } from "./adminAuth";
+import { registerSeoMiddleware } from "./seo";
 
 function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -22,19 +24,31 @@ function serveStatic(app: express.Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  // index: false — otherwise express.static serves index.html for "/" itself,
+  // bypassing the per-route meta injection below.
+  app.use(express.static(distPath, { index: false }));
 
- app.use((req, res, next) => {
-  if (req.method !== "GET" || path.extname(req.path)) {
-    return next();
-  }
-  res.sendFile(path.resolve(distPath, "index.html"));
-});
+  // Serves index.html for client-side routes, with per-route title/description/
+  // canonical/JSON-LD injected server-side (react-helmet-async does not take
+  // effect in the production build, so every route was shipping homepage meta).
+  registerSeoMiddleware(app, distPath);
 }
 
 const app = express();
+
+// Repeat visitors get upgraded to https even if the apex-domain redirect
+// (configured outside this app, at the DNS/registrar level) is ever insecure.
+app.use((req, res, next) => {
+  res.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// The admin page has no client-side login; gate it at the server so the
+// management UI and its data aren't reachable by an unauthenticated visitor.
+app.use("/admin", requireAdminAuth);
 
 // Serve attached assets with cache headers for 1 year
 app.use('/attached_assets', express.static('attached_assets', {
