@@ -226,7 +226,7 @@ export default function BlogPage() {
             </Button>
           </form>
           <p className="text-blue-100 text-sm mt-4">
-            No spam, unsubscribe anytime. We respect your privacy.
+            No spam, unsubscribe anytime. I respect your privacy.
           </p>
         </div>
       </section>

@@ -185,7 +185,7 @@ export default function HomePage() {
                 />
                 <img 
                   src={heroImageJpeg} 
-                  alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
+                  alt="Tristan training a dog outdoors in Brisbane"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
@@ -279,7 +279,7 @@ export default function HomePage() {
                 />
                 <img 
                   src={testimonialsImageJpeg} 
-                  alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
+                  alt="Tristan training a French Bulldog in North Brisbane"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}

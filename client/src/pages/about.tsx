@@ -94,7 +94,7 @@ export default function AboutPage() {
                 <source type="image/webp" srcSet={aboutHeroImageWebp} />
                 <img
                   src={aboutHeroImageJpeg}
-                  alt="Tristan, NDTF certified dog trainer from North Brisbane, with his dog Cleo demonstrating successful play-based training and genetic fulfillment approach"
+                  alt="Tristan with his dog Cleo in North Brisbane"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 <source type="image/webp" srcSet={aboutTrainingImageWebp} />
                 <img
                   src={aboutTrainingImageJpeg}
-                  alt="Tristan demonstrating play-based dog training approach with client's dog in North Brisbane, showcasing positive reinforcement techniques and genetic fulfillment methods"
+                  alt="Tristan training a client's dog in North Brisbane"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
@@ -297,7 +297,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to get started?</h2>
           <p className="text-xl text-white/90 mb-12">
-            Book a free 15-minute call. We'll talk through what's going on with your dog and work out whether we're a good fit.
+            Book a free 15-minute call. I'll talk through what's going on with your dog and work out whether we're a good fit.
           </p>
           <div className="flex justify-center">
             <Dialog>

@@ -182,7 +182,7 @@ export default function BlogDetailPage() {
             
             <Link to="/contact">
               <Button>
-                Have Questions? Contact Us
+                Have Questions? Contact Me
               </Button>
             </Link>
           </div>
