@@ -12,7 +12,7 @@ export default function Privacy() {
               Privacy Policy
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Your privacy is important to me. This policy explains how I collect, use, and protect your information.
+              Your privacy is important to me. This policy explains how I collect, use, and protect your information, in line with the Australian Privacy Principles under the Privacy Act 1988 (Cth).
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
               Last updated: 11 July 2026
@@ -155,14 +155,19 @@ export default function Privacy() {
                   Your Rights
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
-                  <p className="mb-4">You have the right to:</p>
+                  <p className="mb-4">Under the Australian Privacy Principles (Privacy Act 1988 (Cth)), you have the right to:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Access and review your personal information</li>
                     <li>Request corrections to inaccurate information</li>
                     <li>Request deletion of your information (subject to legal requirements)</li>
                     <li>Opt out of marketing communications</li>
                     <li>Request that I stop using photos/videos of your training sessions</li>
+                    <li>Make a complaint about how I've handled your personal information</li>
                   </ul>
+                  <p className="mt-4">
+                    If you'd like to make a complaint, contact me first using the details below. If you're not satisfied with my response, you can lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at{" "}
+                    <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline">oaic.gov.au</a> or on 1300 363 992.
+                  </p>
                 </div>
               </section>
 
@@ -176,9 +181,8 @@ export default function Privacy() {
                 <div className="text-gray-700 dark:text-gray-300">
                   <p className="mb-4">My website may use third-party services:</p>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Payment Processing:</strong> Stripe for secure payment handling</li>
-                    <li><strong>Booking System:</strong> SimplyBook.me for appointment scheduling</li>
-                    <li><strong>Analytics:</strong> Website analytics to improve my services</li>
+                    <li><strong>Booking &amp; Payment:</strong> SimplyBook.me for appointment scheduling and secure payment handling</li>
+                    <li><strong>Email:</strong> Resend for sending booking, consultation, and contact form notifications</li>
                   </ul>
                   <p className="mt-4">These services have their own privacy policies, which I encourage you to review.</p>
                 </div>
@@ -193,7 +197,7 @@ export default function Privacy() {
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
                   <p>
-                    My services are not directed to children under 13. I do not knowingly collect personal information from children under 13. If you believe I have collected information from a child under 13, please contact me immediately.
+                    My services are provided to adult clients on behalf of their dogs. Where a child is present during a session, I don't knowingly collect personal information directly from them, and any photos or videos are focused on the dog and training, not identifying details of children. If you have concerns about information relating to a child in your household, please contact me.
                   </p>
                 </div>
               </section>

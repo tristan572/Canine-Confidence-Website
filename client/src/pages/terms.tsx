@@ -31,7 +31,7 @@ export default function Terms() {
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Booking and Payment</h2>
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
                   <p>Payment is due at the time of booking via SimplyBook.me, or in full prior to or at the start of each session. Sessions will not commence until payment has been received.</p>
-                  <p>Package bookings are paid in full at the time of purchase and are non-refundable.</p>
+                  <p>Package bookings are paid in full at the time of purchase and are non-refundable, except where the Australian Consumer Law entitles you to a refund, replacement, or other remedy — for example, if a service isn't provided with acceptable care and skill. Nothing in this clause limits those rights (see clause 7).</p>
                 </div>
               </section>
 
@@ -61,6 +61,7 @@ export default function Terms() {
                     <li>Inform Canine Confidence immediately of any change in the dog's health or behaviour that may be relevant to training</li>
                   </ul>
                   <p>The client acknowledges that the dog may be exposed to environmental conditions during sessions including foot traffic, vehicles, other animals, and varying weather.</p>
+                  <p>Where sessions take place in a public location, the dog must be secured on a lead at all times unless otherwise directed by Canine Confidence. Dogs with a history of aggression or biting must wear a properly fitted muzzle during public sessions where recommended by Canine Confidence. The client remains responsible for any legal reporting obligations under local council or state regulations if the dog injures a person or another animal during or after a session.</p>
                 </div>
               </section>
 

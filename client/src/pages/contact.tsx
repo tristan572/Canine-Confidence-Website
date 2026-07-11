@@ -2,8 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import BookingWidget from "@/components/ui/booking-widget";
-import { 
+import {
   Phone, 
   Mail, 
   MapPin, 
@@ -20,11 +19,8 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
 import contactHeroImageWebp from "@assets/image_1750049297197.webp";
 import contactHeroImageJpeg from "@assets/image_1750049297197.jpg";
-import { useState } from "react";
 
 export default function ContactPage() {
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
-  
   return (
     <div className="min-h-screen">
       <SEO 
@@ -299,7 +295,7 @@ export default function ContactPage() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => setShowBookingWidget(true)}
+                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -309,11 +305,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      
-      <BookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
-      />
     </div>
   );
 }
