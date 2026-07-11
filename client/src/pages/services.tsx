@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -6,13 +7,13 @@ import { SEO } from "@/components/SEO";
 import { ServiceSchema } from "@/components/StructuredData";
 import ReactMarkdown from "react-markdown";
 import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
-import { 
-  GraduationCap, 
-  Footprints, 
-  User, 
-  Route, 
-  Home, 
-  Phone, 
+import {
+  GraduationCap,
+  Footprints,
+  User,
+  Route,
+  Home,
+  Phone,
   Clock,
   MapPin,
   DollarSign,
@@ -23,7 +24,9 @@ import {
   MapPinned,
   Mountain,
   Heart,
-  Brain
+  Brain,
+  ShieldCheck,
+  Award
 } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
@@ -284,6 +287,55 @@ export default function ServicesPage() {
               <p className="text-medium-grey">
                 I empower you with the clarity and practical tools necessary to maintain and advance your dog's training well beyond our sessions.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-primary-blue content-visibility-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">Not sure which service is right for you?</h2>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                A free 15-minute call is enough to work out what your dog actually needs — no pressure, no sales pitch.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Book a Free Call
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogTitle>Book a Free Call</DialogTitle>
+                  <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
+
+              <Link href="/packages">
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
+                >
+                  View Training Packages
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex items-center justify-center gap-12 pt-8 text-blue-100">
+              <div className="flex items-center">
+                <ShieldCheck className="w-5 h-5 mr-2" />
+                <span>Fully Insured</span>
+              </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                <span>Certified Professional</span>
+              </div>
             </div>
           </div>
         </div>
