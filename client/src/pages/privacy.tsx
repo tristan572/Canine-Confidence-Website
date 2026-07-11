@@ -15,7 +15,7 @@ export default function Privacy() {
               Your privacy is important to me. This policy explains how I collect, use, and protect your information.
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-              Last updated: {new Date().toLocaleDateString()}
+              Last updated: 11 July 2026
             </p>
           </div>
 
@@ -217,7 +217,7 @@ export default function Privacy() {
               {/* Contact Information */}
               <section className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                  Contact Us
+                  Contact Me
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300">
                   <p className="mb-4">
@@ -229,7 +229,7 @@ export default function Privacy() {
                     <p><strong>Address:</strong> North Brisbane, Queensland</p>
                   </div>
                   <Button className="mt-4" onClick={() => window.location.href = '/contact'}>
-                    Contact Us
+                    Contact Me
                   </Button>
                 </div>
               </section>

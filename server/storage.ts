@@ -1057,7 +1057,7 @@ It does pass. Eventually. But it leaves behind whatever the dog has been practis
 
 If your dog is in the adolescent window and things are slipping, that's the time to act.
 
-A free 15-minute call is the simplest place to start. We'll talk through what you're seeing, what's normal, and what's worth working on now.`,
+A free 15-minute call is the simplest place to start. I'll talk through what you're seeing, what's normal, and what's worth working on now.`,
         imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107_opt.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-11"),
@@ -1282,7 +1282,7 @@ If your puppy barks, lunges, or shuts down around other dogs, that's information
 
 Start at home. Build confidence through play. Establish clear communication. Then reintroduce the world at a pace your puppy can actually handle.
 
-If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. We work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
+If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. I work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
 
 Book directly at canineconfidence.com.au.`,
         imageUrl: "/attached_assets/puppy-watching-park-socialisation_opt.webp",
@@ -1330,7 +1330,7 @@ A dog that checks in with you at the door is far more likely to check in with yo
 
 It won't fix everything overnight. But it's the easiest, fastest change most owners can make, and it's usually the first thing I work on with a new client because everything else builds on it.
 
-If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. We'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
+If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. I'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
         imageUrl: "/attached_assets/dog-walk-blog-post.png",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-22"),

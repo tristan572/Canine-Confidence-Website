@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import ConsultationForm from "@/components/forms/consultation-form";
 import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
 import { serviceAreas } from "@/config/locations";
@@ -119,6 +119,8 @@ export default function Footer() {
                     </button>
                   </DialogTrigger>
                   <DialogContent className="max-w-md">
+                    <DialogTitle>Free Phone Consultation</DialogTitle>
+                    <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs.</DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
@@ -133,7 +135,11 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <Phone className="h-4 w-4 text-primary-blue mt-0.5" />
                 <div className="text-white">
-                  <div>0409521358</div>
+                  <div>
+                    <a href="tel:0409521358" className="hover:text-primary-blue transition-colors">
+                      0409 521 358
+                    </a>
+                  </div>
                   <div className="text-xs text-gray-300">Phone hours: Mon-Sat, 8am - 8pm</div>
                 </div>
               </li>

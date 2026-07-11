@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link } from "wouter";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -14,6 +16,10 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 export default function ContactForm() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  // Honeypot: real users never see or fill this field; bots that
+  // auto-fill every input do. Kept outside react-hook-form/Zod so the
+  // value survives to the server instead of being stripped as unknown.
+  const [honeypot, setHoneypot] = useState("");
 
   const form = useForm({
     resolver: zodResolver(insertContactSubmissionSchema),
@@ -50,12 +56,22 @@ export default function ContactForm() {
   });
 
   const onSubmit = (data: any) => {
-    contactMutation.mutate(data);
+    contactMutation.mutate({ ...data, website: honeypot });
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <input
+          type="text"
+          name="website"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+        />
         <div className="space-y-4">
           <FormField
             control={form.control}
@@ -130,7 +146,7 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Tell Us About Your Dog</FormLabel>
+                <FormLabel>Tell Me About Your Dog</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="Describe your dog's behaviour, age, breed, and what you'd like to work on..."
@@ -157,7 +173,15 @@ export default function ContactForm() {
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel className="text-sm">
-                    I agree to the terms and conditions and consent to being contacted about training services. *
+                    I agree to the{" "}
+                    <Link
+                      href="/terms"
+                      className="text-primary-blue hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      terms and conditions
+                    </Link>{" "}
+                    and consent to being contacted about training services. *
                   </FormLabel>
                   <FormMessage />
                 </div>

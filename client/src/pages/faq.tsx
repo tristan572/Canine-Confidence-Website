@@ -55,7 +55,7 @@ export default function FAQPage() {
                 That's a lot of the work I do. Reactive dogs aren't broken. They're either overstimulated, fearful or frustrated. I sort the foundations, then work on the behaviour itself.
               </p>
               <p className="text-medium-grey text-sm mt-2">
-                If your dog has bitten a human before, mention it on the call. We'll plan accordingly.
+                If your dog has bitten a human before, mention it on the call. I'll plan accordingly.
               </p>
             </Card>
 
@@ -102,14 +102,14 @@ export default function FAQPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What about treats? When can we stop using them?</h3>
               <p className="text-medium-grey text-sm">
-                Food is one tool, not the whole toolkit. Once we work out what actually drives your dog (some are food-led, most are play-led underneath), we use that as the primary reward and fade the food over time. The goal is a dog who works with you because the relationship is the reward, not because there's a treat in your hand.
+                Food is one tool, not the whole toolkit. Once I work out what actually drives your dog (some are food-led, most are play-led underneath), I use that as the primary reward and fade the food over time. The goal is a dog who works with you because the relationship is the reward, not because there's a treat in your hand.
               </p>
             </Card>
 
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What if it rains?</h3>
               <p className="text-medium-grey text-sm">
-                We work indoors, under cover, or reschedule. I'll let you know on the morning if the weather looks like it'll get in the way.
+                I work indoors, under cover, or reschedule. I'll let you know on the morning if the weather looks like it'll get in the way.
               </p>
             </Card>
 
@@ -190,7 +190,7 @@ export default function FAQPage() {
                 Coaching sessions are built around you as much as your dog. If the aim is for you to handle your dog confidently, you need to be part of the session — that's where the skill transfer happens.
               </p>
               <p className="text-medium-grey text-sm mt-2">
-                Walks and In-home Day Trains don't require you to be present. I work directly with your dog and build the foundations. For Day Train sessions, I'll walk you through what we covered at the end so you can maintain it at home.
+                Walks and In-home Day Trains don't require you to be present. I work directly with your dog and build the foundations. For Day Train sessions, I'll walk you through what I covered at the end so you can maintain it at home.
               </p>
               <p className="text-medium-grey text-sm mt-2">
                 When you book, I'll let you know what's needed for your specific service.

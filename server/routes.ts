@@ -17,6 +17,13 @@ import {
 import { requireAdminAuth } from "./adminAuth";
 import { buildSitemapXml } from "./seo";
 
+// Honeypot field ("website") is only ever filled by bots — real users never
+// see it. Returning a fake success keeps bots from retrying/escalating,
+// without persisting the submission or emailing a notification.
+function isHoneypotTripped(req: express.Request): boolean {
+  return typeof req.body?.website === "string" && req.body.website.trim().length > 0;
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Services routes
   app.get("/api/services", async (req, res) => {
@@ -148,6 +155,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Consultations routes
   app.post("/api/consultations", async (req, res) => {
+    if (isHoneypotTripped(req)) {
+      return res.status(201).json({ id: 0 });
+    }
     try {
       const validatedData = insertConsultationSchema.parse(req.body);
       const consultation = await storage.createConsultation(validatedData);
@@ -172,6 +182,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Contact submissions routes
   app.post("/api/contact", async (req, res) => {
+    if (isHoneypotTripped(req)) {
+      return res.status(201).json({ id: 0 });
+    }
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);

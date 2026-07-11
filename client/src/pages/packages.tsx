@@ -19,12 +19,11 @@ declare global {
 }
 
 const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const [showWidget, setShowWidget] = useState(false);
   const widgetContainerRef = useRef<HTMLDivElement>(null);
   const widgetInstanceRef = useRef<any>(null);
 
   useEffect(() => {
-    if (!showWidget) return;
+    if (!isOpen) return;
 
     const loadWidget = () => {
       if (window.SimplybookWidget && widgetContainerRef.current) {
@@ -91,97 +90,48 @@ const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: (
       }
       widgetInstanceRef.current = null;
     };
-  }, [showWidget]);
-
-  const handleContinue = () => {
-    setShowWidget(true);
-  };
-
-  const handleClose = () => {
-    setShowWidget(false);
-    onClose();
-  };
-
-  // Reset widget state when dialog closes
-  useEffect(() => {
-    if (!isOpen) {
-      setShowWidget(false);
-    }
   }, [isOpen]);
 
   return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      {!showWidget ? (
-        <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
-            Secure Booking System
-          </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
-          </DialogDescription>
-          
-          <div className="space-y-4">
-            <Button 
-              onClick={handleContinue}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
-            </Button>
-            
-            <Button 
-              onClick={handleClose}
-              variant="outline"
-              className="w-full py-3"
-            >
-              Cancel
-            </Button>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0">
+        <div className="bg-blue-600 p-4 flex justify-between items-center">
+          <div>
+            <DialogTitle className="text-xl font-bold text-white">
+              Book Your Training Package
+            </DialogTitle>
+            <DialogDescription className="text-blue-100 text-sm">
+              Select your preferred training package and schedule
+            </DialogDescription>
           </div>
-          
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>🔒 Secure SSL encrypted booking system</p>
-            <p>📅 Real-time availability • 💳 Secure payments</p>
-          </div>
-        </DialogContent>
-      ) : (
-        <DialogContent className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0">
-          <div className="bg-blue-600 p-4 flex justify-between items-center">
-            <div>
-              <DialogTitle className="text-xl font-bold text-white">
-                Book Your Training Package
-              </DialogTitle>
-              <DialogDescription className="text-blue-100 text-sm">
-                Select your preferred training package and schedule
-              </DialogDescription>
-            </div>
-            <Button
-              onClick={handleClose}
-              variant="ghost"
-              size="sm"
-              className="text-white hover:bg-blue-700"
-            >
-              ✕
-            </Button>
-          </div>
-          
-          <div 
-            ref={widgetContainerRef}
-            className="w-full h-[650px] bg-white flex items-center justify-center"
-            style={{ minHeight: '650px' }}
+          <Button
+            onClick={onClose}
+            variant="ghost"
+            size="sm"
+            className="text-white hover:bg-blue-700"
           >
-            <div className="text-center">
-              <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
-              <p className="text-gray-600">Loading booking system...</p>
-            </div>
+            ✕
+          </Button>
+        </div>
+
+        <div
+          ref={widgetContainerRef}
+          className="w-full h-[650px] bg-white flex items-center justify-center"
+          style={{ minHeight: '650px' }}
+        >
+          <div className="text-center">
+            <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
+            <p className="text-gray-600 mb-2">Loading booking system...</p>
+            <p className="text-xs text-gray-500">🔒 SSL encrypted • Real-time availability</p>
           </div>
-        </DialogContent>
-      )}
+        </div>
+      </DialogContent>
     </Dialog>
   );
 };
 
 const PackageCard = ({ pkg }: { pkg: Package }) => {
   const [showBookingWidget, setShowBookingWidget] = useState(false);
-  const [showBookingDialog, setShowBookingDialog] = useState(false);
 
   const getPackageBookingUrl = () => {
     const packageMap: Record<string, number> = {
@@ -194,9 +144,9 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
       "The Adventure Five Pack": 4,
       "The Neighbourhood Enrichment Five Pack": 5,
     };
-    
+
     const packageId = packageMap[pkg.name];
-    return packageId 
+    return packageId
       ? `https://canineconfidence.simplybook.net/v2/#packages/${packageId}`
       : null;
   };
@@ -204,18 +154,10 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
   const handleBookClick = () => {
     const directUrl = getPackageBookingUrl();
     if (directUrl) {
-      setShowBookingDialog(true);
+      window.open(directUrl, '_blank');
     } else {
       setShowBookingWidget(true);
     }
-  };
-
-  const handleContinueToBooking = () => {
-    const directUrl = getPackageBookingUrl();
-    if (directUrl) {
-      window.open(directUrl, '_blank');
-    }
-    setShowBookingDialog(false);
   };
 
   return (
@@ -297,41 +239,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
         </CardContent>
       </Card>
 
-      {/* Direct Booking Dialog */}
-      <Dialog open={showBookingDialog} onOpenChange={setShowBookingDialog}>
-        <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
-            Secure Booking System
-          </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
-          </DialogDescription>
-          
-          <div className="space-y-4">
-            <Button 
-              onClick={handleContinueToBooking}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
-            </Button>
-            
-            <Button 
-              onClick={() => setShowBookingDialog(false)}
-              variant="outline"
-              className="w-full py-3"
-            >
-              Cancel
-            </Button>
-          </div>
-          
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>🔒 Secure SSL encrypted booking system</p>
-            <p>📅 Real-time availability • 💳 Secure payments</p>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      <PackageBookingWidget 
+      <PackageBookingWidget
         isOpen={showBookingWidget} 
         onClose={() => setShowBookingWidget(false)} 
       />
@@ -424,7 +332,7 @@ export default function PackagesPage() {
             <div className="relative">
               <img 
                 src={packagesHeroImage} 
-                alt="Professional dog training program in North Brisbane featuring play-based enrichment activities and genetic fulfillment training methods" 
+                alt="A dog training session in North Brisbane"
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
