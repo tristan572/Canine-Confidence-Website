@@ -41,10 +41,9 @@ import {
 const BookingWidget = lazy(() => import("@/components/ui/booking-widget"));
 const ConsultationForm = lazy(() => import("@/components/forms/consultation-form"));
 import ServiceCard from "@/components/ui/service-card";
-import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
-import type { Service, Product, BlogPost, Package, Testimonial } from "@shared/schema";
+import type { Service, BlogPost, Package, Testimonial } from "@shared/schema";
 
 export default function HomePage() {
   const [showBookingWidget, setShowBookingWidget] = useState(false);
@@ -73,11 +72,6 @@ export default function HomePage() {
   });
 
   // Deferred queries - load after initial paint to reduce main thread work
-  const { data: products, isLoading: productsLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-    enabled: loadDeferred,
-  });
-
   const { data: blogPosts, isLoading: blogLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog"],
     enabled: loadDeferred,

@@ -82,12 +82,6 @@ const STATIC_META: Record<string, PageMeta> = {
       "Trusted local vets, pet shops, groomers, and dog-friendly parks recommended by Canine Confidence. Building a strong North Brisbane dog community.",
     canonicalPath: "/local-resources",
   },
-  "/products": {
-    title: "Dog Training Tools & Recommended Gear | Canine Confidence",
-    description:
-      "Professional training equipment and toys coming soon to Canine Confidence. Trainer-approved gear for effective training sessions in Brisbane.",
-    canonicalPath: "/products",
-  },
   "/privacy": {
     title: "Privacy Policy | Canine Confidence",
     description:
@@ -104,18 +98,6 @@ const STATIC_META: Record<string, PageMeta> = {
     title: "Website Management | Canine Confidence",
     description: "Internal website management tools.",
     canonicalPath: "/admin",
-    noindex: true,
-  },
-  "/checkout": {
-    title: "Checkout | Canine Confidence",
-    description: "Complete your purchase from Canine Confidence.",
-    canonicalPath: "/checkout",
-    noindex: true,
-  },
-  "/payment-success": {
-    title: "Payment Successful | Canine Confidence",
-    description: "Your payment was successful.",
-    canonicalPath: "/payment-success",
     noindex: true,
   },
 };
@@ -188,7 +170,6 @@ const STATIC_SITEMAP_ENTRIES: SitemapEntry[] = [
   { path: "/dog-training-sandgate", changefreq: "monthly", priority: "0.7" },
   { path: "/dog-training-northgate", changefreq: "monthly", priority: "0.7" },
   { path: "/local-resources", changefreq: "monthly", priority: "0.6" },
-  { path: "/products", changefreq: "monthly", priority: "0.4" },
   { path: "/privacy", changefreq: "yearly", priority: "0.2" },
   { path: "/terms", changefreq: "yearly", priority: "0.2" },
 ];
