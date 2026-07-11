@@ -61,6 +61,7 @@ export default function Terms() {
                     <li>Inform Canine Confidence immediately of any change in the dog's health or behaviour that may be relevant to training</li>
                   </ul>
                   <p>The client acknowledges that the dog may be exposed to environmental conditions during sessions including foot traffic, vehicles, other animals, and varying weather.</p>
+                  <p>Where sessions take place in a public location, the dog must be secured on a lead at all times unless otherwise directed by Canine Confidence. Dogs with a history of aggression or biting must wear a properly fitted muzzle during public sessions where recommended by Canine Confidence. The client remains responsible for any legal reporting obligations under local council or state regulations if the dog injures a person or another animal during or after a session.</p>
                 </div>
               </section>
 
