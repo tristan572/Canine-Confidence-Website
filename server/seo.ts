@@ -82,6 +82,12 @@ const STATIC_META: Record<string, PageMeta> = {
       "Trusted local vets, pet shops, groomers, and dog-friendly parks recommended by Canine Confidence. Building a strong North Brisbane dog community.",
     canonicalPath: "/local-resources",
   },
+  "/products": {
+    title: "Dog Training Tools & Recommended Gear | Canine Confidence",
+    description:
+      "Professional training equipment and toys coming soon to Canine Confidence. Trainer-approved gear for effective training sessions in Brisbane.",
+    canonicalPath: "/products",
+  },
   "/privacy": {
     title: "Privacy Policy | Canine Confidence",
     description:
@@ -163,6 +169,51 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://share.google/NJfyc690NWAMVb3LX",
   ],
 };
+
+interface SitemapEntry {
+  path: string;
+  changefreq: string;
+  priority: string;
+}
+
+const STATIC_SITEMAP_ENTRIES: SitemapEntry[] = [
+  { path: "", changefreq: "weekly", priority: "1.0" },
+  { path: "/services", changefreq: "monthly", priority: "0.9" },
+  { path: "/packages", changefreq: "monthly", priority: "0.9" },
+  { path: "/blog", changefreq: "weekly", priority: "0.8" },
+  { path: "/about", changefreq: "monthly", priority: "0.8" },
+  { path: "/contact", changefreq: "monthly", priority: "0.8" },
+  { path: "/faq", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-chermside", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-sandgate", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-northgate", changefreq: "monthly", priority: "0.7" },
+  { path: "/local-resources", changefreq: "monthly", priority: "0.6" },
+  { path: "/products", changefreq: "monthly", priority: "0.4" },
+  { path: "/privacy", changefreq: "yearly", priority: "0.2" },
+  { path: "/terms", changefreq: "yearly", priority: "0.2" },
+];
+
+// Built from storage on each request (like /rss.xml already does) so new blog
+// posts and local pages appear without hand-editing a static XML file.
+export function buildSitemapXml(blogPosts: { slug: string }[]): string {
+  const blogEntries: SitemapEntry[] = blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    changefreq: "monthly",
+    priority: "0.6",
+  }));
+
+  const urls = [...STATIC_SITEMAP_ENTRIES, ...blogEntries]
+    .map(
+      (entry) => `  <url>
+    <loc>${SITE_URL}${entry.path}</loc>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`,
+    )
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+}
 
 function escapeHtml(value: string): string {
   return value

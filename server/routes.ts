@@ -17,6 +17,7 @@ import {
   sendContactFormNotification
 } from "./email";
 import { requireAdminAuth } from "./adminAuth";
+import { buildSitemapXml } from "./seo";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error('Missing required Stripe secret: STRIPE_SECRET_KEY');
@@ -226,6 +227,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({ message: "Failed to submit contact form" });
       }
+    }
+  });
+
+  // Sitemap (built from storage each request, like the RSS feed below, so new
+  // blog posts and local pages don't need a hand-maintained static XML file)
+  app.get("/sitemap.xml", async (req, res) => {
+    try {
+      const posts = await storage.getBlogPosts();
+      res.set("Content-Type", "application/xml; charset=utf-8");
+      res.send(buildSitemapXml(posts.map((post) => ({ slug: post.slug }))));
+    } catch (error) {
+      res.status(500).send("Failed to generate sitemap");
     }
   });
 
