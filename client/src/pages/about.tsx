@@ -216,7 +216,7 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">100+ Five-Star Reviews</h3>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">20+ Google Reviews · 90+ on Madpaws</h3>
                     <p className="text-medium-grey">Verified across Google and Madpaws from North Brisbane families.</p>
                   </div>
                 </div>
