@@ -1499,10 +1499,10 @@ Tristan`,
     // Seed testimonials
     const testimonialData: InsertTestimonial[] = [
       {
-        clientName: "Donna M.",
-        dogName: "Winnie",
+        clientName: "Patsy Poppins",
+        dogName: "Bean",
         rating: 5,
-        reviewText: "I enjoyed Tristan's expertise and insights about the benefits of play-based learning (for me as well as Winnie! :-) ) together with his understanding of the importance of working with my 10 month old puppy's strengths & positive characteristics while also attending to his challenges",
+        reviewText: "From the get go, Tristan has been amazing to work with. Very knowledgeable, relaxed and great at explaining dog behaviour, communication and training approaches. Tristan has taught me how to communicate with Bean by using play. Through play Bean has learnt key words which we've started to transfer to day to day life. Previously Bean would lockjaw on balls or bones he picked up while walking. He now lets go when I ask. We've also been working on reactivity from frustration and making progress after just a few 1 on 1 sessions. The whole process has improved my relationship with Bean. We both enjoy the play activities Tristan has taught us and it's become part of our daily routine.",
         service: "Training",
         location: null
       },
