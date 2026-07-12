@@ -1,5 +1,12 @@
 import { Switch, Route, useLocation } from "wouter";
 import { useEffect, Suspense, lazy } from "react";
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -27,11 +34,21 @@ const NotFound = lazy(() => import("@/pages/not-found"));
 
 function ScrollToTop() {
   const [location] = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // GA4's automatic page_view only fires on the initial load; client-side
+    // route changes need to be sent manually (send_page_view is disabled in
+    // index.html's gtag config to avoid double-counting the entry page).
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: location,
+        page_location: window.location.href,
+      });
+    }
   }, [location]);
-  
+
   return null;
 }
 

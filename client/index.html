@@ -9,6 +9,18 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+    <!-- Google Analytics (GA4). send_page_view is off here because this is a
+         client-routed SPA — App.tsx fires page_view on every route change
+         instead, so navigations between pages are tracked without double-
+         counting the entry page. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-76R2WHKH55"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-76R2WHKH55', { send_page_view: false });
+    </script>
+
     <!-- Static fallback meta tags for crawlers that don't execute JS -->
     <title>Dog Training North Brisbane | Canine Confidence</title>
     <meta name="description" content="Balanced dog training in North Brisbane. Calm, focused dogs trained in-home and in the real world. Book a free phone consult with Canine Confidence." />
