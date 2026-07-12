@@ -183,6 +183,7 @@ export default function Privacy() {
                   <ul className="list-disc list-inside space-y-2">
                     <li><strong>Booking &amp; Payment:</strong> SimplyBook.me for appointment scheduling and secure payment handling</li>
                     <li><strong>Email:</strong> Resend for sending booking, consultation, and contact form notifications</li>
+                    <li><strong>Analytics:</strong> Google Analytics to understand how visitors use my website</li>
                   </ul>
                   <p className="mt-4">These services have their own privacy policies, which I encourage you to review.</p>
                 </div>
