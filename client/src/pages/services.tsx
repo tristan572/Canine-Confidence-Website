@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { ServiceSchema } from "@/components/StructuredData";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
 import {
   GraduationCap,
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                     </div>
                     <h3 className="text-xl font-semibold text-charcoal mb-4">{service.name}</h3>
                     <div className="text-medium-grey mb-6 prose prose-sm max-w-none">
-                      <ReactMarkdown>{service.description}</ReactMarkdown>
+                      <FormattedText text={service.description} />
                     </div>
                     
                     {service.features && service.features.length > 0 && (

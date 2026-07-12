@@ -15,9 +15,9 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 import Home from "@/pages/home";
-import Services from "@/pages/services";
-import Packages from "@/pages/packages";
 
+const Services = lazy(() => import("@/pages/services"));
+const Packages = lazy(() => import("@/pages/packages"));
 const Blog = lazy(() => import("@/pages/blog"));
 const BlogDetail = lazy(() => import("@/pages/blog-detail"));
 const About = lazy(() => import("@/pages/about"));

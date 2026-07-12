@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import heroImageJpeg from "@assets/IMG_0177_fallback_opt.jpg";
 import heroImage400 from "@assets/IMG_0177_hero_400_opt.webp";
 import heroImage800 from "@assets/IMG_0177_hero_800_opt.webp";
@@ -360,7 +360,7 @@ export default function HomePage() {
                     <div className="text-center mb-6">
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
                       <div className="text-gray-600 text-sm mb-4 text-left prose prose-sm max-w-none">
-                        <ReactMarkdown>{pkg.description}</ReactMarkdown>
+                        <FormattedText text={pkg.description} />
                       </div>
                       
                       <div className="flex items-center justify-center gap-2">

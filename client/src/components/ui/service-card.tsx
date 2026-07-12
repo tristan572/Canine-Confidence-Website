@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, DollarSign, Calendar, type LucideIcon } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import type { Service } from "@shared/schema";
 
 interface ServiceCardProps {
@@ -52,7 +52,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
           </div>
           <h3 className="text-xl font-semibold text-charcoal mb-4">{service.name}</h3>
           <div className="text-medium-grey mb-6 prose prose-sm max-w-none">
-            <ReactMarkdown>{service.description}</ReactMarkdown>
+            <FormattedText text={service.description} />
           </div>
           <div className="space-y-2 mb-6">
             <div className="flex items-center text-sm text-medium-grey">

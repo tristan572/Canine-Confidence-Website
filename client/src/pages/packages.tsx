@@ -9,7 +9,7 @@ import { SEO } from "@/components/SEO";
 import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign, ShieldCheck, Award } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { apiRequest } from "@/lib/queryClient";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import type { Package } from "@shared/schema";
 import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
 
@@ -78,7 +78,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
 
         <CardContent className="space-y-6">
           <div className="text-gray-600 text-left prose prose-sm max-w-none">
-            <ReactMarkdown>{pkg.description}</ReactMarkdown>
+            <FormattedText text={pkg.description} />
           </div>
 
           <div className="text-center">
