@@ -219,18 +219,19 @@ export default function HomePage() {
                   <Star className="w-4 h-4" />
                   Client Reviews
                 </div>
-                <h2 className="text-4xl font-bold text-charcoal">
+                <h2 className="text-4xl font-bold text-charcoal">Real Dogs. Real Owners. Real Results.</h2>
+                <p className="text-xl text-medium-grey">
+                  All Five-Star:{" "}
                   <a
                     href="https://share.google/NJfyc690NWAMVb3LX"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary-blue transition-colors"
+                    className="text-primary-blue hover:underline font-semibold"
                   >
-                    20+ Reviews on Google
+                    20+ on Google
                   </a>
-                  {" · 90+ Five-Star on Madpaws"}
-                </h2>
-                <p className="text-xl text-medium-grey">Real dogs. Real owners. Real results.</p>
+                  {" · 90+ on Madpaws"}
+                </p>
               </div>
 
               {testimonialsLoading ? (
