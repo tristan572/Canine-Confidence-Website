@@ -17,10 +17,9 @@ import {
   sendContactFormNotification 
 } from "./email";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('Missing required Stripe secret: STRIPE_SECRET_KEY');
-}
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Services routes
@@ -382,6 +381,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Stripe payment routes
   app.post("/api/create-payment-intent", async (req, res) => {
+    if (!stripe) {
+      return res.status(503).json({ message: "Payments are unavailable" });
+    }
+
     try {
       const { items, sessionId } = req.body;
       
@@ -425,6 +428,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Payment success webhook/confirmation
   app.post("/api/payment-success", async (req, res) => {
+    if (!stripe) {
+      return res.status(503).json({ message: "Payments are unavailable" });
+    }
+
     try {
       const { sessionId, paymentIntentId } = req.body;
       
