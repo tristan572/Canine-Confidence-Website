@@ -310,7 +310,7 @@ export default function SandgatePage() {
                 That's what this program is built around.
               </p>
               <p className="text-lg text-medium-grey leading-relaxed">
-                Six private sessions, delivered in your Bayside home. We work on the foundations that actually matter — calm settling, clear communication, and the confidence to handle real life.
+                Six private sessions, delivered in your Bayside home. I work on the foundations that actually matter — calm settling, clear communication, and the confidence to handle real life.
               </p>
 
               <div className="space-y-4">
@@ -528,7 +528,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll access my secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -561,7 +561,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll access my secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
           </DialogDescription>
 
           <div className="space-y-4">
@@ -592,7 +592,7 @@ export default function SandgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to purchase The Adventure Pack (5 sessions, $375).
+            You'll be redirected to my secure booking system to purchase The Adventure Pack (5 sessions, $375).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -619,7 +619,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll access my secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -652,7 +652,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can browse all available training packages and services, choose your preferred option, and complete your booking with integrated payment processing.
+            You'll access my secure booking platform where you can browse all available training packages and services, choose your preferred option, and complete your booking with integrated payment processing.
           </DialogDescription>
           
           <div className="space-y-4">

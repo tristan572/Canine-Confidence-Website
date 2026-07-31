@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import heroImageJpeg from "@assets/IMG_0177_fallback_opt.jpg";
 import heroImage400 from "@assets/IMG_0177_hero_400_opt.webp";
 import heroImage800 from "@assets/IMG_0177_hero_800_opt.webp";
@@ -38,16 +38,13 @@ import {
     Brain
 } from "lucide-react";
 
-const BookingWidget = lazy(() => import("@/components/ui/booking-widget"));
 const ConsultationForm = lazy(() => import("@/components/forms/consultation-form"));
 import ServiceCard from "@/components/ui/service-card";
-import ProductCard from "@/components/ui/product-card";
 import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
-import type { Service, Product, BlogPost, Package, Testimonial } from "@shared/schema";
+import type { Service, BlogPost, Package, Testimonial } from "@shared/schema";
 
 export default function HomePage() {
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
   const [loadDeferred, setLoadDeferred] = useState(false);
   
   // Load deferred content after initial paint
@@ -73,11 +70,6 @@ export default function HomePage() {
   });
 
   // Deferred queries - load after initial paint to reduce main thread work
-  const { data: products, isLoading: productsLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-    enabled: loadDeferred,
-  });
-
   const { data: blogPosts, isLoading: blogLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog"],
     enabled: loadDeferred,
@@ -157,7 +149,7 @@ export default function HomePage() {
                 </Dialog>
 
                 <Button 
-                  onClick={() => setShowBookingWidget(true)}
+                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
                   variant="outline"
                   className="btn-secondary text-lg px-8 py-4"
                 >
@@ -191,7 +183,7 @@ export default function HomePage() {
                 />
                 <img 
                   src={heroImageJpeg} 
-                  alt="Tristan, NDTF certified professional dog trainer, demonstrating expert dog training techniques in Brisbane outdoor setting" 
+                  alt="Tristan training a dog outdoors in Brisbane"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
@@ -227,8 +219,19 @@ export default function HomePage() {
                   <Star className="w-4 h-4" />
                   Client Reviews
                 </div>
-                <h2 className="text-4xl font-bold text-charcoal">Over 100 5-Star Reviews</h2>
-                <p className="text-xl text-medium-grey">Real dogs. Real owners. Real results.</p>
+                <h2 className="text-4xl font-bold text-charcoal">Real Dogs. Real Owners. Real Results.</h2>
+                <p className="text-xl text-medium-grey">
+                  All Five-Star:{" "}
+                  <a
+                    href="https://share.google/NJfyc690NWAMVb3LX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-blue hover:underline font-semibold"
+                  >
+                    20+ on Google
+                  </a>
+                  {" · 90+ on Madpaws"}
+                </p>
               </div>
 
               {testimonialsLoading ? (
@@ -275,7 +278,7 @@ export default function HomePage() {
                 />
                 <img 
                   src={testimonialsImageJpeg} 
-                  alt="Canine Confidence dog training in action - North Brisbane trainer working with French Bulldog using modern positive reinforcement techniques" 
+                  alt="Tristan training a French Bulldog in North Brisbane"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
@@ -358,7 +361,7 @@ export default function HomePage() {
                     <div className="text-center mb-6">
                       <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
                       <div className="text-gray-600 text-sm mb-4 text-left prose prose-sm max-w-none">
-                        <ReactMarkdown>{pkg.description}</ReactMarkdown>
+                        <FormattedText text={pkg.description} />
                       </div>
                       
                       <div className="flex items-center justify-center gap-2">
@@ -583,7 +586,7 @@ export default function HomePage() {
 
               <Button
                 variant="outline"
-                onClick={() => setShowBookingWidget(true)}
+                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -604,12 +607,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <Suspense fallback={null}>
-        <BookingWidget 
-          isOpen={showBookingWidget} 
-          onClose={() => setShowBookingWidget(false)} 
-        />
-      </Suspense>
     </div>
   );
 }

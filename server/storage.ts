@@ -394,7 +394,7 @@ export class MemStorage implements IStorage {
           "Foundations of High-Level Engagement and Obedience on the move",
           "Master Advanced Lead Handling Skills for ultimate control and comfort",
           "Tailored Protocol to shift your dog's feelings about the collar and lead",
-          "Results Guaranteed or I continue until the core goal is met",
+          "I continue until the core goal is met",
           "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
         ],
         isPopular: false
@@ -1057,7 +1057,7 @@ It does pass. Eventually. But it leaves behind whatever the dog has been practis
 
 If your dog is in the adolescent window and things are slipping, that's the time to act.
 
-A free 15-minute call is the simplest place to start. We'll talk through what you're seeing, what's normal, and what's worth working on now.`,
+A free 15-minute call is the simplest place to start. I'll talk through what you're seeing, what's normal, and what's worth working on now.`,
         imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107_opt.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-11"),
@@ -1282,7 +1282,7 @@ If your puppy barks, lunges, or shuts down around other dogs, that's information
 
 Start at home. Build confidence through play. Establish clear communication. Then reintroduce the world at a pace your puppy can actually handle.
 
-If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. We work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
+If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. I work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
 
 Book directly at canineconfidence.com.au.`,
         imageUrl: "/attached_assets/puppy-watching-park-socialisation_opt.webp",
@@ -1330,7 +1330,7 @@ A dog that checks in with you at the door is far more likely to check in with yo
 
 It won't fix everything overnight. But it's the easiest, fastest change most owners can make, and it's usually the first thing I work on with a new client because everything else builds on it.
 
-If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. We'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
+If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. I'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
         imageUrl: "/attached_assets/dog-walk-blog-post.png",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-22"),
@@ -1491,6 +1491,65 @@ Tristan`,
         publishedAt: new Date("2026-07-07"),
         tags: ["Cavoodle", "breed drives", "puppy", "behaviour", "Brisbane"],
         slug: "what-cavoodle-owners-get-right"
+      },
+      {
+        title: "Why Nothing's Worked Yet (And It's Probably Not Your Dog)",
+        metaTitle: "Why Nothing's Worked Yet (And It's Probably Not Your Dog) | Canine Confidence Brisbane",
+        excerpt: "Tried three trainers and your dog is still reactive? The problem usually isn't your dog — it's that no single method has ever been run for long enough to take hold.",
+        content: `# Why Nothing's Worked Yet (And It's Probably Not Your Dog)
+
+If you've tried three trainers and your dog is still reactive, the natural conclusion is that your dog is the hard case.
+
+It's usually not.
+
+What I see far more often is a dog that's had five different systems applied to it in eighteen months, none of them for long enough to take hold.
+
+## Why methods stop working when you mix them
+
+Dogs learn by prediction. This happens, then that happens. Every time. That predictability is the whole mechanism.
+
+A marker word only means something because it has been followed by the same outcome, reliably, dozens of times. Lead pressure only means something because releasing it has consistently followed the dog moving the right way. Take away the reliability and you haven't got a weaker version of the system. You've got no system.
+
+When an owner runs three approaches at once, the dog isn't getting three chances to learn. It's getting a feedback stream with no pattern in it. So it stops treating your input as information and starts making its own decisions. Which is exactly the behaviour that brought you to a trainer in the first place.
+
+## Why owners end up here
+
+Nobody does this out of laziness. It happens because the advice is loud and contradictory, and because a dog with a problem creates urgency.
+
+You try something. It doesn't work in the first fortnight. Something in your feed says the opposite. So you switch. Then you switch again. Each switch feels like progress because it feels like action.
+
+From the dog's side, nothing has been consistent long enough to be learnable.
+
+## What to do instead
+
+Pick one approach and run it properly for four weeks. Not four weeks of when you remember. Four weeks of daily, short, unglamorous repetition.
+
+Keep the sessions small. Five minutes, several times a day, folded into things you already do. Meal times, doorways, the walk you were taking anyway. Long sessions are where consistency goes to die, because they need time you don't have.
+
+Judge the method on trend, not on individual days. Dogs have bad days for reasons that have nothing to do with training. What you're looking for over four weeks is a line that's heading in the right direction, not a straight climb.
+
+If you're going to change approach, change all of it, deliberately, and start the clock again. Don't graft the new thing onto the old thing.
+
+## When you genuinely can't do the reps
+
+Some weeks aren't available. Shift work, small kids, a job that swallows daylight. That's real, and pretending otherwise is how programs fail quietly.
+
+That's what the In-Home Day Train is for. Thirty minutes, at your place, me doing the reps with your dog while you're at work. It keeps the frequency up when your calendar won't allow it.
+
+## The short version
+
+Your dog is not resistant to training. It's resistant to confusion.
+
+One method. Short reps. Every day. Four weeks.
+
+Most of the dogs I'm told are hopeless just haven't had that yet.
+
+Tristan`,
+        imageUrl: "/attached_assets/why-nothings-worked-yet_opt.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-07-27"),
+        tags: ["consistency", "training", "behaviour", "reactivity"],
+        slug: "why-nothings-worked-yet"
       }
     ];
 
@@ -1499,10 +1558,10 @@ Tristan`,
     // Seed testimonials
     const testimonialData: InsertTestimonial[] = [
       {
-        clientName: "Donna M.",
-        dogName: "Winnie",
+        clientName: "Patsy Poppins",
+        dogName: "Bean",
         rating: 5,
-        reviewText: "I enjoyed Tristan's expertise and insights about the benefits of play-based learning (for me as well as Winnie! :-) ) together with his understanding of the importance of working with my 10 month old puppy's strengths & positive characteristics while also attending to his challenges",
+        reviewText: "From the get go, Tristan has been amazing to work with. Very knowledgeable, relaxed and great at explaining dog behaviour, communication and training approaches. Tristan has taught me how to communicate with Bean by using play. Through play Bean has learnt key words which we've started to transfer to day to day life. Previously Bean would lockjaw on balls or bones he picked up while walking. He now lets go when I ask. We've also been working on reactivity from frustration and making progress after just a few 1 on 1 sessions. The whole process has improved my relationship with Bean. We both enjoy the play activities Tristan has taught us and it's become part of our daily routine.",
         service: "Training",
         location: null
       },

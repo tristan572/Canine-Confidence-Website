@@ -69,7 +69,7 @@ const categories: ResourceCategory[] = [
     entries: [
       {
         name: "Your Local Groomer",
-        description: "A well-groomed dog is a happy dog. We recommend groomers who understand dog behaviour and make the experience positive and stress-free.",
+        description: "A well-groomed dog is a happy dog. I recommend groomers who understand dog behaviour and make the experience positive and stress-free.",
         suburb: "North Brisbane",
         placeholder: true,
       },
@@ -104,7 +104,7 @@ const categories: ResourceCategory[] = [
       },
       {
         name: "Boondall Wetlands",
-        description: "An expansive natural reserve near our base in Boondall. Great for low-distraction walks, scent enrichment, and building your dog's confidence around natural environments.",
+        description: "An expansive natural reserve near my base in Boondall. Great for low-distraction walks, scent enrichment, and building your dog's confidence around natural environments.",
         suburb: "Boondall",
       },
     ],
@@ -215,7 +215,7 @@ export default function LocalResourcesPage() {
                             href="/contact"
                             className="inline-flex items-center gap-1.5 text-primary-blue text-sm font-medium hover:underline"
                           >
-                            Contact us to get listed
+                            Contact me to get listed
                             <ExternalLink className="w-3.5 h-3.5" />
                           </a>
                         )}

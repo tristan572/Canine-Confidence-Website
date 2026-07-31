@@ -1,25 +1,28 @@
 import path from "path";
 import express, { type Express } from "express";
 import { createServer, type Server } from "http";
-import Stripe from "stripe";
 import { storage } from "./storage";
-import { 
-  insertBookingSchema, 
-  insertConsultationSchema, 
+import {
+  insertBookingSchema,
+  insertConsultationSchema,
   insertContactSubmissionSchema,
-  insertCartItemSchema,
   insertPackageSchema,
   insertSubscriberSchema
 } from "@shared/schema";
-import { 
-  sendBookingNotification, 
-  sendConsultationNotification, 
-  sendContactFormNotification 
+import {
+  sendBookingNotification,
+  sendConsultationNotification,
+  sendContactFormNotification
 } from "./email";
+import { requireAdminAuth } from "./adminAuth";
+import { buildSitemapXml } from "./seo";
 
-const stripe = process.env.STRIPE_SECRET_KEY
-  ? new Stripe(process.env.STRIPE_SECRET_KEY)
-  : null;
+// Honeypot field ("website") is only ever filled by bots — real users never
+// see it. Returning a fake success keeps bots from retrying/escalating,
+// without persisting the submission or emailing a notification.
+function isHoneypotTripped(req: express.Request): boolean {
+  return typeof req.body?.website === "string" && req.body.website.trim().length > 0;
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Services routes
@@ -42,35 +45,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(service);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch service" });
-    }
-  });
-
-  // Products routes
-  app.get("/api/products", async (req, res) => {
-    try {
-      const category = req.query.category as string;
-      let products;
-      if (category) {
-        products = await storage.getProductsByCategory(category);
-      } else {
-        products = await storage.getProducts();
-      }
-      res.json(products);
-    } catch (error) {
-      res.status(500).json({ message: "Failed to fetch products" });
-    }
-  });
-
-  app.get("/api/products/:id", async (req, res) => {
-    try {
-      const id = parseInt(req.params.id);
-      const product = await storage.getProduct(id);
-      if (!product) {
-        return res.status(404).json({ message: "Product not found" });
-      }
-      res.json(product);
-    } catch (error) {
-      res.status(500).json({ message: "Failed to fetch product" });
     }
   });
 
@@ -170,7 +144,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/bookings", async (req, res) => {
+  app.get("/api/bookings", requireAdminAuth, async (req, res) => {
     try {
       const bookings = await storage.getBookings();
       res.json(bookings);
@@ -181,6 +155,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Consultations routes
   app.post("/api/consultations", async (req, res) => {
+    if (isHoneypotTripped(req)) {
+      return res.status(201).json({ id: 0 });
+    }
     try {
       const validatedData = insertConsultationSchema.parse(req.body);
       const consultation = await storage.createConsultation(validatedData);
@@ -205,6 +182,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Contact submissions routes
   app.post("/api/contact", async (req, res) => {
+    if (isHoneypotTripped(req)) {
+      return res.status(201).json({ id: 0 });
+    }
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);
@@ -224,6 +204,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({ message: "Failed to submit contact form" });
       }
+    }
+  });
+
+  // Sitemap (built from storage each request, like the RSS feed below, so new
+  // blog posts and local pages don't need a hand-maintained static XML file)
+  app.get("/sitemap.xml", async (req, res) => {
+    try {
+      const posts = await storage.getBlogPosts();
+      res.set("Content-Type", "application/xml; charset=utf-8");
+      res.send(buildSitemapXml(posts.map((post) => ({ slug: post.slug }))));
+    } catch (error) {
+      res.status(500).send("Failed to generate sitemap");
     }
   });
 
@@ -308,154 +300,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/subscribers", async (req, res) => {
+  app.get("/api/subscribers", requireAdminAuth, async (req, res) => {
     try {
       const subscribers = await storage.getSubscribers();
       res.json(subscribers);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch subscribers" });
-    }
-  });
-
-  // Cart routes
-  app.get("/api/cart/:sessionId", async (req, res) => {
-    try {
-      const sessionId = req.params.sessionId;
-      const items = await storage.getCartItems(sessionId);
-      res.json(items);
-    } catch (error) {
-      res.status(500).json({ message: "Failed to fetch cart items" });
-    }
-  });
-
-  app.post("/api/cart", async (req, res) => {
-    try {
-      const validatedData = insertCartItemSchema.parse(req.body);
-      const item = await storage.addToCart(validatedData);
-      res.status(201).json(item);
-    } catch (error) {
-      if (error instanceof Error) {
-        res.status(400).json({ message: error.message });
-      } else {
-        res.status(500).json({ message: "Failed to add item to cart" });
-      }
-    }
-  });
-
-  app.put("/api/cart/:id", async (req, res) => {
-    try {
-      const id = parseInt(req.params.id);
-      const { quantity } = req.body;
-      const item = await storage.updateCartItem(id, quantity);
-      if (!item) {
-        return res.status(404).json({ message: "Cart item not found" });
-      }
-      res.json(item);
-    } catch (error) {
-      res.status(500).json({ message: "Failed to update cart item" });
-    }
-  });
-
-  app.delete("/api/cart/:id", async (req, res) => {
-    try {
-      const id = parseInt(req.params.id);
-      const success = await storage.removeFromCart(id);
-      if (!success) {
-        return res.status(404).json({ message: "Cart item not found" });
-      }
-      res.json({ message: "Item removed from cart" });
-    } catch (error) {
-      res.status(500).json({ message: "Failed to remove item from cart" });
-    }
-  });
-
-  app.delete("/api/cart/session/:sessionId", async (req, res) => {
-    try {
-      const sessionId = req.params.sessionId;
-      await storage.clearCart(sessionId);
-      res.json({ message: "Cart cleared" });
-    } catch (error) {
-      res.status(500).json({ message: "Failed to clear cart" });
-    }
-  });
-
-  // Stripe payment routes
-  app.post("/api/create-payment-intent", async (req, res) => {
-    if (!stripe) {
-      return res.status(503).json({ message: "Payments are unavailable" });
-    }
-
-    try {
-      const { items, sessionId } = req.body;
-      
-      // Calculate total amount from cart items
-      let totalAmount = 0;
-      const cartItems = await storage.getCartItems(sessionId);
-      
-      for (const cartItem of cartItems) {
-        const product = await storage.getProduct(cartItem.productId);
-        if (product) {
-          const price = parseFloat(product.price);
-          if (!isNaN(price)) {
-            totalAmount += price * cartItem.quantity;
-          }
-        }
-      }
-
-      if (totalAmount === 0) {
-        return res.status(400).json({ message: "Cart is empty or invalid" });
-      }
-
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: Math.round(totalAmount * 100), // Convert to cents
-        currency: "aud", // Australian dollars for Brisbane business
-        metadata: {
-          sessionId: sessionId,
-          itemCount: cartItems.length.toString()
-        }
-      });
-
-      res.json({ 
-        clientSecret: paymentIntent.client_secret,
-        amount: totalAmount 
-      });
-    } catch (error: any) {
-      res.status(500).json({ 
-        message: "Error creating payment intent: " + error.message 
-      });
-    }
-  });
-
-  // Payment success webhook/confirmation
-  app.post("/api/payment-success", async (req, res) => {
-    if (!stripe) {
-      return res.status(503).json({ message: "Payments are unavailable" });
-    }
-
-    try {
-      const { sessionId, paymentIntentId } = req.body;
-      
-      // Verify payment with Stripe
-      const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
-      
-      if (paymentIntent.status === 'succeeded') {
-        // Clear the cart after successful payment
-        await storage.clearCart(sessionId);
-        res.json({ 
-          success: true, 
-          message: "Payment successful and cart cleared" 
-        });
-      } else {
-        res.status(400).json({ 
-          success: false, 
-          message: "Payment not completed" 
-        });
-      }
-    } catch (error: any) {
-      res.status(500).json({ 
-        success: false,
-        message: "Error processing payment confirmation: " + error.message 
-      });
     }
   });
 

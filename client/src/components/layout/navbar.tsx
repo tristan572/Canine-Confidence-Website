@@ -54,7 +54,7 @@ export default function Navbar() {
             
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" aria-label="Open menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -139,6 +139,8 @@ export default function Navbar() {
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
+                  <DialogTitle>Free Phone Consultation</DialogTitle>
+                  <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs.</DialogDescription>
                   <ConsultationForm />
                 </DialogContent>
               </Dialog>

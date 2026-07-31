@@ -1,225 +1,45 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign } from "lucide-react";
+import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign, ShieldCheck, Award } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { apiRequest } from "@/lib/queryClient";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import type { Package } from "@shared/schema";
 import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
 
-declare global {
-  interface Window {
-    SimplybookWidget: any;
-  }
-}
-
-const PackageBookingWidget = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-  const [showWidget, setShowWidget] = useState(false);
-  const widgetContainerRef = useRef<HTMLDivElement>(null);
-  const widgetInstanceRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (!showWidget) return;
-
-    const loadWidget = () => {
-      if (window.SimplybookWidget && widgetContainerRef.current) {
-        // Clear any existing widget
-        widgetContainerRef.current.innerHTML = '';
-        
-        // Create the widget using your exact configuration
-        try {
-          widgetInstanceRef.current = new window.SimplybookWidget({
-            "widget_type": "iframe",
-            "url": "https://canineconfidence.simplybook.net",
-            "theme": "simple_beauty_theme",
-            "theme_settings": {
-              "sb_base_color": "#2563EB",
-              "header_color": "#ffffff",
-              "timeline_hide_unavailable": "0",
-              "hide_past_days": "0",
-              "timeline_show_end_time": "0",
-              "timeline_modern_display": "as_slots",
-              "display_item_mode": "block",
-              "body_bg_color": "#ffffff",
-              "sb_review_image": "",
-              "dark_font_color": "#374151",
-              "light_font_color": "#ffffff",
-              "btn_color_1": "#2563EB",
-              "sb_company_label_color": "#374151",
-              "hide_img_mode": "0",
-              "show_sidebar": "1",
-              "sb_busy": "#E5E7EB",
-              "sb_available": "#DBEAFE"
-            },
-            "timeline": null,
-            "datepicker": null,
-            "is_rtl": false,
-            "app_config": {
-              "clear_session": 0,
-              "allow_switch_to_ada": 0,
-              "predefined": []
-            },
-            "navigate": "packages"
-          });
-        } catch (error) {
-          console.error('Error creating widget:', error);
-        }
-      }
-    };
-
-    // Load the SimplyBook.me script
-    if (!document.querySelector('script[src*="widget.simplybook.net"]')) {
-      const script = document.createElement('script');
-      script.src = '//widget.simplybook.net/v2/widget/widget.js';
-      script.type = 'text/javascript';
-      script.onload = () => {
-        setTimeout(loadWidget, 500);
-      };
-      document.head.appendChild(script);
-    } else {
-      setTimeout(loadWidget, 500);
-    }
-
-    return () => {
-      if (widgetContainerRef.current) {
-        widgetContainerRef.current.innerHTML = '';
-      }
-      widgetInstanceRef.current = null;
-    };
-  }, [showWidget]);
-
-  const handleContinue = () => {
-    setShowWidget(true);
-  };
-
-  const handleClose = () => {
-    setShowWidget(false);
-    onClose();
-  };
-
-  // Reset widget state when dialog closes
-  useEffect(() => {
-    if (!isOpen) {
-      setShowWidget(false);
-    }
-  }, [isOpen]);
-
-  return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      {!showWidget ? (
-        <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
-            Secure Booking System
-          </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
-          </DialogDescription>
-          
-          <div className="space-y-4">
-            <Button 
-              onClick={handleContinue}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
-            </Button>
-            
-            <Button 
-              onClick={handleClose}
-              variant="outline"
-              className="w-full py-3"
-            >
-              Cancel
-            </Button>
-          </div>
-          
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>🔒 Secure SSL encrypted booking system</p>
-            <p>📅 Real-time availability • 💳 Secure payments</p>
-          </div>
-        </DialogContent>
-      ) : (
-        <DialogContent className="max-w-5xl w-full max-h-[95vh] overflow-hidden p-0">
-          <div className="bg-blue-600 p-4 flex justify-between items-center">
-            <div>
-              <DialogTitle className="text-xl font-bold text-white">
-                Book Your Training Package
-              </DialogTitle>
-              <DialogDescription className="text-blue-100 text-sm">
-                Select your preferred training package and schedule
-              </DialogDescription>
-            </div>
-            <Button
-              onClick={handleClose}
-              variant="ghost"
-              size="sm"
-              className="text-white hover:bg-blue-700"
-            >
-              ✕
-            </Button>
-          </div>
-          
-          <div 
-            ref={widgetContainerRef}
-            className="w-full h-[650px] bg-white flex items-center justify-center"
-            style={{ minHeight: '650px' }}
-          >
-            <div className="text-center">
-              <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4" />
-              <p className="text-gray-600">Loading booking system...</p>
-            </div>
-          </div>
-        </DialogContent>
-      )}
-    </Dialog>
-  );
-};
-
 const PackageCard = ({ pkg }: { pkg: Package }) => {
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
-  const [showBookingDialog, setShowBookingDialog] = useState(false);
-
   const getPackageBookingUrl = () => {
+    // Keyed on the current package names (shared/storage.ts) — the
+    // SimplyBook package IDs stay the same even if the marketing name
+    // is later reworded, so update the key here rather than the ID.
     const packageMap: Record<string, number> = {
       "The Confident Start Program": 6,
       "The Connected Companion Walk": 13,
       "From Chaos to Calm Program": 9,
       "The Focused Progress Plan": 2,
-      "In-home Day Train Five Pack": 1,
+      "The Foundation Program": 1,
       "The Real World Reliability Package": 3,
-      "The Adventure Five Pack": 4,
-      "The Neighbourhood Enrichment Five Pack": 5,
+      "The Adventure Pack": 4,
+      "The Neighbourhood Enrichment Pack": 5,
     };
-    
+
     const packageId = packageMap[pkg.name];
-    return packageId 
+    return packageId
       ? `https://canineconfidence.simplybook.net/v2/#packages/${packageId}`
-      : null;
+      : "https://canineconfidence.simplybook.net/v2/#packages";
   };
 
   const handleBookClick = () => {
-    const directUrl = getPackageBookingUrl();
-    if (directUrl) {
-      setShowBookingDialog(true);
-    } else {
-      setShowBookingWidget(true);
-    }
-  };
-
-  const handleContinueToBooking = () => {
-    const directUrl = getPackageBookingUrl();
-    if (directUrl) {
-      window.open(directUrl, '_blank');
-    }
-    setShowBookingDialog(false);
+    window.open(getPackageBookingUrl(), '_blank');
   };
 
   return (
-    <>
       <Card className={`relative ${pkg.isPopular ? 'ring-2 ring-primary-blue' : ''} hover:shadow-lg transition-shadow overflow-hidden`}>
         {pkg.isPopular && (
           <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-10">
@@ -258,7 +78,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
 
         <CardContent className="space-y-6">
           <div className="text-gray-600 text-left prose prose-sm max-w-none">
-            <ReactMarkdown>{pkg.description}</ReactMarkdown>
+            <FormattedText text={pkg.description} />
           </div>
 
           <div className="text-center">
@@ -296,46 +116,6 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
           </Button>
         </CardContent>
       </Card>
-
-      {/* Direct Booking Dialog */}
-      <Dialog open={showBookingDialog} onOpenChange={setShowBookingDialog}>
-        <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
-            Secure Booking System
-          </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training package, choose your preferred time, and complete your booking with integrated payment processing.
-          </DialogDescription>
-          
-          <div className="space-y-4">
-            <Button 
-              onClick={handleContinueToBooking}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
-            </Button>
-            
-            <Button 
-              onClick={() => setShowBookingDialog(false)}
-              variant="outline"
-              className="w-full py-3"
-            >
-              Cancel
-            </Button>
-          </div>
-          
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>🔒 Secure SSL encrypted booking system</p>
-            <p>📅 Real-time availability • 💳 Secure payments</p>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      <PackageBookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
-      />
-    </>
   );
 };
 
@@ -424,7 +204,7 @@ export default function PackagesPage() {
             <div className="relative">
               <img 
                 src={packagesHeroImage} 
-                alt="Professional dog training program in North Brisbane featuring play-based enrichment activities and genetic fulfillment training methods" 
+                alt="A dog training session in North Brisbane"
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
@@ -544,6 +324,55 @@ export default function PackagesPage() {
               <p className="text-gray-600">
                 Continued guidance and support for the life of your dog, ensuring long-term success.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-primary-blue content-visibility-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">Not sure which package is right for you?</h2>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                A free 15-minute call is enough to work out what your dog actually needs — no pressure, no sales pitch.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Book a Free Call
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogTitle>Book a Free Call</DialogTitle>
+                  <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
+
+              <Link href="/services">
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
+                >
+                  View All Services
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex items-center justify-center gap-12 pt-8 text-blue-100">
+              <div className="flex items-center">
+                <ShieldCheck className="w-5 h-5 mr-2" />
+                <span>Fully Insured</span>
+              </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                <span>Certified Professional</span>
+              </div>
             </div>
           </div>
         </div>

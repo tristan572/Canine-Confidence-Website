@@ -2,8 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import BookingWidget from "@/components/ui/booking-widget";
-import { 
+import {
   Phone, 
   Mail, 
   MapPin, 
@@ -20,11 +19,8 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
 import contactHeroImageWebp from "@assets/image_1750049297197.webp";
 import contactHeroImageJpeg from "@assets/image_1750049297197.jpg";
-import { useState } from "react";
 
 export default function ContactPage() {
-  const [showBookingWidget, setShowBookingWidget] = useState(false);
-  
   return (
     <div className="min-h-screen">
       <SEO 
@@ -61,7 +57,7 @@ export default function ContactPage() {
                 />
                 <img 
                   src={contactHeroImageJpeg} 
-                  alt="Happy confident dog enjoying life after successful training with Canine Confidence in North Brisbane, demonstrating effective play-based training results" 
+                  alt="A happy, confident dog after training with Canine Confidence"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                   width={600}
                   height={400}
@@ -224,7 +220,7 @@ export default function ContactPage() {
               <h2 className="text-4xl font-bold text-white">Connect With Us</h2>
               <div className="flex justify-center">
                 <p className="text-xl font-semibold inline-block rounded-2xl px-8 py-5 bg-white/95 text-primary-blue shadow-xl max-w-2xl">
-                  Follow our journey, see training success stories, and get daily tips on building confidence with your dog!
+                  Follow my journey, see training success stories, and get daily tips on building confidence with your dog!
                 </p>
               </div>
             </div>
@@ -275,7 +271,7 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-charcoal mb-4">Have a question?</h2>
           <p className="text-lg text-medium-grey">
-            If you have any questions before reaching out, visit our{" "}
+            If you have any questions before reaching out, visit my{" "}
             <a href="/faq" className="text-primary-blue hover:underline font-medium">FAQ page</a>
             {" "}for honest answers to the most common ones. If you still have questions, please don't hesitate to call or email me — I'm happy to help.
           </p>
@@ -299,7 +295,7 @@ export default function ContactPage() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => setShowBookingWidget(true)}
+                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -309,11 +305,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      
-      <BookingWidget 
-        isOpen={showBookingWidget} 
-        onClose={() => setShowBookingWidget(false)} 
-      />
     </div>
   );
 }

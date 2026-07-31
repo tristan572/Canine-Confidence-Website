@@ -5,7 +5,7 @@ Disallow: /admin
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://canineconfidence.com.au/sitemap.xml
+Sitemap: https://www.canineconfidence.com.au/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1

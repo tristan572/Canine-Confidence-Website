@@ -1,19 +1,19 @@
-import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { ServiceSchema } from "@/components/StructuredData";
-import ReactMarkdown from "react-markdown";
+import FormattedText from "@/components/ui/formatted-text";
 import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
-import { 
-  GraduationCap, 
-  Footprints, 
-  User, 
-  Route, 
-  Home, 
-  Phone, 
+import {
+  GraduationCap,
+  Footprints,
+  User,
+  Route,
+  Home,
+  Phone,
   Clock,
   MapPin,
   DollarSign,
@@ -24,18 +24,34 @@ import {
   MapPinned,
   Mountain,
   Heart,
-  Brain
+  Brain,
+  ShieldCheck,
+  Award
 } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
 
 export default function ServicesPage() {
-  const [selectedServiceId, setSelectedServiceId] = useState<number | null>(null);
-  const [showBookingDialog, setShowBookingDialog] = useState(false);
-
   const { data: services, isLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
+
+  const handleBookService = (service: Service) => {
+    const serviceMap: Record<string, number> = {
+      "Initial Canine Success Assessment": 16,
+      "One-on-One Private Coaching": 7,
+      "Virtual Coaching and Support": 10,
+      "Walk and Train": 6,
+      "In-home Day Train": 8,
+      "Adventure Walk and Training": 5,
+      "Local Walk": 4,
+    };
+    const serviceId = serviceMap[service.name];
+    const url = serviceId
+      ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
+      : "https://canineconfidence.simplybook.net/v2/";
+    window.open(url, '_blank');
+  };
 
   const serviceIcons = {
     "Behaviour Modification": GraduationCap,
@@ -110,7 +126,7 @@ export default function ServicesPage() {
             <div className="relative">
               <img 
                 src={servicesHeroImage} 
-                alt="Tristan, NDTF certified professional dog trainer, providing play-based training services in North Brisbane with positive reinforcement methods" 
+                alt="Tristan providing dog training in North Brisbane"
                 className="rounded-2xl shadow-2xl w-full h-auto"
                 width={600}
                 height={400}
@@ -148,7 +164,7 @@ export default function ServicesPage() {
                     </div>
                     <h3 className="text-xl font-semibold text-charcoal mb-4">{service.name}</h3>
                     <div className="text-medium-grey mb-6 prose prose-sm max-w-none">
-                      <ReactMarkdown>{service.description}</ReactMarkdown>
+                      <FormattedText text={service.description} />
                     </div>
                     
                     {service.features && service.features.length > 0 && (
@@ -179,11 +195,8 @@ export default function ServicesPage() {
                         <span>{service.price}</span>
                       </div>
                     </div>
-                    <Button 
-                      onClick={() => {
-                        setSelectedServiceId(service.id);
-                        setShowBookingDialog(true);
-                      }}
+                    <Button
+                      onClick={() => handleBookService(service)}
                       className="w-full btn-primary"
                     >
                       Book Session
@@ -225,7 +238,7 @@ export default function ServicesPage() {
                   </DialogTrigger>
                   <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                     <DialogTitle>Request Free Phone Call</DialogTitle>
-                    <DialogDescription>Get complimentary advice tailored to your situation with our 15-minute phone consultation.</DialogDescription>
+                    <DialogDescription>Get complimentary advice tailored to your situation with my 15-minute phone consultation.</DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
@@ -263,7 +276,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-xl font-semibold text-charcoal mb-3">Genetic Fulfilment</h3>
               <p className="text-medium-grey">
-                I base our tailored plans on understanding your dog's genetics and individual learning style, delivering unrivalled fulfilment that addresses the root cause of problem behaviour.
+                I base my tailored plans on understanding your dog's genetics and individual learning style, delivering unrivalled fulfilment that addresses the root cause of problem behaviour.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">
@@ -278,58 +291,55 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-primary-blue content-visibility-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-white">Not sure which service is right for you?</h2>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                A free 15-minute call is enough to work out what your dog actually needs — no pressure, no sales pitch.
+              </p>
+            </div>
 
-      <Dialog open={showBookingDialog} onOpenChange={setShowBookingDialog}>
-        <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
-            Secure Booking System
-          </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
-            You'll access our secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
-          </DialogDescription>
-          
-          <div className="space-y-4">
-            <Button 
-              onClick={() => {
-                const selectedService = services?.find(s => s.id === selectedServiceId);
-                if (selectedService) {
-                  const serviceMap: Record<string, number> = {
-                    "Initial Canine Success Assessment": 16,
-                    "One-on-One Private Coaching": 7,
-                    "Virtual Coaching and Support": 10,
-                    "Walk and Train": 6,
-                    "In-home Day Train": 8,
-                    "Adventure Walk and Training": 5,
-                    "Local Walk": 4,
-                  };
-                  const serviceId = serviceMap[selectedService.name];
-                  const url = serviceId 
-                    ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
-                    : "https://canineconfidence.simplybook.net/v2/";
-                  window.open(url, '_blank');
-                }
-                setShowBookingDialog(false);
-              }}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
-            </Button>
-            
-            <Button 
-              onClick={() => setShowBookingDialog(false)}
-              variant="outline"
-              className="w-full py-3"
-            >
-              Cancel
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Book a Free Call
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogTitle>Book a Free Call</DialogTitle>
+                  <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
+                  <ConsultationForm />
+                </DialogContent>
+              </Dialog>
+
+              <Link href="/packages">
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
+                >
+                  View Training Packages
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex items-center justify-center gap-12 pt-8 text-blue-100">
+              <div className="flex items-center">
+                <ShieldCheck className="w-5 h-5 mr-2" />
+                <span>Fully Insured</span>
+              </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                <span>Certified Professional</span>
+              </div>
+            </div>
           </div>
-          
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>🔒 Secure SSL encrypted booking system</p>
-            <p>📅 Real-time availability • 💳 Secure payments</p>
-          </div>
-        </DialogContent>
-      </Dialog>
+        </div>
+      </section>
     </div>
   );
 }

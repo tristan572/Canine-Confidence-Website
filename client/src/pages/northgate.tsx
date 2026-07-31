@@ -564,7 +564,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to schedule your Initial Canine Success Assessment ($90).
+            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ($90).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -589,7 +589,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to schedule your Kalinga Park Walk & Train sessions.
+            You'll be redirected to my secure booking system to schedule your Kalinga Park Walk & Train sessions.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -614,7 +614,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to schedule your 1-on-1 Private Coaching session ($120).
+            You'll be redirected to my secure booking system to schedule your 1-on-1 Private Coaching session ($120).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -664,7 +664,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to purchase The Real World Reliability Package (5 sessions, $280).
+            You'll be redirected to my secure booking system to purchase The Real World Reliability Package (5 sessions, $280).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -689,7 +689,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to our secure booking system to purchase The Focused Progress Plan (5 sessions, $550).
+            You'll be redirected to my secure booking system to purchase The Focused Progress Plan (5 sessions, $550).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button

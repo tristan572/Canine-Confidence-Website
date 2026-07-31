@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -13,6 +14,10 @@ import { insertConsultationSchema } from "@shared/schema";
 export default function ConsultationForm() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  // Honeypot: real users never see or fill this field; bots that
+  // auto-fill every input do. Kept outside react-hook-form/Zod so the
+  // value survives to the server instead of being stripped as unknown.
+  const [honeypot, setHoneypot] = useState("");
 
   const form = useForm({
     resolver: zodResolver(insertConsultationSchema),
@@ -34,7 +39,7 @@ export default function ConsultationForm() {
     onSuccess: () => {
       toast({
         title: "Consultation request submitted!",
-        description: "We'll call you within 24 hours to schedule your free consultation.",
+        description: "I'll call you within 24 hours to schedule your free consultation.",
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/consultations"] });
@@ -49,13 +54,23 @@ export default function ConsultationForm() {
   });
 
   const onSubmit = (data: any) => {
-    consultationMutation.mutate(data);
+    consultationMutation.mutate({ ...data, website: honeypot });
   };
 
   return (
     <div className="max-w-md mx-auto">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <input
+            type="text"
+            name="website"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+          />
           <FormField
             control={form.control}
             name="clientName"
@@ -127,7 +142,7 @@ export default function ConsultationForm() {
             name="dogInfo"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Tell us about your dog</FormLabel>
+                <FormLabel>Tell me about your dog</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="Breed, age, size, personality..."

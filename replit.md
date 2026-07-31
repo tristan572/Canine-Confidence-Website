@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a comprehensive dog training business website built with a modern full-stack architecture. The application serves as a complete business solution for Canine Confidence, a North Brisbane-based dog training service. It features service booking, product sales with e-commerce functionality, blog content, and integrated payment processing through Stripe.
+This is a comprehensive dog training business website built with a modern full-stack architecture. The application serves as a complete business solution for Canine Confidence, a North Brisbane-based dog training service. It features service booking, blog content, and package sales. (Product sales/e-commerce/Stripe checkout were removed — no products are for sale yet; the `products`/`cartItems` database tables still exist unused, in case a shop is built later.)
 
 ## User Preferences
 
@@ -49,12 +49,10 @@ Preferred communication style: Simple, everyday language.
 - **Home**: Landing page with service highlights, testimonials (prominently displayed after hero), and booking widget
 - **Services**: Detailed service listings with booking integration
 - **Packages**: Training package offerings with online booking
-- **Products**: E-commerce catalog with cart functionality
 - **Blog**: Content marketing with search, filtering, and newsletter subscription form
 - **About**: Company information and team details
 - **Contact**: Contact forms, business information, interactive service area map, and video consultation details
-- **Checkout**: Stripe-powered payment processing
-- **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export
+- **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export (requires `ADMIN_USERNAME`/`ADMIN_PASSWORD`)
 - **Location Pages**: SEO-optimized suburb-specific pages for local search rankings
   - Sandgate/Shorncliffe (/dog-training-sandgate) - Live
   - Northgate (/dog-training-northgate) - Live
@@ -62,23 +60,14 @@ Preferred communication style: Simple, everyday language.
 
 ### API Endpoints
 - Services CRUD operations
-- Products and inventory management
 - Package management
 - Blog post management
 - Booking and consultation handling
-- Shopping cart operations
-- Stripe payment processing
 - Contact form submissions
 - Newsletter subscription management
+- Sitemap/RSS feed generation
 
 ## Data Flow
-
-### E-commerce Flow
-1. Products displayed from database via API
-2. Items added to session-based shopping cart
-3. Cart persisted in PostgreSQL with session ID
-4. Checkout process integrated with Stripe
-5. Payment confirmation and cart clearing
 
 ### Booking Flow
 1. Services displayed with pricing and details
@@ -110,11 +99,6 @@ Preferred communication style: Simple, everyday language.
 - **Leaflet**: Open-source interactive maps
 - **react-leaflet**: React wrapper for Leaflet (v4.2.1)
 - **OpenStreetMap**: Free map tiles (no API keys required)
-
-### Payment Processing
-- **Stripe**: Complete payment processing integration
-- **@stripe/stripe-js**: Frontend Stripe integration
-- **@stripe/react-stripe-js**: React-specific Stripe components
 
 ### Booking System
 - **SimplyBook.me**: Third-party booking widget integration
@@ -156,7 +140,7 @@ Preferred communication style: Simple, everyday language.
 
 ### JavaScript Bundle Optimization
 - **Removed ReactMarkdown**: Plain JSX used for package descriptions (saves ~50KB)
-- **Deferred queries**: Non-critical API calls (testimonials, products, blog) load after initial paint using requestIdleCallback
+- **Deferred queries**: Non-critical API calls (testimonials, blog) load after initial paint using requestIdleCallback
 - **Critical queries only**: Services and packages load immediately for above-fold content
 
 ### Font Optimization
@@ -184,7 +168,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Environment Configuration
 - Database connection via `DATABASE_URL` environment variable
-- Stripe integration via `STRIPE_SECRET_KEY` and `VITE_STRIPE_PUBLIC_KEY`
+- Admin auth via `ADMIN_USERNAME`/`ADMIN_PASSWORD` environment variables
 - Production-ready configuration with proper error handling
 
 ### Database Management
