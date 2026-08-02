@@ -12,6 +12,7 @@ import { apiRequest } from "@/lib/queryClient";
 import FormattedText from "@/components/ui/formatted-text";
 import type { Package } from "@shared/schema";
 import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
+import { openBookingUrl } from "@/lib/analytics";
 
 const PackageCard = ({ pkg }: { pkg: Package }) => {
   const getPackageBookingUrl = () => {
@@ -36,7 +37,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
   };
 
   const handleBookClick = () => {
-    window.open(getPackageBookingUrl(), '_blank');
+    openBookingUrl(getPackageBookingUrl(), "package", pkg.name);
   };
 
   return (

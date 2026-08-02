@@ -19,6 +19,7 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
 import contactHeroImageWebp from "@assets/image_1750049297197.webp";
 import contactHeroImageJpeg from "@assets/image_1750049297197.jpg";
+import { openBookingUrl } from "@/lib/analytics";
 
 export default function ContactPage() {
   return (
@@ -295,7 +296,7 @@ export default function ContactPage() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+                onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/', "general", "Contact page")}
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />

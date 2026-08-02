@@ -1,18 +1,13 @@
 import { Switch, Route, useLocation } from "wouter";
 import { useEffect, Suspense, lazy } from "react";
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import { trackPhoneClick } from "@/lib/analytics";
 
 import Home from "@/pages/home";
 
@@ -48,6 +43,24 @@ function ScrollToTop() {
       });
     }
   }, [location]);
+
+  return null;
+}
+
+function PhoneClickTracking() {
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target instanceof Element ? event.target : null;
+      const phoneLink = target?.closest<HTMLAnchorElement>('a[href^="tel:"]');
+
+      if (phoneLink) {
+        trackPhoneClick(phoneLink.getAttribute("href")?.replace("tel:", "") || "unknown");
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+  }, []);
 
   return null;
 }
@@ -95,6 +108,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <PhoneClickTracking />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">

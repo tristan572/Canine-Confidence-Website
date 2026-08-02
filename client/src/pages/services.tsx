@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
+import { openBookingUrl } from "@/lib/analytics";
 
 export default function ServicesPage() {
   const { data: services, isLoading } = useQuery<Service[]>({
@@ -50,7 +51,7 @@ export default function ServicesPage() {
     const url = serviceId
       ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
       : "https://canineconfidence.simplybook.net/v2/";
-    window.open(url, '_blank');
+    openBookingUrl(url, "service", service.name);
   };
 
   const serviceIcons = {

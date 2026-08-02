@@ -12,6 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { insertContactSubmissionSchema } from "@shared/schema";
+import { trackLead } from "@/lib/analytics";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -38,7 +39,8 @@ export default function ContactForm() {
       const response = await apiRequest("POST", "/api/contact", data);
       return response.json();
     },
-    onSuccess: () => {
+    onSuccess: (_response, variables) => {
+      trackLead("contact_form", variables.service);
       toast({
         title: "Message sent successfully!",
         description: "I'll get back to you within 24 hours.",

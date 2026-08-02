@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart } from "lucide-react";
 import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
 import ConsultationForm from "@/components/forms/consultation-form";
+import { openBookingUrl } from "@/lib/analytics";
 
 const SandgateLocalBusinessSchema = () => {
   const schema = {
@@ -63,27 +64,27 @@ export default function SandgatePage() {
 
   const handleBookAssessment = () => {
     setShowAssessmentDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookAdventure = () => {
     setShowAdventureDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/service/5', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/5', "service", "Adventure Walk and Training");
   };
 
   const handleBookAdventurePackage = () => {
     setShowAdventurePackageDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#packages/4', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/4', "package", "The Adventure Pack");
   };
 
   const handleBookConfidentStart = () => {
     setShowConfidentStartDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#packages/6', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/6', "package", "The Confident Start Program");
   };
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#packages', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages', "package", "All packages");
   };
 
   return (
