@@ -8,6 +8,7 @@ import { MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart, Users, Footp
 import ConsultationForm from "@/components/forms/consultation-form";
 import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
 import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import { openBookingUrl } from "@/lib/analytics";
 
 const NorthgateLocalBusinessSchema = () => {
   const schema = {
@@ -64,32 +65,32 @@ export default function NorthgatePage() {
 
   const handleBookAssessment = () => {
     setShowAssessmentDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookWalkTrain = () => {
     setShowWalkTrainDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/service/6', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/6', "service", "Walk and Train");
   };
 
   const handleBookCoaching = () => {
     setShowCoachingDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#book/service/7', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/7', "service", "One-on-One Private Coaching");
   };
 
   const handleBookWalkTrainPackage = () => {
     setShowWalkTrainPackageDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#packages/3', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/3', "package", "The Real World Reliability Package");
   };
 
   const handleBookCoachingPackage = () => {
     setShowCoachingPackageDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#packages/2', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/2', "package", "The Focused Progress Plan");
   };
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    window.open('https://canineconfidence.simplybook.net/v2/#packages', '_blank');
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages', "package", "All packages");
   };
 
   return (

@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { insertConsultationSchema } from "@shared/schema";
+import { trackLead } from "@/lib/analytics";
 
 export default function ConsultationForm() {
   const { toast } = useToast();
@@ -37,6 +38,7 @@ export default function ConsultationForm() {
       return response.json();
     },
     onSuccess: () => {
+      trackLead("free_consultation");
       toast({
         title: "Consultation request submitted!",
         description: "I'll call you within 24 hours to schedule your free consultation.",

@@ -43,6 +43,7 @@ import ServiceCard from "@/components/ui/service-card";
 import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import type { Service, BlogPost, Package, Testimonial } from "@shared/schema";
+import { openBookingUrl } from "@/lib/analytics";
 
 export default function HomePage() {
   const [loadDeferred, setLoadDeferred] = useState(false);
@@ -149,7 +150,7 @@ export default function HomePage() {
                 </Dialog>
 
                 <Button 
-                  onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+                  onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/', "general", "Home hero")}
                   variant="outline"
                   className="btn-secondary text-lg px-8 py-4"
                 >
@@ -586,7 +587,7 @@ export default function HomePage() {
 
               <Button
                 variant="outline"
-                onClick={() => window.open('https://canineconfidence.simplybook.net/v2/', '_blank')}
+                onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/', "general", "Home final CTA")}
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />

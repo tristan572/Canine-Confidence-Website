@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, MapPin, DollarSign, Calendar, type LucideIcon } from "lucide-react";
 import FormattedText from "@/components/ui/formatted-text";
 import type { Service } from "@shared/schema";
+import { openBookingUrl } from "@/lib/analytics";
 
 interface ServiceCardProps {
   service: Service;
@@ -28,7 +29,7 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
   };
 
   const handleBookClick = () => {
-    window.open(getBookingUrl(), '_blank');
+    openBookingUrl(getBookingUrl(), "service", service.name);
   };
 
   return (
