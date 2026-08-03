@@ -1550,6 +1550,51 @@ Tristan`,
         publishedAt: new Date("2026-07-27"),
         tags: ["consistency", "training", "behaviour", "reactivity"],
         slug: "why-nothings-worked-yet"
+      },
+      {
+        title: "Frustration or Fear? Why the Difference Changes Everything",
+        metaTitle: "Frustration or Fear? Why the Difference Changes Everything | Canine Confidence Brisbane",
+        excerpt: "Reactive dogs aren't all the same. Frustration and fear look similar on lead but need almost opposite handling — here's how to tell them apart.",
+        content: `# Frustration or Fear? Why the Difference Changes Everything
+
+Most owners describe their dog the same way. Reactive. It barks, lunges, or loses its mind at other dogs on lead.
+
+But reactive isn't one thing. It's a symptom, and the two most common causes underneath it need almost opposite handling.
+
+## The tell
+
+Watch your dog off lead around other dogs, at a park, in a yard, wherever they get genuine freedom to move. If they're calm, social, and easy in that setting, and the trouble only shows up once a lead is clipped on, that's usually frustration, not fear.
+
+Fear tends to show up everywhere. On lead, off lead, at a distance, up close. It's a consistent response to the trigger itself, not to the restraint.
+
+Frustration is more specific. The dog has the social skill. It's demonstrated it, off lead, repeatedly. What it's lost is the ability to express that calm state while attached to a lead it can't control the way it wants to.
+
+## Why the distinction changes the plan
+
+A fearful dog needs its confidence built up gradually, starting well under whatever distance currently causes a reaction, before anything else gets layered on top.
+
+A frustrated dog doesn't need that same rebuild. The skill already exists, you've watched it happen off lead. What's missing is the ability to access that skill under a different set of conditions. That's often a faster problem, because you're restoring something rather than constructing it from zero.
+
+Treat a frustrated dog like a fearful one and you'll move too slowly, adding unnecessary distance and time to something that could shift much quicker. Treat a fearful dog like a frustrated one and you'll push too hard, too fast, and make things worse.
+
+## Where threshold management fits
+
+Whichever type you're dealing with, threshold management (keeping enough distance from the trigger that the dog stays under its reaction point) has a role. It stops the situation escalating while the real work happens underneath it.
+
+But it's a tool, not the finish line. I see plenty of owners who've managed a reactive dog carefully for a year or more and are still managing it, because nobody addressed what was actually driving the reaction. Distance and avoidance were doing all the work, indefinitely.
+
+The dogs who actually stop needing that level of management are the ones where the foundations underneath get fixed. Fulfilment, so the dog isn't wound tight before it even sees the trigger. Trust, so it'll take direction from you under pressure instead of making its own decision. Clear communication, so it understands what you're asking and what's expected. Impulse control, so it can hold itself together in the moment that matters.
+
+## The short version
+
+Reactive isn't a diagnosis, it's a description. What's underneath it, fear or frustration, changes everything about how you fix it. And however you fix it, threshold management should be the thing that buys you time, not the thing you're still relying on a year later.
+
+Tristan`,
+        imageUrl: "/attached_assets/frustration-or-fear_opt.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-08-03"),
+        tags: ["reactivity", "behaviour", "fear", "training"],
+        slug: "frustration-or-fear-reactive-dogs"
       }
     ];
 
