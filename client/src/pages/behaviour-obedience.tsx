@@ -117,8 +117,8 @@ export default function BehaviourObediencePage() {
           <h2 className="mb-4 text-3xl font-bold">Life with your dog should feel safer, calmer and more enjoyable</h2>
           <p className="mb-7 text-lg text-blue-100">
             Book one assessment and leave with a clear explanation of what is
-            happening, practical first steps and the shortest sensible path
-            towards steady progress.
+            happening, practical first steps and the shortest sensible path to
+            meeting your goals.
           </p>
           <AssessmentButton
             location="Behaviour final CTA"

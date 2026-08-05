@@ -48,7 +48,7 @@ export default function MethodPage() {
           <div>
             <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">My method</p>
             <h1 className="mb-5 text-4xl font-bold text-charcoal lg:text-5xl">
-              The goal is not compliance. It is a dog you can take anywhere.
+              The goal is a dog you can take anywhere.
             </h1>
             <p className="text-xl leading-relaxed text-medium-grey">
               Every dog is different, so every program should be different. I
