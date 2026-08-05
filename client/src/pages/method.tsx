@@ -1,5 +1,6 @@
 import { Brain, Dna, Gamepad2, Map, MessageCircle, Target } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import methodImage from "@assets/IMG_0076_1758798863394_opt.webp";
 
 const principles = [
@@ -77,6 +78,23 @@ export default function MethodPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-primary-blue py-16 text-center text-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 className="mb-4 text-3xl font-bold">
+            Start training for the life you want together
+          </h2>
+          <p className="mb-7 text-lg text-blue-100">
+            Your assessment gives me the full picture of your dog, your goals
+            and daily life. From there, I recommend the training approach that
+            will get you where you want to go.
+          </p>
+          <AssessmentButton
+            location="Method final CTA"
+            className="bg-white text-primary-blue hover:bg-gray-50"
+          />
         </div>
       </section>
     </div>
