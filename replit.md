@@ -8,6 +8,8 @@ This is a comprehensive dog training business website built with a modern full-s
 
 Preferred communication style: Simple, everyday language.
 
+Website copy must sound like something Tristan would say to a client. Use direct first-person language and specific, practical outcomes. Never use the parallel construction “not just X, it is/I do Y.” Avoid inflated sales terms such as “master,” “ultimate,” “advanced,” and “high-level.” Preserve official program names, session counts, prices, expiry periods, inclusions, and free guides when refining copy.
+
 ## System Architecture
 
 ### Frontend Architecture

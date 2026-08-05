@@ -114,11 +114,11 @@ export default function BehaviourObediencePage() {
 
       <section className="bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-bold">You should be able to enjoy your dog, not just manage them</h2>
+          <h2 className="mb-4 text-3xl font-bold">Life with your dog should feel safer, calmer and more enjoyable</h2>
           <p className="mb-7 text-lg text-blue-100">
             Book one assessment and leave with a clear explanation of what is
             happening, practical first steps and the shortest sensible path
-            towards lasting change.
+            towards steady progress.
           </p>
           <AssessmentButton
             location="Behaviour final CTA"

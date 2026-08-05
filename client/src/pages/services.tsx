@@ -268,9 +268,9 @@ export default function ServicesPage() {
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
                 <Heart className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-3">Play as Engagement Engine</h3>
+              <h3 className="text-xl font-semibold text-charcoal mb-3">Play Builds Connection</h3>
               <p className="text-medium-grey">
-                I use play not just as a reward, but as a mechanism to accelerate learning, build motivation, and create high-level engagement with the owner.
+                I use play to make learning clearer, build motivation and strengthen the connection between you and your dog.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">

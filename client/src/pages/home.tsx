@@ -33,7 +33,7 @@ const doors = [
     kicker: "Training for real life",
     image: behaviourCardImage,
     imagePosition: "object-[center_75%]",
-    text: "From bad manners, to obedience, reactivity and anxiety, I look beyond the visible behaviour to what is driving it, then build change that lasts.",
+    text: "From bad manners, to obedience, reactivity and anxiety, I look beyond the visible behaviour and build skills that make daily life calmer.",
     note: "New clients start with an assessment.",
   },
   {
@@ -72,16 +72,16 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h1 className="mb-3 text-4xl font-bold leading-tight text-charcoal lg:text-6xl">
-              North Brisbane <span className="text-primary-blue">Dog Training</span> That Lasts
+              North Brisbane <span className="text-primary-blue">Dog Training</span> for a Better Life Together
             </h1>
             <h2 className="mb-5 text-2xl font-semibold leading-tight text-charcoal lg:text-3xl">
               The Dog You Always Pictured
             </h2>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">
-              Dogs trained at Canine Confidence come away calm, focused and
-              connected to their owner. I work in-home and out in the real world,
-              using play, fulfilment and clear communication to build something
-              that sticks.
+              I train dogs across North Brisbane to be calm, focused and connected
+              with their owners. I work in-home and in everyday environments,
+              using play, fulfilment and clear communication to build skills that
+              hold up when life gets busy.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <AssessmentButton location="Home hero" className="px-7 py-4 text-lg" showIcon={false} />
@@ -191,9 +191,8 @@ export default function HomePage() {
             <p className="text-lg leading-relaxed text-medium-grey">
               I do not force every dog through the same formula. I look at your
               dog's genetics, their drives and what your daily life actually looks
-              like, then build the work around that. I don't just train for
-              obedience. I help you build a confident, connected dog you can
-              take into the real world.
+              like, then build the work around that. I aim for a confident,
+              connected dog with the skills to handle everyday life.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4">
@@ -217,9 +216,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold lg:text-4xl">Most dog problems have a clear cause</h2>
           <p className="mb-8 text-lg text-blue-100">
-            Once I understand what is driving the behaviour, I can stop guessing
-            and start building lasting change. Your assessment gives you practical
-            first steps and a training plan built around your dog and your life.
+            Once I understand the behaviour and the circumstances around it, I can
+            give you practical first steps. Your assessment gives you a training
+            plan built around your dog and your life.
           </p>
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <AssessmentButton

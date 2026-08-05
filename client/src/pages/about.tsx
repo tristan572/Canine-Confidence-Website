@@ -180,8 +180,8 @@ export default function AboutPage() {
               </picture>
               <div className="absolute -top-6 right-0 sm:-right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
                 <div className="text-center">
-                  <div className="text-lg font-bold mb-1">I'm not just here to train dogs</div>
-                  <div className="text-blue-100 text-sm">A trained dog isn't the goal. A dog you can actually live with is.</div>
+                  <div className="text-lg font-bold mb-1">Training that fits daily life</div>
+                  <div className="text-blue-100 text-sm">I want you to have a dog you can genuinely enjoy living with.</div>
                 </div>
               </div>
             </div>
