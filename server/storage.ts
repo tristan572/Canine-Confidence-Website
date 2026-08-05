@@ -179,13 +179,13 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Virtual Coaching and Support",
-        description: "**Expert Help, Wherever You Are**\n\nGet the answers and support you need without the travel time! My Zoom Call service offers convenient, personalised, one-on-one guidance right on your phone or computer.\n\nThis is ideal for quick skill refinement, specific problem-solving, or follow-up questions on techniques covered in previous sessions. I can troubleshoot minor issues, review your training videos, or create a plan for the next steps in your dog's development.\n\nExperience flexible coaching that fits your schedule, is accessible globally, and provides expert support from the comfort of your home. It's the perfect, cost-effective way to keep your training progress moving forward.",
+        description: "**Experienced Input, Wherever You Are**\n\nUse this private video call to fine-tune training details, bounce ideas around, review footage or build a practical training plan. It is available to anyone who wants experienced input without an in-person session.\n\nBring a specific problem, a list of questions or footage you want to unpack. We can work through what feels stuck and decide on useful next steps together.",
         duration: "60 minutes",
         location: "Video call (Zoom)",
         price: "$100",
         category: "consultation",
         imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6_opt.webp",
-        features: ["Convenient video call", "Problem solving", "Follow-up support", "Training guidance"]
+        features: ["A private one-hour video call from wherever you are", "Fine-tune training details or work through something that feels stuck", "Bounce ideas around and get a second perspective", "Build or refine a practical training plan"]
       }
     ];
 
@@ -310,6 +310,7 @@ export class MemStorage implements IStorage {
         features: [
           "5 private coaching sessions that can be used for any behaviour or skill",
           "A practical approach built around your dog and the problem in front of us",
+          "In-depth teaching of training methods that actually work for your dog",
           "Learn how clarity, connection and play fit into your dog's training",
           "Support from me between sessions",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
@@ -411,7 +412,6 @@ export class MemStorage implements IStorage {
           "Focus and obedience practised while your dog moves through everyday distractions",
           "Lead handling that works when your dog pulls towards something",
           "A tailored plan to improve how your dog feels about the collar and lead",
-          "I keep working until the main walking goal is met",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
@@ -430,7 +430,8 @@ export class MemStorage implements IStorage {
           "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
           "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
           "A training plan built around the problems you want to solve first",
-          "Feedback and video updates so you can see what your dog is learning"
+          "Feedback and video updates so you can see what your dog is learning",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
@@ -448,7 +449,8 @@ export class MemStorage implements IStorage {
           "Home pickup included",
           "Obedience and manners practised during real walks",
           "Dedicated loose-lead walking practice",
-          "Skills built around traffic, people, dogs and other everyday distractions"
+          "Skills built around traffic, people, dogs and other everyday distractions",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
@@ -466,7 +468,8 @@ export class MemStorage implements IStorage {
           "Home pickup included",
           "Recall and impulse-control practice around distractions",
           "Safe exploration, play and fulfilment suited to your dog",
-          "Video and feedback after every outing, with useful tips for you"
+          "Video and feedback after every outing, with useful tips for you",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
@@ -511,6 +514,7 @@ export class MemStorage implements IStorage {
           "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
           "A training plan built around the problems you want to solve first",
           "Feedback and video updates so you can see what your dog is learning",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'",
         ],
       },
       "The Connected Companion Walk": {

@@ -42,7 +42,7 @@ export function ProgramCard({
                 <li
                   key={benefit}
                   className={`flex items-start gap-3 text-sm leading-relaxed ${
-                    benefit.startsWith("BONUS:")
+                    benefit.startsWith("Free ")
                       ? "rounded-lg bg-blue-50 p-3 font-semibold text-primary-blue"
                       : "text-medium-grey"
                   }`}
