@@ -178,7 +178,7 @@ export default function AboutPage() {
                   decoding="async"
                 />
               </picture>
-              <div className="absolute -top-6 -right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
+              <div className="absolute -top-6 right-0 sm:-right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
                 <div className="text-center">
                   <div className="text-lg font-bold mb-1">I'm not just here to train dogs</div>
                   <div className="text-blue-100 text-sm">A trained dog isn't the goal. A dog you can actually live with is.</div>
@@ -203,7 +203,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-green-500" />
+                    <CheckCircle className="w-6 h-6 text-primary-blue" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">NDTF Certified Professional</h3>
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-green-500" />
+                    <CheckCircle className="w-6 h-6 text-primary-blue" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">All 5-Star: 20+ on Google · 90+ on Madpaws</h3>
@@ -223,7 +223,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-green-500" />
+                    <CheckCircle className="w-6 h-6 text-primary-blue" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">Ongoing Support</h3>
@@ -233,7 +233,7 @@ export default function AboutPage() {
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-green-500" />
+                    <CheckCircle className="w-6 h-6 text-primary-blue" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-charcoal mb-2">Results-Based Methods</h3>

@@ -22,17 +22,35 @@ const STATIC_META: Record<string, PageMeta> = {
       "Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity, and real-world results. Free 15-min consult.",
     canonicalPath: "",
   },
-  "/services": {
-    title: "Dog Training Services | North Brisbane | Canine Confidence",
+  "/puppy": {
+    title: "Puppy Training North Brisbane | The Confident Start Program",
     description:
-      "Pulling on lead, ignoring recall, jumping on guests? I offer in-home dog training, walk & train, and adventure sessions across Brisbane's Northside.",
-    canonicalPath: "/services",
+      "Six private in-home puppy training sessions for $549. Build confidence, communication and practical life skills without an assessment first.",
+    canonicalPath: "/puppy",
   },
-  "/packages": {
-    title: "Dog Training Packages North Brisbane | Canine Confidence",
+  "/behaviour-obedience": {
+    title: "Dog Behaviour and Obedience North Brisbane | Canine Confidence",
     description:
-      "Training packages for every stage — from puppy foundations to off-lead freedom. Clear pricing, lasting results. Based in Boondall, serving North Brisbane.",
-    canonicalPath: "/packages",
+      "From everyday obedience to complex reactivity, every new adult dog starts with a $99 assessment and a clear training plan.",
+    canonicalPath: "/behaviour-obedience",
+  },
+  "/walking-adventure": {
+    title: "Dog Walking and Adventure Training North Brisbane",
+    description:
+      "Trainer-led walks, adventure outings and real-world reliability programs for North Brisbane dogs. New clients start with a $99 assessment.",
+    canonicalPath: "/walking-adventure",
+  },
+  "/method": {
+    title: "My Dog Training Method | Canine Confidence",
+    description:
+      "How Canine Confidence combines clear communication, play, genetic fulfilment and real-world practice to create lasting dog training results.",
+    canonicalPath: "/method",
+  },
+  "/reviews": {
+    title: "Dog Training Reviews North Brisbane | Canine Confidence",
+    description:
+      "Read what North Brisbane dog owners say about working with Canine Confidence and see verified five-star review sources.",
+    canonicalPath: "/reviews",
   },
   "/blog": {
     title: "Dog Training Tips & Advice | Canine Confidence",
@@ -143,7 +161,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     },
     geoRadius: "20000",
   },
-  priceRange: "$45 - $990",
+  priceRange: "$45 - $1050",
   image: `${SITE_URL}/attached_assets/DSC_0096_1758792971820.webp`,
   sameAs: [
     "https://www.facebook.com/p/Canine-Confidence-61571910674491/",
@@ -160,8 +178,11 @@ interface SitemapEntry {
 
 const STATIC_SITEMAP_ENTRIES: SitemapEntry[] = [
   { path: "", changefreq: "weekly", priority: "1.0" },
-  { path: "/services", changefreq: "monthly", priority: "0.9" },
-  { path: "/packages", changefreq: "monthly", priority: "0.9" },
+  { path: "/puppy", changefreq: "monthly", priority: "0.9" },
+  { path: "/behaviour-obedience", changefreq: "monthly", priority: "0.9" },
+  { path: "/walking-adventure", changefreq: "monthly", priority: "0.9" },
+  { path: "/method", changefreq: "monthly", priority: "0.8" },
+  { path: "/reviews", changefreq: "monthly", priority: "0.8" },
   { path: "/blog", changefreq: "weekly", priority: "0.8" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
   { path: "/contact", changefreq: "monthly", priority: "0.8" },

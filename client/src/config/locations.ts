@@ -2,6 +2,7 @@ export interface LocationArea {
   name: string;
   slug: string;
   isLive: boolean;
+  href?: string;
 }
 
 export const serviceAreas: LocationArea[] = [
@@ -13,7 +14,8 @@ export const serviceAreas: LocationArea[] = [
   {
     name: "Boondall",
     slug: "/dog-training-boondall",
-    isLive: false
+    isLive: false,
+    href: "/",
   },
   {
     name: "Northgate",

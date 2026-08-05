@@ -12,7 +12,6 @@ export function LocalBusinessSchema() {
     "email": "info@canineconfidence.com.au",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "44 Leona St",
       "addressLocality": "Boondall",
       "addressRegion": "QLD",
       "postalCode": "4034",
@@ -32,7 +31,7 @@ export function LocalBusinessSchema() {
       },
       "geoRadius": "30000"
     },
-    "priceRange": "$90 - $990",
+    "priceRange": "$45 - $1050",
     "image": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.webp",
     "logo": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.webp",
     "openingHoursSpecification": [
@@ -98,7 +97,7 @@ export function ServiceSchema({ name, description, price }: ServiceSchemaProps) 
       "price": price.replace(/[^0-9.]/g, ''),
       "priceCurrency": "AUD",
       "availability": "https://schema.org/InStock",
-      "url": "https://canineconfidence.com.au/services"
+      "url": "https://canineconfidence.com.au/behaviour-obedience"
     };
   }
 

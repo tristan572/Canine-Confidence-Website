@@ -126,9 +126,9 @@ export default function FAQPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">What does it cost?</h3>
               <p className="text-medium-grey text-sm">
-                See the full service list on the{" "}
-                <Link href="/services" className="text-primary-blue hover:underline">services page</Link>.
-                {" "}The Initial Canine Success Assessment ($90) is the starting point for adult dogs.
+                Puppy training is listed on the{" "}
+                <Link href="/puppy" className="text-primary-blue hover:underline">puppy page</Link>.
+                {" "}Adult behaviour, obedience, walking and adventure clients start with the Initial Canine Success Assessment ($99).
               </p>
             </Card>
 
@@ -166,7 +166,7 @@ export default function FAQPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">Do you offer package deals?</h3>
               <p className="text-medium-grey text-sm">
-                Yes! I offer multi-session packages that provide better value and ensure consistent progress. I'll discuss options during your consultation.
+                Yes. Program prices and inclusions are shown on the Behaviour &amp; Obedience and Walking &amp; Adventure pages. I recommend the right adult-dog option after the assessment rather than asking you to choose one blind.
               </p>
             </Card>
 

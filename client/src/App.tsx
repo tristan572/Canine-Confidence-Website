@@ -11,8 +11,11 @@ import { trackPhoneClick } from "@/lib/analytics";
 
 import Home from "@/pages/home";
 
-const Services = lazy(() => import("@/pages/services"));
-const Packages = lazy(() => import("@/pages/packages"));
+const Puppy = lazy(() => import("@/pages/puppy"));
+const BehaviourObedience = lazy(() => import("@/pages/behaviour-obedience"));
+const WalkingAdventure = lazy(() => import("@/pages/walking-adventure"));
+const Method = lazy(() => import("@/pages/method"));
+const Reviews = lazy(() => import("@/pages/reviews"));
 const Blog = lazy(() => import("@/pages/blog"));
 const BlogDetail = lazy(() => import("@/pages/blog-detail"));
 const About = lazy(() => import("@/pages/about"));
@@ -83,8 +86,11 @@ function Router() {
       <Suspense fallback={<PageLoader />}>
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/services" component={Services} />
-          <Route path="/packages" component={Packages} />
+          <Route path="/puppy" component={Puppy} />
+          <Route path="/behaviour-obedience" component={BehaviourObedience} />
+          <Route path="/walking-adventure" component={WalkingAdventure} />
+          <Route path="/method" component={Method} />
+          <Route path="/reviews" component={Reviews} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:id" component={BlogDetail} />
           <Route path="/about" component={About} />

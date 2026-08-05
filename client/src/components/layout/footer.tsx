@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-600 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
@@ -57,10 +57,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Service Areas</h3>
             <ul className="space-y-2">
               {serviceAreas.map((area) =>
-                area.isLive ? (
+                area.isLive || area.href ? (
                   <li key={area.slug}>
                     <Link
-                      href={area.slug}
+                      href={area.href ?? area.slug}
                       className="text-white hover:text-primary-blue transition-colors"
                     >
                       {area.name}
@@ -81,16 +81,11 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/services" className="text-white hover:text-primary-blue transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/packages" className="text-white hover:text-primary-blue transition-colors">
-                  Packages
-                </Link>
-              </li>
+              <li><Link href="/puppy" className="text-white hover:text-primary-blue transition-colors">Puppy Training</Link></li>
+              <li><Link href="/behaviour-obedience" className="text-white hover:text-primary-blue transition-colors">Behaviour &amp; Obedience</Link></li>
+              <li><Link href="/walking-adventure" className="text-white hover:text-primary-blue transition-colors">Walking &amp; Adventure</Link></li>
+              <li><Link href="/method" className="text-white hover:text-primary-blue transition-colors">Method</Link></li>
+              <li><Link href="/reviews" className="text-white hover:text-primary-blue transition-colors">Reviews</Link></li>
               <li>
                 <Link href="/about" className="text-white hover:text-primary-blue transition-colors">
                   About
@@ -149,7 +144,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary-blue" />
-                <span className="text-white">44 Leona St, Boondall, QLD</span>
+                <span className="text-white">Boondall, QLD</span>
               </li>
               <li className="flex items-start space-x-2 mt-3">
                 <div className="h-4 w-4 mt-0.5">

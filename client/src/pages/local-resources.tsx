@@ -44,8 +44,8 @@ const categories: ResourceCategory[] = [
   {
     title: "Pet Shops",
     icon: ShoppingBag,
-    colour: "text-green-600",
-    bgColour: "bg-green-50",
+    colour: "text-primary-blue",
+    bgColour: "bg-blue-50",
     entries: [
       {
         name: "Your Local Pet Shop",

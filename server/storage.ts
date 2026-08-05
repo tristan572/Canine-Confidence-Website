@@ -34,7 +34,7 @@ export interface IStorage {
   getBlogPosts(): Promise<BlogPost[]>;
   getBlogPost(id: number): Promise<BlogPost | undefined>;
   getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
-  createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
+  createBlogPost(post: InsertBlogPost & { publishedAt?: Date }): Promise<BlogPost>;
 
   // Bookings
   getBookings(): Promise<Booking[]>;
@@ -189,7 +189,25 @@ export class MemStorage implements IStorage {
       }
     ];
 
-    serviceData.forEach(service => this.createService(service));
+    const serviceOverrides: Record<string, Partial<InsertService>> = {
+      "Initial Canine Success Assessment": {
+        price: "$99",
+      },
+      "One-on-One Private Coaching": {
+        price: "$125",
+      },
+      "Walk and Train": {
+        price: "$70",
+      },
+      "Adventure Walk and Training": {
+        price: "$90",
+      },
+    };
+
+    serviceData
+      .filter((service) => service.name !== "In-home Day Train")
+      .map((service) => ({ ...service, ...serviceOverrides[service.name] }))
+      .forEach((service) => this.createService(service));
 
     // Seed products
     const productData: InsertProduct[] = [
@@ -264,7 +282,7 @@ export class MemStorage implements IStorage {
     const packageData: InsertPackage[] = [
       {
         name: "The Confident Start Program",
-        description: "The ultimate in-home early development program for puppies (8-20 weeks).\n\nTogether with you, I build the essential foundations of confidence, connection, and clear communication during your puppy's critical learning period. Stop worrying about house training and biting, and start enjoying the confident, connected relationship you worked toward.\n\n**Why This Program is the Confident Choice:**\n\n**Customised, In-Home Coaching:** Receive personalised, one-on-one sessions delivered by an expert in the comfort of your own home, ensuring fast, effective learning tailored to your lifestyle.\n\n**Build Foundational Clarity:** Establish a clear shared language from day one, giving your puppy the confidence and guidance they need to succeed in their new world.\n\n**Play-Based Connection:** I teach you how to use engaging, fulfilling play to establish deep trust, enhance cooperation, and eliminate problem behaviours before they start.\n\n**Essential Life Skills:** Master crucial social skills, house-training protocols, and foundational manners (including reliable recall and settling on place).",
+        description: "The ultimate in-home early development program for puppies (8-20 weeks).\n\nTogether with you, I build the essential foundations of confidence, connection, and clear communication during your puppy's critical learning period. Stop worrying about house training, barking, and chewing your possessions, and start enjoying the confident, connected relationship you worked toward.\n\n**Why This Program is the Confident Choice:**\n\n**Customised, In-Home Coaching:** Receive personalised, one-on-one sessions delivered by an expert in the comfort of your own home, ensuring fast, effective learning tailored to your lifestyle.\n\n**Build Foundational Clarity:** Establish a clear shared language from day one, giving your puppy the confidence and guidance they need to succeed in their new world.\n\n**Play-Based Connection:** I teach you how to use engaging, fulfilling play to establish deep trust, enhance cooperation, and eliminate problem behaviours before they start.\n\n**Essential Life Skills:** Master crucial social skills, house-training protocols, and foundational manners (including reliable recall and settling on place).",
         price: "$480",
         originalPrice: "$720",
         duration: "6 weeks",
@@ -273,10 +291,9 @@ export class MemStorage implements IStorage {
         imageUrl: "/attached_assets/image_1750048904991_opt.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
-          "Personalised Socialisation Protocols & Exposure Plan",
-          "Step-by-Step House Training Guidance & Setup",
+          "Personalised House Training Guidance and Setup",
+          "Step by Step Socialisation and Desensitisation Plan",
           "The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations",
-          "Take-Home Training Plan after every session",
           "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)"
         ],
         isPopular: false
@@ -472,10 +489,87 @@ export class MemStorage implements IStorage {
       }
     ];
 
-    packageData.forEach(pkg => this.createPackage(pkg));
+    const currentPackageOverrides: Record<string, Partial<InsertPackage>> = {
+      "The Confident Start Program": {
+        price: "$549",
+        originalPrice: undefined,
+        duration: "Use within 3 months",
+        features: [
+          "6 x Private, In-Home Expert Sessions",
+          "Personalised House Training Guidance and Setup",
+          "Step by Step Socialisation and Desensitisation Plan",
+          "The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations",
+          "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)",
+        ],
+      },
+      "The Foundation Program": {
+        price: "$320",
+        originalPrice: "$365",
+        duration: "Use within 2 weeks",
+        features: [
+          "4 x Private, In-Home Day Train Sessions + 1 x One-on-One Private Coaching Session",
+          "Completely Flexible Focus - use for obedience, foundations, behaviour modification, or fulfilment",
+          "Customised Training Plan focusing on your current priorities",
+          "Ongoing Feedback and video updates",
+        ],
+      },
+      "The Connected Companion Walk": {
+        price: "$350",
+        originalPrice: "$405",
+        duration: "Use within 2 weeks per block",
+      },
+      "From Chaos to Calm Program": {
+        price: "$1,050",
+        originalPrice: "$1,135",
+        duration: "Use within 5 weeks",
+      },
+      "The Focused Progress Plan": {
+        price: "$550",
+        originalPrice: "$625",
+        duration: "Use within 6 months",
+      },
+      "The Real World Reliability Package": {
+        price: "$325",
+        originalPrice: "$350",
+        duration: "Use within 6 months",
+      },
+      "The Adventure Pack": {
+        price: "$425",
+        originalPrice: "$450",
+        duration: "Use within 6 months",
+      },
+    };
+
+    const currentPackageNames = Object.keys(currentPackageOverrides);
+    const currentPackageData: InsertPackage[] = packageData
+      .filter((pkg) => currentPackageNames.includes(pkg.name))
+      .map((pkg) => {
+        const current = { ...pkg, ...currentPackageOverrides[pkg.name] };
+        if (pkg.name === "The Connected Companion Walk") {
+          current.description = current.description.replace("in just one week", "in a focused two-week block");
+        }
+        if (pkg.name === "From Chaos to Calm Program") {
+          current.description = current.description.replace(
+            "over three consecutive weeks (saving you $90 compared to single session purchases)",
+            "across five focused weeks (saving you $85 compared to single session purchases)",
+          );
+        }
+        if (pkg.name === "The Focused Progress Plan") {
+          current.description = current.description.replace("saving you $50", "saving you $75");
+        }
+        if (pkg.name === "The Foundation Program") {
+          current.description = current.description.replace(
+            "five private, done-for-you sessions",
+            "four done-for-you sessions plus private owner coaching",
+          );
+        }
+        return current;
+      });
+
+    currentPackageData.forEach((pkg) => this.createPackage(pkg));
 
     // Seed blog posts - Four Building Blocks Articles
-    const blogData: InsertBlogPost[] = [
+    const blogData: (InsertBlogPost & { publishedAt?: Date })[] = [
       {
         title: "Health: The Foundation of Everything",
         excerpt: "Before a dog can learn, behave, or thrive, they have to feel good in their body. This is the non-negotiable starting point.",
@@ -1674,7 +1768,12 @@ Tristan`,
 
   async createService(service: InsertService): Promise<Service> {
     const id = this.currentServiceId++;
-    const newService: Service = { ...service, id };
+    const newService: Service = {
+      ...service,
+      id,
+      imageUrl: service.imageUrl ?? null,
+      features: service.features ?? null,
+    };
     this.services.set(id, newService);
     return newService;
   }
@@ -1694,7 +1793,13 @@ Tristan`,
 
   async createProduct(product: InsertProduct): Promise<Product> {
     const id = this.currentProductId++;
-    const newProduct: Product = { ...product, id };
+    const newProduct: Product = {
+      ...product,
+      id,
+      priceRange: product.priceRange ?? null,
+      imageUrl: product.imageUrl ?? null,
+      inStock: product.inStock ?? true,
+    };
     this.products.set(id, newProduct);
     return newProduct;
   }
@@ -1714,7 +1819,14 @@ Tristan`,
 
   async createPackage(packageData: InsertPackage): Promise<Package> {
     const id = this.currentPackageId++;
-    const newPackage: Package = { ...packageData, id };
+    const newPackage: Package = {
+      ...packageData,
+      id,
+      originalPrice: packageData.originalPrice ?? null,
+      imageUrl: packageData.imageUrl ?? null,
+      features: packageData.features ?? null,
+      isPopular: packageData.isPopular ?? false,
+    };
     this.packages.set(id, newPackage);
     return newPackage;
   }
@@ -1741,7 +1853,11 @@ Tristan`,
     const newPost: BlogPost = {
       ...post,
       id,
-      publishedAt: post.publishedAt ?? new Date()
+      publishedAt: post.publishedAt ?? new Date(),
+      imageUrl: post.imageUrl ?? null,
+      slug: post.slug ?? "",
+      tags: post.tags ?? null,
+      metaTitle: post.metaTitle ?? null,
     };
     this.blogPosts.set(id, newPost);
     return newPost;
@@ -1762,7 +1878,17 @@ Tristan`,
       ...booking, 
       id, 
       status: "pending",
-      createdAt: new Date()
+      createdAt: new Date(),
+      clientPhone: booking.clientPhone ?? null,
+      preferredDate: booking.preferredDate ?? null,
+      preferredTime: booking.preferredTime ?? null,
+      dogBreed: booking.dogBreed ?? null,
+      dogAge: booking.dogAge ?? null,
+      dogWeight: booking.dogWeight ?? null,
+      behaviorConcerns: booking.behaviorConcerns ?? null,
+      previousTraining: booking.previousTraining ?? null,
+      veterinaryInfo: booking.veterinaryInfo ?? null,
+      emergencyContact: booking.emergencyContact ?? null,
     };
     this.bookings.set(id, newBooking);
     return newBooking;
@@ -1779,7 +1905,10 @@ Tristan`,
       ...consultation, 
       id, 
       status: "pending",
-      createdAt: new Date()
+      createdAt: new Date(),
+      preferredCallTime: consultation.preferredCallTime ?? null,
+      dogInfo: consultation.dogInfo ?? null,
+      concerns: consultation.concerns ?? null,
     };
     this.consultations.set(id, newConsultation);
     return newConsultation;
@@ -1796,7 +1925,10 @@ Tristan`,
       ...submission, 
       id, 
       status: "new",
-      createdAt: new Date()
+      createdAt: new Date(),
+      service: submission.service ?? null,
+      message: submission.message ?? null,
+      phone: submission.phone ?? null,
     };
     this.contactSubmissions.set(id, newSubmission);
     return newSubmission;
@@ -1812,7 +1944,8 @@ Tristan`,
     const newItem: CartItem = { 
       ...item, 
       id, 
-      createdAt: new Date()
+      createdAt: new Date(),
+      quantity: item.quantity ?? 1,
     };
     this.cartItems.set(id, newItem);
     return newItem;
@@ -1852,7 +1985,10 @@ Tristan`,
       ...testimonial,
       id,
       createdAt: new Date(),
-      isActive: true
+      isActive: true,
+      location: testimonial.location ?? null,
+      service: testimonial.service ?? null,
+      dogName: testimonial.dogName ?? null,
     };
     this.testimonials.set(id, newTestimonial);
     return newTestimonial;

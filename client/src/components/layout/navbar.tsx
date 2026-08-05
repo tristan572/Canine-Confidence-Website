@@ -2,23 +2,27 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Dog, Phone } from "lucide-react";
-import ConsultationForm from "@/components/forms/consultation-form";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Calendar, Menu } from "lucide-react";
 import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
+import { ASSESSMENT_URL } from "@/lib/funnel";
+import { openBookingUrl } from "@/lib/analytics";
 
 export default function Navbar() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/packages", label: "Packages" },
+    { href: "/puppy", label: "Puppy" },
+    { href: "/behaviour-obedience", label: "Behaviour" },
+    { href: "/walking-adventure", label: "Walking" },
+    { href: "/method", label: "Method" },
+    { href: "/reviews", label: "Reviews" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
   ];
+
+  const bookAssessment = () =>
+    openBookingUrl(ASSESSMENT_URL, "service", "Initial Canine Success Assessment | Navbar");
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -32,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center py-3">
           {/* Mobile Layout */}
-          <div className="md:hidden flex items-center justify-between w-full">
+          <div className="lg:hidden flex items-center justify-between w-full">
             <Link href="/" className="flex items-center group" aria-label="Canine Confidence home" data-testid="link-brand">
               <img
                 src={logoImage}
@@ -76,20 +80,10 @@ export default function Navbar() {
                   ))}
                   
                   <div className="pt-4 space-y-3">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" className="w-full border-primary-blue text-primary-blue hover:bg-light-blue">
-                          <Phone className="w-4 h-4 mr-2" />
-                          Free Consultation
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
-                        <DialogTitle>Free Phone Consultation</DialogTitle>
-                        <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs.</DialogDescription>
-                        <ConsultationForm />
-                      </DialogContent>
-                    </Dialog>
-
+                    <Button onClick={bookAssessment} className="w-full btn-primary">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Book Assessment
+                    </Button>
                   </div>
                 </div>
               </SheetContent>
@@ -97,7 +91,7 @@ export default function Navbar() {
           </div>
           
           {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-between w-full">
+          <div className="hidden lg:flex items-center justify-between w-full">
             {/* Desktop Logo */}
             <Link href="/" className="flex items-center shrink-0 group" aria-label="Canine Confidence home" data-testid="link-brand">
               <img
@@ -113,12 +107,12 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-1 lg:space-x-2">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
+                  className={`relative px-2 py-2 text-xs lg:text-sm font-medium transition-all duration-200 rounded-lg ${
                     isActive(item.href)
                       ? "text-primary-blue bg-blue-50"
                       : "text-gray-700 hover:text-primary-blue hover:bg-gray-50"
@@ -131,20 +125,10 @@ export default function Navbar() {
 
             {/* Desktop CTA Buttons */}
             <div className="flex items-center space-x-2 shrink-0">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="bg-primary-blue hover:bg-blue-700 text-white font-semibold shadow-sm">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Free Consult
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Free Phone Consultation</DialogTitle>
-                  <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs.</DialogDescription>
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
-
+              <Button onClick={bookAssessment} className="bg-primary-blue hover:bg-blue-700 text-white font-semibold shadow-sm">
+                <Calendar className="w-4 h-4 mr-2" />
+                Assessment
+              </Button>
             </div>
           </div>
 

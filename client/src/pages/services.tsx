@@ -57,7 +57,6 @@ export default function ServicesPage() {
   const serviceIcons = {
     "Behaviour Modification": GraduationCap,
     "Walk & Train Sessions": Footprints,
-    "One-on-One Coaching": User,
     "Professional Walks": Route,
     "House Visits": Home,
     "Initial Assessment": ClipboardList,
@@ -65,7 +64,10 @@ export default function ServicesPage() {
     "Virtual Coaching and Support": Phone,
     "Local Walk": MapPinned,
     "Adventure Walk and Training": Mountain,
-    "Walk and Train": Footprints,  "Initial Canine Success Assessment": ClipboardList,  "One-on-One Private Coaching": Brain,  "In-home Day Train": Home,  "Initial Canine Success Assessment": ClipboardList,
+    "Walk and Train": Footprints,
+    "Initial Canine Success Assessment": ClipboardList,
+    "One-on-One Private Coaching": Brain,
+    "In-home Day Train": Home,
   };
 
   if (isLoading) {

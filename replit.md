@@ -112,7 +112,7 @@ Preferred communication style: Simple, everyday language.
   - Free consultation requests (contact info and concerns)
   - Contact form submissions (general inquiries)
 - **Security**: All user input is HTML-escaped to prevent injection attacks
-- **Configuration**: RESEND_API_KEY stored as environment secret
+- **Configuration**: RESEND_API_KEY and RESEND_AUDIENCE_ID stored as environment secrets
 - **Important**: The "from" domain (noreply@canineconfidence.com.au) MUST be verified in Resend before production deployment. Without domain verification, emails will fail to send.
 - **Implementation**: Email service in `server/email.ts`, integrated into API routes with graceful error handling
 

@@ -69,12 +69,12 @@ export default function SandgatePage() {
 
   const handleBookAdventure = () => {
     setShowAdventureDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/5', "service", "Adventure Walk and Training");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookAdventurePackage = () => {
     setShowAdventurePackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/4', "package", "The Adventure Pack");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookConfidentStart = () => {
@@ -84,7 +84,7 @@ export default function SandgatePage() {
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages', "package", "All packages");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   return (
@@ -181,7 +181,7 @@ export default function SandgatePage() {
                 Signature Service
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                The Bayside <span className="text-primary-blue">Adventure Walk</span>
+                The Bayside <span className="text-primary-blue">Adventure Walk and Training</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
                 A one-on-one training and enrichment session built around the Sandgate foreshore. Real exercise, real fulfilment, real-world skills — in the environment where it actually needs to hold up.
@@ -189,7 +189,7 @@ export default function SandgatePage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Foreshore Focus</h3>
                     <p className="text-medium-grey">I work on the Sandgate Foreshore off-lead mudflats between Second Avenue and Zeehan Street — reliable recall and impulse control, even with other dogs running past.</p>
@@ -197,7 +197,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Proofing Distractions</h3>
                     <p className="text-medium-grey">Your dog learns to ignore moving bikes, passing crowds, and seagulls while walking calmly on Flinders Parade.</p>
@@ -205,7 +205,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Café Manners</h3>
                     <p className="text-medium-grey">I practise Settle and Place behaviours so your dog can hold it while you enjoy Brisbane's best calamari from the local Fishmonger.</p>
@@ -213,7 +213,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Leash Mastery</h3>
                     <p className="text-medium-grey">Loose-lead walking along Shorncliffe Pier, where distractions are at their peak.</p>
@@ -227,7 +227,7 @@ export default function SandgatePage() {
                   className="btn-primary"
                   data-testid="button-book-adventure-walk"
                 >
-                  Book Adventure Walk
+                  Book Assessment
                 </Button>
               </div>
             </div>
@@ -240,21 +240,21 @@ export default function SandgatePage() {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
                       <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
-                      <div className="text-2xl font-bold text-primary-blue">$80</div>
+                      <div className="text-2xl font-bold text-primary-blue">$90</div>
                     </div>
 
-                    <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
                       <div className="flex items-center justify-between mb-2">
                         <div>
                           <p className="font-semibold text-charcoal">The Adventure Pack</p>
                           <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$375</div>
-                          <p className="text-sm text-green-700">$75 per session</p>
+                          <div className="text-2xl font-bold text-primary-blue">$425</div>
+                          <p className="text-sm text-primary-blue">$85 per session</p>
                         </div>
                       </div>
-                      <p className="text-green-700 font-semibold text-center">Save $25 across the package.</p>
+                      <p className="text-primary-blue font-semibold text-center">Save $25 across the package.</p>
                     </div>
                   </div>
 
@@ -281,7 +281,7 @@ export default function SandgatePage() {
                     className="btn-primary w-full"
                     data-testid="button-book-adventure-package-card"
                   >
-                    Book The Adventure Pack
+                    Book Assessment
                   </Button>
                 </div>
               </CardContent>
@@ -295,11 +295,11 @@ export default function SandgatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
                 Perfect for Puppies
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                The <span className="text-primary-blue">Confident Start</span> Program
+                <span className="text-primary-blue">The Confident Start Program</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed font-medium">
                 The first six months shape the next fifteen years.
@@ -316,7 +316,7 @@ export default function SandgatePage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Handling and Vet Prep</h5>
                     <p className="text-medium-grey">I work through comfortable handling from day one. Nail trims, ear checks, being restrained calmly. The earlier this is normal, the easier every vet visit becomes.</p>
@@ -324,7 +324,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Separation Confidence</h5>
                     <p className="text-medium-grey">I build your puppy's ability to be alone without falling apart. Started early, done gradually, it becomes a non-issue.</p>
@@ -332,7 +332,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Environmental Confidence</h5>
                     <p className="text-medium-grey">Structured exposure to what Sandgate actually throws at a dog — skateboards on the footpath, strong winds off the foreshore, busy crowds. Your puppy learns the world is manageable.</p>
@@ -340,7 +340,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">How to Learn</h5>
                     <p className="text-medium-grey">Before commands, your puppy needs to understand how to focus and take feedback. I build that foundation first. Everything else gets easier once it's in place.</p>
@@ -348,7 +348,7 @@ export default function SandgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">In-Home Training</h5>
                     <p className="text-medium-grey">Sessions happen in your actual environment. Toilet training, settling habits, and boundaries are built where they need to hold — not transferred from a classroom.</p>
@@ -376,10 +376,9 @@ export default function SandgatePage() {
                       6 private, one-hour, in-home sessions.
                     </p>
                     <div className="flex items-center justify-center gap-3">
-                      <span className="text-4xl font-bold text-primary-blue">$480</span>
-                      <span className="text-xl text-medium-grey line-through">$720</span>
+                      <span className="text-4xl font-bold text-primary-blue">$549</span>
                     </div>
-                    <p className="text-green-600 font-semibold mt-2">Save $240 on individual session pricing.</p>
+                    <p className="text-primary-blue font-semibold mt-2">Six private in-home puppy sessions.</p>
                   </div>
 
                   <div>
@@ -438,7 +437,7 @@ export default function SandgatePage() {
                 <p className="text-medium-grey mb-6 flex-1">
                   I start with an Initial Canine Success Assessment. One 60-minute session to assess your dog, identify what's driving the behaviour, and build a tailored plan before we begin.
                 </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">$90</div>
+                <div className="text-3xl font-bold text-primary-blue mb-6">$99</div>
                 <Button
                   onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary w-full"
@@ -449,13 +448,13 @@ export default function SandgatePage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-0">
+            <Card className="bg-gradient-to-br from-blue-50 to-white border-0">
               <CardContent className="p-8 text-center flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-charcoal mb-4">For Puppies</h3>
                 <p className="text-medium-grey mb-6 flex-1">
                   The Confident Start Program needs no prior assessment. Book directly and we get started.
                 </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">$480 for 6 sessions</div>
+                <div className="text-3xl font-bold text-primary-blue mb-6">$549 for 6 sessions</div>
                 <Button
                   onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary w-full"
@@ -529,7 +528,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll be redirected to book the $99 Initial Canine Success Assessment.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -562,7 +561,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+            New clients start with the $99 Initial Canine Success Assessment before booking Adventure Walk and Training.
           </DialogDescription>
 
           <div className="space-y-4">
@@ -593,7 +592,7 @@ export default function SandgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to purchase The Adventure Pack (5 sessions, $375).
+            New clients start with the $99 Initial Canine Success Assessment before booking The Adventure Pack.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -620,7 +619,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can select your training service, choose your preferred time, and complete your booking with integrated payment processing.
+            You'll be redirected to The Confident Start Program, which includes six sessions for $549. No assessment is required.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -653,7 +652,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll access my secure booking platform where you can browse all available training packages and services, choose your preferred option, and complete your booking with integrated payment processing.
+            You'll be redirected to book the $99 Initial Canine Success Assessment.
           </DialogDescription>
           
           <div className="space-y-4">

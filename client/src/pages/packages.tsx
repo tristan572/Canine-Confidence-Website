@@ -90,7 +90,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
               )}
             </div>
             {pkg.originalPrice && (
-              <p className="text-sm text-green-600 font-medium mt-1">
+              <p className="text-sm text-primary-blue font-medium mt-1">
                 Save {parseInt(pkg.originalPrice.replace('$', '')) - parseInt(pkg.price.replace('$', ''))} AUD
               </p>
             )}
@@ -101,7 +101,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
             <ul className="space-y-2">
               {pkg.features?.map((feature, index) => (
                 <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-primary-blue mt-0.5 flex-shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}

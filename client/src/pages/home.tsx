@@ -1,610 +1,237 @@
-import { useState, useEffect, lazy, Suspense } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
-import FormattedText from "@/components/ui/formatted-text";
-import heroImageJpeg from "@assets/IMG_0177_fallback_opt.jpg";
-import heroImage400 from "@assets/IMG_0177_hero_400_opt.webp";
-import heroImage800 from "@assets/IMG_0177_hero_800_opt.webp";
-import heroImage1200 from "@assets/IMG_0177_hero_1200_opt.webp";
-import testimonialsImageJpeg from "@assets/DSC_0171_fallback_opt.jpg";
-import testimonialsImage400 from "@assets/DSC_0171_testimonials_400_opt.webp";
-import testimonialsImage800 from "@assets/DSC_0171_testimonials_800_opt.webp";
-import testimonialsImage1200 from "@assets/DSC_0171_testimonials_1200_opt.webp";
-import { 
-  GraduationCap, 
-  Footprints, 
-  User, 
-  Route, 
-  Home, 
-  Phone, 
-  ShieldCheck, 
-  Award, 
-  Heart,
-  Clock,
-  MapPin,
-  DollarSign,
-  Target,
-  Calendar,
-  CheckCircle,
-  Star,
-  ClipboardList,
-  MapPinned,
-  Mountain,
-    Brain
-} from "lucide-react";
-
-const ConsultationForm = lazy(() => import("@/components/forms/consultation-form"));
-import ServiceCard from "@/components/ui/service-card";
-import BlogCard from "@/components/ui/blog-card";
 import TestimonialCard from "@/components/ui/testimonial-card";
-import type { Service, BlogPost, Package, Testimonial } from "@shared/schema";
-import { openBookingUrl } from "@/lib/analytics";
+import {
+  AssessmentButton,
+  ConsultationButton,
+} from "@/components/funnel/funnel-cta";
+import type { Testimonial } from "@shared/schema";
+import heroJpeg from "@assets/IMG_0177_fallback_opt.jpg";
+import hero400 from "@assets/IMG_0177_hero_400_opt.webp";
+import hero800 from "@assets/IMG_0177_hero_800_opt.webp";
+import hero1200 from "@assets/IMG_0177_hero_1200_opt.webp";
+import puppyCardImage from "@assets/image_1750048904991_opt.webp";
+import behaviourCardImage from "@assets/IMG_0237_1760870095911.jpeg";
+import walkingCardImage from "@assets/image_1750049520029_opt.webp";
+
+const doors = [
+  {
+    href: "/puppy",
+    title: "Puppy",
+    kicker: "Start them right",
+    image: puppyCardImage,
+    imagePosition: "object-center",
+    text: "Stop worrying about toilet training, biting and whether you are getting socialisation right. Build confidence, connection and clear communication from the start.",
+    note: "Direct booking. No assessment required.",
+  },
+  {
+    href: "/behaviour-obedience",
+    title: "Behaviour & Obedience",
+    kicker: "Training for real life",
+    image: behaviourCardImage,
+    imagePosition: "object-[center_75%]",
+    text: "From bad manners, to obedience, reactivity and anxiety, I look beyond the visible behaviour to what is driving it, then build change that lasts.",
+    note: "New clients start with an assessment.",
+  },
+  {
+    href: "/walking-adventure",
+    title: "Walking & Adventure",
+    kicker: "More than exercise",
+    image: walkingCardImage,
+    imagePosition: "object-center",
+    text: "Purposeful adventures, exercise and enrichment that leave your dog fulfilled, content and ready to settle at home.",
+    note: "New clients start with an assessment.",
+  },
+];
+
+const methodPoints = [
+  { number: "01", title: "Built around your dog", text: "I look at genetics, drives, past learning and what daily life actually looks like, then tailor the training to the dog in front of me." },
+  { number: "02", title: "Play with a purpose", text: "Play is high-value engagement. Used properly, it builds trust, motivation and the kind of focus that makes learning faster." },
+  { number: "03", title: "Clarity at both ends of the lead", text: "Your dog gets consistent communication they can understand, while you learn what to do and why it works." },
+  { number: "04", title: "Results that hold up outside", text: "I work in-home and out in the real world, because training only matters if it still works around everyday distractions." },
+];
 
 export default function HomePage() {
-  const [loadDeferred, setLoadDeferred] = useState(false);
-  
-  // Load deferred content after initial paint
-  useEffect(() => {
-    // Use requestIdleCallback with setTimeout fallback for Safari
-    const callback = () => setLoadDeferred(true);
-    if ('requestIdleCallback' in window) {
-      const id = window.requestIdleCallback(callback, { timeout: 1000 });
-      return () => window.cancelIdleCallback(id);
-    } else {
-      const id = setTimeout(callback, 100);
-      return () => clearTimeout(id);
-    }
-  }, []);
-  
-  // Critical queries - load immediately for above-fold content
-  const { data: services, isLoading: servicesLoading } = useQuery<Service[]>({
-    queryKey: ["/api/services"],
-  });
-
-  const { data: packages, isLoading: packagesLoading } = useQuery<Package[]>({
-    queryKey: ["/api/packages"],
-  });
-
-  // Deferred queries - load after initial paint to reduce main thread work
-  const { data: blogPosts, isLoading: blogLoading } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog"],
-    enabled: loadDeferred,
-  });
-
-  const { data: testimonials, isLoading: testimonialsLoading } = useQuery<Testimonial[]>({
+  const { data: testimonials = [] } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
-    enabled: loadDeferred,
   });
-
-  const serviceIcons = {
-    "Initial Assessment": ClipboardList,
-    "Behaviour Modification": GraduationCap,
-    "One-on-One Coaching": User,
-    "In-Home Obedience": Home,
-    "Walk and Train": Footprints,
-    "Virtual Coaching and Support": Phone,
-    "Local Walk": MapPinned,
-    "Professional Walks": Route,
-    "Walk & Train Sessions": Footprints,
-    "House Visits": Home,
-    "Adventure Walk and Training": Mountain,
-      "Initial Canine Success Assessment": ClipboardList,
-      "One-on-One Private Coaching": Brain,
-      "In-home Day Train": Home,
-  };
 
   return (
     <div className="min-h-screen">
-      <SEO 
-                title="Dog Training North Brisbane | Canine Confidence"
-                description="Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity, and real-world results. Free 15-min consult."
-        canonical="https://canineconfidence.com.au/"
-        keywords={[
-          'dog training North Brisbane',
-          'puppy training',
-          'dog behaviour specialist',
-          'certified dog trainer Brisbane',
-          'play-based dog training',
-          'positive reinforcement training',
-          'dog obedience Brisbane',
-          'reactive dog training'
-        ]}
+      <SEO
+        title="Dog Training North Brisbane | Canine Confidence"
+        description="Dog training on Brisbane's Northside. Build a calmer home and stronger bond through play, clarity and practical real-world training."
+        canonical="https://www.canineconfidence.com.au/"
       />
       <LocalBusinessSchema />
-      {/* Hero Section */}
-      <section className="hero-gradient py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-                  North Brisbane <span className="text-primary-blue">Dog Training</span> That Lasts
-                </h1>
-                <h2 className="text-3xl lg:text-4xl font-semibold text-charcoal leading-tight">
-                  The Dog You Always Pictured
-                </h2>
-                <p className="text-xl text-medium-grey leading-relaxed">
-                  Dogs trained at Canine Confidence come away calm, focused, and connected to their owner. I work in-home and out in the real world — using play, fulfilment, and clear communication to build something that sticks.
-                </p> 
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button className="btn-primary text-lg px-8 py-4">
-                      Free Phone Consult
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
-                    <DialogTitle>Free Phone Consultation</DialogTitle>
-                    <DialogDescription>Schedule a complimentary phone consultation to discuss your dog's training needs and find the right solution for your family.</DialogDescription>
-                    <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-                      <ConsultationForm />
-                    </Suspense>
-                  </DialogContent>
-                </Dialog>
 
-                <Button 
-                  onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/', "general", "Home hero")}
-                  variant="outline"
-                  className="btn-secondary text-lg px-8 py-4"
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Start Training Today
-                </Button>
-              </div>
-
-              <div className="flex items-center space-x-8 pt-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-charcoal">5+</div>
-                  <div className="text-sm text-medium-grey">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-charcoal">200+</div>
-                  <div className="text-sm text-medium-grey">Confident Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-charcoal">100%</div>
-                  <div className="text-sm text-medium-grey">Happier Dogs</div>
-                </div>
-              </div>
+      <section className="hero-gradient py-16 lg:py-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <h1 className="mb-3 text-4xl font-bold leading-tight text-charcoal lg:text-6xl">
+              North Brisbane <span className="text-primary-blue">Dog Training</span> That Lasts
+            </h1>
+            <h2 className="mb-5 text-2xl font-semibold leading-tight text-charcoal lg:text-3xl">
+              The Dog You Always Pictured
+            </h2>
+            <p className="mb-8 text-xl leading-relaxed text-medium-grey">
+              Dogs trained at Canine Confidence come away calm, focused and
+              connected to their owner. I work in-home and out in the real world,
+              using play, fulfilment and clear communication to build something
+              that sticks.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <AssessmentButton location="Home hero" className="px-7 py-4 text-lg" showIcon={false} />
+              <ConsultationButton className="btn-secondary px-7 py-4 text-lg" showIcon={false} />
             </div>
-            
-            <div className="relative hero-img-wrapper">
-              <picture>
-                <source 
-                  type="image/webp"
-                  srcSet={`${heroImage400} 400w, ${heroImage800} 800w, ${heroImage1200} 1200w`}
-                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 50vw"
-                />
-                <img 
-                  src={heroImageJpeg} 
-                  alt="Tristan training a dog outdoors in Brisbane"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                  width={600}
-                  height={400}
-                  loading="eager"
-                  decoding="async"
-                  // @ts-expect-error fetchpriority is valid HTML attribute
-                  fetchpriority="high"
-                />
-              </picture>
-              
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <div className="bg-green-100 p-2 rounded-full">
-                    <ShieldCheck className="h-5 w-5 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-charcoal">Certified Trainer</div>
-                    <div className="text-sm text-medium-grey">Professional & Insured</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <Star className="w-4 h-4" />
-                  Client Reviews
-                </div>
-                <h2 className="text-4xl font-bold text-charcoal">Real Dogs. Real Owners. Real Results.</h2>
-                <p className="text-xl text-medium-grey">
-                  All Five-Star:{" "}
-                  <a
-                    href="https://share.google/NJfyc690NWAMVb3LX"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-blue hover:underline font-semibold"
-                  >
-                    20+ on Google
-                  </a>
-                  {" · 90+ on Madpaws"}
-                </p>
-              </div>
-
-              {testimonialsLoading ? (
-                <div className="space-y-6">
-                  {[...Array(2)].map((_, i) => (
-                    <Card key={i} className="animate-pulse">
-                      <CardContent className="p-6">
-                        <div className="h-4 bg-gray-200 rounded mb-4"></div>
-                        <div className="h-16 bg-gray-200 rounded mb-4"></div>
-                        <div className="h-4 bg-gray-200 rounded w-32"></div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              ) : testimonials && testimonials.length > 0 ? (
-                <div className="space-y-6">
-                  {testimonials.slice(0, 4).map((testimonial) => (
-                    <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-medium-grey">
-                    More reviews available on my{" "}
-                    <a 
-                      href="https://www.madpaws.com.au/petsitter/boondall-qld/tristan-p-nationally-accredited-dog-trainer-professional-reliable-and-flexible"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-blue hover:underline"
-                    >
-                      Madpaws profile
-                    </a>.
-                  </p>
-                </div>
-              )}
-            </div>
-            
-            <div className="relative">
-              <picture>
-                <source 
-                  type="image/webp"
-                  srcSet={`${testimonialsImage400} 400w, ${testimonialsImage800} 800w, ${testimonialsImage1200} 1200w`}
-                  sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 50vw"
-                />
-                <img 
-                  src={testimonialsImageJpeg} 
-                  alt="Tristan training a French Bulldog in North Brisbane"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                  width={600}
-                  height={400}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-charcoal">5.0/5</span>
-                </div>
-                <p className="text-sm text-medium-grey">
-                  "Professional, effective training that really works!"
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Training Packages Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white content-visibility-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Star className="w-4 h-4" />
-              Most Popular Training Solutions
-            </div>
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Comprehensive Training Packages</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Every dog is different. So is every program. I look at your dog's genetics, their drives, and what your daily life actually looks like — then build something around that. The goal isn't compliance. It's a dog you can take anywhere.
+            <p className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-medium-grey">
+              In-home training · Real-world practice · Lifelong Results
             </p>
           </div>
-
-          {packagesLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[...Array(4)].map((_, i) => (
-                <Card key={i} className="animate-pulse">
-                  <CardContent className="p-8">
-                    <div className="h-6 bg-gray-200 rounded mb-4"></div>
-                    <div className="h-16 bg-gray-200 rounded mb-6"></div>
-                    <div className="h-8 bg-gray-200 rounded mb-4"></div>
-                    <div className="space-y-2 mb-6">
-                      {[...Array(3)].map((_, j) => (
-                        <div key={j} className="h-4 bg-gray-200 rounded"></div>
-                      ))}
-                    </div>
-                    <div className="h-10 bg-gray-200 rounded"></div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {packages?.map((pkg) => (
-                <Card key={pkg.id} className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 relative overflow-hidden group">
-                  {pkg.name === "Complete Confidence Package" && (
-                    <div className="absolute top-0 right-0 bg-gradient-to-l from-yellow-400 to-orange-400 text-white px-3 py-1 text-xs font-bold">
-                      BEST VALUE
-                    </div>
-                  )}
-                  {pkg.imageUrl && (
-                    <div className="h-48 w-full">
-                      <img 
-                        src={pkg.imageUrl} 
-                        alt={`${pkg.name} training session`}
-                        className="w-full h-full object-cover"
-                        width={400}
-                        height={192}
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  <CardContent className="p-8">
-                    <div className="text-center mb-6">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.name}</h3>
-                      <div className="text-gray-600 text-sm mb-4 text-left prose prose-sm max-w-none">
-                        <FormattedText text={pkg.description} />
-                      </div>
-                      
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="text-3xl font-bold text-blue-600">{pkg.price}</span>
-                        {pkg.originalPrice && (
-                          <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
-                        )}
-                      </div>
-                      {pkg.originalPrice && (
-                        <p className="text-sm text-green-600 font-medium mt-1">
-                          Save {parseInt(pkg.originalPrice.replace('$', '')) - parseInt(pkg.price.replace('$', ''))} AUD
-                        </p>
-                      )}
-                    </div>
-
-                    <div className="space-y-3 mb-8">
-                      <h4 className="font-semibold text-gray-800 text-sm">What's Included:</h4>
-                      <ul className="space-y-2">
-                        {pkg.features?.slice(0, 4).map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
-                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                        {pkg.features && pkg.features.length > 4 && (
-                          <li className="text-sm text-blue-600 font-medium">
-                            + {pkg.features.length - 4} more benefits
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-
-                    <Link href="/packages">
-                      <Button className="w-full btn-primary text-sm py-3 group-hover:bg-blue-700 transition-colors">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Learn More & Book
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-
-          <div className="text-center mt-12">
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Not sure which package is right for you?</h3>
-              <p className="text-medium-grey mb-4">Get personalised recommendations in a free 15-minute consultation</p>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="btn-primary px-6">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Get Free Consultation
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Free Phone Consultation</DialogTitle>
-                  <DialogDescription>Get personalised recommendations for your dog's training needs with a complimentary 15-minute phone consultation.</DialogDescription>
-                  <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-                    <ConsultationForm />
-                  </Suspense>
-                </DialogContent>
-              </Dialog>
-            </div>
-          </div>
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={`${hero400} 400w, ${hero800} 800w, ${hero1200} 1200w`}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <img
+              src={heroJpeg}
+              alt="Tristan training a dog outdoors in North Brisbane"
+              className="h-auto w-full rounded-2xl shadow-2xl"
+              width={640}
+              height={480}
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
-      {/* Services Section */}
-      <section className="py-20 bg-white content-visibility-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Training Services</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Training isn't a chore—it's high-value engagement. By placing play at the centre of the work, I accelerate your dog's learning and focus. That builds the kind of clarity that lasts.
+
+      <section className="bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 max-w-3xl">
+            <h2 className="mb-4 text-3xl font-bold text-charcoal lg:text-4xl">
+              What would make life with your dog better?
+            </h2>
+            <p className="text-lg text-medium-grey">
+              Start with what needs to change. I will help you choose the training
+              that gets you from daily frustration to a calmer, more connected dog
+              you can enjoy living with.
             </p>
           </div>
-
-          {servicesLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[...Array(6)].map((_, i) => (
-                <Card key={i} className="animate-pulse">
+          <div className="grid grid-cols-1 gap-7 lg:grid-cols-3">
+            {doors.map(({ href, title, kicker, image, imagePosition, text, note }) => (
+              <Link key={href} href={href} className="group block h-full">
+                <Card className="h-full overflow-hidden border-0 bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-charcoal">
+                    <img
+                      src={image}
+                      alt=""
+                      className={`h-full w-full object-cover ${imagePosition} transition duration-500 group-hover:scale-105`}
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                    <p className="absolute bottom-5 left-6 right-6 text-sm font-bold uppercase tracking-[0.14em] text-white">
+                      {kicker}
+                    </p>
+                  </div>
                   <CardContent className="p-8">
-                    <div className="h-12 w-12 bg-gray-200 rounded-lg mb-6"></div>
-                    <div className="h-6 bg-gray-200 rounded mb-4"></div>
-                    <div className="h-20 bg-gray-200 rounded mb-6"></div>
-                    <div className="h-10 bg-gray-200 rounded"></div>
+                    <h3 className="mb-3 text-2xl font-bold text-charcoal">{title}</h3>
+                    <p className="mb-5 leading-relaxed text-medium-grey">{text}</p>
+                    <p className="mb-6 text-sm font-semibold text-charcoal">{note}</p>
+                    <span className="font-bold text-primary-blue transition group-hover:tracking-wide">
+                      See your options →
+                    </span>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services?.slice(0, 5).map((service) => {
-                const IconComponent = serviceIcons[service.name as keyof typeof serviceIcons] || GraduationCap;
-                return (
-                  <ServiceCard
-                    key={service.id}
-                    service={service}
-                    icon={IconComponent}
-                  />
-                );
-              })}
-              
-              {/* Free Consultation Card */}
-              <Card className="bg-primary-blue text-white card-hover">
-                <CardContent className="p-8">
-                  <div className="bg-white p-3 rounded-lg w-fit mb-6">
-                    <Phone className="h-6 w-6 text-primary-blue" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Free Phone Consultation</h3>
-                  <p className="text-blue-100 mb-6">
-                    Not sure which service fits? Book a free 15-minute call and I'll help you work out what your dog actually needs — no obligation, no sales pitch.
-                  </p>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center text-sm text-blue-100">
-                      <Clock className="w-4 h-4 mr-2" />
-                      <span>15 minutes</span>
-                    </div>
-                    <div className="flex items-center text-sm text-blue-100">
-                      <Phone className="w-4 h-4 mr-2" />
-                      <span>Phone call</span>
-                    </div>
-                    <div className="flex items-center text-sm text-white font-semibold">
-                      <DollarSign className="w-4 h-4 mr-2" />
-                      <span>Completely Free</span>
-                    </div>
-                  </div>
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button className="w-full bg-white text-primary-blue hover:bg-gray-50">
-                        Request Call
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogTitle>Request Free Phone Call</DialogTitle>
-                      <DialogDescription>Schedule a 15-minute complimentary consultation to discuss your training needs and get expert advice.</DialogDescription>
-                      <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-                        <ConsultationForm />
-                      </Suspense>
-                    </DialogContent>
-                  </Dialog>
-                </CardContent>
-              </Card>
-            </div>
-          )}
-
-          <div className="text-center mt-12">
-            <Link href="/services">
-              <Button variant="outline" className="btn-secondary">
-                View All Services
-              </Button>
-            </Link>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
-      {/* Blog Preview Section */}
-      <section className="py-20 bg-gray-50 content-visibility-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Free Training Advice</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">Understanding your dog's individual needs and how to effectively communicate is key to building the confident, fulfilled relationship you both deserve.</p>
-          </div>
 
-          {blogLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[...Array(3)].map((_, i) => (
-                <Card key={i} className="animate-pulse">
-                  <div className="h-48 bg-gray-200"></div>
-                  <CardContent className="p-6">
-                    <div className="h-4 bg-gray-200 rounded mb-3"></div>
-                    <div className="h-6 bg-gray-200 rounded mb-3"></div>
-                    <div className="h-16 bg-gray-200 rounded mb-4"></div>
-                    <div className="h-4 bg-gray-200 rounded"></div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts?.slice(0, 3).map((post) => (
-                <BlogCard key={post.id} post={post} />
-              ))}
-            </div>
-          )}
-
-          <div className="text-center mt-12">
-            <Link href="/blog">
-              <Button className="btn-primary">
-                View All Articles
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-blue content-visibility-auto">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">Most dog problems have a clear cause.</h2>
-              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                A free 15-minute call is enough to work out what's going on and whether I can help.
+      <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <div className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-primary-blue">
+                Five-star feedback
+              </div>
+              <h2 className="text-3xl font-bold text-charcoal lg:text-4xl">
+                Five-star feedback from the people living the difference.
+              </h2>
+              <p className="mt-3 max-w-2xl text-lg text-medium-grey">
+                Five-star feedback from owners who wanted more than obedience in
+                the backyard. They wanted calmer homes, easier walks and a better
+                relationship with their dog.
               </p>
             </div>
+            <Link href="/reviews" className="inline-flex items-center font-semibold text-primary-blue hover:underline">
+              Read all reviews →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
+            {testimonials.slice(0, 2).map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Book a Free Call
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Book a Free Call</DialogTitle>
-                  <DialogDescription>Book a free 15-minute call to talk through what's going on with your dog.</DialogDescription>
-                  <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-                    <ConsultationForm />
-                  </Suspense>
-                </DialogContent>
-              </Dialog>
+      <section className="bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 max-w-3xl border-l-4 border-primary-blue pl-6">
+            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">Why Canine Confidence</p>
+            <h2 className="mb-4 text-3xl font-bold text-charcoal lg:text-4xl">
+              Every dog is different. So is every program.
+            </h2>
+            <p className="text-lg leading-relaxed text-medium-grey">
+              I do not force every dog through the same formula. I look at your
+              dog's genetics, their drives and what your daily life actually looks
+              like, then build the work around that. I don't just train for
+              obedience. I help you build a confident, connected dog you can
+              take into the real world.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4">
+            {methodPoints.map(({ number, title, text }) => (
+              <article key={title} className="rounded-2xl border border-blue-100 bg-blue-50 p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <p className="mb-6 text-4xl font-black text-primary-blue">{number}</p>
+                <h3 className="mb-3 text-lg font-bold text-charcoal">{title}</h3>
+                <p className="leading-relaxed text-medium-grey">{text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link href="/method" className="font-semibold text-primary-blue hover:underline">
+              See how I train →
+            </Link>
+          </div>
+        </div>
+      </section>
 
-              <Button
-                variant="outline"
-                onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/', "general", "Home final CTA")}
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Your First Session
-              </Button>
-            </div>
-
-            <div className="flex items-center justify-center gap-12 pt-8 text-blue-100">
-              <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-2" />
-                <span>Fully Insured</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span>Certified Professional</span>
-              </div>
-            </div>
+      <section className="bg-primary-blue py-16 text-center text-white">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 className="mb-4 text-3xl font-bold lg:text-4xl">Most dog problems have a clear cause</h2>
+          <p className="mb-8 text-lg text-blue-100">
+            Once I understand what is driving the behaviour, I can stop guessing
+            and start building lasting change. Your assessment gives you practical
+            first steps and a training plan built around your dog and your life.
+          </p>
+          <div className="flex flex-col justify-center gap-3 sm:flex-row">
+            <AssessmentButton
+              location="Home final CTA"
+              className="bg-white text-primary-blue hover:bg-gray-50"
+              showIcon={false}
+            />
+            <ConsultationButton
+              label="Ask About Your Dog First"
+              className="border-white bg-transparent text-white hover:bg-white hover:text-primary-blue"
+              showIcon={false}
+            />
           </div>
         </div>
       </section>

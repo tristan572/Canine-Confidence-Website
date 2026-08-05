@@ -19,7 +19,7 @@ export default function Terms() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Services</h2>
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
-                  <p>Canine Confidence (ABN 95 140 676 440) provides private dog training services in Northside Brisbane, Queensland. Services include One-on-One Coaching, Walk and Train, In-Home Day Train, Adventure Walk, Local Walk, Virtual Coaching Call, and Initial Canine Success Assessment.</p>
+                  <p>Canine Confidence (ABN 95 140 676 440) provides private dog training services in Northside Brisbane, Queensland. Services include One-on-One Private Coaching, Walk and Train, In-Home Day Train, Adventure Walk and Training, Local Walk, Virtual Coaching and Support, and Initial Canine Success Assessment.</p>
                   <p>The specific service, duration, and location will be confirmed at the time of booking. Sessions take place at the client's home, an agreed outdoor location, or via video call as applicable.</p>
                   <p>Training outcomes depend on a range of factors including the dog's individual history, the client's consistency between sessions, and environmental conditions. Canine Confidence makes no guarantee as to specific results.</p>
                 </div>
@@ -31,7 +31,8 @@ export default function Terms() {
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Booking and Payment</h2>
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
                   <p>Payment is due at the time of booking via SimplyBook.me, or in full prior to or at the start of each session. Sessions will not commence until payment has been received.</p>
-                  <p>Package bookings are paid in full at the time of purchase and are non-refundable, except where the Australian Consumer Law entitles you to a refund, replacement, or other remedy — for example, if a service isn't provided with acceptable care and skill. Nothing in this clause limits those rights (see clause 7).</p>
+                  <p>Package bookings are paid in full at the time of purchase and are non-refundable, except where the Australian Consumer Law entitles you to a refund, replacement, or other remedy, for example if a service is not provided with acceptable care and skill. Nothing in this clause limits those rights (see clause 7).</p>
+                  <p>Package session-use periods are: The Foundation Program, 2 weeks; The Connected Companion Walk, 2 weeks per block; From Chaos to Calm Program, 5 weeks; The Confident Start Program, 3 months; The Focused Progress Plan, 6 months; The Real World Reliability Package, 6 months; and The Adventure Pack, 6 months. Unused sessions expire at the end of the stated period unless Canine Confidence agrees otherwise in writing or the law requires otherwise. Dates for intensive programs are locked in at the time of booking to support the intended training pace.</p>
                 </div>
               </section>
 

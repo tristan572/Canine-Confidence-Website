@@ -61,27 +61,27 @@ export default function ChermsidePage() {
 
   const handleBookWalkTrain = () => {
     setShowWalkTrainDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/6', "service", "Walk and Train");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookCoaching = () => {
     setShowCoachingDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/7', "service", "One-on-One Private Coaching");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookWalkTrainPackage = () => {
     setShowWalkTrainPackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/3', "package", "The Real World Reliability Package");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookCoachingPackage = () => {
     setShowCoachingPackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/2', "package", "The Focused Progress Plan");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages', "package", "All packages");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   return (
@@ -183,7 +183,7 @@ export default function ChermsidePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
                 <Footprints className="w-4 h-4" />
                 High-Frequency Results
               </div>
@@ -199,7 +199,7 @@ export default function ChermsidePage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Distraction tolerance</h3>
                     <p className="text-medium-grey">Staying connected to you when the environment is genuinely competing for your dog's attention.</p>
@@ -207,7 +207,7 @@ export default function ChermsidePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Environmental Confidence</h3>
                     <p className="text-medium-grey">Different smells, sights, spaces and unpredictable action. A confident dog doesn't need a quiet setting.</p>
@@ -215,7 +215,7 @@ export default function ChermsidePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Reliable recall</h3>
                     <p className="text-medium-grey">"Come" has to mean come, even when there are ten other dogs in the park.</p>
@@ -225,14 +225,14 @@ export default function ChermsidePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">Walk & Train service</Link>.
+                  See current options on my <Link href="/walking-adventure" className="text-primary-blue hover:underline font-semibold">Walking &amp; Adventure page</Link>.
                 </p>
                 <Button
                   onClick={() => setShowWalkTrainDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-walk-train"
                 >
-                  Book Walk & Train Sessions
+                  Book Assessment
                 </Button>
               </div>
             </div>
@@ -247,21 +247,21 @@ export default function ChermsidePage() {
                       <div>
                         <p className="font-semibold text-charcoal">Single 40-Minute Session</p>
                       </div>
-                      <div className="text-2xl font-bold text-primary-blue">$60</div>
+                      <div className="text-2xl font-bold text-primary-blue">$70</div>
                     </div>
 
-                    <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
                       <div className="flex items-center justify-between mb-2">
                         <div>
                           <p className="font-semibold text-charcoal">The Real World Reliability Package</p>
                           <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$280</div>
-                          <p className="text-sm text-green-700">$56 per session</p>
+                          <div className="text-2xl font-bold text-primary-blue">$325</div>
+                          <p className="text-sm text-primary-blue">$65 per session</p>
                         </div>
                       </div>
-                      <p className="text-green-700 font-semibold text-center">Save $20 across the package.</p>
+                      <p className="text-primary-blue font-semibold text-center">Save $25 across the package.</p>
                     </div>
                   </div>
 
@@ -288,7 +288,7 @@ export default function ChermsidePage() {
                     className="btn-primary w-full"
                     data-testid="button-book-walk-train-package"
                   >
-                    Book The Real World Reliability Package
+                    Book Assessment
                   </Button>
                 </div>
               </CardContent>
@@ -307,7 +307,7 @@ export default function ChermsidePage() {
                 Owner Skill Building
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                <span className="text-primary-blue">One-on-One Coaching</span> Sessions
+                <span className="text-primary-blue">One-on-One Private Coaching</span> Sessions
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
                 Apartment and townhouse dogs face a different daily reality. Shared corridors, lift doors, neighbours at close range, constant foot traffic outside the front door. These aren't edge cases. They're Tuesday.
@@ -318,7 +318,7 @@ export default function ChermsidePage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Lifts and shared spaces</h3>
                     <p className="text-medium-grey">Most dogs aren't taught how to hold themselves in a confined space with a stranger. I work on calm neutrality in exactly those situations, so getting to the car park doesn't become a production.</p>
@@ -326,7 +326,7 @@ export default function ChermsidePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Threshold control</h3>
                     <p className="text-medium-grey">Door bolting, barking at footsteps in the hall, losing it every time someone passes. Threshold work teaches your dog that the boundary of your home is a calm place, not a launch point.</p>
@@ -334,7 +334,7 @@ export default function ChermsidePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Urban distraction tolerance</h3>
                     <p className="text-medium-grey">Buses, sirens, shopping trolleys, foot traffic. The goal isn't ignoring everything. It's a dog that notices, processes, and moves on without you having to manage every moment.</p>
@@ -344,7 +344,7 @@ export default function ChermsidePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">coaching services</Link>.
+                  See current options on my <Link href="/behaviour-obedience" className="text-primary-blue hover:underline font-semibold">Behaviour &amp; Obedience page</Link>.
                 </p>
                 <Button
                   onClick={() => setShowCoachingDialog(true)}
@@ -366,10 +366,10 @@ export default function ChermsidePage() {
                         <div>
                           <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
                         </div>
-                        <div className="text-2xl font-bold text-primary-blue">$120</div>
+                        <div className="text-2xl font-bold text-primary-blue">$125</div>
                       </div>
 
-                      <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                      <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
                         <div className="flex items-center justify-between mb-2">
                           <div>
                             <p className="font-semibold text-charcoal">The Focused Progress Plan</p>
@@ -377,10 +377,10 @@ export default function ChermsidePage() {
                           </div>
                           <div className="text-right">
                             <div className="text-2xl font-bold text-primary-blue">$550</div>
-                            <p className="text-sm text-green-700">$110 per session</p>
+                            <p className="text-sm text-primary-blue">$110 per session</p>
                           </div>
                         </div>
-                        <p className="text-green-700 font-semibold text-center">Save $50 across the package.</p>
+                        <p className="text-primary-blue font-semibold text-center">Save $75 across the package.</p>
                       </div>
                     </div>
                   </div>
@@ -418,7 +418,7 @@ export default function ChermsidePage() {
                     className="btn-primary w-full"
                     data-testid="button-book-coaching-package"
                   >
-                    Book The Focused Progress Plan
+                    Book Assessment
                   </Button>
                 </div>
               </CardContent>
@@ -446,7 +446,7 @@ export default function ChermsidePage() {
                 <h3 className="text-xl font-bold text-charcoal">What it covers:</h3>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Trigger identification</h4>
                     <p className="text-medium-grey">Exactly what causes your dog to react, and why.</p>
@@ -454,7 +454,7 @@ export default function ChermsidePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Environment review</h4>
                     <p className="text-medium-grey">Your walking routes, your home setup, the specific demands of where you live.</p>
@@ -462,7 +462,7 @@ export default function ChermsidePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">A training roadmap</h4>
                     <p className="text-medium-grey">A step-by-step plan built around your dog and your situation, not a template.</p>
@@ -486,12 +486,12 @@ export default function ChermsidePage() {
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
                     <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
-                    <div className="text-4xl font-bold text-primary-blue">$90</div>
+                    <div className="text-4xl font-bold text-primary-blue">$99</div>
                     <p className="text-medium-grey mt-2">60 minutes · One-off session</p>
                   </div>
 
                   <p className="text-medium-grey">
-                    One session. A clear picture of your dog, their triggers, and the plan to move forward. It's also how I work out whether Walk and Train, One-on-One Coaching, or a combination of both is the right fit.
+                    One session. A clear picture of your dog, their triggers, and the plan to move forward. It's also how I work out whether Walk and Train, One-on-One Private Coaching, or a combination of both is the right fit.
                   </p>
 
                   <Button
@@ -568,7 +568,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ($90).
+            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ($99).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -618,7 +618,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to schedule your 1-on-1 Coaching Session ($120).
+            New clients start with the $99 Initial Canine Success Assessment before booking private coaching.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -643,7 +643,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to view all available packages and services.
+            You'll be redirected to book the $99 Initial Canine Success Assessment.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -668,7 +668,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to purchase The Real World Reliability Package (5 sessions, $280).
+            New clients start with the $99 Initial Canine Success Assessment before booking The Real World Reliability Package.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -693,7 +693,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to purchase The Focused Progress Plan (5 sessions, $550).
+            New clients start with the $99 Initial Canine Success Assessment before booking The Focused Progress Plan.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button

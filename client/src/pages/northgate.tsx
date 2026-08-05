@@ -70,27 +70,27 @@ export default function NorthgatePage() {
 
   const handleBookWalkTrain = () => {
     setShowWalkTrainDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/6', "service", "Walk and Train");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookCoaching = () => {
     setShowCoachingDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/7', "service", "One-on-One Private Coaching");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookWalkTrainPackage = () => {
     setShowWalkTrainPackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/3', "package", "The Real World Reliability Package");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookCoachingPackage = () => {
     setShowCoachingPackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/2', "package", "The Focused Progress Plan");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages', "package", "All packages");
+    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   return (
@@ -127,7 +127,7 @@ export default function NorthgatePage() {
                   If your dog pulls on the Kedron Brook bikeway or loses it at every dog in Kalinga Park, the problem isn't the location. It's that the training hasn't been built for real-world conditions.
                 </p>
                 <p className="text-lg text-medium-grey leading-relaxed font-medium">
-                  My Walk and Train and One-on-One Coaching programs are.
+                  My Walk and Train and One-on-One Private Coaching programs are.
                 </p>
               </div>
 
@@ -183,7 +183,7 @@ export default function NorthgatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
                 <Footprints className="w-4 h-4" />
                 High-Frequency Results
               </div>
@@ -199,7 +199,7 @@ export default function NorthgatePage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Leash Reactivity Rehabilitation</h3>
                     <p className="text-medium-grey">I work on fulfilment and impulse control while building clarity around expectations — teaching dogs not to react at every dog that passes.</p>
@@ -207,7 +207,7 @@ export default function NorthgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Loose-Lead Mastery</h3>
                     <p className="text-medium-grey">Stopping the pulling while passing joggers and cyclists on the bikeway.</p>
@@ -215,7 +215,7 @@ export default function NorthgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Focus Under Distraction</h3>
                     <p className="text-medium-grey">Proofing commands in the Kalinga Park off-lead area, where distractions are constant and the training actually has to hold.</p>
@@ -225,14 +225,14 @@ export default function NorthgatePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  Learn more about my <Link href="/services" className="text-primary-blue hover:underline font-semibold">Walk & Train service</Link>.
+                  See current options on my <Link href="/walking-adventure" className="text-primary-blue hover:underline font-semibold">Walking &amp; Adventure page</Link>.
                 </p>
                 <Button 
                   onClick={() => setShowWalkTrainDialog(true)}
                   className="btn-primary"
                   data-testid="button-book-walk-train"
                 >
-                  Book Walk & Train Sessions
+                  Book Assessment
                 </Button>
               </div>
             </div>
@@ -247,21 +247,21 @@ export default function NorthgatePage() {
                       <div>
                         <p className="font-semibold text-charcoal">Single 40-Minute Session</p>
                       </div>
-                      <div className="text-2xl font-bold text-primary-blue">$60</div>
+                      <div className="text-2xl font-bold text-primary-blue">$70</div>
                     </div>
 
-                    <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
                       <div className="flex items-center justify-between mb-2">
                         <div>
                           <p className="font-semibold text-charcoal">The Real World Reliability Package</p>
                           <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$280</div>
-                          <p className="text-sm text-green-700">$56 per session</p>
+                          <div className="text-2xl font-bold text-primary-blue">$325</div>
+                          <p className="text-sm text-primary-blue">$65 per session</p>
                         </div>
                       </div>
-                      <p className="text-green-700 font-semibold text-center">Save $20 across the package.</p>
+                      <p className="text-primary-blue font-semibold text-center">Save $25 across the package.</p>
                     </div>
                   </div>
 
@@ -288,7 +288,7 @@ export default function NorthgatePage() {
                     className="btn-primary w-full"
                     data-testid="button-book-walk-train-package"
                   >
-                    Book The Real World Reliability Package
+                    Book Assessment
                   </Button>
                 </div>
               </CardContent>
@@ -307,7 +307,7 @@ export default function NorthgatePage() {
                 Owner Skill Building
               </div>
               <h2 className="text-4xl font-bold text-charcoal">
-                <span className="text-primary-blue">One-on-One Coaching</span> Sessions
+                <span className="text-primary-blue">One-on-One Private Coaching</span> Sessions
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
                 For owners who want to understand what they're doing and why.
@@ -318,7 +318,7 @@ export default function NorthgatePage() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Handling Mechanics</h5>
                     <p className="text-medium-grey">The exact timing and technique that makes the difference between a dog that listens and one that doesn't.</p>
@@ -326,7 +326,7 @@ export default function NorthgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Complex Behaviour Work</h5>
                     <p className="text-medium-grey">Reactivity, anxiety, recall, impulse control. Addressed directly, with a clear explanation of what's driving it.</p>
@@ -334,7 +334,7 @@ export default function NorthgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h5 className="font-semibold text-charcoal mb-1">Skills That Transfer</h5>
                     <p className="text-medium-grey">You leave each session knowing how to maintain and build on what we covered. The goal is your independence, not mine.</p>
@@ -363,10 +363,10 @@ export default function NorthgatePage() {
                         <div>
                           <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
                         </div>
-                        <div className="text-2xl font-bold text-primary-blue">$120</div>
+                        <div className="text-2xl font-bold text-primary-blue">$125</div>
                       </div>
 
-                      <div className="border-2 border-green-600 rounded-lg p-4 bg-green-100">
+                      <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
                         <div className="flex items-center justify-between mb-2">
                           <div>
                             <p className="font-semibold text-charcoal">The Focused Progress Plan</p>
@@ -374,10 +374,10 @@ export default function NorthgatePage() {
                           </div>
                           <div className="text-right">
                             <div className="text-2xl font-bold text-primary-blue">$550</div>
-                            <p className="text-sm text-green-700">$110 per session</p>
+                            <p className="text-sm text-primary-blue">$110 per session</p>
                           </div>
                         </div>
-                        <p className="text-green-700 font-semibold text-center">Save $50 across the package.</p>
+                        <p className="text-primary-blue font-semibold text-center">Save $75 across the package.</p>
                       </div>
                     </div>
                   </div>
@@ -415,7 +415,7 @@ export default function NorthgatePage() {
                     className="btn-primary w-full"
                     data-testid="button-book-coaching-package"
                   >
-                    Book The Focused Progress Plan
+                    Book Assessment
                   </Button>
                 </div>
               </CardContent>
@@ -443,7 +443,7 @@ export default function NorthgatePage() {
                 <h3 className="text-xl font-bold text-charcoal">What it covers:</h3>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Trigger identification</h4>
                     <p className="text-medium-grey">Exactly what causes your dog to react, and why.</p>
@@ -451,7 +451,7 @@ export default function NorthgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">Environment review</h4>
                     <p className="text-medium-grey">Your walking routes, your home setup, the specific demands of where you live.</p>
@@ -459,7 +459,7 @@ export default function NorthgatePage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-charcoal mb-1">A training roadmap</h4>
                     <p className="text-medium-grey">A step-by-step plan built around your dog and your situation, not a template.</p>
@@ -483,12 +483,12 @@ export default function NorthgatePage() {
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
                     <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
-                    <div className="text-4xl font-bold text-primary-blue">$90</div>
+                    <div className="text-4xl font-bold text-primary-blue">$99</div>
                     <p className="text-medium-grey mt-2">60 minutes · One-off session</p>
                   </div>
 
                   <p className="text-medium-grey">
-                    One session. A clear picture of your dog, their triggers, and the plan to move forward. It's also how I work out whether Walk and Train, One-on-One Coaching, or a combination of both is the right fit.
+                    One session. A clear picture of your dog, their triggers, and the plan to move forward. It's also how I work out whether Walk and Train, One-on-One Private Coaching, or a combination of both is the right fit.
                   </p>
 
                   <Button
@@ -542,7 +542,7 @@ export default function NorthgatePage() {
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold"
                 data-testid="button-book-now-cta"
               >
-                Book Now
+                Book Assessment
               </Button>
             </div>
 
@@ -565,7 +565,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ($90).
+            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ($99).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -615,7 +615,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to schedule your 1-on-1 Private Coaching session ($120).
+            New clients start with the $99 Initial Canine Success Assessment before booking private coaching.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -640,7 +640,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to view all available packages and services.
+            You'll be redirected to book the $99 Initial Canine Success Assessment.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -665,7 +665,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to purchase The Real World Reliability Package (5 sessions, $280).
+            New clients start with the $99 Initial Canine Success Assessment before booking The Real World Reliability Package.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -690,7 +690,7 @@ export default function NorthgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to purchase The Focused Progress Plan (5 sessions, $550).
+            New clients start with the $99 Initial Canine Success Assessment before booking The Focused Progress Plan.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button

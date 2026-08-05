@@ -393,6 +393,13 @@
  margin-top: 12px;
  }
  </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-76R2WHKH55"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-76R2WHKH55');
+</script>
 </head>
 <body>
 
@@ -401,7 +408,7 @@
  <a href="https://www.canineconfidence.com.au">
    <img src="/attached_assets/canine_confidence_logo_clean_1758887288824.png" alt="Canine Confidence" />
  </a>
- <a href="https://canineconfidence.simplybook.net/v2/#book/count/1/" class="header-book-btn">Book a Session</a>
+ <a href="https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/" class="header-book-btn">Book Assessment</a>
 </header>
 
 <!-- Hero -->
@@ -579,7 +586,7 @@
  <div class="cta-section">
  <h2>Want a Tailored Plan for Your Dog?</h2>
  <p>Every rescue dog is different. If you want a structured training plan built specifically for your dog's history and behaviour, book a one-on-one assessment with Tristan.</p>
- <a href="https://canineconfidence.simplybook.net/v2/#book/count/1/" class="cta-btn">Book an Assessment →</a>
+ <a href="https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/" class="cta-btn">Book an Assessment →</a>
  <a href="tel:+61409521358" class="cta-phone">Or call us directly</a>
  <div class="cta-logo">
    <a href="https://www.canineconfidence.com.au">
@@ -590,25 +597,16 @@
 </div>
 
 <footer class="site-footer">
- <p>© 2025 Canine Confidence | Brisbane, QLD | <a href="https://canineconfidence.com.au/privacy">Privacy Policy</a></p>
+ <p>© 2026 Canine Confidence | Brisbane, QLD | <a href="https://canineconfidence.com.au/privacy">Privacy Policy</a></p>
 </footer>
 
 <script>
- const ZOHO_WEBHOOK = ''; // will be filled in after Tally/Zoho setup
-
- // Auto-unlock if coming from Tally with ?access=true
  function unlockContent() {
  document.getElementById('successMsg').style.display = 'block';
  document.getElementById('content').classList.add('unlocked');
  document.getElementById('ctaSection').style.display = 'block';
  document.getElementById('gate').style.display = 'none';
  }
-
- const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('access') === 'true') {
-  unlockContent();
-  history.replaceState(null, '', window.location.pathname);
-}
 
  document.getElementById('gateForm').addEventListener('submit', async function(e) {
  e.preventDefault();
@@ -619,24 +617,28 @@ if (urlParams.get('access') === 'true') {
  btn.textContent = 'Just a moment...';
  btn.disabled = true;
 
- // Send to Zoho webhook if configured
- if (ZOHO_WEBHOOK) {
  try {
- await fetch(ZOHO_WEBHOOK, {
+ const response = await fetch('/api/subscribers', {
  method: 'POST',
  headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ email, source: 'rescue-dog-guide', date: new Date().toISOString() })
+ body: JSON.stringify({ email })
  });
- } catch(err) { /* fail silently */ }
+ if (!response.ok) throw new Error('Signup failed');
+
+ unlockContent();
+ if (typeof gtag === 'function') {
+   gtag('event', 'generate_lead', { lead_type: 'rescue_dog_guide' });
  }
 
- // Unlock content
- unlockContent();
-
- // Smooth scroll to content
  setTimeout(() => {
  document.getElementById('content').scrollIntoView({ behavior: 'smooth', block: 'start' });
  }, 400);
+ } catch(err) {
+   btn.textContent = 'Try again';
+   btn.disabled = false;
+   const privacy = document.querySelector('.gate-privacy');
+   privacy.textContent = 'That did not go through. Please check your email and try again.';
+ }
  });
 </script>
 
