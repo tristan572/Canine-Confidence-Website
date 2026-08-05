@@ -11,11 +11,11 @@ const principles = [
   {
     icon: MessageCircle,
     title: "Clarity replaces conflict",
-    text: "Your dog needs communication they can understand and repeat. Clear information removes guesswork, reduces frustration and gives them a reliable way to succeed.",
+    text: "Your dog needs communication they can understand. Clear information removes guesswork, reduces frustration and gives them a straight path to success.",
   },
   {
     icon: Gamepad2,
-    title: "Play is part of the work",
+    title: "Play builds motivation and connection",
     text: "Training is high-value engagement, not a chore. Purposeful play builds trust, motivation and focus, accelerating learning while strengthening your relationship.",
   },
   {
