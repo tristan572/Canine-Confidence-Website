@@ -4,11 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { LocalBusinessSchema } from "@/components/StructuredData";
 import TestimonialCard from "@/components/ui/testimonial-card";
+import BlogCard from "@/components/ui/blog-card";
 import {
   AssessmentButton,
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
-import type { Testimonial } from "@shared/schema";
+import type { BlogPost, Testimonial } from "@shared/schema";
 import heroJpeg from "@assets/IMG_0177_fallback_opt.jpg";
 import hero400 from "@assets/IMG_0177_hero_400_opt.webp";
 import hero800 from "@assets/IMG_0177_hero_800_opt.webp";
@@ -58,6 +59,9 @@ export default function HomePage() {
   const { data: testimonials = [] } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
   });
+  const { data: blogPosts = [] } = useQuery<BlogPost[]>({
+    queryKey: ["/api/blog"],
+  });
 
   return (
     <div className="min-h-screen">
@@ -72,7 +76,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h1 className="mb-3 text-4xl font-bold leading-tight text-charcoal lg:text-6xl">
-              North Brisbane <span className="text-primary-blue">Dog Training</span> for a Better Life Together
+              North Brisbane <span className="text-primary-blue">Dog Training</span> for Calm, Connected Dogs
             </h1>
             <h2 className="mb-5 text-2xl font-semibold leading-tight text-charcoal lg:text-3xl">
               The Dog You Always Pictured
@@ -234,6 +238,34 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {blogPosts.length > 0 && (
+        <section className="bg-gray-50 py-16 lg:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+              <div className="max-w-3xl">
+                <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
+                  From the blog
+                </p>
+                <h2 className="mb-4 text-3xl font-bold text-charcoal lg:text-4xl">
+                  Practical dog training advice
+                </h2>
+                <p className="text-lg text-medium-grey">
+                  Straight answers about behaviour, training and life with your dog.
+                </p>
+              </div>
+              <Link href="/blog" className="inline-flex font-semibold text-primary-blue hover:underline">
+                Read all articles →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+              {blogPosts.slice(0, 3).map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
