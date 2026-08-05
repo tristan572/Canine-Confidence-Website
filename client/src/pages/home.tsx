@@ -76,7 +76,8 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h1 className="mb-3 text-4xl font-bold leading-tight text-charcoal lg:text-6xl">
-              North Brisbane <span className="text-primary-blue">Dog Training</span>
+              <span className="block">North Brisbane</span>
+              <span className="block text-primary-blue">Dog Training</span>
             </h1>
             <h2 className="mb-5 text-2xl font-semibold leading-tight text-charcoal lg:text-3xl">
               Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
