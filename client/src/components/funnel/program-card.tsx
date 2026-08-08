@@ -56,7 +56,9 @@ export function ProgramCard({
         )}
 
         <div className="mb-6 rounded-xl bg-blue-50 p-4 text-sm">
-          <p className="mb-1 font-bold text-charcoal">Program structure</p>
+          <p className="mb-1 font-bold text-charcoal">
+            {program.kind === "single" ? "Session details" : "Program structure"}
+          </p>
           <p className="leading-relaxed text-medium-grey">{program.composition}</p>
           {program.expiry && (
             <p className="mt-2 font-medium text-charcoal">{program.expiry}</p>

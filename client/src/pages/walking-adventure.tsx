@@ -5,7 +5,7 @@ import {
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
-import walkingImage from "@assets/image_1750049520029_opt.webp";
+import walkingImage from "@assets/IMG_0084_1758974180047.jpeg";
 
 export default function WalkingAdventurePage() {
   return (
@@ -38,8 +38,8 @@ export default function WalkingAdventurePage() {
           </div>
           <img
             src={walkingImage}
-            alt="Dog enjoying an adventure walk with Canine Confidence"
-            className="h-auto w-full rounded-2xl object-cover shadow-xl"
+            alt="Tristan walking a client dog through a North Brisbane park"
+            className="h-[360px] w-full rounded-2xl object-cover object-center shadow-xl sm:h-[440px]"
             width={640}
             height={480}
           />
@@ -86,9 +86,9 @@ export default function WalkingAdventurePage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold">Start enjoying the walk again</h2>
           <p className="mb-7 text-lg text-blue-100">
-            Your assessment shows me what is creating the struggle and what your
-            dog needs outside the home. From there, I recommend the simplest
-            option that can move you forward.
+            Your assessment lets me get to know your dog, hear what you want
+            from the sessions and make sure a walking service is the right fit.
+            From there, I recommend the option that best suits you and your dog.
           </p>
           <AssessmentButton
             location="Walking final CTA"

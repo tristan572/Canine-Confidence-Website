@@ -49,7 +49,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     benefits: [
       "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
       "Focus and obedience practised while your dog moves through everyday distractions",
-      "Lead handling that works when your dog pulls towards something",
+      "Lead handling skills for even the trickiest pullers",
       "A tailored plan to improve how your dog feels about the collar and lead",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
     ],
@@ -67,11 +67,11 @@ export const behaviourPrograms: FunnelProgram[] = [
       "Stop the barking, lunging and anxiety, and start enjoying your life together. This intensive program addresses what is driving the reactivity instead of only managing the visible behaviour.",
     benefits: [
       "Focused sessions aimed at steady behaviour change",
-      "Clear communication that reduces confusion and helps your dog feel safer",
-      "Practical handling for safer walks and calmer day-to-day situations",
+      "Clear communication that reduces confusion and helps your dog make better choices",
+      "Practical handling for calmer walks and easier day-to-day situations",
       "Impulse-control and counter-conditioning work tailored to your dog's triggers",
-      "A personalised plan with clear practice between sessions",
-      "Ongoing support from me throughout the program",
+      "I do the grunt work, then pass the critical information on to you so the results last",
+      "Ongoing support, feedback and videos throughout the program",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
     ],
     kind: "locked",
@@ -103,7 +103,7 @@ export const behaviourPrograms: FunnelProgram[] = [
       "Fully personalised training in your home or a real-world location relevant to your goals. I coach you as the handler, so you leave with skills you can keep using.",
     benefits: [
       "One private session in your home or a public location relevant to your goal",
-      "Clear techniques you can use with your own dog",
+      "Clear techniques tailored to your individual dog",
       "Practical work on the behaviour or skill that matters most",
       "Coaching that helps you become a more confident handler",
       "Support as you put the training into practice",

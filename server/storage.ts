@@ -328,11 +328,11 @@ export class MemStorage implements IStorage {
         imageUrl: "/attached_assets/image_1750049297197_opt.webp",
         features: [
           "Focused sessions aimed at steady behaviour change",
-          "Clear communication that reduces confusion and helps your dog feel safer",
-          "Practical handling for safer walks and calmer day-to-day situations",
+          "Clear communication that reduces confusion and helps your dog make better choices",
+          "Practical handling for calmer walks and easier day-to-day situations",
           "Impulse-control and counter-conditioning work tailored to your dog's triggers",
-          "A personalised plan with clear practice between sessions",
-          "Ongoing support from me throughout the program",
+          "I do the grunt work, then pass the critical information on to you so the results last",
+          "Ongoing support, feedback and videos throughout the program",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: true
@@ -410,7 +410,7 @@ export class MemStorage implements IStorage {
         features: [
           "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
           "Focus and obedience practised while your dog moves through everyday distractions",
-          "Lead handling that works when your dog pulls towards something",
+          "Lead handling skills for even the trickiest pullers",
           "A tailored plan to improve how your dog feels about the collar and lead",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],

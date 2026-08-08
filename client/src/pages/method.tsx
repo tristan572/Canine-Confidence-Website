@@ -1,37 +1,30 @@
-import { Brain, Dna, Gamepad2, Map, MessageCircle, Target } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import methodImage from "@assets/IMG_0076_1758798863394_opt.webp";
 
 const principles = [
   {
-    icon: Brain,
-    title: "The dog in front of me comes first",
+    title: "Dog first",
     text: "Genetics, drives, health, past learning and environment all shape behaviour. I understand those pieces before deciding what the training should look like.",
   },
   {
-    icon: MessageCircle,
-    title: "Clarity replaces conflict",
-    text: "Your dog needs communication they can understand. Clear information removes guesswork, reduces frustration and gives them a straight path to success.",
+    title: "Clarity",
+    text: "Your dog needs communication they can understand. Clear information removes guesswork, reduces anxiety and gives them a straight path to success.",
   },
   {
-    icon: Gamepad2,
-    title: "Play builds motivation and connection",
+    title: "Play",
     text: "Training is high-value engagement, not a chore. Purposeful play builds trust, motivation and focus, accelerating learning while strengthening your relationship.",
   },
   {
-    icon: Dna,
-    title: "Fulfilment changes behaviour",
+    title: "Fulfilment",
     text: "A dog whose physical, mental and genetic needs are met is easier to live with and ready to learn. Obedience cannot compensate for an unfulfilled lifestyle.",
   },
   {
-    icon: Map,
-    title: "Backyard obedience is not enough",
+    title: "Real life",
     text: "Skills need to survive footpaths, parks, visitors and the distractions that matter in your life. That is where training earns its value.",
   },
   {
-    icon: Target,
-    title: "The result has to work without me",
+    title: "Built to Last",
     text: "I can build foundations with your dog, but the final skill must transfer to you. You learn the handling and communication needed to maintain the result for life.",
   },
 ];
@@ -67,33 +60,45 @@ export default function MethodPage() {
           />
         </div>
       </section>
-      <section className="bg-white py-16">
+      <section className="bg-gray-700 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {principles.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="rounded-2xl border border-gray-100 bg-gray-50 p-8">
-                <Icon className="mb-5 h-9 w-9 text-primary-blue" />
-                <h2 className="mb-3 text-xl font-bold text-charcoal">{title}</h2>
-                <p className="leading-relaxed text-medium-grey">{text}</p>
+          <div className="mb-14 max-w-3xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-blue-200">
+              The way I train
+            </p>
+            <h2 className="text-4xl font-bold leading-tight text-white lg:text-5xl">
+              Six things I will not compromise on.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-x-16 md:grid-cols-2 md:gap-y-0">
+            {principles.map(({ title, text }, index) => (
+              <article
+                key={title}
+                className={`border-t border-white/20 py-8 lg:py-10 ${
+                  index % 2 === 1 ? "md:mt-12" : ""
+                }`}
+              >
+                <h3 className="mb-4 text-3xl font-bold text-white lg:text-4xl">{title}</h3>
+                <p className="max-w-xl text-lg leading-relaxed text-gray-300">{text}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-primary-blue py-16 text-center text-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-bold">
+      <section className="bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-blue-100 bg-blue-50 px-6 py-10 text-center sm:px-10">
+          <h2 className="mb-4 text-3xl font-bold text-charcoal">
             Start training for the life you want together
           </h2>
-          <p className="mb-7 text-lg text-blue-100">
+          <p className="mb-7 text-lg leading-relaxed text-medium-grey">
             Your assessment gives me the full picture of your dog, your goals
             and daily life. From there, I recommend the training approach that
             will get you where you want to go.
           </p>
           <AssessmentButton
             location="Method final CTA"
-            className="bg-white text-primary-blue hover:bg-gray-50"
+            className="px-7 py-4 text-lg"
           />
         </div>
       </section>

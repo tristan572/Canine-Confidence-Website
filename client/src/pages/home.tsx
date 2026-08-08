@@ -9,6 +9,7 @@ import {
   AssessmentButton,
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
+import { ShieldCheck } from "lucide-react";
 import type { BlogPost, Testimonial } from "@shared/schema";
 import heroJpeg from "@assets/IMG_0177_fallback_opt.jpg";
 import hero400 from "@assets/IMG_0177_hero_400_opt.webp";
@@ -16,9 +17,18 @@ import hero800 from "@assets/IMG_0177_hero_800_opt.webp";
 import hero1200 from "@assets/IMG_0177_hero_1200_opt.webp";
 import puppyCardImage from "@assets/image_1750048904991_opt.webp";
 import behaviourCardImage from "@assets/IMG_0237_1760870095911.jpeg";
-import walkingCardImage from "@assets/image_1750049520029_opt.webp";
+import walkingCardImage from "@assets/IMG_0084_1758974180047.jpeg";
 
 const doors = [
+  {
+    href: "/behaviour-obedience",
+    title: "Behaviour & Obedience",
+    kicker: "Training for real life",
+    image: behaviourCardImage,
+    imagePosition: "object-[center_75%]",
+    text: "From bad manners, to obedience, reactivity and anxiety, I look beyond the visible symptom behaviours and build skills that make daily life easier.",
+    note: "New clients start with an assessment.",
+  },
   {
     href: "/puppy",
     title: "Puppy",
@@ -27,15 +37,6 @@ const doors = [
     imagePosition: "object-center",
     text: "Stop worrying about toilet training, biting and whether you are getting socialisation right. Build confidence, connection and clear communication from the start.",
     note: "Direct booking. No assessment required.",
-  },
-  {
-    href: "/behaviour-obedience",
-    title: "Behaviour & Obedience",
-    kicker: "Training for real life",
-    image: behaviourCardImage,
-    imagePosition: "object-[center_75%]",
-    text: "From bad manners, to obedience, reactivity and anxiety, I look beyond the visible behaviour and build skills that make daily life calmer.",
-    note: "New clients start with an assessment.",
   },
   {
     href: "/walking-adventure",
@@ -67,7 +68,7 @@ export default function HomePage() {
     <div className="min-h-screen">
       <SEO
         title="Dog Training North Brisbane | Canine Confidence"
-        description="Dog training on Brisbane's Northside. Build a calmer home and stronger bond through play, clarity and practical real-world training."
+        description="Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity and practical coaching. Free 15-min consult."
         canonical="https://www.canineconfidence.com.au/"
       />
       <LocalBusinessSchema />
@@ -96,22 +97,35 @@ export default function HomePage() {
               In-home training · Real-world practice · Lifelong Results
             </p>
           </div>
-          <picture>
-            <source
-              type="image/webp"
-              srcSet={`${hero400} 400w, ${hero800} 800w, ${hero1200} 1200w`}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <img
-              src={heroJpeg}
-              alt="Tristan training a dog outdoors in North Brisbane"
-              className="h-auto w-full rounded-2xl shadow-2xl"
-              width={640}
-              height={480}
-              loading="eager"
-              decoding="async"
-            />
-          </picture>
+          <div className="relative">
+            <picture>
+              <source
+                type="image/webp"
+                srcSet={`${hero400} 400w, ${hero800} 800w, ${hero1200} 1200w`}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <img
+                src={heroJpeg}
+                alt="Tristan training a dog outdoors in North Brisbane"
+                className="h-auto w-full rounded-2xl shadow-2xl"
+                width={640}
+                height={480}
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
+            <div className="absolute -bottom-5 -left-3 rounded-xl border border-blue-100 bg-white p-4 shadow-lg sm:-bottom-6 sm:-left-6 sm:p-5">
+              <div className="flex items-center gap-3">
+                <div className="rounded-full bg-blue-50 p-2">
+                  <ShieldCheck className="h-5 w-5 text-primary-blue" />
+                </div>
+                <div>
+                  <p className="font-semibold text-charcoal">Certified Trainer</p>
+                  <p className="text-sm text-medium-grey">Professional &amp; Insured</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -163,15 +177,14 @@ export default function HomePage() {
           <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <div className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-primary-blue">
-                Five-star feedback
+                Client Reviews
               </div>
               <h2 className="text-3xl font-bold text-charcoal lg:text-4xl">
-                Five-star feedback from the people living the difference.
+                What life with your dog can feel like
               </h2>
               <p className="mt-3 max-w-2xl text-lg text-medium-grey">
-                Five-star feedback from owners who wanted more than obedience in
-                the backyard. They wanted calmer homes, easier walks and a better
-                relationship with their dog.
+                Read feedback from owners who wanted calmer homes, easier walks
+                and a better relationship with their dog.
               </p>
             </div>
             <Link href="/reviews" className="inline-flex items-center font-semibold text-primary-blue hover:underline">
