@@ -1,12 +1,14 @@
 import { Link } from "wouter";
-import { ArrowRight, ClipboardList } from "lucide-react";
+import { ArrowRight, Calendar, ClipboardList } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { ProgramCard } from "@/components/funnel/program-card";
 import {
   AssessmentButton,
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
-import { behaviourPrograms } from "@/lib/funnel";
+import { behaviourPrograms, VIRTUAL_COACHING_URL } from "@/lib/funnel";
+import { openBookingUrl } from "@/lib/analytics";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 
 export default function BehaviourObediencePage() {
@@ -78,9 +80,25 @@ export default function BehaviourObediencePage() {
                 key={program.name}
                 program={program}
                 location="Behaviour"
+                directAction={
+                  program.name === "Virtual Coaching and Support" ? (
+                    <Button
+                      className="btn-primary w-full"
+                      onClick={() =>
+                        openBookingUrl(
+                          VIRTUAL_COACHING_URL,
+                          "service",
+                          "Virtual Coaching and Support | Behaviour",
+                        )
+                      }
+                    >
+                      <Calendar className="mr-2 h-5 w-5" />
+                      Book Virtual Coaching
+                    </Button>
+                  ) : undefined
+                }
                 upgrade={
-                  program.name === "One-on-One Private Coaching" ||
-                  program.name === "Virtual Coaching and Support"
+                  program.name === "One-on-One Private Coaching"
                     ? {
                         label: "Need ongoing support? View The Focused Progress Plan",
                         targetId: "the-focused-progress-plan",

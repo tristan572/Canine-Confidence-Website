@@ -2,6 +2,8 @@ export const ASSESSMENT_URL =
   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/";
 export const CONFIDENT_START_URL =
   "https://canineconfidence.simplybook.net/v2/#packages/6";
+export const VIRTUAL_COACHING_URL =
+  "https://canineconfidence.simplybook.net/v2/#book/service/10";
 
 export type FunnelDoor = "puppy" | "behaviour" | "walking";
 export type ProgramKind = "locked" | "retail" | "single";
@@ -24,7 +26,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$320",
     value: "$365 value",
     saving: "Save $45",
-    expiry: "Sessions expire in 2 weeks",
+    expiry: "Sessions to be completed in one week",
     composition: "4 In-Home Day Trains + 1 One-on-One Private Coaching session",
     summary:
       "Focused training brought to your doorstep. I build the foundations with your dog in their familiar home, then coach you to carry those skills forward.",
@@ -42,7 +44,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$350",
     value: "$405 value",
     saving: "Save $55",
-    expiry: "Each block expires in 2 weeks",
+    expiry: "Sessions to be completed in one week",
     composition: "4 Walk and Trains + 1 One-on-One Private Coaching session",
     summary:
       "Stop the struggle and start enjoying your walks. I build focus, connection and clear communication around the distractions that usually make everything fall apart.",
@@ -60,7 +62,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$1,050",
     value: "$1,135 value",
     saving: "Save $85",
-    expiry: "Sessions expire in 5 weeks",
+    expiry: "Sessions to be completed in three weeks",
     composition:
       "4 In-Home Day Trains + 8 Walk and Trains + 3 One-on-One Private Coaching sessions",
     summary:
@@ -115,7 +117,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$100",
     composition: "1 private 60-minute video call",
     summary:
-      "Use this one-hour video call to fine-tune details, bounce ideas around, review footage or build a practical training plan. It is available to anyone who wants experienced input without an in-person session.",
+      "A standalone assessment for clients outside my travel area, or personalised support without the travel time. Use this one-hour video call to fine-tune details, review footage or build a practical training plan.",
     benefits: [
       "A private one-hour video call from wherever you are",
       "Fine-tune training details or work through something that feels stuck",

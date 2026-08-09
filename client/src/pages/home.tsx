@@ -94,7 +94,7 @@ export default function HomePage() {
               <ConsultationButton className="btn-secondary px-7 py-4 text-lg" showIcon={false} />
             </div>
             <p className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-medium-grey">
-              In-home training · Real-world practice · Lifelong Results
+              In-home training · Real-world practice · Results that last
             </p>
           </div>
           <div className="relative">
