@@ -1,6 +1,7 @@
 # Robots.txt for Canine Confidence - Dog Training Brisbane
 User-agent: *
 Allow: /
+Allow: /api/packages
 Disallow: /admin
 Disallow: /api/
 
