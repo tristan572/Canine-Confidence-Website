@@ -164,7 +164,7 @@ export default function PackagesPage() {
       <SEO 
                 title="Dog Training Packages North Brisbane | Canine Confidence"
                 description="Training packages for every stage — from puppy foundations to off-lead freedom. Clear pricing, lasting results. Based in Boondall, serving North Brisbane."
-        canonical="https://canineconfidence.com.au/packages"
+        canonical="https://www.canineconfidence.com.au/packages"
         keywords={[
           'dog training packages Brisbane',
           'puppy training program',

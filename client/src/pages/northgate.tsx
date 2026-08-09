@@ -10,47 +10,6 @@ import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.ab
 import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
 import { openBookingUrl } from "@/lib/analytics";
 
-const NorthgateLocalBusinessSchema = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Canine Confidence - Northgate Dog Training",
-    "description": "Professional dog training services in Northgate, Nundah, and Kalinga. Specialising in Walk & Train sessions at Kalinga Park and 1-on-1 private coaching for leash reactivity and obedience.",
-    "url": "https://canineconfidence.com.au/dog-training-northgate",
-    "telephone": "+61409521358",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Serving Northgate, Nundah & Kalinga",
-      "addressLocality": "Northgate",
-      "addressRegion": "QLD",
-      "postalCode": "4013",
-      "addressCountry": "AU"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Northgate"
-      },
-      {
-        "@type": "City",
-        "name": "Nundah"
-      },
-      {
-        "@type": "City",
-        "name": "Kalinga"
-      }
-    ],
-    "priceRange": "$$"
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-};
-
 export default function NorthgatePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showWalkTrainDialog, setShowWalkTrainDialog] = useState(false);
@@ -98,7 +57,7 @@ export default function NorthgatePage() {
       <SEO 
         title="Northgate Dog Training"
         description="Professional dog training in Northgate, Nundah & Kalinga. Walk & Train at Kalinga Park, 1-on-1 coaching sessions. Expert leash reactivity rehabilitation and loose-leash training."
-        canonical="https://canineconfidence.com.au/dog-training-northgate"
+        canonical="https://www.canineconfidence.com.au/dog-training-northgate"
         keywords={[
           'dog training Northgate',
           'dog trainer Nundah',
@@ -108,7 +67,6 @@ export default function NorthgatePage() {
           'Nundah dog trainer'
         ]}
       />
-      <NorthgateLocalBusinessSchema />
 
       {/* Hero Section */}
       <section className="hero-gradient py-20">

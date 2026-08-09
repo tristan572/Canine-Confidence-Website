@@ -9,48 +9,6 @@ import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { openBookingUrl } from "@/lib/analytics";
 
-const SandgateLocalBusinessSchema = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Canine Confidence - Sandgate Dog Training",
-    "description": "Professional dog training services in Sandgate, Shorncliffe, and Brighton. Specialising in bayside training with real-world distractions including foreshore recall, cafe manners, and loose-leash walking.",
-    "url": "https://canineconfidence.com.au/dog-training-sandgate",
-    "telephone": "+61409521358",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Serving Sandgate, Shorncliffe & Brighton",
-      "addressLocality": "Sandgate",
-      "addressRegion": "QLD",
-      "postalCode": "4017",
-      "addressCountry": "AU"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Sandgate"
-      },
-      {
-        "@type": "City",
-        "name": "Shorncliffe"
-      },
-      {
-        "@type": "City",
-        "name": "Brighton"
-      }
-    ],
-    "priceRange": "$$",
-    "image": sandgateHero
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-};
-
 export default function SandgatePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showAdventureDialog, setShowAdventureDialog] = useState(false);
@@ -92,7 +50,7 @@ export default function SandgatePage() {
       <SEO 
                 title="Dog Training Sandgate & Shorncliffe | Canine Confidence"
                 description="Dog training in Sandgate, Shorncliffe & Brighton — foreshore recall, cafe manners, and loose-leash walking. Local trainer, real results on the Northside."
-        canonical="https://canineconfidence.com.au/dog-training-sandgate"
+        canonical="https://www.canineconfidence.com.au/dog-training-sandgate"
         ogImage="/attached_assets/IMG_0358_1762512636150.webp"
         keywords={[
           'dog training Sandgate',
@@ -103,7 +61,6 @@ export default function SandgatePage() {
           'Shorncliffe pier dog training'
         ]}
       />
-      <SandgateLocalBusinessSchema />
 
       {/* Hero Section */}
       <section className="hero-gradient py-20">

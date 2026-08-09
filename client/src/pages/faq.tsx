@@ -10,7 +10,7 @@ export default function FAQPage() {
       <SEO
         title="Frequently Asked Questions | Canine Confidence Dog Training Brisbane"
         description="Honest answers to the questions most people have before booking a dog training session with Canine Confidence in North Brisbane."
-        canonical="https://canineconfidence.com.au/faq"
+        canonical="https://www.canineconfidence.com.au/faq"
         keywords={[
           'dog training FAQ Brisbane',
           'dog trainer questions',

@@ -66,7 +66,7 @@ export default function WalkingAdventurePage() {
                 directAction={
                   program.name === "Local Walk" ? (
                     <ConsultationButton
-                      className="btn-primary w-full"
+                      className="w-full border-2 border-primary-blue bg-white text-primary-blue hover:bg-blue-50 hover:text-primary-blue"
                       label="Free Phone Consult"
                     />
                   ) : undefined

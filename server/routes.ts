@@ -26,10 +26,6 @@ function isHoneypotTripped(req: express.Request): boolean {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  app.get(["/services", "/packages"], (_req, res) => {
-    res.redirect(301, "/");
-  });
-
   // Services routes
   app.get("/api/services", async (req, res) => {
     try {

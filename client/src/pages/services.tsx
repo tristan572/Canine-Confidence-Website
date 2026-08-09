@@ -100,7 +100,7 @@ export default function ServicesPage() {
       <SEO 
                 title="Dog Training Services | North Brisbane | Canine Confidence"
                 description="Pulling on lead, ignoring recall, jumping on guests? I offer in-home dog training, walk & train, and adventure sessions across Brisbane's Northside."
-        canonical="https://canineconfidence.com.au/services"
+        canonical="https://www.canineconfidence.com.au/services"
         keywords={[
           'dog training services Brisbane',
           'puppy training North Brisbane',

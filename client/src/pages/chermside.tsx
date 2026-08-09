@@ -10,38 +10,6 @@ import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.ab
 import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
 import { openBookingUrl } from "@/lib/analytics";
 
-const ChermsideLocalBusinessSchema = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Canine Confidence - Chermside Dog Training",
-    "description": "Professional dog training services in Chermside, Kedron, and Stafford Heights. Specialising in urban dog training for apartment living, elevator etiquette, and real-world proofing at 7th Brigade Park.",
-    "url": "https://canineconfidence.com.au/dog-training-chermside",
-    "telephone": "+61409521358",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Serving Chermside, Kedron & Stafford Heights",
-      "addressLocality": "Chermside",
-      "addressRegion": "QLD",
-      "postalCode": "4032",
-      "addressCountry": "AU"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Chermside" },
-      { "@type": "City", "name": "Kedron" },
-      { "@type": "City", "name": "Stafford Heights" }
-    ],
-    "priceRange": "$$"
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-};
-
 export default function ChermsidePage() {
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showWalkTrainDialog, setShowWalkTrainDialog] = useState(false);
@@ -89,7 +57,7 @@ export default function ChermsidePage() {
       <SEO
         title="Chermside Dog Training"
         description="Professional dog training in Chermside, Kedron & Stafford Heights. Urban dog training for apartment living, elevator etiquette, and real-world proofing at 7th Brigade Park."
-        canonical="https://canineconfidence.com.au/dog-training-chermside"
+        canonical="https://www.canineconfidence.com.au/dog-training-chermside"
         keywords={[
           'dog training Chermside',
           'dog trainer Kedron',
@@ -99,7 +67,6 @@ export default function ChermsidePage() {
           'urban dog trainer Chermside'
         ]}
       />
-      <ChermsideLocalBusinessSchema />
 
       {/* Hero Section */}
       <section className="hero-gradient py-20">

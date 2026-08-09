@@ -14,6 +14,8 @@ import Home from "@/pages/home";
 const Puppy = lazy(() => import("@/pages/puppy"));
 const BehaviourObedience = lazy(() => import("@/pages/behaviour-obedience"));
 const WalkingAdventure = lazy(() => import("@/pages/walking-adventure"));
+const ServicesOverview = lazy(() => import("@/pages/services-overview"));
+const PackagesOverview = lazy(() => import("@/pages/packages-overview"));
 const Method = lazy(() => import("@/pages/method"));
 const Reviews = lazy(() => import("@/pages/reviews"));
 const Blog = lazy(() => import("@/pages/blog"));
@@ -89,6 +91,8 @@ function Router() {
           <Route path="/puppy" component={Puppy} />
           <Route path="/behaviour-obedience" component={BehaviourObedience} />
           <Route path="/walking-adventure" component={WalkingAdventure} />
+          <Route path="/services" component={ServicesOverview} />
+          <Route path="/packages" component={PackagesOverview} />
           <Route path="/method" component={Method} />
           <Route path="/reviews" component={Reviews} />
           <Route path="/blog" component={Blog} />

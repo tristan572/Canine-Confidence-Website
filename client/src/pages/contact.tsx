@@ -27,7 +27,7 @@ export default function ContactPage() {
       <SEO 
                 title="Contact Canine Confidence | North Brisbane Dog Trainer"
                 description="Got a dog that pulls, jumps, or won't come back? Let's talk. Book a free 15-minute consult with Canine Confidence. Your local North Brisbane dog trainer."
-        canonical="https://canineconfidence.com.au/contact"
+        canonical="https://www.canineconfidence.com.au/contact"
         keywords={[
           'dog trainer contact Brisbane',
           'book dog training Brisbane',

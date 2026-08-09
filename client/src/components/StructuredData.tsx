@@ -1,70 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
-export function LocalBusinessSchema() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://canineconfidence.com.au/#localbusiness",
-    "name": "Canine Confidence",
-    "description": "Professional dog training services in North Brisbane. NDTF certified trainer offering play-based training, behaviour modification, and puppy programs.",
-    "url": "https://canineconfidence.com.au",
-    "telephone": "0409521358",
-    "email": "info@canineconfidence.com.au",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Boondall",
-      "addressRegion": "QLD",
-      "postalCode": "4034",
-      "addressCountry": "AU"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-27.3812",
-      "longitude": "152.7135"
-    },
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "-27.3812",
-        "longitude": "152.7135"
-      },
-      "geoRadius": "30000"
-    },
-    "priceRange": "$45 - $1050",
-    "image": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.webp",
-    "logo": "https://canineconfidence.com.au/attached_assets/DSC_0096_1758792971820.webp",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:00",
-        "closes": "20:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/p/Canine-Confidence-61571910674491/",
-      "https://www.instagram.com/canine_confidence/",
-      "https://share.google/NJfyc690NWAMVb3LX"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "16",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
-  };
-
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
-}
-
 interface ServiceSchemaProps {
   name: string;
   description: string;
@@ -78,7 +11,7 @@ export function ServiceSchema({ name, description, price }: ServiceSchemaProps) 
     "serviceType": name,
     "description": description,
     "provider": {
-      "@id": "https://canineconfidence.com.au/#localbusiness"
+      "@id": "https://www.canineconfidence.com.au/#localbusiness"
     },
     "areaServed": {
       "@type": "City",
@@ -97,15 +30,9 @@ export function ServiceSchema({ name, description, price }: ServiceSchemaProps) 
       "price": price.replace(/[^0-9.]/g, ''),
       "priceCurrency": "AUD",
       "availability": "https://schema.org/InStock",
-      "url": "https://canineconfidence.com.au/behaviour-obedience"
+      "url": "https://www.canineconfidence.com.au/behaviour-obedience"
     };
   }
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
