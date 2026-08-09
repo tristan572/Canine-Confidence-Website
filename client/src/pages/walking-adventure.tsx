@@ -63,6 +63,14 @@ export default function WalkingAdventurePage() {
                 key={program.name}
                 program={program}
                 location="Walking"
+                directAction={
+                  program.name === "Local Walk" ? (
+                    <ConsultationButton
+                      className="btn-primary w-full"
+                      label="Free Phone Consult"
+                    />
+                  ) : undefined
+                }
                 upgrade={
                   program.name === "Walk and Train"
                     ? {

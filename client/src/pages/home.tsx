@@ -136,9 +136,10 @@ export default function HomePage() {
               What would make life with your dog better?
             </h2>
             <p className="text-lg text-medium-grey">
-              Start with what needs to change. I will help you choose the training
-              that gets you from daily frustration to a calmer, more connected dog
-              you can enjoy living with.
+              Choose the option below that best fits what you and your dog need
+              right now. Whether you are raising a puppy, working through a
+              behaviour issue or booking a walk or adventure, each option is
+              built for a different need.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-3">
@@ -232,11 +233,11 @@ export default function HomePage() {
 
       <section className="bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-bold lg:text-4xl">Most dog problems have a clear cause</h2>
+          <h2 className="mb-4 text-3xl font-bold lg:text-4xl">Get clear on what your dog needs</h2>
           <p className="mb-8 text-lg text-blue-100">
-            Once I understand the behaviour and the circumstances around it, I can
-            give you practical first steps. Your assessment gives you a training
-            plan built around your dog and your life.
+            During your assessment, I look at the behaviour and the circumstances
+            around it, then give you practical first steps and build a training
+            plan around your dog and your life.
           </p>
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <AssessmentButton

@@ -40,8 +40,12 @@ export default function PuppyPage() {
                 <Calendar className="mr-2 h-5 w-5" />
                 Book the Confident Start Program
               </Button>
-              <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
             </div>
+            <ConsultationButton
+              className="mt-4 h-auto justify-start border-0 bg-transparent px-0 py-1 text-primary-blue shadow-none hover:bg-transparent hover:text-primary-blue hover:underline"
+              label="Not sure? Book a free 15-min consult"
+              showIcon={false}
+            />
             <p className="mt-4 text-sm font-medium text-charcoal">
               No assessment required. Book directly when you are ready.
             </p>
