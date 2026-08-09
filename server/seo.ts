@@ -287,6 +287,7 @@ function renderStaticContent(h1: string, body: string[]): string {
 
 function renderBlogContent(post: { title: string; excerpt: string; content: string }): string {
   const paragraphs = post.content
+    .replace(/^#\s+[^\r\n]+\r?\n+/, "")
     .split(/\n{2,}/)
     .slice(0, 40)
     .map((paragraph) => paragraph.replace(/^#{1,6}\s+/, "").trim())

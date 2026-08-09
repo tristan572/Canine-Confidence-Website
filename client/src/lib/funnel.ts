@@ -51,7 +51,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     benefits: [
       "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
       "Focus and obedience practised while your dog moves through everyday distractions",
-      "Lead handling skills for even the trickiest pullers",
+      "Lead handling skills for the most persistent pullers",
       "A tailored plan to improve how your dog feels about the collar and lead",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
     ],
