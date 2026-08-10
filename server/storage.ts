@@ -524,7 +524,7 @@ export class MemStorage implements IStorage {
       },
       "From Chaos to Calm Program": {
         price: "$1,050",
-        originalPrice: "$1,135",
+        originalPrice: "$1,175",
         duration: "Use within 5 weeks",
       },
       "The Focused Progress Plan": {
@@ -555,7 +555,7 @@ export class MemStorage implements IStorage {
         if (pkg.name === "From Chaos to Calm Program") {
           current.description = current.description.replace(
             "over three consecutive weeks (saving you $90 compared to single session purchases)",
-            "across five focused weeks (saving you $85 compared to single session purchases)",
+            "across five focused weeks (saving you $125 compared to single session purchases)",
           );
         }
         if (pkg.name === "The Focused Progress Plan") {
@@ -1693,6 +1693,57 @@ Tristan`,
         publishedAt: new Date("2026-08-03"),
         tags: ["reactivity", "behaviour", "fear", "training"],
         slug: "frustration-or-fear-reactive-dogs"
+      },
+      {
+        title: "Release Markers and \"Wrong\": The Missing Skill for Everyday Owners",
+        metaTitle: "Release Markers and \"Wrong\": The Missing Skill for Everyday Owners | Canine Confidence Brisbane",
+        excerpt: "Most impulse control problems come down to communication, not training. Here's how two simple markers, a release word and a \"wrong\" word, give your dog the clarity it's been guessing without.",
+        content: `# Release Markers and "Wrong": The Missing Skill for Everyday Owners
+
+Most impulse control problems come down to communication, not training.
+
+I see this constantly. An owner tells me their dog "just doesn't listen," but when I watch the pair together, the dog isn't ignoring anything. It genuinely doesn't know what's being asked. There's no consistent feedback system in place, so the dog is guessing, and guessing wrong half the time.
+
+The fix is clarity, and the fastest way to build it is with two markers: a release marker and a "wrong" marker.
+
+## What a release marker actually does
+
+A release marker ("Yes" or "Get it") tells the dog three things in one word: that was correct, a reward is coming, and the position or task is now over. That's a full information packet, delivered in one word.
+
+Without a release marker, dogs are left to guess when a behaviour is "done." That's where you see dogs breaking a sit early, or never really settling because they don't know when they're allowed to relax.
+
+## Where "wrong" fits in
+
+"Wrong" is a neutral, no-reward marker. Say it the moment the dog doesn't have success in what it's doing, and it means: that one didn't work, try again. No lead pop, no raised voice, no drama attached.
+
+Dogs learn efficiently when they get three pieces of information: what worked, what didn't, and what to stop entirely. Most owners only have one tool, praise, and default to silence or frustration for everything else. That leaves the dog guessing, and it's an unfair system to train under.
+
+Add "wrong" to the mix and the dog gets a clean signal that something didn't land, with zero threat attached. It keeps trying instead of shutting down or guessing wildly. You can start using it straight away, alongside "Yes", right from day one.
+
+## Why this builds leadership, not just obedience
+
+Here's the part most owners miss. This pairing does more than teach commands. It builds authority.
+
+A dog that understands clean, consistent feedback doesn't need to be dominated into compliance. It needs a leader worth following, one who's predictable and fair every single time. Real leadership with a dog runs on consistency, not force.
+
+Dominance as a concept is real. You'll see it play out in most social species, dogs included. But dominance and harshness are two different things, and a lot of last century's training got that distinction wrong. You can hold real authority with a dog without ever needing to intimidate it.
+
+## Where this pairing stops
+
+I want to be straight about the limits here. Release and "wrong" markers are the starting point, not the whole toolkit. Some dogs, especially further down the reactivity end of things, need more than two markers alone will provide. But for the average owner dealing with everyday impulse control, jumping on furniture, not settling, ignoring a sit, this pairing solves most of it.
+
+## Getting started
+
+Use both markers from the start. Say "Yes" and reward within two seconds every time your dog gets something right. Say "Wrong" the moment it doesn't have success, pause, and let it try again. No consequence beyond the missed reward.
+
+Keep your tone flat and identical every time you use each marker. Consistency is what gives these words meaning.
+
+Two markers. Clean feedback. Real communication with your dog starts here.`,
+        imageUrl: "/attached_assets/release-markers-and-wrong_opt.webp",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-08-10"),
+        tags: ["communication", "markers", "impulse control", "training", "behaviour"],
+        slug: "release-markers-and-wrong"
       }
     ];
 

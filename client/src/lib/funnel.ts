@@ -60,8 +60,8 @@ export const behaviourPrograms: FunnelProgram[] = [
   {
     name: "From Chaos to Calm Program",
     price: "$1,050",
-    value: "$1,135 value",
-    saving: "Save $85",
+    value: "$1,175 value",
+    saving: "Save $125",
     expiry: "Designed to run over three weeks",
     composition:
       "4 In-Home Day Trains + 8 Walk and Trains + 3 One-on-One Private Coaching sessions",
