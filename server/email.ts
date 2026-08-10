@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import { createHash } from 'crypto';
 import type { Booking, Consultation, ContactSubmission } from '@shared/schema';
 
 const BUSINESS_EMAIL = 'info@canineconfidence.com.au';
@@ -121,4 +122,43 @@ export async function sendContactFormNotification(contact: ContactSubmission) {
     console.error('Failed to send contact form notification email:', error);
     throw error;
   }
+}
+
+export async function sendRescueGuideEmail(email: string) {
+  const guideUrl = 'https://www.canineconfidence.com.au/rescuedogguide?access=1';
+  const recipientHash = createHash('sha256')
+    .update(email.trim().toLowerCase())
+    .digest('hex')
+    .slice(0, 32);
+
+  const { data, error } = await getResendClient().emails.send(
+    {
+      from: 'Tristan at Canine Confidence <noreply@canineconfidence.com.au>',
+      to: email,
+      replyTo: BUSINESS_EMAIL,
+      subject: 'Your rescue dog guide is ready',
+      html: `
+        <div style="font-family: Arial, sans-serif; color: #1f2937; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          <h1 style="font-size: 26px; color: #142d4c;">Your rescue dog guide is ready</h1>
+          <p>Thanks for requesting <strong>The Safety Net: Your First 7 Days with Your Rescue Dog</strong>.</p>
+          <p>It covers the simple structure, management and routines that help a new rescue dog settle into your home.</p>
+          <p style="margin: 28px 0;">
+            <a href="${guideUrl}" style="background: #142d4c; color: #ffffff; padding: 13px 20px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold;">Read your guide</a>
+          </p>
+          <p>Keep this email so you can return to the guide whenever you need it.</p>
+          <p>Tristan<br />Canine Confidence</p>
+        </div>
+      `,
+      text: `Your rescue dog guide is ready\n\nRead The Safety Net: Your First 7 Days with Your Rescue Dog here:\n${guideUrl}\n\nKeep this email so you can return to the guide whenever you need it.\n\nTristan\nCanine Confidence`,
+    },
+    {
+      idempotencyKey: `rescue-guide-v1-${recipientHash}`,
+    },
+  );
+
+  if (error) {
+    throw new Error(`Resend could not deliver the guide email: ${error.message}`);
+  }
+
+  return data;
 }

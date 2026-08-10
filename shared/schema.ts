@@ -174,6 +174,8 @@ export const insertSubscriberSchema = createInsertSchema(subscribers).omit({
   id: true,
   subscribedAt: true,
   isActive: true,
+}).extend({
+  email: z.string().trim().email(),
 });
 
 // Types
