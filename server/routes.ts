@@ -269,28 +269,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertSubscriberSchema.parse(req.body);
 
       const apiKey = process.env.RESEND_API_KEY;
-      const audienceId = process.env.RESEND_AUDIENCE_ID;
-      if (!apiKey || !audienceId) {
+      const segmentId = process.env.RESEND_SEGMENT_ID;
+      if (!apiKey || !segmentId) {
         return res.status(503).json({ message: "Email signup is temporarily unavailable" });
       }
 
       const resend = new Resend(apiKey);
-      const existing = await resend.contacts.get({
-        audienceId,
-        email: validatedData.email,
-      });
+      const existing = await resend.contacts.get(validatedData.email);
 
       if (existing.error?.name === "not_found") {
         const created = await resend.contacts.create({
-          audienceId,
           email: validatedData.email,
           unsubscribed: false,
+          segments: [{ id: segmentId }],
         });
         if (created.error) {
           return res.status(502).json({ message: "Could not add email to the mailing list" });
         }
       } else if (existing.error) {
         return res.status(502).json({ message: "Could not check the mailing list" });
+      } else {
+        const contactSegments = await resend.contacts.segments.list({
+          email: validatedData.email,
+        });
+        if (contactSegments.error) {
+          return res.status(502).json({ message: "Could not check the mailing list" });
+        }
+
+        const alreadyInSegment = contactSegments.data?.data.some(
+          (segment) => segment.id === segmentId,
+        );
+        if (!alreadyInSegment) {
+          const added = await resend.contacts.segments.add({
+            email: validatedData.email,
+            segmentId,
+          });
+          if (added.error) {
+            return res.status(502).json({ message: "Could not add email to the mailing list" });
+          }
+        }
       }
 
       const subscriber = await storage.createSubscriber(validatedData);
