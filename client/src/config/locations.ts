@@ -25,12 +25,12 @@ export const serviceAreas: LocationArea[] = [
   {
     name: "Ascot",
     slug: "/dog-training-ascot",
-    isLive: false
+    isLive: true
   },
   {
     name: "Aspley",
     slug: "/dog-training-aspley",
-    isLive: false
+    isLive: true
   },
   {
     name: "Chermside",

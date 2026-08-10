@@ -28,6 +28,8 @@ const Admin = lazy(() => import("@/pages/admin"));
 const Sandgate = lazy(() => import("@/pages/sandgate"));
 const Northgate = lazy(() => import("@/pages/northgate"));
 const Chermside = lazy(() => import("@/pages/chermside"));
+const Aspley = lazy(() => import("@/pages/aspley"));
+const Ascot = lazy(() => import("@/pages/ascot"));
 const LocalResources = lazy(() => import("@/pages/local-resources"));
 const FAQ = lazy(() => import("@/pages/faq"));
 const NotFound = lazy(() => import("@/pages/not-found"));
@@ -105,6 +107,8 @@ function Router() {
           <Route path="/dog-training-sandgate" component={Sandgate} />
           <Route path="/dog-training-northgate" component={Northgate} />
           <Route path="/dog-training-chermside" component={Chermside} />
+          <Route path="/dog-training-aspley" component={Aspley} />
+          <Route path="/dog-training-ascot" component={Ascot} />
           <Route path="/local-resources" component={LocalResources} />
           <Route path="/faq" component={FAQ} />
           <Route component={NotFound} />
