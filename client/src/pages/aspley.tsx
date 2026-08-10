@@ -21,7 +21,7 @@ export default function AspleyPage() {
         {
           label: "Marchant Park",
           title: "Focus around dog activity",
-          text: "The Murphy Road dog area and surrounding park can bring movement, smells and other dogs into view. Suitable sessions can use that wider environment to build focus and calmer responses without throwing your dog into more than they can handle.",
+          text: "The Murphy Road dog area and surrounding park can bring movement, smells and other dogs into view. Targeted sessions can use the wider environment to build engagement, confidence and true reliability without throwing your dog into more than they can handle.",
         },
         {
           label: "Aspley Hypermarket",
