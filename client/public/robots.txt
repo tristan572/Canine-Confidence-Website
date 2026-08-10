@@ -2,6 +2,9 @@
 User-agent: *
 Allow: /
 Allow: /api/packages
+Allow: /api/blog
+Allow: /api/blog/slug/
+Allow: /api/testimonials
 Disallow: /admin
 Disallow: /api/
 

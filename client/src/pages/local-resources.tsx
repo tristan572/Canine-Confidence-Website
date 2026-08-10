@@ -44,8 +44,8 @@ const categories: ResourceCategory[] = [
   {
     title: "Pet Shops",
     icon: ShoppingBag,
-    colour: "text-green-600",
-    bgColour: "bg-green-50",
+    colour: "text-primary-blue",
+    bgColour: "bg-blue-50",
     entries: [
       {
         name: "Your Local Pet Shop",
@@ -121,7 +121,7 @@ export default function LocalResourcesPage() {
       <SEO
         title="Local Dog-Friendly Resources in North Brisbane"
         description="Trusted local vets, pet shops, groomers, and dog-friendly parks recommended by Canine Confidence. Building a strong North Brisbane dog community."
-        canonical="https://canineconfidence.com.au/local-resources"
+        canonical="https://www.canineconfidence.com.au/local-resources"
         keywords={[
           "dog friendly Brisbane",
           "local vets North Brisbane",

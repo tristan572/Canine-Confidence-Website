@@ -57,7 +57,6 @@ export default function ServicesPage() {
   const serviceIcons = {
     "Behaviour Modification": GraduationCap,
     "Walk & Train Sessions": Footprints,
-    "One-on-One Coaching": User,
     "Professional Walks": Route,
     "House Visits": Home,
     "Initial Assessment": ClipboardList,
@@ -65,7 +64,10 @@ export default function ServicesPage() {
     "Virtual Coaching and Support": Phone,
     "Local Walk": MapPinned,
     "Adventure Walk and Training": Mountain,
-    "Walk and Train": Footprints,  "Initial Canine Success Assessment": ClipboardList,  "One-on-One Private Coaching": Brain,  "In-home Day Train": Home,  "Initial Canine Success Assessment": ClipboardList,
+    "Walk and Train": Footprints,
+    "Initial Canine Success Assessment": ClipboardList,
+    "One-on-One Private Coaching": Brain,
+    "In-home Day Train": Home,
   };
 
   if (isLoading) {
@@ -98,7 +100,7 @@ export default function ServicesPage() {
       <SEO 
                 title="Dog Training Services | North Brisbane | Canine Confidence"
                 description="Pulling on lead, ignoring recall, jumping on guests? I offer in-home dog training, walk & train, and adventure sessions across Brisbane's Northside."
-        canonical="https://canineconfidence.com.au/services"
+        canonical="https://www.canineconfidence.com.au/services"
         keywords={[
           'dog training services Brisbane',
           'puppy training North Brisbane',
@@ -266,9 +268,9 @@ export default function ServicesPage() {
               <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mb-4">
                 <Heart className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-charcoal mb-3">Play as Engagement Engine</h3>
+              <h3 className="text-xl font-semibold text-charcoal mb-3">Play Builds Connection</h3>
               <p className="text-medium-grey">
-                I use play not just as a reward, but as a mechanism to accelerate learning, build motivation, and create high-level engagement with the owner.
+                I use play to make learning clearer, build motivation and strengthen the connection between you and your dog.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl">

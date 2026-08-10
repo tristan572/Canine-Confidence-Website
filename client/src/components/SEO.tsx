@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from "react";
 
 interface SEOProps {
   title: string;
@@ -18,56 +18,38 @@ export function SEO({
   keywords = []
 }: SEOProps) {
   const siteUrl = 'https://www.canineconfidence.com.au';
-    const fullTitle = title;
-  const canonicalUrl = canonical 
-    ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`)
-    : undefined;
-  
-  const defaultKeywords = [
-    'dog training Brisbane',
-    'dog trainer North Brisbane',
-    'puppy training Brisbane',
-    'dog behaviour training',
-    'positive dog training',
-    'play-based dog training',
-    'Brisbane dog trainer',
-    'dog obedience training Brisbane'
-  ];
-  
-  const allKeywords = Array.from(new Set([...keywords, ...defaultKeywords])).join(', ');
+  const canonicalPath = canonical
+    ? canonical.replace(/^https?:\/\/[^/]+/, "")
+    : window.location.pathname;
+  const canonicalUrl = `${siteUrl}${canonicalPath === "/" ? "" : canonicalPath}`;
 
-  return (
-    <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="title" content={fullTitle} />
-      <meta name="description" content={description} />
-      <meta name="keywords" content={allKeywords} />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl || siteUrl} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-      <meta property="og:locale" content="en_AU" />
-      <meta property="og:site_name" content="Canine Confidence" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={canonicalUrl || siteUrl} />
-      <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={`${siteUrl}${ogImage}`} />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="AU-QLD" />
-      <meta name="geo.placename" content="Brisbane" />
-    </Helmet>
-  );
+  useEffect(() => {
+    const setSingleton = (
+      selector: string,
+      create: () => HTMLElement,
+      update: (element: HTMLElement) => void,
+    ) => {
+      const existing = Array.from(document.head.querySelectorAll<HTMLElement>(selector));
+      const element = existing.shift() ?? create();
+      update(element);
+      existing.forEach((duplicate) => duplicate.remove());
+      if (!element.parentElement) document.head.appendChild(element);
+    };
+
+    document.title = title;
+    setSingleton('meta[name="description"]', () => document.createElement("meta"), (element) => {
+      element.setAttribute("name", "description");
+      element.setAttribute("content", description);
+    });
+    setSingleton('meta[name="robots"]', () => document.createElement("meta"), (element) => {
+      element.setAttribute("name", "robots");
+      element.setAttribute("content", "index, follow");
+    });
+    setSingleton('link[rel="canonical"]', () => document.createElement("link"), (element) => {
+      element.setAttribute("rel", "canonical");
+      element.setAttribute("href", canonicalUrl);
+    });
+  }, [canonicalUrl, description, title]);
+
+  return null;
 }

@@ -1,8 +1,15 @@
 import { Resend } from 'resend';
 import type { Booking, Consultation, ContactSubmission } from '@shared/schema';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const BUSINESS_EMAIL = 'info@canineconfidence.com.au';
+
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not configured');
+  }
+  return new Resend(apiKey);
+}
 
 // Escape HTML to prevent injection attacks
 function escapeHtml(text: string | null | undefined): string {
@@ -17,7 +24,7 @@ function escapeHtml(text: string | null | undefined): string {
 
 export async function sendBookingNotification(booking: Booking) {
   try {
-    const data = await resend.emails.send({
+    const data = await getResendClient().emails.send({
       from: 'Canine Confidence <noreply@canineconfidence.com.au>',
       to: BUSINESS_EMAIL,
       subject: `New Booking Request - ${escapeHtml(booking.clientName)}`,
@@ -57,7 +64,7 @@ export async function sendBookingNotification(booking: Booking) {
 
 export async function sendConsultationNotification(consultation: Consultation) {
   try {
-    const data = await resend.emails.send({
+    const data = await getResendClient().emails.send({
       from: 'Canine Confidence <noreply@canineconfidence.com.au>',
       to: BUSINESS_EMAIL,
       subject: `New Free Consultation Request - ${escapeHtml(consultation.clientName)}`,
@@ -88,7 +95,7 @@ export async function sendConsultationNotification(consultation: Consultation) {
 
 export async function sendContactFormNotification(contact: ContactSubmission) {
   try {
-    const data = await resend.emails.send({
+    const data = await getResendClient().emails.send({
       from: 'Canine Confidence <noreply@canineconfidence.com.au>',
       to: BUSINESS_EMAIL,
       subject: `New Contact Form Submission - ${escapeHtml(contact.name)}`,

@@ -8,6 +8,8 @@ This is a comprehensive dog training business website built with a modern full-s
 
 Preferred communication style: Simple, everyday language.
 
+Website copy must sound like something Tristan would say to a client. Use direct first-person language and specific, practical outcomes. Never use the parallel construction “not just X, it is/I do Y.” Avoid inflated sales terms such as “master,” “ultimate,” “advanced,” and “high-level.” Preserve official program names, session counts, prices, expiry periods, inclusions, and free guides when refining copy.
+
 ## System Architecture
 
 ### Frontend Architecture
@@ -112,7 +114,7 @@ Preferred communication style: Simple, everyday language.
   - Free consultation requests (contact info and concerns)
   - Contact form submissions (general inquiries)
 - **Security**: All user input is HTML-escaped to prevent injection attacks
-- **Configuration**: RESEND_API_KEY stored as environment secret
+- **Configuration**: RESEND_API_KEY and RESEND_AUDIENCE_ID stored as environment secrets
 - **Important**: The "from" domain (noreply@canineconfidence.com.au) MUST be verified in Resend before production deployment. Without domain verification, emails will fail to send.
 - **Implementation**: Email service in `server/email.ts`, integrated into API routes with graceful error handling
 

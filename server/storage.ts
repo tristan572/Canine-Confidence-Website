@@ -34,7 +34,7 @@ export interface IStorage {
   getBlogPosts(): Promise<BlogPost[]>;
   getBlogPost(id: number): Promise<BlogPost | undefined>;
   getBlogPostBySlug(slug: string): Promise<BlogPost | undefined>;
-  createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
+  createBlogPost(post: InsertBlogPost & { publishedAt?: Date }): Promise<BlogPost>;
 
   // Bookings
   getBookings(): Promise<Booking[]>;
@@ -118,7 +118,7 @@ export class MemStorage implements IStorage {
     const serviceData: InsertService[] = [
       {
         name: "Initial Canine Success Assessment",
-        description: "**Stop Guessing, Start Training**\n\nFeeling confused about where to start? Have you tried standard training with limited success? This session is the crucial first step to creating lasting, positive change by diagnosing the root cause of your dog's behaviour, not just treating the symptoms.\n\n**Perfect for:** All new clients, whether you're starting an obedience program, working through a specific challenge (like reactivity, digging, or anxiety), or just looking to build a deeper bond with your dog.",
+        description: "**Stop Guessing, Start Training**\n\nFeeling confused about where to start? Have you tried standard training with limited success? This session is the crucial first step to creating positive change by diagnosing the root cause of your dog's behaviour rather than treating only the symptoms.\n\n**Perfect for:** All new clients, whether you're starting an obedience program, working through a specific challenge (like reactivity, digging, or anxiety), or looking to build a deeper bond with your dog.",
         duration: "60 minutes",
         location: "In-home assessment",
         price: "$90",
@@ -129,7 +129,7 @@ export class MemStorage implements IStorage {
 
       {
         name: "One-on-One Private Coaching",
-        description: "**The Ultimate in Convenience and Results**\n\nThis is fully personalised dog training brought directly to you, held either in your home (where most problems happen) or at a public location relevant to your goals (like a park for leash manners).\n\nI don't just train your dog—I coach you as the primary handler, ensuring you master the effective techniques needed for success. This approach maximises your involvement for lifelong results and a stronger, clearer relationship.\n\nYou'll walk away from every session empowered with the skills and confidence to handle any situation.",
+        description: "**Training Built Around You and Your Dog**\n\nThis is fully personalised dog training brought directly to you, held either in your home, where most problems happen, or at a public location relevant to your goals, such as a park for lead manners.\n\nI train your dog and coach you as the primary handler, giving you clear techniques you can keep using. You leave each session with practical skills, more confidence and a clearer relationship with your dog.",
         duration: "60 minutes",
         location: "In-home or suitable environment",
         price: "$120",
@@ -149,7 +149,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Walk and Train",
-        description: "**Building Confidence and Calm on Leash**\n\nIs your dog's walk the most stressful part of your day? My specialised Walk & Train service is the perfect solution for owners struggling with pulling, lunging, or reactivity outside the home. This is not just a dog walk—it's focused, professional training delivered one-on-one by an expert.\n\nI visit your home, then walk in your neighbourhood or drive to a nearby location, using real-world distractions to build rock-solid focus and manners. I reinforce the behaviours of your choice while teaching your dog to navigate the world calmly.\n\nPerfect for transitioning your established indoor skills into reliable, real-world responses, ensuring you finally get to enjoy a peaceful stroll with a well-mannered, confident companion. This service is designed for lasting results and is the ideal follow-up to my In-home Train and Play and private coaching sessions.",
+        description: "**Building Confidence and Calm on Lead**\n\nIf your dog's walk is the most stressful part of your day, Walk and Train gives them focused one-on-one training around the places and distractions that make walking hard.\n\nI visit your home, then walk in your neighbourhood or drive to a nearby location. I reinforce the behaviours you choose while helping your dog move through the world more calmly.\n\nThis service carries established indoor skills into everyday walks and helps build more reliable responses outside the home. It is a useful follow-up to in-home training and private coaching.",
         duration: "40 minutes",
         location: "Home pickup and local area",
         price: "$60",
@@ -159,7 +159,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Adventure Walk and Training",
-        description: "**The Ultimate Outing**\n\nGive your dog the ultimate high-value experience! I'll pick up your dog and take them to a local forest, park, or beach for an hour packed with adventure, exercise, and integrated skill work.\n\nThis session is designed to be highly fulfilling, allowing your dog to safely enjoy running, sniffing, playing, and safe exploration in exciting, real-world locations. While on the adventure, I will focus on reinforcing key real-world skills like reliable recall, loose-leash foundations, and impulse control under heavy distraction.\n\nYour dog returns home happy, thoroughly exercised, mentally stimulated, and better behaved. This is more than a walk—it's a genuinely enriching outing that leaves your dog fulfilled and content.",
+        description: "**A Fulfilling Outing**\n\nI'll pick up your dog and take them to a local forest, park or beach for an hour of adventure, exercise and skill work.\n\nYour dog gets time to run, sniff, play and explore safely while I practise useful skills such as recall, loose-lead foundations and impulse control around distractions. They return home exercised, mentally stimulated and content.",
         duration: "60 minutes", 
         location: "Local parks, forests, or beaches",
         price: "$80",
@@ -179,17 +179,35 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Virtual Coaching and Support",
-        description: "**Expert Help, Wherever You Are**\n\nGet the answers and support you need without the travel time! My Zoom Call service offers convenient, personalised, one-on-one guidance right on your phone or computer.\n\nThis is ideal for quick skill refinement, specific problem-solving, or follow-up questions on techniques covered in previous sessions. I can troubleshoot minor issues, review your training videos, or create a plan for the next steps in your dog's development.\n\nExperience flexible coaching that fits your schedule, is accessible globally, and provides expert support from the comfort of your home. It's the perfect, cost-effective way to keep your training progress moving forward.",
+        description: "**Experienced Input, Wherever You Are**\n\nUse this private video call to fine-tune training details, bounce ideas around, review footage or build a practical training plan. It is available to anyone who wants experienced input without an in-person session.\n\nBring a specific problem, a list of questions or footage you want to unpack. We can work through what feels stuck and decide on useful next steps together.",
         duration: "60 minutes",
         location: "Video call (Zoom)",
         price: "$100",
         category: "consultation",
         imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6_opt.webp",
-        features: ["Convenient video call", "Problem solving", "Follow-up support", "Training guidance"]
+        features: ["A private one-hour video call from wherever you are", "Fine-tune training details or work through something that feels stuck", "Bounce ideas around and get a second perspective", "Build or refine a practical training plan"]
       }
     ];
 
-    serviceData.forEach(service => this.createService(service));
+    const serviceOverrides: Record<string, Partial<InsertService>> = {
+      "Initial Canine Success Assessment": {
+        price: "$99",
+      },
+      "One-on-One Private Coaching": {
+        price: "$125",
+      },
+      "Walk and Train": {
+        price: "$70",
+      },
+      "Adventure Walk and Training": {
+        price: "$90",
+      },
+    };
+
+    serviceData
+      .filter((service) => service.name !== "In-home Day Train")
+      .map((service) => ({ ...service, ...serviceOverrides[service.name] }))
+      .forEach((service) => this.createService(service));
 
     // Seed products
     const productData: InsertProduct[] = [
@@ -264,7 +282,7 @@ export class MemStorage implements IStorage {
     const packageData: InsertPackage[] = [
       {
         name: "The Confident Start Program",
-        description: "The ultimate in-home early development program for puppies (8-20 weeks).\n\nTogether with you, I build the essential foundations of confidence, connection, and clear communication during your puppy's critical learning period. Stop worrying about house training and biting, and start enjoying the confident, connected relationship you worked toward.\n\n**Why This Program is the Confident Choice:**\n\n**Customised, In-Home Coaching:** Receive personalised, one-on-one sessions delivered by an expert in the comfort of your own home, ensuring fast, effective learning tailored to your lifestyle.\n\n**Build Foundational Clarity:** Establish a clear shared language from day one, giving your puppy the confidence and guidance they need to succeed in their new world.\n\n**Play-Based Connection:** I teach you how to use engaging, fulfilling play to establish deep trust, enhance cooperation, and eliminate problem behaviours before they start.\n\n**Essential Life Skills:** Master crucial social skills, house-training protocols, and foundational manners (including reliable recall and settling on place).",
+        description: "An in-home early development program for puppies aged 8-20 weeks.\n\nTogether with you, I build confidence, connection and clear communication during your puppy's critical learning period. Get practical help with house training, barking, chewing your possessions and settling into life together.\n\n**Customised In-Home Coaching:** Sessions happen in your home and are shaped around your puppy, your household and your lifestyle.\n\n**Clear Foundations:** Build a shared language from day one so your puppy knows what you expect.\n\n**Play-Based Connection:** Learn how to use fulfilling play to build trust, cooperation and focus.\n\n**Essential Life Skills:** Work on social skills, house training and foundation manners, including recall and settling on place.",
         price: "$480",
         originalPrice: "$720",
         duration: "6 weeks",
@@ -273,10 +291,9 @@ export class MemStorage implements IStorage {
         imageUrl: "/attached_assets/image_1750048904991_opt.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
-          "Personalised Socialisation Protocols & Exposure Plan",
-          "Step-by-Step House Training Guidance & Setup",
+          "Personalised House Training Guidance and Setup",
+          "Step by Step Socialisation and Desensitisation Plan",
           "The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations",
-          "Take-Home Training Plan after every session",
           "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)"
         ],
         isPopular: false
@@ -291,17 +308,18 @@ export class MemStorage implements IStorage {
         category: "behaviour,obedience",
         imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278_opt.webp",
         features: [
-          "5 x Individual Private Sessions to be used across any behaviour or skill (flexible to your needs)",
-          "Customised Training Approach and problem-solving strategy",
-          "In-Depth Understanding of Methods (Clarity, Connection, Play and more)",
-          "Dedicated Ongoing Support between sessions",
-          "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
+          "5 private coaching sessions that can be used for any behaviour or skill",
+          "A practical approach built around your dog and the problem in front of us",
+          "In-depth teaching of training methods that actually work for your dog",
+          "Learn how clarity, connection and play fit into your dog's training",
+          "Support from me between sessions",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: true
       },
       {
         name: "From Chaos to Calm Program",
-        description: "Stop the barking, lunging, and anxiety. Start enjoying your life together.\n\nThis comprehensive program is specifically designed for dogs showing reactivity towards other dogs, people, or environmental triggers. I don't just mask the behaviour; I address the root causes to create lasting, foundational change.\n\n**How My Rehabilitation Program Works:**\n\n**Targeted, Dual-Phase Approach:** This package efficiently combines dedicated trainer-only sessions to build solid foundational skills with owner coaching sessions to ensure lifelong skill retention and real-world success.\n\n**Addressing Root Causes:** I focus on your dog's underlying anxiety and / or impulse control. My methods include advanced counter-conditioning techniques to fundamentally change how your dog feels about triggers.\n\n**Building Confidence & Trust:** I empower your dog with confidence-building exercises and establish clear, consistent communication, transforming them into a calm, self-assured companion who can navigate the world with ease.\n\n**Maximum Efficiency:** The entire intensive program is delivered over three consecutive weeks (saving you $90 compared to single session purchases).",
+        description: "Stop the barking, lunging and anxiety. Start enjoying your life together.\n\nThis program is designed for dogs showing reactivity towards other dogs, people or environmental triggers. I address the root causes of the behaviour and give you practical ways to keep everyone safer while the training progresses.\n\n**Trainer Work and Owner Coaching:** Trainer-only sessions build the foundation, then coaching sessions help you carry those skills into daily life.\n\n**Addressing Root Causes:** I work on the anxiety, impulse control and emotional responses behind your dog's reactions, using counter-conditioning suited to their triggers.\n\n**Building Confidence and Trust:** Clear, consistent communication helps your dog feel safer and make calmer choices.\n\n**Focused Five-Week Program:** The program is delivered across five focused weeks, saving you $85 compared with single sessions.",
         price: "$990",
         originalPrice: "$1080",
         duration: "15 sessions",
@@ -309,13 +327,13 @@ export class MemStorage implements IStorage {
         category: "behaviour",
         imageUrl: "/attached_assets/image_1750049297197_opt.webp",
         features: [
-          "Intensive Sessions focusing on effective, lasting behavioural change",
-          "Clear Communication Foundations to reduce your dog's confusion and anxiety",
-          "Master Real-World Management Techniques for immediate safety and peace of mind",
-          "Advanced Impulse Control and Counter-Conditioning protocols",
-          "Personalised Training Plan and Homework supplied",
-          "Dedicated Ongoing Support from your trainer",
-          "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
+          "Focused sessions aimed at steady behaviour change",
+          "Clear communication that reduces confusion and helps your dog make better choices",
+          "Practical handling for calmer walks and easier day-to-day situations",
+          "Impulse-control and counter-conditioning work tailored to your dog's triggers",
+          "I do the grunt work, then pass the critical information on to you so the results last",
+          "Ongoing support, feedback and videos throughout the program",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: true
       },
@@ -382,7 +400,7 @@ export class MemStorage implements IStorage {
       // },
       {
         name: "The Connected Companion Walk",
-        description: "Stop the struggle and start enjoying your walks.\n\nThis intensive program is designed to eliminate stressful pulling and resisting, giving you back your shoulders and your peace of mind. I deliver effective, efficient, and affordable results by building a lasting foundation of focus, connection, and clear communication in just one week.\n\n**How My Unique Program Works:**\n\n**Trainer-Led Foundations (4 Sessions):** Your dog works directly with an expert trainer over four focused sessions to build the correct habits, neutralise negative associations with the collar, and establish the core communication system.\n\n**Owner Coaching & Skill Transfer (1 Session):** I dedicate the final session entirely to coaching you. You'll master the advanced lead handling skills and the communication protocols, ensuring the brilliant results transfer straight into your hands.\n\n**Change the Collar Connection:** I focus on the dog's emotional response to the collar and lead, transforming resistance and struggle into positive and co-operative engagement.\n\n**Clarity-First Communication:** I build clear, consistent communication that teaches your dog exactly what you want on a walk, eliminating confusion and ensuring they choose to walk nicely by your side.\n\n**Important Note:** Please book the From Chaos To Calm Program if your dog is barking and lunging at dogs or people.",
+        description: "Stop the struggle and start enjoying your walks.\n\nThis program works on pulling and resistance by building focus, connection and clear communication across a focused two-week block.\n\n**Four Trainer-Led Sessions:** I work directly with your dog to build better walking habits and improve how they feel about the collar and lead.\n\n**One Owner Coaching Session:** The final session shows you the lead handling and communication your dog already understands so the progress transfers to you.\n\n**Clear Communication:** Your dog learns what you want on a walk and how to make calmer choices beside you.\n\n**Important Note:** Please book the From Chaos To Calm Program if your dog is barking and lunging at dogs or people.",
         price: "$340",
         originalPrice: "$360",
         duration: "1 week",
@@ -390,19 +408,18 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839_opt.webp",
         features: [
-          "5 Targeted Training Sessions Total (4 Trainer-Led + 1 Owner Coaching Session)",
-          "Foundations of High-Level Engagement and Obedience on the move",
-          "Master Advanced Lead Handling Skills for ultimate control and comfort",
-          "Tailored Protocol to shift your dog's feelings about the collar and lead",
-          "I continue until the core goal is met",
-          "BONUS: The essential guide: 'The Four Building Blocks of a Balanced Dog' (Included Free!)"
+          "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
+          "Focus and obedience practised while your dog moves through everyday distractions",
+          "Lead handling skills for the most persistent pullers",
+          "A tailored plan to improve how your dog feels about the collar and lead",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
 
       {
         name: "The Foundation Program",
-        description: "This is my flexible convenience service that delivers expert, focused training right to your doorstep, saving you time and effort. This commitment allows me, the trainer to deeply understand your dog over five dedicated sessions, leading to more consistent, reliable progress across any goal—from manners to enrichment. No need for you to be present!\n\n**What the 5x Commitment Delivers:**\n\n**Ultimate Flexibility for Any Goal:** Use these five sessions for any in-home need—whether you want to build foundational obedience, tackle specific behaviours, or simply ensure your dog receives fulfilling enrichment and play throughout your busy week.\n\n**Deeper Trainer-Dog Connection:** Committing to five sessions allows me to really get to know your dog's unique personality and learning style. This intimate understanding ensures training is perfectly tailored for maximum confidence and fastest results.\n\n**Consistency for Reliable Skills:** The repetition of five sessions ensures consistent implementation of my clarity-based system, building stronger, more reliable habits that last, regardless of the training focus.\n\n**Affordable Convenience:** Secure this essential service with a total saving of $20 on five private, done-for-you sessions. It's the easiest and quickest way to guarantee your dog's progress and fulfilment.",
+        description: "Focused training brought to your doorstep. Across four in-home Day Train sessions, I get to know your dog and work consistently on the priorities that matter most. The private coaching session then shows you how to carry those skills forward.\n\n**Flexible Focus:** Use the sessions for obedience, foundation skills, behaviour work or fulfilment.\n\n**Training Built Around Your Dog:** The work is shaped around your dog's personality, learning style and current needs.\n\n**Consistent Practice:** Repeated sessions help build clearer, more reliable habits.\n\n**Feedback and Coaching:** You receive video updates, practical feedback and a private coaching session with you.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -410,16 +427,17 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769_opt.webp",
         features: [
-          "5 x Private, In-Home Training Sessions (Done by the trainer)",
-          "Completely Flexible Focus—use for obedience, foundations, behaviour modification, or fulfilment",
-          "Customised Training Plan focusing on your current priorities",
-          "Ongoing Feedback and video updates"
+          "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
+          "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
+          "A training plan built around the problems you want to solve first",
+          "Feedback and video updates so you can see what your dog is learning",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
       {
         name: "The Real World Reliability Package",
-        description: "Move beyond the backyard and achieve true reliability.\n\nMy active Five Walk and Trains Package offers the ultimate practical convenience, combining expert training with real-world exposure. I walk your dog from home and reinforce essential obedience and loose lead walking skills during real-world strolls. This commitment ensures skills are proofed against distractions for lasting results.\n\n**What the 5x Commitment Delivers:**\n\n**Real-World Reliability:** This package is ideal for progressing from in-home work. Five sessions ensure your dog's skills are progressively being tested in distracting environments (traffic, people, sounds), transitioning their obedience seamlessly from indoors to outdoors.\n\n**Confidence Building & Clarity:** The consistent practice builds your dog's confidence in new situations while reinforcing the clear communication system they need to succeed on lead.\n\n**Loose Lead Mastery:** I focus specifically on loose lead walking practice and general obedience reinforcement, eliminating frustration and ensuring your dog learns to walk co-operatively at all times.\n\n**Ultimate Convenience:** I come to you! Enjoy the results of expert training without the time commitment. My home pickup service is included in every session.",
+        description: "Move beyond the backyard and build more reliable skills on real walks. I collect your dog from home and use five sessions to practise obedience and loose-lead walking around traffic, people, sounds and other everyday distractions.\n\n**Skills for Everyday Walks:** Each session carries indoor skills into the places where you actually need them.\n\n**Confidence and Clarity:** Consistent practice helps your dog understand what is expected on lead.\n\n**Loose-Lead Practice:** I work directly on pulling, focus and manners while your dog is moving.\n\n**Home Pickup Included:** I come to you and return your dog after every session.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -427,17 +445,18 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287_opt.webp",
         features: [
-          "5 x 40-Minute Sessions (Trainer-led, done for you)",
-          "Home Pickup Service Included at no extra charge",
-          "Targeted General Obedience Reinforcement (manners on the go)",
-          "Dedicated Loose Lead Walking Practice and technique mastery",
-          "Training focused on real-world environment application and distraction proofing"
+          "5 trainer-led 40-minute Walk and Train sessions",
+          "Home pickup included",
+          "Obedience and manners practised during real walks",
+          "Dedicated loose-lead walking practice",
+          "Skills built around traffic, people, dogs and other everyday distractions",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
       {
         name: "The Adventure Pack",
-        description: "Accelerate your dog's journey towards real-world reliability.\n\nThis premium five-session commitment is the most effective way to expose your dog to varied environments and distractions, ensuring they progress quickly and build strong, reliable habits on key skills. I handle the hard work for you, setting the highest possible foundation for success.\n\n**What the 5x Commitment Delivers:**\n\n**Building Reliable Habits:** Five consecutive adventures allows me to progressively expose your dog to a huge variety of real-world environments (forests, beaches, parks). This repetition is essential for helping your dog automatically focus on you, even when highly distracted.\n\n**Proofing Skills Under Distraction:** I focus on reinforcing key real-world skills like reliable recall, loose-lead foundations, and impulse control under heavy distraction. This package is the crucial step in teaching your dog to focus on you when it matters most.\n\n**Ultimate Mental and Physical Fulfilment:** This service is designed to be highly fulfilling. Your dog safely enjoys five sessions of running, sniffing, playing, and exploration, ensuring they return home thoroughly exercised, mentally stimulated, and happy.\n\n**Smart Savings:** This package ensures you maintain training momentum with a saving of $25 compared to booking five single sessions individually.",
+        description: "Five varied adventures give your dog exercise, exploration and repeated skill work around real distractions. I collect your dog from home and choose forests, beaches or parks that suit their needs and training goals.\n\n**Reliable Habits:** Repeated outings help your dog practise focus across different environments.\n\n**Skills Around Distractions:** I work on recall, loose-lead foundations and impulse control while life is happening around them.\n\n**Mental and Physical Fulfilment:** Your dog gets time to run, sniff, play and explore safely.\n\n**Video and Feedback:** You receive an update after every outing, including useful tips for you.",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",
@@ -445,17 +464,18 @@ export class MemStorage implements IStorage {
         category: "adventure",
         imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107_opt.webp",
         features: [
-          "5 x Adventure Outings (Each session is an hour of adventure and integrated training)",
-          "Convenient Home Pick-up Service included",
-          "Targeted reinforcement of Recall and Impulse Control under distraction",
-          "Focus on safe exploration, fun, and fulfilling play",
-          "Video and feedback after every session, including key tips for you"
+          "5 one-hour adventure outings with training built in",
+          "Home pickup included",
+          "Recall and impulse-control practice around distractions",
+          "Safe exploration, play and fulfilment suited to your dog",
+          "Video and feedback after every outing, with useful tips for you",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
       },
       {
         name: "The Neighbourhood Enrichment Pack",
-        description: "Your reliable, budget-friendly solution for essential well-being.\n\nThis five-session package guarantees your dog receives consistent exercise, stimulation, and fun, all delivered right to your doorstep by a professional dog handler. It's the simplest way to ensure a happy, active dog, even on your busiest days.\n\n**What the 5x Commitment Delivers:**\n\n**Reliable, Consistent Care:** By committing to five sessions, you establish a consistent routine that your dog can count on. This regularity is key to reducing stress and maintaining good manners throughout the week.\n\n**Structured Enrichment Walks:** My walks are more than just a stroll. I ensure your dog gets plenty of essential sniffing time (mental stimulation) and attentive care, making every outing a fulfilling experience that leaves your dog content.\n\n**Ultimate Convenience & Simplicity:** I come directly to your home, ensuring your dog enjoys a healthy walk and essential exercise without you having to be present. It's the perfect helping hand for busy schedules.\n\n**Budget-Friendly Value:** This package offers the most convenient and reliable service while providing savings compared to booking single sessions.",
+        description: "A reliable, budget-friendly way to give your dog regular exercise, stimulation and attentive care on busy days.\n\n**Consistent Care:** Five sessions create a routine your dog can count on.\n\n**Enrichment Walks:** Every outing includes time to sniff, move and explore.\n\n**Home Pickup:** I come directly to your home, and you do not need to be present.\n\n**Straightforward Value:** Five walks cost less than booking the same sessions individually.",
         price: "$215",
         originalPrice: "$225",
         duration: "5 sessions",
@@ -472,10 +492,88 @@ export class MemStorage implements IStorage {
       }
     ];
 
-    packageData.forEach(pkg => this.createPackage(pkg));
+    const currentPackageOverrides: Record<string, Partial<InsertPackage>> = {
+      "The Confident Start Program": {
+        price: "$549",
+        originalPrice: undefined,
+        duration: "Use within 3 months",
+        features: [
+          "6 Private In-Home Coaching Sessions for You, Your Family and Your Puppy",
+          "Personalised House Training Guidance and Setup",
+          "Step by Step Socialisation and Desensitisation Plan",
+          "The 5 Foundational Manners: Sit, Stay, Come, Place and Loose-Lead Walking Foundations",
+          "Free Comprehensive 50+ Page Puppy Raising Guide",
+        ],
+      },
+      "The Foundation Program": {
+        price: "$320",
+        originalPrice: "$365",
+        duration: "Use within 2 weeks",
+        features: [
+          "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
+          "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
+          "A training plan built around the problems you want to solve first",
+          "Feedback and video updates so you can see what your dog is learning",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'",
+        ],
+      },
+      "The Connected Companion Walk": {
+        price: "$350",
+        originalPrice: "$405",
+        duration: "Use within 2 weeks per block",
+      },
+      "From Chaos to Calm Program": {
+        price: "$1,050",
+        originalPrice: "$1,135",
+        duration: "Use within 5 weeks",
+      },
+      "The Focused Progress Plan": {
+        price: "$550",
+        originalPrice: "$625",
+        duration: "Use within 6 months",
+      },
+      "The Real World Reliability Package": {
+        price: "$325",
+        originalPrice: "$350",
+        duration: "Use within 6 months",
+      },
+      "The Adventure Pack": {
+        price: "$425",
+        originalPrice: "$450",
+        duration: "Use within 6 months",
+      },
+    };
+
+    const currentPackageNames = Object.keys(currentPackageOverrides);
+    const currentPackageData: InsertPackage[] = packageData
+      .filter((pkg) => currentPackageNames.includes(pkg.name))
+      .map((pkg) => {
+        const current = { ...pkg, ...currentPackageOverrides[pkg.name] };
+        if (pkg.name === "The Connected Companion Walk") {
+          current.description = current.description.replace("in just one week", "in a focused two-week block");
+        }
+        if (pkg.name === "From Chaos to Calm Program") {
+          current.description = current.description.replace(
+            "over three consecutive weeks (saving you $90 compared to single session purchases)",
+            "across five focused weeks (saving you $85 compared to single session purchases)",
+          );
+        }
+        if (pkg.name === "The Focused Progress Plan") {
+          current.description = current.description.replace("saving you $50", "saving you $75");
+        }
+        if (pkg.name === "The Foundation Program") {
+          current.description = current.description.replace(
+            "five private, done-for-you sessions",
+            "four done-for-you sessions plus private owner coaching",
+          );
+        }
+        return current;
+      });
+
+    currentPackageData.forEach((pkg) => this.createPackage(pkg));
 
     // Seed blog posts - Four Building Blocks Articles
-    const blogData: InsertBlogPost[] = [
+    const blogData: (InsertBlogPost & { publishedAt?: Date })[] = [
       {
         title: "Health: The Foundation of Everything",
         excerpt: "Before a dog can learn, behave, or thrive, they have to feel good in their body. This is the non-negotiable starting point.",
@@ -1674,7 +1772,12 @@ Tristan`,
 
   async createService(service: InsertService): Promise<Service> {
     const id = this.currentServiceId++;
-    const newService: Service = { ...service, id };
+    const newService: Service = {
+      ...service,
+      id,
+      imageUrl: service.imageUrl ?? null,
+      features: service.features ?? null,
+    };
     this.services.set(id, newService);
     return newService;
   }
@@ -1694,7 +1797,13 @@ Tristan`,
 
   async createProduct(product: InsertProduct): Promise<Product> {
     const id = this.currentProductId++;
-    const newProduct: Product = { ...product, id };
+    const newProduct: Product = {
+      ...product,
+      id,
+      priceRange: product.priceRange ?? null,
+      imageUrl: product.imageUrl ?? null,
+      inStock: product.inStock ?? true,
+    };
     this.products.set(id, newProduct);
     return newProduct;
   }
@@ -1714,7 +1823,14 @@ Tristan`,
 
   async createPackage(packageData: InsertPackage): Promise<Package> {
     const id = this.currentPackageId++;
-    const newPackage: Package = { ...packageData, id };
+    const newPackage: Package = {
+      ...packageData,
+      id,
+      originalPrice: packageData.originalPrice ?? null,
+      imageUrl: packageData.imageUrl ?? null,
+      features: packageData.features ?? null,
+      isPopular: packageData.isPopular ?? false,
+    };
     this.packages.set(id, newPackage);
     return newPackage;
   }
@@ -1741,7 +1857,11 @@ Tristan`,
     const newPost: BlogPost = {
       ...post,
       id,
-      publishedAt: post.publishedAt ?? new Date()
+      publishedAt: post.publishedAt ?? new Date(),
+      imageUrl: post.imageUrl ?? null,
+      slug: post.slug ?? "",
+      tags: post.tags ?? null,
+      metaTitle: post.metaTitle ?? null,
     };
     this.blogPosts.set(id, newPost);
     return newPost;
@@ -1762,7 +1882,17 @@ Tristan`,
       ...booking, 
       id, 
       status: "pending",
-      createdAt: new Date()
+      createdAt: new Date(),
+      clientPhone: booking.clientPhone ?? null,
+      preferredDate: booking.preferredDate ?? null,
+      preferredTime: booking.preferredTime ?? null,
+      dogBreed: booking.dogBreed ?? null,
+      dogAge: booking.dogAge ?? null,
+      dogWeight: booking.dogWeight ?? null,
+      behaviorConcerns: booking.behaviorConcerns ?? null,
+      previousTraining: booking.previousTraining ?? null,
+      veterinaryInfo: booking.veterinaryInfo ?? null,
+      emergencyContact: booking.emergencyContact ?? null,
     };
     this.bookings.set(id, newBooking);
     return newBooking;
@@ -1779,7 +1909,10 @@ Tristan`,
       ...consultation, 
       id, 
       status: "pending",
-      createdAt: new Date()
+      createdAt: new Date(),
+      preferredCallTime: consultation.preferredCallTime ?? null,
+      dogInfo: consultation.dogInfo ?? null,
+      concerns: consultation.concerns ?? null,
     };
     this.consultations.set(id, newConsultation);
     return newConsultation;
@@ -1796,7 +1929,10 @@ Tristan`,
       ...submission, 
       id, 
       status: "new",
-      createdAt: new Date()
+      createdAt: new Date(),
+      service: submission.service ?? null,
+      message: submission.message ?? null,
+      phone: submission.phone ?? null,
     };
     this.contactSubmissions.set(id, newSubmission);
     return newSubmission;
@@ -1812,7 +1948,8 @@ Tristan`,
     const newItem: CartItem = { 
       ...item, 
       id, 
-      createdAt: new Date()
+      createdAt: new Date(),
+      quantity: item.quantity ?? 1,
     };
     this.cartItems.set(id, newItem);
     return newItem;
@@ -1852,7 +1989,10 @@ Tristan`,
       ...testimonial,
       id,
       createdAt: new Date(),
-      isActive: true
+      isActive: true,
+      location: testimonial.location ?? null,
+      service: testimonial.service ?? null,
+      dogName: testimonial.dogName ?? null,
     };
     this.testimonials.set(id, newTestimonial);
     return newTestimonial;

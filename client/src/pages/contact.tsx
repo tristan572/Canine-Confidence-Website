@@ -27,7 +27,7 @@ export default function ContactPage() {
       <SEO 
                 title="Contact Canine Confidence | North Brisbane Dog Trainer"
                 description="Got a dog that pulls, jumps, or won't come back? Let's talk. Book a free 15-minute consult with Canine Confidence. Your local North Brisbane dog trainer."
-        canonical="https://canineconfidence.com.au/contact"
+        canonical="https://www.canineconfidence.com.au/contact"
         keywords={[
           'dog trainer contact Brisbane',
           'book dog training Brisbane',
@@ -296,11 +296,11 @@ export default function ContactPage() {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/', "general", "Contact page")}
+                onClick={() => openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment | Contact page")}
                 className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Book Now
+                Book Assessment
               </Button>
             </div>
           </div>

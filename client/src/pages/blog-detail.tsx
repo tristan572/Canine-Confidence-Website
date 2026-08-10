@@ -70,12 +70,14 @@ export default function BlogDetailPage() {
     );
   }
 
+  const articleContent = blogPost.content.replace(/^#\s+[^\r\n]+\r?\n+/, "");
+
   return (
     <div className="min-h-screen py-20">
                         <SEO
           title={blogPost.metaTitle ?? `${blogPost.title} | Canine Confidence`}
           description={blogPost.excerpt}
-          canonical={`https://canineconfidence.com.au/blog/${blogPost.slug}`}
+          canonical={`https://www.canineconfidence.com.au/blog/${blogPost.slug}`}
         />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
@@ -139,7 +141,7 @@ export default function BlogDetailPage() {
             <div className="text-charcoal leading-relaxed space-y-6">
               <ReactMarkdown 
                 components={{
-                  h1: ({children}) => <h1 className="text-3xl font-bold text-charcoal mb-6 mt-12 first:mt-0">{children}</h1>,
+                  h1: ({children}) => <h2 className="text-3xl font-bold text-charcoal mb-6 mt-12 first:mt-0">{children}</h2>,
                   h2: ({children}) => <h2 className="text-2xl font-bold text-charcoal mb-4 mt-10">{children}</h2>,
                   h3: ({children}) => <h3 className="text-xl font-semibold text-charcoal mb-3 mt-8">{children}</h3>,
                   p: ({children}) => <p className="text-medium-grey leading-relaxed mb-6">{children}</p>,
@@ -164,7 +166,7 @@ export default function BlogDetailPage() {
                   em: ({children}) => <em className="italic text-charcoal">{children}</em>,
                 }}
               >
-                {blogPost.content}
+                {articleContent}
               </ReactMarkdown>
             </div>
           </div>

@@ -20,7 +20,10 @@ export function trackEvent(eventName: string, params: AnalyticsParams = {}) {
   });
 }
 
-export function trackLead(leadType: "contact_form" | "free_consultation", service?: string) {
+export function trackLead(
+  leadType: "contact_form" | "free_consultation" | "rescue_dog_guide",
+  service?: string,
+) {
   trackEvent("generate_lead", {
     lead_type: leadType,
     service: service || undefined,

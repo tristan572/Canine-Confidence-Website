@@ -16,6 +16,7 @@ import {
 } from "./email";
 import { requireAdminAuth } from "./adminAuth";
 import { buildSitemapXml } from "./seo";
+import { Resend } from "resend";
 
 // Honeypot field ("website") is only ever filled by bots — real users never
 // see it. Returning a fake success keeps bots from retrying/escalating,
@@ -260,33 +261,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Newsletter subscribers routes
   app.post("/api/subscribers", async (req, res) => {
+    if (isHoneypotTripped(req)) {
+      return res.status(201).json({ id: 0 });
+    }
+
     try {
       const validatedData = insertSubscriberSchema.parse(req.body);
 
-      // Add subscriber to MailerLite
-      const mailerLiteApiKey = process.env.MAILERLITE_API_KEY;
-      const mailerLiteGroupId = process.env.MAILERLITE_GROUP_ID;
+      const apiKey = process.env.RESEND_API_KEY;
+      const audienceId = process.env.RESEND_AUDIENCE_ID;
+      if (!apiKey || !audienceId) {
+        return res.status(503).json({ message: "Email signup is temporarily unavailable" });
+      }
 
-      if (mailerLiteApiKey && mailerLiteGroupId) {
-        const mlResponse = await fetch("https://connect.mailerlite.com/api/subscribers", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${mailerLiteApiKey}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: validatedData.email,
-            groups: [mailerLiteGroupId],
-          }),
+      const resend = new Resend(apiKey);
+      const existing = await resend.contacts.get({
+        audienceId,
+        email: validatedData.email,
+      });
+
+      if (existing.error?.name === "not_found") {
+        const created = await resend.contacts.create({
+          audienceId,
+          email: validatedData.email,
+          unsubscribed: false,
         });
-
-        if (!mlResponse.ok) {
-          const errorData = await mlResponse.json() as { message?: string };
-          // 409 means already subscribed — treat as success
-          if (mlResponse.status !== 409) {
-            throw new Error(errorData.message || "Failed to add to mailing list");
-          }
+        if (created.error) {
+          return res.status(502).json({ message: "Could not add email to the mailing list" });
         }
+      } else if (existing.error) {
+        return res.status(502).json({ message: "Could not check the mailing list" });
       }
 
       const subscriber = await storage.createSubscriber(validatedData);
