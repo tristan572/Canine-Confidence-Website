@@ -524,7 +524,7 @@ export class MemStorage implements IStorage {
       },
       "From Chaos to Calm Program": {
         price: "$1,050",
-        originalPrice: "$1,135",
+        originalPrice: "$1,175",
         duration: "Use within 5 weeks",
       },
       "The Focused Progress Plan": {
@@ -555,7 +555,7 @@ export class MemStorage implements IStorage {
         if (pkg.name === "From Chaos to Calm Program") {
           current.description = current.description.replace(
             "over three consecutive weeks (saving you $90 compared to single session purchases)",
-            "across five focused weeks (saving you $85 compared to single session purchases)",
+            "across five focused weeks (saving you $125 compared to single session purchases)",
           );
         }
         if (pkg.name === "The Focused Progress Plan") {
