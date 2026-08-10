@@ -133,7 +133,7 @@ export async function sendRescueGuideEmail(email: string) {
 
   const { data, error } = await getResendClient().emails.send(
     {
-      from: 'Tristan at Canine Confidence <noreply@canineconfidence.com.au>',
+      from: 'Canine Confidence <noreply@canineconfidence.com.au>',
       to: email,
       replyTo: BUSINESS_EMAIL,
       subject: 'Your rescue dog guide is ready',
