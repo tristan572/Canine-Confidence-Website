@@ -16,7 +16,7 @@ export default function AscotPage() {
       heroImage={ascotImage}
       heroImageAlt="Tristan walking a client dog through a busy urban park"
       localHeading="Calm behaviour across Ascot's different rhythms"
-      localIntro="A quiet weekday walk can become a much bigger test when cafes fill, commuters move through Ascot station or an event changes traffic around Eagle Farm and Doomben. Training should prepare your dog for the environments that are part of your actual routine."
+      localIntro="A quiet weekday walk can become much busier when cafes fill or race days bring more people, traffic and noise around Eagle Farm and Doomben. Training should prepare your dog for the environments that are part of your actual routine."
       highlights={[
         {
           label: "Racecourse Road",
@@ -26,7 +26,7 @@ export default function AscotPage() {
         {
           label: "Racecourse precinct",
           title: "Handling changes in noise and movement",
-          text: "Activity around Eagle Farm, Doomben and Ascot station can shift quickly on event days. I use appropriate public areas and controlled distances to build calm, connected behaviour around traffic, crowds and sudden changes in the environment.",
+          text: "Activity around Eagle Farm and Doomben can shift quickly on event days. I use appropriate public areas and controlled distances to build calm, connected behaviour around traffic, crowds and sudden changes in the environment.",
         },
         {
           label: "Oriel Park & local streets",
