@@ -16,7 +16,7 @@ export default function AspleyPage() {
       heroImage={aspleyImage}
       heroImageAlt="Tristan training a Staffy in a leafy North Brisbane park"
       localHeading="From Marchant Park to the front door"
-      localIntro="Good training needs to work across the different environments an Aspley dog meets in a normal week. That may mean calm behaviour at home, better connection on neighbourhood walks or clearer responses when the surroundings become busier."
+      localIntro="Good training needs to work across the different environments an Aspley dog meets in a normal week. That may mean calm behaviour at home, better connection on neighbourhood walks or better focus when the surroundings become busier."
       highlights={[
         {
           label: "Marchant Park",

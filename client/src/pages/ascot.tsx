@@ -26,7 +26,7 @@ export default function AscotPage() {
         {
           label: "Racecourse precinct",
           title: "Handling changes in noise and movement",
-          text: "Activity around Eagle Farm, Doomben and Ascot station can shift quickly on event days. I use appropriate public areas and controlled distances to teach clearer responses around traffic, crowds and sudden changes in the environment.",
+          text: "Activity around Eagle Farm, Doomben and Ascot station can shift quickly on event days. I use appropriate public areas and controlled distances to build calm, connected behaviour around traffic, crowds and sudden changes in the environment.",
         },
         {
           label: "Oriel Park & local streets",
