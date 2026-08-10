@@ -12,11 +12,13 @@ import {
 import {
   sendBookingNotification,
   sendConsultationNotification,
-  sendContactFormNotification
+  sendContactFormNotification,
+  sendRescueGuideEmail
 } from "./email";
+import { subscribeToMailerLite } from "./mailerlite";
 import { requireAdminAuth } from "./adminAuth";
 import { buildSitemapXml } from "./seo";
-import { Resend } from "resend";
+import { ZodError } from "zod";
 
 // Honeypot field ("website") is only ever filled by bots — real users never
 // see it. Returning a fake success keeps bots from retrying/escalating,
@@ -259,7 +261,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Newsletter subscribers routes
+  // Newsletter subscribers route
   app.post("/api/subscribers", async (req, res) => {
     if (isHoneypotTripped(req)) {
       return res.status(201).json({ id: 0 });
@@ -267,57 +269,39 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
     try {
       const validatedData = insertSubscriberSchema.parse(req.body);
-
-      const apiKey = process.env.RESEND_API_KEY;
-      const segmentId = process.env.RESEND_SEGMENT_ID;
-      if (!apiKey || !segmentId) {
-        return res.status(503).json({ message: "Email signup is temporarily unavailable" });
+      await subscribeToMailerLite(validatedData.email);
+      const subscriber = await storage.createSubscriber(validatedData);
+      res.status(201).json(subscriber);
+    } catch (error) {
+      if (error instanceof ZodError) {
+        return res.status(400).json({ message: "Please enter a valid email address" });
       }
 
-      const resend = new Resend(apiKey);
-      const existing = await resend.contacts.get(validatedData.email);
+      console.error("Failed to subscribe to newsletter:", error);
+      res.status(502).json({ message: "Could not add email to the mailing list" });
+    }
+  });
 
-      if (existing.error?.name === "not_found") {
-        const created = await resend.contacts.create({
-          email: validatedData.email,
-          unsubscribed: false,
-          segments: [{ id: segmentId }],
-        });
-        if (created.error) {
-          return res.status(502).json({ message: "Could not add email to the mailing list" });
-        }
-      } else if (existing.error) {
-        return res.status(502).json({ message: "Could not check the mailing list" });
-      } else {
-        const contactSegments = await resend.contacts.segments.list({
-          email: validatedData.email,
-        });
-        if (contactSegments.error) {
-          return res.status(502).json({ message: "Could not check the mailing list" });
-        }
+  // Rescue guide signup and delivery route
+  app.post("/api/rescue-guide-signups", async (req, res) => {
+    if (isHoneypotTripped(req)) {
+      return res.status(201).json({ id: 0 });
+    }
 
-        const alreadyInSegment = contactSegments.data?.data.some(
-          (segment) => segment.id === segmentId,
-        );
-        if (!alreadyInSegment) {
-          const added = await resend.contacts.segments.add({
-            email: validatedData.email,
-            segmentId,
-          });
-          if (added.error) {
-            return res.status(502).json({ message: "Could not add email to the mailing list" });
-          }
-        }
-      }
+    try {
+      const validatedData = insertSubscriberSchema.parse(req.body);
+      await subscribeToMailerLite(validatedData.email);
+      await sendRescueGuideEmail(validatedData.email);
 
       const subscriber = await storage.createSubscriber(validatedData);
       res.status(201).json(subscriber);
     } catch (error) {
-      if (error instanceof Error) {
-        res.status(400).json({ message: error.message });
-      } else {
-        res.status(500).json({ message: "Failed to subscribe to newsletter" });
+      if (error instanceof ZodError) {
+        return res.status(400).json({ message: "Please enter a valid email address" });
       }
+
+      console.error("Failed to deliver rescue guide:", error);
+      res.status(502).json({ message: "Could not deliver the guide email" });
     }
   });
 

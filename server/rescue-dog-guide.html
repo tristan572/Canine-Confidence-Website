@@ -620,13 +620,14 @@
  btn.disabled = true;
 
  try {
- const response = await fetch('/api/subscribers', {
+ const response = await fetch('/api/rescue-guide-signups', {
  method: 'POST',
  headers: { 'Content-Type': 'application/json' },
  body: JSON.stringify({ email })
  });
  if (!response.ok) throw new Error('Signup failed');
 
+ window.history.replaceState({}, '', '/rescuedogguide?access=1');
  unlockContent();
  if (typeof gtag === 'function') {
    gtag('event', 'generate_lead', { lead_type: 'rescue_dog_guide' });
@@ -642,6 +643,10 @@
    privacy.textContent = 'That did not go through. Please check your email and try again.';
  }
  });
+
+ if (new URLSearchParams(window.location.search).get('access') === '1') {
+ unlockContent();
+ }
 </script>
 
 </body>
