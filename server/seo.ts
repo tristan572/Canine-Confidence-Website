@@ -106,6 +106,18 @@ const STATIC_META: Record<string, PageMeta> = {
       "Professional dog training in Northgate, Nundah & Kalinga. Walk & Train at Kalinga Park, 1-on-1 coaching sessions. Expert leash reactivity rehabilitation and loose-leash training.",
     canonicalPath: "/dog-training-northgate",
   },
+  "/dog-training-aspley": {
+    title: "Dog Training Aspley | Canine Confidence",
+    description:
+      "Personalised dog training in Aspley, Carseldine and Bridgeman Downs. In-home coaching and local training around Marchant Park and everyday distractions.",
+    canonicalPath: "/dog-training-aspley",
+  },
+  "/dog-training-ascot": {
+    title: "Dog Training Ascot | Canine Confidence",
+    description:
+      "Personalised dog training in Ascot, Hamilton and Hendra. In-home coaching and local training for calm walks, cafe manners and everyday city distractions.",
+    canonicalPath: "/dog-training-ascot",
+  },
   "/local-resources": {
     title: "Local Dog-Friendly Resources in North Brisbane | Canine Confidence",
     description:
@@ -161,6 +173,8 @@ const LOCAL_BUSINESS_SCHEMA = {
     { "@type": "AdministrativeArea", name: "Sandgate and Shorncliffe" },
     { "@type": "AdministrativeArea", name: "Northgate" },
     { "@type": "AdministrativeArea", name: "Chermside" },
+    { "@type": "AdministrativeArea", name: "Aspley" },
+    { "@type": "AdministrativeArea", name: "Ascot" },
   ],
   priceRange: "$45 - $1050",
   image: `${SITE_URL}/attached_assets/DSC_0096_1758792971820.webp`,
@@ -193,6 +207,8 @@ const STATIC_SITEMAP_ENTRIES: SitemapEntry[] = [
   { path: "/dog-training-chermside", changefreq: "monthly", priority: "0.7" },
   { path: "/dog-training-sandgate", changefreq: "monthly", priority: "0.7" },
   { path: "/dog-training-northgate", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-aspley", changefreq: "monthly", priority: "0.7" },
+  { path: "/dog-training-ascot", changefreq: "monthly", priority: "0.7" },
   { path: "/local-resources", changefreq: "monthly", priority: "0.6" },
   { path: "/privacy", changefreq: "yearly", priority: "0.2" },
   { path: "/terms", changefreq: "yearly", priority: "0.2" },
@@ -274,6 +290,20 @@ const INITIAL_PAGE_CONTENT: Record<string, { h1: string; body: string[] }> = {
   "/dog-training-chermside": { h1: "Chermside Dog Training", body: ["Canine Confidence provides dog training services in Chermside, Kedron and Stafford Heights from its Boondall base."] },
   "/dog-training-sandgate": { h1: "Sandgate, Shorncliffe & Brighton Dog Training", body: ["Canine Confidence provides dog training services across Sandgate, Shorncliffe and Brighton from its Boondall base."] },
   "/dog-training-northgate": { h1: "Northgate & Nundah Dog Training", body: ["Canine Confidence provides dog training services across Northgate, Nundah and Kalinga from its Boondall base."] },
+  "/dog-training-aspley": {
+    h1: "Dog Training in Aspley",
+    body: [
+      "Personalised in-home and local dog training across Aspley, Carseldine and Bridgeman Downs.",
+      "Training can cover puppy development, behaviour and obedience, walking skills and practical work around suitable local environments including Marchant Park.",
+    ],
+  },
+  "/dog-training-ascot": {
+    h1: "Dog Training in Ascot",
+    body: [
+      "Personalised in-home and local dog training across Ascot, Hamilton and Hendra.",
+      "Training can cover puppy development, behaviour and obedience, cafe manners, walking skills and practical work around suitable local environments including the Racecourse Road precinct.",
+    ],
+  },
   "/local-resources": { h1: "Local dog-friendly resources in North Brisbane", body: ["A practical collection of local dog-friendly resources recommended by Canine Confidence."] },
   "/privacy": { h1: "Privacy Policy", body: ["How Canine Confidence collects, uses and protects personal information."] },
   "/terms": { h1: "Terms & Conditions", body: ["Terms and conditions for Canine Confidence dog training services."] },
