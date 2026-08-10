@@ -26,7 +26,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$320",
     value: "$365 value",
     saving: "Save $45",
-    expiry: "Sessions to be completed in one week",
+    expiry: "Designed to run over one week",
     composition: "4 In-Home Day Trains + 1 One-on-One Private Coaching session",
     summary:
       "Focused training brought to your doorstep. I build the foundations with your dog in their familiar home, then coach you to carry those skills forward.",
@@ -44,7 +44,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$350",
     value: "$405 value",
     saving: "Save $55",
-    expiry: "Sessions to be completed in one week",
+    expiry: "Designed to run over one week",
     composition: "4 Walk and Trains + 1 One-on-One Private Coaching session",
     summary:
       "Stop the struggle and start enjoying your walks. I build focus, connection and clear communication around the distractions that usually make everything fall apart.",
@@ -62,7 +62,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$1,050",
     value: "$1,135 value",
     saving: "Save $85",
-    expiry: "Sessions to be completed in three weeks",
+    expiry: "Designed to run over three weeks",
     composition:
       "4 In-Home Day Trains + 8 Walk and Trains + 3 One-on-One Private Coaching sessions",
     summary:
