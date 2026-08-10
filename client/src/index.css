@@ -122,6 +122,10 @@
     color: hsl(219 14% 25%);
   }
 
+  .bg-charcoal {
+    background-color: hsl(219 14% 25%);
+  }
+
   .text-medium-grey {
     color: hsl(215 14% 42%);
   }
