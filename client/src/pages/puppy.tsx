@@ -5,7 +5,19 @@ import { StaticSEO } from "@/components/SEO";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { openBookingUrl } from "@/lib/analytics";
 import puppyImage from "@assets/image_1750048904991_opt.webp";
-import { Calendar } from "lucide-react";
+import { Calendar, Quote, Star } from "lucide-react";
+
+const puppyReviews = [
+  {
+    name: "Emma Canny",
+    quote:
+      "Tristan was recommended so we booked him to help us with our puppy. The training really paid off and our puppy loved him. Would highly recommend.",
+  },
+  {
+    name: "Sheela",
+    quote: "Tristan has been amazing to work with.",
+  },
+];
 
 export default function PuppyPage() {
   const bookNow = () =>
@@ -62,6 +74,52 @@ export default function PuppyPage() {
             I want your puppy to grow into a confident, connected dog who
             understands how to live in your world.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <div className="mb-3 flex justify-center gap-1" aria-label="Five stars">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Star key={index} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <p className="mb-2 text-sm font-bold uppercase tracking-[0.16em] text-primary-blue">
+              Google reviews
+            </p>
+            <h2 className="text-3xl font-bold text-charcoal">
+              Puppy owners, not stock testimonials
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {puppyReviews.map((review) => (
+              <figure
+                key={review.name}
+                className="rounded-2xl border border-primary-blue/10 bg-white p-7 shadow-sm"
+              >
+                <Quote className="mb-4 h-9 w-9 text-primary-blue/20" aria-hidden="true" />
+                <blockquote className="text-lg leading-relaxed text-charcoal">
+                  “{review.quote}”
+                </blockquote>
+                <figcaption className="mt-5 font-semibold text-primary-blue">
+                  {review.name}, Google review
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="https://share.google/NJfyc690NWAMVb3LX"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-primary-blue hover:underline"
+            >
+              Read all 25 Google reviews
+            </a>
+          </div>
         </div>
       </section>
 
