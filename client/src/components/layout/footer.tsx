@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import ConsultationForm from "@/components/forms/consultation-form";
-import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
+import logoImage from "@assets/canine_confidence_logo_320_opt.webp";
 import { serviceAreas } from "@/config/locations";
 
 export default function Footer() {

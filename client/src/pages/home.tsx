@@ -14,16 +14,20 @@ import heroJpeg from "@assets/IMG_0177_fallback_opt.jpg";
 import hero400 from "@assets/IMG_0177_hero_400_opt.webp";
 import hero800 from "@assets/IMG_0177_hero_800_opt.webp";
 import hero1200 from "@assets/IMG_0177_hero_1200_opt.webp";
-import puppyCardImage from "@assets/image_1750048904991_opt.webp";
-import behaviourCardImage from "@assets/IMG_0237_1760870095911.jpeg";
-import walkingCardImage from "@assets/IMG_0084_1758974180047.jpeg";
+import puppyCard400 from "@assets/image_1750048904991_card_400_opt.webp";
+import puppyCard800 from "@assets/image_1750048904991_opt.webp";
+import behaviourCard400 from "@assets/IMG_0237_card_400_opt.webp";
+import behaviourCard800 from "@assets/IMG_0237_card_800_opt.webp";
+import walkingCard400 from "@assets/IMG_0084_card_400_opt.webp";
+import walkingCard800 from "@assets/IMG_0084_card_800_opt.webp";
 
 const doors = [
   {
     href: "/behaviour-obedience",
     title: "Behaviour & Obedience",
     kicker: "Training for real life",
-    image: behaviourCardImage,
+    image: behaviourCard800,
+    imageSrcSet: `${behaviourCard400} 400w, ${behaviourCard800} 800w`,
     imagePosition: "object-[center_75%]",
     text: "From bad manners, to obedience, reactivity and anxiety, I look beyond the visible symptom behaviours and build skills that make daily life easier.",
     note: "New clients start with an assessment.",
@@ -32,7 +36,8 @@ const doors = [
     href: "/puppy",
     title: "Puppy",
     kicker: "Start them right",
-    image: puppyCardImage,
+    image: puppyCard800,
+    imageSrcSet: `${puppyCard400} 400w, ${puppyCard800} 800w`,
     imagePosition: "object-center",
     text: "Stop worrying about toilet training, biting and whether you are getting socialisation right. Build confidence, connection and clear communication from the start.",
     note: "Direct booking. No assessment required.",
@@ -41,7 +46,8 @@ const doors = [
     href: "/walking-adventure",
     title: "Walking & Adventure",
     kicker: "More than exercise",
-    image: walkingCardImage,
+    image: walkingCard800,
+    imageSrcSet: `${walkingCard400} 400w, ${walkingCard800} 800w`,
     imagePosition: "object-center",
     text: "Purposeful adventures, exercise and enrichment that leave your dog fulfilled, content and ready to settle at home.",
     note: "New clients start with an assessment.",
@@ -137,12 +143,14 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-3">
-            {doors.map(({ href, title, kicker, image, imagePosition, text, note }) => (
+            {doors.map(({ href, title, kicker, image, imageSrcSet, imagePosition, text, note }) => (
               <Link key={href} href={href} className="group block h-full">
-                <Card className="h-full overflow-hidden border-0 bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <Card className="flex h-full flex-col overflow-hidden border-0 bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
                   <div className="relative aspect-[4/3] overflow-hidden bg-charcoal">
                     <img
                       src={image}
+                      srcSet={imageSrcSet}
+                      sizes="(max-width: 1024px) 100vw, 400px"
                       alt=""
                       className={`h-full w-full object-cover ${imagePosition} transition duration-500 group-hover:scale-105`}
                       loading="lazy"
@@ -152,11 +160,13 @@ export default function HomePage() {
                       {kicker}
                     </p>
                   </div>
-                  <CardContent className="p-8">
+                  {/* flex-col + mt-auto so the link sits on the same baseline in
+                      all three cards regardless of body-copy length. */}
+                  <CardContent className="flex flex-1 flex-col p-8">
                     <h3 className="mb-3 text-2xl font-bold text-charcoal">{title}</h3>
                     <p className="mb-5 leading-relaxed text-medium-grey">{text}</p>
                     <p className="mb-6 text-sm font-semibold text-charcoal">{note}</p>
-                    <span className="font-bold text-primary-blue transition group-hover:tracking-wide">
+                    <span className="mt-auto font-bold text-primary-blue transition group-hover:tracking-wide">
                       See your options →
                     </span>
                   </CardContent>

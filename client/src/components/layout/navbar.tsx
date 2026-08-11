@@ -3,7 +3,9 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Calendar, Menu } from "lucide-react";
-import logoImage from "@assets/canine_confidence_logo_clean_1758887288824.png";
+// 320px-wide WebP (30 KB) instead of the 868px PNG (267 KB) — the logo never
+// renders wider than ~105 CSS px, and this loads eagerly on every page.
+import logoImage from "@assets/canine_confidence_logo_320_opt.webp";
 import { ASSESSMENT_URL } from "@/lib/funnel";
 import { openBookingUrl } from "@/lib/analytics";
 
@@ -36,8 +38,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center py-3">
           {/* Mobile Layout */}
-          <div className="lg:hidden flex items-center justify-between w-full">
-            <Link href="/" className="flex items-center group" aria-label="Canine Confidence home" data-testid="link-brand">
+          <div className="lg:hidden flex items-center gap-3 w-full">
+            <Link href="/" className="flex items-center shrink-0 group" aria-label="Canine Confidence home" data-testid="link-brand">
               <img
                 src={logoImage}
                 alt="Canine Confidence logo"
@@ -50,12 +52,12 @@ export default function Navbar() {
               />
             </Link>
             
-            <div className="absolute left-1/2 transform -translate-x-1/2">
-              <span className="text-base font-semibold text-charcoal whitespace-nowrap">
-                Brisbane Dog Training
-              </span>
-            </div>
-            
+            {/* Flows in the row rather than absolutely centred: at 360px and
+                below the centred version overlapped the logo. */}
+            <span className="hidden min-w-0 flex-1 truncate text-center text-sm font-semibold text-charcoal min-[360px]:block sm:text-base">
+              Brisbane Dog Training
+            </span>
+
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Open menu">

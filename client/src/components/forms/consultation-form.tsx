@@ -59,8 +59,10 @@ export default function ConsultationForm() {
     consultationMutation.mutate({ ...data, website: honeypot });
   };
 
+  // w-full matters: inside DialogContent (display:grid) this div shrink-wraps to
+  // its content without it, squeezing every field to ~195px.
   return (
-    <div className="max-w-md mx-auto">
+    <div className="w-full max-w-md mx-auto">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <input

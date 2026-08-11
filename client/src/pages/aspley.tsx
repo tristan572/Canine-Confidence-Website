@@ -1,5 +1,5 @@
 import LocalTrainingPage from "@/components/locations/local-training-page";
-import aspleyImage from "@assets/IMG_0237_1760870095911.jpeg";
+import aspleyImage from "@assets/IMG_0237_card_800_opt.webp";
 
 export default function AspleyPage() {
   return (
