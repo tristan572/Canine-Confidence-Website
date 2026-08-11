@@ -6,9 +6,7 @@ export default function AspleyPage() {
     <LocalTrainingPage
       suburb="Aspley"
       nearbyAreas="Aspley, Carseldine and Bridgeman Downs"
-      title="Dog Training Aspley | Canine Confidence"
-      description="Personalised dog training in Aspley, Carseldine and Bridgeman Downs. In-home coaching and local training around Marchant Park and everyday distractions."
-      canonical="https://www.canineconfidence.com.au/dog-training-aspley"
+      seoPath="/dog-training-aspley"
       eyebrow="Aspley, Carseldine & Bridgeman Downs"
       heroHeading="Dog Training in Aspley"
       heroSubheading="Practical training for the places your dog actually lives."

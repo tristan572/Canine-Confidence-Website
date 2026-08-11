@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import methodImage from "@assets/IMG_0076_1758798863394_opt.webp";
 
@@ -32,11 +32,7 @@ const principles = [
 export default function MethodPage() {
   return (
     <div className="min-h-screen">
-      <SEO
-        title="My Dog Training Method | Canine Confidence"
-        description="How Canine Confidence combines clear communication, play, genetic fulfilment and real-world practice to create lasting dog training results."
-        canonical="https://www.canineconfidence.com.au/method"
-      />
+      <StaticSEO path="/method" />
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>

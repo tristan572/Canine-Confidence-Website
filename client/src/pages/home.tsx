@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import BlogCard from "@/components/ui/blog-card";
 import {
@@ -65,11 +65,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Dog Training North Brisbane | Canine Confidence"
-        description="Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity and practical coaching. Free 15-min consult."
-        canonical="https://www.canineconfidence.com.au/"
-      />
+      <StaticSEO path="/" />
 
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

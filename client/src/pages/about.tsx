@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { Award, Heart, Users, Target, CheckCircle, Phone, MapPin, Clock, Glasses, Search, FileText, HeartHandshake, Calendar } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import aboutHeroImageWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
@@ -17,10 +17,8 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="About Tristan Pearson | Canine Confidence Dog Training"
-        description="Meet Tristan, North Brisbane's NDTF certified dog trainer. From redundancy in 2020 to certification in 2022, discover the story behind Canine Confidence's unique play-based training approach."
-        canonical="https://www.canineconfidence.com.au/about"
+      <StaticSEO
+        path="/about"
         keywords={[
           'NDTF certified dog trainer',
           'North Brisbane dog trainer',

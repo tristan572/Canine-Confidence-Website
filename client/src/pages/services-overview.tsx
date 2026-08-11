@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 
 const paths = [
   { href: "/puppy", title: "Puppy", text: "Start your puppy with private in-home coaching and the Confident Start Program." },
@@ -10,11 +10,7 @@ const paths = [
 export default function ServicesOverviewPage() {
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Dog Training Services North Brisbane | Canine Confidence"
-        description="Explore puppy training, behaviour and obedience support, plus walking and adventure services from Canine Confidence in North Brisbane."
-        canonical="/services"
-      />
+      <StaticSEO path="/services" />
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">Canine Confidence services</p>

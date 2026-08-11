@@ -1,16 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { Phone, Mail, HelpCircle } from "lucide-react";
 import { Link } from "wouter";
 
 export default function FAQPage() {
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Frequently Asked Questions | Canine Confidence Dog Training Brisbane"
-        description="Honest answers to the questions most people have before booking a dog training session with Canine Confidence in North Brisbane."
-        canonical="https://www.canineconfidence.com.au/faq"
+      <StaticSEO
+        path="/faq"
         keywords={[
           'dog training FAQ Brisbane',
           'dog trainer questions',

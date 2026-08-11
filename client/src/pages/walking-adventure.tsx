@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { ProgramCard } from "@/components/funnel/program-card";
 import {
   AssessmentButton,
@@ -10,11 +10,7 @@ import walkingImage from "@assets/IMG_0084_1758974180047.jpeg";
 export default function WalkingAdventurePage() {
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Dog Walking and Adventure Training North Brisbane"
-        description="Turn stressful walks into calm, connected time together with trainer-led walks, adventure outings and real-world skill building in North Brisbane."
-        canonical="https://www.canineconfidence.com.au/walking-adventure"
-      />
+      <StaticSEO path="/walking-adventure" />
 
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

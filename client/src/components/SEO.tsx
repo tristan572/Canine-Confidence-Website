@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { STATIC_META } from "@shared/seo-meta";
 
 interface SEOProps {
   title: string;
@@ -52,4 +53,25 @@ export function SEO({
   }, [canonicalUrl, description, title]);
 
   return null;
+}
+
+type StaticSEOProps = Omit<SEOProps, "title" | "description" | "canonical"> & {
+  path: string;
+};
+
+export function StaticSEO({ path, ...props }: StaticSEOProps) {
+  const meta = STATIC_META[path];
+
+  if (!meta) {
+    throw new Error(`No static SEO metadata configured for ${path}`);
+  }
+
+  return (
+    <SEO
+      {...props}
+      title={meta.title}
+      description={meta.description}
+      canonical={`https://www.canineconfidence.com.au${meta.canonicalPath}`}
+    />
+  );
 }

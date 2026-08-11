@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight, Calendar, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { ProgramCard } from "@/components/funnel/program-card";
 import {
   AssessmentButton,
@@ -14,11 +14,7 @@ import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 export default function BehaviourObediencePage() {
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Dog Behaviour and Obedience North Brisbane | Canine Confidence"
-        description="Personalised North Brisbane dog training for manners, over-excitement, anxiety and reactivity, built around lasting real-world change."
-        canonical="https://www.canineconfidence.com.au/behaviour-obedience"
-      />
+      <StaticSEO path="/behaviour-obedience" />
 
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, ExternalLink, Heart, Stethoscope, ShoppingBag, TreePine } from "lucide-react";
@@ -118,10 +118,8 @@ export default function LocalResourcesPage() {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Local Dog-Friendly Resources in North Brisbane"
-        description="Trusted local vets, pet shops, groomers, and dog-friendly parks recommended by Canine Confidence. Building a strong North Brisbane dog community."
-        canonical="https://www.canineconfidence.com.au/local-resources"
+      <StaticSEO
+        path="/local-resources"
         keywords={[
           "dog friendly Brisbane",
           "local vets North Brisbane",

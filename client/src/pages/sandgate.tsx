@@ -2,14 +2,23 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart } from "lucide-react";
 import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { openBookingUrl } from "@/lib/analytics";
+import { usePricing } from "@/hooks/use-pricing";
 
 export default function SandgatePage() {
+  const pricing = usePricing();
+  const assessmentPrice = pricing.servicePrice("Initial Canine Success Assessment");
+  const adventurePrice = pricing.servicePrice("Adventure Walk and Training");
+  const adventurePackPrice = pricing.packagePrice("The Adventure Pack");
+  const adventurePackPerSession = pricing.packagePerSession("The Adventure Pack");
+  const adventurePackSaving = pricing.packageSaving("The Adventure Pack");
+  const confidentStartPrice = pricing.packagePrice("The Confident Start Program");
+  const confidentStartSessions = pricing.packageSessions("The Confident Start Program");
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showAdventureDialog, setShowAdventureDialog] = useState(false);
   const [showAdventurePackageDialog, setShowAdventurePackageDialog] = useState(false);
@@ -47,10 +56,8 @@ export default function SandgatePage() {
 
   return (
     <div className="min-h-screen">
-      <SEO 
-                title="Dog Training Sandgate & Shorncliffe | Canine Confidence"
-                description="Dog training in Sandgate, Shorncliffe & Brighton — foreshore recall, cafe manners, and loose-leash walking. Local trainer, real results on the Northside."
-        canonical="https://www.canineconfidence.com.au/dog-training-sandgate"
+      <StaticSEO
+        path="/dog-training-sandgate"
         ogImage="/attached_assets/IMG_0358_1762512636150.webp"
         keywords={[
           'dog training Sandgate',
@@ -197,7 +204,7 @@ export default function SandgatePage() {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
                       <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
-                      <div className="text-2xl font-bold text-primary-blue">$90</div>
+                      <div className="text-2xl font-bold text-primary-blue">{adventurePrice}</div>
                     </div>
 
                     <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
@@ -207,11 +214,11 @@ export default function SandgatePage() {
                           <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$425</div>
-                          <p className="text-sm text-primary-blue">$85 per session</p>
+                          <div className="text-2xl font-bold text-primary-blue">{adventurePackPrice}</div>
+                          <p className="text-sm text-primary-blue">{adventurePackPerSession} per session</p>
                         </div>
                       </div>
-                      <p className="text-primary-blue font-semibold text-center">Save $25 across the package.</p>
+                      <p className="text-primary-blue font-semibold text-center">Save {adventurePackSaving} across the package.</p>
                     </div>
                   </div>
 
@@ -333,7 +340,7 @@ export default function SandgatePage() {
                       6 private, one-hour, in-home sessions.
                     </p>
                     <div className="flex items-center justify-center gap-3">
-                      <span className="text-4xl font-bold text-primary-blue">$549</span>
+                      <span className="text-4xl font-bold text-primary-blue">{confidentStartPrice}</span>
                     </div>
                     <p className="text-primary-blue font-semibold mt-2">Six private in-home puppy sessions.</p>
                   </div>
@@ -394,7 +401,7 @@ export default function SandgatePage() {
                 <p className="text-medium-grey mb-6 flex-1">
                   I start with an Initial Canine Success Assessment. One 60-minute session to assess your dog, identify what's driving the behaviour, and build a tailored plan before we begin.
                 </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">$99</div>
+                <div className="text-3xl font-bold text-primary-blue mb-6">{assessmentPrice}</div>
                 <Button
                   onClick={() => setShowAssessmentDialog(true)}
                   className="btn-primary w-full"
@@ -411,7 +418,9 @@ export default function SandgatePage() {
                 <p className="text-medium-grey mb-6 flex-1">
                   The Confident Start Program needs no prior assessment. Book directly and we get started.
                 </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">$549 for 6 sessions</div>
+                <div className="text-3xl font-bold text-primary-blue mb-6">
+                  {confidentStartPrice} for {confidentStartSessions ?? "…"} sessions
+                </div>
                 <Button
                   onClick={() => setShowConfidentStartDialog(true)}
                   className="btn-primary w-full"
@@ -485,7 +494,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll be redirected to book the $99 Initial Canine Success Assessment.
+            You'll be redirected to book the {assessmentPrice} Initial Canine Success Assessment.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -518,7 +527,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            New clients start with the $99 Initial Canine Success Assessment before booking Adventure Walk and Training.
+            New clients start with the {assessmentPrice} Initial Canine Success Assessment before booking Adventure Walk and Training.
           </DialogDescription>
 
           <div className="space-y-4">
@@ -549,7 +558,7 @@ export default function SandgatePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            New clients start with the $99 Initial Canine Success Assessment before booking The Adventure Pack.
+            New clients start with the {assessmentPrice} Initial Canine Success Assessment before booking The Adventure Pack.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -576,7 +585,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll be redirected to The Confident Start Program, which includes six sessions for $549. No assessment is required.
+            You'll be redirected to The Confident Start Program, which includes {confidentStartSessions ?? "…"} sessions for {confidentStartPrice}. No assessment is required.
           </DialogDescription>
           
           <div className="space-y-4">
@@ -609,7 +618,7 @@ export default function SandgatePage() {
             Secure Booking System
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-6">
-            You'll be redirected to book the $99 Initial Canine Success Assessment.
+            You'll be redirected to book the {assessmentPrice} Initial Canine Success Assessment.
           </DialogDescription>
           
           <div className="space-y-4">

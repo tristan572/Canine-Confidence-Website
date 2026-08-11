@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import {
   Phone, 
   Mail, 
@@ -24,10 +24,8 @@ import { openBookingUrl } from "@/lib/analytics";
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
-      <SEO 
-                title="Contact Canine Confidence | North Brisbane Dog Trainer"
-                description="Got a dog that pulls, jumps, or won't come back? Let's talk. Book a free 15-minute consult with Canine Confidence. Your local North Brisbane dog trainer."
-        canonical="https://www.canineconfidence.com.au/contact"
+      <StaticSEO
+        path="/contact"
         keywords={[
           'dog trainer contact Brisbane',
           'book dog training Brisbane',

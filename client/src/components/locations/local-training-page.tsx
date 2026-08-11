@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 
 export interface LocalHighlight {
@@ -17,9 +17,7 @@ export interface LocalFaq {
 export interface LocalTrainingPageProps {
   suburb: string;
   nearbyAreas: string;
-  title: string;
-  description: string;
-  canonical: string;
+  seoPath: string;
   eyebrow: string;
   heroHeading: string;
   heroSubheading: string;
@@ -60,9 +58,7 @@ const servicePaths = [
 export default function LocalTrainingPage({
   suburb,
   nearbyAreas,
-  title,
-  description,
-  canonical,
+  seoPath,
   eyebrow,
   heroHeading,
   heroSubheading,
@@ -80,7 +76,7 @@ export default function LocalTrainingPage({
 }: LocalTrainingPageProps) {
   return (
     <div className="min-h-screen">
-      <SEO title={title} description={description} canonical={canonical} />
+      <StaticSEO path={seoPath} />
 
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

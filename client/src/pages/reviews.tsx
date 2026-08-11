@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Star } from "lucide-react";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import type { Testimonial } from "@shared/schema";
@@ -12,11 +12,7 @@ export default function ReviewsPage() {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Dog Training Reviews North Brisbane | Canine Confidence"
-        description="Read what North Brisbane dog owners say about working with Canine Confidence and see verified five-star review sources."
-        canonical="https://www.canineconfidence.com.au/reviews"
-      />
+      <StaticSEO path="/reviews" />
       <section className="hero-gradient py-16 text-center lg:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <div className="mb-4 flex justify-center gap-1" aria-label="Five stars">

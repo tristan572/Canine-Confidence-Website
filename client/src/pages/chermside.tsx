@@ -2,15 +2,26 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { MapPin, Phone, Check, ShieldCheck, Award, Users, Footprints } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
 import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
 import { openBookingUrl } from "@/lib/analytics";
+import { usePricing } from "@/hooks/use-pricing";
 
 export default function ChermsidePage() {
+  const pricing = usePricing();
+  const assessmentPrice = pricing.servicePrice("Initial Canine Success Assessment");
+  const walkTrainPrice = pricing.servicePrice("Walk and Train");
+  const coachingPrice = pricing.servicePrice("One-on-One Private Coaching");
+  const reliabilityPrice = pricing.packagePrice("The Real World Reliability Package");
+  const reliabilityPerSession = pricing.packagePerSession("The Real World Reliability Package");
+  const reliabilitySaving = pricing.packageSaving("The Real World Reliability Package");
+  const focusedProgressPrice = pricing.packagePrice("The Focused Progress Plan");
+  const focusedProgressPerSession = pricing.packagePerSession("The Focused Progress Plan");
+  const focusedProgressSaving = pricing.packageSaving("The Focused Progress Plan");
   const [showAssessmentDialog, setShowAssessmentDialog] = useState(false);
   const [showWalkTrainDialog, setShowWalkTrainDialog] = useState(false);
   const [showWalkTrainPackageDialog, setShowWalkTrainPackageDialog] = useState(false);
@@ -54,10 +65,8 @@ export default function ChermsidePage() {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Chermside Dog Training"
-        description="Professional dog training in Chermside, Kedron & Stafford Heights. Urban dog training for apartment living, elevator etiquette, and real-world proofing at 7th Brigade Park."
-        canonical="https://www.canineconfidence.com.au/dog-training-chermside"
+      <StaticSEO
+        path="/dog-training-chermside"
         keywords={[
           'dog training Chermside',
           'dog trainer Kedron',
@@ -214,7 +223,7 @@ export default function ChermsidePage() {
                       <div>
                         <p className="font-semibold text-charcoal">Single 40-Minute Session</p>
                       </div>
-                      <div className="text-2xl font-bold text-primary-blue">$70</div>
+                      <div className="text-2xl font-bold text-primary-blue">{walkTrainPrice}</div>
                     </div>
 
                     <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
@@ -224,11 +233,11 @@ export default function ChermsidePage() {
                           <p className="text-sm text-medium-grey">5 Sessions</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-primary-blue">$325</div>
-                          <p className="text-sm text-primary-blue">$65 per session</p>
+                          <div className="text-2xl font-bold text-primary-blue">{reliabilityPrice}</div>
+                          <p className="text-sm text-primary-blue">{reliabilityPerSession} per session</p>
                         </div>
                       </div>
-                      <p className="text-primary-blue font-semibold text-center">Save $25 across the package.</p>
+                      <p className="text-primary-blue font-semibold text-center">Save {reliabilitySaving} across the package.</p>
                     </div>
                   </div>
 
@@ -333,7 +342,7 @@ export default function ChermsidePage() {
                         <div>
                           <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
                         </div>
-                        <div className="text-2xl font-bold text-primary-blue">$125</div>
+                        <div className="text-2xl font-bold text-primary-blue">{coachingPrice}</div>
                       </div>
 
                       <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
@@ -343,11 +352,11 @@ export default function ChermsidePage() {
                             <p className="text-sm text-medium-grey">5 Sessions</p>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-primary-blue">$550</div>
-                            <p className="text-sm text-primary-blue">$110 per session</p>
+                            <div className="text-2xl font-bold text-primary-blue">{focusedProgressPrice}</div>
+                            <p className="text-sm text-primary-blue">{focusedProgressPerSession} per session</p>
                           </div>
                         </div>
-                        <p className="text-primary-blue font-semibold text-center">Save $75 across the package.</p>
+                        <p className="text-primary-blue font-semibold text-center">Save {focusedProgressSaving} across the package.</p>
                       </div>
                     </div>
                   </div>
@@ -453,7 +462,7 @@ export default function ChermsidePage() {
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
                     <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
-                    <div className="text-4xl font-bold text-primary-blue">$99</div>
+                    <div className="text-4xl font-bold text-primary-blue">{assessmentPrice}</div>
                     <p className="text-medium-grey mt-2">60 minutes · One-off session</p>
                   </div>
 
@@ -535,7 +544,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ($99).
+            You'll be redirected to my secure booking system to schedule your Initial Canine Success Assessment ({assessmentPrice}).
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -585,7 +594,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            New clients start with the $99 Initial Canine Success Assessment before booking private coaching.
+            New clients start with the {assessmentPrice} Initial Canine Success Assessment before booking private coaching.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -610,7 +619,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            You'll be redirected to book the $99 Initial Canine Success Assessment.
+            You'll be redirected to book the {assessmentPrice} Initial Canine Success Assessment.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -635,7 +644,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            New clients start with the $99 Initial Canine Success Assessment before booking The Real World Reliability Package.
+            New clients start with the {assessmentPrice} Initial Canine Success Assessment before booking The Real World Reliability Package.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button
@@ -660,7 +669,7 @@ export default function ChermsidePage() {
         <DialogContent className="max-w-md">
           <DialogTitle>Continue to Secure Booking</DialogTitle>
           <DialogDescription>
-            New clients start with the $99 Initial Canine Success Assessment before booking The Focused Progress Plan.
+            New clients start with the {assessmentPrice} Initial Canine Success Assessment before booking The Focused Progress Plan.
           </DialogDescription>
           <div className="flex gap-3 justify-end mt-4">
             <Button

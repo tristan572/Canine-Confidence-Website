@@ -9,7 +9,7 @@ import BlogCard from "@/components/ui/blog-card";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import type { BlogPost } from "@shared/schema";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -86,10 +86,8 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen">
-      <SEO 
-                title="Dog Training Tips & Advice | Canine Confidence"
-        description="Expert dog training tips, guides, and insights from Canine Confidence. Learn to understand your dog better and build a stronger relationship through play-based training methods."
-        canonical="https://www.canineconfidence.com.au/blog"
+      <StaticSEO
+        path="/blog"
         keywords={[
           'dog training tips',
           'dog training advice Brisbane',

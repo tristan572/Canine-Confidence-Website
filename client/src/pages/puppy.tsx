@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ProgramCard } from "@/components/funnel/program-card";
 import { ConsultationButton } from "@/components/funnel/funnel-cta";
-import { SEO } from "@/components/SEO";
+import { StaticSEO } from "@/components/SEO";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { openBookingUrl } from "@/lib/analytics";
 import puppyImage from "@assets/image_1750048904991_opt.webp";
@@ -13,11 +13,7 @@ export default function PuppyPage() {
 
   return (
     <div className="min-h-screen">
-      <SEO
-        title="Puppy Training North Brisbane | The Confident Start Program"
-        description="Build confidence, connection and clear communication during your puppy's critical learning period with six private in-home sessions."
-        canonical="https://www.canineconfidence.com.au/puppy"
-      />
+      <StaticSEO path="/puppy" />
 
       <section className="hero-gradient py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">

@@ -6,9 +6,7 @@ export default function AscotPage() {
     <LocalTrainingPage
       suburb="Ascot"
       nearbyAreas="Ascot, Hamilton and Hendra"
-      title="Dog Training Ascot | Canine Confidence"
-      description="Personalised dog training in Ascot, Hamilton and Hendra. In-home coaching and local training for calm walks, cafe manners and everyday city distractions."
-      canonical="https://www.canineconfidence.com.au/dog-training-ascot"
+      seoPath="/dog-training-ascot"
       eyebrow="Ascot, Hamilton & Hendra"
       heroHeading="Dog Training in Ascot"
       heroSubheading="Training built for a busy inner-north lifestyle."
