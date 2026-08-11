@@ -14,8 +14,9 @@ const puppyReviews = [
       "Tristan was recommended so we booked him to help us with our puppy. The training really paid off and our puppy loved him. Would highly recommend.",
   },
   {
-    name: "Sheela",
-    quote: "Tristan has been amazing to work with.",
+    name: "Stephanie Doyle",
+    quote:
+      "Half way through the puppy program with Tristan and were very happy with the results for our staffy pup Molly. Being new dog parents to a very high energy pup, we knew we needed a professional trainer who could give us all the best possible tools to ensure Molly would live a happy, stress and anxiety-free life. Implementing the basics at this age has given us the confidence in this journey and seeing her learn simple commands, looking at us for direction and simply exploring all the new things in the world with ease has been so rewarding. Tristan is flexible to move the sessions outside to the real world if theres an area your struggling with and is happy to spend more time on certain things if needed. Highly recommend!!",
   },
 ];
 
@@ -77,6 +78,37 @@ export default function PuppyPage() {
         </div>
       </section>
 
+      <section className="bg-white py-16">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:px-8">
+          <div>
+            <h2 className="mb-5 text-3xl font-bold text-charcoal">
+              In-home coaching, where it matters
+            </h2>
+            <p className="mb-5 text-lg leading-relaxed text-medium-grey">
+              A puppy can look perfect in a class while home still feels chaotic.
+              By coming to you, I can see the setup, routines and small moments
+              behind toilet accidents, barking, chewing your possessions and
+              struggling to settle.
+            </p>
+            <p className="text-lg leading-relaxed text-medium-grey">
+              I show you what to change in the environment, how to communicate
+              clearly and how to use play to build trust and cooperation. You are
+              not left trying to translate generic advice back into real life.
+            </p>
+          </div>
+          <ProgramCard
+            program={confidentStart}
+            location="Puppy"
+            directAction={
+              <Button onClick={bookNow} className="btn-primary w-full">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book Now
+              </Button>
+            }
+          />
+        </div>
+      </section>
+
       <section className="bg-gray-50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
@@ -89,7 +121,7 @@ export default function PuppyPage() {
               Google reviews
             </p>
             <h2 className="text-3xl font-bold text-charcoal">
-              Puppy owners, not stock testimonials
+              What puppy owners say after working with me
             </h2>
           </div>
 
@@ -120,37 +152,6 @@ export default function PuppyPage() {
               Read all 25 Google reviews
             </a>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-16">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:px-8">
-          <div>
-            <h2 className="mb-5 text-3xl font-bold text-charcoal">
-              In-home coaching, where it matters
-            </h2>
-            <p className="mb-5 text-lg leading-relaxed text-medium-grey">
-              A puppy can look perfect in a class while home still feels chaotic.
-              By coming to you, I can see the setup, routines and small moments
-              behind toilet accidents, barking, chewing your possessions and
-              struggling to settle.
-            </p>
-            <p className="text-lg leading-relaxed text-medium-grey">
-              I show you what to change in the environment, how to communicate
-              clearly and how to use play to build trust and cooperation. You are
-              not left trying to translate generic advice back into real life.
-            </p>
-          </div>
-          <ProgramCard
-            program={confidentStart}
-            location="Puppy"
-            directAction={
-              <Button onClick={bookNow} className="btn-primary w-full">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Now
-              </Button>
-            }
-          />
         </div>
       </section>
     </div>
