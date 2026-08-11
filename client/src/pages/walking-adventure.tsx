@@ -5,7 +5,7 @@ import {
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
-import walkingImage from "@assets/IMG_0084_1758974180047.jpeg";
+import walkingImage from "@assets/IMG_0084_card_800_opt.webp";
 
 export default function WalkingAdventurePage() {
   return (

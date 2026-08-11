@@ -112,9 +112,9 @@ export default function BlogPage() {
       {/* Search and Filter Section */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-between">
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className="relative w-full shrink-0 md:w-80">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-medium-grey w-4 h-4" />
               <Input
                 type="text"
@@ -126,7 +126,7 @@ export default function BlogPage() {
             </div>
 
             {/* Tag Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex min-w-0 flex-wrap gap-2">
               <Button
                 variant={selectedTag === "" ? "default" : "outline"}
                 size="sm"
