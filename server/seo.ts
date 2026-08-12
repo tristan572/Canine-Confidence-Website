@@ -30,13 +30,43 @@ const LOCAL_BUSINESS_SCHEMA = {
     postalCode: "4034",
     addressCountry: "AU",
   },
+  // Suburb-level centroid: this is a mobile, in-home service with no public
+  // shopfront address, so the coordinates describe Boondall, not a street.
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -27.3486,
+    longitude: 153.0602,
+  },
   areaServed: [
     { "@type": "AdministrativeArea", name: "North Brisbane" },
+    { "@type": "AdministrativeArea", name: "Boondall" },
     { "@type": "AdministrativeArea", name: "Sandgate and Shorncliffe" },
     { "@type": "AdministrativeArea", name: "Northgate" },
     { "@type": "AdministrativeArea", name: "Chermside" },
     { "@type": "AdministrativeArea", name: "Aspley" },
     { "@type": "AdministrativeArea", name: "Ascot" },
+  ],
+  // Training hours (when sessions actually run), matching the footer. Phone
+  // hours are deliberately not modelled here — this describes service delivery.
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "05:30",
+      closes: "20:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "07:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "00:00",
+      closes: "00:00",
+    },
   ],
   priceRange: "$45 - $1050",
   image: `${SITE_URL}/attached_assets/DSC_0096_1758792971820.webp`,
