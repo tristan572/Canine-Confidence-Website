@@ -1744,6 +1744,55 @@ Two markers. Clean feedback. Real communication with your dog starts here.`,
         publishedAt: new Date("2026-08-10"),
         tags: ["communication", "markers", "impulse control", "training", "behaviour"],
         slug: "release-markers-and-wrong"
+      },
+      {
+        title: "Tired Isn't the Same as Fulfilled",
+        metaTitle: "Tired Isn't the Same as Fulfilled | Canine Confidence",
+        excerpt: "A walk can tire your dog's legs without meeting the needs driving their behaviour. Here's what fulfilment actually looks like and two changes you can make this week.",
+        content: `# Tired Isn't the Same as Fulfilled
+
+I see the same walk almost every week. It's not failing because owners don't care. It's failing because it was never built around what the dog actually needs.
+
+## The Walk That Isn't Working
+
+Picture the average walk. Same block, same route, same twenty minutes. Dog on a tight lead, corrected for every sniff, moved past anything interesting because staying glued to your side has come to mean "good dog."
+
+That walk covers exercise. Not much else.
+
+Dogs are wired to sniff, explore, and choose their own path. Heel-only walking removes all of that. The dog gets tired legs and nothing for the mind.
+
+In my professional opinion, walking a dog at heel for the entire walk and calling it enough is convenience training. It suits the owner. It rarely suits the dog.
+
+## "Tired Dog Is a Good Dog" — The Line That's Wrong
+
+The advice sounds sensible on the surface. Wear the dog out, and the barking, the reactivity, the zoomies at 9pm all settle down.
+
+In practice, exercise alone builds fitness. A dog walked hard every day gets fitter. A fitter dog has more stamina, more energy, and less patience for boredom. Often that's a harder dog to live with, not an easier one.
+
+Physical fatigue without mental fulfilment still needs an outlet. Barking. Digging. Reactivity. Restlessness at the end of the day. The energy has to go somewhere.
+
+## What Fulfilment Actually Looks Like
+
+Every dog carries some version of a working drive, whether they've ever had a job or not. Herding breeds want to control movement. Hunting breeds want to track and retrieve. Guarding breeds want a job with purpose. Even the most laid-back companion breed wants a task that matches its nature.
+
+In my method, I look at what a dog was bred for before I look at how tired they are. Ten minutes of the right kind of engagement does more for calmness than an hour of laps. Sniffing games. Tracking. Tug with rules. A flirt pole session. Whatever matches the individual dog in front of me.
+
+Fulfilled dogs settle because the actual need got met, not because they ran out of energy.
+
+## Two Changes This Week
+
+**Give them choice on the walk.** A long line and an open space costs nothing. Ten minutes of loose lead walking at your pace, then ten minutes on a long line where your dog picks the direction. Heel still has a place, for focus and safety. It shouldn't be the entire walk.
+
+**Match the activity to the drive.** Work out what your dog was bred for, then give them ten minutes of it a day. That's the difference between a tired dog and a fulfilled one.
+
+## Where to Start
+
+If you're not sure what your dog's actual drive is, or the walk changes alone haven't shifted anything, that's exactly what the Initial Canine Success Assessment sorts out. One session, sixty minutes, a clear picture of what's missing and a plan to fix it.`,
+        imageUrl: "/attached_assets/tired-isnt-the-same-as-fulfilled.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-08-19"),
+        tags: ["walks", "mental fulfilment", "breed drives", "enrichment", "dog training"],
+        slug: "tired-isnt-the-same-as-fulfilled"
       }
     ];
 
