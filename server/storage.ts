@@ -2103,7 +2103,56 @@ Good training should be able to communicate both.
         readTime: "8 min read",
         publishedAt: new Date("2026-08-25"),
         tags: ["punishment", "reinforcement", "boundaries", "communication", "dog training"],
-        slug: "is-punishment-bad-in-dog-training"
+        slug: "is-punishment-bad-in-dog-training"      },
+      {
+        title: "Why Your Dog Barks at the Fence in Brisbane",
+        metaTitle: "Why Your Dog Barks at the Fence in Brisbane | Canine Confidence",
+        excerpt: "If your dog barks at the fence or window when people walk past, here is why it keeps getting worse, and what to do about it in Brisbane.",
+        content: `# Why Your Dog Barks at the Fence in Brisbane
+
+Fence barking gets worse because the dog keeps practising it.
+
+## Why does it keep getting louder?
+On Brisbane's Northside, people and dogs walk past houses all day. Your dog sees them, barks, and they keep moving. From the dog's point of view, the barking worked. The person left.
+
+Do that ten times in an afternoon and you have a practised habit. Do it all week and the neighbours know the sound of it.
+
+Yelling from inside does not stop it. You have just added more noise to something the dog already finds exciting. Some dogs think you are joining in.
+
+The same thing happens at a front window. Different spot. Same habit.
+
+## What is the dog actually getting out of it?
+They get a result. Something appears, they bark, it goes away. That is enough to keep it going.
+
+A lot of the dogs I see also do not have enough to do. Real play. Time to sniff and explore. A way to settle in the house. If that is missing, the fence becomes the afternoon's work.
+
+And if they can stand at the line with a clear view, they will. You cannot change a habit you keep letting them repeat.
+
+This is not the same as a dog who loses it on lead out in the street. That is a different problem. Fence barking happens at home. Deal with it at home.
+
+## What should you do instead of yelling?
+Stop the extra practise first. If you are not out there to work it, they should not have a clear view of the footpath. Covering the view is not the whole answer. It just stops another ten reps while you are busy.
+
+When you are there, call them off the fence before they are fully wound up. The moment they come is the bit that matters. A short burst of play. Food away from the boundary. Then they can be a dog somewhere else in the yard.
+
+Do not walk out to the fence to tell them off. You have just arrived at the most interesting part of the yard as the world walked past. That pays the barking.
+
+If they already understand a marker, use it. A clean interrupt, then a job they know. Do not stand at the fence with them and watch the street. That makes you part of it.
+
+A proper game earlier in the day still helps. Another tight-lead lap of the block usually does not. I wrote about that in [Tired Isn't the Same as Fulfilled](https://www.canineconfidence.com.au/blog/tired-isnt-the-same-as-fulfilled)
+
+## When is it more than the fence?
+If they will not come away, or they start following people down the street with their barking, or they go off at the gate when guests arrive, the fence is only where you are seeing it. There is more going on.
+
+That is what an [Initial Canine Success Assessment](https://www.canineconfidence.com.au/behaviour-obedience) is for. I come to your home, look at the setup, and you leave with a plan. Sometimes [walking and adventure](https://www.canineconfidence.com.au/walking-adventure) work is part of that. It depends on the dog.
+
+If this is taking over the afternoon at your place on the Northside, start with a free [15-minute phone consult](https://www.canineconfidence.com.au/contact). I just need to hear what it looks like so I know whether I can help.
+`,
+        imageUrl: "/attached_assets/why-your-dog-barks-at-the-fence-brisbane.webp",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-09-01"),
+        tags: ["barking", "behaviour", "Brisbane", "fence", "dog training"],
+        slug: "why-your-dog-barks-at-the-fence-brisbane"
       }
     ];
 
