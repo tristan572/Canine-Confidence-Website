@@ -2153,6 +2153,58 @@ If this is taking over the afternoon at your place on the Northside, start with 
         publishedAt: new Date("2026-09-01"),
         tags: ["barking", "behaviour", "Brisbane", "fence", "dog training"],
         slug: "why-your-dog-barks-at-the-fence-brisbane"
+      },
+      {
+        title: "Why Your Dog’s Sit Works at Home and Fails Outside",
+        metaTitle: "Why Your Dog’s Sit Works at Home and Fails Outside",
+        excerpt: "Your dog sits well at home. Outside on the footpath, the same command takes three asks or does not happen. Here’s why — and how to rebuild it.",
+        content: `Your dog sits well at home. Outside on the footpath, the same command takes three asks or does not happen.
+
+That is common on the Northside. It is not your dog choosing to ignore you. Home is quiet and familiar. Outside has noise, smells, people, and bikes. Most dogs have only practised the easy version.
+
+## Home and outside are different
+
+Owners often train where it is easy: lounge, kitchen, quiet backyard. The dog answers well, so it feels finished.
+
+Then they try it on the front path, near the park, or when kids come through the door. When it fails, they get frustrated, or decide the dog is stubborn. Neither fixes it.
+
+You cannot jump from an easy home sit to a busy street sit. Rebuild it outside, starting easy.
+
+## What usually goes wrong
+
+Hearing “sit” a hundred times at home does not mean it will work outside. Change the place, add the lead, add people moving nearby, and it becomes harder.
+
+## How to rebuild it
+
+Keep the command the same. Start easy outside, then make it harder.
+
+On a quiet front path, repeat the command and use a food lure for a few clean reps. That is the first step, not a shortcut. Once they can do it with the lure, drop the food and ask again. When that is solid, add one distraction at a time: soft outdoor noise, someone walking past further away, then closer, then with the lead on, then at the front door when someone arrives.
+
+If they fail, go back one step until you get clean responses again. Do not punish them for “knowing better.” They have not finished learning this yet.
+
+## A simple test this week
+
+Before the walk, work the sit on your front path for a few minutes.
+
+Start with a food lure and clear repeats of the command. Get a few easy wins. Then drop the food. Then add a small distraction only when the no-food version is working.
+
+Write down three places the command fails. Start with the easiest of those three. Train there until it is easy. Then move one step harder. Keep sessions short.
+
+If you cannot get it on a quiet front path with a lure, do not take that command to a busy park yet.
+
+## When to get help
+
+If every outdoor ask turns into a fight, or the dog only works in the house no matter how carefully you step it up, that is what I sort in person.
+
+A free 15-minute phone consult is enough for me to hear what is going on. From there, an Initial Canine Success Assessment at your place lets me see the home version and the outside version, then leave you with a plan that fits your street and your week.
+
+The home sit is useful. It is not the finish line.
+`,
+        imageUrl: "/attached_assets/dog-walk-blog-post.png",
+        readTime: "3 min read",
+        publishedAt: new Date("2026-09-07"),
+        tags: ["sit", "outdoor training", "North Brisbane", "obedience"],
+        slug: "lounge-sit-vs-footpath-brisbane"
       }
     ];
 
