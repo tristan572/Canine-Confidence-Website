@@ -3,6 +3,7 @@ import path from "path";
 import type { Express } from "express";
 import { storage } from "./storage";
 import { STATIC_META, type PageMeta } from "@shared/seo-meta";
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 
 const SITE_URL = "https://www.canineconfidence.com.au";
 
@@ -68,6 +69,16 @@ const LOCAL_BUSINESS_SCHEMA = {
       closes: "00:00",
     },
   ],
+  // Reflects the public Google Business Profile rating. Google does not show
+  // review stars for self-hosted LocalBusiness ratings, so this is here for
+  // entity understanding rather than rich results.
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: GOOGLE_RATING,
+    reviewCount: GOOGLE_REVIEW_COUNT,
+    bestRating: "5",
+    worstRating: "1",
+  },
   priceRange: "$45 - $1050",
   image: `${SITE_URL}/attached_assets/DSC_0096_1758792971820.webp`,
   sameAs: [

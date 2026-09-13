@@ -6,6 +6,7 @@ import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { openBookingUrl } from "@/lib/analytics";
 import puppyImage from "@assets/image_1750048904991_opt.webp";
 import { Calendar, Quote, Star } from "lucide-react";
+import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 
 const puppyReviews = [
   {
@@ -149,7 +150,7 @@ export default function PuppyPage() {
               rel="noreferrer"
               className="font-semibold text-primary-blue hover:underline"
             >
-              Read all 31 Google reviews
+              Read all {GOOGLE_REVIEW_COUNT} Google reviews
             </a>
           </div>
         </div>
