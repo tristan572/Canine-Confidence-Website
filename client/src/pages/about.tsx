@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { StaticSEO } from "@/components/SEO";
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shared/social-proof";
 import { Award, Heart, Users, Target, CheckCircle, Phone, MapPin, Clock, Glasses, Search, FileText, HeartHandshake, Calendar } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import aboutHeroImageWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
@@ -214,8 +215,8 @@ export default function AboutPage() {
                     <CheckCircle className="w-6 h-6 text-primary-blue" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">All 5-Star: 20+ on Google · 90+ on Madpaws</h3>
-                    <p className="text-medium-grey">Verified across Google and Madpaws from North Brisbane families.</p>
+                    <h3 className="text-lg font-semibold text-charcoal mb-2">{GOOGLE_RATING}★ from {GOOGLE_REVIEW_COUNT} Google reviews · {MAD_PAWS_REVIEW_FLOOR}+ on Mad Paws</h3>
+                    <p className="text-medium-grey">Verified across Google and Mad Paws from North Brisbane families.</p>
                   </div>
                 </div>
 

@@ -10,6 +10,7 @@ import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign, ShieldChe
 import ConsultationForm from "@/components/forms/consultation-form";
 import { apiRequest } from "@/lib/queryClient";
 import FormattedText from "@/components/ui/formatted-text";
+import { GOOGLE_RATING } from "@shared/social-proof";
 import type { Package } from "@shared/schema";
 import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
 import { openBookingUrl } from "@/lib/analytics";
@@ -196,7 +197,7 @@ export default function PackagesPage() {
                   <div className="text-sm text-medium-grey">Happier Dogs</div>
                 </div>
                 <div className="bg-white rounded-lg px-6 py-3 shadow-sm border border-gray-100">
-                  <div className="text-2xl font-bold text-charcoal">5★</div>
+                  <div className="text-2xl font-bold text-charcoal">{GOOGLE_RATING}★</div>
                   <div className="text-sm text-medium-grey">Average Rating</div>
                 </div>
               </div>
