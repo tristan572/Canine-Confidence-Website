@@ -149,7 +149,7 @@ export default function PuppyPage() {
               rel="noreferrer"
               className="font-semibold text-primary-blue hover:underline"
             >
-              Read all 25 Google reviews
+              Read all 31 Google reviews
             </a>
           </div>
         </div>
