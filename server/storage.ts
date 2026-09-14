@@ -2218,6 +2218,59 @@ The home sit is a good start. Everything useful happens after it.`,
         publishedAt: new Date("2026-09-07"),
         tags: ["obedience", "generalisation", "distractions", "dog training", "North Brisbane"],
         slug: "lounge-sit-vs-footpath-brisbane"
+      },
+      {
+        title: "Why Your Dog Is Calm in the Lounge and Chaos at the Front Door",
+        metaTitle: "Why Your Dog Is Calm in the Lounge and Chaos at the Front Door | Canine Confidence",
+        excerpt: "Front door jumping is one of the most common problems in Northside Brisbane homes. Here's why the doorway is the hardest place for a dog to hold a greeting.",
+        content: `# Why Your Dog Is Calm in the Lounge and Chaos at the Front Door
+
+Your dog is settled in the lounge. Someone knocks, and the calm version disappears.
+
+That's a pattern I see in Northside homes constantly, and it's usually treated as a behaviour problem when it's closer to a picture problem. The doorway is the single hardest version of a greeting you can ask a dog to perform, and for most owners it's also the only version they've ever practised.
+
+## Why is the front door so hard for dogs?
+
+A knock is a very reliable predictor. It means people are coming, the room is about to fill with movement, and attention is about to arrive at the dog's eye level.
+
+The space itself works against you. Doorways are tight, there's a threshold to cross, the handler is usually half-turned away managing the door, and the guest is leaning in with hands out. Add the arrival energy that most people bring to a front door and you have a dog operating well above the arousal level it can think at.
+
+## Isn't it just excitement?
+
+Calling it excitement describes how the dog feels, and it stops there.
+
+The more useful question is what the jumping has earned over time. Dogs repeat what works, and jumping at the door has almost always worked. Hands come down, voices go up, guests make eye contact and laugh, and the dog gets exactly what it wanted within about two seconds of committing to the behaviour. Nobody in that hallway intends to reward it, but the dog isn't reading intentions.
+
+## Why doesn't the lounge room calm carry over?
+
+Because dogs don't generalise the way people assume they do.
+
+A dog that holds a settle on the mat at 7pm with the family watching TV has learnt that behaviour in one room, at one arousal level, with one set of people, and no competing motivation. The front door changes every one of those variables at once. What looks like the same request to you is a completely different picture to the dog.
+
+This is also why the fix isn't a single command. It's a matter of building the same greeting across a lot of small variations until the doorway version is just one more picture the dog already knows.
+
+## What actually needs to change?
+
+Two things usually, and most owners only ever address one of them.
+
+The first is teaching the dog what to do instead. Four paws on the floor, or a position held back from the door, gives the dog something to be right about. That work belongs well away from the door, at a level the dog can actually succeed at, long before a guest is involved.
+
+The second is clarity about what isn't acceptable. When a dog is fully committed to a guest, a polite request often gets ignored, and repeating it just teaches the dog that the request is optional. The dog needs a clear, fair message that jumping on people ends the interaction, delivered consistently by every person who walks through that door.
+
+Getting the balance of those two right is where most home attempts come unstuck. Too much of the first and the dog has options it never uses under pressure. Too much of the second and you've suppressed the jumping without ever giving the dog a better answer.
+
+## When is it worth getting help with door greetings?
+
+If every arrival turns into a fight, if you're holding the collar or shutting the dog away to get through a visit, or if the dog only settles when nobody comes over, that's worth sorting properly rather than patching.
+
+A free 15-minute phone call is enough for me to hear what's happening at your door and tell you whether it's a quick fix or something deeper. From there, an Initial Canine Success Assessment at your place lets me watch the real arrival, see how your household and your dog interact in that moment, and leave you with a plan built for your house.
+
+The lounge room greeting is genuinely useful work. The doorway is simply the last picture you teach, and the one that proves the rest of it holds.`,
+        imageUrl: "/attached_assets/dog-jumping-front-door-brisbane.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-09-14"),
+        tags: ["front door", "jumping", "greetings", "North Brisbane", "behaviour"],
+        slug: "dog-jumping-front-door-brisbane"
       }
     ];
 
