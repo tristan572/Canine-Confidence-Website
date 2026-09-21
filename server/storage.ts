@@ -2271,6 +2271,67 @@ The lounge room greeting is genuinely useful work. The doorway is simply the las
         publishedAt: new Date("2026-09-14"),
         tags: ["front door", "jumping", "greetings", "North Brisbane", "behaviour"],
         slug: "dog-jumping-front-door-brisbane"
+      },
+      {
+        title: "Your Dog Only Listens When You Have Food. Here's How to Fix It",
+        metaTitle: "Dog Only Listens With Food? Here's How to Fix It | Canine Confidence",
+        excerpt: "Your dog sits for a treat but ignores you without one. Here's why food becomes part of the cue, and the seven-step order I use to fix it.",
+        content: `# Your Dog Only Listens When You Have Food. Here's How to Fix It
+
+Your dog sits when the treat is already between your fingers. Put the food away and ask again, and you get a blank stare, a sniff of your pocket, or a walk-off toward the fridge.
+
+It feels like they're holding out for payment. Usually they're answering a different signal than the one you think you gave.
+
+## Why does the food become part of the command?
+
+Early teaching often starts with food in the hand. That's fine. You guide the dog into the behaviour, mark it, and pay.
+
+The trouble starts when the food is the most consistent thing in the picture. The word comes and goes. Sometimes it's said, sometimes it isn't, sometimes it's said halfway through the movement. The food hand is there every time. So that's what the dog learns to follow.
+
+Then you ask with an empty hand. The one signal they relied on has gone. The dog isn't being rude. They're waiting for the cue they actually learned.
+
+## What usually goes wrong
+
+Owners keep food in the asking hand forever, because it works. Or they drop the food overnight and expect the word to carry it, when the word was never the signal.
+
+Neither finishes the job. The fix is to make the word the one thing that stays the same from the first rep to the last, and change everything else around it, one step at a time.
+
+## How to teach it in order
+
+This is the order I use for every new behaviour. The word goes in early and never changes. The food, the hand and the reward change around it.
+
+**1. Lure.** Food in hand. Guide the dog into the behaviour. Mark YES. Reward. Move on once they follow the lure smoothly and confidently. Don't stay on the lure longer than you need to.
+
+**2. Add the verbal.** Say the word, pause about a second, then lure. Mark and reward. The pause matters. The word has to come before the hand moves, not with it. Move on when they respond cleanly and consistently to the word followed by the lure.
+
+**3. Empty hand.** Word, pause, then the same movement with no food in the hand. Mark YES, then reward from the other hand or your pouch. The lure has now become a hand signal, and the word hasn't changed.
+
+**4. Shrink the hand signal.** Make the gesture smaller over several sessions while the word stays exactly the same. Move on as soon as they start moving on the word before your hand moves.
+
+**5. Verbal only.** Say the word, then wait two to three seconds. If nothing happens, give a small hand signal to help, or use WRONG and reset. If it fails repeatedly, go back a step.
+
+**6. Variable reinforcement.** When verbal-only is reliable in a familiar place, pay only the best responses. On unpaid reps, give the cue for another strong, well-known behaviour instead of a reward. Mix up the order, and always finish with a paid YES. Never say YES without paying.
+
+**7. Proof it.** Raise distance, duration or distraction one at a time, or change location. At each new level, go back to paying every rep, then thin out again. The behaviour isn't trained until it holds in real life.
+
+## What to practise this week
+
+Pick one command that falls apart without food in the hand. Sit is the usual one.
+
+Start at the earliest step that isn't clean. Don't jump to the word alone because it should work by now. If they don't respond to the word alone, go back to a small hand signal after the word, or the full signal for a few clean reps, then try again.
+
+## When is it worth getting help?
+
+If you can't get past an early step, or every empty-hand ask turns into a negotiation, that's what I sort in person across North Brisbane.
+
+A free 15-minute phone consult is enough for me to hear where it breaks. From there, we start with an Initial Canine Success Assessment, then train together.
+
+Food is a useful teaching tool. It's a poor permanent stand-in for the command.`,
+        imageUrl: "/attached_assets/dog-only-listens-with-food-brisbane.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-09-21"),
+        tags: ["obedience", "food lures", "verbal cues", "dog training", "North Brisbane"],
+        slug: "dog-only-listens-with-food-brisbane"
       }
     ];
 
