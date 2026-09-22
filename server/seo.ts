@@ -280,7 +280,8 @@ export function registerSeoMiddleware(app: Express, distPath: string) {
   const jsonLdTag = `<script type="application/ld+json">${JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>`;
 
   app.use(async (req, res, next) => {
-    if (req.method !== "GET" || path.extname(req.path)) {
+    const isPageRequest = req.method === "GET" || req.method === "HEAD";
+    if (!isPageRequest || path.extname(req.path)) {
       return next();
     }
 
