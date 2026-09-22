@@ -2397,6 +2397,15 @@ Food is a useful teaching tool. It's a poor permanent stand-in for the command.`
       }
     ];
 
+    testimonialData.push({
+      "clientName": "Alex C.",
+      "dogName": "Lyla",
+      "rating": 5,
+      "reviewText": "My very stubborn Malamute Lyla and I did the 3 week intensive with Tristan to work on challenging behaviours at home and on walks, and reactivity towards other dogs. He has been so patient (with both of us) and his balanced approach of supportive guidance, praise, positive reinforcement and appropriate correction has helped me feel a lot more confident, and Lyla’s confidence around other dogs and in following instructions has improved a lot too! I didn’t feel judged once, no matter how cheeky she was or how frustrated I got, and he was very calm and kind. Learning how to communicate more effectively with my dog has helped me understand where I’ve been running into problems and how to do things differently moving forward. On top of doing excellent training, it’s great how much genuine positive regard and warmth Tristan has for the dogs he’s working with. Lyla gets so excited for all their sessions and adventures, and she’s a great judge of character. I would strongly recommend, and look forward to continuing to get help from Tristan as we need it.",
+      "service": "Training",
+      "location": null
+});
+
     testimonialData.forEach(testimonial => this.createTestimonial(testimonial));
   }
 

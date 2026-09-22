@@ -4,13 +4,16 @@ import type { Testimonial } from "@shared/schema";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
+  excerpt?: string;
 }
 
-export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
+export default function TestimonialCard({ testimonial, excerpt }: TestimonialCardProps) {
+  const validExcerpt = excerpt && testimonial.reviewText.includes(excerpt) && excerpt !== testimonial.reviewText ? excerpt : undefined;
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
+        aria-hidden="true"
         className={`w-6 h-6 ${
           i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
         }`}
@@ -19,19 +22,27 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   };
 
   return (
-    <Card className="bg-gradient-to-br from-white to-blue-50/30 border-2 border-primary-blue/10 shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] duration-300">
-      <CardContent className="p-8">
+    <Card className="bg-gradient-to-br from-white to-blue-50/30 border-2 border-primary-blue/10 shadow-sm">
+      <CardContent className="p-6 sm:p-8">
         <div className="flex items-center justify-between mb-6">
-          <div className="flex gap-1">{renderStars(testimonial.rating)}</div>
-          <Quote className="w-10 h-10 text-primary-blue/20" />
+          <div className="flex gap-1" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>{renderStars(testimonial.rating)}</div>
+          <Quote aria-hidden="true" className="w-10 h-10 text-primary-blue/20" />
         </div>
         
         <blockquote className="text-gray-800 mb-6 text-lg leading-relaxed">
-          "{testimonial.reviewText}"
+          “{validExcerpt ?? testimonial.reviewText}”
         </blockquote>
         
+        {validExcerpt && (
+          <details className="mb-6">
+            <summary className="min-h-11 cursor-pointer py-2 font-semibold text-primary-blue underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-blue">
+              Read full review<span className="sr-only"> from {testimonial.clientName}</span>
+            </summary>
+            <blockquote className="mt-3 whitespace-pre-line leading-relaxed text-gray-800">“{testimonial.reviewText}”</blockquote>
+          </details>
+        )}
         <div className="border-t-2 border-primary-blue/10 pt-5">
-          <div className="flex justify-between items-start">
+          <div className="flex flex-wrap justify-between items-start gap-3">
             <div>
               <div className="font-bold text-charcoal text-lg">
                 {testimonial.clientName}

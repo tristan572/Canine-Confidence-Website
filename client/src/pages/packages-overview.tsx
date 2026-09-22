@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { AssessmentIntro } from "@/components/funnel/assessment-intro";
 import { StaticSEO } from "@/components/SEO";
 
 const paths = [
@@ -18,6 +19,9 @@ export default function PackagesOverviewPage() {
           <p className="text-xl leading-relaxed text-medium-grey">Programs and packages are now grouped by the kind of support you are looking for, making it easier to compare the right options before you book.</p>
         </div>
       </section>
+      <div className="mx-auto w-full max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
+        <AssessmentIntro location="Programs start here" showPuppyLink />
+      </div>
       <section className="bg-white py-16">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
           {paths.map((path) => (

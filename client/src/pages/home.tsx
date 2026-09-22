@@ -1,8 +1,10 @@
+import { usePricing } from "@/hooks/use-pricing";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { StaticSEO } from "@/components/SEO";
 import TestimonialCard from "@/components/ui/testimonial-card";
+import { AssessmentDetails } from "@/components/funnel/assessment-intro";
 import BlogCard from "@/components/ui/blog-card";
 import {
   AssessmentButton,
@@ -62,6 +64,7 @@ const methodPoints = [
 ];
 
 export default function HomePage() {
+  const pricing = usePricing();
   const { data: testimonials = [] } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
   });
@@ -89,8 +92,8 @@ export default function HomePage() {
               using play, fulfilment and clear communication to build skills that
               hold up when life gets busy.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <AssessmentButton location="Home hero" className="px-7 py-4 text-lg" showIcon={false} />
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Home hero" className="px-7 py-4 text-lg" showIcon={false} />
               <ConsultationButton className="btn-secondary px-7 py-4 text-lg" showIcon={false} />
             </div>
             <p className="mt-5 text-sm font-semibold uppercase tracking-[0.12em] text-medium-grey">
@@ -197,8 +200,16 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
-            {testimonials.slice(0, 2).map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            {testimonials.filter((testimonial) => ["Patsy Poppins", "Alex C."].includes(testimonial.clientName)).map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.id}
+                testimonial={testimonial}
+                excerpt={testimonial.clientName === "Patsy Poppins"
+                  ? "Previously Bean would lockjaw on balls or bones he picked up while walking. He now lets go when I ask."
+                  : testimonial.clientName === "Alex C."
+                    ? "I didn’t feel judged once, no matter how cheeky she was or how frustrated I got, and he was very calm and kind."
+                    : undefined}
+              />
             ))}
           </div>
         </div>
@@ -239,10 +250,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold lg:text-4xl">Get clear on what your dog needs</h2>
           <p className="mb-8 text-lg text-blue-100">
-            During your assessment, I look at the behaviour and the circumstances
-            around it, then give you practical first steps and build a training
-            plan around your dog and your life.
+            I take the time to understand what you want to achieve, get to know
+            your dog's temperament and begin working out how they respond and
+            learn. From there, I recommend a program to get you started.
           </p>
+          <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <AssessmentButton
               location="Home final CTA"

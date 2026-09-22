@@ -33,6 +33,7 @@ export function usePricing() {
 
   return {
     servicePrice: (name: string) => service(name)?.price ?? LOADING_PRICE,
+    serviceDuration: (name: string) => service(name)?.duration ?? LOADING_PRICE,
     packagePrice: (name: string) => packageByName(name)?.price ?? LOADING_PRICE,
     packageSessions: (name: string) => packageByName(name)?.sessions ?? null,
     packagePerSession: (name: string) => {

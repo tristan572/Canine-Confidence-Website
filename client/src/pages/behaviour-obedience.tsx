@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+import { usePricing } from "@/hooks/use-pricing";
+import { AssessmentDetails } from "@/components/funnel/assessment-intro";
 import { ArrowRight, Calendar, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StaticSEO } from "@/components/SEO";
@@ -12,6 +13,7 @@ import { openBookingUrl } from "@/lib/analytics";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 
 export default function BehaviourObediencePage() {
+  const pricing = usePricing();
   return (
     <div className="min-h-screen">
       <StaticSEO path="/behaviour-obedience" />
@@ -31,8 +33,8 @@ export default function BehaviourObediencePage() {
               a generic formula. I work out what is driving the behaviour, build
               clear communication and train for the life you want together.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <AssessmentButton location="Behaviour hero" className="px-7 py-4 text-lg" />
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Behaviour hero" className="px-7 py-4 text-lg" />
               <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
             </div>
           </div>
@@ -62,13 +64,16 @@ export default function BehaviourObediencePage() {
       <section className="bg-gray-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-bold text-charcoal">A program built around the dog in front of me</h2>
-            <p className="text-lg text-medium-grey">
-              Some dogs need owner coaching. Some need concentrated trainer-led
-              work before those skills can transfer to you. The assessment tells
-              me which mix will create progress without selling you sessions you
-              do not need. Prices are shown clearly below.
+            <h2 className="mb-4 text-3xl font-bold text-charcoal">Start here: your dog's assessment</h2>
+            <AssessmentDetails className="mb-4 text-lg text-primary-blue" />
+            <p className="mb-4 text-lg leading-relaxed text-medium-grey">
+              I take the time to understand what you want to achieve and get to
+              know your dog's temperament. We start working together so I can
+              see how your dog responds and how best to work with them. From
+              there, I suggest a program to get you started.
             </p>
+            <p className="mb-5 font-semibold text-charcoal">You don't need to choose a program before we meet.</p>
+            <AssessmentButton location="Behaviour start here" />
           </div>
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
             {behaviourPrograms.map((program) => (
@@ -132,10 +137,11 @@ export default function BehaviourObediencePage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold">Life with your dog should feel calmer, more connected and more enjoyable</h2>
           <p className="mb-7 text-lg text-blue-100">
-            Book one assessment and leave with a clear explanation of what is
-            happening, practical first steps and the shortest sensible path to
-            meeting your goals.
+            We'll talk through your goals, get to know your dog's temperament
+            and begin working out how to work together. I'll suggest a program
+            to get you started.
           </p>
+          <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
           <AssessmentButton
             location="Behaviour final CTA"
             className="bg-white text-primary-blue hover:bg-gray-50"
