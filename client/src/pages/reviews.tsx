@@ -10,6 +10,13 @@ export default function ReviewsPage() {
     queryKey: ["/api/testimonials"],
   });
 
+  // Feature Alex & Lyla's review first on this page only
+  const isFeatured = (t: Testimonial) => t.clientName === "Alex C." && t.dogName === "Lyla";
+  const orderedTestimonials = [
+    ...testimonials.filter(isFeatured),
+    ...testimonials.filter((t) => !isFeatured(t)),
+  ];
+
   return (
     <div className="min-h-screen">
       <StaticSEO path="/reviews" />
@@ -49,7 +56,7 @@ export default function ReviewsPage() {
             <p className="text-center text-medium-grey">Loading reviews...</p>
           ) : (
             <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
-              {testimonials.map((testimonial) => (
+              {orderedTestimonials.map((testimonial) => (
                 <TestimonialCard key={testimonial.id} testimonial={testimonial} />
               ))}
             </div>
