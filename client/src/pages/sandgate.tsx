@@ -435,7 +435,7 @@ export default function SandgatePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-blue">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
@@ -500,7 +500,7 @@ export default function SandgatePage() {
           <div className="space-y-4">
             <Button 
               onClick={handleBookAssessment}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
             >
               Continue to Secure Booking
             </Button>
@@ -533,7 +533,7 @@ export default function SandgatePage() {
           <div className="space-y-4">
             <Button
               onClick={handleBookAdventure}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
             >
               Continue to Secure Booking
             </Button>
@@ -591,7 +591,7 @@ export default function SandgatePage() {
           <div className="space-y-4">
             <Button 
               onClick={handleBookConfidentStart}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
             >
               Continue to Secure Booking
             </Button>
@@ -624,7 +624,7 @@ export default function SandgatePage() {
           <div className="space-y-4">
             <Button 
               onClick={handleBookPackages}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-base font-medium"
+              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
             >
               Continue to Secure Booking
             </Button>

@@ -164,7 +164,7 @@ export default function FAQPage() {
             <Card className="bg-white p-6">
               <h3 className="font-semibold text-charcoal mb-3">Do you offer package deals?</h3>
               <p className="text-medium-grey text-sm">
-                Yes. Program prices and inclusions are shown on the Behaviour &amp; Obedience and Walking &amp; Adventure pages. I recommend the right adult-dog option after the assessment rather than asking you to choose one blind.
+                Yes. Program prices and inclusions are shown on the Behaviour &amp; Obedience and Adventure &amp; Training pages. I recommend the right adult-dog option after the assessment rather than asking you to choose one blind.
               </p>
             </Card>
 
@@ -199,7 +199,7 @@ export default function FAQPage() {
       </section>
 
       {/* Still have questions CTA */}
-      <section className="py-16 bg-primary-blue">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-16 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-white">Still have questions?</h2>

@@ -33,7 +33,7 @@ export default function PuppyPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
-              Puppy training
+              Puppy raising
             </p>
             <h1 className="mb-5 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
               Stop guessing through the hard parts. Start building the dog you always pictured.
@@ -53,7 +53,7 @@ export default function PuppyPage() {
             </div>
             <ConsultationButton
               className="mt-4 h-auto justify-start border-0 bg-transparent px-0 py-1 text-primary-blue shadow-none hover:bg-transparent hover:text-primary-blue hover:underline"
-              label="Not sure? Book a free 15-min consult"
+              label="Not sure? Book a free phone consult"
               showIcon={false}
             />
             <p className="mt-4 text-sm font-medium text-charcoal">
@@ -70,7 +70,7 @@ export default function PuppyPage() {
         </div>
       </section>
 
-      <section className="bg-primary-blue py-10 text-white">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10 text-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-2xl font-bold leading-snug">
             I want your puppy to grow into a confident, connected dog who

@@ -48,7 +48,7 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="bg-primary-blue py-10 text-white">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10 text-white">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-3 text-2xl font-bold">For the problems making daily life hard</h2>
           <p className="text-lg leading-relaxed text-blue-100">
@@ -133,7 +133,7 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="bg-primary-blue py-16 text-center text-white">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold">Life with your dog should feel calmer, more connected and more enjoyable</h2>
           <p className="mb-7 text-lg text-blue-100">

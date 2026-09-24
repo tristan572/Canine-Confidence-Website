@@ -5,7 +5,7 @@ import { StaticSEO } from "@/components/SEO";
 const paths = [
   { href: "/puppy", title: "Puppy programs", text: "The Confident Start Program is available to book directly." },
   { href: "/behaviour-obedience", title: "Behaviour & Obedience programs", text: "Assessment-led coaching and trainer-led programs for your dog's specific needs." },
-  { href: "/walking-adventure", title: "Walking & Adventure programs", text: "Packages and single sessions for trainer-led walks and adventure outings." },
+  { href: "/walking-adventure", title: "Adventure & Training programs", text: "Packages and single sessions for trainer-led walks and adventure outings." },
 ];
 
 export default function PackagesOverviewPage() {

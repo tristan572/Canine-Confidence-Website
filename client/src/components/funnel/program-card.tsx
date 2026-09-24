@@ -16,7 +16,7 @@ export function ProgramCard({
   return (
     <Card
       id={program.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
-      className="flex h-full flex-col overflow-hidden border border-gray-100 border-t-4 border-t-primary-blue bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="flex h-full flex-col overflow-hidden border border-gray-100 border-t-4 border-t-primary-blue bg-white shadow-md transition duration-300 hover:shadow-xl"
     >
       <CardContent className="flex h-full flex-col p-7">
         <div className="mb-5">

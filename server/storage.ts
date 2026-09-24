@@ -1327,7 +1327,7 @@ A stubborn dog who understands the conversation, sees the value, and gets honest
 
 If your dog is described as stubborn often enough that it's become the explanation, the issue isn't the dog. It's the gap between what you're asking and what they're understanding. Increase the motivation and make it simple.
 
-That's a fixable gap. The free 15-minute phone consult is where I'd start. No commitment, just a conversation about what's actually going on.`,
+That's a fixable gap. The free phone consult is where I'd start. No commitment, just a conversation about what's actually going on.`,
         imageUrl: "/attached_assets/stubborn-dog-pulling_1779699487.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-25"),
@@ -2146,7 +2146,7 @@ If they will not come away, or they start following people down the street with 
 
 That is what an [Initial Canine Success Assessment](https://www.canineconfidence.com.au/behaviour-obedience) is for. I come to your home, look at the setup, and you leave with a plan. Sometimes [walking and adventure](https://www.canineconfidence.com.au/walking-adventure) work is part of that. It depends on the dog.
 
-If this is taking over the afternoon at your place on the Northside, start with a free [15-minute phone consult](https://www.canineconfidence.com.au/contact). I just need to hear what it looks like so I know whether I can help.
+If this is taking over the afternoon at your place on the Northside, start with a free [phone consult](https://www.canineconfidence.com.au/contact). I just need to hear what it looks like so I know whether I can help.
 `,
         imageUrl: "/attached_assets/why-your-dog-barks-at-the-fence-brisbane.webp",
         readTime: "5 min read",
@@ -2324,7 +2324,7 @@ Start at the earliest step that isn't clean. Don't jump to the word alone becaus
 
 If you can't get past an early step, or every empty-hand ask turns into a negotiation, that's what I sort in person across North Brisbane.
 
-A free 15-minute phone consult is enough for me to hear where it breaks. From there, we start with an Initial Canine Success Assessment, then train together.
+A free phone consult is enough for me to hear where it breaks. From there, we start with an Initial Canine Success Assessment, then train together.
 
 Food is a useful teaching tool. It's a poor permanent stand-in for the command.`,
         imageUrl: "/attached_assets/dog-only-listens-with-food-brisbane.webp",

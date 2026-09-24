@@ -2,9 +2,9 @@ import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
 
 const paths = [
-  { href: "/puppy", title: "Puppy", text: "Start your puppy with private in-home coaching and the Confident Start Program." },
+  { href: "/puppy", title: "Puppy Raising", text: "Start your puppy with private in-home coaching and the Confident Start Program." },
   { href: "/behaviour-obedience", title: "Behaviour & Obedience", text: "Get help with manners, anxiety, reactivity and the behaviours making daily life hard." },
-  { href: "/walking-adventure", title: "Walking & Adventure", text: "Choose trainer-led walks, adventure outings or real-world skill building." },
+  { href: "/walking-adventure", title: "Adventure & Training", text: "Choose trainer-led walks, adventure outings or real-world skill building." },
 ];
 
 export default function ServicesOverviewPage() {

@@ -8,6 +8,8 @@ import { Calendar, Menu } from "lucide-react";
 import logoImage from "@assets/canine_confidence_logo_320_opt.webp";
 import { ASSESSMENT_URL } from "@/lib/funnel";
 import { openBookingUrl } from "@/lib/analytics";
+import { ConsultationButton } from "@/components/funnel/funnel-cta";
+import { GOOGLE_RATING } from "@shared/social-proof";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -16,7 +18,7 @@ export default function Navbar() {
   const navItems = [
     { href: "/puppy", label: "Puppy" },
     { href: "/behaviour-obedience", label: "Behaviour" },
-    { href: "/walking-adventure", label: "Walking" },
+    { href: "/walking-adventure", label: "Adventure" },
     { href: "/method", label: "Method" },
     { href: "/reviews", label: "Reviews" },
     { href: "/blog", label: "Blog" },
@@ -34,7 +36,20 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-cream/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+      {/* Credentials bar */}
+      <div className="bg-navy text-[#D9DBEF]">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-6 px-4 py-2 text-xs font-semibold sm:px-6 sm:text-sm lg:justify-between lg:px-8">
+          <span className="hidden lg:inline">In-home dog training across North Brisbane</span>
+          <span className="flex items-center gap-2 sm:gap-4">
+            <span>NDTF certified</span>
+            <span aria-hidden="true" className="text-[#5C60A0]">|</span>
+            <span>Professional &amp; insured</span>
+            <span aria-hidden="true" className="text-[#5C60A0]">|</span>
+            <span className="text-white">{GOOGLE_RATING}★ on Google</span>
+          </span>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center py-3">
           {/* Mobile Layout */}
@@ -60,7 +75,7 @@ export default function Navbar() {
 
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" aria-label="Open menu">
+                <Button variant="outline" size="icon" aria-label="Open menu" className="h-11 w-11 shrink-0 border-[1.5px] border-input bg-transparent text-primary">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -86,6 +101,7 @@ export default function Navbar() {
                       <Calendar className="w-4 h-4 mr-2" />
                       Book Assessment
                     </Button>
+                    <ConsultationButton className="btn-secondary w-full" showIcon={false} />
                   </div>
                 </div>
               </SheetContent>
@@ -109,15 +125,15 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="flex items-center space-x-1 lg:space-x-2">
+            <div className="flex items-center gap-1 xl:gap-3">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-2 py-2 text-xs lg:text-sm font-medium transition-all duration-200 rounded-lg ${
+                  className={`relative px-2 py-2 text-sm font-semibold transition-colors duration-200 rounded-lg xl:text-[15px] ${
                     isActive(item.href)
-                      ? "text-primary-blue bg-blue-50"
-                      : "text-gray-700 hover:text-primary-blue hover:bg-gray-50"
+                      ? "text-primary bg-sand"
+                      : "text-foreground hover:text-sky-deep"
                   }`}
                 >
                   {item.label}
@@ -126,10 +142,10 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTA Buttons */}
-            <div className="flex items-center space-x-2 shrink-0">
-              <Button onClick={bookAssessment} className="bg-primary-blue hover:bg-blue-700 text-white font-semibold shadow-sm">
-                <Calendar className="w-4 h-4 mr-2" />
-                Assessment
+            <div className="flex items-center gap-2 shrink-0">
+              <ConsultationButton className="btn-secondary hidden h-11 px-4 py-0 text-sm xl:inline-flex" showIcon={false} />
+              <Button onClick={bookAssessment} className="btn-primary h-11 px-5 py-0 text-sm">
+                Book an Assessment
               </Button>
             </div>
           </div>

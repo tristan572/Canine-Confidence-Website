@@ -241,7 +241,7 @@ export default function ServicesPage() {
                   </DialogTrigger>
                   <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                     <DialogTitle>Request Free Phone Call</DialogTitle>
-                    <DialogDescription>Get complimentary advice tailored to your situation with my 15-minute phone consultation.</DialogDescription>
+                    <DialogDescription>Get complimentary advice tailored to your situation with my phone consultation.</DialogDescription>
                     <ConsultationForm />
                   </DialogContent>
                 </Dialog>
@@ -295,7 +295,7 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-primary-blue content-visibility-auto">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue content-visibility-auto">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
