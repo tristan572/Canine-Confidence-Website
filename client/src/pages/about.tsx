@@ -68,21 +68,21 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">NDTF</div>
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
+                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">NDTF</div>
                   <div className="text-sm text-medium-grey">Certified Professional</div>
                 </Card>
-                <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">Insured</div>
+                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
+                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">Insured</div>
                   <div className="text-sm text-medium-grey">Fully Covered</div>
                 </Card>
-                <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">2020</div>
+                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
+                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">2020</div>
                   <div className="text-sm text-medium-grey">Started Training</div>
                 </Card>
-                <Card className="bg-white p-6 border border-gray-100">
-                  <div className="text-3xl font-bold text-primary-blue mb-2">North Brisbane</div>
+                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
+                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">North Brisbane</div>
                   <div className="text-sm text-medium-grey">Local Expert</div>
                 </Card>
               </div>

@@ -108,9 +108,14 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Serve the app on port 5000 by default; this serves both the API and the
-  // client. PORT overrides it for local dev (macOS AirPlay also uses 5000).
-  const port = Number(process.env.PORT) || 5000;
+  // ALWAYS serve the app on port 5000 in production: Railway routes traffic to
+  // 5000, and honouring Railway's own PORT variable breaks the site (see
+  // 009b30a "Restore Railway production port"). This serves both the API and
+  // the client. DEV_PORT is a local-development-only override, because macOS
+  // AirPlay Receiver also listens on 5000.
+  const devPort =
+    process.env.NODE_ENV === "development" ? Number(process.env.DEV_PORT) : NaN;
+  const port = Number.isInteger(devPort) && devPort > 0 ? devPort : 5000;
   server.listen({
     port,
     host: "0.0.0.0",
