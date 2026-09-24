@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Canine Confidence Cartoon</title>
+<style>
+  @font-face { font-family: 'Luckiest Guy'; src: url(fonts/luckiestguy.woff2) format('woff2'); }
+  @font-face { font-family: 'Baloo 2'; src: url(fonts/baloo2.woff2) format('woff2'); font-weight: 400 800; }
+  :root { --ink: #1F2036; --sky: #2BA6DE; --amber: #E8A33A; --clarity: #6C5FD3; --indigo: #26275F; --green: #3DAA78; --cream: #FBF4E6; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--cream); }
+  body { font-family: 'Baloo 2', sans-serif; color: var(--ink); }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+  .scene { position: absolute; inset: 0; display: none; }
+  .scene > svg { position: absolute; inset: 0; }
+  .txt { position: absolute; left: 60px; right: 60px; text-align: center; filter: url(#boilText); }
+  .toon { font-family: 'Luckiest Guy', sans-serif; color: #fff; -webkit-text-stroke: 14px var(--ink); paint-order: stroke fill;
+          text-shadow: 0 10px 0 var(--ink); letter-spacing: .02em; line-height: 1.02; text-transform: uppercase; }
+  .w { display: inline-block; }
+  .body { font-weight: 800; font-size: 50px; line-height: 1.22; color: var(--ink); }
+  .card { position: absolute; left: 70px; right: 70px; background: #fff; border: 7px solid var(--ink); border-radius: 36px 44px 32px 40px;
+          box-shadow: 10px 12px 0 var(--ink); padding: 34px 44px; text-align: center; }
+  .card h3 { font-family: 'Luckiest Guy'; font-weight: 400; text-transform: uppercase; font-size: 64px; line-height: 1.05; letter-spacing: .02em; }
+  .card p { font-weight: 700; font-size: 44px; line-height: 1.25; margin-top: 12px; color: #3B3C5C; }
+  .chip { display: inline-block; font-family: 'Luckiest Guy'; font-size: 44px; color: #fff; padding: 12px 34px 4px; border: 6px solid var(--ink);
+          border-radius: 999px; box-shadow: 6px 7px 0 var(--ink); letter-spacing: .08em; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="14" stroke="#1F2036" stroke-width="4" opacity=".35"/></pattern>
+    <filter id="boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="boilNoise" type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="boilText" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="boilNoiseT" type="fractalNoise" baseFrequency="0.03" numOctaves="1" seed="1"/><feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/><feColorMatrix values="0 0 0 0 0.12  0 0 0 0 0.12  0 0 0 0 0.2  0 0 0 .09 0"/></filter>
+  </defs>
+</svg>
+<div id="stage"></div>
+
+<script src="dog.js"></script>
+<script>
+const W = 1080, H = 1920;
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+const easeInOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c1 = 1.9, c3 = c1 + 1; return x <= 0 ? 0 : 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const p = (t, s, d) => clamp((t - s) / d);
+const pop = (t, s, d = .45) => back(p(t, s, d));
+const E = id => document.getElementById(id);
+const stage = E('stage');
+
+// ---------- Doodle helpers ----------
+const ink = `stroke="#1F2036" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"`;
+const bg = (color, doodles = '') => `<rect width="${W}" height="${H}" fill="${color}"/>${doodles}<rect width="${W}" height="${H}" filter="url(#paper)"/>`;
+const star = (x, y, r, fill = '#F2B33D', id = '') => {
+  let d = ''; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; d += (i ? 'L' : 'M') + (x + Math.cos(a) * rr).toFixed(1) + ',' + (y + Math.sin(a) * rr).toFixed(1); }
+  return `<path ${id ? `id="${id}"` : ''} d="${d}Z" fill="${fill}" ${ink} stroke-width="6"/>`;
+};
+const sparkle = (x, y, r, id = '') => `<path ${id ? `id="${id}"` : ''} d="M${x},${y - r} Q${x + r * .15},${y - r * .15} ${x + r},${y} Q${x + r * .15},${y + r * .15} ${x},${y + r} Q${x - r * .15},${y + r * .15} ${x - r},${y} Q${x - r * .15},${y - r * .15} ${x},${y - r}Z" fill="#fff" ${ink} stroke-width="5"/>`;
+const heart = (x, y, s, fill = '#F25C7A', id = '') => `<g ${id ? `id="${id}"` : ''} transform="translate(${x} ${y}) scale(${s})"><path d="M0,30 C-40,0 -60,-30 -35,-50 C-18,-62 -4,-52 0,-38 C4,-52 18,-62 35,-50 C60,-30 40,0 0,30 Z" fill="${fill}" ${ink}/></g>`;
+const bgDots = (c) => { let s = ''; const pts = [[90, 180], [980, 260], [140, 1500], [960, 1400], [80, 900], [1000, 820], [520, 110], [1010, 1880], [200, 1840]]; pts.forEach(([x, y], i) => s += i % 2 ? sparkle(x, y, 22).replace('fill="#fff"', `fill="${c}"`) : `<circle cx="${x}" cy="${y}" r="10" fill="${c}"/>`); return s; };
+function words(text, cls = '') { return text.split(' ').map(w => `<span class="w ${cls}">${w}</span>`).join(' '); }
+function animWords(el, t, s, stagger = .08) {
+  [...el.querySelectorAll('.w')].forEach((w, i) => {
+    const k = pop(t, s + i * stagger, .4);
+    w.style.opacity = clamp(p(t, s + i * stagger, .12));
+    w.style.transform = `scale(${k.toFixed(3)}) rotate(${((1 - clamp(k)) * (i % 2 ? 12 : -12)).toFixed(2)}deg)`;
+  });
+}
+function popEl(el, t, s, d = .45, rot0 = 0) {
+  const k = pop(t, s, d);
+  el.style.opacity = clamp(p(t, s, .1));
+  el.style.transform = `${el.dataset.base || ''} scale(${k.toFixed(3)}) rotate(${(rot0 * (1 - clamp(k))).toFixed(2)}deg)`;
+}
+function popSvg(el, t, s, cx, cy, d = .45, extra = '') {
+  const k = pop(t, s, d);
+  el.setAttribute('opacity', clamp(p(t, s, .1)));
+  el.setAttribute('transform', `translate(${cx} ${cy}) scale(${k.toFixed(3)}) translate(${-cx} ${-cy}) ${extra}`);
+}
+function slideUp(el, t, s, d = .5, dist = 80) {
+  const k = easeOut(p(t, s, d));
+  el.style.opacity = k;
+  el.style.transform = `translateY(${((1 - k) * dist).toFixed(1)}px)`;
+}
+
+// ---------- Scenes ----------
+const scenes = [];
+function scene(id, dur, html, update, color) {
+  const el = document.createElement('section');
+  el.className = 'scene'; el.id = id; el.innerHTML = html;
+  stage.appendChild(el);
+  scenes.push({ id, dur, el, update, color });
+}
+const BLOCK_COL = { health: '#2BA6DE', lifestyle: '#E8A33A', clarity: '#6C5FD3', skills: '#3DAA78' };
+
+// S1 hook: confused staffy
+scene('s1', 5.0, `
+  <svg viewBox="0 0 ${W} ${H}">${bg('#CDEBFA', bgDots('#9BD3F0'))}
+    <g filter="url(#boil)">
+      <g id="s1q1"><text x="235" y="930" font-family="Luckiest Guy" font-size="150" fill="#fff" ${ink} stroke-width="10" paint-order="stroke">?</text></g>
+      <g id="s1q2"><text x="790" y="860" font-family="Luckiest Guy" font-size="190" fill="#F2B33D" ${ink} stroke-width="10" paint-order="stroke">?</text></g>
+      <g id="s1q3"><text x="850" y="1120" font-family="Luckiest Guy" font-size="120" fill="#fff" ${ink} stroke-width="10" paint-order="stroke">?</text></g>
+      ${sitDogSVG('d1')}
+    </g>
+  </svg>
+  <div class="txt toon" id="s1a" style="top:170px; font-size:112px">${words("Most dog problems")}</div>
+  <div class="txt toon" id="s1b" style="top:420px; font-size:112px; color:#F2B33D">${words("aren’t training problems.")}</div>`,
+  (t) => {
+    const d = new SitDog('d1');
+    const land = p(t, .15, .45);
+    const drop = land < 1 ? -900 * (1 - easeInOut(land)) : 0;
+    const sq = t > .6 && t < 1.0 ? 1 - Math.sin(p(t, .6, .4) * Math.PI) * .18 : 1;
+    const tiltWave = t > 1.2 ? Math.sin((t - 1.2) * 2.6) * 14 : 0;
+    d.set(t, { x: 220, y: 950 + drop, s: 1.6, sy: sq, sx: 2 - sq, tilt: tiltWave, brow: t > 1.2 ? 'confused' : 'normal', mouth: t > 1.2 ? 'smile' : 'open', ears: t > 1.2 ? -.2 : 0, wag: .4 });
+    [['s1q1', 1.4, 290, 880], ['s1q2', 1.9, 860, 800], ['s1q3', 2.4, 890, 1080]].forEach(([id, s, x, y], i) =>
+      popSvg(E(id), t, s, x, y, .45, `translate(0 ${(Math.sin(t * 4 + i) * 12).toFixed(1)})`));
+    animWords(E('s1a'), t, .3, .12); animWords(E('s1b'), t, .9, .12);
+  });
+
+// S2 the real problems
+scene('s2', 5.4, `
+  <svg viewBox="0 0 ${W} ${H}">${bg('#FDE4B5', bgDots('#F6C876'))}
+    <g filter="url(#boil)">
+      <g id="b1"><rect x="50" y="620" width="310" height="300" rx="40" fill="#fff" ${ink}/>
+        <rect x="125" y="680" width="150" height="80" rx="14" fill="none" ${ink}/><rect x="275" y="703" width="16" height="34" rx="4" fill="#1F2036"/><rect x="137" y="692" width="34" height="56" rx="6" fill="#F25C5C"/>
+        <text x="205" y="860" text-anchor="middle" font-family="Luckiest Guy" font-size="44" fill="#1F2036">FULFILMENT</text></g>
+      <g id="b2"><rect x="385" y="540" width="310" height="300" rx="40" fill="#fff" ${ink}/>
+        <g transform="translate(540 680) scale(1.25)"><path d="M0,30 C-40,0 -60,-30 -35,-50 C-18,-62 -4,-52 0,-38 C4,-52 18,-62 35,-50 C60,-30 40,0 0,30 Z" fill="#F25C7A" ${ink}/><path d="M0,-38 L-8,-18 L6,-6 L-4,12 L0,30" fill="none" ${ink} stroke-width="6"/></g>
+        <text x="540" y="790" text-anchor="middle" font-family="Luckiest Guy" font-size="44" fill="#1F2036">RELATIONSHIP</text></g>
+      <g id="b3"><rect x="720" y="620" width="310" height="300" rx="40" fill="#fff" ${ink}/>
+        <path d="M795,680 h160 a18,18 0 0 1 18,18 v58 a18,18 0 0 1 -18,18 h-100 l-34,28 v-28 h-26 a18,18 0 0 1 -18,-18 v-58 a18,18 0 0 1 18,-18z" fill="#CDEBFA" ${ink}/>
+        <path d="M810,730 c20,-40 40,30 60,-10 s30,30 50,-10 s25,20 35,0" fill="none" ${ink} stroke-width="6"/>
+        <text x="875" y="860" text-anchor="middle" font-family="Luckiest Guy" font-size="35" fill="#1F2036">COMMUNICATION</text></g>
+      ${sitDogSVG('d2')}
+    </g>
+  </svg>
+  <div class="txt toon" id="s2a" style="top:150px; font-size:92px">${words("They’re usually")}</div>
+  <div class="txt toon" id="s2b" style="top:270px; font-size:92px; color:#F2B33D">${words("a missing piece:")}</div>
+  <div class="txt body" id="s2c" style="top:1720px; font-size:58px">Usually all three at once.</div>`,
+  (t) => {
+    const d = new SitDog('d2');
+    d.set(t, { x: 280, y: 1030, s: 1.3, brow: 'sad', mouth: 'frown', ears: -.6, wag: .1, tilt: Math.sin(t * 1.5) * 4 });
+    popSvg(E('b1'), t, .9, 205, 770, .45, `rotate(-6 205 770) translate(0 ${(Math.sin(t * 3) * 8).toFixed(1)})`);
+    popSvg(E('b2'), t, 1.4, 540, 690, .45, `translate(0 ${(Math.sin(t * 3 + 1) * 8).toFixed(1)})`);
+    popSvg(E('b3'), t, 1.9, 875, 770, .45, `rotate(6 875 770) translate(0 ${(Math.sin(t * 3 + 2) * 8).toFixed(1)})`);
+    animWords(E('s2a'), t, .2); animWords(E('s2b'), t, .45);
+    slideUp(E('s2c'), t, 2.8);
+  });
+
+// S3 four blocks drop in
+const BL = [['HEALTH', BLOCK_COL.health], ['LIFESTYLE', BLOCK_COL.lifestyle], ['CLARITY', BLOCK_COL.clarity], ['SKILLS', BLOCK_COL.skills]];
+scene('s3', 6.2, `
+  <svg viewBox="0 0 ${W} ${H}">${bg('#FBF4E6', bgDots('#EAD9B8'))}
+    <g filter="url(#boil)" id="s3shake">
+      <path d="M40,1745 C300,1735 700,1755 1040,1742" fill="none" ${ink}/>
+      ${BL.map(([n, c], i) => `<g id="blk${i}"><rect x="90" y="${1580 - i * 165}" width="560" height="150" rx="26" fill="${c}" ${ink}/>
+        <path d="M120,${1600 - i * 165} h60 M600,${1700 - i * 165} h24" ${ink} stroke="#fff" stroke-width="6" opacity=".6"/>
+        <text x="370" y="${1678 - i * 165}" text-anchor="middle" font-family="Luckiest Guy" font-size="72" fill="#fff" ${ink} stroke-width="9" paint-order="stroke">${n}</text></g>`).join('')}
+      ${sitDogSVG('d3')}
+      ${star(740, 1080, 44, '#F2B33D', 's3st1')}${star(1000, 1180, 30, '#fff', 's3st2')}
+    </g>
+  </svg>
+  <div class="txt toon" id="s3a" style="top:150px; font-size:96px">${words("So I don’t lead with obedience.")}</div>
+  <div class="txt body" id="s3b" style="top:420px; font-size:56px">I build the four foundations underneath it. <span style="color:#2BA6DE">In order.</span></div>`,
+  (t) => {
+    let shake = 0;
+    BL.forEach((_, i) => {
+      const s = 1.5 + i * .55, k = p(t, s, .38);
+      const y = k < 1 ? -1500 * Math.pow(1 - k, 2) : 0;
+      E('blk' + i).setAttribute('transform', `translate(0 ${y.toFixed(1)})`);
+      E('blk' + i).setAttribute('opacity', t >= s ? 1 : 0);
+      const since = t - (s + .38);
+      if (since > 0 && since < .22) shake = Math.max(shake, (1 - since / .22) * 14);
+    });
+    E('s3shake').setAttribute('transform', `translate(${(Math.sin(t * 90) * shake).toFixed(1)} ${(Math.cos(t * 70) * shake).toFixed(1)})`);
+    const d = new SitDog('d3');
+    const hop = BL.reduce((h, _, i) => { const q = p(t, 1.88 + i * .55, .3); return h + Math.sin(q * Math.PI) * 40; }, 0);
+    const done = t > 4.0;
+    d.set(t, { x: 650, y: 1255 - hop, s: 1.0, tilt: done ? -10 : -4, brow: done ? 'up' : 'normal', happy: done ? 1 : 0, ears: hop > 1 ? .5 : 0, wag: done ? 1.2 : .6 });
+    popSvg(E('s3st1'), t, 4.1, 740, 1080, .45, `rotate(${t * 40} 740 1080)`);
+    popSvg(E('s3st2'), t, 4.3, 1000, 1180, .45, `rotate(${-t * 50} 1000 1180)`);
+    animWords(E('s3a'), t, .2, .09);
+    slideUp(E('s3b'), t, .95);
+  });
+
+// Block scene template
+function blockScene(id, n, name, color, bgc, dots, props, dogFn, head, body, extra = '') {
+  scene(id, 5.4, `
+    <svg viewBox="0 0 ${W} ${H}">${bg(bgc, bgDots(dots))}
+      <g filter="url(#boil)">${props}</g>
+    </svg>
+    <div class="txt" id="${id}chip" style="top:120px"><span class="chip" style="background:${color}">BLOCK ${n}</span></div>
+    <div class="txt toon" id="${id}t" style="top:230px; font-size:170px">${name}</div>
+    <div class="card" id="${id}card" style="top:1500px"><h3>${head}</h3><p>${body}</p></div>${extra}`,
+    (t) => {
+      popEl(E(id + 'chip'), t, .25, .4, -8);
+      popEl(E(id + 't'), t, .4, .5, 10);
+      E(id + 't').style.color = '#fff';
+      slideUp(E(id + 'card'), t, 1.3, .55, 120);
+      dogFn(t);
+    }, color);
+}
+
+// S4 Health: eating then heart
+blockScene('s4', 1, 'HEALTH', BLOCK_COL.health, '#C9E8F8', '#9BD3F0', `
+  ${sitDogSVG('d4')}
+  <g id="bowl"><path d="M330,1400 L750,1400 L700,1490 L380,1490 Z" fill="#2BA6DE" ${ink}/><ellipse cx="540" cy="1400" rx="210" ry="30" fill="#8B5A2B" ${ink}/>
+    <circle cx="470" cy="1388" r="16" fill="#B87333" ${ink} stroke-width="4"/><circle cx="520" cy="1380" r="16" fill="#B87333" ${ink} stroke-width="4"/><circle cx="580" cy="1386" r="16" fill="#B87333" ${ink} stroke-width="4"/>
+    <text x="540" y="1470" text-anchor="middle" font-family="Luckiest Guy" font-size="50" fill="#fff">DOG</text></g>
+  ${heart(540, 700, 1.6, '#F25C7A', 'hHeart')}
+  <g id="tag1"><rect x="40" y="880" width="260" height="96" rx="48" fill="#fff" ${ink}/><text x="170" y="945" text-anchor="middle" font-family="Luckiest Guy" font-size="40" fill="#1F2036">✓ FOOD</text></g>
+  <g id="tag2"><rect x="790" y="820" width="250" height="96" rx="48" fill="#fff" ${ink}/><text x="915" y="885" text-anchor="middle" font-family="Luckiest Guy" font-size="40" fill="#1F2036">✓ REST</text></g>
+  <g id="tag3"><rect x="780" y="1080" width="270" height="96" rx="48" fill="#fff" ${ink}/><text x="915" y="1145" text-anchor="middle" font-family="Luckiest Guy" font-size="38" fill="#1F2036">✓ NO PAIN</text></g>`,
+  (t) => {
+    const eating = t > .9 && t < 2.5;
+    const munch = eating ? 70 + Math.abs(Math.sin(t * 12)) * 14 : 0;
+    const d = new SitDog('d4');
+    d.set(t, { x: 300, y: 830, s: 1.2, headY: munch, happy: eating || t > 2.6 ? 1 : 0, mouth: eating ? 'smile' : 'open', brow: t > 2.6 ? 'up' : 'normal', wag: eating ? 1.3 : 1, ears: t > 2.6 ? .3 : 0 });
+    popSvg(E('hHeart'), t, 2.65, 540, 700, .5, `translate(0 ${(Math.sin(t * 5) * 10).toFixed(1)})`);
+    popSvg(E('tag1'), t, 1.1, 170, 928); popSvg(E('tag2'), t, 1.6, 915, 868); popSvg(E('tag3'), t, 2.1, 915, 1128);
+  },
+  'Feels good in their body.', 'A dog in pain can’t learn. So I never train over it.');
+
+// S5 Lifestyle: running after ball
+blockScene('s5', 2, 'LIFESTYLE', BLOCK_COL.lifestyle, '#FDE0A8', '#F6C876', `
+  <g id="s5scroll">
+    ${[0, 1, 2, 3].map(i => `<g transform="translate(${i * 700} 0)"><path d="M120,1180 C100,1060 170,960 260,980 C350,960 400,1080 360,1180 Z" fill="#7BC47F" ${ink}/><rect x="228" y="1170" width="40" height="120" fill="#A0703F" ${ink}/>
+      <path d="M520,1290 l14,-30 l14,30 M560,1290 l12,-24 l12,24" fill="none" ${ink} stroke-width="5"/></g>`).join('')}
+  </g>
+  <path d="M-20,1300 C300,1290 700,1310 1100,1296" fill="none" ${ink}/>
+  <g id="speed"><path d="M40,1000 h140 M20,1080 h180 M60,1160 h120" fill="none" ${ink} stroke-width="8"/></g>
+  ${sideDogSVG('d5')}
+  <g id="ball"><circle cx="0" cy="0" r="44" fill="#C6E23A" ${ink}/><path d="M-40,-14 C-10,0 10,0 40,-14 M-40,14 C-10,0 10,0 40,14" fill="none" stroke="#fff" stroke-width="6"/></g>
+  <g id="pow1"><path d="M760,700 l40,-50 l20,50 l60,-30 l-10,60 l60,20 l-60,30 l20,60 l-60,-20 l-30,50 l-20,-60 l-60,10 l30,-50 l-50,-40 z" fill="#fff" ${ink}/><text x="820" y="790" text-anchor="middle" font-family="Luckiest Guy" font-size="46" fill="#E8A33A" ${ink} stroke-width="3">CHASE!</text></g>
+  <g id="pow2"><path d="M130,690 l40,-50 l20,50 l60,-30 l-10,60 l60,20 l-60,30 l20,60 l-60,-20 l-30,50 l-20,-60 l-60,10 l30,-50 l-50,-40 z" fill="#fff" ${ink}/><text x="190" y="780" text-anchor="middle" font-family="Luckiest Guy" font-size="46" fill="#E8A33A" ${ink} stroke-width="3">SNIFF!</text></g>
+  <g id="pow3"><path d="M450,590 l40,-50 l20,50 l60,-30 l-10,60 l60,20 l-60,30 l20,60 l-60,-20 l-30,50 l-20,-60 l-60,10 l30,-50 l-50,-40 z" fill="#fff" ${ink}/><text x="510" y="680" text-anchor="middle" font-family="Luckiest Guy" font-size="50" fill="#E8A33A" ${ink} stroke-width="3">PLAY!</text></g>`,
+  (t) => {
+    E('s5scroll').setAttribute('transform', `translate(${(-(t * 520) % 700).toFixed(1)} 0)`);
+    const d = new SideDog('d5');
+    d.set(t, { x: 20 + Math.sin(t * 1.3) * 30, y: 915, s: 1.18, speed: 2.6, amp: 34, bounce: 18 });
+    const bt = (t * 1.6) % 1;
+    E('ball').setAttribute('transform', `translate(${900 + Math.sin(t * 1.3) * 20} ${1250 - Math.abs(Math.sin(bt * Math.PI)) * 260}) rotate(${t * 400})`);
+    E('speed').setAttribute('opacity', .5 + .5 * Math.sin(t * 20));
+    popSvg(E('pow1'), t, 1.0, 820, 760, .4, `rotate(-8 820 760)`); popSvg(E('pow2'), t, 1.6, 190, 750, .4, `rotate(8 190 750)`); popSvg(E('pow3'), t, 2.2, 510, 650, .4);
+  },
+  'Fulfilled in their mind.', 'Meet their natural drives and the restlessness drops away.');
+
+// S6 Clarity: confused -> YES! -> lightbulb
+blockScene('s6', 3, 'CLARITY', BLOCK_COL.clarity, '#DCD8F7', '#B9B1EE', `
+  <g id="bub"><path d="M60,700 h380 a40,40 0 0 1 40,40 v120 a40,40 0 0 1 -40,40 h-230 l-70,70 v-70 h-80 a40,40 0 0 1 -40,-40 v-120 a40,40 0 0 1 40,-40z" fill="#fff" ${ink}/>
+    <text x="250" y="842" text-anchor="middle" font-family="Luckiest Guy" font-size="104" fill="#6C5FD3" ${ink} stroke-width="4">YES!</text></g>
+  <g id="bulb"><g id="rays"><path d="M760,640 v-60 M660,680 l-40,-40 M860,680 l40,-40 M630,780 h-56 M890,780 h56" fill="none" ${ink} stroke="#F2B33D" stroke-width="12"/></g>
+    <path d="M760,660 C700,660 670,710 680,760 C688,800 720,815 725,860 L795,860 C800,815 832,800 840,760 C850,710 820,660 760,660 Z" fill="#FFE066" ${ink}/>
+    <rect x="722" y="860" width="76" height="46" rx="10" fill="#B9B1EE" ${ink}/></g>
+  <g id="s6q"><text x="720" y="900" font-family="Luckiest Guy" font-size="170" fill="#fff" ${ink} stroke-width="10" paint-order="stroke">?</text></g>
+  ${sitDogSVG('d6')}`,
+  (t) => {
+    const got = t > 1.9;
+    const d = new SitDog('d6');
+    d.set(t, { x: 390, y: 930, s: 1.2, tilt: got ? 0 : 12 + Math.sin(t * 3) * 4, brow: got ? 'up' : 'confused', mouth: got ? 'open' : 'smile', ears: got ? .45 : -.1, happy: t > 2.6 && t < 3.6 ? 1 : 0, wag: got ? 1.3 : .3 });
+    const qk = t < 1.8 ? pop(t, .6, .4) : 1 - p(t, 1.8, .2);
+    E('s6q').setAttribute('opacity', clamp(qk)); E('s6q').setAttribute('transform', `translate(760 830) scale(${Math.max(0, qk)}) translate(-760 -830)`);
+    popSvg(E('bub'), t, 1.2, 250, 800, .45, `rotate(-4 250 800)`);
+    popSvg(E('bulb'), t, 2.0, 760, 780, .5);
+    E('rays').setAttribute('opacity', .5 + .5 * Math.sin(t * 14));
+  },
+  'Knows what you’re asking.', 'Confusion creates anxiety. Clarity creates confidence.');
+
+// S7 Skills: loose-lead walk past café
+blockScene('s7', 4, 'SKILLS', BLOCK_COL.skills, '#D3F0E1', '#A6DDC0', `
+  <g id="s7scroll">
+    <g><rect x="1100" y="820" width="420" height="470" fill="#FFF6E9" ${ink}/><path d="M1080,820 h460 l-30,90 h-400 z" fill="#E8A33A" ${ink}/>
+      <path d="M1130,910 q37,40 75,0 q37,40 75,0 q37,40 75,0 q37,40 75,0 q37,40 75,0" fill="#fff" ${ink} stroke-width="5"/>
+      <text x="1310" y="885" text-anchor="middle" font-family="Luckiest Guy" font-size="64" fill="#fff" ${ink} stroke-width="3">CAFÉ</text>
+      <rect x="1160" y="1000" width="140" height="160" fill="#CDEBFA" ${ink}/><rect x="1350" y="1060" width="110" height="230" fill="#26275F" ${ink}/></g>
+    <g><path d="M1800,1180 C1780,1060 1850,960 1940,980 C2030,960 2080,1080 2040,1180 Z" fill="#7BC47F" ${ink}/><rect x="1908" y="1170" width="40" height="120" fill="#A0703F" ${ink}/></g>
+    <g><rect x="2250" y="1180" width="260" height="30" rx="8" fill="#A0703F" ${ink}/><path d="M2270,1210 v70 M2490,1210 v70 M2260,1140 h240" fill="none" ${ink}/></g>
+    <g transform="translate(-200 0)"><path d="M600,1180 C580,1060 650,960 740,980 C830,960 880,1080 840,1180 Z" fill="#7BC47F" ${ink}/><rect x="708" y="1170" width="40" height="120" fill="#A0703F" ${ink}/></g>
+  </g>
+  <path d="M-20,1300 C300,1290 700,1310 1100,1296" fill="none" ${ink}/>
+  <path id="lead" d="" fill="none" stroke="#E8A33A" stroke-width="12" stroke-linecap="round"/>
+  <g id="hand"><path d="M-420,-520 L-18,-18" stroke="#1F2036" stroke-width="72" stroke-linecap="round"/><path d="M-420,-520 L-18,-18" stroke="#26275F" stroke-width="58" stroke-linecap="round"/><circle cx="0" cy="0" r="40" fill="#F2C6A0" ${ink}/><path d="M-22,-10 q22,18 44,0" fill="none" ${ink} stroke-width="5"/></g>
+  ${sideDogSVG('d7')}
+  <g id="k1"><rect x="60" y="560" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="210" y="625" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ RECALL</text></g>
+  <g id="k2"><rect x="390" y="620" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="540" y="685" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ LOOSE LEAD</text></g>
+  <g id="k3"><rect x="720" y="560" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="870" y="625" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ PLACE</text></g>`,
+  (t) => {
+    const scrollX = -(t * 360);
+    E('s7scroll').setAttribute('transform', `translate(${scrollX.toFixed(1)} 0)`);
+    const d = new SideDog('d7');
+    const dx = 300, dy = 950, s = 1.0;
+    d.set(t, { x: dx, y: dy, s, speed: 1.7, amp: 20, bounce: 8 });
+    const hx = 150 + Math.sin(t * 3.4) * 10, hy = 800 + Math.sin(t * 3.4 * 2) * 6;
+    E('hand').setAttribute('transform', `translate(${hx.toFixed(1)} ${hy.toFixed(1)})`);
+    const cx = dx + 525 * s, cy = dy + 218 * s;
+    E('lead').setAttribute('d', `M${hx},${hy} Q${(hx + cx) / 2},${Math.max(hy, cy) + 150} ${cx},${cy}`);
+    popSvg(E('k1'), t, 1.0, 210, 608); popSvg(E('k2'), t, 1.5, 540, 668); popSvg(E('k3'), t, 2.0, 870, 608);
+  },
+  'Listens in real life.', 'At the park, at the café and at home.');
+
+// S8 result: joyful staffy with hearts
+scene('s8', 5.4, `
+  <svg viewBox="0 0 ${W} ${H}">${bg('#FFE3EA', bgDots('#F7B6C6'))}
+    <g filter="url(#boil)">
+      <ellipse cx="540" cy="1560" rx="400" ry="70" fill="#F25C7A" ${ink}/>
+      ${[0, 1, 2, 3, 4, 5].map(i => heart(0, 0, .8, i % 2 ? '#F25C7A' : '#fff', 'fh' + i)).join('')}
+      ${sitDogSVG('d8')}
+      ${sparkle(230, 900, 40, 'sp1')}${sparkle(860, 980, 34, 'sp2')}${sparkle(820, 760, 26, 'sp3')}
+    </g>
+  </svg>
+  <div class="txt toon" id="s8a" style="top:150px; font-size:86px; color:#F2B33D">${words("Build all four…")}</div>
+  <div class="txt toon" id="s8b" style="top:290px; font-size:100px">${words("and you get a dog that’s a joy to live with.")}</div>
+  <div class="txt body" id="s8c" style="top:1700px; font-size:56px">Calm at home. Confident out in the world.</div>`,
+  (t) => {
+    const d = new SitDog('d8');
+    const wig = Math.sin(t * 6) * 4;
+    d.set(t, { x: 260, y: 900, s: 1.4, happy: 1, brow: 'up', ears: .3, wag: 1.6, tilt: wig, bodyRot: wig * .4 });
+    for (let i = 0; i < 6; i++) {
+      const cyc = ((t * .45 + i / 6) % 1);
+      const x = 160 + (i * 157) % 760 + Math.sin(t * 2 + i) * 30, y = 1500 - cyc * 900;
+      const el = E('fh' + i);
+      el.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${(.6 + .4 * Math.sin(cyc * Math.PI)).toFixed(2)})`);
+      el.setAttribute('opacity', t > .8 ? Math.sin(cyc * Math.PI).toFixed(2) : 0);
+    }
+    [['sp1', 1.2, 230, 900], ['sp2', 1.5, 860, 980], ['sp3', 1.8, 820, 760]].forEach(([id, s, x, y]) => popSvg(E(id), t, s, x, y, .4, `rotate(${Math.sin(t * 3) * 20} ${x} ${y})`));
+    animWords(E('s8a'), t, .2, .1); animWords(E('s8b'), t, .7, .09);
+    slideUp(E('s8c'), t, 2.4);
+  });
+
+// S9 social proof
+scene('s9', 6.0, `
+  <svg viewBox="0 0 ${W} ${H}">${bg('#26275F', bgDots('#3C3E8A'))}
+    <g filter="url(#boil)">
+      ${sitDogSVG('d9')}
+      <g id="s9card"><path d="M80,880 C300,870 780,874 1000,884 C1010,1100 1006,1350 996,1500 C780,1510 300,1506 86,1496 C74,1300 72,1080 80,880 Z" fill="#fff" ${ink}/>
+        ${[0, 1, 2, 3, 4].map(i => star(340 + i * 100, 970, 40, '#F2B33D')).join('')}</g>
+      <g id="paws"><ellipse cx="455" cy="886" rx="44" ry="26" fill="#6F8196" ${ink}/><ellipse cx="625" cy="886" rx="44" ry="26" fill="#6F8196" ${ink}/>
+        <path d="M440,880 v16 M470,880 v16 M610,880 v16 M640,880 v16" ${ink} stroke-width="4"/></g>
+    </g>
+  </svg>
+  <div class="txt toon" id="s9t" style="top:140px; font-size:88px">What owners say</div>
+  <div id="s9q" style="position:absolute; left:130px; right:130px; top:1040px; text-align:center; font-weight:800; font-size:50px; line-height:1.25; color:#1F2036">“Lyla’s confidence around other dogs and in following instructions has improved a lot. I didn’t feel judged once.”
+    <div style="margin-top:22px; font-size:38px; color:#6C5FD3">Alex C. &amp; Lyla the Malamute</div></div>
+  <div class="txt toon" id="s9n" style="top:1570px; font-size:130px; color:#F2B33D">100+</div>
+  <div class="txt body" id="s9m" style="top:1720px; font-size:50px; color:#fff">five-star reviews on Google &amp; Mad Paws</div>`,
+  (t) => {
+    const k = back(p(t, .3, .6));
+    E('s9card').setAttribute('transform', `translate(0 ${((1 - k) * 900).toFixed(1)}) rotate(-1.5 540 1190)`);
+    E('paws').setAttribute('transform', `translate(0 ${((1 - k) * 900).toFixed(1)})`);
+    const peek = back(p(t, 1.0, .6));
+    const d = new SitDog('d9');
+    d.set(t, { x: 320, y: 820 - peek * 210, s: 1.1, happy: t > 2.6 ? 1 : 0, brow: 'up', ears: .3, wag: 1, tilt: Math.sin(t * 2) * 6 });
+    E('paws').setAttribute('opacity', peek > .5 ? 1 : 0);
+    slideUp(E('s9q'), t, .9, .5, 60);
+    popEl(E('s9t'), t, .15, .45);
+    popEl(E('s9n'), t, 2.6, .45, -10); slideUp(E('s9m'), t, 2.9);
+  });
+
+// S10 CTA
+scene('s10', 7.0, `
+  <svg viewBox="0 0 ${W} ${H}">${bg('#FBF4E6', bgDots('#EAD9B8'))}
+    <g filter="url(#boil)">
+      ${sitDogSVG('d10')}
+      ${star(170, 1080, 46, '#F2B33D', 'cs1')}${star(910, 1010, 38, '#2BA6DE', 'cs2')}${sparkle(880, 1250, 30, 'cs3')}
+      <g id="ctaBox"><path d="M70,1370 C300,1360 780,1364 1010,1372 C1016,1480 1014,1580 1008,1660 C780,1668 300,1666 74,1658 C66,1560 64,1460 70,1370 Z" fill="#26275F" ${ink}/></g>
+    </g>
+  </svg>
+  <img id="logo" src="img/logo_crop.jpg" style="position:absolute; left:215px; top:90px; width:650px; mix-blend-mode:multiply">
+  <div class="txt toon" id="c1" style="top:560px; font-size:92px">${words("Build the blocks.")}</div>
+  <div class="txt toon" id="c2" style="top:670px; font-size:92px; color:#2BA6DE">${words("Live the balance.")}</div>
+  <div class="txt" id="c3" style="top:1400px; left:110px; right:110px; color:#fff">
+    <div style="font-family:'Luckiest Guy'; font-size:40px; color:#F2B33D; letter-spacing:.1em">START HERE</div>
+    <div style="font-weight:800; font-size:52px; line-height:1.15; margin-top:6px">Book an Initial Canine Success Assessment</div></div>
+  <div class="txt" id="c4" style="top:1700px">
+    <div style="font-family:'Luckiest Guy'; font-size:62px; color:#26275F; letter-spacing:.02em">canineconfidence.com.au</div>
+    <div style="font-weight:800; font-size:42px; color:#3B3C5C; margin-top:4px">0409 521 358 · North Brisbane</div></div>`,
+  (t) => {
+    const logoK = pop(t, .2, .55);
+    E('logo').style.opacity = clamp(p(t, .2, .15)); E('logo').style.transform = `scale(${logoK}) rotate(${(1 - clamp(logoK)) * -10}deg)`;
+    animWords(E('c1'), t, .8, .12); animWords(E('c2'), t, 1.2, .12);
+    const d = new SitDog('d10');
+    const jump = Math.max(0, Math.sin(p(t, 1.6, .5) * Math.PI)) * 60;
+    d.set(t, { x: 340, y: 860 - jump, s: 1.0, happy: t > 2.2 && (t % 2.4) < 1.2 ? 1 : 0, brow: 'up', ears: .3, wag: 1.5, tilt: Math.sin(t * 2.2) * 6 });
+    popSvg(E('cs1'), t, 2.0, 170, 1080, .4, `rotate(${t * 30} 170 1080)`); popSvg(E('cs2'), t, 2.2, 910, 1010, .4, `rotate(${-t * 30} 910 1010)`); popSvg(E('cs3'), t, 2.4, 880, 1250, .4);
+    const bk = back(p(t, 2.4, .5));
+    E('ctaBox').setAttribute('transform', `translate(540 1515) scale(${bk}) translate(-540 -1515)`);
+    popEl(E('c3'), t, 2.55, .45); slideUp(E('c4'), t, 3.0);
+  });
+
+// ---------- Timeline ----------
+const REVEAL = 0.45;
+let acc = 0;
+scenes.forEach((s, i) => { s.start = i === 0 ? 0 : acc - REVEAL; acc = s.start + s.dur; });
+scenes.forEach((s, i) => s.end = i < scenes.length - 1 ? scenes[i + 1].start + REVEAL : s.start + s.dur);
+const DURATION = scenes[scenes.length - 1].end;
+
+function seek(t) {
+  const seed = Math.floor(t * 8) % 6 + 1;
+  E('boilNoise').setAttribute('seed', seed);
+  E('boilNoiseT').setAttribute('seed', seed);
+  scenes.forEach((s, i) => {
+    const on = t >= s.start && t < s.end || (i === scenes.length - 1 && t >= s.start);
+    s.el.style.display = on ? 'block' : 'none';
+    if (!on) return;
+    const k = i === 0 ? 1 : easeInOut(p(t, s.start, REVEAL));
+    s.el.style.clipPath = k >= 1 ? 'none' : `circle(${(k * 1150).toFixed(1)}px at 540px 1000px)`;
+    s.el.style.zIndex = i;
+    s.update(t - s.start);
+  });
+}
+window.DURATION = DURATION; window.FPS = 30; window.seek = seek;
+window.setBlockImgsReady = Promise.resolve();
+if (!location.search.includes('render')) {
+  const t0 = performance.now();
+  (function loop() { seek(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })();
+} else seek(0);
+</script>
+</body>
+</html>

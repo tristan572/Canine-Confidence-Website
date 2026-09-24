@@ -1,25 +1,27 @@
-# Canine Confidence promo video
+# Canine Confidence cartoon promo
 
-`canine-confidence-promo-vertical.mp4` is 54 seconds long, 1080×1920 (9:16) at 30fps. It's made for Instagram and Facebook Reels, Stories, TikTok and YouTube Shorts.
+`canine-confidence-cartoon.mp4` is a 52-second animated cartoon, 1080×1920 (9:16) at 30fps. It's made for Instagram and Facebook Reels, Stories, TikTok and YouTube Shorts.
 
-The audio track is silent. Add a licensed track from the Instagram, TikTok or CapCut music library when you post.
+The whole video follows a hand-drawn blue staffy with a Canine Confidence blue collar. The lines wobble like a sketch, the paper has a texture, and scenes open with a circle reveal.
 
-## Script (on-screen text)
+The soundtrack is original. `soundtrack.py` synthesises it: a bouncy 120 BPM backing track plus pops, boings, thuds, whooshes and a lightbulb "ding", all timed to the animation. No samples or licensed music are used. If you'd prefer a trending track from the platform's library, mute the original audio when you post.
 
-| Time | Scene | Text |
+## Scenes
+
+| Time | Scene | What happens |
 |---|---|---|
-| 0–4.5s | Tug play | Most dog problems aren't training problems. |
-| 4.5–9s | Walking the path | They're fulfilment, relationship or communication problems. Usually all three at once. |
-| 9–15s | Block tower builds | So I don't lead with obedience. I build the four foundations underneath it. In order. |
-| 15–20s | Block 1: Health | Feels good in their body. Diet, sleep, and pain checked first. A dog in pain can't learn, so I never train over it. |
-| 20–25s | Block 2: Lifestyle | Fulfilled in their mind. Chase, sniff, tug, problem-solve. Meet your dog's natural drives and the restlessness drops away. |
-| 25–30s | Block 3: Clarity | Knows what you're asking. Clear markers, a calm lead, predictable rules. Confusion creates anxiety. Clarity creates confidence. |
-| 30–35s | Block 4: Skills | Listens in real life. Sit, recall, loose lead, place. Proofed at the park and the café as well as the kitchen. |
-| 35–40s | Tristan with dog | Build all four, and you get a dog that's a joy to live with. Calm at home. Confident out in the world. |
-| 40–47s | Review | "Lyla's confidence around other dogs and in following instructions has improved a lot. I didn't feel judged once." Alex C. & Lyla the Malamute. 100+ five-star reviews on Google & Mad Paws. |
-| 47–54s | Call to action | Build the blocks. Live the balance. Book an Initial Canine Success Assessment. canineconfidence.com.au · 0409 521 358 · North Brisbane |
+| 0–4.5s | Hook | The staffy drops in and tilts his head as question marks pop up. "Most dog problems aren't training problems." |
+| 4.5–9.5s | The real problems | The staffy looks sad. Three cards pop up: Fulfilment, Relationship, Communication. "Usually all three at once." |
+| 9.5–15s | The four blocks | "So I don't lead with obedience." Health, Lifestyle, Clarity and Skills crash down into a tower, the screen shakes, and the staffy hops with each landing. |
+| 15–20s | Block 1: Health | The staffy eats from his bowl, then a heart pops. Food ✓, Rest ✓, No pain ✓. "Feels good in their body. A dog in pain can't learn. So I never train over it." |
+| 20–25s | Block 2: Lifestyle | The staffy runs after a bouncing ball through the park. CHASE! SNIFF! PLAY! "Fulfilled in their mind." |
+| 25–30s | Block 3: Clarity | A confused head tilt, then "YES!", and a lightbulb pops. "Knows what you're asking. Confusion creates anxiety. Clarity creates confidence." |
+| 30–35s | Block 4: Skills | The staffy walks on a loose lead past a café. Recall ✓, Loose lead ✓, Place ✓. "Listens in real life." |
+| 35–40s | Result | A happy wiggle, floating hearts and sparkles. "Build all four… and you get a dog that's a joy to live with." |
+| 40–45.5s | Proof | The staffy peeks over Alex C.'s five-star review of Lyla. 100+ five-star reviews on Google & Mad Paws. |
+| 45.5–52.5s | Call to action | The logo pops in. "Build the blocks. Live the balance." Book an Initial Canine Success Assessment, canineconfidence.com.au, 0409 521 358, North Brisbane. |
 
-The copy comes from *The Four Building Blocks to a Balanced Dog*. The review is Alex C.'s Google review. "100+ five-star reviews" is 33 on Google plus 90+ on Mad Paws (`shared/social-proof.ts`).
+The copy comes from *The Four Building Blocks to a Balanced Dog*. "100+ five-star reviews" is 33 on Google plus 90+ on Mad Paws (`shared/social-proof.ts`).
 
 ## Suggested post caption
 
@@ -38,14 +40,21 @@ The copy comes from *The Four Building Blocks to a Balanced Dog*. The review is 
 >
 > #dogtrainingbrisbane #northbrisbane #balanceddogtraining #canineconfidence #brisbanedogs
 
-## Editing and re-rendering
+## Files
 
-All the text, timings and photos are in `promo.html`. Open it in a browser to watch a live preview.
+- `toon.html`: every scene, with its text, timing and animation. Open it in a browser to watch a live preview.
+- `dog.js`: the staffy character. It has two rigs, sitting (front-on) and side-on (walk/run), with controls for expressions.
+- `soundtrack.py`: generates `soundtrack.wav` to match the scene timings.
+- `render.mjs`: renders the frames to MP4 with Playwright and ffmpeg.
 
-To render a new MP4 you need Node, Playwright and ffmpeg:
+## Re-rendering
 
 ```bash
-npm i -D playwright            # once
-FFMPEG=/path/to/ffmpeg node render.mjs full canine-confidence-promo-vertical.mp4
-node render.mjs preview 5 20 50   # saves still frames at those seconds for a quick check
+npm i -D playwright                      # once; also needs ffmpeg, and numpy + scipy for audio
+node render.mjs preview 3 18 50          # still frames at those seconds, for a quick check
+FFMPEG=ffmpeg node render.mjs full video.mp4
+python3 soundtrack.py                    # writes soundtrack.wav
+ffmpeg -i video.mp4 -i soundtrack.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest canine-confidence-cartoon.mp4
 ```
+
+If you change the scene lengths in `toon.html`, update the `starts` times in `soundtrack.py` to match.

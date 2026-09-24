@@ -9,7 +9,7 @@ const times = process.argv.slice(3).map(Number);
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
-await page.goto('file://' + dir + '/promo.html?render', { waitUntil: 'networkidle' });
+await page.goto('file://' + dir + '/toon.html?render', { waitUntil: 'networkidle' });
 await page.evaluate(async () => { await document.fonts.ready; await window.setBlockImgsReady; });
 
 const shoot = async t => {
