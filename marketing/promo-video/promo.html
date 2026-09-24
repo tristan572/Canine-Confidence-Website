@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Canine Confidence Promo</title>
+<style>
+  @font-face { font-family: 'Fraunces'; src: url(fonts/fraunces.woff2) format('woff2'); font-weight: 100 900; }
+  @font-face { font-family: 'Manrope'; src: url(fonts/manrope.woff2) format('woff2'); font-weight: 200 800; }
+</style>
+<style>
+  :root {
+    --bg: #FBF8F3; --sand: #F4EEE4; --ink: #2A2B4A; --indigo: #26275F;
+    --sky: #2BA6DE; --amber: #E8A33A; --muted: #625F72;
+    --health: #2BA6DE; --lifestyle: #E8A33A; --clarity: #4B4FA8; --skills: #26275F;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+  body { font-family: 'Manrope', sans-serif; color: var(--ink); }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+  .bleed { position: absolute; inset: 0; overflow: hidden; }
+  .bleed img { position: absolute; inset: -2%; width: 104%; height: 104%; object-fit: cover; transform-origin: center; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,21,48,.10) 0%, rgba(20,21,48,.15) 40%, rgba(20,21,48,.88) 100%); }
+  .serif { font-family: 'Fraunces', serif; font-weight: 600; letter-spacing: 0; font-variation-settings: 'opsz' 36; }
+  .eyebrow { font-weight: 800; letter-spacing: .22em; text-transform: uppercase; font-size: 30px; }
+  .w { display: inline-block; will-change: transform, opacity; }
+  .lower { position: absolute; left: 80px; right: 80px; bottom: 240px; color: #fff; }
+  .big { font-size: 104px; line-height: 1.04; }
+  .mid { font-size: 76px; line-height: 1.1; }
+  .sub { font-size: 44px; line-height: 1.35; font-weight: 600; }
+
+  /* Block scenes */
+  .photo { position: absolute; left: 0; right: 0; top: 0; height: 1060px; overflow: hidden; border-radius: 0 0 64px 64px; }
+  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: center; }
+  .chip { display: inline-block; padding: 14px 30px; border-radius: 999px; color: #fff; font-weight: 800; letter-spacing: .2em; font-size: 28px; }
+  .blockText { position: absolute; left: 80px; right: 80px; top: 1130px; }
+  .blockTitle { font-size: 150px; line-height: 1; margin-top: 30px; }
+  .blockHead { font-size: 54px; font-weight: 800; margin-top: 26px; color: var(--ink); }
+  .blockBody { font-size: 40px; line-height: 1.45; margin-top: 26px; color: var(--muted); font-weight: 600; max-width: 700px; }
+
+  /* Tower */
+  .tower { position: absolute; display: flex; flex-direction: column-reverse; gap: 14px; }
+  .brick { border-radius: 22px; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 14px 30px rgba(38,39,95,.18); }
+  #introTower { left: 170px; width: 740px; top: 880px; }
+  #introTower .brick { height: 150px; padding: 0 50px; font-size: 54px; }
+  #introTower .brick span:last-child { font-size: 34px; opacity: .8; letter-spacing: .1em; }
+  #miniTower { right: 80px; bottom: 120px; width: 190px; gap: 10px; }
+  #miniTower .brick { height: 62px; padding: 0 20px; font-size: 22px; letter-spacing: .06em; justify-content: center; }
+
+  .quoteCard { position: absolute; left: 70px; right: 70px; top: 470px; background: #fff; border-radius: 48px; padding: 80px 70px; box-shadow: 0 30px 70px rgba(0,0,0,.25); }
+  .stars { color: var(--amber); font-size: 64px; letter-spacing: 10px; }
+  .quote { font-size: 58px; line-height: 1.3; margin-top: 34px; color: var(--ink); }
+  .who { margin-top: 44px; font-size: 36px; font-weight: 800; color: var(--indigo); }
+  .who small { display: block; font-size: 30px; font-weight: 600; color: var(--muted); margin-top: 8px; }
+
+  .cta { position: absolute; left: 80px; right: 80px; background: var(--indigo); color: #fff; border-radius: 40px; padding: 60px; text-align: center; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- S1: hook -->
+  <section class="scene" id="s1">
+    <div class="bleed"><img id="s1img" src="img/tug.jpg" style="object-position: 50% 50%"></div>
+    <div class="shade"></div>
+    <div class="lower">
+      <div class="serif big" id="s1a">Most dog problems aren’t training problems.</div>
+    </div>
+  </section>
+
+  <!-- S2 -->
+  <section class="scene" id="s2">
+    <div class="bleed"><img id="s2img" src="img/walk.jpg" style="object-position: 50% 40%"></div>
+    <div class="shade"></div>
+    <div class="lower">
+      <div class="serif mid" id="s2a">They’re fulfilment, relationship or communication problems.</div>
+      <div class="sub" id="s2b" style="margin-top:36px; color:#8FD3F2">Usually all three at once.</div>
+    </div>
+  </section>
+
+  <!-- S3: the four blocks -->
+  <section class="scene" id="s3" style="background: var(--bg)">
+    <div style="position:absolute; left:80px; right:80px; top:260px; text-align:center">
+      <div class="serif mid" id="s3a" style="color: var(--indigo)">So I don’t lead with obedience.</div>
+      <div class="sub" id="s3b" style="margin-top:34px; color: var(--muted)">I build the four foundations underneath it. In order.</div>
+    </div>
+    <div class="tower" id="introTower">
+      <div class="brick" style="background:var(--health)"><span>Health</span><span>01</span></div>
+      <div class="brick" style="background:var(--lifestyle)"><span>Lifestyle</span><span>02</span></div>
+      <div class="brick" style="background:var(--clarity)"><span>Clarity</span><span>03</span></div>
+      <div class="brick" style="background:var(--skills)"><span>Skills</span><span>04</span></div>
+    </div>
+    <div class="eyebrow" id="s3c" style="position:absolute; left:0; right:0; bottom:260px; text-align:center; color: var(--sky)">The Four Building Blocks<br>to a Balanced Dog</div>
+  </section>
+
+  <!-- S4-7: block scenes (filled by JS) -->
+  <section class="scene" id="blocks" style="background: var(--bg)">
+    <div class="photo"><img id="bImg" src="img/health.jpg"></div>
+    <div class="blockText">
+      <span class="chip" id="bChip">BLOCK 1</span>
+      <div class="serif blockTitle" id="bTitle">Health</div>
+      <div class="blockHead" id="bHead"></div>
+      <div class="blockBody" id="bBody"></div>
+    </div>
+    <div class="tower" id="miniTower">
+      <div class="brick" style="background:var(--health)">HEALTH</div>
+      <div class="brick" style="background:var(--lifestyle)">LIFESTYLE</div>
+      <div class="brick" style="background:var(--clarity)">CLARITY</div>
+      <div class="brick" style="background:var(--skills)">SKILLS</div>
+    </div>
+  </section>
+
+  <!-- S8: result -->
+  <section class="scene" id="s8">
+    <div class="bleed"><img id="s8img" src="img/portrait.jpg" style="object-position: 50% 30%"></div>
+    <div class="shade"></div>
+    <div class="lower">
+      <div class="eyebrow" id="s8e" style="color:#8FD3F2">Build all four</div>
+      <div class="serif" id="s8a" style="margin-top:30px; font-size:92px; line-height:1.06">And you get a dog that’s a joy to live with.</div>
+      <div class="sub" id="s8b" style="margin-top:36px">Calm at home. Confident out in the world.</div>
+    </div>
+  </section>
+
+  <!-- S9: proof -->
+  <section class="scene" id="s9" style="background: var(--indigo)">
+    <div class="bleed" style="opacity:.22"><img id="s9img" src="img/clarity.jpg" style="object-position: 50% 50%"></div>
+    <div class="eyebrow" id="s9e" style="position:absolute; top:300px; left:0; right:0; text-align:center; color:#8FD3F2">What owners say</div>
+    <div class="quoteCard" id="s9card">
+      <div class="stars">★★★★★</div>
+      <div class="serif quote">“Lyla’s confidence around other dogs and in following instructions has improved a lot. I didn’t feel judged once.”</div>
+      <div class="who">Alex C. &amp; Lyla the Malamute<small>3-week intensive</small></div>
+    </div>
+    <div id="s9f" style="position:absolute; left:0; right:0; bottom:300px; text-align:center; color:#fff">
+      <div class="serif" style="font-size:120px; line-height:1">100+</div>
+      <div class="sub" style="margin-top:14px; color:#CFE9F7">five-star reviews on Google &amp; Mad Paws</div>
+    </div>
+  </section>
+
+  <!-- S10: CTA -->
+  <section class="scene" id="s10" style="background: var(--bg)">
+    <img id="logo" src="img/logo_crop.jpg" style="position:absolute; left:140px; width:800px; top:260px; mix-blend-mode:multiply">
+    <div id="s10a" class="serif" style="position:absolute; left:80px; right:80px; top:920px; text-align:center; font-size:82px; line-height:1.1; color:var(--indigo)">Build the blocks.<br>Live the balance.</div>
+    <div class="cta" id="s10cta" style="top:1200px">
+      <div class="eyebrow" style="color:#8FD3F2; font-size:26px">Start here</div>
+      <div class="serif" style="font-size:60px; line-height:1.15; margin-top:20px">Book an Initial Canine Success Assessment</div>
+      <div class="sub" style="margin-top:26px; font-size:38px; color:#CFE9F7">60 minutes, in your home. A clear plan for your dog.</div>
+    </div>
+    <div id="s10b" style="position:absolute; left:0; right:0; bottom:120px; text-align:center">
+      <div style="font-size:48px; font-weight:800; color:var(--indigo)">canineconfidence.com.au</div>
+      <div style="font-size:36px; font-weight:700; color:var(--muted); margin-top:12px">0409 521 358 · North Brisbane</div>
+    </div>
+  </section>
+</div>
+
+<script>
+const FPS = 30;
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+const easeInOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c1 = 1.5, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const p = (t, s, d) => clamp((t - s) / d);
+const $ = id => document.getElementById(id);
+
+// Scene windows [start, end] in seconds
+const SC = {
+  s1: [0, 4.6], s2: [4.4, 9.4], s3: [9.2, 15.2], blocks: [15.0, 35.2],
+  s8: [35.0, 40.4], s9: [40.2, 47.2], s10: [47.0, 54.0]
+};
+const DURATION = 54.0;
+const FADE = 0.4;
+
+const BLOCKS = [
+  { n: 1, title: 'Health', color: 'var(--health)', img: 'img/health.jpg', pos: '55% 45%',
+    head: 'Feels good in their body.',
+    body: 'Diet, sleep, and pain checked first. A dog in pain can’t learn, so I never train over it.' },
+  { n: 2, title: 'Lifestyle', color: 'var(--lifestyle)', img: 'img/tug.jpg', pos: '45% 55%',
+    head: 'Fulfilled in their mind.',
+    body: 'Chase, sniff, tug, problem-solve. Meet your dog’s natural drives and the restlessness drops away.' },
+  { n: 3, title: 'Clarity', color: 'var(--clarity)', img: 'img/clarity.jpg', pos: '55% 50%',
+    head: 'Knows what you’re asking.',
+    body: 'Clear markers, a calm lead, predictable rules. Confusion creates anxiety. Clarity creates confidence.' },
+  { n: 4, title: 'Skills', color: 'var(--skills)', img: 'img/skills.jpg', pos: '45% 55%',
+    head: 'Listens in real life.',
+    body: 'Sit, recall, loose lead, place. Proofed at the park and the café as well as the kitchen.' },
+];
+const BLOCK_LEN = (SC.blocks[1] - SC.blocks[0]) / 4;
+
+// Split text into animatable words
+function splitWords(el) {
+  const words = el.textContent.trim().split(/\s+/);
+  el.innerHTML = words.map(w => `<span class="w">${w}</span>`).join(' ');
+  return [...el.querySelectorAll('.w')];
+}
+const words = {};
+['s1a', 's2a', 's3a', 's8a'].forEach(id => words[id] = splitWords($(id)));
+
+function revealWords(list, t, start, stagger = 0.07, dur = 0.5) {
+  list.forEach((w, i) => {
+    const k = easeOut(p(t, start + i * stagger, dur));
+    w.style.opacity = k;
+    w.style.transform = `translateY(${(1 - k) * 40}px)`;
+  });
+}
+function fadeUp(el, t, start, dur = 0.6, dist = 40) {
+  const k = easeOut(p(t, start, dur));
+  el.style.opacity = k;
+  el.style.transform = `translateY(${(1 - k) * dist}px)`;
+}
+function sceneOpacity(id, t) {
+  const [s, e] = SC[id];
+  if (t < s || t > e) return 0;
+  const inK = s === 0 ? 1 : p(t, s, FADE);
+  const outK = e >= DURATION ? 1 : 1 - p(t, e - FADE, FADE);
+  return Math.min(inK, outK);
+}
+function kenBurns(img, t, s, e, from = 1.0, to = 1.1) {
+  const k = p(t, s, e - s);
+  img.style.transform = `scale(${from + (to - from) * k})`;
+}
+
+let currentBlock = -1;
+function setBlock(i) {
+  if (i === currentBlock) return;
+  currentBlock = i;
+  const b = BLOCKS[i];
+  $('bImg').src = b.img;
+  $('bImg').style.objectPosition = b.pos;
+  $('bChip').textContent = 'BLOCK ' + b.n;
+  $('bChip').style.background = b.color;
+  $('bTitle').textContent = b.title;
+  $('bTitle').style.color = b.color === 'var(--lifestyle)' ? '#C9851F' : b.color;
+  $('bHead').textContent = b.head;
+  $('bBody').textContent = b.body;
+}
+
+function seek(t) {
+  for (const id in SC) $(id).style.opacity = sceneOpacity(id, t);
+
+  // S1
+  kenBurns($('s1img'), t, 0, 4.6, 1.12, 1.0);
+  revealWords(words.s1a, t, 0.4, 0.12, 0.6);
+
+  // S2
+  kenBurns($('s2img'), t, 4.4, 9.4, 1.0, 1.1);
+  revealWords(words.s2a, t, 4.8, 0.09, 0.55);
+  fadeUp($('s2b'), t, 6.9);
+
+  // S3
+  revealWords(words.s3a, t, 9.5, 0.08, 0.5);
+  fadeUp($('s3b'), t, 10.4);
+  [...$('introTower').children].forEach((br, i) => {
+    const k = p(t, 11.3 + i * 0.45, 0.6);
+    const e = back(k);
+    br.style.opacity = clamp(k * 3);
+    br.style.transform = `translateY(${(1 - e) * -500}px)`;
+  });
+  fadeUp($('s3c'), t, 13.4);
+
+  // Blocks
+  if (t >= SC.blocks[0] && t <= SC.blocks[1]) {
+    const local = t - SC.blocks[0];
+    const i = Math.min(3, Math.floor(local / BLOCK_LEN));
+    setBlock(i);
+    const bs = SC.blocks[0] + i * BLOCK_LEN;
+    const lt = t - bs;
+    // photo: slide + zoom per block, quick wipe between blocks
+    const wipe = i === 0 ? 1 : easeInOut(p(lt, 0, 0.5));
+    $('bImg').style.transform = `scale(${1.12 - 0.08 * p(lt, 0, BLOCK_LEN)})`;
+    $('bImg').parentElement.style.clipPath = `inset(0 ${(1 - wipe) * 100}% 0 0 round 0 0 64px 64px)`;
+    fadeUp($('bChip'), lt, 0.25, 0.5, 30);
+    fadeUp($('bTitle'), lt, 0.4, 0.6, 50);
+    fadeUp($('bHead'), lt, 0.8, 0.6, 30);
+    fadeUp($('bBody'), lt, 1.3, 0.7, 30);
+    [...$('miniTower').children].forEach((br, j) => {
+      if (j < i) { br.style.opacity = 1; br.style.transform = 'none'; }
+      else if (j === i) {
+        const k = p(lt, 0.2, 0.6);
+        br.style.opacity = clamp(k * 3);
+        br.style.transform = `translateY(${(1 - back(k)) * -260}px)`;
+      } else { br.style.opacity = 0.12; br.style.transform = 'none'; }
+    });
+  }
+
+  // S8
+  kenBurns($('s8img'), t, 35, 40.4, 1.0, 1.1);
+  fadeUp($('s8e'), t, 35.4);
+  revealWords(words.s8a, t, 35.8, 0.1, 0.55);
+  fadeUp($('s8b'), t, 37.6);
+
+  // S9
+  kenBurns($('s9img'), t, 40.2, 47.2, 1.05, 1.15);
+  fadeUp($('s9e'), t, 40.5);
+  {
+    const k = back(p(t, 40.8, 0.8));
+    $('s9card').style.opacity = clamp(p(t, 40.8, 0.4));
+    $('s9card').style.transform = `translateY(${(1 - k) * 120}px) scale(${0.94 + 0.06 * k})`;
+  }
+  fadeUp($('s9f'), t, 43.8);
+
+  // S10
+  {
+    const k = back(p(t, 47.3, 0.9));
+    $('logo').style.opacity = clamp(p(t, 47.3, 0.5));
+    $('logo').style.transform = `scale(${0.85 + 0.15 * k})`;
+  }
+  fadeUp($('s10a'), t, 48.3);
+  fadeUp($('s10cta'), t, 49.2, 0.7, 60);
+  fadeUp($('s10b'), t, 50.2);
+}
+
+window.DURATION = DURATION;
+window.FPS = FPS;
+window.seek = seek;
+window.setBlockImgsReady = Promise.all(BLOCKS.map(b => new Promise(r => { const i = new Image(); i.onload = r; i.onerror = r; i.src = b.img; })));
+
+// Live preview when opened in a browser (not during rendering)
+if (!location.search.includes('render')) {
+  const t0 = performance.now();
+  (function loop() { seek(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); })();
+} else seek(0);
+</script>
+</body>
+</html>
