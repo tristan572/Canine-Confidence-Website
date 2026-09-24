@@ -82,7 +82,7 @@ export default function AboutPage() {
                   <div className="text-sm text-medium-grey">Started Training</div>
                 </Card>
                 <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
-                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">North Brisbane</div>
+                  <div className="mb-2 text-xl font-bold leading-tight text-primary-blue sm:text-3xl">North Brisbane</div>
                   <div className="text-sm text-medium-grey">Local Expert</div>
                 </Card>
               </div>
