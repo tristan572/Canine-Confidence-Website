@@ -160,7 +160,7 @@ export default function ContactPage() {
                       </DialogTrigger>
                       <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
                         <DialogTitle>Free Phone Consultation</DialogTitle>
-                        <DialogDescription>Schedule a complimentary 15-minute phone consultation for personalised advice and recommendations.</DialogDescription>
+                        <DialogDescription>Schedule a complimentary phone consultation for personalised advice and recommendations.</DialogDescription>
                         <ConsultationForm />
                       </DialogContent>
                     </Dialog>
@@ -212,7 +212,7 @@ export default function ContactPage() {
       </section>
 
       {/* Social Media Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-blue to-blue-700">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-gradient-to-br from-primary-blue to-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
@@ -278,7 +278,7 @@ export default function ContactPage() {
       </section>
 
       {/* Ready to Start Section */}
-      <section className="py-16 bg-primary-blue">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-16 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-white">Still thinking it over?</h2>

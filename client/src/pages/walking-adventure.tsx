@@ -19,7 +19,7 @@ export default function WalkingAdventurePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
-              Walking and adventure
+              Adventure and training
             </p>
             <h1 className="mb-5 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
               Your dog's walk should not be the most stressful part of your day
@@ -92,7 +92,7 @@ export default function WalkingAdventurePage() {
         </div>
       </section>
 
-      <section className="bg-primary-blue py-16 text-center text-white">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold">Start enjoying the walk again</h2>
           <p className="mb-7 text-lg text-blue-100">

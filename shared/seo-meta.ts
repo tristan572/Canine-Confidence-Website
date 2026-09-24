@@ -12,7 +12,7 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/": {
     title: "Dog Training North Brisbane | Canine Confidence",
     description:
-      "Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity and practical coaching. Free 15-min consult.",
+      "Dog training on Brisbane's Northside. I help owners build calmer homes and stronger bonds using play, clarity and practical coaching. Free phone consult.",
     canonicalPath: "",
   },
   "/puppy": {
@@ -72,7 +72,7 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/contact": {
     title: "Contact Canine Confidence | North Brisbane Dog Trainer",
     description:
-      "Got a dog that pulls, jumps, or won't come back? Let's talk. Book a free 15-minute consult with Canine Confidence. Your local North Brisbane dog trainer.",
+      "Got a dog that pulls, jumps, or won't come back? Let's talk. Book a free phone consult with Canine Confidence. Your local North Brisbane dog trainer.",
     canonicalPath: "/contact",
   },
   "/faq": {

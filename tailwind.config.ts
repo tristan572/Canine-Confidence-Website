@@ -5,12 +5,51 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Manrope", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        quote: ["Fraunces", "Georgia", "serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // Brand colours ("Warm Professional"): logo indigo + sky on warm neutrals.
+        navy: "#1F2159",
+        "sky-deep": "#0A6A97", // sky dark enough for small text on light grounds
+        "sky-brand": "#2BA6DE", // logo sky: fills and large text only
+        sand: "#F4EEE4",
+        cream: "#FBF8F3",
+        sun: "#E39A2D", // stars and small highlights
+        // The pages use Tailwind's blue/gray utilities heavily. These scales are
+        // retuned to the brand so every page follows the palette without
+        // rewriting its markup: light blues become sand, mid/dark blues become
+        // the logo indigo, and grays are warmed.
+        blue: {
+          50: "#F4EEE4",
+          100: "#E7DFD1",
+          200: "#D3C8B5",
+          300: "#8FD3F2",
+          400: "#2BA6DE",
+          500: "#0A6A97",
+          600: "#26275F",
+          700: "#1F2159",
+          800: "#1A1B4B",
+          900: "#16173F",
+        },
+        gray: {
+          50: "#FBF8F3",
+          100: "#F4EEE4",
+          200: "#E7DFD1",
+          300: "#D3C8B5",
+          400: "#A39D93",
+          500: "#6B6878",
+          600: "#625F72",
+          700: "#4D4C62",
+          800: "#3A3A55",
+          900: "#2A2B4A",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

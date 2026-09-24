@@ -19,9 +19,9 @@ export default function BlogCard({ post }: BlogCardProps) {
   };
 
   return (
-    <Card className="bg-light-grey card-hover border border-gray-100">
+    <Card className="h-full overflow-hidden rounded-2xl border border-border bg-white card-hover">
       {post.imageUrl && (
-        <div className="w-full bg-gray-100 rounded-t-lg overflow-hidden" style={{ aspectRatio: '400/192' }}>
+        <div className="w-full bg-sand overflow-hidden" style={{ aspectRatio: '400/192' }}>
           <img
             src={post.imageUrl}
             alt={post.title}
@@ -41,10 +41,10 @@ export default function BlogCard({ post }: BlogCardProps) {
           <Clock className="w-4 h-4 mr-1" />
           <span>{post.readTime}</span>
         </div>
-        <h3 className="text-xl font-semibold text-charcoal mb-3">{post.title}</h3>
+        <h3 className="text-xl font-extrabold leading-snug text-charcoal mb-3">{post.title}</h3>
         <p className="text-medium-grey mb-4">{post.excerpt}</p>
         <Link to={`/blog/${post.slug}`}>
-          <Button variant="ghost" className="text-primary-blue hover:text-secondary-blue p-0 font-medium">
+          <Button variant="ghost" className="text-primary hover:text-sky-deep hover:bg-transparent p-0 font-bold">
             Read More →
           </Button>
         </Link>

@@ -56,26 +56,24 @@ export default function MethodPage() {
           />
         </div>
       </section>
-      <section className="bg-gray-700 py-16 lg:py-24">
+      <section className="bg-sand py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-14 max-w-3xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-blue-200">
+            <p className="eyebrow mb-3">
               The way I train
             </p>
-            <h2 className="text-4xl font-bold leading-tight text-white lg:text-5xl">
+            <h2 className="text-4xl font-extrabold leading-tight text-charcoal lg:text-5xl">
               Six things I will not compromise on.
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-x-16 md:grid-cols-2 md:gap-y-0">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {principles.map(({ title, text }, index) => (
-              <article
-                key={title}
-                className={`border-t border-white/20 py-8 lg:py-10 ${
-                  index % 2 === 1 ? "md:mt-12" : ""
-                }`}
-              >
-                <h3 className="mb-4 text-3xl font-bold text-white lg:text-4xl">{title}</h3>
-                <p className="max-w-xl text-lg leading-relaxed text-gray-300">{text}</p>
+              <article key={title} className="point-card lg:p-8">
+                <p className="mb-4 text-3xl font-extrabold text-sky-deep">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mb-3 text-2xl font-extrabold text-charcoal lg:text-3xl">{title}</h3>
+                <p className="text-lg leading-relaxed text-medium-grey">{text}</p>
               </article>
             ))}
           </div>

@@ -108,10 +108,14 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
+  // ALWAYS serve the app on port 5000 in production: Railway routes traffic to
+  // 5000, and honouring Railway's own PORT variable breaks the site (see
+  // 009b30a "Restore Railway production port"). This serves both the API and
+  // the client. DEV_PORT is a local-development-only override, because macOS
+  // AirPlay Receiver also listens on 5000.
+  const devPort =
+    process.env.NODE_ENV === "development" ? Number(process.env.DEV_PORT) : NaN;
+  const port = Number.isInteger(devPort) && devPort > 0 ? devPort : 5000;
   server.listen({
     port,
     host: "0.0.0.0",

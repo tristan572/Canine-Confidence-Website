@@ -146,7 +146,7 @@ export default function LocalResourcesPage() {
       </section>
 
       {/* Partnership Banner */}
-      <section className="bg-primary-blue py-10">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Are You a Local Business?</h2>
           <p className="text-blue-100 text-lg mb-0">
@@ -238,7 +238,7 @@ export default function LocalResourcesPage() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-primary-blue text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-primary-blue text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-900 transition-colors"
           >
             Recommend a Business
           </a>

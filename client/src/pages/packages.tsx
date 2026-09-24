@@ -331,7 +331,7 @@ export default function PackagesPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-primary-blue content-visibility-auto">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue content-visibility-auto">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">

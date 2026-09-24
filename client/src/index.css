@@ -2,65 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted Inter font for faster loading */
+/* Self-hosted fonts for faster loading.
+   Manrope (variable, 400–800) is the site font; Fraunces italic is used only
+   for review quotes (`font-quote italic`). */
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/attached_assets/manrope-latin-wght.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('/attached_assets/inter-latin-400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/attached_assets/inter-latin-500.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/attached_assets/inter-latin-600.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/attached_assets/inter-latin-700.woff2') format('woff2');
+  src: url('/attached_assets/fraunces-latin-400-italic.woff2') format('woff2');
 }
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 219 14% 25%; /* #374151 - charcoal */
-  --muted: 210 40% 96%; /* #F9FAFB - light-grey */
-  --muted-foreground: 215 14% 42%; /* #6B7280 - medium-grey */
+  /* "Warm Professional" palette — colours taken from the logo (indigo + sky)
+     on a warm off-white ground. */
+  --background: 36 50% 97%; /* #FBF8F3 - warm off-white */
+  --foreground: 238 28% 23%; /* #2A2B4A - ink */
+  --muted: 37 42% 93%; /* #F4EEE4 - sand */
+  --muted-foreground: 248 8% 41%; /* #625F72 */
   --popover: 0 0% 100%;
-  --popover-foreground: 219 14% 25%;
+  --popover-foreground: 238 28% 23%;
   --card: 0 0% 100%;
-  --card-foreground: 219 14% 25%;
-  --border: 214 32% 91%; /* #E5E7EB */
-  --input: 214 32% 91%;
-  --primary: 214 90% 54%; /* #2563EB - primary-blue */
-  --primary-foreground: 214 100% 99%; /* #FEFEFF */
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 219 14% 25%;
-  --accent: 214 95% 93%; /* #DBEAFE - light-blue */
-  --accent-foreground: 214 90% 54%;
-  --destructive: 0 84% 60%;
+  --card-foreground: 238 28% 23%;
+  --border: 38 33% 86%; /* #E7DFD1 */
+  --input: 38 26% 77%; /* #D3C8B5 */
+  --primary: 239 43% 26%; /* #26275F - logo indigo */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 37 42% 93%;
+  --secondary-foreground: 239 43% 26%;
+  --accent: 37 42% 93%; /* sand */
+  --accent-foreground: 239 43% 26%;
+  --destructive: 0 72% 45%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 214 90% 54%;
-  --radius: 0.5rem;
-  --chart-1: 214 90% 54%;
-  --chart-2: 214 70% 44%;
-  --chart-3: 214 50% 34%;
-  --chart-4: 214 30% 24%;
-  --chart-5: 214 20% 14%;
+  --ring: 199 73% 52%; /* #2BA6DE - logo sky */
+  --radius: 0.75rem;
+  --chart-1: 239 43% 26%;
+  --chart-2: 199 73% 52%;
+  --chart-3: 36 79% 55%;
+  --chart-4: 199 88% 32%;
+  --chart-5: 238 46% 23%;
 }
 
 .dark {
@@ -92,66 +80,78 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-extrabold tracking-tight;
     text-wrap: balance;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply bg-primary text-primary-foreground shadow-sm hover:bg-blue-900 hover:shadow-md motion-safe:hover:-translate-y-0.5 px-6 py-3 rounded-[10px] font-bold transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply border-2 border-primary text-primary hover:bg-accent px-6 py-3 rounded-lg font-medium transition-colors;
+    @apply border-[1.5px] border-input bg-transparent text-primary hover:border-primary hover:bg-sand hover:text-primary px-6 py-3 rounded-[10px] font-bold transition-all duration-200;
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--background)) 100%);
+    background-color: hsl(var(--background));
   }
 
   .card-hover {
     @apply hover:shadow-lg transition-shadow duration-200;
   }
 
+  /* White card on a sand section for non-clickable points. No hover effect:
+     site rule is that only clickable things react to the mouse. */
+  .point-card {
+    @apply rounded-2xl border border-border bg-white p-7 shadow-sm;
+  }
+
+  /* Small uppercase label above section headings */
+  .eyebrow {
+    @apply text-sm font-extrabold uppercase tracking-[0.12em] text-sky-deep;
+  }
+
+  /* Legacy colour helpers, kept so existing pages pick up the new palette. */
   .text-charcoal {
-    color: hsl(219 14% 25%);
+    color: #1F2159;
   }
 
   .bg-charcoal {
-    background-color: hsl(219 14% 25%);
+    background-color: #1F2159;
   }
 
   .text-medium-grey {
-    color: hsl(215 14% 42%);
+    color: #4D4C62;
   }
 
   .bg-light-grey {
-    background-color: hsl(210 40% 96%);
+    background-color: #F4EEE4;
   }
 
   .bg-light-blue {
-    background-color: hsl(214 95% 93%);
+    background-color: #F4EEE4;
   }
 
   .text-primary-blue {
-    color: hsl(214 90% 54%);
+    color: #0A6A97;
   }
 
   .bg-primary-blue {
-    background-color: hsl(214 90% 54%);
+    background-color: #26275F;
   }
 
   .bg-secondary-blue {
-    background-color: hsl(214 70% 44%);
+    background-color: #1F2159;
   }
 
   .border-primary-blue {
-    border-color: hsl(214 90% 54%);
+    border-color: #26275F;
   }
 
   /* Performance optimization: defer rendering of off-screen sections */

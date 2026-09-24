@@ -192,7 +192,7 @@ export default function NorthgatePage() {
 
               <div className="pt-4">
                 <p className="text-medium-grey mb-4">
-                  See current options on my <Link href="/walking-adventure" className="text-primary-blue hover:underline font-semibold">Walking &amp; Adventure page</Link>.
+                  See current options on my <Link href="/walking-adventure" className="text-primary-blue hover:underline font-semibold">Adventure &amp; Training page</Link>.
                 </p>
                 <Button 
                   onClick={() => setShowWalkTrainDialog(true)}
@@ -473,7 +473,7 @@ export default function NorthgatePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-blue">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">

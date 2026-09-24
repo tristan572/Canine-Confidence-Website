@@ -44,7 +44,7 @@ export function AssessmentButton({
 
 export function ConsultationButton({
   className = "",
-  label = "Free 15-min Consult",
+  label = "Free Phone Consult",
   showIcon = true,
 }: {
   className?: string;

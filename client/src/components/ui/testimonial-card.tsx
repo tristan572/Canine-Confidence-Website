@@ -14,22 +14,22 @@ export default function TestimonialCard({ testimonial, excerpt }: TestimonialCar
       <Star
         key={i}
         aria-hidden="true"
-        className={`w-6 h-6 ${
-          i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+        className={`w-5 h-5 ${
+          i < rating ? "fill-sun text-sun" : "text-gray-300"
         }`}
       />
     ));
   };
 
   return (
-    <Card className="bg-gradient-to-br from-white to-blue-50/30 border-2 border-primary-blue/10 shadow-sm">
+    <Card className="h-full rounded-2xl border border-border bg-white shadow-sm">
       <CardContent className="p-6 sm:p-8">
         <div className="flex items-center justify-between mb-6">
           <div className="flex gap-1" role="img" aria-label={`${testimonial.rating} out of 5 stars`}>{renderStars(testimonial.rating)}</div>
-          <Quote aria-hidden="true" className="w-10 h-10 text-primary-blue/20" />
+          <Quote aria-hidden="true" className="w-9 h-9 text-sky-brand/30" />
         </div>
         
-        <blockquote className="text-gray-800 mb-6 text-lg leading-relaxed">
+        <blockquote className="mb-6 font-quote text-xl italic leading-relaxed text-foreground sm:text-2xl">
           “{validExcerpt ?? testimonial.reviewText}”
         </blockquote>
         
@@ -41,7 +41,7 @@ export default function TestimonialCard({ testimonial, excerpt }: TestimonialCar
             <blockquote className="mt-3 whitespace-pre-line leading-relaxed text-gray-800">“{testimonial.reviewText}”</blockquote>
           </details>
         )}
-        <div className="border-t-2 border-primary-blue/10 pt-5">
+        <div className="border-t border-border pt-5">
           <div className="flex flex-wrap justify-between items-start gap-3">
             <div>
               <div className="font-bold text-charcoal text-lg">

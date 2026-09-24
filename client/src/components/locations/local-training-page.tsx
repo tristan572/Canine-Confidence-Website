@@ -43,13 +43,13 @@ const servicePaths = [
   },
   {
     href: "/puppy",
-    label: "Puppy Training",
+    label: "Puppy Raising",
     text: "Private in-home coaching for house training, socialisation, communication and the practical skills a young dog needs.",
     note: "The Confident Start Program can be booked directly.",
   },
   {
     href: "/walking-adventure",
-    label: "Walking & Adventure",
+    label: "Adventure & Training",
     text: "Trainer-led walks, purposeful adventures and reliable support when your dog needs exercise, enrichment or outdoor skill work.",
     note: "Adult training starts with an assessment. Local Walk availability starts with a free phone consult.",
   },
@@ -137,7 +137,7 @@ export default function LocalTrainingPage({
         </div>
       </section>
 
-      <section className="bg-charcoal py-16 text-white lg:py-20">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-charcoal py-16 text-white lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8">
           <div>
             <h2 className="mb-4 text-3xl font-bold lg:text-4xl">{fitHeading}</h2>
@@ -196,7 +196,7 @@ export default function LocalTrainingPage({
             <li className="rounded-2xl border border-blue-100 bg-blue-50 p-6">
               <p className="mb-1 text-sm font-bold uppercase tracking-[0.12em] text-primary-blue">Step 1</p>
               <h3 className="mb-2 text-xl font-bold text-charcoal">Talk through what you need</h3>
-              <p className="text-medium-grey">Use the free 15-minute phone consult if you are unsure which service fits.</p>
+              <p className="text-medium-grey">Use the free phone consult if you are unsure which service fits.</p>
             </li>
             <li className="rounded-2xl border border-blue-100 bg-blue-50 p-6">
               <p className="mb-1 text-sm font-bold uppercase tracking-[0.12em] text-primary-blue">Step 2</p>
@@ -226,7 +226,7 @@ export default function LocalTrainingPage({
         </div>
       </section>
 
-      <section className="bg-primary-blue py-16 text-center text-white">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <h2 className="mb-4 text-3xl font-bold">Ready to make daily life with your dog easier?</h2>
           <p className="mb-7 text-lg text-blue-100">

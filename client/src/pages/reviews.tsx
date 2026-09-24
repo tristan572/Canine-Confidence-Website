@@ -63,7 +63,7 @@ export default function ReviewsPage() {
           )}
         </div>
       </section>
-      <section className="bg-primary-blue py-16 text-center text-white">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <h2 className="mb-3 text-3xl font-bold">Want the kind of change these owners describe?</h2>
         <p className="mx-auto mb-7 max-w-2xl px-4 text-lg text-blue-100">
           Start with an assessment and get a plan built around your dog, your

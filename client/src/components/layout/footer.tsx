@@ -8,13 +8,13 @@ import { serviceAreas } from "@/config/locations";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-600 text-white py-12">
+    <footer className="bg-navy text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr_1fr_1fr] gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="bg-white rounded-lg px-3 py-2 inline-flex">
+              <div className="bg-white rounded-xl px-3 py-2 inline-flex">
                 <img
                   src={logoImage}
                   alt="Canine Confidence logo"
@@ -22,8 +22,9 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-white">
-              Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
+            <p className="font-quote text-lg italic leading-snug text-white">
+              <span className="block">Calmer homes. Stronger bonds.</span>
+              <span className="block whitespace-nowrap">Dogs that are fulfilled and thriving.</span>
             </p>
             <div className="mt-6">
               <h4 className="text-white font-semibold mb-3">Follow Me</h4>
@@ -34,7 +35,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Visit my Facebook page"
                   data-testid="link-facebook"
-                  className="bg-primary-blue hover:bg-blue-700 p-3 rounded-lg transition-colors"
+                  className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors"
                 >
                   <Facebook className="h-6 w-6 text-white" />
                 </a>
@@ -44,7 +45,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Visit my Instagram page"
                   data-testid="link-instagram"
-                  className="bg-primary-blue hover:bg-blue-700 p-3 rounded-lg transition-colors"
+                  className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors"
                 >
                   <Instagram className="h-6 w-6 text-white" />
                 </a>
@@ -61,7 +62,7 @@ export default function Footer() {
                   <li key={area.slug}>
                     <Link
                       href={area.href ?? area.slug}
-                      className="text-white hover:text-primary-blue transition-colors"
+                      className="text-white hover:text-[#8FD3F2] transition-colors"
                     >
                       {area.name}
                     </Link>
@@ -81,35 +82,35 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/puppy" className="text-white hover:text-primary-blue transition-colors">Puppy Training</Link></li>
-              <li><Link href="/behaviour-obedience" className="text-white hover:text-primary-blue transition-colors">Behaviour &amp; Obedience</Link></li>
-              <li><Link href="/walking-adventure" className="text-white hover:text-primary-blue transition-colors">Walking &amp; Adventure</Link></li>
-              <li><Link href="/method" className="text-white hover:text-primary-blue transition-colors">Method</Link></li>
-              <li><Link href="/reviews" className="text-white hover:text-primary-blue transition-colors">Reviews</Link></li>
+              <li><Link href="/puppy" className="text-white hover:text-[#8FD3F2] transition-colors">Puppy Raising</Link></li>
+              <li><Link href="/behaviour-obedience" className="text-white hover:text-[#8FD3F2] transition-colors">Behaviour &amp; Obedience</Link></li>
+              <li><Link href="/walking-adventure" className="text-white hover:text-[#8FD3F2] transition-colors">Adventure &amp; Training</Link></li>
+              <li><Link href="/method" className="text-white hover:text-[#8FD3F2] transition-colors">Method</Link></li>
+              <li><Link href="/reviews" className="text-white hover:text-[#8FD3F2] transition-colors">Reviews</Link></li>
               <li>
-                <Link href="/about" className="text-white hover:text-primary-blue transition-colors">
+                <Link href="/about" className="text-white hover:text-[#8FD3F2] transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-white hover:text-primary-blue transition-colors">
+                <Link href="/blog" className="text-white hover:text-[#8FD3F2] transition-colors">
                   Training Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-white hover:text-primary-blue transition-colors">
+                <Link href="/contact" className="text-white hover:text-[#8FD3F2] transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-white hover:text-primary-blue transition-colors">
+                <Link href="/faq" className="text-white hover:text-[#8FD3F2] transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="text-white hover:text-primary-blue transition-colors text-left">
+                    <button className="text-white hover:text-[#8FD3F2] transition-colors text-left">
                       Free Consultation
                     </button>
                   </DialogTrigger>
@@ -128,10 +129,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <ul className="space-y-2">
               <li className="flex items-start space-x-2">
-                <Phone className="h-4 w-4 text-primary-blue mt-0.5" />
+                <Phone className="h-4 w-4 text-sky-brand mt-0.5" />
                 <div className="text-white">
                   <div>
-                    <a href="tel:0409521358" className="hover:text-primary-blue transition-colors">
+                    <a href="tel:0409521358" className="hover:text-[#8FD3F2] transition-colors">
                       0409 521 358
                     </a>
                   </div>
@@ -139,16 +140,16 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-primary-blue" />
+                <Mail className="h-4 w-4 text-sky-brand" />
                 <span className="text-white">info@canineconfidence.com.au</span>
               </li>
               <li className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-primary-blue" />
+                <MapPin className="h-4 w-4 text-sky-brand" />
                 <span className="text-white">Boondall, QLD</span>
               </li>
               <li className="flex items-start space-x-2 mt-3">
                 <div className="h-4 w-4 mt-0.5">
-                  <div className="h-4 w-4 bg-primary-blue rounded-full flex items-center justify-center">
+                  <div className="h-4 w-4 bg-sky-brand rounded-full flex items-center justify-center">
                     <div className="h-2 w-2 bg-white rounded-full"></div>
                   </div>
                 </div>
@@ -166,15 +167,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/15 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white text-sm">
             © 2026 Canine Confidence. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-white hover:text-primary-blue transition-colors text-sm">
+            <Link href="/privacy" className="text-white hover:text-[#8FD3F2] transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-white hover:text-primary-blue transition-colors text-sm">
+            <Link href="/terms" className="text-white hover:text-[#8FD3F2] transition-colors text-sm">
               Terms & Conditions
             </Link>
           </div>
