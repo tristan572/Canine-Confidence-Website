@@ -13,7 +13,7 @@ import FormattedText from "@/components/ui/formatted-text";
 import { GOOGLE_RATING } from "@shared/social-proof";
 import type { Package } from "@shared/schema";
 import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 
 const PackageCard = ({ pkg }: { pkg: Package }) => {
   const getPackageBookingUrl = () => {
@@ -35,10 +35,6 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
     return packageId
       ? `https://canineconfidence.simplybook.net/v2/#packages/${packageId}`
       : "https://canineconfidence.simplybook.net/v2/#packages";
-  };
-
-  const handleBookClick = () => {
-    openBookingUrl(getPackageBookingUrl(), "package", pkg.name);
   };
 
   return (
@@ -109,12 +105,11 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
             </ul>
           </div>
 
-          <Button 
-            onClick={handleBookClick}
-            className="w-full btn-primary text-lg py-3"
-          >
-            <Calendar className="w-5 h-5 mr-2" />
-            Book This Package
+          <Button asChild className="w-full btn-primary text-lg py-3">
+            <a {...getBookingLinkProps(getPackageBookingUrl(), "package", pkg.name)}>
+              <Calendar className="w-5 h-5 mr-2" />
+              Book This Package
+            </a>
           </Button>
         </CardContent>
       </Card>

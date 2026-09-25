@@ -3,7 +3,7 @@ import { ProgramCard } from "@/components/funnel/program-card";
 import { ConsultationButton } from "@/components/funnel/funnel-cta";
 import { StaticSEO } from "@/components/SEO";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 import puppyImage from "@assets/image_1750048904991_opt.webp";
 import { Calendar, Quote, Star } from "lucide-react";
 import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
@@ -22,9 +22,6 @@ const puppyReviews = [
 ];
 
 export default function PuppyPage() {
-  const bookNow = () =>
-    openBookingUrl(CONFIDENT_START_URL, "package", "The Confident Start Program");
-
   return (
     <div className="min-h-screen">
       <StaticSEO path="/puppy" />
@@ -46,9 +43,11 @@ export default function PuppyPage() {
               you want to share with them.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button onClick={bookNow} className="btn-primary px-7 py-4 text-lg">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book the Confident Start Program
+              <Button asChild className="btn-primary px-7 py-4 text-lg">
+                <a {...getBookingLinkProps(CONFIDENT_START_URL, "package", "The Confident Start Program")}>
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book the Confident Start Program
+                </a>
               </Button>
             </div>
             <ConsultationButton
@@ -101,9 +100,11 @@ export default function PuppyPage() {
             program={confidentStart}
             location="Puppy"
             directAction={
-              <Button onClick={bookNow} className="btn-primary w-full">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Now
+              <Button asChild className="btn-primary w-full">
+                <a {...getBookingLinkProps(CONFIDENT_START_URL, "package", "The Confident Start Program")}>
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book Now
+                </a>
               </Button>
             }
           />

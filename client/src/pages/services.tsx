@@ -30,29 +30,29 @@ import {
 } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import type { Service } from "@shared/schema";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
+
+const serviceMap: Record<string, number> = {
+  "Initial Canine Success Assessment": 16,
+  "One-on-One Private Coaching": 7,
+  "Virtual Coaching and Support": 10,
+  "Walk and Train": 6,
+  "In-home Day Train": 8,
+  "Adventure Walk and Training": 5,
+  "Local Walk": 4,
+};
+
+function getServiceBookingUrl(service: Service) {
+  const serviceId = serviceMap[service.name];
+  return serviceId
+    ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
+    : "https://canineconfidence.simplybook.net/v2/";
+}
 
 export default function ServicesPage() {
   const { data: services, isLoading } = useQuery<Service[]>({
     queryKey: ["/api/services"],
   });
-
-  const handleBookService = (service: Service) => {
-    const serviceMap: Record<string, number> = {
-      "Initial Canine Success Assessment": 16,
-      "One-on-One Private Coaching": 7,
-      "Virtual Coaching and Support": 10,
-      "Walk and Train": 6,
-      "In-home Day Train": 8,
-      "Adventure Walk and Training": 5,
-      "Local Walk": 4,
-    };
-    const serviceId = serviceMap[service.name];
-    const url = serviceId
-      ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
-      : "https://canineconfidence.simplybook.net/v2/";
-    openBookingUrl(url, "service", service.name);
-  };
 
   const serviceIcons = {
     "Behaviour Modification": GraduationCap,
@@ -198,11 +198,10 @@ export default function ServicesPage() {
                         <span>{service.price}</span>
                       </div>
                     </div>
-                    <Button
-                      onClick={() => handleBookService(service)}
-                      className="w-full btn-primary"
-                    >
-                      Book Session
+                    <Button asChild className="w-full btn-primary">
+                      <a {...getBookingLinkProps(getServiceBookingUrl(service), "service", service.name)}>
+                        Book Session
+                      </a>
                     </Button>
                   </CardContent>
                 </Card>

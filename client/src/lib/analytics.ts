@@ -30,18 +30,25 @@ export function trackLead(
   });
 }
 
-export function openBookingUrl(
+export function getBookingLinkProps(
   url: string,
   bookingType: "service" | "package" | "general",
   itemName?: string,
+  onClick?: () => void,
 ) {
-  trackEvent("booking_click", {
-    booking_type: bookingType,
-    item_name: itemName || undefined,
-    booking_url: url,
-  });
-
-  window.open(url, "_blank");
+  return {
+    href: url,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    onClick: () => {
+      trackEvent("booking_click", {
+        booking_type: bookingType,
+        item_name: itemName || undefined,
+        booking_url: url,
+      });
+      onClick?.();
+    },
+  };
 }
 
 export function trackPhoneClick(phoneNumber: string) {

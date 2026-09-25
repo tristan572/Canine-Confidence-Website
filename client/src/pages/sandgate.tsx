@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart } from "lucide-react";
 import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
 import ConsultationForm from "@/components/forms/consultation-form";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 
 export default function SandgatePage() {
@@ -31,27 +31,22 @@ export default function SandgatePage() {
 
   const handleBookAssessment = () => {
     setShowAssessmentDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookAdventure = () => {
     setShowAdventureDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookAdventurePackage = () => {
     setShowAdventurePackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookConfidentStart = () => {
     setShowConfidentStartDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#packages/6', "package", "The Confident Start Program");
   };
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   return (
@@ -498,11 +493,17 @@ export default function SandgatePage() {
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button 
-              onClick={handleBookAssessment}
-              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
+            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookAssessment,
+                )}
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
             
             <Button 
@@ -531,11 +532,17 @@ export default function SandgatePage() {
           </DialogDescription>
 
           <div className="space-y-4">
-            <Button
-              onClick={handleBookAdventure}
-              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
+            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookAdventure,
+                )}
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
 
             <Button
@@ -568,12 +575,18 @@ export default function SandgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookAdventurePackage}
-              className="btn-primary"
-              data-testid="button-continue-adventure-package"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookAdventurePackage,
+                )}
+                data-testid="button-continue-adventure-package"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>
@@ -589,11 +602,17 @@ export default function SandgatePage() {
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button 
-              onClick={handleBookConfidentStart}
-              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
+            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#packages/6",
+                  "package",
+                  "The Confident Start Program",
+                  handleBookConfidentStart,
+                )}
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
             
             <Button 
@@ -622,11 +641,17 @@ export default function SandgatePage() {
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button 
-              onClick={handleBookPackages}
-              className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium"
-            >
-              Continue to Secure Booking
+            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookPackages,
+                )}
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
             
             <Button 

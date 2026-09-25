@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, MapPin, DollarSign, Calendar, type LucideIcon } from "lucide-react";
 import FormattedText from "@/components/ui/formatted-text";
 import type { Service } from "@shared/schema";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 
 interface ServiceCardProps {
   service: Service;
@@ -26,10 +26,6 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
     return serviceId
       ? `https://canineconfidence.simplybook.net/v2/#book/service/${serviceId}`
       : "https://canineconfidence.simplybook.net/v2/";
-  };
-
-  const handleBookClick = () => {
-    openBookingUrl(getBookingUrl(), "service", service.name);
   };
 
   return (
@@ -70,12 +66,16 @@ export default function ServiceCard({ service, icon: Icon }: ServiceCardProps) {
             </div>
           </div>
           <Button
-            onClick={handleBookClick}
+            asChild
             className="w-full btn-primary"
-            data-testid={`button-book-${service.id}`}
           >
-            <Calendar className="w-4 h-4 mr-2" />
-            Book Session
+            <a
+              {...getBookingLinkProps(getBookingUrl(), "service", service.name)}
+              data-testid={`button-book-${service.id}`}
+            >
+              <Calendar className="w-4 h-4 mr-2" />
+              Book Session
+            </a>
           </Button>
         </CardContent>
       </Card>

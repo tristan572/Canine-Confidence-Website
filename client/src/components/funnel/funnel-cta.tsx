@@ -9,7 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ConsultationForm from "@/components/forms/consultation-form";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 import { ASSESSMENT_URL } from "@/lib/funnel";
 
 interface AssessmentButtonProps {
@@ -26,18 +26,17 @@ export function AssessmentButton({
   showIcon = true,
 }: AssessmentButtonProps) {
   return (
-    <Button
-      className={`btn-primary ${className}`}
-      onClick={() =>
-        openBookingUrl(
+    <Button asChild className={`btn-primary ${className}`}>
+      <a
+        {...getBookingLinkProps(
           ASSESSMENT_URL,
           "service",
           `Initial Canine Success Assessment | ${location}`,
-        )
-      }
-    >
-      {showIcon && <Calendar className="mr-2 h-5 w-5" />}
-      {label}
+        )}
+      >
+        {showIcon && <Calendar className="mr-2 h-5 w-5" />}
+        {label}
+      </a>
     </Button>
   );
 }

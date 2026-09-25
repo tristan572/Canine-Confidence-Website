@@ -8,7 +8,7 @@ import { MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart, Users, Footp
 import ConsultationForm from "@/components/forms/consultation-form";
 import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
 import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 
 export default function NorthgatePage() {
@@ -35,32 +35,26 @@ export default function NorthgatePage() {
 
   const handleBookAssessment = () => {
     setShowAssessmentDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookWalkTrain = () => {
     setShowWalkTrainDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookCoaching = () => {
     setShowCoachingDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookWalkTrainPackage = () => {
     setShowWalkTrainPackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookCoachingPackage = () => {
     setShowCoachingPackageDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   const handleBookPackages = () => {
     setShowPackagesDialog(false);
-    openBookingUrl('https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/', "service", "Initial Canine Success Assessment");
   };
 
   return (
@@ -542,12 +536,18 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookAssessment}
-              className="btn-primary"
-              data-testid="button-continue-assessment"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookAssessment,
+                )}
+                data-testid="button-continue-assessment"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>
@@ -567,12 +567,18 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookWalkTrain}
-              className="btn-primary"
-              data-testid="button-continue-walk-train"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookWalkTrain,
+                )}
+                data-testid="button-continue-walk-train"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>
@@ -592,12 +598,18 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookCoaching}
-              className="btn-primary"
-              data-testid="button-continue-coaching"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookCoaching,
+                )}
+                data-testid="button-continue-coaching"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>
@@ -617,12 +629,18 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookPackages}
-              className="btn-primary"
-              data-testid="button-continue-packages"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookPackages,
+                )}
+                data-testid="button-continue-packages"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>
@@ -642,12 +660,18 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookWalkTrainPackage}
-              className="btn-primary"
-              data-testid="button-continue-walk-train-package"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookWalkTrainPackage,
+                )}
+                data-testid="button-continue-walk-train-package"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>
@@ -667,12 +691,18 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button
-              onClick={handleBookCoachingPackage}
-              className="btn-primary"
-              data-testid="button-continue-coaching-package"
-            >
-              Continue to Secure Booking
+            <Button asChild className="btn-primary">
+              <a
+                {...getBookingLinkProps(
+                  "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
+                  "service",
+                  "Initial Canine Success Assessment",
+                  handleBookCoachingPackage,
+                )}
+                data-testid="button-continue-coaching-package"
+              >
+                Continue to Secure Booking
+              </a>
             </Button>
           </div>
         </DialogContent>

@@ -7,7 +7,7 @@ import { Calendar, Menu } from "lucide-react";
 // renders wider than ~105 CSS px, and this loads eagerly on every page.
 import logoImage from "@assets/canine_confidence_logo_320_opt.webp";
 import { ASSESSMENT_URL } from "@/lib/funnel";
-import { openBookingUrl } from "@/lib/analytics";
+import { getBookingLinkProps } from "@/lib/analytics";
 import { ConsultationButton } from "@/components/funnel/funnel-cta";
 import { GOOGLE_RATING } from "@shared/social-proof";
 
@@ -24,9 +24,6 @@ export default function Navbar() {
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
   ];
-
-  const bookAssessment = () =>
-    openBookingUrl(ASSESSMENT_URL, "service", "Initial Canine Success Assessment | Navbar");
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -97,9 +94,18 @@ export default function Navbar() {
                   ))}
                   
                   <div className="pt-4 space-y-3">
-                    <Button onClick={bookAssessment} className="w-full btn-primary">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Book Assessment
+                    <Button asChild className="w-full btn-primary">
+                      <a
+                        {...getBookingLinkProps(
+                          ASSESSMENT_URL,
+                          "service",
+                          "Initial Canine Success Assessment | Navbar",
+                          () => setMobileMenuOpen(false),
+                        )}
+                      >
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Book Assessment
+                      </a>
                     </Button>
                     <ConsultationButton className="btn-secondary w-full" showIcon={false} />
                   </div>
@@ -144,8 +150,16 @@ export default function Navbar() {
             {/* Desktop CTA Buttons */}
             <div className="flex items-center gap-2 shrink-0">
               <ConsultationButton className="btn-secondary hidden h-11 px-4 py-0 text-sm xl:inline-flex" showIcon={false} />
-              <Button onClick={bookAssessment} className="btn-primary h-11 px-5 py-0 text-sm">
-                Book an Assessment
+              <Button asChild className="btn-primary h-11 px-5 py-0 text-sm">
+                <a
+                  {...getBookingLinkProps(
+                    ASSESSMENT_URL,
+                    "service",
+                    "Initial Canine Success Assessment | Navbar",
+                  )}
+                >
+                  Book an Assessment
+                </a>
               </Button>
             </div>
           </div>
