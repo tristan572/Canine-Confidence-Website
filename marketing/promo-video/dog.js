@@ -12,7 +12,7 @@ const LOOKS = {
   // B: Cleo, brighter - bluer coat, lashes, sky-blue brand bandana under the purple collar
   cleoBandana: { coat: '#6A809C', coatD: '#51637D', coatL: '#8A9DB6', blaze: false, chest: 'small', muzzle: '#BFC9D6', silver: true, eye: '#E0A035', lashes: true, bandana: '#2BA6DE', collar: '#6B4BB8', whiteFeet: 'one' },
   // C: hero Cleo - saturated cartoon blue, bold amber eyes, lashes, purple collar, bigger white chest mark
-  cleoHero: { coat: '#5E7FA8', coatD: '#46638A', coatL: '#86A2C4', blaze: false, chest: 'star', muzzle: '#C3CEDC', silver: true, eye: '#E8A33A', lashes: true, bandana: null, collar: '#7A4FD0', whiteFeet: 'one', blush: false, tag: '#D3DAE3' },
+  cleoHero: { coat: '#5E7FA8', coatD: '#46638A', coatL: '#86A2C4', blaze: false, chest: 'star', muzzle: '#C3CEDC', silver: true, eye: '#E8A33A', lashes: true, bandana: null, collar: '#7A4FD0', whiteFeet: 'one', blush: false, tag: '#D3DAE3', headW: 0.86, sideHead: 1.03 },
 };
 let LOOK = LOOKS.promo;
 function useLook(name) { LOOK = LOOKS[name] || LOOKS.promo; }
@@ -43,13 +43,17 @@ function sitDogSVG(id) {
   ${K.bandana ? `<path d="M116,280 C160,300 240,300 284,280 L204,384 C201,388 199,388 196,384 Z" fill="${K.bandana}" ${S}/><path d="M150,300 l6,10 M180,312 l4,12 M220,312 l-4,12 M250,300 l-6,10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>` : ''}
   <circle cx="200" cy="312" r="16" fill="${K.tag || TAG}" ${S} stroke-width="5"/>
   <g id="${id}-head">
+   <g transform="translate(200 0) scale(${K.headW || 1} 1) translate(-200 0)">
    <g id="${id}-earL"><path d="M112,76 C96,42 62,30 34,54 C48,60 58,70 62,90 C76,80 92,78 116,86 Z" fill="${COAT_D}" ${S}/></g>
    <g id="${id}-earR"><path d="M288,76 C304,42 338,30 366,54 C352,60 342,70 338,90 C324,80 308,78 284,86 Z" fill="${COAT_D}" ${S}/></g>
    <path d="M108,60 C160,46 240,46 292,60 C332,72 348,104 350,140 C376,160 382,208 354,240 C330,266 280,282 200,282 C120,282 70,266 46,240 C18,208 24,160 50,140 C52,104 68,72 108,60 Z" fill="${COAT}" ${S}/>
    ${K.blaze ? `<path d="M190,52 C186,88 186,116 182,140 L218,140 C214,116 214,88 210,52 C204,50 196,50 190,52 Z" fill="${WHITE}"/>` : ''}
    <path d="M176,82 Q172,100 178,116 M224,82 Q228,100 222,116" ${L} stroke-width="4"/>
    <path d="M66,160 Q52,206 82,244 M334,160 Q348,206 318,244" ${L} stroke-width="5"/>
+   </g>
+   <g transform="translate(200 0) scale(${1 - (1 - (K.headW || 1)) * 0.5} 1) translate(-200 0)">
    <path d="M122,158 C150,142 250,142 278,158 C306,174 306,234 282,252 C256,270 144,270 118,252 C94,234 94,174 122,158 Z" fill="${COAT_L}" ${S} stroke-width="5"/>
+   </g>
    ${K.blush === false ? '' : `<ellipse cx="86" cy="212" rx="20" ry="11" fill="${BLUSH}" opacity=".75"/>
    <ellipse cx="314" cy="212" rx="20" ry="11" fill="${BLUSH}" opacity=".75"/>`}
    <g id="${id}-eyes">
@@ -92,7 +96,7 @@ function sideDogSVG(id) {
   <path d="M486,134 C518,144 542,168 550,202 L530,208 C522,180 506,160 478,152 Z" fill="${K.collar}" ${S} stroke-width="6"/>
   ${K.bandana ? `<path d="M476,150 C510,164 536,186 548,212 L500,268 C496,272 492,270 492,266 Z" fill="${K.bandana}" ${S} stroke-width="6"/>` : ''}
   <circle cx="542" cy="216" r="13" fill="${K.tag || TAG}" ${S} stroke-width="5"/>
-  <g id="${id}-head"><g transform="translate(500 160) scale(1.12) translate(-500 -160)">
+  <g id="${id}-head"><g transform="translate(500 160) scale(${K.sideHead || 1.12}) translate(-500 -160)">
    <g id="${id}-ear"><path d="M524,60 C516,26 484,14 460,34 C474,42 480,54 482,72 C494,66 506,62 526,64 Z" fill="${COAT_D}" ${S}/></g>
    <path d="M468,118 C464,66 510,36 566,36 C612,36 634,58 642,82 L646,90 C672,90 694,104 698,128 C702,162 688,188 662,196 C642,202 612,200 592,206 C560,216 518,210 494,190 C474,172 470,146 468,118 Z" fill="${COAT}" ${S}/>
    <path d="M648,94 C676,96 694,110 696,132 C698,162 684,184 658,192 C640,176 636,120 648,94 Z" fill="${COAT_L}" ${S} stroke-width="5"/>
