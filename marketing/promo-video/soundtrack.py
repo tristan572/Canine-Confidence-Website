@@ -1,153 +1,176 @@
-"""Synthesises an original upbeat backing track + cartoon SFX timed to toon.html. No samples used."""
-import numpy as np
-from scipy.signal import lfilter, butter
-from scipy.io import wavfile
+"""Original soundtrack for toon.html, played on sampled instruments from the GeneralUser GS
+SoundFont (free for commercial music use). Includes real recorded dog barks (GS 'Dog' preset).
 
+Needs: pip install numpy scipy tinysoundfont (use --no-deps for tinysoundfont), and GeneralUser.sf2
+(npm package 'generaluser'). Set SF2=/path/to/GeneralUser.sf2.
+"""
+import os
+import numpy as np
+import tinysoundfont as tsf
+from scipy.io import wavfile
+from scipy.signal import fftconvolve
+
+SF = os.environ.get('SF2', 'GeneralUser.sf2')
 SR = 44100
 DUR = 52.57
-N = int(SR * DUR)
-rng = np.random.default_rng(4)
-music = np.zeros(N)
-sfx = np.zeros(N)
+BEAT = 0.5          # 120 bpm
+BAR = 4 * BEAT
+rng = np.random.default_rng(3)
 
-def add(buf, sig, t, gain=1.0):
-    i = int(t * SR)
-    if i >= N: return
-    j = min(N, i + len(sig))
-    buf[i:j] += sig[: j - i] * gain
 
-def env(n, a=0.005, d=0.3):
-    t = np.arange(n) / SR
-    return np.minimum(1, t / a) * np.exp(-t / d)
+def render(events, programs, gain=-4):
+    """events: (time, kind, chan, a, b). kind: on(key, vel) | off(key) | bend(value) | range(semis)."""
+    s = tsf.Synth(gain=gain, samplerate=SR)
+    sfid = s.sfload(SF)
+    for ch, (bank, pre, drums) in programs.items():
+        s.program_select(ch, sfid, bank, pre, is_drums=drums)
+    out, t = [], 0.0
+    for et, kind, ch, a, b in sorted(events, key=lambda e: (e[0], e[1] != 'off')) + [(DUR, 'end', 0, 0, 0)]:
+        n = int(round((et - t) * SR))
+        if n > 0:
+            out.append(np.frombuffer(s.generate(n), dtype=np.float32).reshape(-1, 2).copy()); t += n / SR
+        if kind == 'on': s.noteon(ch, a, b)
+        elif kind == 'off': s.noteoff(ch, a)
+        elif kind == 'bend': s.pitchbend(ch, a)
+        elif kind == 'range': s.pitchbend_range(ch, a)
+    return np.concatenate(out)
 
-def midi(m): return 440 * 2 ** ((m - 69) / 12)
 
-def pluck(freq, dur=0.5, bright=0.6):
-    n = int(SR * dur); L = int(SR / freq)
-    x = np.zeros(n); x[:L] = rng.uniform(-1, 1, L)
-    b, a = [1], np.zeros(L + 2); a[0] = 1; a[L] = -0.5 * 0.996; a[L + 1] = -0.5 * 0.996
-    y = lfilter(b, a, x)
-    bb, aa = butter(2, min(0.99, bright * 8000 / (SR / 2)))
-    return lfilter(bb, aa, y) * env(n, 0.002, dur * 0.5)
+def note(ev, t, ch, key, vel, dur):
+    ev.append((t, 'on', ch, key, vel)); ev.append((t + dur, 'off', ch, key, 0))
 
-def kick():
-    n = int(SR * 0.25); t = np.arange(n) / SR
-    f = 50 + 110 * np.exp(-t * 30)
-    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 14)
 
-def clap():
-    n = int(SR * 0.18); b, a = butter(2, [1200 / (SR / 2), 5000 / (SR / 2)], 'band')
-    return lfilter(b, a, rng.uniform(-1, 1, n)) * env(n, 0.001, 0.05) * 2.2
+# ---------------- Music ----------------
+GTR, BASS, GLOCK, WHISTLE, PIZZ, DR = 0, 1, 2, 3, 4, 9
+music_prog = {GTR: (0, 25, False), BASS: (0, 32, False), GLOCK: (0, 9, False), WHISTLE: (0, 78, False),
+              PIZZ: (0, 45, False), DR: (128, 0, True)}
+CH = {'F': ([53, 57, 60, 65, 69], 41, 48), 'C': ([48, 52, 55, 60, 64], 36, 43),
+      'Dm': ([50, 57, 62, 65, 69], 38, 45), 'Bb': ([46, 53, 58, 62, 65], 34, 41)}
+PROG = ['F', 'C', 'Dm', 'Bb']
+MEL_A = [[72, 0, 69, 72, 77, 0, 76, 74], [72, 0, 0, 67, 72, 0, 74, 76], [77, 0, 76, 74, 72, 0, 69, 0], [70, 0, 72, 74, 72, 0, 0, 0]]
+MEL_B = [[69, 0, 72, 0, 77, 76, 77, 79], [76, 0, 72, 0, 67, 0, 72, 74], [74, 0, 77, 0, 76, 74, 72, 69], [70, 72, 74, 0, 77, 0, 0, 0]]
+END = 50.0
+NBARS = int(END / BAR)  # 25 full bars before the final hit
 
-def hat():
-    n = int(SR * 0.05); b, a = butter(2, 7000 / (SR / 2), 'high')
-    return lfilter(b, a, rng.uniform(-1, 1, n)) * env(n, 0.001, 0.015)
-
-def bass(freq, dur):
-    n = int(SR * dur); t = np.arange(n) / SR
-    s = np.sin(2 * np.pi * freq * t) + 0.3 * np.sign(np.sin(2 * np.pi * freq * t))
-    b, a = butter(2, 600 / (SR / 2))
-    return lfilter(b, a, s) * env(n, 0.004, dur * 0.6)
-
-def bell(freq, dur=1.0):
-    n = int(SR * dur); t = np.arange(n) / SR
-    s = sum(np.sin(2 * np.pi * freq * k * t) * w for k, w in [(1, 1), (2.76, .4), (5.4, .2)])
-    return s * env(n, 0.002, dur * 0.35)
-
-# ---------- Music: 120bpm, C G Am F ----------
-BEAT = 0.5
-chords = [(48, [60, 64, 67, 72]), (43, [59, 62, 67, 71]), (45, [60, 64, 69, 72]), (41, [60, 65, 69, 72])]
-arp = [0, 2, 1, 3, 2, 1, 3, 2]
-melody = [72, None, 76, 79, None, 76, 74, None, 74, None, 71, 74, None, 79, 76, None,
-          72, None, 76, 81, None, 79, 76, None, 77, None, 76, 74, None, 72, 74, None]
-end_music = 51.0
-bar = 0
-t = 0.0
-while t < end_music - 0.01:
-    root, notes = chords[bar % 4]
-    for b in range(4):
-        tb = t + b * BEAT
-        if tb >= end_music: break
-        add(music, kick(), tb, 0.55 if b in (0, 2) else 0.0)
-        if b in (1, 3): add(music, clap(), tb, 0.22)
-        add(music, hat(), tb + BEAT / 2, 0.12)
-        add(music, bass(midi(root) * (2 if b % 2 else 1), BEAT * 0.9), tb, 0.28)
-    for k in range(8):
-        tk = t + k * BEAT / 2
-        if tk >= end_music: break
-        add(music, pluck(midi(notes[arp[k]]), 0.45, 0.5), tk, 0.22)
-    if bar >= 2:  # bell melody enters after the hook
-        for k in range(8):
-            m = melody[((bar - 2) % 4) * 8 + k]
-            tk = t + k * BEAT / 2
-            if m and tk < end_music: add(music, bell(midi(m), 0.6), tk, 0.10)
-    t += 4 * BEAT; bar += 1
-# final chord
-for m in [48, 60, 64, 67, 72]: add(music, pluck(midi(m), 1.6, 0.5), end_music, 0.25)
-add(music, bell(midi(84), 1.5), end_music, 0.15)
-add(music, kick(), end_music, 0.5)
-
-# ---------- SFX ----------
-def pop(pitch=1.0):
-    n = int(SR * 0.09); t = np.arange(n) / SR
-    f = (500 + 1400 * t / t[-1]) * pitch
-    return np.sin(2 * np.pi * np.cumsum(f) / SR) * env(n, 0.002, 0.03)
-
-def boing():
-    n = int(SR * 0.45); t = np.arange(n) / SR
-    f = 180 + 120 * np.exp(-t * 6) + 40 * np.sin(2 * np.pi * 14 * t) * np.exp(-t * 5)
-    return np.sin(2 * np.pi * np.cumsum(f) / SR) * env(n, 0.003, 0.18)
-
-def thud():
-    n = int(SR * 0.22); t = np.arange(n) / SR
-    f = 40 + 80 * np.exp(-t * 25)
-    b, a = butter(2, 900 / (SR / 2))
-    return (np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.4 * lfilter(b, a, rng.uniform(-1, 1, n))) * env(n, 0.001, 0.07)
-
-def whoosh():
-    n = int(SR * 0.4); t = np.arange(n) / SR
-    b, a = butter(2, [400 / (SR / 2), 3000 / (SR / 2)], 'band')
-    sw = np.sin(np.pi * t / t[-1]) ** 2
-    return lfilter(b, a, rng.uniform(-1, 1, n)) * sw * 1.5
-
-def twinkle():
-    out = np.zeros(int(SR * 0.5))
-    for i, m in enumerate([88, 91, 96]):
-        s = bell(midi(m), 0.35); j = int(i * 0.06 * SR); out[j:j + len(s)] += s[: len(out) - j]
-    return out
-
-def ding():
-    a = bell(midi(88), 1.4); b = bell(midi(95), 1.4)
-    return a + 0.5 * b
-
-starts = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 45.55}
-for k, v in starts.items():
-    if v > 0: add(sfx, whoosh(), v - 0.05, 0.35)
-S = starts
 ev = []
-ev += [(0.62, thud, .8), (0.66, boing, .5)]
-ev += [(S['s1'] + x, pop, .45) for x in (1.4, 1.9, 2.4)]
-ev += [(S['s2'] + x, pop, .45) for x in (0.9, 1.4, 1.9)]
-ev += [(S['s3'] + 1.88 + i * .55, thud, .9) for i in range(4)]
-ev += [(S['s3'] + 4.1, twinkle, .35)]
-for s in ('s4', 's5', 's6', 's7'):
-    ev += [(S[s] + 0.4, pop, .5)]
-ev += [(S['s4'] + x, pop, .4) for x in (1.1, 1.6, 2.1)] + [(S['s4'] + 2.65, twinkle, .35)]
-ev += [(S['s5'] + x, pop, .45) for x in (1.0, 1.6, 2.2)]
-ev += [(S['s6'] + 1.2, pop, .5), (S['s6'] + 2.0, ding, .35)]
-ev += [(S['s7'] + x, pop, .4) for x in (1.0, 1.5, 2.0)]
-ev += [(S['s8'] + x, twinkle, .25) for x in (1.2, 1.5, 1.8)]
-ev += [(S['s9'] + 1.0, boing, .5), (S['s9'] + 2.6, pop, .5)]
-ev += [(S['s10'] + 0.2, pop, .5), (S['s10'] + 1.6, boing, .45), (S['s10'] + 2.4, pop, .5), (S['s10'] + 2.0, twinkle, .3)]
-for i, (tt, fn, g) in enumerate(ev):
-    sig = fn(1.0 + (i % 3) * 0.08) if fn is pop else fn()
-    add(sfx, sig, tt, g)
+for bar in range(NBARS):
+    t0 = bar * BAR
+    name = PROG[bar % 4]
+    chord, root, fifth = CH[name]
+    full = bar >= 2
+    # strummed guitar: D . D U . U D U
+    strums = [(0, 'D', 88), (2, 'D', 72), (3, 'U', 60), (5, 'U', 62), (6, 'D', 74), (7, 'U', 58)]
+    for k, (e8, d, v) in enumerate(strums):
+        ts = t0 + e8 * BEAT / 2
+        nxt = strums[k + 1][0] if k + 1 < len(strums) else 8
+        dur = (nxt - e8) * BEAT / 2 - 0.02
+        notes = chord if d == 'D' else chord[::-1][:4]
+        for i, kk in enumerate(notes):
+            note(ev, ts + i * 0.011, GTR, kk, v - i * 3, dur)
+    # bass
+    for beat, key in [(0, root), (1.5, root), (2, fifth), (3, root + 12)]:
+        note(ev, t0 + beat * BEAT, BASS, key, 100 if beat == 0 else 84, BEAT * (1.4 if beat == 0 else 0.9))
+    # drums
+    for e8 in range(8):
+        note(ev, t0 + e8 * BEAT / 2, DR, 70, 42 + (8 if e8 % 2 else 0), 0.1)   # shaker
+    if full:
+        for beat in (0, 2): note(ev, t0 + beat * BEAT, DR, 36, 96, 0.1)
+        note(ev, t0 + 2.5 * BEAT, DR, 36, 70, 0.1)
+        for beat in (1, 3): note(ev, t0 + beat * BEAT, DR, 39, 78, 0.1)
+    if bar >= 10:
+        for beat in (1, 3): note(ev, t0 + beat * BEAT, DR, 54, 50, 0.1)
+        for beat in (0.5, 1.5, 2.5, 3.5):
+            for kk in chord[1:4]: note(ev, t0 + beat * BEAT, PIZZ, kk + 12, 48, 0.2)
+    if bar in (2, 10, 18, 22): note(ev, t0, DR, 49, 76, 0.5)
+    # melody
+    if full:
+        mel = (MEL_A if ((bar - 2) // 4) % 2 == 0 else MEL_B)[(bar - 2) % 4]
+        for e8, m in enumerate(mel):
+            if not m: continue
+            ln = 1
+            while e8 + ln < 8 and mel[e8 + ln] == 0: ln += 1
+            d = ln * BEAT / 2 * 0.95
+            note(ev, t0 + e8 * BEAT / 2, GLOCK, m + 12, 78, d)
+            if 10 <= bar < 18 or bar >= 22:
+                note(ev, t0 + e8 * BEAT / 2, WHISTLE, m, 72, d)
+# final hit
+for i, kk in enumerate(CH['F'][0]): note(ev, END + i * 0.012, GTR, kk, 95, 1.4)
+note(ev, END, BASS, 41, 105, 1.4); note(ev, END, DR, 49, 90, 1.5); note(ev, END, DR, 36, 110, 0.2)
+note(ev, END, GLOCK, 89, 85, 1.4); note(ev, END, WHISTLE, 77, 70, 1.2)
+music = render(ev, music_prog, gain=-8)
 
-mix = music * 0.8 + sfx
-fade = np.ones(N); fl = int(SR * 1.2); fade[-fl:] = np.linspace(1, 0, fl)
-mix *= fade
-mix = np.tanh(mix * 1.1) / np.tanh(1.1)
-mix /= max(1e-9, np.abs(mix).max()) / 0.89
-st = np.stack([mix, mix], axis=1)
-wavfile.write('soundtrack.wav', SR, (st * 32767).astype(np.int16))
-print('ok', len(ev), 'sfx')
+# light room reverb for warmth
+ir_n = int(SR * 1.1)
+ir = rng.standard_normal((ir_n, 2)) * np.exp(-np.arange(ir_n) / (SR * 0.28))[:, None]
+ir /= np.abs(ir).sum(axis=0) / 6
+wet = np.stack([fftconvolve(music[:, c], ir[:, c])[: len(music)] for c in range(2)], axis=1)
+music = music + wet * 0.18
+
+# ---------------- SFX (sampled instruments) ----------------
+HARP, XYL, BELLS, CELESTE, TIMP, SLIDE, KIT = 0, 1, 2, 3, 4, 5, 9
+sfx_prog = {HARP: (0, 46, False), XYL: (0, 13, False), BELLS: (0, 14, False), CELESTE: (0, 8, False),
+            TIMP: (0, 47, False), SLIDE: (0, 72, False), KIT: (128, 0, True)}
+S = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 45.55}
+fx = [(0, 'range', SLIDE, 12, 0)]
+
+def swirl(t):  # harp glissando for scene transitions
+    for i, k in enumerate([65, 67, 69, 72, 74, 77, 79, 81, 84]):
+        note(fx, t + i * 0.028, HARP, k, 70, 0.5)
+
+def pop(t, k=84):
+    note(fx, t, XYL, k, 100, 0.25)
+
+def twinkle(t):
+    for i, k in enumerate([84, 89, 93, 96]): note(fx, t + i * 0.07, CELESTE, k, 80, 0.5)
+
+def slide(t, up=True, dur=0.4):
+    steps = 16
+    fx.append((t, 'bend', SLIDE, 0 if up else 16383, 0))
+    note(fx, t, SLIDE, 84, 88, dur)
+    for i in range(1, steps + 1):
+        v = int(16383 * i / steps) if up else int(16383 * (1 - i / steps))
+        fx.append((t + dur * i / steps, 'bend', SLIDE, min(16383, v), 0))
+    fx.append((t + dur + 0.05, 'bend', SLIDE, 8192, 0))
+
+def thump(t):
+    note(fx, t, TIMP, 41, 118, 0.6); note(fx, t, KIT, 36, 110, 0.2)
+
+for k, v in S.items():
+    if v > 0: swirl(v - 0.12)
+slide(0.12, up=False, dur=0.45); thump(0.62)
+for i, x in enumerate((1.4, 1.9, 2.4)): pop(S['s1'] + x, [84, 88, 91][i])
+for i, x in enumerate((0.9, 1.4, 1.9)): pop(S['s2'] + x, [77, 81, 84][i])
+for i in range(4): thump(S['s3'] + 1.88 + i * .55)
+twinkle(S['s3'] + 4.1)
+for s in ('s4', 's5', 's6', 's7'): pop(S[s] + 0.4, 89)
+for i, x in enumerate((1.1, 1.6, 2.1)): pop(S['s4'] + x, [84, 88, 91][i])
+twinkle(S['s4'] + 2.65)
+for i, x in enumerate((1.0, 1.6, 2.2)): pop(S['s5'] + x, [84, 88, 91][i])
+pop(S['s6'] + 1.2, 91); note(fx, S['s6'] + 2.0, BELLS, 84, 100, 1.4); note(fx, S['s6'] + 2.0, CELESTE, 96, 90, 1.0)
+for i, x in enumerate((1.0, 1.5, 2.0)): pop(S['s7'] + x, [84, 88, 91][i])
+twinkle(S['s8'] + 1.2); twinkle(S['s8'] + 1.8)
+slide(S['s9'] + 1.0, up=True, dur=0.35); pop(S['s9'] + 2.6, 91)
+pop(S['s10'] + 0.2, 89); slide(S['s10'] + 1.55, up=True, dur=0.3); pop(S['s10'] + 2.4, 91); twinkle(S['s10'] + 2.0)
+sfx = render(fx, sfx_prog, gain=-6)
+
+# ---------------- Barks (real recorded dog, GS bank 1 preset 123) ----------------
+DOG = 0
+barks = [(S['s3'] + 4.05, 58), (S['s3'] + 4.3, 60),
+         (S['s4'] + 2.7, 59),
+         (S['s5'] + 0.9, 60), (S['s5'] + 1.15, 60), (S['s5'] + 3.0, 61),
+         (S['s6'] + 2.05, 59),
+         (S['s8'] + 0.6, 58), (S['s8'] + 0.85, 60),
+         (S['s9'] + 1.35, 59),
+         (S['s10'] + 1.7, 58), (S['s10'] + 1.95, 60), (END + 0.1, 59)]
+bev = []
+for t, k in barks: note(bev, t, DOG, k, 118, 0.45)
+bark = render(bev, {DOG: (1, 123, False)}, gain=-2)
+
+def norm(x): return x / max(1e-9, np.abs(x).max())
+mix = norm(music) * 0.62 + norm(sfx) * 0.42 + norm(bark) * 0.75
+n = len(mix); fl = int(SR * 1.0)
+mix[-fl:] *= np.linspace(1, 0, fl)[:, None]
+mix = np.tanh(mix * 1.2) / np.tanh(1.2)
+mix = mix / np.abs(mix).max() * 0.9
+wavfile.write('soundtrack.wav', SR, (mix * 32767).astype(np.int16))
+print('ok', len(ev), 'music events,', len(fx), 'sfx events,', len(barks), 'barks')

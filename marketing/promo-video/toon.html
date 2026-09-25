@@ -292,7 +292,7 @@ blockScene('s7', 4, 'SKILLS', BLOCK_COL.skills, '#D3F0E1', '#A6DDC0', `
     d.set(t, { x: dx, y: dy, s, speed: 1.7, amp: 20, bounce: 8 });
     const hx = 150 + Math.sin(t * 3.4) * 10, hy = 800 + Math.sin(t * 3.4 * 2) * 6;
     E('hand').setAttribute('transform', `translate(${hx.toFixed(1)} ${hy.toFixed(1)})`);
-    const cx = dx + 525 * s, cy = dy + 218 * s;
+    const cx = dx + 542 * s, cy = dy + 216 * s;
     E('lead').setAttribute('d', `M${hx},${hy} Q${(hx + cx) / 2},${Math.max(hy, cy) + 150} ${cx},${cy}`);
     popSvg(E('k1'), t, 1.0, 210, 608); popSvg(E('k2'), t, 1.5, 540, 668); popSvg(E('k3'), t, 2.0, 870, 608);
   },

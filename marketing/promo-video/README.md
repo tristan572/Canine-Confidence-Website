@@ -2,9 +2,9 @@
 
 `canine-confidence-cartoon.mp4` is a 52-second animated cartoon, 1080×1920 (9:16) at 30fps. It's made for Instagram and Facebook Reels, Stories, TikTok and YouTube Shorts.
 
-The whole video follows a hand-drawn blue staffy with a Canine Confidence blue collar. The lines wobble like a sketch, the paper has a texture, and scenes open with a circle reveal.
+The whole video follows a hand-drawn blue staffy with a Canine Confidence blue collar. He has a box head, big cheek muscles, rose ears, a thick neck and a barrel chest. The lines wobble like a sketch, the paper has a texture, and scenes open with a circle reveal.
 
-The soundtrack is original. `soundtrack.py` synthesises it: a bouncy 120 BPM backing track plus pops, boings, thuds, whooshes and a lightbulb "ding", all timed to the animation. No samples or licensed music are used. If you'd prefer a trending track from the platform's library, mute the original audio when you post.
+The soundtrack is original and played on sampled instruments: strummed steel guitar, acoustic bass, glockenspiel, tin whistle, pizzicato strings and a real drum kit. The sound effects use real instruments too: harp swirls on transitions, xylophone pops, timpani on the block drops, a slide whistle for jumps, and bells and celeste for sparkles. The staffy barks happily at key moments, using real recorded dog barks. The instruments and barks come from the GeneralUser GS SoundFont, whose licence allows commercial music use. The soundtrack is also saved on its own as `canine-confidence-soundtrack.mp3`.
 
 ## Scenes
 
@@ -44,16 +44,17 @@ The copy comes from *The Four Building Blocks to a Balanced Dog*. "100+ five-sta
 
 - `toon.html`: every scene, with its text, timing and animation. Open it in a browser to watch a live preview.
 - `dog.js`: the staffy character. It has two rigs, sitting (front-on) and side-on (walk/run), with controls for expressions.
-- `soundtrack.py`: generates `soundtrack.wav` to match the scene timings.
+- `soundtrack.py`: composes and renders `soundtrack.wav` to match the scene timings. It needs the GeneralUser GS SoundFont (`npm pack generaluser`), which isn't committed because it's 31 MB.
 - `render.mjs`: renders the frames to MP4 with Playwright and ffmpeg.
 
 ## Re-rendering
 
 ```bash
-npm i -D playwright                      # once; also needs ffmpeg, and numpy + scipy for audio
+npm i -D playwright                      # once; also needs ffmpeg
+pip install numpy scipy && pip install --no-deps tinysoundfont
 node render.mjs preview 3 18 50          # still frames at those seconds, for a quick check
 FFMPEG=ffmpeg node render.mjs full video.mp4
-python3 soundtrack.py                    # writes soundtrack.wav
+SF2=/path/to/GeneralUser.sf2 python3 soundtrack.py   # writes soundtrack.wav
 ffmpeg -i video.mp4 -i soundtrack.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest canine-confidence-cartoon.mp4
 ```
 
