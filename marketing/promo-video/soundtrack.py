@@ -12,7 +12,7 @@ from scipy.signal import fftconvolve
 
 SF = os.environ.get('SF2', 'GeneralUser.sf2')
 SR = 44100
-DUR = 52.57
+DUR = 54.07
 BEAT = 0.5          # 120 bpm
 BAR = 4 * BEAT
 rng = np.random.default_rng(3)
@@ -49,7 +49,7 @@ CH = {'F': ([53, 57, 60, 65, 69], 41, 48), 'C': ([48, 52, 55, 60, 64], 36, 43),
 PROG = ['F', 'C', 'Dm', 'Bb']
 MEL_A = [[72, 0, 69, 72, 77, 0, 76, 74], [72, 0, 0, 67, 72, 0, 74, 76], [77, 0, 76, 74, 72, 0, 69, 0], [70, 0, 72, 74, 72, 0, 0, 0]]
 MEL_B = [[69, 0, 72, 0, 77, 76, 77, 79], [76, 0, 72, 0, 67, 0, 72, 74], [74, 0, 77, 0, 76, 74, 72, 69], [70, 72, 74, 0, 77, 0, 0, 0]]
-END = 50.0
+END = 52.0
 NBARS = int(END / BAR)  # 25 full bars before the final hit
 
 ev = []
@@ -110,7 +110,7 @@ music = music + wet * 0.18
 HARP, XYL, BELLS, CELESTE, TIMP, SLIDE, KIT = 0, 1, 2, 3, 4, 5, 9
 sfx_prog = {HARP: (0, 46, False), XYL: (0, 13, False), BELLS: (0, 14, False), CELESTE: (0, 8, False),
             TIMP: (0, 47, False), SLIDE: (0, 72, False), KIT: (128, 0, True)}
-S = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 45.55}
+S = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 47.05}
 fx = [(0, 'range', SLIDE, 12, 0)]
 
 def swirl(t):  # harp glissando for scene transitions

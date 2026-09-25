@@ -1,6 +1,6 @@
 # Canine Confidence cartoon promo
 
-`canine-confidence-cartoon.mp4` is a 52-second animated cartoon, 1080×1920 (9:16) at 30fps. It's made for Instagram and Facebook Reels, Stories, TikTok and YouTube Shorts.
+`canine-confidence-cartoon.mp4` is a 54-second animated cartoon, 1080×1920 (9:16) at 30fps. It's made for Instagram and Facebook Reels, Stories, TikTok and YouTube Shorts.
 
 The whole video follows a hand-drawn blue staffy with a Canine Confidence blue collar. He has a box head, big cheek muscles, rose ears, a thick neck and a barrel chest. The lines wobble like a sketch, the paper has a texture, and scenes open with a circle reveal.
 
@@ -18,8 +18,8 @@ The soundtrack is original and played on sampled instruments: strummed steel gui
 | 25–30s | Block 3: Clarity | A confused head tilt, then "YES!", and a lightbulb pops. "Knows what you're asking. Confusion creates anxiety. Clarity creates confidence." |
 | 30–35s | Block 4: Skills | The staffy walks on a loose lead past a café. Recall ✓, Loose lead ✓, Place ✓. "Listens in real life." |
 | 35–40s | Result | A happy wiggle, floating hearts and sparkles. "Build all four… and you get a dog that's a joy to live with." |
-| 40–45.5s | Proof | The staffy peeks over Alex C.'s five-star review of Lyla. 100+ five-star reviews on Google & Mad Paws. |
-| 45.5–52.5s | Call to action | The logo pops in. "Build the blocks. Live the balance." Book an Initial Canine Success Assessment, canineconfidence.com.au, 0409 521 358, North Brisbane. |
+| 40–47s | Proof | The staffy peeks over Amanda C.'s five-star Google review about Murphy the Labrador: "Training our Labrador, Murphy, with Tristan has been one of the best decisions we've made! Murphy has come such a long way thanks to Tristan's guidance, and we've learned so much as owners too." 100+ five-star reviews on Google & Mad Paws. |
+| 47–54s | Call to action | The logo pops in. "Build the blocks. Live the balance." Book an Initial Canine Success Assessment, canineconfidence.com.au, 0409 521 358, North Brisbane. |
 
 The copy comes from *The Four Building Blocks to a Balanced Dog*. "100+ five-star reviews" is 33 on Google plus 90+ on Mad Paws (`shared/social-proof.ts`).
 
