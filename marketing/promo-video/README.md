@@ -4,7 +4,7 @@
 
 The whole video follows a hand-drawn blue staffy with a Canine Confidence blue collar. He has a box head, big cheek muscles, rose ears, a thick neck and a barrel chest. The lines wobble like a sketch, the paper has a texture, and scenes open with a circle reveal.
 
-The soundtrack is original and played on sampled instruments: strummed steel guitar, acoustic bass, glockenspiel, tin whistle, pizzicato strings and a real drum kit. The sound effects use real instruments too: harp swirls on transitions, xylophone pops, timpani on the block drops, a slide whistle for jumps, and bells and celeste for sparkles. The staffy barks happily at key moments, using real recorded dog barks. The instruments and barks come from the GeneralUser GS SoundFont, whose licence allows commercial music use. The soundtrack is also saved on its own as `canine-confidence-soundtrack.mp3`.
+The soundtrack is original and played on sampled instruments: strummed steel guitar, acoustic bass, glockenspiel, tin whistle, pizzicato strings and a real drum kit. The sound effects use real instruments too: soft harp brushes on transitions, gentle marimba taps for pop-ups, timpani on the block drops, a slide whistle for jumps, and bells and celeste for sparkles. The staffy barks happily at four key moments: the tower is built, the lightbulb, "a joy to live with" and his final jump. The barks are real recorded dog barks. The instruments and barks come from the GeneralUser GS SoundFont, whose licence allows commercial music use. The soundtrack is also saved on its own as `canine-confidence-soundtrack.mp3`.
 
 ## Scenes
 

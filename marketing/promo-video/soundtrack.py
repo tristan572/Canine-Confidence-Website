@@ -108,17 +108,17 @@ music = music + wet * 0.18
 
 # ---------------- SFX (sampled instruments) ----------------
 HARP, XYL, BELLS, CELESTE, TIMP, SLIDE, KIT = 0, 1, 2, 3, 4, 5, 9
-sfx_prog = {HARP: (0, 46, False), XYL: (0, 13, False), BELLS: (0, 14, False), CELESTE: (0, 8, False),
+sfx_prog = {HARP: (0, 46, False), XYL: (0, 12, False), BELLS: (0, 14, False), CELESTE: (0, 8, False),
             TIMP: (0, 47, False), SLIDE: (0, 72, False), KIT: (128, 0, True)}
 S = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 47.05}
 fx = [(0, 'range', SLIDE, 12, 0)]
 
-def swirl(t):  # harp glissando for scene transitions
-    for i, k in enumerate([65, 67, 69, 72, 74, 77, 79, 81, 84]):
-        note(fx, t + i * 0.028, HARP, k, 70, 0.5)
+def swirl(t):  # soft, short harp brush for scene transitions
+    for i, k in enumerate([65, 69, 72, 77, 81]):
+        note(fx, t + i * 0.035, HARP, k, 30, 0.35)
 
-def pop(t, k=84):
-    note(fx, t, XYL, k, 100, 0.25)
+def pop(t, k=84):  # soft, rounded marimba tap, pitched well below the old xylophone
+    note(fx, t, XYL, k - 17, 46, 0.2)
 
 def twinkle(t):
     for i, k in enumerate([84, 89, 93, 96]): note(fx, t + i * 0.07, CELESTE, k, 80, 0.5)
@@ -155,19 +155,17 @@ sfx = render(fx, sfx_prog, gain=-6)
 
 # ---------------- Barks (real recorded dog, GS bank 1 preset 123) ----------------
 DOG = 0
+# barks only at the key moments: tower built, lightbulb, 'joy to live with', final jump
 barks = [(S['s3'] + 4.05, 58), (S['s3'] + 4.3, 60),
-         (S['s4'] + 2.7, 59),
-         (S['s5'] + 0.9, 60), (S['s5'] + 1.15, 60), (S['s5'] + 3.0, 61),
          (S['s6'] + 2.05, 59),
          (S['s8'] + 0.6, 58), (S['s8'] + 0.85, 60),
-         (S['s9'] + 1.35, 59),
-         (S['s10'] + 1.7, 58), (S['s10'] + 1.95, 60), (END + 0.1, 59)]
+         (S['s10'] + 1.7, 59)]
 bev = []
 for t, k in barks: note(bev, t, DOG, k, 118, 0.45)
 bark = render(bev, {DOG: (1, 123, False)}, gain=-2)
 
 def norm(x): return x / max(1e-9, np.abs(x).max())
-mix = norm(music) * 0.62 + norm(sfx) * 0.42 + norm(bark) * 0.75
+mix = music / 0.5648 * 0.62 + sfx / 0.4254 * 0.42 + bark / 0.5208 * 0.75
 n = len(mix); fl = int(SR * 1.0)
 mix[-fl:] *= np.linspace(1, 0, fl)[:, None]
 mix = np.tanh(mix * 1.2) / np.tanh(1.2)
