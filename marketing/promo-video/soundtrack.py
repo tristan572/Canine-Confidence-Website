@@ -139,7 +139,7 @@ for k, v in S.items():
     if v > 0: swirl(v - 0.12)
 slide(0.12, up=False, dur=0.45); thump(0.62)
 for i, x in enumerate((1.4, 1.9, 2.4)): pop(S['s1'] + x, [84, 88, 91][i])
-for i, x in enumerate((0.9, 1.4, 1.9)): pop(S['s2'] + x, [77, 81, 84][i])
+for i, x in enumerate((0.9, 1.4, 1.9)): note(fx, S['s2'] + x, XYL, [84, 88, 91][i] - 17, 22, 0.15)  # extra-soft card pops
 for i in range(4): thump(S['s3'] + 1.88 + i * .55)
 twinkle(S['s3'] + 4.1)
 for s in ('s4', 's5', 's6', 's7'): pop(S[s] + 0.4, 89)

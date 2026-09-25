@@ -14,7 +14,7 @@ The soundtrack is original and played on sampled instruments: strummed steel gui
 | 4.5–9.5s | The real problems | The staffy looks sad. Three cards pop up: Fulfilment, Relationship, Communication. "Usually all three at once." |
 | 9.5–15s | The four blocks | "So I don't lead with obedience." Health, Lifestyle, Clarity and Skills crash down into a tower, the screen shakes, and the staffy hops with each landing. |
 | 15–20s | Block 1: Health | The staffy eats from his bowl, then a heart pops. Food ✓, Rest ✓, No pain ✓. "Feels good in their body. A dog in pain can't learn. So I never train over it." |
-| 20–25s | Block 2: Lifestyle | The staffy runs after a bouncing ball through the park. CHASE! SNIFF! PLAY! "Fulfilled in their mind." |
+| 20–25s | Block 2: Lifestyle | Cleo chases a big orange-and-blue kick-fetch-style ball through the park. CHASE! SNIFF! PLAY! "Fulfilled in their mind." |
 | 25–30s | Block 3: Clarity | A confused head tilt, then "YES!", and a lightbulb pops. "Knows what you're asking. Confusion creates anxiety. Clarity creates confidence." |
 | 30–35s | Block 4: Skills | The staffy walks on a loose lead past a café. Recall ✓, Loose lead ✓, Place ✓. "Listens in real life." |
 | 35–40s | Result | A happy wiggle, floating hearts and sparkles. "Build all four… and you get a dog that's a joy to live with." |

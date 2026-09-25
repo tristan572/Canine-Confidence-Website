@@ -20,5 +20,3 @@ Cleo is based on Tristan's own blue staffy girl, pushed into a bolder cartoon st
 
 The character rig is `marketing/promo-video/dog.js`. Call `useLook('cleoHero')` before drawing, then use `sitDogSVG(id)` with `new SitDog(id).set(t, {...})` for the sitting, front-on pose, or `sideDogSVG(id)` with `new SideDog(id).set(t, {...})` for walking and running. The expression options are `brow` (normal, confused, sad, up), `mouth` (open, smile, frown), `happy`, `ears`, `tilt` and `wag`.
 
-
-Note: the rig's default Cleo now has the slimmer head. `canine-confidence-cartoon.mp4` was rendered before that change, so it still shows the wider head until the video is re-rendered.
