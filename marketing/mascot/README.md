@@ -10,7 +10,7 @@ Cleo is based on Tristan's own blue staffy girl, pushed into a bolder cartoon st
 |---|---|
 | Coat | Bold cartoon blue `#5E7FA8`, shade `#46638A` |
 | Head | Box-shaped staffy head, drawn about 14% narrower than the original promo dog (`headW: 0.86`), with cheek muscles, forehead wrinkles and folded rose ears |
-| Muzzle | Silvery grey `#C3CEDC`, with silver flecks above the brows |
+| Muzzle | Silvery grey `#C3CEDC`, with plain dark brows (no white brow flecks) |
 | Eyes | Amber `#E8A33A` with soft lashes |
 | Markings | Small white star on the chest, one white front foot (the other paws are coat-coloured) |
 | Collar | Purple `#7A4FD0` with a silver tag `#D3DAE3` |

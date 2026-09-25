@@ -12,7 +12,7 @@ const LOOKS = {
   // B: Cleo, brighter - bluer coat, lashes, sky-blue brand bandana under the purple collar
   cleoBandana: { coat: '#6A809C', coatD: '#51637D', coatL: '#8A9DB6', blaze: false, chest: 'small', muzzle: '#BFC9D6', silver: true, eye: '#E0A035', lashes: true, bandana: '#2BA6DE', collar: '#6B4BB8', whiteFeet: 'one' },
   // C: hero Cleo - saturated cartoon blue, bold amber eyes, lashes, purple collar, bigger white chest mark
-  cleoHero: { coat: '#5E7FA8', coatD: '#46638A', coatL: '#86A2C4', blaze: false, chest: 'star', muzzle: '#C3CEDC', silver: true, eye: '#E8A33A', lashes: true, bandana: null, collar: '#7A4FD0', whiteFeet: 'one', blush: false, tag: '#D3DAE3', headW: 0.86, sideHead: 1.03 },
+  cleoHero: { coat: '#5E7FA8', coatD: '#46638A', coatL: '#86A2C4', blaze: false, chest: 'star', muzzle: '#C3CEDC', silver: false, eye: '#E8A33A', lashes: true, bandana: null, collar: '#7A4FD0', whiteFeet: 'one', blush: false, tag: '#D3DAE3', headW: 0.86, sideHead: 1.03 },
 };
 let LOOK = LOOKS.promo;
 function useLook(name) { LOOK = LOOKS[name] || LOOKS.promo; }
