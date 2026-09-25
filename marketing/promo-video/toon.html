@@ -39,6 +39,7 @@
 
 <script src="dog.js"></script>
 <script>
+useLook('cleoHero'); // Cleo, the Canine Confidence mascot
 const W = 1080, H = 1920;
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const easeOut = x => 1 - Math.pow(1 - x, 3);
@@ -334,7 +335,7 @@ scene('s9', 7.5, `
       ${sitDogSVG('d9')}
       <g id="s9card"><path d="M80,880 C300,870 780,874 1000,884 C1010,1100 1006,1350 996,1500 C780,1510 300,1506 86,1496 C74,1300 72,1080 80,880 Z" fill="#fff" ${ink}/>
         ${[0, 1, 2, 3, 4].map(i => star(340 + i * 100, 970, 40, '#F2B33D')).join('')}</g>
-      <g id="paws"><ellipse cx="455" cy="886" rx="44" ry="26" fill="#6F8196" ${ink}/><ellipse cx="625" cy="886" rx="44" ry="26" fill="#6F8196" ${ink}/>
+      <g id="paws"><ellipse cx="455" cy="886" rx="44" ry="26" fill="${LOOK.coat}" ${ink}/><ellipse cx="625" cy="886" rx="44" ry="26" fill="${LOOK.coat}" ${ink}/>
         <path d="M440,880 v16 M470,880 v16 M610,880 v16 M640,880 v16" ${ink} stroke-width="4"/></g>
     </g>
   </svg>
