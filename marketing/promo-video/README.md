@@ -23,6 +23,20 @@ The soundtrack is original and played on sampled instruments: strummed steel gui
 
 The copy comes from *The Four Building Blocks to a Balanced Dog*. "100+ five-star reviews" is 33 on Google plus 90+ on Mad Paws (`shared/social-proof.ts`).
 
+## 15-second ad cut
+
+`canine-confidence-cartoon-15s.mp4` is 15 seconds, 9:16, for paid ads and Stories. It's built from the same scenes:
+
+| Time | Scene |
+|---|---|
+| 0–3s | Hook: "Most dog problems aren't training problems." |
+| 3–7s | "So I don't lead with obedience." The four blocks crash into a tower, with Cleo's happy woof |
+| 7–9s | "…and you get a dog that's a joy to live with." |
+| 9–11s | Cleo peeks over the five-star review card, then "100+ five-star reviews" |
+| 11–15s | Logo, "Build the blocks. Live the balance.", book an Initial Canine Success Assessment, website and phone |
+
+Re-render it with `CUT=15 node render.mjs full video15.mp4` and `CUT=15 OUT=soundtrack15.wav python3 soundtrack.py`, then mux them the same way as the full video. The cut list lives in `CUTS` in `toon.html`.
+
 ## Suggested post caption
 
 > Most dog problems aren't training problems.

@@ -12,7 +12,8 @@ from scipy.signal import fftconvolve
 
 SF = os.environ.get('SF2', 'GeneralUser.sf2')
 SR = 44100
-DUR = 54.07
+CUT = os.environ.get('CUT')
+DUR = 15.3 if CUT == '15' else 54.07
 BEAT = 0.5          # 120 bpm
 BAR = 4 * BEAT
 rng = np.random.default_rng(3)
@@ -25,6 +26,7 @@ def render(events, programs, gain=-4):
     for ch, (bank, pre, drums) in programs.items():
         s.program_select(ch, sfid, bank, pre, is_drums=drums)
     out, t = [], 0.0
+    events = [e for e in events if e[0] < DUR]
     for et, kind, ch, a, b in sorted(events, key=lambda e: (e[0], e[1] != 'off')) + [(DUR, 'end', 0, 0, 0)]:
         n = int(round((et - t) * SR))
         if n > 0:
@@ -49,7 +51,7 @@ CH = {'F': ([53, 57, 60, 65, 69], 41, 48), 'C': ([48, 52, 55, 60, 64], 36, 43),
 PROG = ['F', 'C', 'Dm', 'Bb']
 MEL_A = [[72, 0, 69, 72, 77, 0, 76, 74], [72, 0, 0, 67, 72, 0, 74, 76], [77, 0, 76, 74, 72, 0, 69, 0], [70, 0, 72, 74, 72, 0, 0, 0]]
 MEL_B = [[69, 0, 72, 0, 77, 76, 77, 79], [76, 0, 72, 0, 67, 0, 72, 74], [74, 0, 77, 0, 76, 74, 72, 69], [70, 72, 74, 0, 77, 0, 0, 0]]
-END = 52.0
+END = 14.0 if CUT == '15' else 52.0
 NBARS = int(END / BAR)  # 25 full bars before the final hit
 
 ev = []
@@ -111,6 +113,9 @@ HARP, XYL, BELLS, CELESTE, TIMP, SLIDE, KIT = 0, 1, 2, 3, 4, 5, 9
 sfx_prog = {HARP: (0, 46, False), XYL: (0, 12, False), BELLS: (0, 14, False), CELESTE: (0, 8, False),
             TIMP: (0, 47, False), SLIDE: (0, 72, False), KIT: (128, 0, True)}
 S = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 47.05}
+if CUT == '15':
+    S = {k: 1000 for k in S}
+    S.update({'s1': 0, 's3': 2.55, 's8': 6.5 - 0.3, 's9': 8.85 - 0.9, 's10': 11.0})
 fx = [(0, 'range', SLIDE, 12, 0)]
 
 def swirl(t):  # soft, short harp brush for scene transitions
@@ -135,8 +140,9 @@ def slide(t, up=True, dur=0.4):
 def thump(t):
     note(fx, t, TIMP, 41, 118, 0.6); note(fx, t, KIT, 36, 110, 0.2)
 
-for k, v in S.items():
-    if v > 0: swirl(v - 0.12)
+SCENE_STARTS = {'s3': 2.55, 's8': 6.5, 's9': 8.85, 's10': 11.0} if CUT == '15' else S  # when each scene actually appears
+for k, v in SCENE_STARTS.items():
+    if 0 < v < 1000: swirl(v - 0.12)
 slide(0.12, up=False, dur=0.45); thump(0.62)
 for i, x in enumerate((1.4, 1.9, 2.4)): pop(S['s1'] + x, [84, 88, 91][i])
 for i, x in enumerate((0.9, 1.4, 1.9)): note(fx, S['s2'] + x, XYL, [84, 88, 91][i] - 17, 22, 0.15)  # extra-soft card pops
@@ -170,5 +176,5 @@ n = len(mix); fl = int(SR * 1.0)
 mix[-fl:] *= np.linspace(1, 0, fl)[:, None]
 mix = np.tanh(mix * 1.2) / np.tanh(1.2)
 mix = mix / np.abs(mix).max() * 0.9
-wavfile.write('soundtrack.wav', SR, (mix * 32767).astype(np.int16))
+wavfile.write(os.environ.get('OUT', 'soundtrack.wav'), SR, (mix * 32767).astype(np.int16))
 print('ok', len(ev), 'music events,', len(fx), 'sfx events,', len(barks), 'barks')
