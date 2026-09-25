@@ -16,7 +16,7 @@ The soundtrack is original and played on sampled instruments: strummed steel gui
 | 15–20s | Block 1: Health | The staffy eats from his bowl, then a heart pops. Food ✓, Rest ✓, No pain ✓. "Feels good in their body. A dog in pain can't learn. So I never train over it." |
 | 20–25s | Block 2: Lifestyle | Cleo chases a big orange-and-blue kick-fetch-style ball through the park. CHASE! SNIFF! PLAY! "Fulfilled in their mind." |
 | 25–30s | Block 3: Clarity | A confused head tilt, then "YES!", and a lightbulb pops. "Knows what you're asking. Confusion creates anxiety. Clarity creates confidence." |
-| 30–35s | Block 4: Skills | The staffy walks on a loose lead past a café. Recall ✓, Loose lead ✓, Place ✓. "Listens in real life." |
+| 30–35s | Block 4: Skills | Cleo walks on a loose lead past Café 63, a dog-friendly local café, with a water bowl and a "Dogs welcome" sign out front. Recall ✓, Loose lead ✓, Place ✓. "Listens in real life." |
 | 35–40s | Result | A happy wiggle, floating hearts and sparkles. "Build all four… and you get a dog that's a joy to live with." |
 | 40–47s | Proof | The staffy peeks over Amanda C.'s five-star Google review about Murphy the Labrador: "Training our Labrador, Murphy, with Tristan has been one of the best decisions we've made! Murphy has come such a long way thanks to Tristan's guidance, and we've learned so much as owners too." 100+ five-star reviews on Google & Mad Paws. |
 | 47–54s | Call to action | The logo pops in. "Build the blocks. Live the balance." Book an Initial Canine Success Assessment, canineconfidence.com.au, 0409 521 358, North Brisbane. |

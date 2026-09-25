@@ -29,6 +29,7 @@
 <body>
 <svg width="0" height="0" style="position:absolute">
   <defs>
+    <pattern id="stripeBW" width="92" height="10" patternUnits="userSpaceOnUse"><rect width="46" height="10" fill="#141414"/><rect x="46" width="46" height="10" fill="#FFFFFF"/></pattern>
     <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="14" stroke="#1F2036" stroke-width="4" opacity=".35"/></pattern>
     <filter id="boil" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="boilNoise" type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
     <filter id="boilText" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence id="boilNoiseT" type="fractalNoise" baseFrequency="0.03" numOctaves="1" seed="1"/><feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G"/></filter>
@@ -271,10 +272,20 @@ blockScene('s6', 3, 'CLARITY', BLOCK_COL.clarity, '#DCD8F7', '#B9B1EE', `
 // S7 Skills: loose-lead walk past café
 blockScene('s7', 4, 'SKILLS', BLOCK_COL.skills, '#D3F0E1', '#A6DDC0', `
   <g id="s7scroll">
-    <g><rect x="1100" y="820" width="420" height="470" fill="#FFF6E9" ${ink}/><path d="M1080,820 h460 l-30,90 h-400 z" fill="#E8A33A" ${ink}/>
-      <path d="M1130,910 q37,40 75,0 q37,40 75,0 q37,40 75,0 q37,40 75,0 q37,40 75,0" fill="#fff" ${ink} stroke-width="5"/>
-      <text x="1310" y="885" text-anchor="middle" font-family="Luckiest Guy" font-size="64" fill="#fff" ${ink} stroke-width="3">CAFÉ</text>
-      <rect x="1160" y="1000" width="140" height="160" fill="#CDEBFA" ${ink}/><rect x="1350" y="1060" width="110" height="230" fill="#26275F" ${ink}/></g>
+    <g><rect x="1100" y="820" width="420" height="470" fill="#FFFFFF" ${ink}/>
+      <rect x="1120" y="690" width="380" height="120" rx="14" fill="#141414" ${ink}/>
+      <text x="1310" y="778" text-anchor="middle" font-family="Luckiest Guy" font-size="80" fill="#fff" letter-spacing="4">CAFÉ 63</text>
+      <path d="M1080,820 h460 l-30,90 h-400 z" fill="url(#stripeBW)" ${ink}/>
+      <path d="M1130,910 q37,40 75,0 q37,40 75,0 q37,40 75,0 q37,40 75,0 q37,40 75,0" fill="#141414" ${ink} stroke-width="5"/>
+      <rect x="1150" y="990" width="160" height="170" fill="#E9EEF2" ${ink}/><path d="M1230,990 v170 M1150,1075 h160" ${ink} stroke-width="5"/>
+      <rect x="1350" y="1050" width="120" height="240" fill="#141414" ${ink}/><circle cx="1452" cy="1175" r="7" fill="#fff"/>
+      <rect x="1165" y="1180" width="130" height="16" rx="6" fill="#141414" ${ink} stroke-width="5"/><path d="M1230,1196 v60 M1200,1256 h60" ${ink} stroke-width="6"/>
+      <path d="M1536,1292 L1546,1258 L1632,1258 L1642,1292 Z" fill="#2BA6DE" ${ink} stroke-width="6"/><ellipse cx="1589" cy="1258" rx="43" ry="9" fill="#A8DDF5" ${ink} stroke-width="5"/>
+      <g><path d="M1672,1292 L1702,1130 M1822,1292 L1792,1130 M1686,1220 h122" fill="none" ${ink} stroke-width="6"/>
+        <rect x="1690" y="1110" width="114" height="130" rx="10" fill="#141414" ${ink} stroke-width="6"/>
+        <text x="1747" y="1158" text-anchor="middle" font-family="Luckiest Guy" font-size="30" fill="#fff">DOGS</text>
+        <text x="1747" y="1192" text-anchor="middle" font-family="Luckiest Guy" font-size="24" fill="#fff">WELCOME</text>
+        <g fill="#fff"><ellipse cx="1747" cy="1218" rx="9" ry="7"/><circle cx="1734" cy="1206" r="4"/><circle cx="1744" cy="1201" r="4"/><circle cx="1754" cy="1201" r="4"/><circle cx="1762" cy="1207" r="4"/></g></g></g>
     <g><path d="M1800,1180 C1780,1060 1850,960 1940,980 C2030,960 2080,1080 2040,1180 Z" fill="#7BC47F" ${ink}/><rect x="1908" y="1170" width="40" height="120" fill="#A0703F" ${ink}/></g>
     <g><rect x="2250" y="1180" width="260" height="30" rx="8" fill="#A0703F" ${ink}/><path d="M2270,1210 v70 M2490,1210 v70 M2260,1140 h240" fill="none" ${ink}/></g>
     <g transform="translate(-200 0)"><path d="M600,1180 C580,1060 650,960 740,980 C830,960 880,1080 840,1180 Z" fill="#7BC47F" ${ink}/><rect x="708" y="1170" width="40" height="120" fill="#A0703F" ${ink}/></g>
@@ -283,20 +294,20 @@ blockScene('s7', 4, 'SKILLS', BLOCK_COL.skills, '#D3F0E1', '#A6DDC0', `
   <path id="lead" d="" fill="none" stroke="#E8A33A" stroke-width="12" stroke-linecap="round"/>
   <g id="hand"><path d="M-420,-520 L-18,-18" stroke="#1F2036" stroke-width="72" stroke-linecap="round"/><path d="M-420,-520 L-18,-18" stroke="#26275F" stroke-width="58" stroke-linecap="round"/><circle cx="0" cy="0" r="40" fill="#F2C6A0" ${ink}/><path d="M-22,-10 q22,18 44,0" fill="none" ${ink} stroke-width="5"/></g>
   ${sideDogSVG('d7')}
-  <g id="k1"><rect x="60" y="560" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="210" y="625" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ RECALL</text></g>
-  <g id="k2"><rect x="390" y="620" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="540" y="685" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ LOOSE LEAD</text></g>
-  <g id="k3"><rect x="720" y="560" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="870" y="625" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ PLACE</text></g>`,
+  <g id="k1"><rect x="60" y="470" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="210" y="535" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ RECALL</text></g>
+  <g id="k2"><rect x="390" y="540" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="540" y="605" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ LOOSE LEAD</text></g>
+  <g id="k3"><rect x="720" y="470" width="300" height="96" rx="48" fill="#fff" ${ink}/><text x="870" y="535" text-anchor="middle" font-family="Luckiest Guy" font-size="42" fill="#1F2036">✓ PLACE</text></g>`,
   (t) => {
     const scrollX = -(t * 360);
     E('s7scroll').setAttribute('transform', `translate(${scrollX.toFixed(1)} 0)`);
     const d = new SideDog('d7');
     const dx = 300, dy = 950, s = 1.0;
     d.set(t, { x: dx, y: dy, s, speed: 1.7, amp: 20, bounce: 8 });
-    const hx = 150 + Math.sin(t * 3.4) * 10, hy = 800 + Math.sin(t * 3.4 * 2) * 6;
+    const hx = 150 + Math.sin(t * 3.4) * 10, hy = 630 + Math.sin(t * 3.4 * 2) * 6;
     E('hand').setAttribute('transform', `translate(${hx.toFixed(1)} ${hy.toFixed(1)})`);
     const cx = dx + 542 * s, cy = dy + 216 * s;
     E('lead').setAttribute('d', `M${hx},${hy} Q${(hx + cx) / 2},${Math.max(hy, cy) + 150} ${cx},${cy}`);
-    popSvg(E('k1'), t, 1.0, 210, 608); popSvg(E('k2'), t, 1.5, 540, 668); popSvg(E('k3'), t, 2.0, 870, 608);
+    popSvg(E('k1'), t, 1.0, 210, 518); popSvg(E('k2'), t, 1.5, 540, 588); popSvg(E('k3'), t, 2.0, 870, 518);
   },
   'Listens in real life.', 'At the park, at the café and at home.');
 
