@@ -13,7 +13,7 @@ from scipy.signal import fftconvolve
 SF = os.environ.get('SF2', 'GeneralUser.sf2')
 SR = 44100
 CUT = os.environ.get('CUT')
-DUR = 15.3 if CUT == '15' else 54.07
+DUR = 18.4 if CUT == '15' else 54.07
 BEAT = 0.5          # 120 bpm
 BAR = 4 * BEAT
 rng = np.random.default_rng(3)
@@ -51,7 +51,7 @@ CH = {'F': ([53, 57, 60, 65, 69], 41, 48), 'C': ([48, 52, 55, 60, 64], 36, 43),
 PROG = ['F', 'C', 'Dm', 'Bb']
 MEL_A = [[72, 0, 69, 72, 77, 0, 76, 74], [72, 0, 0, 67, 72, 0, 74, 76], [77, 0, 76, 74, 72, 0, 69, 0], [70, 0, 72, 74, 72, 0, 0, 0]]
 MEL_B = [[69, 0, 72, 0, 77, 76, 77, 79], [76, 0, 72, 0, 67, 0, 72, 74], [74, 0, 77, 0, 76, 74, 72, 69], [70, 72, 74, 0, 77, 0, 0, 0]]
-END = 14.0 if CUT == '15' else 52.0
+END = 16.0 if CUT == '15' else 52.0
 NBARS = int(END / BAR)  # 25 full bars before the final hit
 
 ev = []
@@ -115,7 +115,7 @@ sfx_prog = {HARP: (0, 46, False), XYL: (0, 12, False), BELLS: (0, 14, False), CE
 S = {'s1': 0, 's2': 4.55, 's3': 9.5, 's4': 15.25, 's5': 20.2, 's6': 25.15, 's7': 30.1, 's8': 35.05, 's9': 40.0, 's10': 47.05}
 if CUT == '15':
     S = {k: 1000 for k in S}
-    S.update({'s1': 0, 's3': 2.55, 's8': 6.5 - 0.3, 's9': 8.85 - 0.9, 's10': 11.0})
+    S.update({'s1': 0, 's3': 2.55, 's8': 6.5 - 0.3, 's9': 8.85 - 0.9, 's10': 12.4})
 fx = [(0, 'range', SLIDE, 12, 0)]
 
 def swirl(t):  # soft, short harp brush for scene transitions
@@ -140,7 +140,7 @@ def slide(t, up=True, dur=0.4):
 def thump(t):
     note(fx, t, TIMP, 41, 118, 0.6); note(fx, t, KIT, 36, 110, 0.2)
 
-SCENE_STARTS = {'s3': 2.55, 's8': 6.5, 's9': 8.85, 's10': 11.0} if CUT == '15' else S  # when each scene actually appears
+SCENE_STARTS = {'s3': 2.55, 's8': 6.5, 's9': 8.85, 's10': 12.4} if CUT == '15' else S  # when each scene actually appears
 for k, v in SCENE_STARTS.items():
     if 0 < v < 1000: swirl(v - 0.12)
 slide(0.12, up=False, dur=0.45); thump(0.62)

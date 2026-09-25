@@ -403,7 +403,7 @@ scene('s10', 7.0, `
 // ---------- Timeline ----------
 const REVEAL = 0.45;
 // ?cut=15 builds the 15-second ad: [scene, local start offset, duration]
-const CUTS = { '15': [['s1', 0, 3.0], ['s3', 0, 4.4], ['s8', 0.3, 2.8], ['s9', 0.9, 2.6], ['s10', 0, 4.3]] };
+const CUTS = { '15': [['s1', 0, 3.0], ['s3', 0, 4.4], ['s8', 0.3, 2.8], ['s9', 0.9, 4.0], ['s10', 0, 6.0]] };
 const cutKey = new URLSearchParams(location.search).get('cut');
 if (CUTS[cutKey]) {
   const keep = CUTS[cutKey].map(([id, off, dur]) => { const sc = scenes.find(x => x.id === id); sc.offset = off; sc.dur = dur; return sc; });
