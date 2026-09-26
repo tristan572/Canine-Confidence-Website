@@ -4,6 +4,9 @@ import type { Express } from "express";
 import { storage } from "./storage";
 import { STATIC_META, type PageMeta } from "@shared/seo-meta";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
+import { FAQ_ITEMS, faqAnswerText } from "@shared/faq-content";
+import type { BlogPost } from "@shared/schema";
+import { createPagePrerenderer, defaultPrerenderBundlePath } from "./prerender-html";
 
 const SITE_URL = "https://www.canineconfidence.com.au";
 
@@ -87,6 +90,80 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://share.google/NJfyc690NWAMVb3LX",
   ],
 };
+
+const PUBLISHER = {
+  "@type": "LocalBusiness",
+  "@id": `${SITE_URL}/#localbusiness`,
+  name: "Canine Confidence",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/email-logo.png`,
+    width: 395,
+    height: 150,
+  },
+};
+
+function absoluteUrl(url: string): string {
+  return /^https?:\/\//.test(url) ? url : `${SITE_URL}${url.startsWith("/") ? "" : "/"}${url}`;
+}
+
+export function buildBlogPostingSchema(post: BlogPost) {
+  const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
+  const published = post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    ...(published ? { datePublished: published, dateModified: published } : {}),
+    author: {
+      "@type": "Person",
+      name: "Tristan Pearson",
+      url: `${SITE_URL}/about`,
+    },
+    publisher: PUBLISHER,
+    ...(post.imageUrl ? { image: absoluteUrl(post.imageUrl) } : {}),
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+    url: canonicalUrl,
+    ...(post.tags?.length ? { keywords: post.tags.join(", ") } : {}),
+  };
+}
+
+// Built from the same FAQ_ITEMS list the /faq page renders.
+export function buildFaqPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: faqAnswerText(item) },
+    })),
+  };
+}
+
+async function resolvePageSchemas(urlPath: string): Promise<object[]> {
+  if (urlPath === "/faq") return [buildFaqPageSchema()];
+
+  const blogMatch = urlPath.match(/^\/blog\/([^/]+)$/);
+  if (blogMatch) {
+    const post = await storage.getBlogPostBySlug(blogMatch[1]);
+    if (post) return [buildBlogPostingSchema(post)];
+  }
+
+  return [];
+}
+
+// Escapes characters that could close the script tag or break parsing when
+// JSON-LD is embedded in HTML.
+function jsonLdScript(schema: object): string {
+  const json = JSON.stringify(schema)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+  return `<script type="application/ld+json">${json}</script>`;
+}
 
 interface SitemapEntry {
   path: string;
@@ -228,7 +305,34 @@ function renderBlogContent(post: { title: string; excerpt: string; content: stri
   return renderStaticContent(post.title, [post.excerpt, ...paragraphs]);
 }
 
-async function renderInitialContent(urlPath: string): Promise<string> {
+type PagePrerenderer = ReturnType<typeof createPagePrerenderer>;
+
+// The API responses the page components read, taken straight from storage so
+// services, packages and prices come from the same catalogue as the live API.
+async function loadPrerenderData(): Promise<Record<string, unknown>> {
+  const [services, packages, testimonials, blogPosts] = await Promise.all([
+    storage.getServices(),
+    storage.getPackages(),
+    storage.getTestimonials(),
+    storage.getBlogPosts(),
+  ]);
+  return {
+    "/api/services": services,
+    "/api/packages": packages,
+    "/api/testimonials": testimonials,
+    "/api/blog": blogPosts,
+  };
+}
+
+async function renderInitialContent(urlPath: string, prerenderer?: PagePrerenderer): Promise<string> {
+  // Core and suburb pages: render the real React page so the no-JS HTML
+  // carries exactly the copy visitors see. Falls back to the summary below if
+  // the prerender bundle is missing or a render fails.
+  if (prerenderer && (await prerenderer.hasRoute(urlPath))) {
+    const pageHtml = await prerenderer.render(urlPath, await loadPrerenderData());
+    if (pageHtml) return `<main data-prerendered="true">${pageHtml}</main>`;
+  }
+
   const page = INITIAL_PAGE_CONTENT[urlPath];
   if (page) {
     if (urlPath === "/blog") {
@@ -275,9 +379,16 @@ async function resolveMeta(urlPath: string): Promise<PageMeta> {
   return NOT_FOUND_META;
 }
 
-export function registerSeoMiddleware(app: Express, distPath: string) {
+export function registerSeoMiddleware(
+  app: Express,
+  distPath: string,
+  options: { prerenderBundlePath?: string } = {},
+) {
   const templateHtml = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
-  const jsonLdTag = `<script type="application/ld+json">${JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>`;
+  const jsonLdTag = jsonLdScript(LOCAL_BUSINESS_SCHEMA);
+  const prerenderer = createPagePrerenderer(
+    options.prerenderBundlePath ?? defaultPrerenderBundlePath(distPath),
+  );
 
   app.use(async (req, res, next) => {
     const isPageRequest = req.method === "GET" || req.method === "HEAD";
@@ -290,7 +401,7 @@ export function registerSeoMiddleware(app: Express, distPath: string) {
     const title = escapeHtml(meta.title);
     const description = escapeHtml(meta.description);
 
-    const initialContent = await renderInitialContent(req.path);
+    const initialContent = await renderInitialContent(req.path, prerenderer);
     let html = templateHtml
       .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
       .replace(
@@ -335,7 +446,8 @@ export function registerSeoMiddleware(app: Express, distPath: string) {
         );
     }
 
-    html = html.replace("</head>", `  ${jsonLdTag}\n  </head>`);
+    const schemaTags = [jsonLdTag, ...(await resolvePageSchemas(req.path)).map(jsonLdScript)];
+    html = html.replace("</head>", `  ${schemaTags.join("\n  ")}\n  </head>`);
 
     res.status(meta === NOT_FOUND_META ? 404 : 200);
     res.set("Content-Type", "text/html");
