@@ -75,16 +75,6 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Non-blocking CSS loading for production builds -->
-    <script>
-      (function(){
-        var css = document.querySelector('link[rel="stylesheet"][href*="assets/index"]');
-        if(css) {
-          css.media = 'print';
-          css.onload = function() { this.media = 'all'; };
-        }
-      })();
-    </script>
     <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
   </body>
 </html>
