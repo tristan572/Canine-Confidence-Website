@@ -37,13 +37,13 @@ Website copy must sound like something Tristan would say to a client. Use direct
 
 ### Database Schema (shared/schema.ts)
 - **Services**: Training services with categories, pricing, and features
-- **Products**: E-commerce products with inventory management
+- **Products**: Unused (e-commerce was removed; table kept for a possible future shop)
 - **Packages**: Training package deals with multiple sessions
 - **Blog Posts**: Content management for blog articles
 - **Bookings**: Service appointment scheduling
 - **Consultations**: Free consultation requests
 - **Contact Submissions**: General contact form submissions
-- **Cart Items**: E-commerce shopping cart functionality
+- **Cart Items**: Unused (e-commerce was removed; table kept for a possible future shop)
 - **Testimonials**: Customer reviews and feedback
 - **Subscribers**: Newsletter email subscribers with subscription dates
 
@@ -54,11 +54,12 @@ Website copy must sound like something Tristan would say to a client. Use direct
 - **Blog**: Content marketing with search, filtering, and newsletter subscription form
 - **About**: Company information and team details
 - **Contact**: Contact forms, business information, interactive service area map, and video consultation details
+- **FAQ**: Copy lives in `shared/faq-content.ts`, which also feeds the FAQPage schema; edit wording there, not in `faq.tsx`
 - **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export (requires `ADMIN_USERNAME`/`ADMIN_PASSWORD`)
 - **Location Pages**: SEO-optimized suburb-specific pages for local search rankings
-  - Sandgate/Shorncliffe (/dog-training-sandgate) - Live
-  - Northgate (/dog-training-northgate) - Live
-  - Future locations: Boondall, Ascot, Aspley, Chermside (planned)
+  - Live: Sandgate/Shorncliffe, Northgate, Chermside, Ascot, Aspley
+  - Planned: Boondall
+  - `client/src/config/locations.ts` is the source of truth for which locations are live
 
 ### API Endpoints
 - Services CRUD operations
@@ -114,7 +115,7 @@ Website copy must sound like something Tristan would say to a client. Use direct
   - Free consultation requests (contact info and concerns)
   - Contact form submissions (general inquiries)
 - **Security**: All user input is HTML-escaped to prevent injection attacks
-- **Configuration**: RESEND_API_KEY and RESEND_AUDIENCE_ID stored as environment secrets
+- **Configuration**: RESEND_API_KEY stored as an environment secret. Newsletter sign-ups sync to MailerLite (`server/mailerlite.ts`) via MAILERLITE_API_KEY and MAILERLITE_GROUP_ID
 - **Important**: The "from" domain (noreply@canineconfidence.com.au) MUST be verified in Resend before production deployment. Without domain verification, emails will fail to send.
 - **Implementation**: Email service in `server/email.ts`, integrated into API routes with graceful error handling
 
@@ -140,21 +141,15 @@ Website copy must sound like something Tristan would say to a client. Use direct
 - **Lazy loading**: Below-fold images use `loading="lazy"` to defer loading
 - **Dimensions**: All images specify width/height to prevent layout shift (CLS)
 
-### JavaScript Bundle Optimization
-- **Removed ReactMarkdown**: Plain JSX used for package descriptions (saves ~50KB)
-- **Deferred queries**: Non-critical API calls (testimonials, blog) load after initial paint using requestIdleCallback
-- **Critical queries only**: Services and packages load immediately for above-fold content
-
 ### Font Optimization
-- **Self-hosted Inter fonts**: Eliminated render-blocking Google Fonts CSS
-- **Font files**: /attached_assets/inter-latin-{400,500,600,700}.woff2
+- **Self-hosted fonts**: Manrope (variable, site font) and Fraunces italic (quotes only); no Google Fonts CSS
+- **Font files**: /attached_assets/manrope-latin-wght.woff2, /attached_assets/fraunces-latin-400-italic.woff2
 - **font-display: swap**: Text renders immediately with fallback font
-- **Font preload**: Primary font (400 weight) preloaded in index.html
+- **Font preload**: Manrope preloaded in index.html
 
 ### Resource Hints (index.html)
-- **Preconnect**: replit.com
 - **DNS Prefetch**: canineconfidence.simplybook.net
-- **Preload**: Hero image (responsive with media queries) and Inter font
+- **Preload**: Hero image (responsive with media queries) and Manrope font
 - **Critical CSS**: Inline styles for above-the-fold content
 
 ### Caching Strategy
@@ -166,6 +161,7 @@ Website copy must sound like something Tristan would say to a client. Use direct
 ### Build Process
 - **Frontend**: Vite builds React application to `dist/public`
 - **Backend**: ESBuild bundles server code to `dist/index.js`
+- **Prerender**: `vite.prerender.config.ts` builds `dist/ssr/prerender.js`; `server/seo.ts` uses it to serve the real page copy in the HTML for visitors and crawlers without JavaScript
 - **Assets**: Static assets served from `attached_assets` directory
 
 ### Environment Configuration
@@ -209,6 +205,9 @@ Website copy must sound like something Tristan would say to a client. Use direct
   - Target keywords: "dog training Northgate", "dog trainer Nundah", "Kalinga Park dog training"
   - Services: Walk & Train (Service ID 6), Private Coaching (Service ID 7), Assessment (Service ID 16)
 
+- **Ascot** (/dog-training-ascot) and **Aspley** (/dog-training-aspley)
+  - Built on the shared `LocalTrainingPage` component (`client/src/components/locations/local-training-page.tsx`)
+
 - **Chermside** (/dog-training-chermside)
   - Features: Urban dog training, apartment living skills, 1-on-1 Coaching Sessions
   - Local highlights: Westfield Chermside, 7th Brigade Park, Gympie Road
@@ -220,7 +219,7 @@ Website copy must sound like something Tristan would say to a client. Use direct
 - Location configuration in `client/src/config/locations.ts` defines all service areas
 - Footer Service Areas section automatically generated from config
 - Adding new location pages requires:
-  1. Create new page component (copy from sandgate.tsx template)
+  1. Create a page that renders `LocalTrainingPage` with suburb-specific props (see `ascot.tsx`)
   2. Add route to App.tsx
   3. Update location config `isLive: true`
   4. Customize content for suburb-specific landmarks and challenges
