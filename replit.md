@@ -54,6 +54,7 @@ Website copy must sound like something Tristan would say to a client. Use direct
 - **Blog**: Content marketing with search, filtering, and newsletter subscription form
 - **About**: Company information and team details
 - **Contact**: Contact forms, business information, interactive service area map, and video consultation details
+- **FAQ**: Copy lives in `shared/faq-content.ts`, which also feeds the FAQPage schema; edit wording there, not in `faq.tsx`
 - **Admin**: Content management, booking widget setup, and newsletter subscriber management with CSV export (requires `ADMIN_USERNAME`/`ADMIN_PASSWORD`)
 - **Location Pages**: SEO-optimized suburb-specific pages for local search rankings
   - Live: Sandgate/Shorncliffe, Northgate, Chermside, Ascot, Aspley
@@ -160,6 +161,7 @@ Website copy must sound like something Tristan would say to a client. Use direct
 ### Build Process
 - **Frontend**: Vite builds React application to `dist/public`
 - **Backend**: ESBuild bundles server code to `dist/index.js`
+- **Prerender**: `vite.prerender.config.ts` builds `dist/ssr/prerender.js`; `server/seo.ts` uses it to serve the real page copy in the HTML for visitors and crawlers without JavaScript
 - **Assets**: Static assets served from `attached_assets` directory
 
 ### Environment Configuration
