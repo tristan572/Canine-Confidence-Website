@@ -5,7 +5,9 @@ import { pathToFileURL } from "url";
 
 // Turns the React server render of a page into lean, semantic HTML for the
 // prerendered block: headings, paragraphs, lists and links keep their text
-// exactly, while styling, icons, images and interactive controls are removed.
+// exactly, images keep only their alt text, and styling, icons and
+// interactive controls are removed. Every removed tag becomes a space so
+// words from neighbouring elements can never run together.
 
 const KEEP_TAGS = new Set([
   "section",
@@ -59,8 +61,6 @@ const DROP_TAGS = new Set([
   "option",
   "textarea",
   "label",
-  "img",
-  "picture",
   "source",
   "iframe",
   "noscript",
@@ -88,6 +88,8 @@ const VOID_TAGS = new Set([
 
 const BLOCK_TAGS =
   "section|article|header|footer|nav|aside|h[1-6]|p|ul|ol|li|blockquote|figure|figcaption|details|summary|dl|dt|dd|table|thead|tbody|tr|th|td";
+
+const BLOCK_TAG_SET = new Set(BLOCK_TAGS.replace("h[1-6]", "h1|h2|h3|h4|h5|h6").split("|"));
 
 const TOKEN_PATTERN =
   /<!--[\s\S]*?-->|<(\/?)([a-zA-Z][\w-]*)((?:\s+[^\s"'>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+))?)*)\s*(\/?)>|[^<]+|</g;
@@ -125,19 +127,31 @@ export function toSemanticHtml(reactHtml: string): string {
 
     if (!isClosing && (DROP_TAGS.has(tag) || getAttribute(attributes, "aria-hidden") === "true")) {
       if (!isVoid) skipDepth = 1;
+      output += " ";
+      continue;
+    }
+
+    if (tag === "img") {
+      // Keep the description, not the image: no src, so nothing downloads
+      // twice before React mounts. Decorative images (empty alt) are skipped.
+      const alt = getAttribute(attributes, "alt")?.trim();
+      output += alt ? ` <img alt="${alt}"> ` : " ";
       continue;
     }
 
     if (!KEEP_TAGS.has(tag)) {
-      // Unwrapped layout elements still separate words visually.
       output += " ";
       continue;
     }
 
     if (tag === "br") {
-      output += "<br>";
+      output += " <br> ";
+    } else if (BLOCK_TAG_SET.has(tag)) {
+      // Spaces outside block tags keep words apart for plain-text extractors.
+      output += isClosing ? `</${tag}> ` : ` <${tag}>`;
     } else if (isClosing) {
-      output += `</${tag}>`;
+      // Sibling links often sit side by side with no whitespace between them.
+      output += `</${tag}> `;
     } else if (tag === "a") {
       const href = getAttribute(attributes, "href");
       output += href !== undefined ? `<a href="${href}">` : "<a>";
@@ -146,19 +160,21 @@ export function toSemanticHtml(reactHtml: string): string {
     }
   }
 
-  let html = output
-    .replace(/\s+/g, " ")
-    .replace(new RegExp(`(<(?:${BLOCK_TAGS})>)\\s+`, "g"), "$1")
-    .replace(new RegExp(`\\s+(</(?:${BLOCK_TAGS})>)`, "g"), "$1")
-    .replace(/\s+([.,;:!?)\]\u2019\u201D])/g, "$1")
-    .replace(/([(\[\u2018\u201C])\s+/g, "$1");
-
-  // Remove elements left empty after dropping icons, images and controls.
+  // Remove elements left empty after dropping icons and controls, then tidy
+  // spacing: whitespace is collapsed, never removed between words.
+  let html = output.replace(/\s+/g, " ");
   let previous: string;
   do {
     previous = html;
-    html = html.replace(/<([a-z0-9]+)(?: href="[^"]*")?>\s*<\/\1>/g, "");
+    html = html.replace(/<([a-z0-9]+)(?: href="[^"]*")?>\s*<\/\1>/g, " ");
   } while (html !== previous);
+
+  html = html
+    .replace(/\s+/g, " ")
+    .replace(new RegExp(`(<(?:${BLOCK_TAGS})>) `, "g"), "$1")
+    .replace(new RegExp(` (</(?:${BLOCK_TAGS})>)`, "g"), "$1")
+    .replace(/ ([.,;:!?)\]\u2019\u201D])/g, "$1")
+    .replace(/([(\[\u2018\u201C]) /g, "$1");
 
   return html.trim();
 }

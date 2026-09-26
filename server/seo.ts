@@ -289,10 +289,39 @@ const INITIAL_PAGE_CONTENT: Record<string, { h1: string; body: string[] }> = {
   "/terms": { h1: "Terms & Conditions", body: ["Terms and conditions for Canine Confidence dog training services."] },
 };
 
+// Tidies the brief pre-JS view of the prerendered block. Every selector is
+// scoped to [data-prerendered] children of #root, which React replaces on
+// mount, so none of this can touch the rendered app. Colours and font match
+// the site (Manrope, charcoal headings, primary blue links).
+export const PRERENDER_STYLE =
+  "<style data-prerender-style>" +
+  "#root>[data-prerendered]{box-sizing:border-box;width:100%;max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem;" +
+  "font:1rem/1.65 Manrope,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#2A2B4A}" +
+  "#root>[data-prerendered] :is(h1,h2,h3,h4,h5,h6){color:#1F2159;font-weight:800;line-height:1.25;margin:1.6em 0 .5em}" +
+  "#root>[data-prerendered] h1{font-size:2rem;margin-top:0}" +
+  "#root>[data-prerendered] h2{font-size:1.5rem}" +
+  "#root>[data-prerendered] h3{font-size:1.2rem}" +
+  "#root>[data-prerendered] :is(h4,h5,h6){font-size:1.05rem}" +
+  "#root>[data-prerendered] :is(p,ul,ol,dl,blockquote,figure,details,section,article){margin:0 0 1em}" +
+  "#root>[data-prerendered] :is(ul,ol){padding-left:1.4em}" +
+  "#root>[data-prerendered] ul{list-style:disc}" +
+  "#root>[data-prerendered] ol{list-style:decimal}" +
+  "#root>[data-prerendered] li{margin:.3em 0}" +
+  "#root>[data-prerendered] dt{font-weight:700}" +
+  "#root>[data-prerendered] dd{margin:0 0 .5em}" +
+  "#root>[data-prerendered] a{color:#0A6A97;text-decoration:underline;font-weight:600}" +
+  "#root>[data-prerendered] blockquote{border-left:3px solid #0A6A97;padding-left:1em;font-style:italic}" +
+  // Prerendered images carry alt text but no src (so nothing downloads twice),
+  // which browsers draw as a broken-image icon: keep them out of the view.
+  "#root>[data-prerendered] img{display:none}" +
+  "</style>";
+
+// Elements are separated by a space so text extractors that simply delete
+// tags never run words from neighbouring elements together.
 function renderStaticContent(h1: string, body: string[]): string {
-  return `<main data-prerendered="true"><section><h1>${escapeHtml(h1)}</h1>${body
+  return `<main data-prerendered="true"><section><h1>${escapeHtml(h1)}</h1> ${body
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
-    .join("")}</section></main>`;
+    .join(" ")}</section></main>`;
 }
 
 function renderBlogContent(post: { title: string; excerpt: string; content: string }): string {
@@ -337,15 +366,15 @@ async function renderInitialContent(urlPath: string, prerenderer?: PagePrerender
   if (page) {
     if (urlPath === "/blog") {
       const posts = await storage.getBlogPosts();
-      return `${renderStaticContent(page.h1, page.body)}<section data-prerendered="true">${posts
-        .map((post) => `<article><h2>${escapeHtml(post.title)}</h2><p>${escapeHtml(post.excerpt)}</p><a href="/blog/${encodeURIComponent(post.slug)}">Read article</a></article>`)
-        .join("")}</section>`;
+      return `${renderStaticContent(page.h1, page.body)} <section data-prerendered="true">${posts
+        .map((post) => `<article><h2>${escapeHtml(post.title)}</h2> <p>${escapeHtml(post.excerpt)}</p> <a href="/blog/${encodeURIComponent(post.slug)}">Read article</a></article>`)
+        .join(" ")}</section>`;
     }
     if (urlPath === "/reviews") {
       const testimonials = await storage.getTestimonials();
-      return `${renderStaticContent(page.h1, page.body)}<section data-prerendered="true">${testimonials
-        .map((testimonial) => `<blockquote><p>${escapeHtml(testimonial.reviewText)}</p><footer>${escapeHtml(testimonial.clientName)}</footer></blockquote>`)
-        .join("")}</section>`;
+      return `${renderStaticContent(page.h1, page.body)} <section data-prerendered="true">${testimonials
+        .map((testimonial) => `<blockquote><p>${escapeHtml(testimonial.reviewText)}</p> <footer>${escapeHtml(testimonial.clientName)}</footer></blockquote>`)
+        .join(" ")}</section>`;
     }
     return renderStaticContent(page.h1, page.body);
   }
@@ -446,7 +475,11 @@ export function registerSeoMiddleware(
         );
     }
 
-    const schemaTags = [jsonLdTag, ...(await resolvePageSchemas(req.path)).map(jsonLdScript)];
+    const schemaTags = [
+      PRERENDER_STYLE,
+      jsonLdTag,
+      ...(await resolvePageSchemas(req.path)).map(jsonLdScript),
+    ];
     html = html.replace("</head>", `  ${schemaTags.join("\n  ")}\n  </head>`);
 
     res.status(meta === NOT_FOUND_META ? 404 : 200);
