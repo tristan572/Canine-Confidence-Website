@@ -7,6 +7,9 @@ npm install
 echo "Building frontend with Vite..."
 npx vite build
 
+echo "Building page prerender bundle for no-JS HTML..."
+npx vite build --config vite.prerender.config.ts
+
 echo "Building backend with esbuild..."
 npx esbuild server/index.ts \
   --platform=node \
@@ -20,4 +23,4 @@ echo "Copying server static files..."
 cp server/rescue-dog-guide.html dist/
 
 echo "Build complete!"
-ls -lh dist/index.js dist/public/index.html dist/rescue-dog-guide.html
+ls -lh dist/index.js dist/public/index.html dist/ssr/prerender.js dist/rescue-dog-guide.html
