@@ -4,9 +4,6 @@ import type { Express } from "express";
 import { storage } from "./storage";
 import { STATIC_META, type PageMeta } from "@shared/seo-meta";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
-import { FAQ_ITEMS, faqAnswerText } from "@shared/faq-content";
-import type { BlogPost } from "@shared/schema";
-import { createPagePrerenderer, defaultPrerenderBundlePath } from "./prerender-html";
 
 const SITE_URL = "https://www.canineconfidence.com.au";
 
@@ -90,80 +87,6 @@ const LOCAL_BUSINESS_SCHEMA = {
     "https://share.google/NJfyc690NWAMVb3LX",
   ],
 };
-
-const PUBLISHER = {
-  "@type": "LocalBusiness",
-  "@id": `${SITE_URL}/#localbusiness`,
-  name: "Canine Confidence",
-  url: SITE_URL,
-  logo: {
-    "@type": "ImageObject",
-    url: `${SITE_URL}/email-logo.png`,
-    width: 395,
-    height: 150,
-  },
-};
-
-function absoluteUrl(url: string): string {
-  return /^https?:\/\//.test(url) ? url : `${SITE_URL}${url.startsWith("/") ? "" : "/"}${url}`;
-}
-
-export function buildBlogPostingSchema(post: BlogPost) {
-  const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
-  const published = post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined;
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    ...(published ? { datePublished: published, dateModified: published } : {}),
-    author: {
-      "@type": "Person",
-      name: "Tristan Pearson",
-      url: `${SITE_URL}/about`,
-    },
-    publisher: PUBLISHER,
-    ...(post.imageUrl ? { image: absoluteUrl(post.imageUrl) } : {}),
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-    url: canonicalUrl,
-    ...(post.tags?.length ? { keywords: post.tags.join(", ") } : {}),
-  };
-}
-
-// Built from the same FAQ_ITEMS list the /faq page renders.
-export function buildFaqPageSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: faqAnswerText(item) },
-    })),
-  };
-}
-
-async function resolvePageSchemas(urlPath: string): Promise<object[]> {
-  if (urlPath === "/faq") return [buildFaqPageSchema()];
-
-  const blogMatch = urlPath.match(/^\/blog\/([^/]+)$/);
-  if (blogMatch) {
-    const post = await storage.getBlogPostBySlug(blogMatch[1]);
-    if (post) return [buildBlogPostingSchema(post)];
-  }
-
-  return [];
-}
-
-// Escapes characters that could close the script tag or break parsing when
-// JSON-LD is embedded in HTML.
-function jsonLdScript(schema: object): string {
-  const json = JSON.stringify(schema)
-    .replace(/</g, "\\u003c")
-    .replace(/>/g, "\\u003e")
-    .replace(/&/g, "\\u0026");
-  return `<script type="application/ld+json">${json}</script>`;
-}
 
 interface SitemapEntry {
   path: string;
@@ -289,39 +212,10 @@ const INITIAL_PAGE_CONTENT: Record<string, { h1: string; body: string[] }> = {
   "/terms": { h1: "Terms & Conditions", body: ["Terms and conditions for Canine Confidence dog training services."] },
 };
 
-// Tidies the brief pre-JS view of the prerendered block. Every selector is
-// scoped to [data-prerendered] children of #root, which React replaces on
-// mount, so none of this can touch the rendered app. Colours and font match
-// the site (Manrope, charcoal headings, primary blue links).
-export const PRERENDER_STYLE =
-  "<style data-prerender-style>" +
-  "#root>[data-prerendered]{box-sizing:border-box;width:100%;max-width:46rem;margin:0 auto;padding:1.5rem 1.25rem;" +
-  "font:1rem/1.65 Manrope,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#2A2B4A}" +
-  "#root>[data-prerendered] :is(h1,h2,h3,h4,h5,h6){color:#1F2159;font-weight:800;line-height:1.25;margin:1.6em 0 .5em}" +
-  "#root>[data-prerendered] h1{font-size:2rem;margin-top:0}" +
-  "#root>[data-prerendered] h2{font-size:1.5rem}" +
-  "#root>[data-prerendered] h3{font-size:1.2rem}" +
-  "#root>[data-prerendered] :is(h4,h5,h6){font-size:1.05rem}" +
-  "#root>[data-prerendered] :is(p,ul,ol,dl,blockquote,figure,details,section,article){margin:0 0 1em}" +
-  "#root>[data-prerendered] :is(ul,ol){padding-left:1.4em}" +
-  "#root>[data-prerendered] ul{list-style:disc}" +
-  "#root>[data-prerendered] ol{list-style:decimal}" +
-  "#root>[data-prerendered] li{margin:.3em 0}" +
-  "#root>[data-prerendered] dt{font-weight:700}" +
-  "#root>[data-prerendered] dd{margin:0 0 .5em}" +
-  "#root>[data-prerendered] a{color:#0A6A97;text-decoration:underline;font-weight:600}" +
-  "#root>[data-prerendered] blockquote{border-left:3px solid #0A6A97;padding-left:1em;font-style:italic}" +
-  // Prerendered images carry alt text but no src (so nothing downloads twice),
-  // which browsers draw as a broken-image icon: keep them out of the view.
-  "#root>[data-prerendered] img{display:none}" +
-  "</style>";
-
-// Elements are separated by a space so text extractors that simply delete
-// tags never run words from neighbouring elements together.
 function renderStaticContent(h1: string, body: string[]): string {
-  return `<main data-prerendered="true"><section><h1>${escapeHtml(h1)}</h1> ${body
+  return `<main data-prerendered="true"><section><h1>${escapeHtml(h1)}</h1>${body
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
-    .join(" ")}</section></main>`;
+    .join("")}</section></main>`;
 }
 
 function renderBlogContent(post: { title: string; excerpt: string; content: string }): string {
@@ -334,47 +228,20 @@ function renderBlogContent(post: { title: string; excerpt: string; content: stri
   return renderStaticContent(post.title, [post.excerpt, ...paragraphs]);
 }
 
-type PagePrerenderer = ReturnType<typeof createPagePrerenderer>;
-
-// The API responses the page components read, taken straight from storage so
-// services, packages and prices come from the same catalogue as the live API.
-async function loadPrerenderData(): Promise<Record<string, unknown>> {
-  const [services, packages, testimonials, blogPosts] = await Promise.all([
-    storage.getServices(),
-    storage.getPackages(),
-    storage.getTestimonials(),
-    storage.getBlogPosts(),
-  ]);
-  return {
-    "/api/services": services,
-    "/api/packages": packages,
-    "/api/testimonials": testimonials,
-    "/api/blog": blogPosts,
-  };
-}
-
-async function renderInitialContent(urlPath: string, prerenderer?: PagePrerenderer): Promise<string> {
-  // Core and suburb pages: render the real React page so the no-JS HTML
-  // carries exactly the copy visitors see. Falls back to the summary below if
-  // the prerender bundle is missing or a render fails.
-  if (prerenderer && (await prerenderer.hasRoute(urlPath))) {
-    const pageHtml = await prerenderer.render(urlPath, await loadPrerenderData());
-    if (pageHtml) return `<main data-prerendered="true">${pageHtml}</main>`;
-  }
-
+async function renderInitialContent(urlPath: string): Promise<string> {
   const page = INITIAL_PAGE_CONTENT[urlPath];
   if (page) {
     if (urlPath === "/blog") {
       const posts = await storage.getBlogPosts();
-      return `${renderStaticContent(page.h1, page.body)} <section data-prerendered="true">${posts
-        .map((post) => `<article><h2>${escapeHtml(post.title)}</h2> <p>${escapeHtml(post.excerpt)}</p> <a href="/blog/${encodeURIComponent(post.slug)}">Read article</a></article>`)
-        .join(" ")}</section>`;
+      return `${renderStaticContent(page.h1, page.body)}<section data-prerendered="true">${posts
+        .map((post) => `<article><h2>${escapeHtml(post.title)}</h2><p>${escapeHtml(post.excerpt)}</p><a href="/blog/${encodeURIComponent(post.slug)}">Read article</a></article>`)
+        .join("")}</section>`;
     }
     if (urlPath === "/reviews") {
       const testimonials = await storage.getTestimonials();
-      return `${renderStaticContent(page.h1, page.body)} <section data-prerendered="true">${testimonials
-        .map((testimonial) => `<blockquote><p>${escapeHtml(testimonial.reviewText)}</p> <footer>${escapeHtml(testimonial.clientName)}</footer></blockquote>`)
-        .join(" ")}</section>`;
+      return `${renderStaticContent(page.h1, page.body)}<section data-prerendered="true">${testimonials
+        .map((testimonial) => `<blockquote><p>${escapeHtml(testimonial.reviewText)}</p><footer>${escapeHtml(testimonial.clientName)}</footer></blockquote>`)
+        .join("")}</section>`;
     }
     return renderStaticContent(page.h1, page.body);
   }
@@ -408,16 +275,9 @@ async function resolveMeta(urlPath: string): Promise<PageMeta> {
   return NOT_FOUND_META;
 }
 
-export function registerSeoMiddleware(
-  app: Express,
-  distPath: string,
-  options: { prerenderBundlePath?: string } = {},
-) {
+export function registerSeoMiddleware(app: Express, distPath: string) {
   const templateHtml = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
-  const jsonLdTag = jsonLdScript(LOCAL_BUSINESS_SCHEMA);
-  const prerenderer = createPagePrerenderer(
-    options.prerenderBundlePath ?? defaultPrerenderBundlePath(distPath),
-  );
+  const jsonLdTag = `<script type="application/ld+json">${JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>`;
 
   app.use(async (req, res, next) => {
     const isPageRequest = req.method === "GET" || req.method === "HEAD";
@@ -430,7 +290,7 @@ export function registerSeoMiddleware(
     const title = escapeHtml(meta.title);
     const description = escapeHtml(meta.description);
 
-    const initialContent = await renderInitialContent(req.path, prerenderer);
+    const initialContent = await renderInitialContent(req.path);
     let html = templateHtml
       .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
       .replace(
@@ -475,12 +335,7 @@ export function registerSeoMiddleware(
         );
     }
 
-    const schemaTags = [
-      PRERENDER_STYLE,
-      jsonLdTag,
-      ...(await resolvePageSchemas(req.path)).map(jsonLdScript),
-    ];
-    html = html.replace("</head>", `  ${schemaTags.join("\n  ")}\n  </head>`);
+    html = html.replace("</head>", `  ${jsonLdTag}\n  </head>`);
 
     res.status(meta === NOT_FOUND_META ? 404 : 200);
     res.set("Content-Type", "text/html");

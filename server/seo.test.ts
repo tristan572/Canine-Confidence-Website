@@ -5,8 +5,6 @@ import path from "node:path";
 import test from "node:test";
 import express from "express";
 import { registerSeoMiddleware } from "./seo";
-import { toSemanticHtml } from "./prerender-html";
-import { FAQ_ITEMS } from "@shared/faq-content";
 
 const template = `<!doctype html>
 <html>
@@ -27,13 +25,12 @@ const template = `<!doctype html>
 
 async function withSeoServer(
   run: (baseUrl: string) => Promise<void>,
-  prerenderBundlePath?: string,
 ): Promise<void> {
   const distPath = fs.mkdtempSync(path.join(os.tmpdir(), "canine-seo-test-"));
   fs.writeFileSync(path.join(distPath, "index.html"), template);
 
   const app = express();
-  registerSeoMiddleware(app, distPath, { prerenderBundlePath });
+  registerSeoMiddleware(app, distPath);
   const server = app.listen(0, "127.0.0.1");
 
   try {
@@ -62,8 +59,6 @@ test("known blog routes return crawlable HTML for GET and 200 for HEAD", async (
     assert.equal(getResponse.status, 200);
     assert.match(html, /<main data-prerendered="true">/);
     assert.match(html, /Your Dog Only Listens When You Have Food/);
-    // Neighbouring elements are separated so words never run together.
-    assert.doesNotMatch(html, /<\/(?:h1|h2|p)><(?:p|h2|footer|a)\b/);
     assert.equal(headResponse.status, 200);
     assert.equal(await headResponse.text(), "");
   });
@@ -79,140 +74,3 @@ test("unknown routes remain 404 for GET and HEAD", async () => {
     assert.equal(headResponse.status, 404);
   });
 });
-
-test("semantic prerender HTML keeps copy and links but drops styling and controls", () => {
-  const reactHtml =
-    '<div class="min-h-screen"><section class="py-20"><h1 class="text-4xl"><span class="block">North Brisbane</span><span class="block">Dog Training</span></h1>' +
-    '<p class="text-lg">I train dogs<!-- --> across North Brisbane.</p><span aria-hidden="true">1</span>' +
-    '<svg viewBox="0 0 24 24"><path d="M0 0"></path></svg><img src="/a.webp" alt=""/>' +
-    '<a class="btn" href="https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/" target="_blank"><svg></svg>Book an Assessment</a>' +
-    '<button type="button">Free Phone Consult</button><form><label>Name</label><input name="x"/></form>' +
-    '<ul class="space-y-3"><li class="flex"><span>Home pickup included</span></li></ul><p class="x"></p></section></div>';
-
-  assert.equal(
-    toSemanticHtml(reactHtml),
-    '<section><h1>North Brisbane Dog Training</h1> <p>I train dogs across North Brisbane.</p> ' +
-      '<a href="https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/"> Book an Assessment</a> ' +
-      "<ul><li>Home pickup included</li></ul></section>",
-  );
-});
-
-function plainText(html: string): string {
-  return html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-}
-
-test("stripped tags become spaces so adjacent words never run together", () => {
-  const reactHtml =
-    "<div><div>Fully Insured</div><div>Certified Professional</div></div>" +
-    '<p>Dogs<span class="x">cats</span><svg></svg>birds<button>Tap</button>fish</p>' +
-    "<ul><li>One</li><li>Two</li></ul><h2>Heading</h2><p>Body</p>" +
-    '<dl><dt>Google rating</dt><dd>5.0</dd></dl><p><span aria-hidden="true">1</span>Step</p>' +
-    '<div><a href="/a">Book an Assessment</a><a href="/b">Need ongoing support?</a></div><p>See the <a href="/puppy">puppy page</a>.</p>';
-  const html = toSemanticHtml(reactHtml);
-
-  assert.equal(
-    plainText(html),
-    "Fully Insured Certified Professional Dogs cats birds fish One Two Heading Body Google rating 5.0 Step " +
-      "Book an Assessment Need ongoing support? See the puppy page.",
-  );
-  // Tag boundaries themselves are separated too, for extractors that simply
-  // delete tags without adding spaces.
-  assert.doesNotMatch(html, /[A-Za-z0-9]<\/?(?:p|li|h2|dt|dd|ul|dl)>[A-Za-z0-9]/);
-  assert.doesNotMatch(html, /<\/(?:p|li|h2|dt|dd|ul|dl)><(?:p|li|h2|dt|dd|ul|dl)>/);
-  assert.match(html, /Book an Assessment<\/a> <a href="\/b">/);
-  // Punctuation stays attached to the link it follows.
-  assert.match(html, /puppy page<\/a>\.<\/p>/);
-});
-
-test("image alt text is kept without the image source", () => {
-  const reactHtml =
-    '<section><picture><source type="image/webp" srcSet="/a-400.webp 400w, /a-800.webp 800w"/>' +
-    '<img src="/a.jpg" alt="Tristan training a dog outdoors in North Brisbane" class="w-full" width="640" height="480"/></picture>' +
-    '<img src="/decorative.webp" alt=""/><a href="/about"><img src="/b.webp" alt="Tristan with a grey staffy"/></a>' +
-    "<p>After<img src=\"/c.webp\" alt=\"Logo\"/>text</p></section>";
-  const html = toSemanticHtml(reactHtml);
-
-  assert.match(html, /<img alt="Tristan training a dog outdoors in North Brisbane">/);
-  assert.match(html, /<a href="\/about"> <img alt="Tristan with a grey staffy"> ?<\/a>/);
-  assert.match(html, /After <img alt="Logo"> text/);
-  assert.doesNotMatch(html, /src|srcset|decorative|webp|jpg|width|class/i);
-  assert.equal((html.match(/<img /g) ?? []).length, 3);
-});
-
-test("missing prerender bundle falls back to the summary content", async () => {
-  await withSeoServer(async (baseUrl) => {
-    const response = await fetch(`${baseUrl}/puppy`);
-    const html = await response.text();
-
-    assert.equal(response.status, 200);
-    assert.match(html, /<main data-prerendered="true"><section><h1>/);
-  });
-});
-
-function jsonLdBlocks(html: string): Record<string, unknown>[] {
-  return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(
-    (match) => JSON.parse(match[1]),
-  );
-}
-
-test("FAQ page carries FAQPage JSON-LD built from the rendered FAQ list", async () => {
-  await withSeoServer(async (baseUrl) => {
-    const html = await (await fetch(`${baseUrl}/faq`)).text();
-    const blocks = jsonLdBlocks(html);
-    const faq = blocks.find((block) => block["@type"] === "FAQPage") as
-      | { mainEntity: { name: string; acceptedAnswer: { text: string } }[] }
-      | undefined;
-
-    assert(blocks.some((block) => block["@type"] === "LocalBusiness"));
-    assert(faq);
-    assert.equal(faq.mainEntity.length, FAQ_ITEMS.length);
-    assert.equal(faq.mainEntity[0].name, FAQ_ITEMS[0].question);
-    assert.match(faq.mainEntity[9].acceptedAnswer.text, /listed on the puppy page\. Adult behaviour/);
-  });
-});
-
-test("blog posts carry BlogPosting JSON-LD alongside LocalBusiness", async () => {
-  await withSeoServer(async (baseUrl) => {
-    const route = "/blog/dog-only-listens-with-food-brisbane";
-    const blocks = jsonLdBlocks(await (await fetch(`${baseUrl}${route}`)).text());
-    const posting = blocks.find((block) => block["@type"] === "BlogPosting") as
-      | Record<string, any>
-      | undefined;
-
-    assert(blocks.some((block) => block["@type"] === "LocalBusiness"));
-    assert(posting);
-    assert.match(posting.headline, /^Your Dog Only Listens When You Have Food/);
-    assert.equal(posting.author.name, "Tristan Pearson");
-    assert.equal(posting.mainEntityOfPage["@id"], `https://www.canineconfidence.com.au${route}`);
-    assert.match(posting.datePublished, /^\d{4}-\d{2}-\d{2}T/);
-    assert.match(posting.image, /^https:\/\//);
-  });
-});
-
-// Built by `npm test` itself (see package.json) so this always runs.
-const builtBundle = path.resolve(import.meta.dirname, "..", "dist", "ssr", "prerender.js");
-
-test(
-  "built prerender bundle serves the real page copy for core pages",
-  async () => {
-    assert(fs.existsSync(builtBundle), "prerender bundle missing: npm test should build it first");
-    await withSeoServer(async (baseUrl) => {
-      const faqHtml = await (await fetch(`${baseUrl}/faq`)).text();
-      for (const item of FAQ_ITEMS) {
-        assert(faqHtml.includes(escapeForHtml(item.question)), item.question);
-      }
-
-      const homeHtml = await (await fetch(`${baseUrl}/`)).text();
-      assert.match(homeHtml, /<h1>North Brisbane Dog Training<\/h1>/);
-      // Copy that only exists in the React page, never in the fallback summary.
-      assert.match(homeHtml, /What would make life with your dog better\?/);
-      assert.match(homeHtml, /<img alt="Tristan training a dog outdoors in North Brisbane">/);
-      assert.match(homeHtml, /<style data-prerender-style>/);
-      assert.match(homeHtml, /href="https:\/\/canineconfidence\.simplybook\.net\/v2\/#book\/service\/16\/count\/1\/"/);
-    }, builtBundle);
-  },
-);
-
-function escapeForHtml(value: string): string {
-  return value.replace(/&/g, "&amp;").replace(/'/g, "&#x27;").replace(/"/g, "&quot;");
-}
