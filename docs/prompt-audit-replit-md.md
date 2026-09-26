@@ -4,7 +4,7 @@
 
 - **Scope:** the whole repo. The only prompt surface is `replit.md`, the agent instruction file the Replit Agent reads. Nothing else was found: no `CLAUDE.md`/`AGENTS.md`, no `.claude/` skills, commands or rules, no LLM API calls, and no Anthropic or other LLM SDK dependencies. Also checked for non-Anthropic provider markers (OpenAI, Gemini and so on) and found none. `.replit` is platform run config, not prompt text.
 - **Target model:** no model is named and nothing in the repo pins one. The coding-agent file was audited against the current Claude generation (Claude Opus 5.5). All findings below are stale facts, so they don't depend on which model reads the file.
-- **Edits:** proposed only. `replit.md` has not been changed. Edits based on the repo's current state need confirming before they're applied.
+- **Edits:** applied to `replit.md` on 2026-09-26 at the owner's request (all 8 findings).
 
 ## Summary
 
@@ -38,7 +38,7 @@ Counts: Group 1 (dated prompt text): 0 · Group 2 (stale config facts): 8 · Gro
 
 ## Proposed diff
 
-One hunk per finding. It applies cleanly with `git apply` and has not been applied.
+One hunk per finding. Applied.
 
 ```diff
 --- a/replit.md
