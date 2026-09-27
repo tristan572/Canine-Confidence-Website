@@ -1430,7 +1430,7 @@ A dog that checks in with you at the door is far more likely to check in with yo
 
 It won't fix everything overnight. But it's the easiest, fastest change most owners can make, and it's usually the first thing I work on with a new client because everything else builds on it.
 
-If you're around Northgate, Nundah or Kalinga, the [Kalinga Park Walk and Train](https://www.canineconfidence.com.au/dog-training-northgate) sessions build on this exact routine on the bikeway, where the real distractions are.
+If you're around Northgate, Nundah or Kalinga, the [Kalinga Park Walk and Train](https://www.canineconfidence.com.au/dog-training-northgate) sessions build on this exact routine before hitting the bikeway, where the real distractions are.
 
 If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. I'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
         imageUrl: "/attached_assets/dog-walk-blog-post.png",
