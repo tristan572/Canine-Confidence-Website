@@ -1087,6 +1087,8 @@ Every dog I work with, regardless of the presenting problem, gets this foundatio
 
 Build the windows at home. Take the work outside from there.
 
+For clients around Ascot, Hamilton and Hendra, outside usually means a café. Racecourse Road has food on every table, so it's where a settle really gets tested. See [dog training in Ascot](https://www.canineconfidence.com.au/dog-training-ascot).
+
 If you're not sure where your dog's gaps are, a free 15-minute phone call is the right place to start.`,
         imageUrl: "/attached_assets/dog-resting-settle_1760531575107_opt.webp",
         readTime: "5 min read",
@@ -2333,8 +2335,6 @@ Start at the earliest step that isn't clean. Don't jump to the word alone becaus
 If you can't get past an early step, or every empty-hand ask turns into a negotiation, that's what I sort in person across North Brisbane.
 
 A free phone consult is enough for me to hear where it breaks. From there, we start with an Initial Canine Success Assessment, then train together.
-
-This is the same seven-step process I run with clients around Ascot, Hamilton and Hendra learning café settle skills. Racecourse Road has food on every table, so step 7 isn't optional there. See [dog training in Ascot](https://www.canineconfidence.com.au/dog-training-ascot).
 
 Food is a useful teaching tool. It's a poor permanent stand-in for the command.`,
         imageUrl: "/attached_assets/dog-only-listens-with-food-brisbane.webp",
