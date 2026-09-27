@@ -1428,6 +1428,8 @@ A dog that checks in with you at the door is far more likely to check in with yo
 
 It won't fix everything overnight. But it's the easiest, fastest change most owners can make, and it's usually the first thing I work on with a new client because everything else builds on it.
 
+If you're around Northgate, Nundah or Kalinga, the [Kalinga Park Walk and Train](https://www.canineconfidence.com.au/dog-training-northgate) sessions build on this exact routine on the bikeway, where the real distractions are.
+
 If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. I'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
         imageUrl: "/attached_assets/dog-walk-blog-post.png",
         readTime: "4 min read",
@@ -2146,6 +2148,8 @@ If they will not come away, or they start following people down the street with 
 
 That is what an [Initial Canine Success Assessment](https://www.canineconfidence.com.au/behaviour-obedience) is for. I come to your home, look at the setup, and you leave with a plan. Sometimes [walking and adventure](https://www.canineconfidence.com.au/walking-adventure) work is part of that. It depends on the dog.
 
+If this is happening at your place in Aspley, Carseldine or Bridgeman Downs, have a look at [dog training in Aspley](https://www.canineconfidence.com.au/dog-training-aspley). Fence and visitor barking is one of the most common calls I get from that area.
+
 If this is taking over the afternoon at your place on the Northside, start with a free [phone consult](https://www.canineconfidence.com.au/contact). I just need to hear what it looks like so I know whether I can help.
 `,
         imageUrl: "/attached_assets/why-your-dog-barks-at-the-fence-brisbane.webp",
@@ -2212,6 +2216,8 @@ If every outdoor ask turns into an argument, or your dog works beautifully at ho
 
 A free 15-minute phone call is enough for me to hear what is going on. From there, an Initial Canine Success Assessment at your place lets me watch both versions of your dog, the indoor one and the outdoor one, and leave you with a plan built around your street and your week.
 
+If you're in Sandgate, Shorncliffe or Brighton, the [Bayside Adventure Walk and Training](https://www.canineconfidence.com.au/dog-training-sandgate) takes this exact process onto the foreshore, with real bikes, dogs and crowds instead of a quiet front path.
+
 The home sit is a good start. Everything useful happens after it.`,
         imageUrl: "/attached_assets/lounge-sit-vs-footpath-brisbane.webp",
         readTime: "4 min read",
@@ -2264,6 +2270,8 @@ Getting the balance of those two right is where most home attempts come unstuck.
 If every arrival turns into a fight, if you're holding the collar or shutting the dog away to get through a visit, or if the dog only settles when nobody comes over, that's worth sorting properly rather than patching.
 
 A free 15-minute phone call is enough for me to hear what's happening at your door and tell you whether it's a quick fix or something deeper. From there, an Initial Canine Success Assessment at your place lets me watch the real arrival, see how your household and your dog interact in that moment, and leave you with a plan built for your house.
+
+If this sounds like your place in Chermside, Kedron or Stafford Heights, my [Chermside dog training](https://www.canineconfidence.com.au/dog-training-chermside) sessions are built around exactly this kind of threshold and doorway work.
 
 The lounge room greeting is genuinely useful work. The doorway is simply the last picture you teach, and the one that proves the rest of it holds.`,
         imageUrl: "/attached_assets/dog-jumping-front-door-brisbane.webp",
@@ -2325,6 +2333,8 @@ Start at the earliest step that isn't clean. Don't jump to the word alone becaus
 If you can't get past an early step, or every empty-hand ask turns into a negotiation, that's what I sort in person across North Brisbane.
 
 A free phone consult is enough for me to hear where it breaks. From there, we start with an Initial Canine Success Assessment, then train together.
+
+This is the same seven-step process I run with clients around Ascot, Hamilton and Hendra learning café settle skills. Racecourse Road has food on every table, so step 7 isn't optional there. See [dog training in Ascot](https://www.canineconfidence.com.au/dog-training-ascot).
 
 Food is a useful teaching tool. It's a poor permanent stand-in for the command.`,
         imageUrl: "/attached_assets/dog-only-listens-with-food-brisbane.webp",
