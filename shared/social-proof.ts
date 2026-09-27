@@ -16,5 +16,5 @@ export const GOOGLE_REVIEW_COUNT = 33;
 // "all 5-star" or "every review is 5 stars" is not accurate.
 export const GOOGLE_RATING = "5.0";
 
-// Displayed as "90+" — a floor, not an exact total.
-export const MAD_PAWS_REVIEW_FLOOR = 90;
+// Displayed as "100+" — a floor, not an exact total.
+export const MAD_PAWS_REVIEW_FLOOR = 100;
