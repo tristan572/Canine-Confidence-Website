@@ -2342,6 +2342,82 @@ Food is a useful teaching tool. It's a poor permanent stand-in for the command.`
         publishedAt: new Date("2026-09-21"),
         tags: ["obedience", "food lures", "verbal cues", "dog training", "North Brisbane"],
         slug: "dog-only-listens-with-food-brisbane"
+      },
+      {
+        title: "How to Teach Your Dog to Let Go (and Listen When Excited)",
+        metaTitle: "How to Teach Your Dog to Let Go (and Listen When Excited) | Canine Confidence",
+        author: "Tristan",
+        excerpt: "Teach your dog to let go and listen when excited by training through play. A North Brisbane dog trainer explains the method step by step.",
+        content: `# How to Teach Your Dog to Let Go (and Listen When Excited)
+
+A lot of Northside owners tell me the same thing. At home, their dog will let go of a toy if they wait long enough or offer a treat. On the footpath, the dog grabs a chicken bone, clamps down and won't let go.
+
+The same goes for sit, down and recall. They work in the kitchen. They fall apart the moment the dog gets excited.
+
+Both problems have the same fix. Teach the commands through play, then use play to practise them when your dog is excited.
+
+## Why does play work so well for teaching commands?
+
+Play works because a toy is involved. Your dog wants it, so they're motivated. They're already focused on you and the game, so they're engaged. And nothing much is at stake. If they get it wrong, you just try again.
+
+That's the best setting for a dog to learn. Compare it to trying to teach a command when your dog has just grabbed something off the ground, or spotted another dog across the road. They're too worked up to learn anything new.
+
+I teach "ta" (let go) and all my other obedience commands this way. Sit, down, recall, everything starts in play.
+
+## How does the game work as the reward?
+
+When your dog lets go on "ta", I mark it and start the game again straight away. Getting the game back is the reward.
+
+Your dog quickly learns that letting go is how the fun keeps going. That changes everything. Letting go stops feeling like losing the toy, and starts feeling like the way to get more play.
+
+The same goes for other commands. A sit or a down in the middle of a game is followed by more game. Your dog learns that listening to you is part of the fun.
+
+## Why should you build up to high-energy play?
+
+Once your dog knows the basics in calm, easy play, I start building their excitement. Faster games, harder tugging, more movement.
+
+This is the part most owners never do, and it's the part that matters most on walks.
+
+A walk can get your dog very excited. A dog on the other side of a fence, a ball rolling past, a bone on the footpath. If your dog has only ever practised "ta" or "sit" while calm, those commands won't hold up when they're that worked up.
+
+High-energy play lets you practise at that level of excitement, or even higher, at home where you're in control. If your dog can let go and sit in the middle of an intense game of tug, they can do it when they're calm. And they're much better prepared when a hard situation comes up on a walk.
+
+## Why do some dogs lock on and refuse to let go?
+
+A dog that clamps down on a ball or bone is usually excited, really wants the item, and has learnt that holding on works. If a hard clamp has led to a chase, a tug of war or a lot of attention, the dog has been rewarded for holding on.
+
+Play lets you change that without a fight on every walk. Your dog learns that letting go brings the game back, so there's no reason to hold on.
+
+This often helps with frustration on the lead too. A dog that can't think when it wants something is the same dog that struggles when it wants to reach another dog. Practising commands in high-energy play teaches your dog to think and listen while excited.
+
+## How do you get it working on real walks?
+
+Keep the command exactly the same everywhere. If it's "ta" in the game, it's "ta" on the footpath.
+
+Then build it up in steps:
+
+1. **One favourite toy at home.** Calm play until "ta" is clean every time.
+2. **Different toys at home.** Tug, ball, soft toy, rope. This teaches your dog that "ta" means let go of whatever's in your mouth, not just one toy.
+3. **Higher-energy play at home.** Build the excitement up while keeping the commands clean.
+4. **The same games at the park.** New place, same toys, same commands.
+5. **Real walks.** Only once your dog is ready.
+
+Keep sessions short. Two good minutes of play are worth more than ten messy minutes at a busy park.
+
+If your dog gets it wrong, you've moved too far too fast. Go back to the last step where they got it right, play a few good rounds, and try the next step again later in the week.
+
+## When should you get help?
+
+It's worth getting help if your dog still won't let go without a wrestle, if play always ends in mouthing or chaos, or if your dog's frustration on the lead is getting worse.
+
+It starts with a free 15-minute phone call. You tell me where things are going wrong. If I can help, we book an [Initial Canine Success Assessment](https://www.canineconfidence.com.au/behaviour-obedience) at your place and start with play at home. When your dog is ready, we take it out onto your walks.
+
+Teach it in play, practise it when your dog is excited, and it'll hold up when it counts.`,
+        imageUrl: "/attached_assets/teach-dog-let-go-play-brisbane.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-09-28"),
+        tags: ["play", "let go", "obedience", "dog training", "North Brisbane"],
+        slug: "teach-dog-let-go-play-brisbane"
       }
     ];
 
@@ -2520,6 +2596,7 @@ Food is a useful teaching tool. It's a poor permanent stand-in for the command.`
       slug: post.slug ?? "",
       tags: post.tags ?? null,
       metaTitle: post.metaTitle ?? null,
+      author: post.author ?? null,
     };
     this.blogPosts.set(id, newPost);
     return newPost;

@@ -97,6 +97,12 @@ export default function BlogDetailPage() {
             
             {/* Meta Information */}
             <div className="flex items-center text-medium-grey mb-6">
+              {blogPost.author && (
+                <>
+                  <span>{blogPost.author}</span>
+                  <span className="mx-3">•</span>
+                </>
+              )}
               <Calendar className="w-4 h-4 mr-2" />
               <span>{formatDate(blogPost.publishedAt)}</span>
               <span className="mx-3">•</span>

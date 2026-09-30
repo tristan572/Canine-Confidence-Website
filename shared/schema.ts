@@ -42,6 +42,7 @@ export const packages = pgTable("packages", {
 export const blogPosts = pgTable("blog_posts", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
+  author: text("author"),
   excerpt: text("excerpt").notNull(),
   content: text("content").notNull(),
   imageUrl: text("image_url"),
