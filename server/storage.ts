@@ -2418,6 +2418,74 @@ Teach it in play, practise it when your dog is excited, and it'll hold up when i
         publishedAt: new Date("2026-09-28"),
         tags: ["play", "let go", "obedience", "dog training", "North Brisbane"],
         slug: "teach-dog-let-go-play-brisbane"
+      },
+      {
+        title: "Why Your Dog Pulls on the Lead (and How I Fix It)",
+        metaTitle: "Why Your Dog Pulls on the Lead (and How I Fix It) | Canine Confidence",
+        author: "Tristan",
+        excerpt: "Your dog pulls because pulling works. Here's the simple rule I teach North Brisbane owners to get a loose lead back, starting on your own street.",
+        content: `# Why Your Dog Pulls on the Lead (and How I Fix It)
+
+Your dog pulls on the lead because pulling works.
+
+He leans into the collar, you follow, and he gets to the next smell, the next dog or the chicken bone on the footpath. That's a reward, and he's had hundreds of them. So he keeps doing it.
+
+Pulling is one of the most common things I get called out for around North Brisbane. Most owners have already tried something: a new harness, yanking him back, or giving up and letting him drag them to the park. None of it sticks, because none of it changes what pulling gets him.
+
+## Why doesn't holding him back work?
+
+When a dog pulls, the natural thing is to hold the lead tight and pull back. I get it. You don't want to get dragged across the road.
+
+The trouble is that a tight lead for the whole walk becomes normal for him. He leans into it, you lean back, and you both get very good at it. Dogs tend to push into pressure, so the harder you hold, the harder he pulls.
+
+By the time you need the lead to mean something, like when a dog is coming the other way, it's already tight, so it isn't telling him anything.
+
+## What is the rule for a loose lead?
+
+There are only two reasons the lead should ever be tight. Either you're communicating something to him, or he's doing the wrong thing.
+
+When he's doing the wrong thing, stand still or turn and walk the other way. The second he eases off, looks back at you or comes back toward you, say YES, give him a reward, then keep walking.
+
+A loose lead means go. He wants to get down the street, and now the only way to get there is on a loose lead.
+
+Mark YES for the odd look back at you as well, and reward that check-in. Keep your attention on him while you walk. If you aren't watching him, why would he watch you? Otherwise you're just dead weight on the end of the lead.
+
+If he's locked on to something, like a cat under a car or a dog across the road, don't stand there waiting him out. Turn and walk the other way. Get some distance, let him settle, and try again.
+
+## Where should I start teaching loose lead walking?
+
+Start where he can get it right. Don't begin on the way to the dog park on a Saturday morning, because that's the hardest walk of his week.
+
+Start on your own street when it's quiet, or the driveway or backyard if you need to. Five or ten minutes is plenty. You might only make it to the neighbour's letterbox the first time, and that's fine.
+
+Once he's getting it there, add a little more: a slightly busier street, then a longer walk. Change one thing at a time. If he starts falling apart, you've gone too far too quickly, so go back a step.
+
+## How do I stay consistent?
+
+This is where most people come unstuck. If a tight lead means stop on Monday, but on Tuesday you're running late and let him drag you to the car, he learns that pulling works sometimes. Sometimes is enough to keep him trying.
+
+Some days you won't be able to stick to the rule. You've got the kids, the pram, or you're just flat out. On those days, put him in a harness and let that be the walk where pulling doesn't matter. When the flat collar goes on, it's strictly no pulling. That way your off days don't undo the work you've done on the collar.
+
+If it's all too much, skip the walk and play with your dog instead.
+
+## What should I expect in the first few walks?
+
+The first few walks feel slow. You'll stop a lot, and some owners tell me they barely got past the front gate. That's normal, and it's a good sign. He's working out that the old way doesn't work anymore.
+
+Most dogs start checking in on their own once they figure out the rule. Then the walks get longer, and you start enjoying them again.
+
+## When should I get help with a dog that pulls?
+
+If your dog is big and strong, reacts to other dogs, or the pulling has been going on for years, it's worth having someone watch you walk him. Small changes in timing make a big difference, and they're hard to see when you're the one holding the lead.
+
+Sometimes rewarding alone won't get through to a dog. In that case he may need to learn a NO, which tells him to stop what he's doing right now and carries a consequence if he doesn't. That's best taught by a professional, so don't guess at it on your own.
+
+I start every new client with a free 15-minute phone call. If it's a fit, I book an Initial Canine Success Assessment and work with you on the streets you actually walk.`,
+        imageUrl: "/attached_assets/why-dog-pulls-on-lead-brisbane.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-10-05"),
+        tags: ["loose lead walking", "lead pulling", "dog training", "North Brisbane"],
+        slug: "why-dog-pulls-on-lead-brisbane"
       }
     ];
 
