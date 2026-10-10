@@ -323,17 +323,26 @@ export default function HomePage() {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {testimonials.filter((testimonial) => ["Patsy Poppins", "Alex C."].includes(testimonial.clientName)).map((testimonial) => (
+              {testimonials.filter((testimonial) => testimonial.clientName === "Patsy Poppins").map((testimonial) => (
                 <TestimonialCard
                   key={testimonial.id}
                   testimonial={testimonial}
-                  excerpt={testimonial.clientName === "Patsy Poppins"
-                    ? "Previously Bean would lockjaw on balls or bones he picked up while walking. He now lets go when I ask."
-                    : testimonial.clientName === "Alex C."
-                      ? heroReview
-                      : undefined}
+                  excerpt="Previously Bean would lockjaw on balls or bones he picked up while walking. He now lets go when I ask."
                 />
               ))}
+              <TestimonialCard
+                testimonial={{
+                  id: 0,
+                  clientName: "Sheridan",
+                  dogName: "Archie",
+                  rating: 5,
+                  reviewText: "Tristan not only trained Archie, but he educated us on how to guide him. He is wonderfully respectful of each dog's unique breed and helped us set clear, realistic expectations.",
+                  service: null,
+                  location: null,
+                  createdAt: null,
+                  isActive: true,
+                }}
+              />
             </div>
             <Link href="/reviews" className="mt-10 inline-flex items-center font-extrabold text-white hover:text-[#8FD3F2]">
               Read all reviews →
