@@ -2486,6 +2486,62 @@ I start every new client with a free 15-minute phone call. If it's a fit, I book
         publishedAt: new Date("2026-10-05"),
         tags: ["loose lead walking", "lead pulling", "dog training", "North Brisbane"],
         slug: "why-dog-pulls-on-lead-brisbane"
+      },
+      {
+        title: "Why Your Dog Won't Come When You Call (and How I Fix It)",
+        metaTitle: "Why Your Dog Won't Come When You Call (and How I Fix It) | Canine Confidence",
+        author: "Tristan",
+        excerpt: "Most recall breaks because \"come\" has started to mean the fun's over. Here's how I rebuild it with North Brisbane owners, starting at home.",
+        content: `# Why Your Dog Won't Come When You Call (and How I Fix It)
+
+Most dogs that won't come when they're called have learnt that coming back is a bad deal.
+
+That sounds harsh, but think about the last few times you called your dog. If it was to leave the park, to come in from the yard so you could head to work, or to get a bath, then "come" has started to mean the good stuff is over. Dogs are very good at noticing that, and they respond the way any of us would. They slow down, they pretend they didn't hear, or they do one more lap of the oval first.
+
+## Why "come" stops working
+
+Recall comes up with a lot of the owners I work with around North Brisbane, and it usually broke in small ways that nobody noticed at the time.
+
+He gets called in from the backyard and the back door shuts behind him. He gets called away from a sniff on the footpath and nothing happens when he arrives. He gets called while he's chasing a bird, ignores it, and gets to keep chasing. Each one of those teaches him something about the word, and none of it is what you meant.
+
+## Stop calling him for the bad stuff
+
+The first thing I get owners to do is take the bad stuff out of the word.
+
+If you need him for something he won't enjoy, like a bath, a nail trim, a tablet or being shut inside, walk over and get him. Pop the lead on or take his collar gently and bring him with you. It feels like more effort for a few weeks, but every time you do it you're protecting the word you'll need at the beach.
+
+The same goes for telling him off. If he's dug up the garden and you call him over to growl at him, you've just taught him that coming to you was the mistake.
+
+## Make it worth coming back
+
+When he turns and starts heading your way, say YES while he's still on the way back. He's already coming, and the YES helps him finish the movement all the way in to you, which is also how I get a lot of dogs started with recall. When he arrives, give him the best reward you can, not a single treat handed over. A few pieces of something he goes nuts for, a proper game of tug or a throw of his ball if that's what he loves, so getting to you feels like a win.
+
+Then release him straight back to what he was doing, and do it often. Call him off the sniff, pay him well, and let him go back to it. Most people skip this part, yet it's what changes his mind about the word, because coming to you stops costing him the fun.
+
+## Say it once
+
+If you call "come, come, come, COME" across the yard, he learns that the first three don't matter. Say it once, in a normal voice, and give him a second to answer.
+
+If you're not sure he's going to come, don't call yet. Go and get him, or move closer, or wait until he's not locked on to something. You want him hearing that word mostly when he's going to get it right.
+
+## Build it up slowly
+
+Start in the house, where there's not much competing with you. Call him from one room to the next, say YES as he heads your way, make a fuss with a good reward, and let him go back to what he was doing. Then the backyard. Then the front yard. Then a quiet park on a long lead, so that if he doesn't come you can guide him in instead of chasing him.
+
+Only add one hard thing at a time. A dog that comes every time in the backyard can still fall apart the first time there's a pelican on the footpath at the beach. That just means you've moved too fast, so go back a step and build it again.
+
+## When to get help
+
+If your dog has a strong chase drive, bolts out the front gate, or has never come back reliably, it's worth having someone watch you work on it. Timing matters a lot with recall, and it's hard to see your own timing when you're the one calling.
+
+Sometimes rewarding alone won't be enough to call him off something he really wants, like a cat or a dog across the oval. That's the point where you need a clear way to tell him no, and that's best taught in person by a professional rather than guessed at.
+
+I start every new client with a free 15-minute phone call. If it's a fit, we book an Initial Canine Success Assessment and work on his recall in the places you actually go.`,
+        imageUrl: "/attached_assets/dog-wont-come-when-called-brisbane.webp",
+        readTime: "4 min read",
+        publishedAt: new Date("2026-10-13"),
+        tags: ["recall", "come when called", "dog training", "North Brisbane"],
+        slug: "dog-wont-come-when-called-brisbane"
       }
     ];
 
