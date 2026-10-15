@@ -121,7 +121,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What areas do you service?",
     answer: [
-      "Based in Boondall, I service a 20km radius covering North Brisbane and surrounding suburbs. Travel beyond 10km may incur additional charges. I also offer video consultations worldwide for remote training.",
+      "Based in Boondall, I travel up to 15km, covering North Brisbane and surrounding suburbs. A travel fee applies for sessions more than 10km from Boondall. I also offer video consultations worldwide for remote training.",
     ],
   },
   {

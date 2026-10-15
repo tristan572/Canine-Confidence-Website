@@ -111,7 +111,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Service Area</div>
-                    <div className="text-medium-grey mb-1">20km radius from Boondall, Brisbane</div>
+                    <div className="text-medium-grey mb-1">Up to 15km from Boondall, Brisbane</div>
                     <div className="text-sm text-medium-grey">Mobile service — I come to you</div>
                   </div>
                 </div>
@@ -193,11 +193,11 @@ export default function ContactPage() {
             </div>
             <h2 className="text-3xl font-bold text-charcoal mb-4">My Service Area</h2>
             <p className="text-lg text-medium-grey max-w-3xl mx-auto mb-4">
-              Based in Boondall, Brisbane, I provide mobile dog training services within a 20km radius.
+              Based in Boondall, Brisbane, I provide mobile dog training within 15km of Boondall.
               My service area covers North Brisbane and surrounding suburbs. I come to you for your convenience!
             </p>
             <p className="text-medium-grey max-w-3xl mx-auto">
-              <strong>Note:</strong> Travel beyond 10km may incur additional charges. I'm also available worldwide for video call consultations.
+              <strong>Note:</strong> A travel fee applies for sessions more than 10km from Boondall. I'm also available worldwide for video call consultations.
             </p>
           </div>
           
