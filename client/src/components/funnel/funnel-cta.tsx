@@ -79,8 +79,8 @@ export function TravelNote({ className = "" }: { className?: string }) {
     <p className={`flex items-start gap-2 text-sm text-medium-grey ${className}`}>
       <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
       <span>
-        I travel up to 15km from Boondall. Beyond 10km there is a travel fee,
-        usually $10 to $20, plus any tolls.
+        Mobile service within 15km of Boondall. A travel fee applies beyond
+        10km.
       </span>
     </p>
   );

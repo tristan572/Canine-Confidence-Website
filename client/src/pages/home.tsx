@@ -8,7 +8,6 @@ import { AssessmentDetails } from "@/components/funnel/assessment-intro";
 import BlogCard from "@/components/ui/blog-card";
 import {
   AssessmentButton,
-  TravelNote,
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { CheckCircle2, Star } from "lucide-react";
@@ -125,7 +124,6 @@ export default function HomePage() {
               <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Home hero" className="h-auto px-7 py-4 text-lg" showIcon={false} />
               <ConsultationButton className="btn-secondary h-auto px-7 py-4 text-lg" showIcon={false} />
             </div>
-            <TravelNote className="mt-4" />
             {/* Proof row */}
             <dl className="mt-8 grid grid-cols-3 divide-x divide-border border-t border-border pt-6">
               <div className="pr-4">

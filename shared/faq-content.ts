@@ -121,7 +121,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What areas do you service?",
     answer: [
-      "Based in Boondall, I travel up to 15km, covering North Brisbane and surrounding suburbs. Sessions more than 10km from Boondall include a travel fee, usually $10 to $20 depending on distance and time of day, plus any tolls. I also offer video consultations worldwide for remote training.",
+      "Based in Boondall, I travel up to 15km, covering North Brisbane and surrounding suburbs. A travel fee applies for sessions more than 10km from Boondall, confirmed when you book. I also offer video consultations worldwide for remote training.",
     ],
   },
   {
