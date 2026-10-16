@@ -216,7 +216,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">Connect With Us</h2>
+              <h2 className="text-4xl font-bold text-charcoal">Connect With Us</h2>
               <div className="flex justify-center">
                 <p className="text-xl font-semibold inline-block rounded-2xl px-8 py-5 bg-white/95 text-primary-blue shadow-xl max-w-2xl">
                   Follow my journey, see training success stories, and get daily tips on building confidence with your dog!
@@ -257,7 +257,7 @@ export default function ContactPage() {
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
-              <p className="text-white text-lg">
+              <p className="text-charcoal text-lg">
                 <strong>Join my community!</strong> See before-and-after transformations, training videos, and expert tips to help your dog thrive.
               </p>
             </div>
