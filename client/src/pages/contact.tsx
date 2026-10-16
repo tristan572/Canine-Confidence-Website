@@ -197,7 +197,7 @@ export default function ContactPage() {
               My service area covers North Brisbane and surrounding suburbs. I come to you for your convenience!
             </p>
             <p className="text-medium-grey max-w-3xl mx-auto">
-              <strong>Note:</strong> Sessions more than 10km from Boondall include a travel fee, quoted when you book based on distance and time of day. I'm also available worldwide for video call consultations.
+              <strong>Note:</strong> Sessions more than 10km from Boondall include a travel fee, usually $10 to $20 depending on distance and time of day, plus any tolls. I'm also available worldwide for video call consultations.
             </p>
           </div>
           

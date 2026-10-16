@@ -4,6 +4,7 @@ import { StaticSEO } from "@/components/SEO";
 import { ProgramCard } from "@/components/funnel/program-card";
 import {
   AssessmentButton,
+  TravelNote,
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
@@ -34,6 +35,7 @@ export default function WalkingAdventurePage() {
               <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Walking hero" className="px-7 py-4 text-lg" />
               <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
             </div>
+            <TravelNote className="mt-4" />
           </div>
           <img
             src={walkingImage}

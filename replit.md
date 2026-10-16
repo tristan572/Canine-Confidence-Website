@@ -88,7 +88,7 @@ Website copy must sound like something Tristan would say to a client. Use direct
 ### Service Area
 - **Location**: Boondall, Brisbane 4034
 - **Service Radius**: 15km from base location (maximum)
-- **Travel Policy**: Travel fee applies beyond 10km, quoted per booking (distance and time of day)
+- **Travel Policy**: Travel fee applies beyond 10km, usually $10 to $20 plus tolls, varies with distance and time of day. Travel note shown under booking buttons (TravelNote component)
 - **Remote Services**: Video consultations available worldwide
 
 ### Interactive Map

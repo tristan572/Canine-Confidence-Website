@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { usePricing } from "@/hooks/use-pricing";
-import { AssessmentButton } from "./funnel-cta";
+import { AssessmentButton, TravelNote } from "./funnel-cta";
 
 const ASSESSMENT_NAME = "Initial Canine Success Assessment";
 
@@ -36,6 +36,7 @@ export function AssessmentIntro({ location, showPuppyLink = false }: {
           <p className="mt-4 font-semibold text-charcoal">You don't need to choose a program before we meet.</p>
         </div>
         <AssessmentButton location={location} className="h-auto min-h-12 whitespace-normal px-6 py-3" />
+        <TravelNote />
       </div>
       {showPuppyLink && (
         <p className="mt-6 border-t border-blue-100 pt-5 text-sm text-medium-grey">

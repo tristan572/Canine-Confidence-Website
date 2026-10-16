@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { StaticSEO } from "@/components/SEO";
-import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
+import { AssessmentButton, ConsultationButton, TravelNote } from "@/components/funnel/funnel-cta";
 
 export interface LocalHighlight {
   label: string;
@@ -95,7 +95,8 @@ export default function LocalTrainingPage({
               <AssessmentButton location={`${suburb} hero`} className="px-7 py-4 text-lg" />
               <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
             </div>
-            <p className="mt-5 text-sm font-semibold text-medium-grey">
+            <TravelNote className="mt-4" />
+            <p className="mt-3 text-sm font-semibold text-medium-grey">
               In-home and local training across {nearbyAreas}
             </p>
           </div>
