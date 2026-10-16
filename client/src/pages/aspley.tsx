@@ -60,7 +60,7 @@ export default function AspleyPage() {
         },
         {
           question: "Which nearby suburbs do you cover?",
-          answer: "I work throughout North Brisbane, including Aspley, Carseldine and Bridgeman Downs. I travel up to 15km from Boondall. Beyond 10km there is a travel fee, usually $10 to $20 plus any tolls.",
+          answer: "I work throughout North Brisbane, including Aspley, Carseldine and Bridgeman Downs. Availability can be confirmed during the free phone consult.",
         },
       ]}
     />
