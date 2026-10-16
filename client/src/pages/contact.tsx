@@ -111,7 +111,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal mb-1">Service Area</div>
-                    <div className="text-medium-grey mb-1">20km radius from Boondall, Brisbane</div>
+                    <div className="text-medium-grey mb-1">Up to 15km from Boondall, Brisbane</div>
                     <div className="text-sm text-medium-grey">Mobile service — I come to you</div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function ContactPage() {
       </section>
 
       {/* Service Area Map Section */}
-      <section className="py-20 bg-white">
+      <section id="service-area" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -193,11 +193,11 @@ export default function ContactPage() {
             </div>
             <h2 className="text-3xl font-bold text-charcoal mb-4">My Service Area</h2>
             <p className="text-lg text-medium-grey max-w-3xl mx-auto mb-4">
-              Based in Boondall, Brisbane, I provide mobile dog training services within a 20km radius.
+              Based in Boondall, Brisbane, I provide mobile dog training within 15km of Boondall.
               My service area covers North Brisbane and surrounding suburbs. I come to you for your convenience!
             </p>
             <p className="text-medium-grey max-w-3xl mx-auto">
-              <strong>Note:</strong> Travel beyond 10km may incur additional charges. I'm also available worldwide for video call consultations.
+              <strong>Note:</strong> A travel fee applies for sessions more than 10km from Boondall, confirmed when you book. I'm also available worldwide for video call consultations.
             </p>
           </div>
           
@@ -216,7 +216,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">Connect With Us</h2>
+              <h2 className="text-4xl font-bold text-charcoal">Connect With Us</h2>
               <div className="flex justify-center">
                 <p className="text-xl font-semibold inline-block rounded-2xl px-8 py-5 bg-white/95 text-primary-blue shadow-xl max-w-2xl">
                   Follow my journey, see training success stories, and get daily tips on building confidence with your dog!
@@ -257,7 +257,7 @@ export default function ContactPage() {
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
-              <p className="text-white text-lg">
+              <p className="text-charcoal text-lg">
                 <strong>Join my community!</strong> See before-and-after transformations, training videos, and expert tips to help your dog thrive.
               </p>
             </div>

@@ -60,7 +60,7 @@ export default function AspleyPage() {
         },
         {
           question: "Which nearby suburbs do you cover?",
-          answer: "I work throughout North Brisbane, including Aspley, Carseldine and Bridgeman Downs. Travel and availability can be confirmed during the free phone consult.",
+          answer: "I work throughout North Brisbane, including Aspley, Carseldine and Bridgeman Downs. Availability can be confirmed during the free phone consult.",
         },
       ]}
     />

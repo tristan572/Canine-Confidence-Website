@@ -13,7 +13,8 @@ L.Icon.Default.mergeOptions({
 export default function ServiceAreaMap() {
   // Boondall, Brisbane coordinates
   const centerPosition: [number, number] = [-27.3540, 153.0567];
-  const radiusInMeters = 20000; // 20km in meters
+  const radiusInMeters = 15000; // 15km max travel
+  const noFeeRadiusInMeters = 10000; // travel fee applies beyond 10km
 
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden border-2 border-gray-200 shadow-lg" data-testid="service-area-map">
@@ -28,7 +29,7 @@ export default function ServiceAreaMap() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         
-        {/* 20km radius circle */}
+        {/* 15km max travel radius */}
         <Circle
           center={centerPosition}
           radius={radiusInMeters}
@@ -39,6 +40,18 @@ export default function ServiceAreaMap() {
             weight: 2
           }}
         />
+
+        {/* 10km no-fee zone */}
+        <Circle
+          center={centerPosition}
+          radius={noFeeRadiusInMeters}
+          pathOptions={{
+            color: '#1d4ed8',
+            fillOpacity: 0,
+            weight: 2,
+            dashArray: '6 6'
+          }}
+        />
         
         {/* Center marker */}
         <Marker position={centerPosition}>
@@ -46,7 +59,7 @@ export default function ServiceAreaMap() {
             <div className="text-center">
               <div className="font-semibold text-charcoal mb-1">Canine Confidence</div>
               <div className="text-sm text-medium-grey">Boondall, Brisbane 4034</div>
-              <div className="text-sm text-medium-grey mt-1">20km service radius</div>
+              <div className="text-sm text-medium-grey mt-1">Up to 15km. Travel fee beyond 10km (dashed line)</div>
             </div>
           </Popup>
         </Marker>

@@ -56,6 +56,9 @@ export default function Footer() {
           {/* Service Areas */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Service Areas</h3>
+            <p className="text-sm text-gray-300">
+              All of North Brisbane, within 15km of Boondall. Including:
+            </p>
             <ul className="space-y-2">
               {serviceAreas.map((area) =>
                 area.isLive || area.href ? (
@@ -75,6 +78,15 @@ export default function Footer() {
                   </li>
                 ),
               )}
+              <li>
+                {/* Plain anchor so the browser handles the hash scroll */}
+                <a
+                  href="/contact#service-area"
+                  className="text-white underline underline-offset-4 hover:text-[#8FD3F2] transition-colors"
+                >
+                  + nearby suburbs (see map)
+                </a>
+              </li>
             </ul>
           </div>
 

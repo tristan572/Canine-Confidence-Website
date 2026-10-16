@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Calendar, Phone } from "lucide-react";
+import { Calendar, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -69,5 +69,19 @@ export function ConsultationButton({
         <ConsultationForm />
       </DialogContent>
     </Dialog>
+  );
+}
+
+// Shown beside booking buttons so people outside the travel area see it
+// before they book, not after.
+export function TravelNote({ className = "" }: { className?: string }) {
+  return (
+    <p className={`flex items-start gap-2 text-sm text-medium-grey ${className}`}>
+      <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+      <span>
+        Mobile service within 15km of Boondall. A travel fee applies beyond
+        10km.
+      </span>
+    </p>
   );
 }

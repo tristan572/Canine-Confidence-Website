@@ -87,13 +87,13 @@ Website copy must sound like something Tristan would say to a client. Use direct
 
 ### Service Area
 - **Location**: Boondall, Brisbane 4034
-- **Service Radius**: 20km from base location
-- **Travel Policy**: Travel beyond 10km may incur additional charges
+- **Service Radius**: 15km from base location (maximum)
+- **Travel Policy**: Travel fee applies beyond 10km, quoted per booking (distance, time of day, tolls). TravelNote shown in the "Start here" assessment section only
 - **Remote Services**: Video consultations available worldwide
 
 ### Interactive Map
 - Leaflet.js integration with OpenStreetMap
-- Visual 20km radius display
+- Visual 15km radius display, with the 10km no-fee zone marked
 - Located on Contact page for client convenience
 
 ## External Dependencies
