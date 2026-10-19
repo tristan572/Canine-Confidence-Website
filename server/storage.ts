@@ -2542,6 +2542,70 @@ I start every new client with a free 15-minute phone call. If it's a fit, we boo
         publishedAt: new Date("2026-10-13"),
         tags: ["recall", "come when called", "dog training", "North Brisbane"],
         slug: "dog-wont-come-when-called-brisbane"
+      },
+      {
+        title: "Why Does My Dog Eat Everything on Walks?",
+        metaTitle: "Why Does My Dog Eat Everything on Walks? | Canine Confidence Brisbane",
+        author: "Tristan",
+        excerpt: "Your dog eats rubbish on walks because grabbing pays off. Here's how I help North Brisbane owners use ah-ah and ta so walks feel normal again.",
+        content: `# Why Does My Dog Eat Everything on Walks?
+
+If your dog eats everything he finds on a walk, the most likely reason is that grabbing things has worked for him plenty of times before.
+
+Picture an ordinary walk around the block. There's a chicken bone near the shops, some chips the kids dropped on the nature strip, half a sandwich in the gutter and a tennis ball under someone's hedge. He sniffs, he snatches, and if he gets to keep it or swallow it, he's just been rewarded. Most dogs who scavenge have had dozens of those little wins, so they keep doing it and they get quicker at it each time.
+
+It's worth remembering that dogs are opportunistic scavengers. Grabbing food on a walk is just him being a dog, and until he stops having success with it and you've told him it's not appropriate, he really has no way of knowing it isn't allowed.
+
+It's one of the more common walk problems I get called about around North Brisbane, whether that's Boondall, Taigum, Bracken Ridge, Aspley or Sandgate. Our footpaths have no shortage of interesting rubbish, and a lot of owners are just worn out from prising things out of their dog's mouth three houses from home.
+
+## Why grabbing keeps paying off
+
+Dogs repeat whatever works for them. If diving on a chip packet gets him the chips, he'll dive again next time, and if hanging onto a bone means he gets a good chew while you try to talk him out of it, he'll hang on again too. Telling him off once he's already swallowed it doesn't take that win away.
+
+Some owners think he must be hungry, or that it's pure instinct and there's nothing you can do. Instinct is why he notices the smell, but snatching and eating is a habit, and it usually gets stronger every time a grab works. A dog who's just had breakfast will still dive on a takeaway bag if that's always paid off, so feeding him more won't fix it.
+
+## Stop the free wins first
+
+If he's getting the bone on most walks, he's practising grabbing, and trying to teach him to walk past things while he keeps winning is hard going for both of you.
+
+Keep the lead a bit shorter when you're passing the spots you know are bad, and if there's a street that always has chicken bones on it, walk a different way for a while. This isn't giving up on training. It just stops him getting more practice at the very thing you're trying to change.
+
+## Start at home with small steps
+
+I'd never start on a busy footpath with a chicken carcass already in his mouth, because that's about the hardest test you could give him. Any behaviour is easier to build when you break it into small steps and practise each one at home until it's strong, and only then take it somewhere harder.
+
+I use two words for this. Ah-ah, which means stop, you're not getting any closer to that, is for the moment he starts heading towards something, and ta, which means let go, is for when he's already got something in his mouth.
+
+In most cases I teach ah-ah with food. Put a piece of food on the floor, and when he goes for it, say ah-ah and stop him getting any closer with the lead, your hand or your foot. The moment he looks away from it or backs off, say YES and reward him. Keep the sessions short and practise it around the house until he's turning away from the food without much fuss.
+
+Ta I teach with his balls, tugs and toys, because play is one of the best ways I know to get a dog letting go happily, starting with the toys he's not that fussed about and building up in small steps to the ones he loves. I've covered how to teach ta step by step in an earlier blog, so rather than half explain it here, have a read of [How to Teach Your Dog to Let Go (and Listen When Excited)](https://www.canineconfidence.com.au/blog/teach-dog-let-go-play-brisbane). If he gets it wrong, keep the rules exactly the same and give him more goes at it, because that's how it gets strong. A handful of good repetitions in the lounge room will do more for you than a string of failures down at Sandgate on a Saturday morning.
+
+## Using play to check he's ready
+
+His favourite toys are my test for whether he's ready to take it outside. Once he'll stop and let go with his favourite toys as soon as you ask, he's ready for it out on walks. If he won't give up his favourite tug at home yet, he isn't going to give up a bone on the footpath either, so keep working on it at home for a bit longer.
+
+## Taking it out onto real walks
+
+When he's handling his favourite toys at home, take the same practice out to the backyard or the driveway, then onto quiet walks around your own block, and only after that to the busier spots like the local shops. Change one thing at a time. If he gets it wrong when it's the real thing, he just needs more practice and more places to practise in, and the most important part is sticking to the same rules every time, so ah-ah and ta always mean exactly the same thing, whether you're in the driveway or down by the shops.
+
+On those quiet walks you're using it for real. When he heads for a chicken bone or a chip packet, say ah-ah and stop him getting closer, then say YES and reward him when he looks away or walks past. If he's already picked something up, that's when you use ta.
+
+There'll be walks where you can't keep on top of it, maybe because you've got the kids or the pram with you or you're running late. On those days keep the walk short and managed, so it doesn't turn into another scavenging session that tells him grabbing still works sometimes. Getting the occasional win is enough to keep most dogs trying.
+
+## When to get some help
+
+If he's already swallowed something that could hurt him, please ring your vet first, because training can't help with that.
+
+If he's been grabbing things for years, if he locks his jaw and won't let go, or if every walk has become a battle over what's in his mouth, it's worth having someone watch the two of you on the streets you actually walk. The timing and small details are really hard to spot when you're the one holding the lead.
+
+If he blows you off on ah-ah or won't let go on ta, then yes, a NO needs to be taught, and if you need help with that, give me a call.
+
+Every new client starts with a free 15-minute phone call where you tell me what's going on and I'll tell you honestly whether I can help. If it's a good fit, I'll book an Initial Canine Success Assessment and work with you on the walks that are giving you the most trouble.`,
+        imageUrl: "/attached_assets/why-does-my-dog-eat-everything-on-walks-brisbane.webp",
+        readTime: "5 min read",
+        publishedAt: new Date("2026-10-20"),
+        tags: ["scavenging", "eating rubbish on walks", "dog training", "North Brisbane"],
+        slug: "why-does-my-dog-eat-everything-on-walks-brisbane"
       }
     ];
 
