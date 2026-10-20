@@ -2856,6 +2856,7 @@ Every new client starts with a free 15-minute phone call where you tell me what'
       service: submission.service ?? null,
       message: submission.message ?? null,
       phone: submission.phone ?? null,
+      serviceArea: submission.serviceArea ?? null,
     };
     this.contactSubmissions.set(id, newSubmission);
     return newSubmission;

@@ -91,6 +91,7 @@ export const contactSubmissions = pgTable("contact_submissions", {
   name: text("name").notNull(),
   email: text("email").notNull(),
   phone: text("phone"),
+  serviceArea: text("service_area"),
   service: text("service"),
   message: text("message"),
   agreeToTerms: boolean("agree_to_terms").notNull(),
@@ -155,10 +156,21 @@ export const insertConsultationSchema = createInsertSchema(consultations).omit({
   createdAt: true,
 });
 
+export const SERVICE_AREA_QUESTION =
+  "In-person sessions are available within 15km of Boondall, and a travel fee applies beyond 10km. Are you inside that area?";
+export const SERVICE_AREA_OPTIONS = {
+  yes: "Yes",
+  virtual: "No, I'd like to hear about virtual coaching",
+} as const;
+
 export const insertContactSubmissionSchema = createInsertSchema(contactSubmissions).omit({
   id: true,
   status: true,
   createdAt: true,
+}).extend({
+  serviceArea: z.enum(["yes", "virtual"], {
+    errorMap: () => ({ message: "Please let me know if you're inside my service area" }),
+  }),
 });
 
 export const insertCartItemSchema = createInsertSchema(cartItems).omit({

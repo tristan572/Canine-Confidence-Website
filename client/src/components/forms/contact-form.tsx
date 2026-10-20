@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { insertContactSubmissionSchema } from "@shared/schema";
+import { insertContactSubmissionSchema, SERVICE_AREA_QUESTION, SERVICE_AREA_OPTIONS } from "@shared/schema";
 import { trackLead } from "@/lib/analytics";
 
 export default function ContactForm() {
@@ -28,6 +28,7 @@ export default function ContactForm() {
       name: "",
       email: "",
       phone: "",
+      serviceArea: "",
       service: "",
       message: "",
       agreeToTerms: false,
@@ -112,6 +113,28 @@ export default function ContactForm() {
                 <FormControl>
                   <Input type="tel" placeholder="0411 123 456" {...field} />
                 </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="serviceArea"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{SERVICE_AREA_QUESTION} *</FormLabel>
+                <Select value={field.value} onValueChange={field.onChange}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select an answer" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="yes">{SERVICE_AREA_OPTIONS.yes}</SelectItem>
+                    <SelectItem value="virtual">{SERVICE_AREA_OPTIONS.virtual}</SelectItem>
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}

@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 import { createHash } from 'crypto';
 import type { Booking, Consultation, ContactSubmission } from '@shared/schema';
+import { SERVICE_AREA_OPTIONS } from '@shared/schema';
 
 const BUSINESS_EMAIL = 'info@canineconfidence.com.au';
 
@@ -94,6 +95,15 @@ export async function sendConsultationNotification(consultation: Consultation) {
   }
 }
 
+const SERVICE_LABELS: Record<string, string> = {
+  'behaviour-modification': 'Behaviour Modification',
+  'walk-train': 'Walk & Train Sessions',
+  'one-on-one': 'One-on-One Private Coaching',
+  'walks': 'Professional Walks',
+  'house-visits': 'House Visits',
+  'consultation': 'Free Consultation',
+};
+
 export async function sendContactFormNotification(contact: ContactSubmission) {
   try {
     const data = await getResendClient().emails.send({
@@ -109,6 +119,8 @@ export async function sendContactFormNotification(contact: ContactSubmission) {
           <li><strong>Name:</strong> ${escapeHtml(contact.name)}</li>
           <li><strong>Email:</strong> ${escapeHtml(contact.email)}</li>
           ${contact.phone ? `<li><strong>Phone:</strong> ${escapeHtml(contact.phone)}</li>` : ''}
+          <li><strong>Inside 15km of Boondall:</strong> ${escapeHtml(SERVICE_AREA_OPTIONS[contact.serviceArea as keyof typeof SERVICE_AREA_OPTIONS] ?? contact.serviceArea ?? 'Not answered')}</li>
+          ${contact.service ? `<li><strong>Service:</strong> ${escapeHtml(SERVICE_LABELS[contact.service] ?? contact.service)}</li>` : ''}
         </ul>
         
         <h3>Message:</h3>
