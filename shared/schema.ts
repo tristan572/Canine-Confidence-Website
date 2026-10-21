@@ -157,9 +157,10 @@ export const insertConsultationSchema = createInsertSchema(consultations).omit({
 });
 
 export const SERVICE_AREA_QUESTION =
-  "In-person sessions are available within 15km of Boondall, and a travel fee applies beyond 10km. Are you inside that area?";
+  "In-person sessions are within 15km of Boondall (a travel fee applies beyond 10km). If you're further out, you're welcome to meet me at a park or spot inside that area. Can you do a session there?";
 export const SERVICE_AREA_OPTIONS = {
-  yes: "Yes",
+  home: "Yes, at my place",
+  meet: "Yes, I'll meet you somewhere in the area",
   virtual: "No, I'd like to hear about virtual coaching",
 } as const;
 
@@ -168,8 +169,8 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   status: true,
   createdAt: true,
 }).extend({
-  serviceArea: z.enum(["yes", "virtual"], {
-    errorMap: () => ({ message: "Please let me know if you're inside my service area" }),
+  serviceArea: z.enum(["home", "meet", "virtual"], {
+    errorMap: () => ({ message: "Please let me know if you can do a session in my area" }),
   }),
 });
 

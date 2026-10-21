@@ -119,7 +119,7 @@ export async function sendContactFormNotification(contact: ContactSubmission) {
           <li><strong>Name:</strong> ${escapeHtml(contact.name)}</li>
           <li><strong>Email:</strong> ${escapeHtml(contact.email)}</li>
           ${contact.phone ? `<li><strong>Phone:</strong> ${escapeHtml(contact.phone)}</li>` : ''}
-          <li><strong>Inside 15km of Boondall:</strong> ${escapeHtml(SERVICE_AREA_OPTIONS[contact.serviceArea as keyof typeof SERVICE_AREA_OPTIONS] ?? contact.serviceArea ?? 'Not answered')}</li>
+          <li><strong>Session location:</strong> ${escapeHtml(SERVICE_AREA_OPTIONS[contact.serviceArea as keyof typeof SERVICE_AREA_OPTIONS] ?? contact.serviceArea ?? 'Not answered')}</li>
           ${contact.service ? `<li><strong>Service:</strong> ${escapeHtml(SERVICE_LABELS[contact.service] ?? contact.service)}</li>` : ''}
         </ul>
         

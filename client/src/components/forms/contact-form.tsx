@@ -131,7 +131,8 @@ export default function ContactForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="yes">{SERVICE_AREA_OPTIONS.yes}</SelectItem>
+                    <SelectItem value="home">{SERVICE_AREA_OPTIONS.home}</SelectItem>
+                    <SelectItem value="meet">{SERVICE_AREA_OPTIONS.meet}</SelectItem>
                     <SelectItem value="virtual">{SERVICE_AREA_OPTIONS.virtual}</SelectItem>
                   </SelectContent>
                 </Select>
