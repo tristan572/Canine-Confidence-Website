@@ -65,14 +65,6 @@ export default function WalkingAdventurePage() {
                 key={program.name}
                 program={program}
                 location="Walking"
-                directAction={
-                  program.name === "Local Walk" ? (
-                    <ConsultationButton
-                      className="w-full border-2 border-primary-blue bg-white text-primary-blue hover:bg-blue-50 hover:text-primary-blue"
-                      label="Free Phone Consult"
-                    />
-                  ) : undefined
-                }
                 upgrade={
                   program.name === "Walk and Train"
                     ? {

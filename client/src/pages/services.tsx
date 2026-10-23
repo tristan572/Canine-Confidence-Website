@@ -21,7 +21,6 @@ import {
   Dna,
   Camera,
   ClipboardList,
-  MapPinned,
   Mountain,
   Heart,
   Brain,
@@ -39,7 +38,6 @@ const serviceMap: Record<string, number> = {
   "Walk and Train": 6,
   "In-home Day Train": 8,
   "Adventure Walk and Training": 5,
-  "Local Walk": 4,
 };
 
 function getServiceBookingUrl(service: Service) {
@@ -62,7 +60,6 @@ export default function ServicesPage() {
     "Initial Assessment": ClipboardList,
     "In-Home Obedience": Home,
     "Virtual Coaching and Support": Phone,
-    "Local Walk": MapPinned,
     "Adventure Walk and Training": Mountain,
     "Walk and Train": Footprints,
     "Initial Canine Success Assessment": ClipboardList,

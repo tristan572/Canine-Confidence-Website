@@ -19,7 +19,7 @@ export default function Terms() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Services</h2>
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
-                  <p>Canine Confidence (ABN 95 140 676 440) provides private dog training services in Northside Brisbane, Queensland. Services include One-on-One Private Coaching, Walk and Train, In-Home Day Train, Adventure Walk and Training, Local Walk, Virtual Coaching and Support, and Initial Canine Success Assessment.</p>
+                  <p>Canine Confidence (ABN 95 140 676 440) provides private dog training services in Northside Brisbane, Queensland. Services include One-on-One Private Coaching, Walk and Train, In-Home Day Train, Adventure Walk and Training, Virtual Coaching and Support, and Initial Canine Success Assessment.</p>
                   <p>The specific service, duration, and location will be confirmed at the time of booking. Sessions take place at the client's home, an agreed outdoor location, or via video call as applicable.</p>
                   <p>Training outcomes depend on a range of factors including the dog's individual history, the client's consistency between sessions, and environmental conditions. Canine Confidence makes no guarantee as to specific results.</p>
                 </div>

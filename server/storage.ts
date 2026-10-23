@@ -462,23 +462,6 @@ export class MemStorage implements IStorage {
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
         ],
         isPopular: false
-      },
-      {
-        name: "The Neighbourhood Enrichment Pack",
-        description: "A reliable, budget-friendly way to give your dog regular exercise, stimulation and attentive care on busy days.\n\n**Consistent Care:** Five sessions create a routine your dog can count on.\n\n**Enrichment Walks:** Every outing includes time to sniff, move and explore.\n\n**Home Pickup:** I come directly to your home, and you do not need to be present.\n\n**Straightforward Value:** Five walks cost less than booking the same sessions individually.",
-        price: "$215",
-        originalPrice: "$225",
-        duration: "5 sessions",
-        sessions: 5,
-        category: "adventure",
-        imageUrl: "/attached_assets/brock-wegner-OxJj1pd2kJk-unsplash Large_1760530840673_opt.webp",
-        features: [
-          "5 x Local Walk Sessions focused on essential exercise and mental stimulation",
-          "Reliable Home Pick-up Service included",
-          "Focus on Sniffing, Exercise, and Attentive Care",
-          "Ideal for maintaining routine and providing daily fulfilment"
-        ],
-        isPopular: false
       }
     ];
 

@@ -200,22 +200,6 @@ export const walkingPrograms: FunnelProgram[] = [
     ],
     kind: "single",
   },
-  {
-    name: "Local Walk",
-    price: "$45",
-    composition: "1 local 30-minute walk",
-    summary:
-      "Reliable, budget-friendly exercise from your doorstep. A simple helping hand when your dog needs a healthy walk, stimulation and attentive care.",
-    benefits: [
-      "A 30-minute walk from your home",
-      "Time to sniff and explore",
-      "Exercise and play suited to your dog",
-      "Attentive handling and care",
-      "A photo or video update",
-      "Walking tools and treats included",
-    ],
-    kind: "single",
-  },
 ];
 
 export const confidentStart: FunnelProgram = {

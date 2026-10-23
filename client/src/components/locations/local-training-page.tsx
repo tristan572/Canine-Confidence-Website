@@ -51,7 +51,7 @@ const servicePaths = [
     href: "/walking-adventure",
     label: "Adventure & Training",
     text: "Trainer-led walks, purposeful adventures and reliable support when your dog needs exercise, enrichment or outdoor skill work.",
-    note: "Adult training starts with an assessment. Local Walk availability starts with a free phone consult.",
+    note: "Adult training starts with an assessment.",
   },
 ];
 

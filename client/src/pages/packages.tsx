@@ -28,7 +28,6 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
       "The Foundation Program": 1,
       "The Real World Reliability Package": 3,
       "The Adventure Pack": 4,
-      "The Neighbourhood Enrichment Pack": 5,
     };
 
     const packageId = packageMap[pkg.name];
