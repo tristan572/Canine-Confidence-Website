@@ -168,16 +168,6 @@ export class MemStorage implements IStorage {
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
-        name: "Local Walk",
-        description: "**Reliable, Budget-Friendly Exercise**\n\nLocal Walk is your convenient, budget-friendly dog walking solution. Have a reliable, professional dog handler come directly to your home, providing your dog with essential exercise, stimulation, and fun right from your doorstep.\n\nWhether you have a busy schedule or just need a helping hand, Local Walk ensures your dog enjoys a healthy stroll, plenty of sniffing, and attentive care, making your life simpler while your dog stays happy and active.",
-        duration: "30 minutes",
-        location: "From client's home",
-        price: "$45",
-        category: "walking",
-        imageUrl: "/attached_assets/image_1750049687824_opt.webp",
-        features: ["Enrichment activities", "Fun and play", "Affection and care", "Photo or video updates", "Tools and treats included"]
-      },
-      {
         name: "Virtual Coaching and Support",
         description: "**Experienced Input, Wherever You Are**\n\nUse this private video call to fine-tune training details, bounce ideas around, review footage or build a practical training plan. It is available to anyone who wants experienced input without an in-person session.\n\nBring a specific problem, a list of questions or footage you want to unpack. We can work through what feels stuck and decide on useful next steps together.",
         duration: "60 minutes",
