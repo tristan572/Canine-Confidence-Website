@@ -101,6 +101,7 @@ const SERVICE_LABELS: Record<string, string> = {
   'one-on-one': 'One-on-One Private Coaching',
   'walks': 'Professional Walks',
   'house-visits': 'House Visits',
+  'puppy-development': 'Puppy Development',
   'consultation': 'Free Consultation',
 };
 

@@ -157,6 +157,7 @@ export default function ContactForm() {
                     <SelectItem value="behaviour-modification">Behaviour Modification</SelectItem>
                     <SelectItem value="walk-train">Walk & Train Sessions</SelectItem>
                     <SelectItem value="one-on-one">One-on-One Private Coaching</SelectItem>
+                    <SelectItem value="puppy-development">Puppy Development</SelectItem>
                     <SelectItem value="consultation">Free Consultation</SelectItem>
                   </SelectContent>
                 </Select>
