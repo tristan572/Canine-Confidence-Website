@@ -41,7 +41,7 @@ export default function ContactForm() {
       return response.json();
     },
     onSuccess: (_response, variables) => {
-      trackLead("contact_form", variables.service);
+      trackLead("contact_form", variables.service, variables.serviceArea);
       toast({
         title: "Message sent successfully!",
         description: "I'll get back to you within 24 hours.",
