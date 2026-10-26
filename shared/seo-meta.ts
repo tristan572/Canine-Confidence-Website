@@ -3,6 +3,8 @@ export interface PageMeta {
   description: string;
   canonicalPath: string;
   noindex?: boolean;
+  // Absolute share image URL (og:image and twitter:image). Unset keeps the site default.
+  image?: string;
 }
 
 // Shared by the server's raw HTML response and route-keyed client SEO.
