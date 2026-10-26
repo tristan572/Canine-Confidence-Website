@@ -2579,6 +2579,86 @@ Every new client starts with a free 15-minute phone call where you tell me what'
         publishedAt: new Date("2026-10-20"),
         tags: ["scavenging", "eating rubbish on walks", "dog training", "North Brisbane"],
         slug: "why-does-my-dog-eat-everything-on-walks-brisbane"
+      },
+      {
+        title: "Is Your Dog Scared of Storms? How I Get Brisbane Dogs Ready",
+        metaTitle: "Is Your Dog Scared of Storms? How I Get Brisbane Dogs Ready | Canine Confidence",
+        author: "Tristan",
+        excerpt: "Storm season is here. How I help North Brisbane dogs cope with thunder: a calm spot, calm comfort, chews, thunder shirts and knowing when to see the vet.",
+        content: `# Is Your Dog Scared of Storms? How I Get Brisbane Dogs Ready
+
+If you've lived in Brisbane for a summer or two, you'll know how quickly a storm can build in the afternoon, and if you've got a dog who's scared of them, you probably know the signs before you even hear the first rumble. He starts pacing, panting and following you from room to room, and by the time the thunder arrives he's squeezed behind the toilet or scratching at the back door.
+
+I get asked about this a lot as the weather warms up, whether it's an owner in Boondall whose dog won't come out from under the bed or someone in Bracken Ridge who comes home to a chewed-up door frame. So I want to be honest about what helps, what usually doesn't, and when it's time to bring your vet into it.
+
+## Why storm fears are so hard to fix
+
+I'll start with the hard part. Storm phobias are very hard to fix, and anyone who tells you otherwise is overpromising. Most of what I do with storm-scared dogs is about management and comfort, helping him get through each storm as calmly as possible, rather than making the fear disappear.
+
+The reason it's so tricky is that a storm is a lot more than a loud noise. Before it even arrives, the air pressure drops, there's static electricity building up, the wind changes and the smell of the rain comes through. Dogs pick up on all of it, often well before you notice anything, which is why some dogs start getting worried while the sky still looks fine to you.
+
+## What about desensitising him to storm sounds?
+
+Getting a dog used to storm sounds is usually called desensitising and counter-conditioning, which in plain words means letting him hear the sound at a level he can cope with while you pair it with something he loves, so the sound slowly starts to mean good things are coming. It takes a lot more than just putting a thunder track on and hoping for the best.
+
+The way I do it is to start the recording so quietly that he barely notices it, and every time it plays he gets a food reward, so the sound and the food always go together. Only when he's staying relaxed at that level do I turn it up a little, and I build it up in small steps over days and weeks rather than rushing it. If at any point he starts to look worried, like he stops eating, starts panting or gets up to leave, I turn it back down to where he was comfortable and spend more time there before trying again.
+
+It's worth a try, and for some dogs it takes the edge off, but I'll be honest that it often doesn't fully work for storms. A speaker can copy the sound, but it can't copy the static, the smell of the rain or the change in pressure, so a dog who's relaxed with the recording can still fall apart when the real thing rolls in.
+
+That's why I put most of the effort into getting ready ahead of time.
+
+## Get ready before the first storm
+
+The best time to start is on a calm, sunny day, well before storm season really kicks in. Here's what I set up with owners.
+
+### A calm place
+
+Most dogs already have a spot they head for when the weather turns, so if yours always ends up in the shower, the laundry or under your bed, that's usually the best place to build his calm place. Ideally it's inside and away from windows and glass doors, where the storm will be quietest. Put his bed there, and you can drape a blanket over part of it so it feels tucked away and a bit darker.
+
+### Crate training ahead of time
+
+If he isn't crate trained yet, getting him used to a crate before storm season is well worth it. Done slowly on calm days, with his meals, chews and quiet rest in there, the crate becomes his own quiet comfort space, somewhere he chooses to go when things feel too much. It isn't a quick fix to reach for in the middle of a storm, though, so it's something to start well before the weather turns. Cover it with a blanket and set it up where he already likes to hide, and you've got the best of both.
+
+### Make it a good place on normal days
+
+Let him spend quiet time there when nothing's happening, with a chew or his dinner, so it's somewhere he already likes and chooses to go. Teaching him to [switch off and settle](https://www.canineconfidence.com.au/blog/the-four-windows-switch-off) on ordinary days makes this much easier when the weather turns. If the only time he goes there is when he's terrified, it won't feel like much of a safe place.
+
+### Chews
+
+Chewing and licking help a lot of dogs settle, so have a few good long-lasting chews or a food-stuffed toy ready to go for storm days. Keep a couple aside just for storms so they're extra special.
+
+### Blocking out the sound
+
+Close the curtains or blinds to cut down the flashes, shut the doors between him and the noisiest side of the house, and put the telly, the radio or some steady music on to soften the thunder. It won't block everything, but every bit helps.
+
+### A thunder shirt
+
+These snug-fitting wraps are known to help a lot of dogs feel calmer, and they're worth having in the cupboard. Get him used to wearing it on calm days first, with treats and something nice happening, so the shirt doesn't become a sign that a storm's coming.
+
+## When a storm is on the way
+
+Keep an eye on the forecast and the radar, and when a storm looks likely, get him inside and settled early, before the first rumble. Bring him into his calm place, give him a chew, pop the thunder shirt on, shut the curtains and get the background noise going.
+
+Then stay calm yourself. You've probably heard that you shouldn't comfort a scared dog because it'll make him worse, but calm comfort doesn't reward fear. What can make it worse is a worried fuss, where you're hovering, talking in an anxious voice and jumping at every crack of thunder. Sit near him, keep your voice low and steady, give him a slow pat if he wants it, and carry on with your evening as normally as you can.
+
+Make sure he can't get out, too. Scared dogs can dig, jump or squeeze through gaps they'd never normally try, so check that the gates are shut, the doors are closed and his tag and microchip details are up to date before the storm season gets going. If you're out during the day, it's worth thinking about where he'll be if an afternoon storm hits while nobody's home.
+
+## When to see your vet
+
+Some dogs are so frightened that management at home isn't enough. If your dog is hurting himself, trying to dig or chew his way through doors, can't settle for hours after the storm has passed, or is getting worse each time, please talk to your vet. Calming medication and sprays can help some dogs, but that's something your vet needs to advise you on, because they'll know what suits your dog and his health.
+
+I work alongside that advice rather than instead of it, so if your vet suggests something, the setup above still helps.
+
+## Getting help in North Brisbane
+
+Whether you're in [Aspley](https://www.canineconfidence.com.au/dog-training-aspley), down near [Sandgate](https://www.canineconfidence.com.au/dog-training-sandgate) or anywhere else on the north side, I can come to you and help you set up a storm plan that suits your house and your dog, as part of my [behaviour training](https://www.canineconfidence.com.au/behaviour-obedience). I won't promise you he'll never be scared of storms again, but I can help you make each one a lot easier on both of you.
+
+Every new client starts with a [free 15-minute phone call](https://www.canineconfidence.com.au/contact) where you tell me what's going on and I'll tell you honestly whether I can help. If it's a good fit, [I'll book an Initial Canine Success Assessment](https://canineconfidence.simplybook.net/) and I'll work through it with you at your place.`,
+        imageUrl: "/attached_assets/dog-scared-of-storms-brisbane-hero.webp",
+        readTime: "6 min read",
+        publishedAt: new Date("2026-10-27"),
+        tags: [],
+        slug: "dog-scared-of-storms-brisbane"
       }
     ];
 
