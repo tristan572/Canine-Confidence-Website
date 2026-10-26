@@ -104,6 +104,17 @@ const PUBLISHER = {
   },
 };
 
+// Per-post share image overrides, for posts whose social preview should be a
+// JPG (better supported by Facebook and others) rather than the webp hero.
+const BLOG_SHARE_IMAGE_OVERRIDES: Record<string, string> = {
+  "dog-scared-of-storms-brisbane": "/attached_assets/dog-scared-of-storms-brisbane-share.jpg",
+};
+
+export function blogShareImageUrl(post: BlogPost): string | undefined {
+  const image = BLOG_SHARE_IMAGE_OVERRIDES[post.slug] ?? post.imageUrl;
+  return image ? absoluteUrl(image) : undefined;
+}
+
 function absoluteUrl(url: string): string {
   return /^https?:\/\//.test(url) ? url : `${SITE_URL}${url.startsWith("/") ? "" : "/"}${url}`;
 }
@@ -401,6 +412,7 @@ async function resolveMeta(urlPath: string): Promise<PageMeta> {
         title: post.metaTitle ?? `${post.title} | Canine Confidence`,
         description: post.excerpt,
         canonicalPath: `/blog/${post.slug}`,
+        image: blogShareImageUrl(post),
       };
     }
   }
@@ -462,6 +474,19 @@ export function registerSeoMiddleware(
         `<meta name="twitter:description" content="${description}" />`,
       )
       .replace('<div id="root"></div>', `<div id="root">${initialContent}</div>`);
+
+    if (meta.image) {
+      const image = escapeHtml(meta.image);
+      html = html
+        .replace(
+          /<meta property="og:image" content="[^"]*"\s*\/>/,
+          `<meta property="og:image" content="${image}" />`,
+        )
+        .replace(
+          /<meta name="twitter:image" content="[^"]*"\s*\/>/,
+          `<meta name="twitter:image" content="${image}" />`,
+        );
+    }
 
     if (meta.noindex) {
       html = html
