@@ -2,7 +2,7 @@
 // site and in the LocalBusiness JSON-LD. Update these when the totals change,
 // rather than editing the numbers page by page.
 
-export const GOOGLE_REVIEW_COUNT = 35;
+export const GOOGLE_REVIEW_COUNT = 36;
 
 // Mirrors the figure shown on the public Google Business Profile, which is the
 // source a visitor can check. 32 x 5-star + 1 x 4-star = 164 / 33 = 4.97,
