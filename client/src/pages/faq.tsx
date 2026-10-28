@@ -4,6 +4,7 @@ import { StaticSEO } from "@/components/SEO";
 import { Phone, Mail, HelpCircle } from "lucide-react";
 import { Link } from "wouter";
 import { FAQ_ITEMS } from "@shared/faq-content";
+import FaqAnswer from "@/components/faq-answer";
 
 export default function FAQPage() {
   return (
@@ -41,24 +42,9 @@ export default function FAQPage() {
             {FAQ_ITEMS.map((item) => (
               <Card key={item.question} className="bg-white p-6">
                 <h3 className="font-semibold text-charcoal mb-3">{item.question}</h3>
-                {item.answer.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className={index === 0 ? "text-medium-grey text-sm" : "text-medium-grey text-sm mt-2"}
-                  >
-                    {typeof paragraph === "string"
-                      ? paragraph
-                      : paragraph.map((segment, segmentIndex) =>
-                          typeof segment === "string" ? (
-                            segment
-                          ) : (
-                            <Link key={segmentIndex} href={segment.href} className="text-primary-blue hover:underline">
-                              {segment.text}
-                            </Link>
-                          ),
-                        )}
-                  </p>
-                ))}
+                <div className="space-y-2">
+                  <FaqAnswer answer={item.answer} className="text-medium-grey text-sm" />
+                </div>
               </Card>
             ))}
           </div>

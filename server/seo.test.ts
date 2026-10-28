@@ -205,7 +205,7 @@ test(
       const homeHtml = await (await fetch(`${baseUrl}/`)).text();
       assert.match(homeHtml, /<h1>North Brisbane Dog Training<\/h1>/);
       // Copy that only exists in the React page, never in the fallback summary.
-      assert.match(homeHtml, /What would make life with your dog better\?/);
+      assert.match(homeHtml, /I build the skills with your dog\. Then I hand them over to you\./);
       assert.match(homeHtml, /<img alt="Tristan training a dog outdoors in North Brisbane">/);
       assert.match(homeHtml, /<style data-prerender-style>/);
       assert.match(homeHtml, /href="https:\/\/canineconfidence\.simplybook\.net\/v2\/#book\/service\/16\/count\/1\/"/);
