@@ -185,14 +185,10 @@ export default function HomePage() {
               <span className="block text-[#8FD3F2]">Dog Training</span>
             </h1>
             <h2 className="mb-5 text-2xl font-bold leading-snug text-white lg:text-3xl">
-              Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
+              The dog you pictured when you brought them home.
             </h2>
-            <p className="mb-4 text-lg font-semibold leading-relaxed text-white lg:text-xl">
-              Pulling on walks. Reactivity. Jumping on visitors. A dog that
-              listens at home but switches off outside.
-            </p>
-            <p className="mb-8 text-lg leading-relaxed text-white/85 lg:text-xl">
-              In-home and real-world training, built on play and clear communication.
+            <p className="mb-10 text-lg leading-relaxed text-white/85 lg:text-xl">
+              I train your dog, then coach you, so they listen when it matters.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Home hero" className="h-auto px-7 py-4 text-lg" showIcon={false} />
@@ -587,6 +583,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-10 rounded-[26px] bg-sand p-8 text-charcoal sm:p-12 lg:flex-row lg:items-center lg:p-16">
             <div className="flex-1">
+              <p className="mb-3 font-quote text-xl italic text-sky-deep">
+                Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
+              </p>
               <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Get clear on what your dog needs</h2>
               <p className="text-lg leading-relaxed text-medium-grey">
                 I take the time to understand what you want to achieve, get to know
