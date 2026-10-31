@@ -40,7 +40,7 @@ const reasons = [
 ];
 
 const trainerPoints = [
-  { title: "Safety, care and respect for every dog", text: "Safety always comes first. Every dog gets care, affection and respect for who they are." },
+  { title: "Safe, cared for and respected", text: "Your dog is safe with me. I train them with care, and with respect for who they are." },
   { title: "Reliable and flexible", text: "I turn up when I say I will, come to you anywhere across North Brisbane, and work around your week. I'm still here after your program ends." },
   { title: "Qualified and always learning", text: "NDTF certified, professional and insured. I keep learning and trying new things so I can get better results for your dog." },
 ];
@@ -235,23 +235,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why owners choose me */}
-      <section className="bg-sand py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 max-w-3xl">
-            <p className="eyebrow mb-3">Why owners choose me</p>
-            <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
-              Your dog gets a professional. You get the know-how to keep it going.
-            </h2>
+      {/* Why owners choose me. Big numbered rows beside a heading that stays
+          put on desktop, so it reads differently from the four-column
+          building blocks further down. */}
+      <section className="bg-sand py-20 lg:py-32">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-32">
+              <p className="eyebrow mb-3">Why owners choose me</p>
+              <h2 className="mb-6 text-3xl font-extrabold text-charcoal lg:text-5xl lg:leading-[1.1]">
+                Your dog gets a professional. You get the know-how to keep it going.
+              </h2>
+              <AssessmentButton location="Home why choose me" className="h-auto px-7 py-4 text-lg" showIcon={false} />
+            </div>
           </div>
-          <ul className="grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
-            {reasons.map(({ title, text }) => (
-              <li key={title} className="border-t-2 border-sky-brand pt-6">
-                <h3 className="mb-3 font-quote text-2xl not-italic leading-tight text-charcoal">{title}</h3>
-                <p className="leading-relaxed text-medium-grey">{text}</p>
+          <ol className="lg:col-span-7">
+            {reasons.map(({ title, text }, i) => (
+              <li key={title} className="grid grid-cols-[3rem_1fr] gap-x-4 border-t border-navy/15 py-8 first:border-t-0 first:pt-0 sm:grid-cols-[4.5rem_1fr] lg:py-10">
+                <span className="font-quote text-3xl italic text-sky-deep sm:text-4xl" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="mb-3 font-quote text-2xl not-italic leading-tight text-charcoal sm:text-3xl">{title}</h3>
+                  <p className="text-lg leading-relaxed text-medium-grey">{text}</p>
+                </div>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       </section>
 
