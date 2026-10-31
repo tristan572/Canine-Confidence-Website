@@ -90,7 +90,7 @@ export const FAQ_ITEMS: FaqItem[] = [
       [
         "Puppy training is listed on the ",
         { text: "puppy page", href: "/puppy" },
-        ". Adult behaviour, obedience, walking and adventure clients start with the Initial Canine Success Assessment ($99).",
+        ". Adult behaviour, obedience, walking and adventure clients start with the Initial Canine Success Assessment ($150).",
       ],
     ],
   },

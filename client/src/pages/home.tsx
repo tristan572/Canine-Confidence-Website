@@ -40,7 +40,7 @@ const reasons = [
 ];
 
 const trainerPoints = [
-  { title: "Safety, care and respect for every dog", text: "Safety always comes first. Every dog gets care and affection, and respect for who they are. Most of them can't wait for me to arrive." },
+  { title: "Safety, care and respect for every dog", text: "Safety always comes first. Every dog gets care, affection and respect for who they are." },
   { title: "Reliable and flexible", text: "I turn up when I say I will, come to you anywhere across North Brisbane, and work around your week. I'm still here after your program ends." },
   { title: "Qualified and always learning", text: "NDTF certified, professional and insured. I keep learning and trying new things so I can get better results for your dog." },
 ];
@@ -196,10 +196,10 @@ export default function HomePage() {
               <span className="block text-[#8FD3F2]">Dog Training</span>
             </h1>
             <h2 className="mb-5 text-2xl font-bold leading-snug text-white lg:text-3xl">
-              The dog you pictured when you brought them home.
+              The best version of <em className="font-quote font-normal">your</em> dog.
             </h2>
             <p className="mb-10 text-lg leading-relaxed text-white/85 lg:text-xl">
-              I train your dog, then coach you, so they listen when it matters.
+              I train your dog, then coach you, so they listen when you need them to.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Home hero" className="h-auto px-7 py-4 text-lg" showIcon={false} />
@@ -275,8 +275,7 @@ export default function HomePage() {
               <p className="eyebrow mb-3">Your trainer</p>
               <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Hi, I'm Tristan.</h2>
               <p className="mb-7 text-lg leading-relaxed text-medium-grey">
-                I care about every dog I meet. My job is to help your dog live
-                their best life and fit into yours the way you hoped they would.
+                I'm the trainer your dog can't wait to see.
               </p>
               <ul className="space-y-5">
                 {trainerPoints.map(({ title, text }) => (
@@ -623,8 +622,8 @@ export default function HomePage() {
               <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Get clear on what your dog needs</h2>
               <p className="text-lg leading-relaxed text-medium-grey">
                 I take the time to understand what you want to achieve, get to know
-                your dog's temperament and begin working out how they respond and
-                learn. From there, I recommend a program to get you started.
+                your dog's temperament and build a plan around who they are and how
+                they learn. From there, I recommend a program to get you started.
               </p>
             </div>
             <div className="w-full rounded-2xl bg-white p-7 text-foreground lg:w-96 lg:shrink-0">

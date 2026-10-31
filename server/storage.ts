@@ -181,7 +181,7 @@ export class MemStorage implements IStorage {
 
     const serviceOverrides: Record<string, Partial<InsertService>> = {
       "Initial Canine Success Assessment": {
-        price: "$99",
+        price: "$150",
       },
       "One-on-One Private Coaching": {
         price: "$125",

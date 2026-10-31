@@ -30,7 +30,7 @@ export function AssessmentIntro({ location, showPuppyLink = false }: {
           <AssessmentDetails className="mb-5 text-lg text-primary-blue" />
           <p className="max-w-3xl text-lg leading-relaxed text-medium-grey">
             I take the time to understand what you want to achieve, get to know your
-            dog's temperament and begin working out how they respond and learn.
+            dog's temperament and build a plan around who they are and how they learn.
             From there, I recommend a program to get you started.
           </p>
           <p className="mt-4 font-semibold text-charcoal">You don't need to choose a program before we meet.</p>

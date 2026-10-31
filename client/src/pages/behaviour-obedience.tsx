@@ -137,7 +137,7 @@ export default function BehaviourObediencePage() {
           <h2 className="mb-4 text-3xl font-bold">Life with your dog should feel calmer, more connected and more enjoyable</h2>
           <p className="mb-7 text-lg text-blue-100">
             We'll talk through your goals, get to know your dog's temperament
-            and begin working out how to work together. I'll suggest a program
+            and build a plan around who they are and how they learn. I'll suggest a program
             to get you started.
           </p>
           <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
