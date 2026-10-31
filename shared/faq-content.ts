@@ -46,6 +46,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     ],
   },
   {
+    question: "Can you guarantee results?",
+    answer: [
+      "No. Every dog is different, and a lot depends on what happens between sessions. What I can promise is that I'll give your dog everything I've got, show you clearly what to do and why, and support you the whole way.",
+      "I take a lot of pride in my results. My reviews show what that looks like.",
+    ],
+  },
+  {
     question: "How often should we train between sessions?",
     answer: [
       "Daily, in short bursts. Two to five minutes per session is enough. Short and frequent beats long and rare.",

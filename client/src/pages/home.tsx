@@ -13,31 +13,41 @@ import { CheckCircle2, Plus, Star } from "lucide-react";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shared/social-proof";
 import { FAQ_ITEMS } from "@shared/faq-content";
 import type { BlogPost } from "@shared/schema";
-import heroJpeg from "@assets/IMG_0177_fallback_opt.jpg";
-import hero400 from "@assets/IMG_0177_hero_400_opt.webp";
-import hero800 from "@assets/IMG_0177_hero_800_opt.webp";
-import hero1200 from "@assets/IMG_0177_hero_1200_opt.webp";
+import heroJpeg from "@assets/hero_tug_1024.jpg";
+import hero640 from "@assets/hero_tug_640.webp";
+import hero1024 from "@assets/hero_tug_1024.webp";
+import hero1536 from "@assets/hero_tug_1536.webp";
 import walkingCard800 from "@assets/IMG_0084_card_800_opt.webp";
 import walking1200 from "@assets/IMG_0084_1760870993102.webp";
-import trainerWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
-import trainerJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import trainer600 from "@assets/trainer_staffy_600.webp";
+import trainer1122 from "@assets/trainer_staffy_1122.webp";
+import trainerJpeg from "@assets/trainer_staffy_800.jpg";
 
 const steps = [
   { title: "Book your assessment", text: "I take the time to understand what you want to achieve and get to know your dog's temperament." },
-  { title: "Get a recommended program", text: "I work out how your dog responds and learns, then recommend a program to get you started." },
+  { title: "Get a recommended program", text: "I work out how your dog responds and learns, then recommend 1, 3 or 6 weeks of training." },
   { title: "Train at home and out in the world", text: "I work in-home and in everyday environments, so skills hold up around real distractions. You get written notes after every session." },
   { title: "Keep it going for life", text: "Dogs change as they grow and age, and life throws up new situations. Book a top-up session or a video call when you need one, or keep skills sharp with training adventures." },
 ];
 
+// The four things every visitor should take away. Kept short on purpose;
+// the sections further down give the detail and the proof.
+const reasons = [
+  { title: "I do the hard part first", text: "I train your dog myself, so you're not left struggling through the early stages, and the results come quicker." },
+  { title: "Then I teach you", text: "You learn what to do, why it works and how to keep it going, so the training lasts." },
+  { title: "Built around your dog", text: "I train the dog in front of me, and fit the plan around their needs and your week." },
+  { title: "With you the whole way", text: "Detailed written notes, video updates and short tutorials, and I'm a message away when something comes up." },
+];
+
 const trainerPoints = [
-  { title: "NDTF Certified Professional", text: "Nationally accredited through the National Dog Trainers Federation, with a focus on genetic fulfilment and play-based learning." },
-  { title: "Professional & insured", text: "Grounded in current canine behaviour science and applied in the real world." },
-  { title: "Ongoing Support", text: "Committed to your dog's progress for the long term, not just the sessions." },
+  { title: "Safety, care and respect for every dog", text: "Safety always comes first. Every dog gets care and affection, and respect for who they are. Most of them can't wait for me to arrive." },
+  { title: "Reliable and flexible", text: "I turn up when I say I will, come to you anywhere across North Brisbane, and work around your week. I'm still here after your program ends." },
+  { title: "Qualified and always learning", text: "NDTF certified, professional and insured. I keep learning and trying new things so I can get better results for your dog." },
 ];
 
 const deliverables = [
   { title: "Detailed written notes after every session", text: "After your assessment and each coaching session, I email you everything we covered, why it matters and what to focus on first, so you can refer back to it as you practise." },
-  { title: "Hands-on coaching where problems happen", text: "I work with your dog in your home and out in the world, then coach you as the main handler so you know what to do and why." },
+  { title: "Video updates and short tutorials", text: "During your program you'll see what your dog is learning, with short videos showing you how to do the exercises yourself." },
   { title: "Support between sessions", text: "Send me a question or a video if something isn't working, and I'll help you adjust before it becomes a habit." },
   { title: "Free guide: The Four Building Blocks of a Balanced Dog", text: "My framework of Health, Lifestyle, Clarity, then Skills. It's the order I work through with every dog, so you'll know why we start where we do." },
 ];
@@ -98,14 +108,14 @@ const caseStudies = [
 ];
 
 const programBenefits = [
-  { title: "An experienced, consistent handler", text: "Your dog builds new skills with one person who knows what they're doing, every week of the program." },
-  { title: "You don't need to be home", text: "Trainer-led sessions can happen while you're at work. You get video updates and feedback along the way." },
+  { title: "Your dog stays home", text: "No kennels and no weeks apart. Your dog learns with an experienced handler, in the places they actually live." },
+  { title: "You don't need to be home", text: "Trainer-led sessions can happen while you're at work. You get video updates and short tutorials along the way." },
   { title: "You take over skills that already work", text: "By your coaching session the hard part is done, so you learn how to keep it going instead of starting from scratch." },
 ];
 
 const programSteps = [
   ...Array.from({ length: 4 }, () => ({ title: "Trainer-led session", text: "I work with your dog at home or on walks.", coaching: false })),
-  { title: "Coaching session with you", text: "I show you what your dog has learnt and how to keep it going.", coaching: true },
+  { title: "Coaching session with you", text: "I show you what to do, why it works and how to keep it going.", coaching: true },
 ];
 
 // Draft ladder: one weekly rhythm (4 trainer-led + 1 coaching) over 1, 3 or
@@ -123,6 +133,7 @@ const homeFaqQuestions = [
   "What does it cost?",
   "Do you use corrections, e-collars or prong collars?",
   "How long will training take?",
+  "Can you guarantee results?",
   "Will you judge me or my dog?",
   "Do I need to be present for training?",
   "Where do you work?",
@@ -164,15 +175,15 @@ export default function HomePage() {
         <picture>
           <source
             type="image/webp"
-            srcSet={`${hero400} 400w, ${hero800} 800w, ${hero1200} 1200w`}
+            srcSet={`${hero640} 640w, ${hero1024} 1024w, ${hero1536} 1536w`}
             sizes="100vw"
           />
           <img
             src={heroJpeg}
             alt="Tristan training a dog outdoors in North Brisbane"
-            className="fixed-photo object-[60%_20%]"
-            width={1200}
-            height={1482}
+            className="fixed-photo object-[70%_top]"
+            width={1536}
+            height={1024}
             loading="eager"
             decoding="async"
           />
@@ -224,39 +235,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Method */}
-      <section className="bg-sand py-20 lg:py-32">
+      {/* Why owners choose me */}
+      <section className="bg-sand py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end">
-            <div>
-              <p className="eyebrow mb-3">Why Canine Confidence</p>
-              <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
-                A balanced dog is built on four blocks
-              </h2>
-            </div>
-            <p className="text-lg leading-relaxed text-medium-grey">
-              When all four are in place, you get a dog that's calm because their
-              needs are met, confident because they understand the world, and
-              easier to live with because their skills work in everyday life.
-              Each block builds on the one before it.
-            </p>
+          <div className="mb-12 max-w-3xl">
+            <p className="eyebrow mb-3">Why owners choose me</p>
+            <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
+              Your dog gets a professional. You get the know-how to keep it going.
+            </h2>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {methodPoints.map(({ number, title, text }) => (
-              <article key={title} className="point-card">
-                <p className="mb-4 text-3xl font-extrabold text-sky-deep">{number}</p>
-                <h3 className="mb-2 text-lg font-extrabold text-charcoal">{title}</h3>
+          <ul className="grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+            {reasons.map(({ title, text }) => (
+              <li key={title} className="border-t-2 border-sky-brand pt-6">
+                <h3 className="mb-3 font-quote text-2xl not-italic leading-tight text-charcoal">{title}</h3>
                 <p className="leading-relaxed text-medium-grey">{text}</p>
-              </article>
+              </li>
             ))}
-          </div>
-          <div className="mt-10">
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
-              <Link href="/method" className="font-extrabold text-primary hover:text-sky-deep">
-                See how I train →
-              </Link>
-              <Link href="/blog/creating-balance-complete-framework" className="font-extrabold text-primary hover:text-sky-deep">
-                Read the full framework →
+          </ul>
+        </div>
+      </section>
+
+      {/* Meet the trainer */}
+      <section className="py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 items-center overflow-hidden rounded-[26px] bg-sand lg:grid-cols-12">
+            <picture className="lg:col-span-5">
+              <source type="image/webp" srcSet={`${trainer600} 600w, ${trainer1122} 1122w`} sizes="(max-width: 1024px) 100vw, 40vw" />
+              <img
+                src={trainerJpeg}
+                alt="Tristan from Canine Confidence with a grey staffy"
+                className="h-96 w-full object-cover object-[center_20%] sm:h-[32rem] lg:h-full lg:min-h-[36rem]"
+                width={1122}
+                height={1402}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <div className="p-7 sm:p-10 lg:col-span-7 lg:px-14">
+              <p className="eyebrow mb-3">Your trainer</p>
+              <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Hi, I'm Tristan.</h2>
+              <p className="mb-7 text-lg leading-relaxed text-medium-grey">
+                I care about every dog I meet. My job is to help your dog live
+                their best life and fit into yours the way you hoped they would.
+              </p>
+              <ul className="space-y-5">
+                {trainerPoints.map(({ title, text }) => (
+                  <li key={title} className="flex gap-3">
+                    <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-sky-deep" aria-hidden="true" />
+                    <div>
+                      <p className="font-extrabold text-charcoal">{title}</p>
+                      <p className="text-medium-grey">{text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/about" className="mt-8 inline-block font-extrabold text-primary hover:text-sky-deep">
+                More about me →
               </Link>
             </div>
           </div>
@@ -338,6 +372,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Method */}
+      <section className="bg-sand py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end">
+            <div>
+              <p className="eyebrow mb-3">Why Canine Confidence</p>
+              <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
+                A balanced dog is built on four blocks
+              </h2>
+            </div>
+            <p className="text-lg leading-relaxed text-medium-grey">
+              When all four are in place, you get a dog that's calm because their
+              needs are met, confident because they understand the world, and
+              easier to live with because their skills work in everyday life.
+              Each block builds on the one before it.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {methodPoints.map(({ number, title, text }) => (
+              <article key={title} className="point-card">
+                <p className="mb-4 text-3xl font-extrabold text-sky-deep">{number}</p>
+                <h3 className="mb-2 text-lg font-extrabold text-charcoal">{title}</h3>
+                <p className="leading-relaxed text-medium-grey">{text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10">
+            <div className="flex flex-wrap gap-x-8 gap-y-3">
+              <Link href="/method" className="font-extrabold text-primary hover:text-sky-deep">
+                See how I train →
+              </Link>
+              <Link href="/blog/creating-balance-complete-framework" className="font-extrabold text-primary hover:text-sky-deep">
+                Read the full framework →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How my programs work */}
       <section className="py-20 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -345,13 +418,13 @@ export default function HomePage() {
             <div>
               <p className="eyebrow mb-3">How my programs work</p>
               <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">
-                I build the skills with your dog. Then I hand them over to you.
+                Like board and train, without sending your dog away.
               </h2>
               <p className="mb-8 text-lg leading-relaxed text-medium-grey">
-                In most training, you learn the timing while your dog is still
-                working out what you want. My programs start the other way round.
+                Board and train means your dog lives with a trainer for weeks. My
+                programs give your dog that professional start in their own home.
                 Every week runs the same way: four trainer-led sessions build the
-                skills, then a coaching session shows you how to keep them going.
+                skills, then a coaching session hands them over to you.
               </p>
               <ul className="space-y-5">
                 {programBenefits.map(({ title, text }) => (
@@ -420,42 +493,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="bg-sand py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
-            <div className="max-w-2xl">
-              <p className="eyebrow mb-3">How it works</p>
-              <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
-                From your first session to the years ahead
-              </h2>
-            </div>
-            <p className="max-w-md font-semibold text-charcoal">
-              You don't need to choose a program before we meet.
-            </p>
-          </div>
-          <ol className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map(({ title, text }, i) => (
-              <li key={title} className="flex flex-col gap-3 border-t-2 border-navy/15 pt-6">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-primary text-lg font-extrabold text-white" aria-hidden="true">
-                    {i + 1}
-                  </span>
-                  {i === 0 && <AssessmentDetails className="gap-x-2 text-sm text-sky-deep" />}
-                </div>
-                <h3 className="text-xl font-extrabold text-charcoal">{title}</h3>
-                <p className="leading-relaxed text-medium-grey">{text}</p>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-6 text-medium-grey">
-            Starting with a puppy? <Link href="/puppy" className="font-semibold text-sky-deep underline underline-offset-4">Puppy programs can be booked directly</Link>, with no assessment required.
-          </p>
-        </div>
-      </section>
-
       {/* What you get */}
-      <section className="py-20 lg:py-32">
+      <section className="bg-sand py-20 lg:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div>
             <p className="eyebrow mb-3">What you get</p>
@@ -511,42 +550,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Meet the trainer */}
+      {/* How it works */}
       <section className="py-20 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 items-center overflow-hidden rounded-[26px] bg-sand lg:grid-cols-12">
-            <picture className="lg:col-span-5">
-              <source type="image/webp" srcSet={trainerWebp} />
-              <img
-                src={trainerJpeg}
-                alt="Tristan from Canine Confidence with a grey staffy"
-                className="h-80 w-full object-cover object-top sm:h-[28rem] lg:h-full lg:min-h-[34rem]"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <div className="p-7 sm:p-10 lg:col-span-7 lg:px-14">
-              <p className="eyebrow mb-3">Your trainer</p>
-              <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Hi, I'm Tristan.</h2>
-              <p className="mb-7 text-lg leading-relaxed text-medium-grey">
-                I want you to have a dog you can genuinely enjoy living with.
-              </p>
-              <ul className="space-y-5">
-                {trainerPoints.map(({ title, text }) => (
-                  <li key={title} className="flex gap-3">
-                    <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-sky-deep" aria-hidden="true" />
-                    <div>
-                      <p className="font-extrabold text-charcoal">{title}</p>
-                      <p className="text-medium-grey">{text}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <Link href="/about" className="mt-8 inline-block font-extrabold text-primary hover:text-sky-deep">
-                More about me →
-              </Link>
+          <div className="mb-10 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+            <div className="max-w-2xl">
+              <p className="eyebrow mb-3">How it works</p>
+              <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
+                From your first session to the years ahead
+              </h2>
             </div>
+            <p className="max-w-md font-semibold text-charcoal">
+              You don't need to choose a program before we meet.
+            </p>
           </div>
+          <ol className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+            {steps.map(({ title, text }, i) => (
+              <li key={title} className="flex flex-col gap-3 border-t-2 border-navy/15 pt-6">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-primary text-lg font-extrabold text-white" aria-hidden="true">
+                    {i + 1}
+                  </span>
+                  {i === 0 && <AssessmentDetails className="gap-x-2 text-sm text-sky-deep" />}
+                </div>
+                <h3 className="text-xl font-extrabold text-charcoal">{title}</h3>
+                <p className="leading-relaxed text-medium-grey">{text}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 text-medium-grey">
+            Starting with a puppy? <Link href="/puppy" className="font-semibold text-sky-deep underline underline-offset-4">Puppy programs can be booked directly</Link>, with no assessment required.
+          </p>
         </div>
       </section>
 

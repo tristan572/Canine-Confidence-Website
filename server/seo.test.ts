@@ -167,7 +167,9 @@ test("FAQ page carries FAQPage JSON-LD built from the rendered FAQ list", async 
     assert(faq);
     assert.equal(faq.mainEntity.length, FAQ_ITEMS.length);
     assert.equal(faq.mainEntity[0].name, FAQ_ITEMS[0].question);
-    assert.match(faq.mainEntity[9].acceptedAnswer.text, /listed on the puppy page\. Adult behaviour/);
+    const cost = faq.mainEntity.find((entry) => entry.name === "What does it cost?");
+    assert(cost);
+    assert.match(cost.acceptedAnswer.text, /listed on the puppy page\. Adult behaviour/);
   });
 });
 
@@ -205,7 +207,7 @@ test(
       const homeHtml = await (await fetch(`${baseUrl}/`)).text();
       assert.match(homeHtml, /<h1>North Brisbane Dog Training<\/h1>/);
       // Copy that only exists in the React page, never in the fallback summary.
-      assert.match(homeHtml, /I build the skills with your dog\. Then I hand them over to you\./);
+      assert.match(homeHtml, /Like board and train, without sending your dog away\./);
       assert.match(homeHtml, /<img alt="Tristan training a dog outdoors in North Brisbane">/);
       assert.match(homeHtml, /<style data-prerender-style>/);
       assert.match(homeHtml, /href="https:\/\/canineconfidence\.simplybook\.net\/v2\/#book\/service\/16\/count\/1\/"/);
