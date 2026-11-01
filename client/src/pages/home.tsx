@@ -56,7 +56,7 @@ const deliverables = [
 // Excerpt from a real assessment summary email, with the dog's and owners'
 // names changed.
 const sampleSummary = {
-  dog: "Ziggy, an enthusiastic young puppy",
+  dog: "MJ, an enthusiastic young puppy",
   intro: "We covered quite a lot, so I wanted to put everything into an email that you can refer back to as you practise.",
   topics: [
     "Building clear communication with markers",
@@ -84,18 +84,14 @@ const programBenefits = [
   { title: "You take over skills that already work", text: "By your coaching session the hard part is done, so you learn how to keep it going instead of starting from scratch." },
 ];
 
-const programSteps = [
-  ...Array.from({ length: 4 }, () => ({ title: "Trainer-led session", text: "I work with your dog at home or on walks.", coaching: false })),
-  { title: "Coaching session with you", text: "I show you what to do, why it works and how to keep it going.", coaching: true },
-];
 
 // Draft ladder: one weekly rhythm (4 trainer-led + 1 coaching) over 1, 3 or
 // 6 weeks. The 3-week program's name is a working title and its details
 // aren't decided yet.
 const programLadder = [
-  { stage: "Foundation", weeks: "1 week", name: "The Foundation Program", sessions: "5 sessions", text: "Motivation and communication. The foundations every other skill is built on." },
-  { stage: "Connection", weeks: "3 weeks", name: "The Connected Companion", sessions: "15 sessions", text: "Details to come." },
-  { stage: "Balance", weeks: "6 weeks", name: "From Chaos to Calm", sessions: "30 sessions", text: "For reactivity, anxiety and complex behaviour, with time to change how your dog feels as well as what they do." },
+  { stage: "Foundation", weeks: "1 week", name: "The Foundation Program", sessions: "5 sessions", text: "Engagement, motivation and fulfilment, plus the start of clear communication. The foundations every other skill is built on." },
+  { stage: "Connection", weeks: "3 weeks", name: "The Connected Companion", sessions: "15 sessions", text: "A complete communication system and skills you can rely on in everyday life, plus work on everyday behaviour problems." },
+  { stage: "Balance", weeks: "6 weeks", name: "From Chaos to Calm", sessions: "30 sessions", text: "For reactivity, anxiety, aggression and anything more complex, with time to change how your dog feels as well as what they do." },
 ];
 
 // The questions that most often stop people booking. Wording comes from the
@@ -124,10 +120,10 @@ function Stars({ className = "h-4 w-4" }: { className?: string }) {
 }
 
 const methodPoints = [
-  { number: "01", title: "Health", text: "A dog that feels good in their body. Steady energy, good sleep and comfortable with touch and grooming, so they're ready to learn." },
-  { number: "02", title: "Lifestyle", text: "A dog whose needs are met. With a proper outlet for their drives, they can switch off at home instead of finding their own entertainment." },
-  { number: "03", title: "Clarity", text: "A dog that understands you. Fewer mixed messages and repeated commands, and a dog that knows what you're asking and what happens next." },
-  { number: "04", title: "Skills", text: "A dog you can take places. Calmer walks, a recall you can trust and manners that still work at the park, the café and when visitors arrive." },
+  { number: "01", title: "Health", text: "Pain, poor sleep and the wrong diet all show up as behaviour. A dog that feels good in their body is ready to learn." },
+  { number: "02", title: "Lifestyle", text: "A dog with nowhere to put their energy finds their own outlet: chewing, barking, pulling. Meet their needs and they can switch off at home." },
+  { number: "03", title: "Clarity", text: "Without clear boundaries and feedback, dogs guess what's right and often get it wrong, and that guessing breeds anxiety. When your dog knows when they've got it right and when they haven't, they relax and succeed." },
+  { number: "04", title: "Skills", text: "Built on the first three, skills become reliable. Calmer walks, a recall you can trust and manners that hold up at the park, the café and when visitors arrive." },
 ];
 
 export default function HomePage() {
@@ -325,19 +321,27 @@ export default function HomePage() {
       {/* Method */}
       <section className="bg-sand py-20 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-end">
+          <div className="mb-12 grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
             <div>
-              <p className="eyebrow mb-3">Why Canine Confidence</p>
+              <p className="eyebrow mb-3">My framework</p>
               <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
-                A balanced dog is built on four blocks
+                Training lasts when the foundations are solid
               </h2>
             </div>
-            <p className="text-lg leading-relaxed text-medium-grey">
-              When all four are in place, you get a dog that's calm because their
-              needs are met, confident because they understand the world, and
-              easier to live with because their skills work in everyday life.
-              Each block builds on the one before it.
-            </p>
+            <div className="space-y-4 text-lg leading-relaxed text-medium-grey">
+              <p>
+                The average dog trainer starts with commands. A dog that's under-exercised,
+                uncomfortable or confused can't hold onto a sit, let alone a recall
+                at the park. That's why so many owners pay for training and end up
+                back where they started.
+              </p>
+              <p>
+                Good trainers know a dog's needs come before obedience. The Four
+                Building Blocks is how I put that into practice with every dog. I
+                check all four at your assessment, work through them in order, and
+                build your written plan around them.
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
             {methodPoints.map(({ number, title, text }) => (
@@ -348,6 +352,14 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+          <figure className="mt-12 max-w-3xl border-l-2 border-sky-brand pl-6 lg:pl-10">
+            <blockquote className="font-quote text-2xl font-normal italic leading-snug text-charcoal lg:text-3xl">
+              “I have a much better understanding of what Rocket needs, how to
+              communicate with him and we have so much fun together now. No more
+              frustration around the house and on walks.”
+            </blockquote>
+            <figcaption className="mt-3 text-sm font-bold text-medium-grey">Michael F. · Owner of Rocket</figcaption>
+          </figure>
           <div className="mt-10">
             <div className="flex flex-wrap gap-x-8 gap-y-3">
               <Link href="/method" className="font-extrabold text-primary hover:text-sky-deep">
@@ -388,24 +400,39 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
-            <div className="self-center">
-              <p className="mb-6 text-sm font-extrabold uppercase tracking-[0.14em] text-medium-grey">One week of training</p>
-              <ol className="relative space-y-6 before:absolute before:bottom-6 before:left-[21px] before:top-6 before:w-0.5 before:bg-navy/15">
-                {programSteps.map(({ title, text, coaching }, i) => (
-                  <li key={i} className="relative flex items-start gap-5">
-                    <span
-                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg font-extrabold ${coaching ? "bg-sky-brand text-navy" : "bg-primary text-white"}`}
-                      aria-hidden="true"
-                    >
-                      {i + 1}
-                    </span>
-                    <div className="pt-1.5">
-                      <p className="font-extrabold text-charcoal">{title}</p>
-                      <p className="text-sm text-medium-grey">{text}</p>
-                    </div>
+            {/* One week at a glance: the strip shows the 4 + 1 rhythm, the two
+                rows below say what each kind of session is. */}
+            <div className="self-center rounded-[26px] bg-sand p-6 sm:p-8 lg:p-10">
+              <p className="mb-5 text-sm font-extrabold uppercase tracking-[0.14em] text-medium-grey">One week of training</p>
+              <ol className="mb-8 grid grid-cols-5 gap-2" aria-label="Five sessions: four trainer-led, then one coaching session">
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <li
+                    key={n}
+                    className={`flex h-14 items-center justify-center rounded-xl text-lg font-extrabold ${n === 5 ? "bg-sky-brand text-navy" : "bg-primary text-white"}`}
+                  >
+                    {n}
                   </li>
                 ))}
               </ol>
+              <dl className="space-y-6">
+                <div className="flex gap-4">
+                  <span className="mt-1.5 h-3 w-3 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                  <div>
+                    <dt className="font-extrabold text-charcoal">Sessions 1 to 4: I train your dog</dt>
+                    <dd className="mt-1 text-medium-grey">At home and out on walks. I do the hard part, so the skills are already in place before you take over.</dd>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="mt-1.5 h-3 w-3 shrink-0 rounded-full bg-sky-brand" aria-hidden="true" />
+                  <div>
+                    <dt className="font-extrabold text-charcoal">Session 5: I coach you</dt>
+                    <dd className="mt-1 text-medium-grey">I show you what to do, why it works and how to keep it going, with detailed written notes to follow.</dd>
+                  </div>
+                </div>
+              </dl>
+              <p className="mt-8 border-t border-navy/10 pt-5 text-sm font-semibold text-medium-grey">
+                The same rhythm repeats each week until we reach the outcome you're after.
+              </p>
             </div>
           </div>
 

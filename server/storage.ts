@@ -978,7 +978,7 @@ Begin with an honest look at where your dog is in each area.
 
 **Lifestyle.** What is your dog actually wired for? What drives sit underneath the breed? How well are those needs being met day to day?
 
-**Communication.** How consistent is the system between you and your dog? Where do the mixed messages live? What does "no" actually mean in your house?
+**Clarity.** How consistent is the system between you and your dog? Where do the mixed messages live? What does "no" actually mean in your house?
 
 **Skills.** Which cues hold up in the real world, and which only work in the kitchen? What's missing?
 
