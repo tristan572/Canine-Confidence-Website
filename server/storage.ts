@@ -121,7 +121,7 @@ export class MemStorage implements IStorage {
         description: "**Stop Guessing, Start Training**\n\nFeeling confused about where to start? Have you tried standard training with limited success? This session is the crucial first step to creating positive change by diagnosing the root cause of your dog's behaviour rather than treating only the symptoms.\n\n**Perfect for:** All new clients, whether you're starting an obedience program, working through a specific challenge (like reactivity, digging, or anxiety), or looking to build a deeper bond with your dog.",
         duration: "60 minutes",
         location: "In-home assessment",
-        price: "$90",
+        price: "$120",
         category: "assessment",
         imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260_opt.webp",
         features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to my training system, designed to save you time and money"]
@@ -181,7 +181,7 @@ export class MemStorage implements IStorage {
 
     const serviceOverrides: Record<string, Partial<InsertService>> = {
       "Initial Canine Success Assessment": {
-        price: "$150",
+        price: "$120",
       },
       "One-on-One Private Coaching": {
         price: "$125",
