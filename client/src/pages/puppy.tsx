@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ProgramCard } from "@/components/funnel/program-card";
-import { ConsultationButton } from "@/components/funnel/funnel-cta";
+import { ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import { StaticSEO } from "@/components/SEO";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
@@ -13,7 +13,7 @@ import strip2 from "@assets/puppy_strip_2.webp";
 import strip2Jpeg from "@assets/puppy_strip_2.jpg";
 import strip3 from "@assets/puppy_strip_3.webp";
 import strip3Jpeg from "@assets/puppy_strip_3.jpg";
-import { Calendar, Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 
 // Real puppies from Tristan's puppy clients.
@@ -36,50 +36,52 @@ const puppyReviews = [
   },
 ];
 
+function BookButton({ label, className = "" }: { label: string; className?: string }) {
+  return (
+    <Button asChild className={`btn-cta ${CTA_COLOURS} h-auto px-7 py-4 text-lg ${className}`}>
+      <a {...getBookingLinkProps(CONFIDENT_START_URL, "package", "The Confident Start Program")}>{label}</a>
+    </Button>
+  );
+}
+
 export default function PuppyPage() {
   return (
     <div className="min-h-screen">
       <StaticSEO path="/puppy" />
 
-      <section className="hero-gradient py-16 lg:py-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
-              Puppy raising
-            </p>
-            <h1 className="mb-5 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
+      {/* Hero */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+          <div className="lg:col-span-7">
+            <p className="eyebrow mb-3">Puppy raising</p>
+            <h1 className="mb-6 text-4xl font-extrabold leading-[1.05] text-charcoal lg:text-6xl">
               Stop guessing through the hard parts. Start building the dog you always pictured.
             </h1>
-            <p className="mb-8 text-xl leading-relaxed text-medium-grey">
+            <p className="mb-8 max-w-2xl text-lg leading-relaxed text-medium-grey lg:text-xl">
               Together, we build the foundations of confidence, connection and
               clear communication during your puppy's critical learning period.
               I come to your home to coach you where puppy life actually happens,
               with advice shaped around your puppy, your household and the life
               you want to share with them.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild className="btn-primary px-7 py-4 text-lg">
-                <a {...getBookingLinkProps(CONFIDENT_START_URL, "package", "The Confident Start Program")}>
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book the Confident Start Program
-                </a>
-              </Button>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <BookButton label="Book the Confident Start Program" />
+              <ConsultationButton
+                className="btn-secondary h-auto px-7 py-4 text-lg"
+                label="Not sure? Book a free phone consult"
+                showIcon={false}
+              />
             </div>
-            <ConsultationButton
-              className="mt-4 h-auto justify-start border-0 bg-transparent px-0 py-1 text-primary-blue shadow-none hover:bg-transparent hover:text-primary-blue hover:underline"
-              label="Not sure? Book a free phone consult"
-              showIcon={false}
-            />
-            <p className="mt-4 text-sm font-medium text-charcoal">
+            <p className="mt-5 text-sm font-semibold text-medium-grey">
               No assessment required. Book directly when you are ready.
             </p>
           </div>
-          <picture className="mx-auto w-full max-w-md lg:max-w-none">
-            <source type="image/webp" srcSet={`${puppy480} 480w, ${puppy768} 768w`} sizes="(max-width: 1024px) 100vw, 50vw" />
+          <picture className="mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
+            <source type="image/webp" srcSet={`${puppy480} 480w, ${puppy768} 768w`} sizes="(max-width: 1024px) 100vw, 40vw" />
             <img
               src={puppyJpeg}
               alt="Renegade, a curly apricot Cavoodle puppy, looking up from the grass"
-              className="aspect-[4/5] h-auto w-full rounded-2xl object-cover shadow-xl lg:max-h-[38rem]"
+              className="aspect-[4/5] h-auto w-full rounded-[26px] object-cover"
               width={768}
               height={960}
               loading="eager"
@@ -89,51 +91,54 @@ export default function PuppyPage() {
         </div>
       </section>
 
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10 text-white">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <p className="text-2xl font-bold leading-snug">
+      {/* The goal, in one line */}
+      <section className="px-2 sm:px-4 lg:px-6">
+        <div className="mx-auto max-w-[88rem] rounded-[28px] bg-primary py-16 text-white lg:rounded-[32px] lg:py-24">
+          <p className="mx-auto max-w-4xl px-4 text-center font-quote text-3xl font-normal italic leading-snug sm:px-6 lg:text-5xl">
             I want your puppy to grow into a confident, connected dog who
             understands how to live in your world.
           </p>
         </div>
       </section>
 
-      <section className="bg-white py-16">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:px-8">
-          <div>
-            <h2 className="mb-5 text-3xl font-bold text-charcoal">
-              In-home coaching, where it matters
-            </h2>
-            <p className="mb-5 text-lg leading-relaxed text-medium-grey">
-              A puppy can look perfect in a class while home still feels chaotic.
-              By coming to you, I can see the setup, routines and small moments
-              behind toilet accidents, barking, chewing your possessions and
-              struggling to settle.
-            </p>
-            <p className="text-lg leading-relaxed text-medium-grey">
-              I show you what to change in the environment, how to communicate
-              clearly and how to use play to build trust and cooperation. You are
-              not left trying to translate generic advice back into real life.
-            </p>
+      {/* The program */}
+      <section className="py-20 lg:py-32">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+          <div className="lg:col-span-6">
+            <div className="lg:sticky lg:top-32">
+              <p className="eyebrow mb-3">The Confident Start Program</p>
+              <h2 className="mb-6 text-3xl font-extrabold text-charcoal lg:text-5xl lg:leading-[1.1]">
+                In-home coaching, where it matters
+              </h2>
+              <div className="space-y-5 text-lg leading-relaxed text-medium-grey">
+                <p>
+                  A puppy can look perfect in a class while home still feels chaotic.
+                  By coming to you, I can see the setup, routines and small moments
+                  behind toilet accidents, barking, chewing your possessions and
+                  struggling to settle.
+                </p>
+                <p>
+                  I show you what to change in the environment, how to communicate
+                  clearly and how to use play to build trust and cooperation. You are
+                  not left trying to translate generic advice back into real life.
+                </p>
+              </div>
+            </div>
           </div>
-          <ProgramCard
-            program={confidentStart}
-            location="Puppy"
-            directAction={
-              <Button asChild className="btn-primary w-full">
-                <a {...getBookingLinkProps(CONFIDENT_START_URL, "package", "The Confident Start Program")}>
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Book Now
-                </a>
-              </Button>
-            }
-          />
+          <div className="lg:col-span-6">
+            <ProgramCard
+              program={confidentStart}
+              location="Puppy"
+              directAction={<BookButton label="Book Now" className="w-full" />}
+            />
+          </div>
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-center text-3xl font-bold text-charcoal">
+      {/* Real puppies */}
+      <section className="py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-10 text-3xl font-extrabold text-charcoal lg:text-4xl">
             A few of the puppies I've worked with
           </h2>
           <ul className="grid grid-cols-3 gap-3 sm:gap-5">
@@ -144,7 +149,7 @@ export default function PuppyPage() {
                   <img
                     src={photo.jpeg}
                     alt={photo.alt}
-                    className="aspect-square w-full rounded-2xl object-cover shadow-sm"
+                    className="aspect-square w-full rounded-[22px] object-cover"
                     width={640}
                     height={640}
                     loading="lazy"
@@ -157,48 +162,46 @@ export default function PuppyPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center">
-            <div className="mb-3 flex justify-center gap-1" aria-label="Five stars">
+      {/* Reviews */}
+      <section className="bg-sand py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="eyebrow mb-3">Google reviews</p>
+              <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">
+                What puppy owners say after working with me
+              </h2>
+            </div>
+            <div role="img" aria-label="Five stars" className="flex gap-1">
               {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={index} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                <Star key={index} className="h-5 w-5 fill-sun text-sun" aria-hidden="true" />
               ))}
             </div>
-            <p className="mb-2 text-sm font-bold uppercase tracking-[0.16em] text-primary-blue">
-              Google reviews
-            </p>
-            <h2 className="text-3xl font-bold text-charcoal">
-              What puppy owners say after working with me
-            </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-2">
             {puppyReviews.map((review) => (
-              <figure
-                key={review.name}
-                className="rounded-2xl border border-primary-blue/10 bg-white p-7 shadow-sm"
-              >
-                <Quote className="mb-4 h-9 w-9 text-primary-blue/20" aria-hidden="true" />
-                <blockquote className="text-lg leading-relaxed text-charcoal">
+              <figure key={review.name} className="border-t border-navy/15 pt-8">
+                <blockquote className="font-quote text-xl font-normal italic leading-snug text-charcoal lg:text-2xl">
                   “{review.quote}”
                 </blockquote>
-                <figcaption className="mt-5 font-semibold text-primary-blue">
+                <figcaption className="mt-5 text-sm font-bold text-medium-grey">
                   {review.name}, Google review
                 </figcaption>
               </figure>
             ))}
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <a
               href="https://share.google/NJfyc690NWAMVb3LX"
               target="_blank"
               rel="noreferrer"
-              className="font-semibold text-primary-blue hover:underline"
+              className="font-extrabold text-primary hover:text-sky-deep"
             >
-              Read all {GOOGLE_REVIEW_COUNT} Google reviews
+              Read all {GOOGLE_REVIEW_COUNT} Google reviews →
             </a>
+            <BookButton label="Book the Confident Start Program" />
           </div>
         </div>
       </section>

@@ -212,7 +212,7 @@ export const confidentStart: FunnelProgram = {
   benefits: [
     "6 Private In-Home Coaching Sessions for You, Your Family and Your Puppy",
     "Personalised House Training Guidance and Setup",
-    "Step by Step Socialisation and Desensitisation Plan",
+    "Socialisation and Desensitisation Guidance, Covered in Sessions and in Your Guide",
     "The 5 Foundational Manners: Sit, Stay, Come, Place and Loose-Lead Walking Foundations",
     "Free Comprehensive 50+ Page Puppy Raising Guide",
   ],
