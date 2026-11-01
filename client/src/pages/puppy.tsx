@@ -4,7 +4,9 @@ import { ConsultationButton } from "@/components/funnel/funnel-cta";
 import { StaticSEO } from "@/components/SEO";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
-import puppyImage from "@assets/image_1750048904991_opt.webp";
+import puppy480 from "@assets/puppy_renegade_480.webp";
+import puppy768 from "@assets/puppy_renegade_768.webp";
+import puppyJpeg from "@assets/puppy_renegade_768.jpg";
 import { Calendar, Quote, Star } from "lucide-react";
 import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 
@@ -59,13 +61,18 @@ export default function PuppyPage() {
               No assessment required. Book directly when you are ready.
             </p>
           </div>
-          <img
-            src={puppyImage}
-            alt="Puppy training with Canine Confidence"
-            className="h-auto w-full rounded-2xl object-cover shadow-xl"
-            width={640}
-            height={480}
-          />
+          <picture className="mx-auto w-full max-w-md lg:max-w-none">
+            <source type="image/webp" srcSet={`${puppy480} 480w, ${puppy768} 768w`} sizes="(max-width: 1024px) 100vw, 50vw" />
+            <img
+              src={puppyJpeg}
+              alt="Tristan holding Renegade, a Cavoodle puppy, at home during puppy training"
+              className="aspect-[4/5] h-auto w-full rounded-2xl object-cover shadow-xl lg:max-h-[38rem]"
+              width={768}
+              height={960}
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
 

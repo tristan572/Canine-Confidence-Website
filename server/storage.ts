@@ -278,7 +278,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/image_1750048904991_opt.webp",
+        imageUrl: "/attached_assets/puppy_card_molly_800.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised House Training Guidance and Setup",
