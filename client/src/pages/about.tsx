@@ -45,9 +45,9 @@ export default function AboutPage() {
               The trainer your dog can't wait to see.
             </h1>
             <p className="mb-8 max-w-xl text-lg leading-relaxed text-medium-grey lg:text-xl">
-              I'm Tristan. I've spent years learning how dogs think, feel and learn, and
-              helping dogs and their owners across North Brisbane build a life
-              they both enjoy is what I love doing most.
+              I'm Tristan. I've spent years learning how dogs think, feel and learn,
+              and what I love doing most is helping dogs and their owners across
+              North Brisbane build a life they both enjoy.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <AssessmentButton location="About hero" className="h-auto px-7 py-4 text-lg" showIcon={false} />
