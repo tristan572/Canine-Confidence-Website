@@ -3,19 +3,14 @@ import { Star } from "lucide-react";
 import { StaticSEO } from "@/components/SEO";
 import TestimonialCard from "@/components/ui/testimonial-card";
 import { AssessmentButton } from "@/components/funnel/funnel-cta";
+import ReviewCards from "@/components/review-cards";
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 import type { Testimonial } from "@shared/schema";
 
 export default function ReviewsPage() {
   const { data: testimonials = [], isLoading } = useQuery<Testimonial[]>({
     queryKey: ["/api/testimonials"],
   });
-
-  // Feature Alex & Lyla's review first on this page only
-  const isFeatured = (t: Testimonial) => t.clientName === "Alex C." && t.dogName === "Lyla";
-  const orderedTestimonials = [
-    ...testimonials.filter(isFeatured),
-    ...testimonials.filter((t) => !isFeatured(t)),
-  ];
 
   return (
     <div className="min-h-screen">
@@ -50,13 +45,32 @@ export default function ReviewsPage() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 py-16">
+      {/* Stories with photos first, then every Google review in full. */}
+      <section className="px-2 sm:px-4 lg:px-6">
+        <div className="mx-auto max-w-[88rem] rounded-[28px] bg-primary py-16 text-white lg:rounded-[32px] lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.12em] text-[#8FD3F2]">Their stories</p>
+            <h2 className="mb-10 max-w-3xl text-3xl font-extrabold lg:text-4xl">
+              Where they started, and where they are now
+            </h2>
+            <ReviewCards />
+          </div>
+        </div>
+      </section>
+      <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <p className="eyebrow mb-3">Google reviews</p>
+              <h2 className="text-3xl font-extrabold text-charcoal lg:text-4xl">Every review, in their words</h2>
+            </div>
+            <p className="font-semibold text-medium-grey">{GOOGLE_RATING}★ average · {GOOGLE_REVIEW_COUNT} Google reviews</p>
+          </div>
           {isLoading ? (
             <p className="text-center text-medium-grey">Loading reviews...</p>
           ) : (
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
-              {orderedTestimonials.map((testimonial) => (
+            <div className="columns-1 gap-7 md:columns-2 [&>*]:mb-7 [&>*]:break-inside-avoid">
+              {testimonials.map((testimonial) => (
                 <TestimonialCard key={testimonial.id} testimonial={testimonial} />
               ))}
             </div>
