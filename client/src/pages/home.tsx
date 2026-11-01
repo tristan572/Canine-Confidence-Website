@@ -91,7 +91,7 @@ const caseStudies = [
     program: "Private coaching",
     before: "Locked onto balls and bones on walks and wouldn't give them up. Frustration-based reactivity.",
     work: "Taught key words through play, then carried them into everyday walks.",
-    after: "Lets go when asked, and his reactivity is improving after a few one-on-one sessions.",
+    after: "Lets go when asked, and his reactivity was resolved after four coaching sessions.",
     quote: "The whole process has improved my relationship with Bean.",
     photo: { webp: `${bean480} 480w, ${bean768} 768w`, jpeg: beanJpeg, alt: "Tristan crouching beside Bean, who is lying calmly on the grass" },
   },
@@ -99,20 +99,47 @@ const caseStudies = [
     dog: "Lyla",
     owner: "Alex C.",
     program: "3 week intensive",
-    before: "A stubborn Malamute with challenging behaviour at home and on walks, and reactivity towards other dogs.",
+    before: "A stubborn Malamute, unruly at home, challenging on walks and aggressive towards other dogs.",
     work: "Guidance, praise, positive reinforcement and fair correction, with Alex learning to communicate more clearly.",
-    after: "Lyla is more confident around other dogs and follows instructions, and Alex feels far more confident handling her.",
+    after: "Ignores other dogs' reactions and stays engaged with Alex instead of choosing aggression, and Alex feels far more confident handling her.",
     quote: "I didn’t feel judged once, no matter how cheeky she was or how frustrated I got.",
     photo: { webp: `${lyla480} 480w, ${lyla768} 768w`, jpeg: lylaJpeg, alt: "Tristan standing beside Lyla, a Malamute, in a backyard" },
   },
   {
-    dog: "Rae",
-    owner: "Brodie",
-    program: "Coaching and training walks",
-    before: "Pulling on the lead made walks hard work.",
-    work: "Calm lead walking, learning to read Rae's cues, and training walks while the family was at work, with photo and video updates.",
-    after: "Big improvements in lead walking and overall obedience in a short time.",
-    quote: "…taught us how to better understand Rae and her cues, which has made walking her genuinely enjoyable again.",
+    dog: "Archie",
+    owner: "Sheridan",
+    program: "Lead walking",
+    before: "A Brittany Spaniel with two years of frustrating lead pulling.",
+    work: "Trained Archie, then taught the family how to guide him, with realistic expectations for his breed.",
+    after: "Zero pulling, and Sheridan walks him with complete confidence.",
+    quote: "Thank you, Tristan, for giving us back the joy of walking our dog.",
+  },
+  {
+    dog: "Molly",
+    owner: "Stephanie",
+    program: "Puppy program",
+    before: "New dog parents with a very high-energy Staffy pup.",
+    work: "The basics at home first, then sessions out in the real world where they were struggling.",
+    after: "Learning simple commands, looking to her family for direction and exploring new things with ease.",
+    quote: "Implementing the basics at this age has given us the confidence in this journey.",
+  },
+  {
+    dog: "Ziggy",
+    owner: "Anna",
+    program: "Coaching and walk & train",
+    before: "A high-energy adolescent Staffy cross, and office days meant doggy daycare.",
+    work: "Coaching for engagement and clearer communication, plus walk and train sessions on office days, with video updates.",
+    after: "Walking at heel on her first walk and train, and home fulfilled and mentally stimulated.",
+    quote: "My partner couldn’t believe it when we got sent a video of her walking beautifully at heel on the FIRST walk and train.",
+  },
+  {
+    dog: "Buster",
+    owner: "Rich",
+    program: "Training program",
+    before: "A 1-year-old Staffy/Boxer, recently rehomed from a rescue shelter.",
+    work: "A progressive, well-structured program.",
+    after: "Real progress in just a few weeks.",
+    quote: "The progress we have made in just a few weeks has been a real game changer!",
   },
 ];
 
@@ -155,7 +182,7 @@ function ReviewCards() {
                 </picture>
               ) : (
                 <div className="flex aspect-[4/5] w-full items-center justify-center bg-sand" aria-hidden="true">
-                  <span className="font-quote text-8xl italic text-primary/30">{dog}</span>
+                  <span className="px-6 text-center font-quote text-6xl italic text-primary/30">{dog}</span>
                 </div>
               )}
               <div className="flex flex-1 flex-col p-6">
