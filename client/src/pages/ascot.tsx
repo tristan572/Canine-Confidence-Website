@@ -1,5 +1,5 @@
 import LocalTrainingPage from "@/components/locations/local-training-page";
-import ascotImage from "@assets/IMG_0076_1758798863394_opt.webp";
+import ascotImage from "@assets/hero_tug_1024.webp";
 
 export default function AscotPage() {
   return (
@@ -12,7 +12,7 @@ export default function AscotPage() {
       heroSubheading="Training built for a busy inner-north lifestyle."
       heroCopy="Ascot dogs move between leafy residential streets, cafe activity, traffic and the changing pace around the racecourse precinct. I train in your home and around suitable local environments so calm behaviour and clear communication hold up beyond the lounge room."
       heroImage={ascotImage}
-      heroImageAlt="Tristan walking a client dog through a busy urban park"
+      heroImageAlt="Tristan playing tug with a grey staffy in a North Brisbane park"
       localHeading="Calm behaviour across Ascot's different rhythms"
       localIntro="A quiet weekday walk can become much busier when cafes fill or race days bring more people, traffic and noise around Eagle Farm and Doomben. Training should prepare your dog for the environments that are part of your actual routine."
       highlights={[

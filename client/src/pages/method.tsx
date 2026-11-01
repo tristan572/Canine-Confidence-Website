@@ -1,6 +1,7 @@
 import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton } from "@/components/funnel/funnel-cta";
-import methodImage from "@assets/IMG_0076_1758798863394_opt.webp";
+import walk400 from "@assets/IMG_0084_card_400_opt.webp";
+import walk800 from "@assets/IMG_0084_card_800_opt.webp";
 
 const principles = [
   {
@@ -48,11 +49,14 @@ export default function MethodPage() {
             </p>
           </div>
           <img
-            src={methodImage}
-            alt="Tristan training a client dog outdoors"
-            className="h-auto w-full rounded-2xl shadow-xl"
-            width={640}
-            height={480}
+            src={walk800}
+            srcSet={`${walk400} 400w, ${walk800} 800w`}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="Tristan walking his dog Cleo on a loose lead along a tree-lined path"
+            className="h-auto w-full rounded-[26px] object-cover"
+            width={800}
+            height={766}
+            decoding="async"
           />
         </div>
       </section>

@@ -289,7 +289,7 @@ export class MemStorage implements IStorage {
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised House Training Guidance and Setup",
-          "Socialisation and Desensitisation Guidance, Covered in Sessions and in Your Guide",
+          "Socialisation and Desensitisation Guidance, With a Socialisation Checklist",
           "The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations",
           "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)"
         ],
@@ -480,8 +480,9 @@ export class MemStorage implements IStorage {
         features: [
           "6 Private In-Home Coaching Sessions for You, Your Family and Your Puppy",
           "Personalised House Training Guidance and Setup",
-          "Socialisation and Desensitisation Guidance, Covered in Sessions and in Your Guide",
+          "Socialisation and Desensitisation Guidance, With a Socialisation Checklist",
           "The 5 Foundational Manners: Sit, Stay, Come, Place and Loose-Lead Walking Foundations",
+          "Toilet Training Tracker to Spot Your Puppy's Patterns",
           "Free Comprehensive 50+ Page Puppy Raising Guide",
         ],
       },
