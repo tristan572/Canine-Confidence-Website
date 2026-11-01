@@ -6,8 +6,9 @@ import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shar
 import portrait600 from "@assets/trainer_staffy_600.webp";
 import portrait1122 from "@assets/trainer_staffy_1122.webp";
 import portraitJpeg from "@assets/trainer_staffy_800.jpg";
-import trainingImageWebp from "@assets/IMG_0076_1758798863394_opt.webp";
-import trainingImageJpeg from "@assets/IMG_0076_1758798863394.jpeg";
+import training640 from "@assets/hero_tug_640.webp";
+import training1024 from "@assets/hero_tug_1024.webp";
+import trainingJpeg from "@assets/hero_tug_1024.jpg";
 
 // How it feels to work with Tristan, in his own terms. Short on purpose: the
 // story above carries the page; these are the promises.
@@ -126,13 +127,13 @@ export default function AboutPage() {
       <section className="py-20 lg:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <picture>
-            <source type="image/webp" srcSet={trainingImageWebp} />
+            <source type="image/webp" srcSet={`${training640} 640w, ${training1024} 1024w`} sizes="(max-width: 1024px) 100vw, 50vw" />
             <img
-              src={trainingImageJpeg}
-              alt="Tristan training a client's dog in North Brisbane"
+              src={trainingJpeg}
+              alt="Tristan playing tug with a grey staffy in a North Brisbane park"
               className="h-auto w-full rounded-[26px] object-cover"
-              width={814}
-              height={747}
+              width={1024}
+              height={683}
               loading="lazy"
               decoding="async"
             />

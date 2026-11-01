@@ -9,7 +9,8 @@ import {
   AssessmentButton,
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
-import { CheckCircle2, Plus, Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Plus, Star } from "lucide-react";
+import { useRef } from "react";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shared/social-proof";
 import { FAQ_ITEMS } from "@shared/faq-content";
 import type { BlogPost } from "@shared/schema";
@@ -22,6 +23,12 @@ import walking1200 from "@assets/IMG_0084_1760870993102.webp";
 import trainer600 from "@assets/trainer_staffy_600.webp";
 import trainer1122 from "@assets/trainer_staffy_1122.webp";
 import trainerJpeg from "@assets/trainer_staffy_800.jpg";
+import bean480 from "@assets/review_bean_480.webp";
+import bean768 from "@assets/review_bean_768.webp";
+import beanJpeg from "@assets/review_bean_768.jpg";
+import lyla480 from "@assets/review_lyla_480.webp";
+import lyla768 from "@assets/review_lyla_768.webp";
+import lylaJpeg from "@assets/review_lyla_768.jpg";
 
 const steps = [
   { title: "Book your assessment", text: "I take the time to understand what you want to achieve and get to know your dog's temperament." },
@@ -86,6 +93,7 @@ const caseStudies = [
     work: "Taught key words through play, then carried them into everyday walks.",
     after: "Lets go when asked, and his reactivity is improving after a few one-on-one sessions.",
     quote: "The whole process has improved my relationship with Bean.",
+    photo: { webp: `${bean480} 480w, ${bean768} 768w`, jpeg: beanJpeg, alt: "Tristan crouching beside Bean, who is lying calmly on the grass" },
   },
   {
     dog: "Lyla",
@@ -95,6 +103,7 @@ const caseStudies = [
     work: "Guidance, praise, positive reinforcement and fair correction, with Alex learning to communicate more clearly.",
     after: "Lyla is more confident around other dogs and follows instructions, and Alex feels far more confident handling her.",
     quote: "I didn’t feel judged once, no matter how cheeky she was or how frustrated I got.",
+    photo: { webp: `${lyla480} 480w, ${lyla768} 768w`, jpeg: lylaJpeg, alt: "Tristan standing beside Lyla, a Malamute, in a backyard" },
   },
   {
     dog: "Rae",
@@ -106,6 +115,87 @@ const caseStudies = [
     quote: "…taught us how to better understand Rae and her cues, which has made walking her genuinely enjoyable again.",
   },
 ];
+
+type CaseStudy = (typeof caseStudies)[number] & {
+  photo?: { webp: string; jpeg: string; alt: string };
+};
+
+// Swipeable on touch, scroll-snapped, with arrow buttons on larger screens.
+// Plain overflow scrolling, so the cards still render in the prerender.
+function ReviewCards() {
+  const track = useRef<HTMLUListElement>(null);
+  const scroll = (direction: 1 | -1) => {
+    const el = track.current;
+    const card = el?.querySelector("li");
+    if (el && card) el.scrollBy({ left: direction * (card.clientWidth + 24), behavior: "smooth" });
+  };
+
+  return (
+    <div>
+      <ul
+        ref={track}
+        className="-mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-px-4 px-4 pb-4 [scrollbar-width:none] sm:-mx-6 sm:scroll-px-6 sm:px-6 lg:-mx-8 lg:scroll-px-8 lg:px-8 [&::-webkit-scrollbar]:hidden"
+        aria-label="Client reviews"
+      >
+        {(caseStudies as CaseStudy[]).map(({ dog, owner, program, before, after, quote, photo }) => (
+          <li key={dog} className="w-[85%] shrink-0 snap-start sm:w-[22rem] lg:w-[24rem]">
+            <article className="flex h-full flex-col overflow-hidden rounded-[22px] bg-cream text-charcoal shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
+              {photo ? (
+                <picture>
+                  <source type="image/webp" srcSet={photo.webp} sizes="(max-width: 640px) 85vw, 384px" />
+                  <img
+                    src={photo.jpeg}
+                    alt={photo.alt}
+                    className="aspect-[4/5] w-full object-cover"
+                    width={768}
+                    height={960}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              ) : (
+                <div className="flex aspect-[4/5] w-full items-center justify-center bg-sand" aria-hidden="true">
+                  <span className="font-quote text-8xl italic text-primary/30">{dog}</span>
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-6">
+                <div className="mb-4 flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="font-quote text-3xl not-italic text-charcoal">{dog}</h3>
+                    <p className="text-sm font-semibold text-medium-grey">{program}</p>
+                  </div>
+                  <div role="img" aria-label="5 out of 5 stars"><Stars /></div>
+                </div>
+                <blockquote className="mb-6 font-quote text-xl italic leading-snug text-charcoal">
+                  “{quote}”
+                  <footer className="mt-2 text-sm font-bold not-italic text-medium-grey">{owner}</footer>
+                </blockquote>
+                <dl className="mt-auto space-y-3 border-t border-charcoal/10 pt-5 text-[15px] leading-relaxed">
+                  <div>
+                    <dt className="mb-1 text-xs font-extrabold uppercase tracking-[0.14em] text-sky-deep">Before</dt>
+                    <dd className="text-medium-grey">{before}</dd>
+                  </div>
+                  <div>
+                    <dt className="mb-1 text-xs font-extrabold uppercase tracking-[0.14em] text-sky-deep">After</dt>
+                    <dd className="font-semibold text-charcoal">{after}</dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-6 hidden gap-3 sm:flex">
+        <button type="button" onClick={() => scroll(-1)} aria-label="Previous review" className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-navy">
+          <ArrowLeft className="h-5 w-5" />
+        </button>
+        <button type="button" onClick={() => scroll(1)} aria-label="Next review" className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-navy">
+          <ArrowRight className="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 const programBenefits = [
   { title: "Your dog stays home", text: "No kennels and no weeks apart. Your dog learns with an experienced handler, in the places they actually live." },
@@ -343,37 +433,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-3">
-              {caseStudies.map(({ dog, owner, program, before, work, after, quote }) => (
-                <article key={dog} className="flex flex-col border-t border-white/25 pt-6">
-                  <div className="mb-5 flex items-start justify-between gap-3">
-                    <div>
-                      <h3 className="font-quote text-3xl not-italic text-white">{dog}</h3>
-                      <p className="text-sm font-semibold text-white/70">{program}</p>
-                    </div>
-                    <div role="img" aria-label="5 out of 5 stars"><Stars /></div>
-                  </div>
-                  <dl className="mb-6 space-y-4 leading-relaxed">
-                    <div>
-                      <dt className="mb-1 text-xs font-extrabold uppercase tracking-[0.14em] text-[#8FD3F2]">Before</dt>
-                      <dd className="text-white/80">{before}</dd>
-                    </div>
-                    <div>
-                      <dt className="mb-1 text-xs font-extrabold uppercase tracking-[0.14em] text-[#8FD3F2]">What we worked on</dt>
-                      <dd className="text-white/80">{work}</dd>
-                    </div>
-                    <div>
-                      <dt className="mb-1 text-xs font-extrabold uppercase tracking-[0.14em] text-[#8FD3F2]">After</dt>
-                      <dd className="font-semibold text-white">{after}</dd>
-                    </div>
-                  </dl>
-                  <blockquote className="mt-auto font-quote text-xl italic leading-snug text-white">
-                    “{quote}”
-                    <footer className="mt-3 text-sm font-bold not-italic text-white/70">{owner} · Owner of {dog}</footer>
-                  </blockquote>
-                </article>
-              ))}
-            </div>
+            <ReviewCards />
             <Link href="/reviews" className="mt-10 inline-flex items-center font-extrabold text-white hover:text-[#8FD3F2]">
               Read all reviews →
             </Link>
