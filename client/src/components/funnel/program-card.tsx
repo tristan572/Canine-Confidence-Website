@@ -23,6 +23,7 @@ export function ProgramCard({
           <div className="mb-2 flex flex-wrap items-baseline gap-3">
             <h3 className="text-2xl font-bold text-charcoal">{program.name}</h3>
             <span className="text-2xl font-bold text-primary-blue">{program.price}</span>
+            <span className="text-sm font-semibold text-medium-grey">inc. GST</span>
           </div>
           <div className="flex flex-wrap gap-2 text-sm font-semibold">
             {program.value && <span className="text-medium-grey">{program.value}</span>}

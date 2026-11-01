@@ -22,7 +22,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
     // is later reworded, so update the key here rather than the ID.
     const packageMap: Record<string, number> = {
       "The Confident Start Program": 6,
-      "The Connected Companion Walk": 13,
+      "The Connected Companion": 13,
       "From Chaos to Calm Program": 9,
       "The Focused Progress Plan": 2,
       "The Foundation Program": 1,
@@ -87,7 +87,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
             </div>
             {pkg.originalPrice && (
               <p className="text-sm text-primary-blue font-medium mt-1">
-                Save {parseInt(pkg.originalPrice.replace('$', '')) - parseInt(pkg.price.replace('$', ''))} AUD
+                Save ${(Number(pkg.originalPrice.replace(/[^0-9.]/g, '')) - Number(pkg.price.replace(/[^0-9.]/g, ''))).toLocaleString('en-AU')} · inc. GST
               </p>
             )}
           </div>

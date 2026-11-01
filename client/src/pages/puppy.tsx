@@ -20,7 +20,7 @@ import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 const puppyPhotos = [
   { webp: strip1, jpeg: strip1Jpeg, alt: "A fluffy brown and white puppy with its tongue out at home" },
   { webp: strip2, jpeg: strip2Jpeg, alt: "A shaggy black and white puppy sitting on a deck, looking up" },
-  { webp: strip3, jpeg: strip3Jpeg, alt: "An apricot doodle puppy resting on the grass in a garden" },
+  { webp: strip3, jpeg: strip3Jpeg, alt: "A grey Staffy puppy sitting on a timber floor, looking up" },
 ];
 
 const puppyReviews = [

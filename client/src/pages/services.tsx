@@ -192,7 +192,7 @@ export default function ServicesPage() {
                       </div>
                       <div className="flex items-center text-sm text-charcoal font-semibold">
                         <DollarSign className="w-4 h-4 mr-2" />
-                        <span>{service.price}</span>
+                        <span>{service.price} inc. GST</span>
                       </div>
                     </div>
                     <Button asChild className="w-full btn-primary">

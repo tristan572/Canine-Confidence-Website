@@ -155,7 +155,7 @@ export default function NorthgatePage() {
                 Designed for busy owners who need consistency without having to be there for every session.
               </p>
               <p className="text-lg text-medium-grey leading-relaxed">
-                I take your dog for focused 40-minute training sessions in Kalinga Park, Nundah, or along the Kedron Brook. I handle the repetition. You see the results.
+                I take your dog for focused 30-minute training sessions in Kalinga Park, Nundah, or along the Kedron Brook. I handle the repetition. You see the results.
               </p>
 
               <div className="space-y-4">

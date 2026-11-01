@@ -181,16 +181,23 @@ export class MemStorage implements IStorage {
 
     const serviceOverrides: Record<string, Partial<InsertService>> = {
       "Initial Canine Success Assessment": {
-        price: "$150",
+        price: "$120",
       },
       "One-on-One Private Coaching": {
-        price: "$125",
+        price: "$140",
+      },
+      "Virtual Coaching and Support": {
+        price: "$120",
+      },
+      "In-home Day Train": {
+        price: "$80",
       },
       "Walk and Train": {
-        price: "$70",
+        price: "$80",
+        duration: "30 minutes",
       },
       "Adventure Walk and Training": {
-        price: "$90",
+        price: "$120",
       },
     };
 
@@ -467,7 +474,7 @@ export class MemStorage implements IStorage {
 
     const currentPackageOverrides: Record<string, Partial<InsertPackage>> = {
       "The Confident Start Program": {
-        price: "$549",
+        price: "$660",
         originalPrice: undefined,
         duration: "Use within 3 months",
         features: [
@@ -479,11 +486,12 @@ export class MemStorage implements IStorage {
         ],
       },
       "The Foundation Program": {
-        price: "$320",
-        originalPrice: "$365",
-        duration: "Use within 2 weeks",
+        price: "$430",
+        originalPrice: "$460",
+        duration: "1 week · use within 6 months",
+        description: "Engagement, motivation and fulfilment, plus the start of clear communication. Across four trainer-led sessions at home or on walks, I get to know your dog and work consistently on the priorities that matter most. The coaching session then shows you how to carry those skills forward.\n\n**Flexible Focus:** Use the sessions for obedience, foundation skills, behaviour work or fulfilment.\n\n**Training Built Around Your Dog:** The work is shaped around your dog's personality, learning style and current needs.\n\n**Feedback and Coaching:** You receive video updates, practical feedback and a private coaching session with you.",
         features: [
-          "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
+          "4 trainer-led sessions (In-Home Day Train or Walk and Train), followed by 1 coaching session with you",
           "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
           "A training plan built around the problems you want to solve first",
           "Feedback and video updates so you can see what your dog is learning",
@@ -491,28 +499,41 @@ export class MemStorage implements IStorage {
         ],
       },
       "The Connected Companion Walk": {
-        price: "$350",
-        originalPrice: "$405",
-        duration: "Use within 2 weeks per block",
+        name: "The Connected Companion",
+        price: "$1,290",
+        originalPrice: "$1,380",
+        duration: "3 weeks · use within 6 months",
+        sessions: 15,
+        description: "A complete communication system and skills you can rely on in everyday life.\n\nOver three weeks I train your dog at home and out on walks, work on everyday behaviour problems, and coach you each week so the skills transfer to you.\n\n**Four Trainer-Led Sessions a Week:** I do the hard part, so the skills are already in place before you take over.\n\n**One Coaching Session a Week:** I show you what to do, why it works and how to keep it going, with detailed written notes to follow.\n\n**Clear Communication:** Your dog learns what you want, when they've got it right and when they haven't.",
+        features: [
+          "15 sessions over three weeks: 4 trainer-led sessions and 1 coaching session each week",
+          "A complete communication system your dog understands",
+          "Reliable skills practised at home and around everyday distractions",
+          "Work on everyday behaviour problems",
+          "Feedback and video updates throughout the program",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'",
+        ],
       },
       "From Chaos to Calm Program": {
-        price: "$1,050",
-        originalPrice: "$1,175",
-        duration: "Use within 5 weeks",
+        price: "$2,500",
+        originalPrice: "$2,760",
+        duration: "6 weeks · use within 6 months",
+        sessions: 30,
+        description: "For reactivity, anxiety, aggression and anything more complex.\n\nThis program works on what is driving the behaviour, with time to change how your dog feels as well as what they do, and practical ways to keep everyone safe while the training progresses.\n\n**Four Trainer-Led Sessions a Week:** I work directly with your dog on the anxiety, impulse control and emotional responses behind their reactions.\n\n**One Coaching Session a Week:** You learn the handling and communication your dog already understands, so the progress carries into daily life.\n\n**Six Focused Weeks:** 30 sessions give real behaviour change the time it needs.",
       },
       "The Focused Progress Plan": {
-        price: "$550",
-        originalPrice: "$625",
+        price: "$650",
+        originalPrice: "$700",
         duration: "Use within 6 months",
       },
       "The Real World Reliability Package": {
-        price: "$325",
-        originalPrice: "$350",
+        price: "$375",
+        originalPrice: "$400",
         duration: "Use within 6 months",
       },
       "The Adventure Pack": {
-        price: "$425",
-        originalPrice: "$450",
+        price: "$570",
+        originalPrice: "$600",
         duration: "Use within 6 months",
       },
     };
@@ -522,24 +543,6 @@ export class MemStorage implements IStorage {
       .filter((pkg) => currentPackageNames.includes(pkg.name))
       .map((pkg) => {
         const current = { ...pkg, ...currentPackageOverrides[pkg.name] };
-        if (pkg.name === "The Connected Companion Walk") {
-          current.description = current.description.replace("in just one week", "in a focused two-week block");
-        }
-        if (pkg.name === "From Chaos to Calm Program") {
-          current.description = current.description.replace(
-            "over three consecutive weeks (saving you $90 compared to single session purchases)",
-            "across five focused weeks (saving you $125 compared to single session purchases)",
-          );
-        }
-        if (pkg.name === "The Focused Progress Plan") {
-          current.description = current.description.replace("saving you $50", "saving you $75");
-        }
-        if (pkg.name === "The Foundation Program") {
-          current.description = current.description.replace(
-            "five private, done-for-you sessions",
-            "four done-for-you sessions plus private owner coaching",
-          );
-        }
         return current;
       });
 

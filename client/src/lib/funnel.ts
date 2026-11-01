@@ -23,15 +23,15 @@ export interface FunnelProgram {
 export const behaviourPrograms: FunnelProgram[] = [
   {
     name: "The Foundation Program",
-    price: "$320",
-    value: "$365 value",
-    saving: "Save $45",
-    expiry: "Designed to run over one week",
-    composition: "4 In-Home Day Trains + 1 One-on-One Private Coaching session",
+    price: "$430",
+    value: "$460 value",
+    saving: "Save $30",
+    expiry: "Runs over one week",
+    composition: "4 trainer-led sessions + 1 One-on-One Coaching session",
     summary:
-      "Focused training brought to your doorstep. I build the foundations with your dog in their familiar home, then coach you to carry those skills forward.",
+      "Engagement, motivation and fulfilment, plus the start of clear communication. I build the foundations with your dog at home and on walks, then coach you to carry them forward.",
     benefits: [
-      "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
+      "4 trainer-led sessions (In-Home Day Train or Walk and Train), followed by 1 coaching session with you",
       "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
       "A training plan built around the problems you want to solve first",
       "Feedback and video updates so you can see what your dog is learning",
@@ -40,35 +40,35 @@ export const behaviourPrograms: FunnelProgram[] = [
     kind: "locked",
   },
   {
-    name: "The Connected Companion Walk",
-    price: "$350",
-    value: "$405 value",
-    saving: "Save $55",
-    expiry: "Designed to run over one week",
-    composition: "4 Walk and Trains + 1 One-on-One Private Coaching session",
+    name: "The Connected Companion",
+    price: "$1,290",
+    value: "$1,380 value",
+    saving: "Save $90",
+    expiry: "Runs over three weeks",
+    composition: "12 trainer-led sessions + 3 One-on-One Coaching sessions",
     summary:
-      "Stop the struggle and start enjoying your walks. I build focus, connection and clear communication around the distractions that usually make everything fall apart.",
+      "A complete communication system and skills you can rely on in everyday life. I train your dog at home and out on walks, work on everyday behaviour problems, and coach you each week so the skills transfer to you.",
     benefits: [
-      "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
-      "Focus and obedience practised while your dog moves through everyday distractions",
-      "Lead handling skills for the most persistent pullers",
-      "A tailored plan to improve how your dog feels about the collar and lead",
+      "15 sessions over three weeks: 4 trainer-led sessions and 1 coaching session each week",
+      "A complete communication system your dog understands",
+      "Reliable skills practised at home and around everyday distractions",
+      "Work on everyday behaviour problems",
+      "Feedback and video updates throughout the program",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
     ],
     kind: "locked",
   },
   {
     name: "From Chaos to Calm Program",
-    price: "$1,050",
-    value: "$1,175 value",
-    saving: "Save $125",
-    expiry: "Designed to run over three weeks",
-    composition:
-      "4 In-Home Day Trains + 8 Walk and Trains + 3 One-on-One Private Coaching sessions",
+    price: "$2,500",
+    value: "$2,760 value",
+    saving: "Save $260",
+    expiry: "Runs over six weeks",
+    composition: "24 trainer-led sessions + 6 One-on-One Coaching sessions",
     summary:
-      "Stop the barking, lunging and anxiety, and start enjoying your life together. This intensive program addresses what is driving the reactivity instead of only managing the visible behaviour.",
+      "For reactivity, anxiety, aggression and anything more complex. This program works on what is driving the behaviour, with time to change how your dog feels as well as what they do.",
     benefits: [
-      "Focused sessions aimed at steady behaviour change",
+      "30 sessions over six weeks: 4 trainer-led sessions and 1 coaching session each week",
       "Clear communication that reduces confusion and helps your dog make better choices",
       "Practical handling for calmer walks and easier day-to-day situations",
       "Impulse-control and counter-conditioning work tailored to your dog's triggers",
@@ -80,9 +80,9 @@ export const behaviourPrograms: FunnelProgram[] = [
   },
   {
     name: "The Focused Progress Plan",
-    price: "$550",
-    value: "$625 value",
-    saving: "Save $75",
+    price: "$650",
+    value: "$700 value",
+    saving: "Save $50",
     expiry: "Sessions expire in 6 months",
     composition: "5 One-on-One Private Coaching sessions",
     summary:
@@ -99,7 +99,7 @@ export const behaviourPrograms: FunnelProgram[] = [
   },
   {
     name: "One-on-One Private Coaching",
-    price: "$125",
+    price: "$140",
     composition: "1 private 60-minute coaching session",
     summary:
       "Fully personalised training in your home or a real-world location relevant to your goals. I coach you as the handler, so you leave with skills you can keep using.",
@@ -114,7 +114,7 @@ export const behaviourPrograms: FunnelProgram[] = [
   },
   {
     name: "Virtual Coaching and Support",
-    price: "$100",
+    price: "$120",
     composition: "1 private 60-minute video call",
     summary:
       "A standalone assessment for clients outside my travel area, or personalised support without the travel time. Use this one-hour video call to fine-tune details, review footage or build a practical training plan.",
@@ -131,15 +131,15 @@ export const behaviourPrograms: FunnelProgram[] = [
 export const walkingPrograms: FunnelProgram[] = [
   {
     name: "The Real World Reliability Package",
-    price: "$325",
-    value: "$350 value",
+    price: "$375",
+    value: "$400 value",
     saving: "Save $25",
     expiry: "Sessions expire in 6 months",
     composition: "5 Walk and Train sessions",
     summary:
       "Move beyond the backyard and achieve true reliability. I train on real walks so your dog's skills are progressively tested where you actually need them.",
     benefits: [
-      "5 trainer-led 40-minute Walk and Train sessions",
+      "5 trainer-led 30-minute Walk and Train sessions",
       "Home pickup included",
       "Obedience and manners practised during real walks",
       "Dedicated loose-lead walking practice",
@@ -150,9 +150,9 @@ export const walkingPrograms: FunnelProgram[] = [
   },
   {
     name: "The Adventure Pack",
-    price: "$425",
-    value: "$450 value",
-    saving: "Save $25",
+    price: "$570",
+    value: "$600 value",
+    saving: "Save $30",
     expiry: "Sessions expire in 6 months",
     composition: "5 Adventure Walk and Training sessions",
     summary:
@@ -169,8 +169,8 @@ export const walkingPrograms: FunnelProgram[] = [
   },
   {
     name: "Walk and Train",
-    price: "$70",
-    composition: "1 trainer-led 40-minute session",
+    price: "$80",
+    composition: "1 trainer-led 30-minute session",
     summary:
       "Focused trainer-led work on the behaviour that makes walks hard, using the streets and distractions around your home.",
     benefits: [
@@ -185,7 +185,7 @@ export const walkingPrograms: FunnelProgram[] = [
   },
   {
     name: "Adventure Walk and Training",
-    price: "$90",
+    price: "$120",
     composition: "1 trainer-led 60-minute outing",
     summary:
       "An hour of adventure, exercise and skill work at a local forest, park or beach, chosen to suit your dog.",
@@ -204,7 +204,7 @@ export const walkingPrograms: FunnelProgram[] = [
 
 export const confidentStart: FunnelProgram = {
   name: "The Confident Start Program",
-  price: "$549",
+  price: "$660",
   expiry: "Sessions expire in 3 months",
   composition: "6 private, in-home puppy coaching sessions for you, your family and your puppy",
   summary:
