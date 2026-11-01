@@ -14,7 +14,7 @@ import trainingImageJpeg from "@assets/IMG_0076_1758798863394.jpeg";
 const promises = [
   { title: "Your dog is safe with me", text: "I train the dog in front of me, with care and with respect for who they are. Safety comes first, every session." },
   { title: "No judgement", text: "Most owners have already tried a few things by the time they call me. You'll never be made to feel bad about where you're starting from." },
-  { title: "I turn up, and I stay available", text: "I come to you anywhere across North Brisbane, work around your week, and I'm a message away when something comes up, long after your program ends." },
+  { title: "I turn up, and I stay available", text: "I come to you anywhere across North Brisbane, I'm as flexible as I can be with session times, and I'm a message away when something comes up, long after your program ends." },
 ];
 
 const blocks = ["Health", "Lifestyle", "Clarity", "Skills"];
@@ -100,8 +100,8 @@ export default function AboutPage() {
             <p>
               Since then it's been books, podcasts, seminars and courses, and
               above all, dogs. Hundreds of them across North Brisbane, every
-              breed and temperament you can think of. I'm still learning and
-              trying new things, because every dog teaches me something.
+              breed and temperament you can think of. I never stop studying, and
+              every dog I work with teaches me something new.
             </p>
           </div>
         </div>
@@ -212,8 +212,9 @@ export default function AboutPage() {
             Let's meet your dog.
           </h2>
           <p className="mb-8 text-lg leading-relaxed text-medium-grey lg:text-xl">
-            Start with an assessment at your home, or book a free 15-minute call
-            first if you'd like to talk it through. I reply within 24 hours.
+            Start with an assessment at your home. If you'd like to talk it
+            through first, request a free 15-minute call and I'll get back to you
+            within 24 hours.
           </p>
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <AssessmentButton location="About final CTA" className="h-auto px-7 py-4 text-lg" showIcon={false} />

@@ -41,8 +41,8 @@ const reasons = [
 
 const trainerPoints = [
   { title: "Safe, cared for and respected", text: "Your dog is safe with me. I train them with care, and with respect for who they are." },
-  { title: "Reliable and flexible", text: "I turn up when I say I will, come to you anywhere across North Brisbane, and work around your week. I'm still here after your program ends." },
-  { title: "Qualified and always learning", text: "NDTF certified, professional and insured. I keep learning and trying new things so I can get better results for your dog." },
+  { title: "Reliable and flexible", text: "I turn up when I say I will, come to you anywhere across North Brisbane, and I'm as flexible as I can be with session times. I'm still here after your program ends." },
+  { title: "Qualified and always learning", text: "NDTF certified, professional and insured. I never stop studying, so I can keep getting better results for your dog." },
 ];
 
 const deliverables = [
