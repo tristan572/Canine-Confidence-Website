@@ -6,8 +6,8 @@ import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { MapPin, Phone, Check, ShieldCheck, Award, Users, Footprints } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
-import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
-import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import tristanPortraitWebp from "@assets/trainer_staffy_600.webp";
+import tristanPortraitJpeg from "@assets/trainer_staffy_800.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 
@@ -135,10 +135,10 @@ export default function ChermsidePage() {
                 <source type="image/webp" srcSet={tristanPortraitWebp} />
                 <img
                   src={tristanPortraitJpeg}
-                  alt="Tristan, NDTF certified dog trainer, with his dog"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                  width={600}
-                  height={400}
+                  alt="Tristan, NDTF certified dog trainer, with a grey staffy"
+                  className="aspect-[4/5] w-full rounded-[26px] object-cover object-[center_20%]"
+                  width={800}
+                  height={1000}
                   loading="eager"
                   decoding="async"
                 />
