@@ -6,6 +6,7 @@ import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Waves, MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart } from "lucide-react";
 import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
+import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
@@ -94,7 +95,7 @@ export default function SandgatePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button className="btn-primary text-lg px-8 py-4" data-testid="button-book-assessment-hero">
+                    <Button variant="outline" className="btn-secondary text-lg px-8 py-4" data-testid="button-book-assessment-hero">
                       <Phone className="w-5 h-5 mr-2" />
                       Book a Free Call
                     </Button>
@@ -107,7 +108,7 @@ export default function SandgatePage() {
                 </Dialog>
                 <Button
                   onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-secondary text-lg px-8 py-4"
+                  className={`btn-cta ${CTA_COLOURS} text-lg px-8 py-4 order-first`}
                   data-testid="button-book-assessment-hero-secondary"
                 >
                   Book Assessment
@@ -183,7 +184,7 @@ export default function SandgatePage() {
               <div className="pt-4">
                 <Button
                   onClick={() => setShowAdventureDialog(true)}
-                  className="btn-primary"
+                  className={`btn-cta ${CTA_COLOURS} `}
                   data-testid="button-book-adventure-walk"
                 >
                   Book Assessment
@@ -237,7 +238,7 @@ export default function SandgatePage() {
 
                   <Button
                     onClick={() => setShowAdventurePackageDialog(true)}
-                    className="btn-primary w-full"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-adventure-package-card"
                   >
                     Book Assessment
@@ -318,7 +319,7 @@ export default function SandgatePage() {
               <div className="pt-4">
                 <Button
                   onClick={() => setShowConfidentStartDialog(true)}
-                  className="btn-primary"
+                  className={`btn-cta ${CTA_COLOURS} `}
                   data-testid="button-book-confident-start"
                 >
                   Book The Confident Start Program
@@ -368,7 +369,7 @@ export default function SandgatePage() {
 
                   <Button
                     onClick={() => setShowConfidentStartDialog(true)}
-                    className="w-full btn-primary"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-confident-start-card"
                   >
                     Book The Confident Start Program
@@ -399,7 +400,7 @@ export default function SandgatePage() {
                 <div className="text-3xl font-bold text-primary-blue mb-6">{assessmentPrice}</div>
                 <Button
                   onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary w-full"
+                  className={`btn-cta ${CTA_COLOURS} w-full`}
                   data-testid="button-book-assessment-adult"
                 >
                   Book Assessment
@@ -418,7 +419,7 @@ export default function SandgatePage() {
                 </div>
                 <Button
                   onClick={() => setShowConfidentStartDialog(true)}
-                  className="btn-primary w-full"
+                  className={`btn-cta ${CTA_COLOURS} w-full`}
                   data-testid="button-enrol-puppy"
                 >
                   Book Puppy Program
@@ -445,7 +446,7 @@ export default function SandgatePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="px-8 py-4 text-lg font-semibold">
+                  <Button variant="outline" className="btn-secondary border-white bg-transparent text-white hover:border-white hover:bg-white hover:text-navy px-8 py-4 text-lg">
                     <Phone className="w-5 h-5 mr-2" />
                     Book a Free Call
                   </Button>
@@ -458,9 +459,8 @@ export default function SandgatePage() {
               </Dialog>
 
               <Button
-                variant="outline"
                 onClick={() => setShowPackagesDialog(true)}
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
+                className={`btn-cta ${CTA_COLOURS} px-8 py-4 text-lg order-first`}
                 data-testid="button-book-now-cta"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -493,7 +493,7 @@ export default function SandgatePage() {
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} w-full py-3 text-base`}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -532,7 +532,7 @@ export default function SandgatePage() {
           </DialogDescription>
 
           <div className="space-y-4">
-            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} w-full py-3 text-base`}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -575,7 +575,7 @@ export default function SandgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -602,7 +602,7 @@ export default function SandgatePage() {
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} w-full py-3 text-base`}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#packages/6",
@@ -641,7 +641,7 @@ export default function SandgatePage() {
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} w-full py-3 text-base`}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",

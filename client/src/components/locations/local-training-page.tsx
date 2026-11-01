@@ -235,9 +235,9 @@ export default function LocalTrainingPage({
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <AssessmentButton
               location={`${suburb} final CTA`}
-              className=""
+              className="px-7 py-4 text-lg"
             />
-            <ConsultationButton className="border-white bg-transparent text-white hover:bg-white hover:text-primary-blue" />
+            <ConsultationButton className="btn-secondary border-white bg-transparent px-7 py-4 text-lg text-white hover:border-white hover:bg-white hover:text-navy" />
           </div>
         </div>
       </section>

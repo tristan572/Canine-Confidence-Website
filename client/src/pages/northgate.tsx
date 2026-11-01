@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } 
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart, Users, Footprints } from "lucide-react";
+import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ConsultationForm from "@/components/forms/consultation-form";
 import tristanPortraitWebp from "@assets/trainer_staffy_600.webp";
 import tristanPortraitJpeg from "@assets/trainer_staffy_800.jpg";
@@ -95,8 +96,8 @@ export default function NorthgatePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button
-                      className="btn-primary text-lg px-8 py-4"
+                    <Button variant="outline"
+                      className="btn-secondary text-lg px-8 py-4"
                       data-testid="button-request-call-hero"
                     >
                       <Phone className="w-5 h-5 mr-2" />
@@ -113,7 +114,7 @@ export default function NorthgatePage() {
                 </Dialog>
                 <Button
                   onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-secondary text-lg px-8 py-4"
+                  className={`btn-cta ${CTA_COLOURS} text-lg px-8 py-4 order-first`}
                   data-testid="button-book-assessment-hero"
                 >
                   Book Assessment
@@ -190,7 +191,7 @@ export default function NorthgatePage() {
                 </p>
                 <Button 
                   onClick={() => setShowWalkTrainDialog(true)}
-                  className="btn-primary"
+                  className={`btn-cta ${CTA_COLOURS} `}
                   data-testid="button-book-walk-train"
                 >
                   Book Assessment
@@ -246,7 +247,7 @@ export default function NorthgatePage() {
 
                   <Button
                     onClick={() => setShowWalkTrainPackageDialog(true)}
-                    className="btn-primary w-full"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-walk-train-package"
                   >
                     Book Assessment
@@ -306,7 +307,7 @@ export default function NorthgatePage() {
               <div className="pt-4">
                 <Button
                   onClick={() => setShowCoachingDialog(true)}
-                  className="btn-primary"
+                  className={`btn-cta ${CTA_COLOURS} `}
                   data-testid="button-book-coaching"
                 >
                   Book a Coaching Session
@@ -373,7 +374,7 @@ export default function NorthgatePage() {
 
                   <Button
                     onClick={() => setShowCoachingPackageDialog(true)}
-                    className="btn-primary w-full"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-coaching-package"
                   >
                     Book Assessment
@@ -431,7 +432,7 @@ export default function NorthgatePage() {
               <div className="pt-4 hidden lg:block">
                 <Button
                   onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary px-8"
+                  className={`btn-cta ${CTA_COLOURS} px-8`}
                   data-testid="button-book-assessment-section"
                 >
                   Book your assessment
@@ -454,7 +455,7 @@ export default function NorthgatePage() {
 
                   <Button
                     onClick={() => setShowAssessmentDialog(true)}
-                    className="btn-primary w-full"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-assessment-card"
                   >
                     Book Your Assessment
@@ -482,8 +483,8 @@ export default function NorthgatePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button
-                    className="px-8 py-4 text-lg font-semibold"
+                  <Button variant="outline"
+                    className="btn-secondary border-white bg-transparent text-white hover:border-white hover:bg-white hover:text-navy px-8 py-4 text-lg"
                     data-testid="button-free-call-cta"
                   >
                     Book a Free Call
@@ -500,7 +501,7 @@ export default function NorthgatePage() {
 
               <Button
                 onClick={() => setShowPackagesDialog(true)}
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold"
+                className={`btn-cta ${CTA_COLOURS} px-8 py-4 text-lg order-first`}
                 data-testid="button-book-now-cta"
               >
                 Book Assessment
@@ -536,7 +537,7 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -567,7 +568,7 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -598,7 +599,7 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -629,7 +630,7 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -660,7 +661,7 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -691,7 +692,7 @@ export default function NorthgatePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
