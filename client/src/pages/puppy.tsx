@@ -7,17 +7,30 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import puppy480 from "@assets/puppy_renegade_480.webp";
 import puppy768 from "@assets/puppy_renegade_768.webp";
 import puppyJpeg from "@assets/puppy_renegade_768.jpg";
+import strip1 from "@assets/puppy_strip_1.webp";
+import strip1Jpeg from "@assets/puppy_strip_1.jpg";
+import strip2 from "@assets/puppy_strip_2.webp";
+import strip2Jpeg from "@assets/puppy_strip_2.jpg";
+import strip3 from "@assets/puppy_strip_3.webp";
+import strip3Jpeg from "@assets/puppy_strip_3.jpg";
 import { Calendar, Quote, Star } from "lucide-react";
 import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 
+// Real puppies from Tristan's puppy clients.
+const puppyPhotos = [
+  { webp: strip1, jpeg: strip1Jpeg, alt: "A fluffy brown and white puppy with its tongue out at home" },
+  { webp: strip2, jpeg: strip2Jpeg, alt: "A shaggy black and white puppy sitting on a deck, looking up" },
+  { webp: strip3, jpeg: strip3Jpeg, alt: "An apricot doodle puppy resting on the grass in a garden" },
+];
+
 const puppyReviews = [
   {
-    name: "Emma Canny",
+    name: "Judith Q.",
     quote:
-      "Tristan was recommended so we booked him to help us with our puppy. The training really paid off and our puppy loved him. Would highly recommend.",
+      "Renegade absolutely loves Tristan & we are both learning so much. Every week we make progress & learn more. … Tristan is very relaxed & calm when teaching Renegade which is the perfect way for him to grow. His tail is always wagging as he wants to learn. … I can’t recommend Canine Confidence enough. We are both learning so much & the one on one training program is a great bonding & positive experience for Renegade & myself.",
   },
   {
-    name: "Stephanie Doyle",
+    name: "Stephanie D.",
     quote:
       "Half way through the puppy program with Tristan and were very happy with the results for our staffy pup Molly. Being new dog parents to a very high energy pup, we knew we needed a professional trainer who could give us all the best possible tools to ensure Molly would live a happy, stress and anxiety-free life. Implementing the basics at this age has given us the confidence in this journey and seeing her learn simple commands, looking at us for direction and simply exploring all the new things in the world with ease has been so rewarding. Tristan is flexible to move the sessions outside to the real world if theres an area your struggling with and is happy to spend more time on certain things if needed. Highly recommend!!",
   },
@@ -65,7 +78,7 @@ export default function PuppyPage() {
             <source type="image/webp" srcSet={`${puppy480} 480w, ${puppy768} 768w`} sizes="(max-width: 1024px) 100vw, 50vw" />
             <img
               src={puppyJpeg}
-              alt="Tristan holding Renegade, a Cavoodle puppy, at home during puppy training"
+              alt="Renegade, a curly apricot Cavoodle puppy, looking up from the grass"
               className="aspect-[4/5] h-auto w-full rounded-2xl object-cover shadow-xl lg:max-h-[38rem]"
               width={768}
               height={960}
@@ -115,6 +128,32 @@ export default function PuppyPage() {
               </Button>
             }
           />
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-8 text-center text-3xl font-bold text-charcoal">
+            A few of the puppies I've worked with
+          </h2>
+          <ul className="grid grid-cols-3 gap-3 sm:gap-5">
+            {puppyPhotos.map((photo) => (
+              <li key={photo.jpeg}>
+                <picture>
+                  <source type="image/webp" srcSet={photo.webp} />
+                  <img
+                    src={photo.jpeg}
+                    alt={photo.alt}
+                    className="aspect-square w-full rounded-2xl object-cover shadow-sm"
+                    width={640}
+                    height={640}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
