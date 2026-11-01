@@ -26,13 +26,13 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/behaviour-obedience": {
     title: "Dog Behaviour and Obedience North Brisbane | Canine Confidence",
     description:
-      "From everyday obedience to complex reactivity, every new adult dog starts with a $99 assessment and a clear training plan.",
+      "From everyday obedience to complex reactivity, every new adult dog starts with a $150 assessment and a clear training plan.",
     canonicalPath: "/behaviour-obedience",
   },
   "/walking-adventure": {
     title: "Dog Walking and Adventure Training North Brisbane",
     description:
-      "Trainer-led walks, adventure outings and real-world reliability programs for North Brisbane dogs. New clients start with a $99 assessment.",
+      "Trainer-led walks, adventure outings and real-world reliability programs for North Brisbane dogs. New clients start with a $150 assessment.",
     canonicalPath: "/walking-adventure",
   },
   "/services": {
