@@ -19,7 +19,7 @@ export default function Terms() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Services</h2>
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
-                  <p>Canine Confidence (ABN 95 140 676 440) provides private dog training services in Northside Brisbane, Queensland. Services include One-on-One Private Coaching, Walk and Train, In-Home Day Train, Adventure Walk and Training, Virtual Coaching and Support, and Initial Canine Success Assessment.</p>
+                  <p>Canine Confidence (ABN 95 140 676 440) provides private dog training services in Northside Brisbane, Queensland. Services include the Initial Canine Success Assessment, the Foundation Program, The Connected Companion and From Chaos to Calm training programs, One-on-One Private Coaching, Walk and Train, In-Home Day Train, Adventure Walk and Training, and Virtual Coaching and Support.</p>
                   <p>The specific service, duration, and location will be confirmed at the time of booking. Sessions take place at the client's home, an agreed outdoor location, or via video call as applicable.</p>
                   <p>Training outcomes depend on a range of factors including the dog's individual history, the client's consistency between sessions, and environmental conditions. Canine Confidence makes no guarantee as to specific results.</p>
                 </div>
@@ -30,9 +30,9 @@ export default function Terms() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Booking and Payment</h2>
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
-                  <p>Payment is due at the time of booking via SimplyBook.me, or in full prior to or at the start of each session. Sessions will not commence until payment has been received.</p>
+                  <p>Single sessions and the Initial Canine Success Assessment are paid at the time of booking via SimplyBook.me. Training programs are scheduled and invoiced directly by Canine Confidence and are paid in full before the first session. Sessions will not commence until payment has been received.</p>
                   <p>Package bookings are paid in full at the time of purchase and are non-refundable, except where the Australian Consumer Law entitles you to a refund, replacement, or other remedy, for example if a service is not provided with acceptable care and skill. Nothing in this clause limits those rights (see clause 7).</p>
-                  <p>Package session-use periods are: The Foundation Program, 2 weeks; The Connected Companion Walk, 2 weeks per block; From Chaos to Calm Program, 5 weeks; The Confident Start Program, 3 months; The Focused Progress Plan, 6 months; The Real World Reliability Package, 6 months; and The Adventure Pack, 6 months. Unused sessions expire at the end of the stated period unless Canine Confidence agrees otherwise in writing or the law requires otherwise. Dates for intensive programs are locked in at the time of booking to support the intended training pace.</p>
+                  <p>Session-use periods run from the date of purchase: The Confident Start Program, 3 months; all other programs and packages, including The Foundation Program, The Connected Companion, From Chaos to Calm, The Focused Progress Plan, The Real World Reliability Package and The Adventure Pack, 6 months. Unused sessions expire at the end of the stated period unless Canine Confidence agrees otherwise in writing or the law requires otherwise. Session dates for the Foundation Program, The Connected Companion and From Chaos to Calm are agreed and locked in when the program is booked, to support the intended training pace.</p>
                 </div>
               </section>
 
@@ -103,6 +103,7 @@ export default function Terms() {
                 <div className="space-y-3 text-gray-700 dark:text-gray-300">
                   <p>This agreement remains in place until all booked sessions are completed or the agreement is terminated.</p>
                   <p>Canine Confidence may terminate this agreement and decline to continue services if the dog poses a safety risk, the client acts in an unsafe or disrespectful manner, or the client materially breaches these terms. In such cases, no refund will be issued for sessions already completed.</p>
+                  <p>Canine Confidence puts the welfare of every dog first. If a dog is being mistreated or abused, Canine Confidence will end services immediately and may report the matter to the RSPCA or another relevant authority. No refund will be issued for sessions already completed.</p>
                 </div>
               </section>
 

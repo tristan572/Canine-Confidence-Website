@@ -87,6 +87,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What does it cost?",
     answer: [
+      "I keep my prices affordable, with plenty of value in every session, so I can help as many dogs as possible.",
       [
         "Puppy training is listed on the ",
         { text: "puppy page", href: "/puppy" },

@@ -53,8 +53,8 @@ const deliverables = [
   { title: "Free guide: The Four Building Blocks of a Balanced Dog", text: "My framework of Health, Lifestyle, Clarity, then Skills. It's the order I work through with every dog, so you'll know why we start where we do." },
 ];
 
-// Excerpt from a real assessment summary email, with the dog's and owners'
-// names changed.
+// Excerpt from real notes emailed after a one-off coaching session. The
+// owners' names are left out.
 const sampleSummary = {
   dog: "MJ, an enthusiastic young puppy",
   intro: "We covered quite a lot, so I wanted to put everything into an email that you can refer back to as you practise.",
@@ -98,12 +98,12 @@ const programLadder = [
 // FAQ page; the FAQPage schema stays on /faq only.
 const homeFaqQuestions = [
   "What does it cost?",
-  "Do you use corrections, e-collars or prong collars?",
   "How long will training take?",
   "Can you guarantee results?",
   "Will you judge me or my dog?",
   "Do I need to be present for training?",
   "Where do you work?",
+  "Do you use corrections, e-collars or prong collars?",
 ];
 const homeFaqs = homeFaqQuestions
   .map((question) => FAQ_ITEMS.find((item) => item.question === question))
@@ -497,8 +497,8 @@ export default function HomePage() {
           </div>
           <figure className="self-start border-l-2 border-sky-brand pl-6 lg:pl-10">
             <figcaption className="mb-5">
-              <p className="eyebrow mb-2 text-xs">From a real assessment summary</p>
-              <p className="text-xl font-extrabold text-charcoal">Your assessment summary</p>
+              <p className="eyebrow mb-2 text-xs">From real session notes</p>
+              <p className="text-xl font-extrabold text-charcoal">Your session notes</p>
               <p className="mt-1 text-sm font-semibold text-muted-foreground">{sampleSummary.dog}</p>
             </figcaption>
             <p className="mb-5 font-quote text-lg italic leading-snug text-foreground">“{sampleSummary.intro}”</p>
