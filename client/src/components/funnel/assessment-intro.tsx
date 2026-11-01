@@ -23,10 +23,10 @@ export function AssessmentIntro({ location, showPuppyLink = false }: {
 }) {
   return (
     <section aria-label="Start with an assessment" className="max-w-3xl">
-      <p className="mb-3 text-sm font-bold uppercase tracking-widest text-primary-blue">New clients: start here</p>
+      <p className="eyebrow mb-3">New clients: start here</p>
       <div className="flex flex-col items-start gap-5">
         <div>
-          <h2 className="mb-3 text-3xl font-bold text-charcoal">Start with your dog's assessment</h2>
+          <h2 className="mb-3 text-3xl font-extrabold text-charcoal">Start with your dog's assessment</h2>
           <AssessmentDetails className="mb-5 text-lg text-primary-blue" />
           <p className="max-w-3xl text-lg leading-relaxed text-medium-grey">
             I take the time to understand what you want to achieve, get to know your
@@ -39,7 +39,7 @@ export function AssessmentIntro({ location, showPuppyLink = false }: {
         <TravelNote />
       </div>
       {showPuppyLink && (
-        <p className="mt-6 border-t border-blue-100 pt-5 text-sm text-medium-grey">
+        <p className="mt-6 border-t border-navy/10 pt-5 text-sm text-medium-grey">
           Starting with a puppy? <Link href="/puppy" className="font-semibold text-primary-blue underline underline-offset-4">Puppy programs can be booked directly</Link>, with no assessment required.
         </p>
       )}

@@ -24,8 +24,8 @@ const categories: ResourceCategory[] = [
   {
     title: "Veterinary Clinics",
     icon: Stethoscope,
-    colour: "text-blue-600",
-    bgColour: "bg-blue-50",
+    colour: "text-sky-deep",
+    bgColour: "bg-sand",
     entries: [
       {
         name: "Your Local Vet",
@@ -45,7 +45,7 @@ const categories: ResourceCategory[] = [
     title: "Pet Shops",
     icon: ShoppingBag,
     colour: "text-primary-blue",
-    bgColour: "bg-blue-50",
+    bgColour: "bg-sand",
     entries: [
       {
         name: "Your Local Pet Shop",
@@ -65,7 +65,7 @@ const categories: ResourceCategory[] = [
     title: "Groomers & Dog Wash",
     icon: Heart,
     colour: "text-pink-600",
-    bgColour: "bg-pink-50",
+    bgColour: "bg-sand",
     entries: [
       {
         name: "Your Local Groomer",
@@ -85,7 +85,7 @@ const categories: ResourceCategory[] = [
     title: "Dog-Friendly Parks & Trails",
     icon: TreePine,
     colour: "text-emerald-600",
-    bgColour: "bg-emerald-50",
+    bgColour: "bg-sand",
     entries: [
       {
         name: "Kalinga Park",
@@ -131,9 +131,9 @@ export default function LocalResourcesPage() {
       />
 
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-6">
+          <h1 className="text-5xl font-extrabold text-charcoal mb-6">
             Local <span className="text-primary-blue">Resources</span>
           </h1>
           <p className="text-xl text-medium-grey mb-4 max-w-2xl mx-auto">
@@ -148,8 +148,8 @@ export default function LocalResourcesPage() {
       {/* Partnership Banner */}
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Are You a Local Business?</h2>
-          <p className="text-blue-100 text-lg mb-0">
+          <h2 className="text-2xl font-extrabold text-white mb-3">Are You a Local Business?</h2>
+          <p className="text-white/80 text-lg mb-0">
             I love connecting my clients with trusted local professionals. If you'd like to be featured here,{" "}
             <a href="/contact" className="text-white underline font-semibold hover:text-blue-200 transition-colors">
               get in touch
@@ -160,7 +160,7 @@ export default function LocalResourcesPage() {
       </section>
 
       {/* Resource Categories */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-sand">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {categories.map((category) => {
             const Icon = category.icon;
@@ -171,7 +171,7 @@ export default function LocalResourcesPage() {
                   <div className={`w-12 h-12 ${category.bgColour} rounded-xl flex items-center justify-center`}>
                     <Icon className={`w-6 h-6 ${category.colour}`} />
                   </div>
-                  <h2 className="text-3xl font-bold text-charcoal">{category.title}</h2>
+                  <h2 className="text-3xl font-extrabold text-charcoal">{category.title}</h2>
                 </div>
 
                 {/* Entries Grid */}
@@ -179,13 +179,13 @@ export default function LocalResourcesPage() {
                   {category.entries.map((entry, index) => (
                     <Card
                       key={index}
-                      className={`border border-gray-200 shadow-sm hover:shadow-md transition-shadow ${
+                      className={`rounded-[22px] border border-navy/10 shadow-none hover:shadow-[0_20px_50px_rgba(31,33,89,0.12)] transition-shadow ${
                         entry.placeholder ? "opacity-75 border-dashed" : ""
                       }`}
                     >
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between gap-4 mb-3">
-                          <h3 className="text-lg font-bold text-charcoal">{entry.name}</h3>
+                          <h3 className="text-lg font-extrabold text-charcoal">{entry.name}</h3>
                           {entry.placeholder && (
                             <Badge variant="outline" className="text-xs text-gray-400 border-gray-300 shrink-0">
                               Coming Soon
@@ -230,7 +230,7 @@ export default function LocalResourcesPage() {
       {/* Bottom CTA */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-charcoal mb-4">
+          <h2 className="text-3xl font-extrabold text-charcoal mb-4">
             Know a Great Local Business?
           </h2>
           <p className="text-lg text-medium-grey mb-8">
@@ -238,7 +238,7 @@ export default function LocalResourcesPage() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-primary-blue text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-900 transition-colors"
+            className="inline-flex items-center gap-2 btn-cta bg-sky-brand text-navy font-extrabold px-8 py-3 hover:bg-[#4FB7E6] transition-colors"
           >
             Recommend a Business
           </a>

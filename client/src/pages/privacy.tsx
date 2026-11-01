@@ -4,29 +4,29 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+    <div className="min-h-screen">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-12">
+            <h1 className="mb-4 text-4xl font-extrabold leading-[1.05] text-charcoal lg:text-6xl">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl text-medium-grey">
               Your privacy is important to me. This policy explains how I collect, use, and protect your information, in line with the Australian Privacy Principles under the Privacy Act 1988 (Cth).
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+            <p className="text-sm text-medium-grey mt-4">
               Last updated: 11 July 2026
             </p>
           </div>
 
-          <Card className="shadow-xl">
+          <Card className="rounded-[22px] border-navy/10 bg-white shadow-none">
             <CardContent className="p-8 space-y-8">
               {/* Information We Collect */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Information I Collect
                 </h2>
-                <div className="space-y-4 text-gray-700 dark:text-gray-300">
+                <div className="space-y-4 text-medium-grey">
                   <div>
                     <h3 className="text-lg font-medium mb-2">Personal Information</h3>
                     <p>I may collect the following personal information when you use my services:</p>
@@ -54,10 +54,10 @@ export default function Privacy() {
 
               {/* How We Use Your Information */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   How I Use Your Information
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">I use your information to:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Provide and improve my dog training services</li>
@@ -73,11 +73,11 @@ export default function Privacy() {
               <Separator />
 
               {/* Photo and Video Policy */}
-              <section className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              <section className="rounded-2xl bg-sand p-6">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Photo and Video Policy
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300 space-y-3">
+                <div className="text-medium-grey space-y-3">
                   <p>
                     <strong>Training Session Documentation:</strong> During training sessions, I may take photos or videos to document your dog's progress and demonstrate training techniques.
                   </p>
@@ -97,10 +97,10 @@ export default function Privacy() {
 
               {/* Information Sharing */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Information Sharing
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">I do not sell or rent your personal information. I may share information only in these circumstances:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>With your explicit consent</li>
@@ -115,10 +115,10 @@ export default function Privacy() {
 
               {/* Cookies and Tracking */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Cookies and Tracking
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">I use cookies and similar technologies to:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Remember your preferences and improve your experience</li>
@@ -133,10 +133,10 @@ export default function Privacy() {
 
               {/* Data Security */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Data Security
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">I implement appropriate security measures to protect your information:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Secure SSL encryption for data transmission</li>
@@ -151,10 +151,10 @@ export default function Privacy() {
 
               {/* Your Rights */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Your Rights
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">Under the Australian Privacy Principles (Privacy Act 1988 (Cth)), you have the right to:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li>Access and review your personal information</li>
@@ -175,10 +175,10 @@ export default function Privacy() {
 
               {/* Third-Party Services */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Third-Party Services
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">My website may use third-party services:</p>
                   <ul className="list-disc list-inside space-y-2">
                     <li><strong>Booking &amp; Payment:</strong> SimplyBook.me for appointment scheduling and secure payment handling</li>
@@ -193,10 +193,10 @@ export default function Privacy() {
 
               {/* Children's Privacy */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Children's Privacy
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p>
                     My services are provided to adult clients on behalf of their dogs. Where a child is present during a session, I don't knowingly collect personal information directly from them, and any photos or videos are focused on the dog and training, not identifying details of children. If you have concerns about information relating to a child in your household, please contact me.
                   </p>
@@ -207,10 +207,10 @@ export default function Privacy() {
 
               {/* Changes to This Policy */}
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Changes to This Policy
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p>
                     I may update this privacy policy from time to time. I will notify you of any changes by posting the new policy on this page and updating the "Last updated" date. I encourage you to review this policy periodically.
                   </p>
@@ -220,11 +220,11 @@ export default function Privacy() {
               <Separator />
 
               {/* Contact Information */}
-              <section className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              <section className="rounded-2xl bg-sand p-6">
+                <h2 className="mb-4 text-2xl font-extrabold text-charcoal">
                   Contact Me
                 </h2>
-                <div className="text-gray-700 dark:text-gray-300">
+                <div className="text-medium-grey">
                   <p className="mb-4">
                     If you have any questions about this privacy policy or my privacy practices, please contact me:
                   </p>

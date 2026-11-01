@@ -98,9 +98,9 @@ export default function BlogPage() {
         ]}
       />
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-6">
+          <h1 className="text-5xl font-extrabold text-charcoal mb-6">
             Free Training Advice & Tips
           </h1>
           <p className="text-xl text-medium-grey mb-8">
@@ -198,10 +198,10 @@ export default function BlogPage() {
       {/* Newsletter Section */}
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-extrabold text-white mb-4">
             Get Training Tips Delivered
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-white/80 mb-8">
             Get new blog posts delivered straight to your inbox. Training tips, dog behaviour insights, and practical advice — free, no spam.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -216,14 +216,14 @@ export default function BlogPage() {
             />
             <Button 
               type="submit"
-              className="bg-white text-primary-blue hover:bg-gray-50 whitespace-nowrap"
+              className="whitespace-nowrap"
               disabled={subscribeMutation.isPending}
               data-testid="button-newsletter-subscribe"
             >
               {subscribeMutation.isPending ? "Subscribing..." : "Subscribe"}
             </Button>
           </form>
-          <p className="text-blue-100 text-sm mt-4">
+          <p className="text-white/80 text-sm mt-4">
             No spam, unsubscribe anytime. I respect your privacy.
           </p>
         </div>

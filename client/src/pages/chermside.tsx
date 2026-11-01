@@ -72,7 +72,7 @@ export default function ChermsidePage() {
       />
 
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -81,7 +81,7 @@ export default function ChermsidePage() {
                   <MapPin className="w-5 h-5 text-primary-blue" />
                   <span className="text-primary-blue font-semibold">Chermside, Kedron & Stafford Heights</span>
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+                <h1 className="text-4xl lg:text-5xl font-extrabold text-charcoal leading-tight">
                   Chermside Dog Training
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal">
@@ -149,15 +149,15 @@ export default function ChermsidePage() {
       </section>
 
       {/* Walk & Train Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 bg-sand">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-blue-50 text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-sand text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
                 <Footprints className="w-4 h-4" />
                 High-Frequency Results
               </div>
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 Walk and Train at <span className="text-primary-blue">7th Brigade Park</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
@@ -207,20 +207,20 @@ export default function ChermsidePage() {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
+            <Card className="rounded-[22px] border border-navy/10 bg-white shadow-none">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+                  <h3 className="text-2xl font-extrabold text-charcoal mb-4">Session Details & Pricing</h3>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-sand rounded-lg">
                       <div>
                         <p className="font-semibold text-charcoal">Single 40-Minute Session</p>
                       </div>
                       <div className="text-2xl font-bold text-primary-blue">{walkTrainPrice}</div>
                     </div>
 
-                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
+                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-sand">
                       <div className="flex items-center justify-between mb-2">
                         <div>
                           <p className="font-semibold text-charcoal">The Real World Reliability Package</p>
@@ -272,11 +272,11 @@ export default function ChermsidePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-sand text-navy px-4 py-2 rounded-full text-sm font-bold">
                 <Users className="w-4 h-4" />
                 Owner Skill Building
               </div>
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 <span className="text-primary-blue">One-on-One Private Coaching</span> Sessions
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
@@ -330,7 +330,7 @@ export default function ChermsidePage() {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+                    <h3 className="text-2xl font-extrabold text-charcoal mb-4">Session Details & Pricing</h3>
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-4 bg-white rounded-lg">
                         <div>
@@ -339,7 +339,7 @@ export default function ChermsidePage() {
                         <div className="text-2xl font-bold text-primary-blue">{coachingPrice}</div>
                       </div>
 
-                      <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
+                      <div className="border-2 border-primary-blue rounded-lg p-4 bg-sand">
                         <div className="flex items-center justify-between mb-2">
                           <div>
                             <p className="font-semibold text-charcoal">The Focused Progress Plan</p>
@@ -377,7 +377,7 @@ export default function ChermsidePage() {
                     </ul>
                   </div>
 
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="bg-sand border border-navy/15 rounded-lg p-4">
                     <p className="text-primary-blue font-semibold text-center">
                       The goal is a dog that responds to you — not just to me.
                     </p>
@@ -398,11 +398,11 @@ export default function ChermsidePage() {
       </section>
 
       {/* Assessment Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 Every dog is different. The plan should be too.
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
@@ -413,7 +413,7 @@ export default function ChermsidePage() {
               </p>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-bold text-charcoal">What it covers:</h3>
+                <h3 className="text-xl font-extrabold text-charcoal">What it covers:</h3>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
@@ -451,11 +451,11 @@ export default function ChermsidePage() {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
+            <Card className="rounded-[22px] border border-navy/10 bg-white shadow-none">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
+                    <h3 className="text-2xl font-extrabold text-charcoal mb-2">Initial Canine Success Assessment</h3>
                     <div className="text-4xl font-bold text-primary-blue">{assessmentPrice}</div>
                     <p className="text-medium-grey mt-2">60 minutes · One-off session</p>
                   </div>
@@ -483,7 +483,7 @@ export default function ChermsidePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">
+              <h2 className="text-4xl font-extrabold text-white">
                 Your dog can handle Chermside. They just need the right foundation.
               </h2>
               <p className="text-xl text-white opacity-90">
@@ -512,14 +512,14 @@ export default function ChermsidePage() {
 
               <Button
                 onClick={() => setShowAssessmentDialog(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
+                className="px-8 py-4 text-lg font-semibold"
                 data-testid="button-book-now-cta"
               >
                 Book Assessment
               </Button>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-white/80">
               <div className="flex items-center">
                 <ShieldCheck className="w-5 h-5 mr-2" />
                 <span>Fully Insured</span>

@@ -34,11 +34,11 @@ export default function MethodPage() {
   return (
     <div className="min-h-screen">
       <StaticSEO path="/method" />
-      <section className="hero-gradient py-16 lg:py-20">
+      <section className="py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">My method</p>
-            <h1 className="mb-5 text-4xl font-bold text-charcoal lg:text-5xl">
+            <p className="eyebrow mb-3">My method</p>
+            <h1 className="mb-5 text-4xl font-extrabold text-charcoal lg:text-5xl">
               The goal is a dog you can take anywhere.
             </h1>
             <p className="text-xl leading-relaxed text-medium-grey">
@@ -85,8 +85,8 @@ export default function MethodPage() {
       </section>
 
       <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-blue-100 bg-blue-50 px-6 py-10 text-center sm:px-10">
-          <h2 className="mb-4 text-3xl font-bold text-charcoal">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-navy/10 bg-sand px-6 py-10 text-center sm:px-10">
+          <h2 className="mb-4 text-3xl font-extrabold text-charcoal">
             Start training for the life you want together
           </h2>
           <p className="mb-7 text-lg leading-relaxed text-medium-grey">

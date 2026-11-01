@@ -16,12 +16,12 @@ export function ProgramCard({
   return (
     <Card
       id={program.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
-      className="flex h-full flex-col overflow-hidden border border-gray-100 border-t-4 border-t-primary-blue bg-white shadow-md transition duration-300 hover:shadow-xl"
+      className="flex h-full flex-col overflow-hidden rounded-[22px] border border-navy/10 bg-white shadow-none transition duration-300 hover:shadow-[0_20px_50px_rgba(31,33,89,0.12)]"
     >
       <CardContent className="flex h-full flex-col p-7">
         <div className="mb-5">
           <div className="mb-2 flex flex-wrap items-baseline gap-3">
-            <h3 className="text-2xl font-bold text-charcoal">{program.name}</h3>
+            <h3 className="font-quote text-2xl not-italic leading-tight text-charcoal sm:text-3xl">{program.name}</h3>
             <span className="text-2xl font-bold text-primary-blue">{program.price}</span>
             <span className="text-sm font-semibold text-medium-grey">inc. GST</span>
           </div>
@@ -35,7 +35,7 @@ export function ProgramCard({
 
         {program.benefits && (
           <div className="mb-6">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-primary-blue">
+            <p className="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-sky-deep">
               What's included
             </p>
             <ul className="space-y-3">
@@ -44,11 +44,11 @@ export function ProgramCard({
                   key={benefit}
                   className={`flex items-start gap-3 text-sm leading-relaxed ${
                     benefit.startsWith("Free ")
-                      ? "rounded-lg bg-blue-50 p-3 font-semibold text-primary-blue"
+                      ? "rounded-xl bg-sand p-3 font-semibold text-charcoal"
                       : "text-medium-grey"
                   }`}
                 >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-blue" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-brand" />
                   <span>{benefit}</span>
                 </li>
               ))}
@@ -56,7 +56,7 @@ export function ProgramCard({
           </div>
         )}
 
-        <div className="mb-6 rounded-xl bg-blue-50 p-4 text-sm">
+        <div className="mb-6 rounded-2xl bg-sand p-4 text-sm">
           <p className="mb-1 font-bold text-charcoal">
             {program.kind === "single" ? "Session details" : "Program structure"}
           </p>

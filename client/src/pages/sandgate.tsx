@@ -65,7 +65,7 @@ export default function SandgatePage() {
       />
 
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -74,7 +74,7 @@ export default function SandgatePage() {
                   <MapPin className="w-5 h-5 text-primary-blue" />
                   <span className="text-primary-blue font-semibold">Sandgate, Shorncliffe & Brighton</span>
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+                <h1 className="text-4xl lg:text-5xl font-extrabold text-charcoal leading-tight">
                   Sandgate, Shorncliffe & Brighton Dog Training
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal">
@@ -119,7 +119,7 @@ export default function SandgatePage() {
               <img 
                 src={sandgateHero} 
                 alt="Dog training at Shorncliffe Pier, Sandgate - where your dog learns real-world skills on Brisbane's bayside foreshore" 
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-[26px] w-full h-auto"
                 width={600}
                 height={400}
                 loading="lazy"
@@ -135,11 +135,11 @@ export default function SandgatePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-sand text-navy px-4 py-2 rounded-full text-sm font-bold">
                 <Waves className="w-4 h-4" />
                 Signature Service
               </div>
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 The Bayside <span className="text-primary-blue">Adventure Walk and Training</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
@@ -191,18 +191,18 @@ export default function SandgatePage() {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
+            <Card className="rounded-[22px] border border-navy/10 bg-white shadow-none">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+                  <h3 className="text-2xl font-extrabold text-charcoal mb-4">Session Details & Pricing</h3>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-sand rounded-lg">
                       <p className="font-semibold text-charcoal">Single 60-Minute Session</p>
                       <div className="text-2xl font-bold text-primary-blue">{adventurePrice}</div>
                     </div>
 
-                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
+                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-sand">
                       <div className="flex items-center justify-between mb-2">
                         <div>
                           <p className="font-semibold text-charcoal">The Adventure Pack</p>
@@ -250,14 +250,14 @@ export default function SandgatePage() {
       </section>
 
       {/* Service 2: Confident Start Program */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 bg-sand">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-blue-50 text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-sand text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
                 Perfect for Puppies
               </div>
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 <span className="text-primary-blue">The Confident Start Program</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed font-medium">
@@ -326,11 +326,11 @@ export default function SandgatePage() {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
+            <Card className="rounded-[22px] border border-navy/10 bg-white shadow-none">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="text-center pb-4 border-b">
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">The Confident Start Program</h3>
+                    <h3 className="text-2xl font-extrabold text-charcoal mb-2">The Confident Start Program</h3>
                     <p className="text-medium-grey mb-4">
                       6 private, one-hour, in-home sessions.
                     </p>
@@ -384,7 +384,7 @@ export default function SandgatePage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">
+            <h2 className="text-4xl font-extrabold text-charcoal mb-4">
               How to Get Started
             </h2>
           </div>
@@ -392,7 +392,7 @@ export default function SandgatePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <Card className="bg-light-grey border-0">
               <CardContent className="p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-charcoal mb-4">For Adult and Adolescent Dogs</h3>
+                <h3 className="text-2xl font-extrabold text-charcoal mb-4">For Adult and Adolescent Dogs</h3>
                 <p className="text-medium-grey mb-6 flex-1">
                   I start with an Initial Canine Success Assessment. One 60-minute session to assess your dog, identify what's driving the behaviour, and build a tailored plan before we begin.
                 </p>
@@ -407,9 +407,9 @@ export default function SandgatePage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-blue-50 to-white border-0">
+            <Card className="bg-sand border-0 rounded-[22px]">
               <CardContent className="p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-charcoal mb-4">For Puppies</h3>
+                <h3 className="text-2xl font-extrabold text-charcoal mb-4">For Puppies</h3>
                 <p className="text-medium-grey mb-6 flex-1">
                   The Confident Start Program needs no prior assessment. Book directly and we get started.
                 </p>
@@ -434,7 +434,7 @@ export default function SandgatePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">
+              <h2 className="text-4xl font-extrabold text-white">
                 Ready to enjoy the foreshore again?
               </h2>
               <p className="text-xl text-white opacity-90">
@@ -445,7 +445,7 @@ export default function SandgatePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+                  <Button className="px-8 py-4 text-lg font-semibold">
                     <Phone className="w-5 h-5 mr-2" />
                     Book a Free Call
                   </Button>
@@ -468,7 +468,7 @@ export default function SandgatePage() {
               </Button>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-white/80">
               <div className="flex items-center">
                 <ShieldCheck className="w-5 h-5 mr-2" />
                 <span>Fully Insured</span>
@@ -485,15 +485,15 @@ export default function SandgatePage() {
       {/* Security Dialogs */}
       <Dialog open={showAssessmentDialog} onOpenChange={setShowAssessmentDialog}>
         <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+          <DialogTitle className="text-xl font-bold text-charcoal mb-2">
             Secure Booking System
           </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
+          <DialogDescription className="text-medium-grey mb-6">
             You'll be redirected to book the {assessmentPrice} Initial Canine Success Assessment.
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -515,7 +515,7 @@ export default function SandgatePage() {
             </Button>
           </div>
           
-          <div className="mt-4 text-xs text-gray-500 text-center">
+          <div className="mt-4 text-xs text-medium-grey text-center">
             <p>🔒 Secure SSL encrypted booking system</p>
             <p>📅 Real-time availability • 💳 Secure payments</p>
           </div>
@@ -524,15 +524,15 @@ export default function SandgatePage() {
 
       <Dialog open={showAdventureDialog} onOpenChange={setShowAdventureDialog}>
         <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+          <DialogTitle className="text-xl font-bold text-charcoal mb-2">
             Secure Booking System
           </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
+          <DialogDescription className="text-medium-grey mb-6">
             New clients start with the {assessmentPrice} Initial Canine Success Assessment before booking Adventure Walk and Training.
           </DialogDescription>
 
           <div className="space-y-4">
-            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -554,7 +554,7 @@ export default function SandgatePage() {
             </Button>
           </div>
 
-          <div className="mt-4 text-xs text-gray-500 text-center">
+          <div className="mt-4 text-xs text-medium-grey text-center">
             <p>🔒 Secure SSL encrypted booking system</p>
             <p>📅 Real-time availability • 💳 Secure payments</p>
           </div>
@@ -594,15 +594,15 @@ export default function SandgatePage() {
 
       <Dialog open={showConfidentStartDialog} onOpenChange={setShowConfidentStartDialog}>
         <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+          <DialogTitle className="text-xl font-bold text-charcoal mb-2">
             Secure Booking System
           </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
+          <DialogDescription className="text-medium-grey mb-6">
             You'll be redirected to The Confident Start Program, which includes {confidentStartSessions ?? "…"} sessions for {confidentStartPrice}. No assessment is required.
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#packages/6",
@@ -624,7 +624,7 @@ export default function SandgatePage() {
             </Button>
           </div>
           
-          <div className="mt-4 text-xs text-gray-500 text-center">
+          <div className="mt-4 text-xs text-medium-grey text-center">
             <p>🔒 Secure SSL encrypted booking system</p>
             <p>📅 Real-time availability • 💳 Secure payments</p>
           </div>
@@ -633,15 +633,15 @@ export default function SandgatePage() {
 
       <Dialog open={showPackagesDialog} onOpenChange={setShowPackagesDialog}>
         <DialogContent className="max-w-md w-full p-6">
-          <DialogTitle className="text-xl font-bold text-gray-800 mb-2">
+          <DialogTitle className="text-xl font-bold text-charcoal mb-2">
             Secure Booking System
           </DialogTitle>
-          <DialogDescription className="text-gray-600 mb-6">
+          <DialogDescription className="text-medium-grey mb-6">
             You'll be redirected to book the {assessmentPrice} Initial Canine Success Assessment.
           </DialogDescription>
           
           <div className="space-y-4">
-            <Button asChild className="w-full bg-blue-600 hover:bg-blue-900 text-white py-3 text-base font-medium">
+            <Button asChild className="w-full btn-cta bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6] py-3 text-base">
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -663,7 +663,7 @@ export default function SandgatePage() {
             </Button>
           </div>
           
-          <div className="mt-4 text-xs text-gray-500 text-center">
+          <div className="mt-4 text-xs text-medium-grey text-center">
             <p>🔒 Secure SSL encrypted booking system</p>
             <p>📅 Real-time availability • 💳 Secure payments</p>
           </div>

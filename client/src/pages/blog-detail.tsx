@@ -55,7 +55,7 @@ export default function BlogDetailPage() {
     return (
       <div className="min-h-screen py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl font-bold text-charcoal mb-4">Blog Post Not Found</h1>
+          <h1 className="text-3xl font-extrabold text-charcoal mb-4">Blog Post Not Found</h1>
           <p className="text-medium-grey mb-8">
             The blog post you're looking for doesn't exist or has been removed.
           </p>
@@ -91,7 +91,7 @@ export default function BlogDetailPage() {
         {/* Article Header */}
         <article>
           <header className="mb-12">
-            <h1 className="text-4xl font-bold text-charcoal mb-6 leading-tight">
+            <h1 className="text-4xl font-extrabold text-charcoal mb-6 leading-tight">
               {blogPost.title}
             </h1>
             
@@ -147,8 +147,8 @@ export default function BlogDetailPage() {
             <div className="text-charcoal leading-relaxed space-y-6">
               <ReactMarkdown 
                 components={{
-                  h1: ({children}) => <h2 className="text-3xl font-bold text-charcoal mb-6 mt-12 first:mt-0">{children}</h2>,
-                  h2: ({children}) => <h2 className="text-2xl font-bold text-charcoal mb-4 mt-10">{children}</h2>,
+                  h1: ({children}) => <h2 className="text-3xl font-extrabold text-charcoal mb-6 mt-12 first:mt-0">{children}</h2>,
+                  h2: ({children}) => <h2 className="text-2xl font-extrabold text-charcoal mb-4 mt-10">{children}</h2>,
                   h3: ({children}) => <h3 className="text-xl font-semibold text-charcoal mb-3 mt-8">{children}</h3>,
                   p: ({children}) => <p className="text-medium-grey leading-relaxed mb-6">{children}</p>,
                   ul: ({children}) => <ul className="list-disc list-inside space-y-2 mb-6 text-medium-grey">{children}</ul>,
@@ -156,13 +156,13 @@ export default function BlogDetailPage() {
                   li: ({children}) => <li className="leading-relaxed">{children}</li>,
                   table: ({children}) => (
                     <div className="overflow-x-auto mb-6">
-                      <table className="w-full border-collapse border border-gray-200 rounded-lg">
+                      <table className="w-full border-collapse border border-navy/10 rounded-lg">
                         {children}
                       </table>
                     </div>
                   ),
-                  th: ({children}) => <th className="border border-gray-200 bg-light-grey px-4 py-3 text-left font-semibold text-charcoal">{children}</th>,
-                  td: ({children}) => <td className="border border-gray-200 px-4 py-3 text-medium-grey">{children}</td>,
+                  th: ({children}) => <th className="border border-navy/10 bg-light-grey px-4 py-3 text-left font-semibold text-charcoal">{children}</th>,
+                  td: ({children}) => <td className="border border-navy/10 px-4 py-3 text-medium-grey">{children}</td>,
                   blockquote: ({children}) => (
                     <blockquote className="border-l-4 border-primary-blue pl-6 py-2 mb-6 bg-light-blue/20 rounded-r-lg">
                       <div className="text-charcoal font-medium">{children}</div>
@@ -179,7 +179,7 @@ export default function BlogDetailPage() {
         </article>
 
         {/* Footer Navigation */}
-        <footer className="mt-16 pt-8 border-t border-gray-200">
+        <footer className="mt-16 pt-8 border-t border-navy/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <Link to="/blog">
               <Button variant="outline">

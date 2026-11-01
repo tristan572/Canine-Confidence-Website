@@ -15,13 +15,13 @@ export default function WalkingAdventurePage() {
     <div className="min-h-screen">
       <StaticSEO path="/walking-adventure" />
 
-      <section className="hero-gradient py-16 lg:py-20">
+      <section className="py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
+            <p className="eyebrow mb-3">
               Adventure and training
             </p>
-            <h1 className="mb-5 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
+            <h1 className="mb-5 text-4xl font-extrabold leading-[1.05] text-charcoal lg:text-6xl">
               Your dog's walk should not be the most stressful part of your day
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">
@@ -38,17 +38,17 @@ export default function WalkingAdventurePage() {
           <img
             src={walkingImage}
             alt="Tristan walking a client dog through a North Brisbane park"
-            className="h-[360px] w-full rounded-2xl object-cover object-center shadow-xl sm:h-[440px]"
+            className="h-[360px] w-full rounded-[26px] object-cover object-center sm:h-[440px]"
             width={640}
             height={480}
           />
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section className="bg-sand py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-bold text-charcoal">Start here: your dog's assessment</h2>
+            <h2 className="mb-4 text-3xl font-extrabold text-charcoal">Start here: your dog's assessment</h2>
             <AssessmentDetails className="mb-4 text-lg text-primary-blue" />
             <p className="mb-4 text-lg leading-relaxed text-medium-grey">
               I take the time to understand what you want from your dog's walks,
@@ -86,8 +86,8 @@ export default function WalkingAdventurePage() {
 
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-bold">Start enjoying the walk again</h2>
-          <p className="mb-7 text-lg text-blue-100">
+          <h2 className="mb-4 text-3xl font-extrabold">Start enjoying the walk again</h2>
+          <p className="mb-7 text-lg text-white/80">
             We'll talk through what you want from the walks, get to know your
             dog's temperament and build a plan around who they are and how they learn, so we can work together safely.
             I'll suggest a walking or training program to get you started.
@@ -95,7 +95,7 @@ export default function WalkingAdventurePage() {
           <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
           <AssessmentButton
             location="Walking final CTA"
-            className="bg-white text-primary-blue hover:bg-gray-50"
+            className=""
           />
         </div>
       </section>

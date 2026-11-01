@@ -34,12 +34,12 @@ export default function ContactPage() {
         ]}
       />
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl font-bold text-charcoal">
+                <h1 className="text-5xl font-extrabold text-charcoal">
                   Get in Touch
                 </h1>
                 <p className="text-xl text-medium-grey">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 <img 
                   src={contactHeroImageJpeg} 
                   alt="A happy, confident dog after training with Canine Confidence"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  className="rounded-[26px] w-full h-auto"
                   width={600}
                   height={400}
                   loading="eager"
@@ -76,7 +76,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-charcoal">Contact Information</h2>
+                <h2 className="text-3xl font-extrabold text-charcoal">Contact Information</h2>
                 <p className="text-lg text-medium-grey">
                   I'd love to hear from you! Get in touch using any of the methods below.
                 </p>
@@ -172,7 +172,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-light-grey p-8 rounded-xl">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-charcoal mb-2">Send Me a Message</h3>
+                <h3 className="text-2xl font-extrabold text-charcoal mb-2">Send Me a Message</h3>
                 <p className="text-medium-grey">
                   Fill out the form below and I'll get back to you as soon as possible.
                 </p>
@@ -187,11 +187,11 @@ export default function ContactPage() {
       <section id="service-area" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-sand text-navy px-4 py-2 rounded-full text-sm font-bold mb-4">
               <MapPin className="w-4 h-4" />
               Service Coverage
             </div>
-            <h2 className="text-3xl font-bold text-charcoal mb-4">My Service Area</h2>
+            <h2 className="text-3xl font-extrabold text-charcoal mb-4">My Service Area</h2>
             <p className="text-lg text-medium-grey max-w-3xl mx-auto mb-4">
               Based in Boondall, Brisbane, I provide mobile dog training within 15km of Boondall.
               My service area covers North Brisbane and surrounding suburbs. I come to you for your convenience!
@@ -212,13 +212,13 @@ export default function ContactPage() {
       </section>
 
       {/* Social Media Section */}
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-gradient-to-br from-primary-blue to-blue-700">
+      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-charcoal">Connect With Us</h2>
+              <h2 className="text-3xl font-extrabold text-white lg:text-4xl">Connect With Us</h2>
               <div className="flex justify-center">
-                <p className="text-xl font-semibold inline-block rounded-2xl px-8 py-5 bg-white/95 text-primary-blue shadow-xl max-w-2xl">
+                <p className="max-w-2xl text-lg leading-relaxed text-white/80">
                   Follow my journey, see training success stories, and get daily tips on building confidence with your dog!
                 </p>
               </div>
@@ -233,7 +233,7 @@ export default function ContactPage() {
                 data-testid="link-facebook-contact"
                 className="group"
               >
-                <div className="bg-white group-hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                <div className="bg-white group-hover:bg-cream p-6 rounded-[22px] transition-all duration-300 transform group-hover:scale-105">
                   <Facebook className="h-12 w-12 text-primary-blue mx-auto mb-3" />
                   <div className="text-charcoal font-semibold">Facebook</div>
                   <div className="text-sm text-medium-grey mt-1">@canineconfidence</div>
@@ -248,7 +248,7 @@ export default function ContactPage() {
                 data-testid="link-instagram-contact"
                 className="group"
               >
-                <div className="bg-white group-hover:bg-gray-100 p-6 rounded-2xl shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                <div className="bg-white group-hover:bg-cream p-6 rounded-[22px] transition-all duration-300 transform group-hover:scale-105">
                   <Instagram className="h-12 w-12 text-primary-blue mx-auto mb-3" />
                   <div className="text-charcoal font-semibold">Instagram</div>
                   <div className="text-sm text-medium-grey mt-1">@canine_confidence</div>
@@ -268,7 +268,7 @@ export default function ContactPage() {
       {/* FAQ Reference Section */}
       <section className="py-16 bg-light-grey">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-charcoal mb-4">Have a question?</h2>
+          <h2 className="text-2xl font-extrabold text-charcoal mb-4">Have a question?</h2>
           <p className="text-lg text-medium-grey">
             If you have any questions before reaching out, visit my{" "}
             <a href="/faq" className="text-primary-blue hover:underline font-medium">FAQ page</a>
@@ -281,12 +281,12 @@ export default function ContactPage() {
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-16 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Still thinking it over?</h2>
-            <p className="text-xl text-blue-100">
+            <h2 className="text-3xl font-extrabold text-white">Still thinking it over?</h2>
+            <p className="text-xl text-white/80">
               Call me directly and I'll work out if I can help — no forms, no wait.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
+              <Button asChild className="px-8 py-4 text-lg font-semibold">
                 <a href="tel:0409521358">
                   <Phone className="w-5 h-5 mr-2" />
                   0409 521 358

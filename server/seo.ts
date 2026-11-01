@@ -83,7 +83,7 @@ const LOCAL_BUSINESS_SCHEMA = {
     worstRating: "1",
   },
   priceRange: "$80 - $2500",
-  image: `${SITE_URL}/attached_assets/DSC_0096_1758792971820.webp`,
+  image: `${SITE_URL}/attached_assets/share_tug_1200x630.jpg`,
   sameAs: [
     "https://www.facebook.com/p/Canine-Confidence-61571910674491/",
     "https://www.instagram.com/canine_confidence/",

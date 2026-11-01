@@ -18,13 +18,13 @@ export default function BehaviourObediencePage() {
     <div className="min-h-screen">
       <StaticSEO path="/behaviour-obedience" />
 
-      <section className="hero-gradient py-16 lg:py-20">
+      <section className="py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
+            <p className="eyebrow mb-3">
               Behaviour and obedience
             </p>
-            <h1 className="mb-5 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
+            <h1 className="mb-5 text-4xl font-extrabold leading-[1.05] text-charcoal lg:text-6xl">
               Stop managing the symptoms. Start changing what drives them.
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">
@@ -41,7 +41,7 @@ export default function BehaviourObediencePage() {
           <img
             src={behaviourImage}
             alt="Tristan working calmly with a client dog"
-            className="h-auto w-full rounded-2xl object-cover shadow-xl"
+            className="h-auto w-full rounded-[26px] object-cover"
             width={640}
             height={480}
           />
@@ -50,8 +50,8 @@ export default function BehaviourObediencePage() {
 
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10 text-white">
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-3 text-2xl font-bold">For the problems making daily life hard</h2>
-          <p className="text-lg leading-relaxed text-blue-100">
+          <h2 className="mb-3 text-2xl font-extrabold">For the problems making daily life hard</h2>
+          <p className="text-lg leading-relaxed text-white/80">
             I help with pulling, barking, jumping up, poor recall, over-excitement,
             anxiety, chewing and destructive habits, chasing, guarding, dog
             reactivity and everyday manners. I look at what is happening beneath
@@ -61,10 +61,10 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section className="bg-sand py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-bold text-charcoal">Start here: your dog's assessment</h2>
+            <h2 className="mb-4 text-3xl font-extrabold text-charcoal">Start here: your dog's assessment</h2>
             <AssessmentDetails className="mb-4 text-lg text-primary-blue" />
             <p className="mb-4 text-lg leading-relaxed text-medium-grey">
               I take the time to understand what you want to achieve and get to
@@ -112,10 +112,10 @@ export default function BehaviourObediencePage() {
       </section>
 
       <section className="bg-white py-16">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 rounded-2xl border border-blue-100 bg-blue-50 p-8 sm:p-10 lg:grid-cols-[auto_1fr_auto] lg:items-center">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 rounded-2xl border border-navy/10 bg-sand p-8 sm:p-10 lg:grid-cols-[auto_1fr_auto] lg:items-center">
           <ClipboardList className="h-12 w-12 text-primary-blue" />
           <div>
-            <h2 className="mb-2 text-2xl font-bold text-charcoal">
+            <h2 className="mb-2 text-2xl font-extrabold text-charcoal">
               Bringing home a rescue dog?
             </h2>
             <p className="text-medium-grey">
@@ -134,8 +134,8 @@ export default function BehaviourObediencePage() {
 
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-bold">Life with your dog should feel calmer, more connected and more enjoyable</h2>
-          <p className="mb-7 text-lg text-blue-100">
+          <h2 className="mb-4 text-3xl font-extrabold">Life with your dog should feel calmer, more connected and more enjoyable</h2>
+          <p className="mb-7 text-lg text-white/80">
             We'll talk through your goals, get to know your dog's temperament
             and build a plan around who they are and how they learn. I'll suggest a program
             to get you started.
@@ -143,7 +143,7 @@ export default function BehaviourObediencePage() {
           <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
           <AssessmentButton
             location="Behaviour final CTA"
-            className="bg-white text-primary-blue hover:bg-gray-50"
+            className=""
           />
         </div>
       </section>
