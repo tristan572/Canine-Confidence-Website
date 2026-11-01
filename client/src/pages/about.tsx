@@ -104,6 +104,21 @@ export default function AboutPage() {
               every dog I work with teaches me something new.
             </p>
           </div>
+          <h3 className="mb-6 mt-16 font-quote text-2xl not-italic text-charcoal lg:text-4xl">
+            Why I started Canine Confidence
+          </h3>
+          <div className="space-y-6 text-lg leading-relaxed text-medium-grey lg:text-xl">
+            <p>
+              A lot of dogs end up in shelters because life with them got too
+              hard. Usually they're good dogs whose needs weren't being met, with
+              owners who didn't get the right help in time.
+            </p>
+            <p className="font-semibold text-charcoal">
+              I started Canine Confidence to stop that happening. I want every
+              owner I work with to understand their dog, really enjoy them and get
+              the best out of them, so giving up never crosses their mind.
+            </p>
+          </div>
         </div>
       </section>
 
