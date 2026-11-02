@@ -74,7 +74,7 @@ export default function MethodPage() {
             alt="A grey staffy sitting at Tristan's side, looking up at him while he holds a ball on a rope"
             className="h-auto w-full rounded-[26px] object-cover"
             width={960}
-            height={1200}
+            height={1280}
             decoding="async"
           />
         </div>
