@@ -23,6 +23,7 @@ import walking1200 from "@assets/IMG_0084_1760870993102.webp";
 import trainer600 from "@assets/trainer_staffy_600.webp";
 import trainer1122 from "@assets/trainer_staffy_1122.webp";
 import trainerJpeg from "@assets/trainer_staffy_800.jpg";
+import { buildingBlocks } from "@/lib/building-blocks";
 
 const steps = [
   { title: "Book your assessment", text: "I take the time to understand what you want to achieve and get to know your dog's temperament." },
@@ -119,12 +120,7 @@ function Stars({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
-const methodPoints = [
-  { number: "01", title: "Health", text: "Pain, poor sleep and the wrong diet all show up as behaviour. A dog that feels good in their body is ready to learn." },
-  { number: "02", title: "Lifestyle", text: "A dog with nowhere to put their energy finds their own outlet: chewing, barking, pulling. Meet their needs and they can switch off at home." },
-  { number: "03", title: "Clarity", text: "Without clear boundaries and feedback, dogs guess what's right and often get it wrong, and that guessing breeds anxiety. When your dog knows when they've got it right and when they haven't, they relax and succeed." },
-  { number: "04", title: "Skills", text: "Built on the first three, skills become reliable. Calmer walks, a recall you can trust and manners that hold up at the park, the café and when visitors arrive." },
-];
+const methodPoints = buildingBlocks;
 
 export default function HomePage() {
   const pricing = usePricing();
