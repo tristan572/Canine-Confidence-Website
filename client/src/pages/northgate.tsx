@@ -7,8 +7,8 @@ import { Link } from "wouter";
 import { MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart, Users, Footprints } from "lucide-react";
 import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ConsultationForm from "@/components/forms/consultation-form";
-import tristanPortraitWebp from "@assets/trainer_staffy_600.webp";
-import tristanPortraitJpeg from "@assets/trainer_staffy_800.jpg";
+import tristanPortraitWebp from "@assets/trainer_kelpie_600.webp";
+import tristanPortraitJpeg from "@assets/trainer_kelpie_800.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 
@@ -127,8 +127,8 @@ export default function NorthgatePage() {
                 <source type="image/webp" srcSet={tristanPortraitWebp} />
                 <img
                   src={tristanPortraitJpeg}
-                  alt="Tristan, NDTF certified dog trainer, with a grey staffy"
-                  className="aspect-[4/5] w-full rounded-[26px] object-cover object-[center_20%]"
+                  alt="Tristan, NDTF certified dog trainer, crouching with a red Kelpie cross in a North Brisbane park"
+                  className="aspect-[4/5] w-full rounded-[26px] object-cover object-center"
                   width={800}
                   height={1000}
                   loading="eager"
