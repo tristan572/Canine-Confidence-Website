@@ -25,8 +25,9 @@ export default function WalkingAdventurePage() {
               Your dog's walk should not be the most stressful part of your day
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">
-              I use real environments, structured walking, play, sniffing,
-              running and other carefully chosen challenges to build focus,
+              I train out in parks, beaches, trails and streets, using
+              structured walking, play, sniffing, running and other carefully
+              chosen challenges to build focus,
               confidence and reliable skills, while giving your dog the
               physical and mental fulfilment they actually need.
             </p>

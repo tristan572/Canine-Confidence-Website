@@ -155,7 +155,7 @@ export class MemStorage implements IStorage {
         price: "$60",
         category: "training",
         imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023_opt.webp",
-        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
+        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Training at the parks and streets you walk", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
         name: "Adventure Walk and Training",
@@ -434,7 +434,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "The Real World Reliability Package",
-        description: "Move beyond the backyard and build more reliable skills on real walks. I collect your dog from home and use five sessions to practise obedience and loose-lead walking around traffic, people, sounds and other everyday distractions.\n\n**Skills for Everyday Walks:** Each session carries indoor skills into the places where you actually need them.\n\n**Confidence and Clarity:** Consistent practice helps your dog understand what is expected on lead.\n\n**Loose-Lead Practice:** I work directly on pulling, focus and manners while your dog is moving.\n\n**Home Pickup Included:** I come to you and return your dog after every session.",
+        description: "Move beyond the backyard and build more reliable skills on everyday walks. I collect your dog from home and use five sessions to practise obedience and loose-lead walking around traffic, people, sounds and other everyday distractions.\n\n**Skills for Everyday Walks:** Each session carries indoor skills into the places where you actually need them.\n\n**Confidence and Clarity:** Consistent practice helps your dog understand what is expected on lead.\n\n**Loose-Lead Practice:** I work directly on pulling, focus and manners while your dog is moving.\n\n**Home Pickup Included:** I come to you and return your dog after every session.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
@@ -444,7 +444,7 @@ export class MemStorage implements IStorage {
         features: [
           "5 trainer-led 40-minute Walk and Train sessions",
           "Home pickup included",
-          "Obedience and manners practised during real walks",
+          "Obedience and manners practised during everyday walks",
           "Dedicated loose-lead walking practice",
           "Skills built around traffic, people, dogs and other everyday distractions",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
@@ -453,7 +453,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "The Adventure Pack",
-        description: "Five varied adventures give your dog exercise, exploration and repeated skill work around real distractions. I collect your dog from home and choose forests, beaches or parks that suit their needs and training goals.\n\n**Reliable Habits:** Repeated outings help your dog practise focus across different environments.\n\n**Skills Around Distractions:** I work on recall, loose-lead foundations and impulse control while life is happening around them.\n\n**Mental and Physical Fulfilment:** Your dog gets time to run, sniff, play and explore safely.\n\n**Video and Feedback:** You receive an update after every outing, including useful tips for you.",
+        description: "Five varied adventures give your dog exercise, exploration and repeated skill work around everyday distractions. I collect your dog from home and choose forests, beaches or parks that suit their needs and training goals.\n\n**Reliable Habits:** Repeated outings help your dog practise focus across different environments.\n\n**Skills Around Distractions:** I work on recall, loose-lead foundations and impulse control while life is happening around them.\n\n**Mental and Physical Fulfilment:** Your dog gets time to run, sniff, play and explore safely.\n\n**Video and Feedback:** You receive an update after every outing, including useful tips for you.",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",

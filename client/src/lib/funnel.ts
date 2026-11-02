@@ -137,11 +137,11 @@ export const walkingPrograms: FunnelProgram[] = [
     expiry: "Sessions expire in 6 months",
     composition: "5 Walk and Train sessions",
     summary:
-      "Move beyond the backyard and achieve true reliability. I train on real walks so your dog's skills are progressively tested where you actually need them.",
+      "Move beyond the backyard and achieve true reliability. I train on everyday walks so your dog's skills are progressively tested where you actually need them.",
     benefits: [
       "5 trainer-led 30-minute Walk and Train sessions",
       "Home pickup included",
-      "Obedience and manners practised during real walks",
+      "Obedience and manners practised during everyday walks",
       "Dedicated loose-lead walking practice",
       "Skills built around traffic, people, dogs and other everyday distractions",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
@@ -156,7 +156,7 @@ export const walkingPrograms: FunnelProgram[] = [
     expiry: "Sessions expire in 6 months",
     composition: "5 Adventure Walk and Training sessions",
     summary:
-      "Accelerate your dog's real-world reliability through five varied adventures packed with exploration, fulfilment and integrated skill work.",
+      "Build your dog's reliability out and about through five varied adventures packed with exploration, fulfilment and integrated skill work.",
     benefits: [
       "5 one-hour adventure outings with training built in",
       "Home pickup included",

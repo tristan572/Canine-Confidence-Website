@@ -32,7 +32,7 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/walking-adventure": {
     title: "Dog Walking and Adventure Training North Brisbane",
     description:
-      "Trainer-led walks, adventure outings and real-world reliability programs for North Brisbane dogs. New clients start with a $120 assessment.",
+      "Trainer-led walks, adventure outings and reliability programs for North Brisbane dogs. New clients start with a $120 assessment.",
     canonicalPath: "/walking-adventure",
   },
   "/services": {
