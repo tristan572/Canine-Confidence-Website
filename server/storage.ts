@@ -505,12 +505,12 @@ export class MemStorage implements IStorage {
         originalPrice: "$1,380",
         duration: "3 weeks · use within 6 months",
         sessions: 15,
-        description: "A complete communication system and skills you can rely on in everyday life.\n\nOver three weeks I train your dog at home and out on walks, work on everyday behaviour problems and many cases of reactivity, and coach you each week so the skills transfer to you.\n\n**Four Trainer-Led Sessions a Week:** I do the hard part, so the skills are already in place before you take over.\n\n**One Coaching Session a Week:** I show you what to do, why it works and how to keep it going, with detailed written notes to follow.\n\n**Clear Communication:** Your dog learns what you want, when they've got it right and when they haven't.",
+        description: "A complete communication system and skills you can rely on in everyday life.\n\nOver three weeks I train your dog at home and out on walks, work on everyday behaviour problems and mild to moderate reactivity, and coach you each week so the skills transfer to you.\n\n**Four Trainer-Led Sessions a Week:** I do the hard part, so the skills are already in place before you take over.\n\n**One Coaching Session a Week:** I show you what to do, why it works and how to keep it going, with detailed written notes to follow.\n\n**Clear Communication:** Your dog learns what you want, when they've got it right and when they haven't.",
         features: [
           "15 sessions over three weeks: 4 trainer-led sessions and 1 coaching session each week",
           "A complete communication system your dog understands",
           "Reliable skills practised at home and around everyday distractions",
-          "Work on everyday behaviour problems and many cases of reactivity",
+          "Work on everyday behaviour problems and mild to moderate reactivity",
           "Feedback and video updates throughout the program",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'",
         ],
@@ -521,7 +521,7 @@ export class MemStorage implements IStorage {
         originalPrice: "$2,760",
         duration: "6 weeks · use within 6 months",
         sessions: 30,
-        description: "For reactivity, anxiety or aggression that runs deeper, and more complex cases.\n\nThis program works on what is driving the behaviour, with time to change how your dog feels as well as what they do, and practical ways to keep everyone safe while the training progresses.\n\n**Four Trainer-Led Sessions a Week:** I work directly with your dog on the anxiety, impulse control and emotional responses behind their reactions.\n\n**One Coaching Session a Week:** You learn the handling and communication your dog already understands, so the progress carries into daily life.\n\n**Six Focused Weeks:** 30 sessions give real behaviour change the time it needs.",
+        description: "For severe or long-standing reactivity, multiple triggers, anxiety and aggression.\n\nThis program works on what is driving the behaviour, with time to change how your dog feels as well as what they do, and practical ways to keep everyone safe while the training progresses.\n\n**Four Trainer-Led Sessions a Week:** I work directly with your dog on the anxiety, impulse control and emotional responses behind their reactions.\n\n**One Coaching Session a Week:** You learn the handling and communication your dog already understands, so the progress carries into daily life.\n\n**Six Focused Weeks:** 30 sessions give real behaviour change the time it needs.",
       },
       "The Focused Progress Plan": {
         price: "$650",
