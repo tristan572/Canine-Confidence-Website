@@ -47,12 +47,12 @@ export const behaviourPrograms: FunnelProgram[] = [
     expiry: "Runs over three weeks",
     composition: "12 trainer-led sessions + 3 One-on-One Coaching sessions",
     summary:
-      "A complete communication system and skills you can rely on in everyday life. I train your dog at home and out on walks, work on everyday behaviour problems and mild to moderate reactivity, and coach you each week so the skills transfer to you.",
+      "A complete communication system and skills you can rely on in everyday life. I train your dog at home and out on walks, help with common behaviour problems and mild to moderate reactivity, and coach you each week so the skills transfer to you.",
     benefits: [
       "15 sessions over three weeks: 4 trainer-led sessions and 1 coaching session each week",
       "A complete communication system your dog understands",
       "Reliable skills practised at home and around everyday distractions",
-      "Work on everyday behaviour problems and mild to moderate reactivity",
+      "Help with common behaviour problems and mild to moderate reactivity",
       "Feedback and video updates throughout the program",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
     ],

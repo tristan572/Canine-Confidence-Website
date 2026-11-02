@@ -90,7 +90,7 @@ const programBenefits = [
 // aren't decided yet.
 const programLadder = [
   { stage: "Foundation", weeks: "1 week", name: "The Foundation Program", sessions: "5 sessions", text: "Engagement, motivation and fulfilment, plus the start of clear communication. The foundations every other skill is built on." },
-  { stage: "Connection", weeks: "3 weeks", name: "The Connected Companion", sessions: "15 sessions", text: "A complete communication system and skills you can rely on in everyday life, plus work on everyday behaviour problems and mild to moderate reactivity." },
+  { stage: "Connection", weeks: "3 weeks", name: "The Connected Companion", sessions: "15 sessions", text: "A complete communication system and skills you can rely on in everyday life. I also help with common behaviour problems and mild to moderate reactivity." },
   { stage: "Balance", weeks: "6 weeks", name: "The Balanced Canine", sessions: "30 sessions", text: "For severe or long-standing reactivity, multiple triggers, anxiety and aggression, with time to change how your dog feels as well as what they do." },
 ];
 
