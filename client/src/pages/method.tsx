@@ -32,7 +32,7 @@ const principles = [
   {
     title: "Real life",
     text: "Skills need to survive footpaths, parks, visitors and the distractions that matter in your life. That is where training earns its value.",
-    inSession: "Once a skill works at home, we take it to your footpath, your local park and your front door.",
+    inSession: "Once a skill is built at home, we take it out the front door to the footpaths and parks.",
   },
   {
     title: "Built to last",
