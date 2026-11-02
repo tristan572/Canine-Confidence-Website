@@ -90,8 +90,8 @@ const programBenefits = [
 // aren't decided yet.
 const programLadder = [
   { stage: "Foundation", weeks: "1 week", name: "The Foundation Program", sessions: "5 sessions", text: "Engagement, motivation and fulfilment, plus the start of clear communication. The foundations every other skill is built on." },
-  { stage: "Connection", weeks: "3 weeks", name: "The Connected Companion", sessions: "15 sessions", text: "A complete communication system and skills you can rely on in everyday life, plus work on everyday behaviour problems." },
-  { stage: "Balance", weeks: "6 weeks", name: "From Chaos to Calm", sessions: "30 sessions", text: "For reactivity, anxiety, aggression and anything more complex, with time to change how your dog feels as well as what they do." },
+  { stage: "Connection", weeks: "3 weeks", name: "The Connected Companion", sessions: "15 sessions", text: "A complete communication system and skills you can rely on in everyday life, plus work on everyday behaviour problems and many cases of reactivity." },
+  { stage: "Balance", weeks: "6 weeks", name: "The Balanced Canine", sessions: "30 sessions", text: "For reactivity, anxiety or aggression that runs deeper, and more complex cases, with time to change how your dog feels as well as what they do." },
 ];
 
 // The questions that most often stop people booking. Wording comes from the
@@ -339,7 +339,7 @@ export default function HomePage() {
                 Good trainers know a dog's needs come before obedience. The Four
                 Building Blocks is how I put that into practice with every dog. I
                 check all four at your assessment, work through them in order, and
-                build your written plan around them.
+                build your personalised plan around them.
               </p>
             </div>
           </div>

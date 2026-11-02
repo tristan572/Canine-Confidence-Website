@@ -47,26 +47,26 @@ export const behaviourPrograms: FunnelProgram[] = [
     expiry: "Runs over three weeks",
     composition: "12 trainer-led sessions + 3 One-on-One Coaching sessions",
     summary:
-      "A complete communication system and skills you can rely on in everyday life. I train your dog at home and out on walks, work on everyday behaviour problems, and coach you each week so the skills transfer to you.",
+      "A complete communication system and skills you can rely on in everyday life. I train your dog at home and out on walks, work on everyday behaviour problems and many cases of reactivity, and coach you each week so the skills transfer to you.",
     benefits: [
       "15 sessions over three weeks: 4 trainer-led sessions and 1 coaching session each week",
       "A complete communication system your dog understands",
       "Reliable skills practised at home and around everyday distractions",
-      "Work on everyday behaviour problems",
+      "Work on everyday behaviour problems and many cases of reactivity",
       "Feedback and video updates throughout the program",
       "Free guide: 'The Four Building Blocks of a Balanced Dog'",
     ],
     kind: "locked",
   },
   {
-    name: "From Chaos to Calm Program",
+    name: "The Balanced Canine",
     price: "$2,500",
     value: "$2,760 value",
     saving: "Save $260",
     expiry: "Runs over six weeks",
     composition: "24 trainer-led sessions + 6 One-on-One Coaching sessions",
     summary:
-      "For reactivity, anxiety, aggression and anything more complex. This program works on what is driving the behaviour, with time to change how your dog feels as well as what they do.",
+      "For reactivity, anxiety or aggression that runs deeper, and more complex cases. This program works on what is driving the behaviour, with time to change how your dog feels as well as what they do.",
     benefits: [
       "30 sessions over six weeks: 4 trainer-led sessions and 1 coaching session each week",
       "Clear communication that reduces confusion and helps your dog make better choices",

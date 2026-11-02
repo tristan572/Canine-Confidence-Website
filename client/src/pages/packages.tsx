@@ -23,7 +23,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
     const packageMap: Record<string, number> = {
       "The Confident Start Program": 6,
       "The Connected Companion": 13,
-      "From Chaos to Calm Program": 9,
+      "The Balanced Canine": 9,
       "The Focused Progress Plan": 2,
       "The Foundation Program": 1,
       "The Real World Reliability Package": 3,
