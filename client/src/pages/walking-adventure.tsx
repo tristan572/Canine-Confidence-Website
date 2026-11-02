@@ -54,7 +54,7 @@ export default function WalkingAdventurePage() {
             <p className="mb-4 text-lg leading-relaxed text-medium-grey">
               I take the time to understand what you want from your dog's walks,
               get to know their temperament and build a plan around who they are
-              and how they learn, so we can work together safely. From there, I suggest a walking or training
+              and how they learn. From there, I suggest a walking or training
               program to get you started.
             </p>
             <p className="mb-5 font-semibold text-charcoal">You don't need to choose a program before we meet.</p>
@@ -90,7 +90,7 @@ export default function WalkingAdventurePage() {
           <h2 className="mb-4 text-3xl font-extrabold">Start enjoying the walk again</h2>
           <p className="mb-7 text-lg text-white/80">
             We'll talk through what you want from the walks, get to know your
-            dog's temperament and build a plan around who they are and how they learn, so we can work together safely.
+            dog's temperament and build a plan around who they are and how they learn.
             I'll suggest a walking or training program to get you started.
           </p>
           <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
