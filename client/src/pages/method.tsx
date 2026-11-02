@@ -2,10 +2,10 @@ import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import { buildingBlocks } from "@/lib/building-blocks";
-import walk400 from "@assets/IMG_0084_card_400_opt.webp";
-import walk800 from "@assets/IMG_0084_card_800_opt.webp";
-import tug640 from "@assets/hero_tug_640.webp";
-import tug1024 from "@assets/hero_tug_1024.webp";
+import heel480 from "@assets/method_heel_480.webp";
+import heel960 from "@assets/method_heel_960.webp";
+import jump480 from "@assets/method_jump_480.webp";
+import jump960 from "@assets/method_jump_960.webp";
 
 // `inSession` shows what the principle looks like with a real dog.
 const principles = [
@@ -68,13 +68,13 @@ export default function MethodPage() {
             </p>
           </div>
           <img
-            src={walk800}
-            srcSet={`${walk400} 400w, ${walk800} 800w`}
+            src={heel960}
+            srcSet={`${heel480} 480w, ${heel960} 960w`}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            alt="Tristan walking his dog Cleo on a loose lead along a tree-lined path"
+            alt="A grey staffy sitting at Tristan's side, looking up at him while he holds a ball on a rope"
             className="h-auto w-full rounded-[26px] object-cover"
-            width={800}
-            height={766}
+            width={960}
+            height={1200}
             decoding="async"
           />
         </div>
@@ -135,13 +135,13 @@ export default function MethodPage() {
               Six things I won't compromise on.
             </h2>
             <img
-              src={tug1024}
-              srcSet={`${tug640} 640w, ${tug1024} 1024w`}
+              src={jump960}
+              srcSet={`${jump480} 480w, ${jump960} 960w`}
               sizes="(max-width: 1024px) 100vw, 40vw"
-              alt="Tristan playing tug with a dog during a training session"
+              alt="A grey staffy leaping for a tug toy Tristan is holding during a training session"
               className="hidden h-auto w-full rounded-[26px] object-cover lg:block"
-              width={1024}
-              height={683}
+              width={960}
+              height={960}
               loading="lazy"
               decoding="async"
             />
