@@ -25,9 +25,9 @@ export default function WalkingAdventurePage() {
               Your dog's walk should not be the most stressful part of your day
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">
-              I use real environments,
-              purposeful movement, play and carefully chosen challenges to build
-              focus, confidence and reliable skills while giving your dog the
+              I use real environments, structured walking, play, sniffing,
+              running and other carefully chosen challenges to build focus,
+              confidence and reliable skills, while giving your dog the
               physical and mental fulfilment they actually need.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
