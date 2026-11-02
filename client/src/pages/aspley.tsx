@@ -8,9 +8,9 @@ export default function AspleyPage() {
       nearbyAreas="Aspley, Carseldine and Bridgeman Downs"
       seoPath="/dog-training-aspley"
       eyebrow="Aspley, Carseldine & Bridgeman Downs"
-      heroHeading="Dog Training in Aspley"
+      heroHeading="Dog Behaviour Training in Aspley"
       heroSubheading="Practical training for the places your dog actually lives."
-      heroCopy="Aspley moves quickly from quiet residential streets to busy roads, shopping areas and dog-filled parks. I train in your home and around suitable local environments so your dog can build calm, reliable behaviour where you need it day to day."
+      heroCopy="If your dog is reactive, anxious or hard to live with, I can help you work through it at home in Aspley. The suburb moves quickly from quiet residential streets to busy roads, shopping areas and dog-filled parks. I train in your home and around suitable local environments so your dog can build calm, reliable behaviour where you need it day to day."
       heroImage={aspleyImage}
       heroImageAlt="Tristan training a Staffy in a leafy North Brisbane park"
       localHeading="From Marchant Park to the front door"

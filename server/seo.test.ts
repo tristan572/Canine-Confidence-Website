@@ -216,3 +216,42 @@ test(
 function escapeForHtml(value: string): string {
   return value.replace(/&/g, "&amp;").replace(/'/g, "&#x27;").replace(/"/g, "&quot;");
 }
+
+test("Aspley and Sandgate pages serve refreshed title, meta, canonical and copy", async () => {
+  const { STATIC_META } = await import("@shared/seo-meta");
+  const local = await import("@shared/sandgate-local");
+  const aspley = STATIC_META["/dog-training-aspley"];
+  const sandgate = STATIC_META["/dog-training-sandgate"];
+  assert.equal(aspley.title, "Dog Behaviour Training Aspley | Canine Confidence");
+  assert.match(aspley.description, /behaviour/i);
+  assert.match(aspley.description, /reactivity/);
+  assert.match(aspley.description, /anxiety/);
+  const newCopy = [aspley.title, aspley.description, sandgate.title, sandgate.description,
+    local.SANDGATE_LOCAL_HEADING, local.SANDGATE_LOCAL_P1, local.SANDGATE_LOCAL_P2];
+  for (const text of newCopy) {
+    assert.ok(!text.includes("\u2014"), `em dash in: ${text}`);
+    assert.ok(!text.includes("$"), `dollar sign in: ${text}`);
+  }
+  for (const m of [aspley, sandgate]) {
+    assert.ok(m.title.length <= 60, m.title);
+    assert.ok(m.description.length >= 140 && m.description.length <= 160, `${m.description.length}`);
+  }
+  await withSeoServer(async (baseUrl) => {
+    for (const [route, meta] of [["/dog-training-aspley", aspley], ["/dog-training-sandgate", sandgate]] as const) {
+      const html = await (await fetch(`${baseUrl}${route}`)).text();
+      assert.ok(html.includes(`<title>${meta.title.replace(/&/g, "&amp;")}</title>`), route);
+      assert.ok(html.includes(meta.description), route);
+      assert.ok(html.includes(`https://www.canineconfidence.com.au${route}`), route);
+    }
+    const sandgateHtml = await (await fetch(`${baseUrl}/dog-training-sandgate`)).text();
+    assert.ok(sandgateHtml.includes("Shorncliffe Pier"));
+  });
+});
+
+test("related blog posts link to the Sandgate page with descriptive anchors", async () => {
+  const src = fs.readFileSync(path.join(process.cwd(), "server/storage.ts"), "utf8");
+  const url = "https://www.canineconfidence.com.au/dog-training-sandgate";
+  assert.ok(src.includes(`[recall training around the Sandgate foreshore](${url})`));
+  assert.ok(src.includes(`[dog training in Sandgate and Shorncliffe](${url})`));
+  assert.ok(!/\[click here\]/i.test(src));
+});

@@ -92,7 +92,7 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/dog-training-sandgate": {
     title: "Dog Training Sandgate & Shorncliffe | Canine Confidence",
     description:
-      "Dog training in Sandgate, Shorncliffe & Brighton — foreshore recall, cafe manners, and loose-leash walking. Local trainer, real results on the Northside.",
+      "Dog training in Sandgate, Shorncliffe and Brighton. Calm foreshore walks, recall near the pier and cafe manners, built at home first. Book a free call.",
     canonicalPath: "/dog-training-sandgate",
   },
   "/dog-training-northgate": {
@@ -102,9 +102,9 @@ export const STATIC_META: Record<string, PageMeta> = {
     canonicalPath: "/dog-training-northgate",
   },
   "/dog-training-aspley": {
-    title: "Dog Training Aspley | Canine Confidence",
+    title: "Dog Behaviour Training Aspley | Canine Confidence",
     description:
-      "Personalised dog training in Aspley, Carseldine and Bridgeman Downs. In-home coaching and local training around Marchant Park and everyday distractions.",
+      "Dog behaviour help in Aspley for reactivity, anxiety, barking and pulling. In-home behaviour training with Tristan across Aspley, Carseldine and nearby.",
     canonicalPath: "/dog-training-aspley",
   },
   "/dog-training-ascot": {

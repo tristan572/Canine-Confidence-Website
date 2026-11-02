@@ -7,6 +7,7 @@ import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 import { FAQ_ITEMS, faqAnswerText } from "@shared/faq-content";
 import type { BlogPost } from "@shared/schema";
 import { createPagePrerenderer, defaultPrerenderBundlePath } from "./prerender-html";
+import { SANDGATE_LOCAL_P1, SANDGATE_LOCAL_P2 } from "@shared/sandgate-local";
 
 const SITE_URL = "https://www.canineconfidence.com.au";
 
@@ -279,12 +280,19 @@ const INITIAL_PAGE_CONTENT: Record<string, { h1: string; body: string[] }> = {
   "/contact": { h1: "Contact Canine Confidence", body: ["Get in touch to discuss dog training, coaching, walking or adventure services in North Brisbane."] },
   "/faq": { h1: "Frequently asked questions", body: ["Straight answers about Canine Confidence dog training services, booking and what to expect."] },
   "/dog-training-chermside": { h1: "Chermside Dog Training", body: ["Canine Confidence provides dog training services in Chermside, Kedron and Stafford Heights from its Boondall base."] },
-  "/dog-training-sandgate": { h1: "Sandgate, Shorncliffe & Brighton Dog Training", body: ["Canine Confidence provides dog training services across Sandgate, Shorncliffe and Brighton from its Boondall base."] },
+  "/dog-training-sandgate": {
+    h1: "Sandgate, Shorncliffe & Brighton Dog Training",
+    body: [
+      "Canine Confidence provides dog training services across Sandgate, Shorncliffe and Brighton from its Boondall base.",
+      SANDGATE_LOCAL_P1,
+      SANDGATE_LOCAL_P2,
+    ],
+  },
   "/dog-training-northgate": { h1: "Northgate & Nundah Dog Training", body: ["Canine Confidence provides dog training services across Northgate, Nundah and Kalinga from its Boondall base."] },
   "/dog-training-aspley": {
-    h1: "Dog Training in Aspley",
+    h1: "Dog Behaviour Training in Aspley",
     body: [
-      "Personalised in-home and local dog training across Aspley, Carseldine and Bridgeman Downs.",
+      "Help with dog behaviour problems in Aspley, Carseldine and Bridgeman Downs, from reactivity and anxiety to barking and pulling on the lead.",
       "Training can cover puppy development, behaviour and obedience, walking skills and practical work around suitable local environments including Marchant Park.",
     ],
   },

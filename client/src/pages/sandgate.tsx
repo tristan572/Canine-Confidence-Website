@@ -9,6 +9,7 @@ import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
+import { SANDGATE_LOCAL_HEADING, SANDGATE_LOCAL_P1, SANDGATE_LOCAL_P2 } from "@shared/sandgate-local";
 
 export default function SandgatePage() {
   const pricing = usePricing();
@@ -127,6 +128,15 @@ export default function SandgatePage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Local section */}
+      <section className="py-16 bg-light-grey" data-testid="section-sandgate-local">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <h2 className="text-3xl font-bold text-charcoal">{SANDGATE_LOCAL_HEADING}</h2>
+          <p className="text-lg text-medium-grey leading-relaxed">{SANDGATE_LOCAL_P1}</p>
+          <p className="text-lg text-medium-grey leading-relaxed">{SANDGATE_LOCAL_P2}</p>
         </div>
       </section>
 

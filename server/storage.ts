@@ -2501,7 +2501,7 @@ If you're not sure he's going to come, don't call yet. Go and get him, or move c
 
 Start in the house, where there's not much competing with you. Call him from one room to the next, say YES as he heads your way, make a fuss with a good reward, and let him go back to what he was doing. Then the backyard. Then the front yard. Then a quiet park on a long lead, so that if he doesn't come you can guide him in instead of chasing him.
 
-Only add one hard thing at a time. A dog that comes every time in the backyard can still fall apart the first time there's a pelican on the footpath at the beach. That just means you've moved too fast, so go back a step and build it again.
+Only add one hard thing at a time. A dog that comes every time in the backyard can still fall apart the first time there's a pelican on the footpath at the beach. That just means you've moved too fast, so go back a step and build it again. If you live near the bay, I've written about how I approach [recall training around the Sandgate foreshore](https://www.canineconfidence.com.au/dog-training-sandgate).
 
 ## When to get help
 
@@ -2551,7 +2551,7 @@ I use two words for this. Ah-ah, which means stop, you're not getting any closer
 
 In most cases I teach ah-ah with food. Put a piece of food on the floor, and when he goes for it, say ah-ah and stop him getting any closer with the lead, your hand or your foot. The moment he looks away from it or backs off, say YES and reward him. Keep the sessions short and practise it around the house until he's turning away from the food without much fuss.
 
-Ta I teach with his balls, tugs and toys, because play is one of the best ways I know to get a dog letting go happily, starting with the toys he's not that fussed about and building up in small steps to the ones he loves. I've covered how to teach ta step by step in an earlier blog, so rather than half explain it here, have a read of [How to Teach Your Dog to Let Go (and Listen When Excited)](https://www.canineconfidence.com.au/blog/teach-dog-let-go-play-brisbane). If he gets it wrong, keep the rules exactly the same and give him more goes at it, because that's how it gets strong. A handful of good repetitions in the lounge room will do more for you than a string of failures down at Sandgate on a Saturday morning.
+Ta I teach with his balls, tugs and toys, because play is one of the best ways I know to get a dog letting go happily, starting with the toys he's not that fussed about and building up in small steps to the ones he loves. I've covered how to teach ta step by step in an earlier blog, so rather than half explain it here, have a read of [How to Teach Your Dog to Let Go (and Listen When Excited)](https://www.canineconfidence.com.au/blog/teach-dog-let-go-play-brisbane). If he gets it wrong, keep the rules exactly the same and give him more goes at it, because that's how it gets strong. A handful of good repetitions in the lounge room will do more for you than a string of failures down at Sandgate on a Saturday morning. When he's ready for the real thing, [dog training in Sandgate and Shorncliffe](https://www.canineconfidence.com.au/dog-training-sandgate) is where I take that work out onto the busy foreshore.
 
 ## Using play to check he's ready
 
