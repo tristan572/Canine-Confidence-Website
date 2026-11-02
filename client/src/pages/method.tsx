@@ -41,8 +41,13 @@ const principles = [
   },
 ];
 
-// Widest block at the bottom: each one rests on the one below.
-const stackWidths = ["w-full", "w-[92%]", "w-[84%]", "w-[76%]"];
+// Widest, darkest block at the base: each one rests on the one below.
+const stackStyles = [
+  "w-full bg-sky-deep",
+  "w-[94%] lg:w-[86%] bg-sky-deep/70",
+  "w-[88%] lg:w-[72%] bg-sky-deep/45",
+  "w-[82%] lg:w-[58%] bg-sky-deep/25",
+];
 
 export default function MethodPage() {
   return (
@@ -104,19 +109,17 @@ export default function MethodPage() {
               Read the full framework →
             </Link>
           </div>
-          <ol className="flex flex-col-reverse items-center gap-2.5" aria-label="The Four Building Blocks, from the base up">
+          <ol className="flex flex-col-reverse items-center gap-1.5" aria-label="The Four Building Blocks, from the base up">
             {buildingBlocks.map(({ number, title, short }, i) => (
               <li
                 key={title}
-                className={`${stackWidths[i]} rounded-2xl border border-white/15 bg-white/[0.06] px-5 py-4 sm:px-6`}
+                className={`${stackStyles[i]} flex min-h-[6.5rem] flex-col items-center justify-center rounded-xl px-5 py-3 text-center`}
               >
-                <div className="flex items-baseline gap-4">
-                  <span className="font-quote text-2xl italic text-[#8FD3F2]">{number}</span>
-                  <div>
-                    <h3 className="text-lg font-extrabold">{title}</h3>
-                    <p className="text-sm leading-relaxed text-white/75 sm:text-base">{short}</p>
-                  </div>
-                </div>
+                <h3 className="text-lg font-extrabold">
+                  <span className="mr-2 font-quote font-normal italic text-[#8FD3F2]">{number}</span>
+                  {title}
+                </h3>
+                <p className="mt-1 max-w-[19rem] text-sm leading-snug text-white/80">{short}</p>
               </li>
             ))}
           </ol>
