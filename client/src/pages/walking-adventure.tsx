@@ -7,7 +7,8 @@ import {
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
-import walkingImage from "@assets/IMG_0084_card_800_opt.webp";
+import weave480 from "@assets/adventure_weave_480.webp";
+import weave960 from "@assets/adventure_weave_960.webp";
 
 export default function WalkingAdventurePage() {
   const pricing = usePricing();
@@ -37,11 +38,13 @@ export default function WalkingAdventurePage() {
             </div>
           </div>
           <img
-            src={walkingImage}
-            alt="Tristan walking a client dog through a North Brisbane park"
-            className="h-[360px] w-full rounded-[26px] object-cover object-center sm:h-[440px]"
-            width={640}
-            height={480}
+            src={weave960}
+            srcSet={`${weave480} 480w, ${weave960} 960w`}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="A grey staffy weaving through Tristan's legs as he holds a tug toy in an open park"
+            className="h-auto w-full rounded-[26px] object-cover"
+            width={960}
+            height={1200}
           />
         </div>
       </section>
