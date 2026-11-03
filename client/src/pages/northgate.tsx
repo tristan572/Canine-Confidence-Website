@@ -4,13 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { MapPin, Phone, Check, Calendar, ShieldCheck, Award, Heart, Users, Footprints } from "lucide-react";
+import { MapPin, Phone, Check, Heart, Users, Footprints } from "lucide-react";
 import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ConsultationForm from "@/components/forms/consultation-form";
 import tristanPortraitWebp from "@assets/trainer_kelpie_600.webp";
 import tristanPortraitJpeg from "@assets/trainer_kelpie_800.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
+import FinalCta from "@/components/funnel/final-cta";
 
 export default function NorthgatePage() {
   const pricing = usePricing();
@@ -468,59 +469,11 @@ export default function NorthgatePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-extrabold text-white">
-                Ready to walk Kedron Brook without the battle?
-              </h2>
-              <p className="text-xl text-white opacity-90">
-                A free 15-minute call is enough to work out what your dog needs and where to start.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button variant="outline"
-                    className="btn-secondary border-white bg-transparent text-white hover:border-white hover:bg-white hover:text-navy px-8 py-4 text-lg"
-                    data-testid="button-free-call-cta"
-                  >
-                    Book a Free Call
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Book a Free Call</DialogTitle>
-                  <DialogDescription>
-                    Book a free 15-minute call to talk through what your dog needs.
-                  </DialogDescription>
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
-
-              <Button
-                onClick={() => setShowPackagesDialog(true)}
-                className={`btn-cta ${CTA_COLOURS} px-8 py-4 text-lg order-first`}
-                data-testid="button-book-now-cta"
-              >
-                Book Assessment
-              </Button>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-white/80">
-              <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-2" />
-                <span>Fully Insured</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span>NDTF Certified</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        heading="Ready to walk Kedron Brook without the battle?"
+        text="Start with an assessment at your home, or ask about your dog first and I'll help you work out where to start."
+        location="Northgate final CTA"
+      />
 
       {/* Security Dialogs */}
       <Dialog open={showAssessmentDialog} onOpenChange={setShowAssessmentDialog}>

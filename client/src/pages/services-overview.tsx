@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
+import FinalCta from "@/components/funnel/final-cta";
 
 const paths = [
   { href: "/puppy", title: "Puppy Raising", text: "Start your puppy with private in-home coaching and the Confident Start Program." },
@@ -29,6 +30,12 @@ export default function ServicesOverviewPage() {
           ))}
         </div>
       </section>
+
+      <FinalCta
+        heading="Not sure which service is right for you?"
+        text="Start with an assessment and I'll recommend the service that suits your dog. If you'd rather talk first, ask about your dog and I'll help you work out where to start."
+        location="Services final CTA"
+      />
     </div>
   );
 }

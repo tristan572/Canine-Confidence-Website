@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ProgramCard } from "@/components/funnel/program-card";
 import { ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import { StaticSEO } from "@/components/SEO";
+import FinalCta from "@/components/funnel/final-cta";
+import { usePricing } from "@/hooks/use-pricing";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
 import puppy480 from "@assets/puppy_renegade_480.webp";
@@ -195,7 +197,7 @@ export default function PuppyPage() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12">
             <a
               href="https://share.google/NJfyc690NWAMVb3LX"
               target="_blank"
@@ -204,10 +206,32 @@ export default function PuppyPage() {
             >
               Read all {GOOGLE_REVIEW_COUNT} Google reviews →
             </a>
-            <BookButton label="Book the Confident Start Program" />
           </div>
         </div>
       </section>
+
+      <FinalCta
+        heading="Give your puppy a confident start"
+        text="No assessment needed for puppies. Book the program directly and I'll come to your home to start on house training, settling, manners and socialisation. If you'd like to talk it through first, ask about your puppy."
+        location="Puppy final CTA"
+        cardTitle="The Confident Start Program"
+        details={<PuppyDetails />}
+        primaryAction={<BookButton label="Book the Program" className="w-full" />}
+        askLabel="Ask About Your Puppy First"
+      />
     </div>
+  );
+}
+
+function PuppyDetails() {
+  const pricing = usePricing();
+  return (
+    <p className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-lg font-semibold text-charcoal">
+      <span>{pricing.packagePrice(confidentStart.name)}</span>
+      <span aria-hidden="true">·</span>
+      <span>6 sessions</span>
+      <span aria-hidden="true">·</span>
+      <span>In your home</span>
+    </p>
   );
 }

@@ -1,11 +1,11 @@
 import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
-import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import { buildingBlocks } from "@/lib/building-blocks";
 import heel480 from "@assets/method_heel_480.webp";
 import heel960 from "@assets/method_heel_960.webp";
 import jump480 from "@assets/method_jump_480.webp";
 import jump960 from "@assets/method_jump_960.webp";
+import FinalCta from "@/components/funnel/final-cta";
 
 // `inSession` shows what the principle looks like with a real dog.
 const principles = [
@@ -181,22 +181,11 @@ export default function MethodPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-navy/10 bg-sand px-6 py-10 text-center sm:px-10">
-          <h2 className="mb-4 text-3xl font-extrabold text-charcoal">
-            Start training for the life you want together
-          </h2>
-          <p className="mb-7 text-lg leading-relaxed text-medium-grey">
-            Your assessment gives me the full picture of your dog, your goals
-            and daily life. From there, I recommend the training approach that
-            will get you where you want to go.
-          </p>
-          <AssessmentButton
-            location="Method final CTA"
-            className="px-7 py-4 text-lg"
-          />
-        </div>
-      </section>
+      <FinalCta
+        heading="Start training for the life you want together"
+        text="Your assessment gives me the full picture of your dog, your goals and daily life. From there, I recommend the training approach that will get you where you want to go."
+        location="Method final CTA"
+      />
     </div>
   );
 }

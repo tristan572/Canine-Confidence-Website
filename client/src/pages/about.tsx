@@ -9,6 +9,7 @@ import portraitJpeg from "@assets/trainer_gsd_800.jpg";
 import training640 from "@assets/hero_tug_640.webp";
 import training1024 from "@assets/hero_tug_1024.webp";
 import trainingJpeg from "@assets/hero_tug_1024.jpg";
+import FinalCta from "@/components/funnel/final-cta";
 
 // How it feels to work with Tristan, in his own terms. Short on purpose: the
 // story above carries the page; these are the promises.
@@ -222,22 +223,11 @@ export default function AboutPage() {
       </section>
 
       {/* Next step */}
-      <section className="py-20 lg:py-32">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-5xl">
-            Let's meet your dog.
-          </h2>
-          <p className="mb-8 text-lg leading-relaxed text-medium-grey lg:text-xl">
-            Start with an assessment at your home. If you'd like to talk it
-            through first, request a free 15-minute call and I'll get back to you
-            within 24 hours.
-          </p>
-          <div className="flex flex-col justify-center gap-3 sm:flex-row">
-            <AssessmentButton location="About final CTA" className="h-auto px-7 py-4 text-lg" showIcon={false} />
-            <ConsultationButton className="btn-secondary h-auto px-7 py-4 text-lg" showIcon={false} />
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        heading="Let's meet your dog."
+        text="Start with an assessment at your home. If you'd like to talk it through first, request a free 15-minute call and I'll get back to you within 24 hours."
+        location="About final CTA"
+      />
     </div>
   );
 }

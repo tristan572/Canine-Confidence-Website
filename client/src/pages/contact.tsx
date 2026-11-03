@@ -9,7 +9,6 @@ import {
   Clock, 
   MessageCircle,
   HeadphonesIcon,
-  Calendar,
   Video,
   Facebook,
   Instagram
@@ -19,7 +18,7 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
 import contactHeroImageWebp from "@assets/image_1750049297197.webp";
 import contactHeroImageJpeg from "@assets/image_1750049297197.jpg";
-import { getBookingLinkProps } from "@/lib/analytics";
+import FinalCta from "@/components/funnel/final-cta";
 
 export default function ContactPage() {
   return (
@@ -278,36 +277,11 @@ export default function ContactPage() {
       </section>
 
       {/* Ready to Start Section */}
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-16 bg-primary-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-extrabold text-white">Still thinking it over?</h2>
-            <p className="text-xl text-white/80">
-              Call me directly and I'll work out if I can help — no forms, no wait.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild className="px-8 py-4 text-lg font-semibold">
-                <a href="tel:0409521358">
-                  <Phone className="w-5 h-5 mr-2" />
-                  0409 521 358
-                </a>
-              </Button>
-              <Button asChild variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors">
-                <a
-                  {...getBookingLinkProps(
-                    "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
-                    "service",
-                    "Initial Canine Success Assessment | Contact page",
-                  )}
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book Assessment
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        heading="Still thinking it over?"
+        text={<>Call me directly on <a href="tel:0409521358" className="font-bold text-primary underline-offset-4 hover:underline">0409 521 358</a> and I'll work out if I can help.</>}
+        location="Contact final CTA"
+      />
     </div>
   );
 }

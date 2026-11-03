@@ -2,10 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 import { Star } from "lucide-react";
 import { StaticSEO } from "@/components/SEO";
 import TestimonialCard from "@/components/ui/testimonial-card";
-import { AssessmentButton } from "@/components/funnel/funnel-cta";
 import ReviewCards from "@/components/review-cards";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
 import type { Testimonial } from "@shared/schema";
+import FinalCta from "@/components/funnel/final-cta";
 
 export default function ReviewsPage() {
   const { data: testimonials = [], isLoading } = useQuery<Testimonial[]>({
@@ -77,17 +77,11 @@ export default function ReviewsPage() {
           )}
         </div>
       </section>
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
-        <h2 className="mb-3 text-3xl font-bold">Want the kind of change these owners describe?</h2>
-        <p className="mx-auto mb-7 max-w-2xl px-4 text-lg text-blue-100">
-          Start with an assessment and get a plan built around your dog, your
-          challenges and the life you want together.
-        </p>
-        <AssessmentButton
-          location="Reviews final CTA"
-          className="bg-white text-primary-blue hover:bg-gray-50"
-        />
-      </section>
+      <FinalCta
+        heading="Want the kind of change these owners describe?"
+        text="Start with an assessment and get a plan built around your dog, your challenges and the life you want together."
+        location="Reviews final CTA"
+      />
     </div>
   );
 }

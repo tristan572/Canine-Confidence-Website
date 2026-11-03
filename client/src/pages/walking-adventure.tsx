@@ -10,6 +10,7 @@ import { walkingPrograms } from "@/lib/funnel";
 import ReviewQuote from "@/components/review-quote";
 import weave480 from "@assets/adventure_weave_480.webp";
 import weave960 from "@assets/adventure_weave_960.webp";
+import FinalCta from "@/components/funnel/final-cta";
 
 export default function WalkingAdventurePage() {
   const pricing = usePricing();
@@ -97,21 +98,11 @@ export default function WalkingAdventurePage() {
         className="bg-white"
       />
 
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-extrabold">Start enjoying the walk again</h2>
-          <p className="mb-7 text-lg text-white/80">
-            We'll talk through what you want from the walks, get to know your
-            dog's temperament and build a plan around who they are and how they learn.
-            I'll suggest a walking or training program to get you started.
-          </p>
-          <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
-          <AssessmentButton
-            location="Walking final CTA"
-            className=""
-          />
-        </div>
-      </section>
+      <FinalCta
+        heading="Start enjoying the walk again"
+        text="We'll talk through what you want from the walks, get to know your dog's temperament and build a plan around who they are and how they learn. I'll suggest a walking or training program to get you started."
+        location="Walking final CTA"
+      />
     </div>
   );
 }

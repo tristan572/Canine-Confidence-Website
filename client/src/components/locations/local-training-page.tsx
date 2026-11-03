@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
+import FinalCta from "@/components/funnel/final-cta";
 
 export interface LocalHighlight {
   label: string;
@@ -226,21 +227,11 @@ export default function LocalTrainingPage({
         </div>
       </section>
 
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-extrabold">Ready to make daily life with your dog easier?</h2>
-          <p className="mb-7 text-lg text-white/80">
-            Book an assessment or use the free phone consult if you want to check which service suits your dog.
-          </p>
-          <div className="flex flex-col justify-center gap-3 sm:flex-row">
-            <AssessmentButton
-              location={`${suburb} final CTA`}
-              className="px-7 py-4 text-lg"
-            />
-            <ConsultationButton className="btn-secondary border-white bg-transparent px-7 py-4 text-lg text-white hover:border-white hover:bg-white hover:text-navy" />
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        heading="Ready to make daily life with your dog easier?"
+        text={`Start with an assessment at your home in ${suburb}, or ask about your dog first and I'll help you work out which service suits them.`}
+        location={`${suburb} final CTA`}
+      />
     </div>
   );
 }

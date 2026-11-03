@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { AssessmentIntro } from "@/components/funnel/assessment-intro";
 import { StaticSEO } from "@/components/SEO";
+import FinalCta from "@/components/funnel/final-cta";
 
 const paths = [
   { href: "/puppy", title: "Puppy programs", text: "The Confident Start Program is available to book directly." },
@@ -33,6 +34,12 @@ export default function PackagesOverviewPage() {
           ))}
         </div>
       </section>
+
+      <FinalCta
+        heading="Not sure which program is right for you?"
+        text="Start with an assessment and I'll recommend the program that suits your dog. If you'd rather talk first, ask about your dog and I'll help you work out where to start."
+        location="Programs final CTA"
+      />
     </div>
   );
 }

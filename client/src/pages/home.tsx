@@ -24,6 +24,7 @@ import trainer600 from "@assets/trainer_staffy_600.webp";
 import trainer1122 from "@assets/trainer_staffy_1122.webp";
 import trainerJpeg from "@assets/trainer_staffy_800.jpg";
 import { buildingBlocks } from "@/lib/building-blocks";
+import FinalCta from "@/components/funnel/final-cta";
 
 const steps = [
   { title: "Book your assessment", text: "I take the time to understand what you want to achieve and get to know your dog's temperament." },
@@ -585,40 +586,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-10 rounded-[26px] bg-sand p-8 text-charcoal sm:p-12 lg:flex-row lg:items-center lg:p-16">
-            <div className="flex-1">
-              <p className="mb-3 font-quote text-xl italic text-sky-deep">
-                Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving.
-              </p>
-              <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Get clear on what your dog needs</h2>
-              <p className="text-lg leading-relaxed text-medium-grey">
-                I take the time to understand what you want to achieve, get to know
-                your dog's temperament and build a plan around who they are and how
-                they learn. From there, I recommend a program to get you started.
-              </p>
-            </div>
-            <div className="w-full rounded-2xl bg-white p-7 text-foreground lg:w-96 lg:shrink-0">
-              <p className="eyebrow mb-3">Initial Canine Success Assessment</p>
-              <AssessmentDetails className="mb-6 text-lg text-charcoal" />
-              <div className="flex flex-col gap-3">
-                <AssessmentButton
-                  location="Home final CTA"
-                  className="w-full"
-                  showIcon={false}
-                />
-                <ConsultationButton
-                  label="Ask About Your Dog First"
-                  className="btn-secondary w-full"
-                  showIcon={false}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        kicker="Calmer homes. Stronger bonds. Dogs that are fulfilled and thriving."
+        heading="Get clear on what your dog needs"
+        text="I take the time to understand what you want to achieve, get to know your dog's temperament and build a plan around who they are and how they learn. From there, I recommend a program to get you started."
+        location="Home final CTA"
+      />
 
       {blogPosts.length > 0 && (
         <section className="bg-sand py-20 lg:py-32">
