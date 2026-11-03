@@ -1,6 +1,6 @@
 import { usePricing } from "@/hooks/use-pricing";
 import { AssessmentDetails } from "@/components/funnel/assessment-intro";
-import { ArrowRight, Calendar, ClipboardList } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle2, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StaticSEO } from "@/components/SEO";
 import { ProgramCard } from "@/components/funnel/program-card";
@@ -13,6 +13,20 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import ReviewQuote from "@/components/review-quote";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 import FinalCta from "@/components/funnel/final-cta";
+
+const problems = [
+  "Pulling on the lead",
+  "Barking",
+  "Jumping up",
+  "Poor recall",
+  "Over-excitement",
+  "Anxiety",
+  "Chewing and destructive habits",
+  "Chasing",
+  "Guarding",
+  "Dog reactivity",
+  "Everyday manners",
+];
 
 export default function BehaviourObediencePage() {
   const pricing = usePricing();
@@ -50,16 +64,24 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">For the problems making daily life hard</h2>
-          <p className="max-w-3xl text-lg leading-relaxed text-medium-grey">
-            I help with pulling, barking, jumping up, poor recall, over-excitement,
-            anxiety, chewing and destructive habits, chasing, guarding, dog
-            reactivity and everyday manners. I look at what is happening beneath
-            the behaviour, then build the skills that make life easier at home and
-            out in the world.
-          </p>
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+          <div className="lg:col-span-5">
+            <p className="eyebrow mb-3">What I help with</p>
+            <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">For the problems making daily life hard</h2>
+            <p className="text-lg leading-relaxed text-medium-grey">
+              I look at what is happening beneath the behaviour, then build the
+              skills that make life easier at home and out in the world.
+            </p>
+          </div>
+          <ul className="grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2 lg:col-span-7 lg:self-center">
+            {problems.map((problem) => (
+              <li key={problem} className="flex items-center gap-3 border-b border-navy/10 pb-4 text-lg font-semibold text-charcoal">
+                <CheckCircle2 className="h-6 w-6 shrink-0 text-sky-deep" aria-hidden="true" />
+                {problem}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
