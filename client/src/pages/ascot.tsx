@@ -47,20 +47,20 @@ export default function AscotPage() {
       localProcessCopy="Your training may begin at home, on the streets you walk most often or at a quieter location before progressing towards busier Ascot environments. I set the difficulty around the dog in front of me and coach you on the information that needs to last after the program."
       faqs={[
         {
-          question: "Do you provide in-home dog training in Ascot?",
-          answer: "Yes. I come to clients across Ascot, Hamilton and Hendra for suitable in-home services. Working where the behaviour happens gives me a clearer picture of your dog's routines, environment and the practical result you need.",
-        },
-        {
-          question: "Can training include Racecourse Road or the racecourse area?",
-          answer: "Suitable public areas around the precinct can be used when they match your dog's goals and current ability. I do not rely on access to private racecourse grounds or local businesses, and I build distraction levels gradually.",
-        },
-        {
           question: "Can you help my dog settle at cafes?",
-          answer: "Yes. Calm waiting, lead manners, engagement and settling can all be part of a personalised plan. The first steps may be taught somewhere quieter before asking your dog to manage a busy cafe environment.",
+          answer: "Yes. Calm waiting, lead manners, engagement and settling can all be part of your plan. We may start somewhere quieter before asking your dog to manage a busy cafe.",
         },
         {
-          question: "Do you work with reactive or anxious dogs?",
-          answer: "Yes. Adult behaviour work begins with an assessment so I can understand the triggers, emotional response, handling and environment before recommending a program.",
+          question: "Can you help with reactivity or anxiety?",
+          answer: "Yes. I work with dogs who bark, lunge or shut down around other dogs, people or busy places. We start with an assessment so I can see what triggers your dog and how they cope, then build the plan around that.",
+        },
+        {
+          question: "How many sessions will my dog need?",
+          answer: "It depends on your dog and what you want to change. After the assessment I recommend a program and tell you exactly how many sessions it includes, so you know what you're booking before you commit.",
+        },
+        {
+          question: "Will I need to practise between sessions?",
+          answer: "Yes, a little each day. After every session I email you notes on what we covered and what to work on first, and you can send me a question or a video if something isn't working before we meet again.",
         },
       ]}
     />

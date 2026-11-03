@@ -214,6 +214,8 @@ export default function LocalTrainingPage({
         </div>
       </section>
 
+      <MeetTristan />
+
       <section className="bg-sand py-16 lg:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-8 text-3xl font-extrabold text-charcoal">{suburb} dog training FAQs</h2>
@@ -227,8 +229,6 @@ export default function LocalTrainingPage({
           </div>
         </div>
       </section>
-
-      <MeetTristan />
 
       <FinalCta
         heading="Ready to make daily life with your dog easier?"
