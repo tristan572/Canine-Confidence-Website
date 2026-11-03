@@ -92,12 +92,15 @@ export default function PuppyPage() {
       </section>
 
       {/* The goal, in one line */}
-      <section className="px-2 sm:px-4 lg:px-6">
-        <div className="mx-auto max-w-[88rem] rounded-[28px] bg-primary py-16 text-white lg:rounded-[32px] lg:py-24">
-          <p className="mx-auto max-w-4xl px-4 text-center font-quote text-3xl font-normal italic leading-snug sm:px-6 lg:text-5xl">
-            I want your puppy to grow into a confident, connected dog who
-            understands how to live in your world.
-          </p>
+      <section className="bg-sand py-14 lg:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="border-l-2 border-sky-brand pl-6 lg:pl-10">
+            <p className="eyebrow mb-3">The goal</p>
+            <p className="font-quote text-2xl font-normal italic leading-snug text-charcoal lg:text-3xl">
+              I want your puppy to grow into a confident, connected dog who
+              understands how to live in your world.
+            </p>
+          </div>
         </div>
       </section>
 
