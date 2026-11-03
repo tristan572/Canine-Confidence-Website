@@ -41,7 +41,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "How long will training take?",
     answer: [
-      "It depends on the dog, the goals, and how consistent the practice is at home. Most owners see meaningful change in three to six weeks. Real-world reliability (off-lead, distractions, public spaces) takes longer.",
+      "It depends on the dog, the goals, and how consistent the practice is at home. Most owners see good changes within the first week. For most dogs I recommend three weeks of training, which surprises owners who expect it to take months. Real-world reliability (off-lead, distractions, public spaces) takes longer.",
       "I'll give you a clearer estimate throughout the program.",
     ],
   },
