@@ -5,6 +5,8 @@ import heel480 from "@assets/method_heel_480.webp";
 import heel960 from "@assets/method_heel_960.webp";
 import weave480 from "@assets/adventure_weave_480.webp";
 import weave960 from "@assets/adventure_weave_960.webp";
+import { usePricing } from "@/hooks/use-pricing";
+import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import FinalCta from "@/components/funnel/final-cta";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
@@ -51,6 +53,7 @@ const stackStyles = [
 ];
 
 export default function MethodPage() {
+  const pricing = usePricing();
   return (
     <div className="min-h-screen">
       <StaticSEO path="/method" />
@@ -61,12 +64,16 @@ export default function MethodPage() {
             <h1 className="mb-5 text-4xl font-extrabold text-charcoal lg:text-5xl">
               The goal is a dog you can take anywhere.
             </h1>
-            <p className="text-xl leading-relaxed text-medium-grey">
+            <p className="mb-8 text-xl leading-relaxed text-medium-grey">
               Every dog is different, so every program should be different. I
               look at the dog, their drives and what daily life actually looks
               like, then combine play, fulfilment, clear communication and
               real-world practice to build something that lasts.
             </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Method hero" className="px-7 py-4 text-lg" />
+              <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
+            </div>
           </div>
           <img
             src={weave960}
