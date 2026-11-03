@@ -14,6 +14,7 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
+import HowItWorks from "@/components/how-it-works";
 
 export default function ChermsidePage() {
   const pricing = usePricing();
@@ -481,6 +482,8 @@ export default function ChermsidePage() {
           </div>
         </div>
       </section>
+
+      <HowItWorks intro="From your own front door to the footpaths around Westfield, the plan is built around your dog and the places you take them." />
 
       <MeetTristan />
 

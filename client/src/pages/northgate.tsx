@@ -14,6 +14,7 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
+import HowItWorks from "@/components/how-it-works";
 
 export default function NorthgatePage() {
   const pricing = usePricing();
@@ -469,6 +470,8 @@ export default function NorthgatePage() {
           </div>
         </div>
       </section>
+
+      <HowItWorks intro="From your house to Kalinga Park and the Kedron Brook bikeway, the plan is built around your dog and the walks you actually do." />
 
       <MeetTristan />
 

@@ -12,6 +12,7 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
+import HowItWorks from "@/components/how-it-works";
 
 export default function SandgatePage() {
   const pricing = usePricing();
@@ -383,54 +384,7 @@ export default function SandgatePage() {
         </div>
       </section>
 
-      {/* Getting Started Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-charcoal mb-4">
-              How to Get Started
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            <Card className="bg-light-grey border-0">
-              <CardContent className="p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-extrabold text-charcoal mb-4">For Adult and Adolescent Dogs</h3>
-                <p className="text-medium-grey mb-6 flex-1">
-                  I start with an Initial Canine Success Assessment. One 60-minute session to assess your dog, identify what's driving the behaviour, and build a tailored plan before we begin.
-                </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">{assessmentPrice}</div>
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className={`btn-cta ${CTA_COLOURS} w-full`}
-                  data-testid="button-book-assessment-adult"
-                >
-                  Book Assessment
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-sand border-0 rounded-[22px]">
-              <CardContent className="p-8 text-center flex flex-col h-full">
-                <h3 className="text-2xl font-extrabold text-charcoal mb-4">For Puppies</h3>
-                <p className="text-medium-grey mb-6 flex-1">
-                  The Confident Start Program needs no prior assessment. Book directly and we get started.
-                </p>
-                <div className="text-3xl font-bold text-primary-blue mb-6">
-                  {confidentStartPrice} for {confidentStartSessions ?? "…"} sessions
-                </div>
-                <Button
-                  onClick={() => setShowConfidentStartDialog(true)}
-                  className={`btn-cta ${CTA_COLOURS} w-full`}
-                  data-testid="button-enrol-puppy"
-                >
-                  Book Puppy Program
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <HowItWorks intro="From your home to the foreshore and Shorncliffe Pier, the plan is built around your dog and the places you want to enjoy together." />
 
       <MeetTristan />
 
