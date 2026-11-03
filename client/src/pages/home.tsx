@@ -395,12 +395,18 @@ export default function HomePage() {
                   <p className="mt-2 font-extrabold text-charcoal">{name}</p>
                   <p className="text-sm font-semibold text-muted-foreground">{sessions}</p>
                   <p className="mt-3 leading-relaxed text-medium-grey">{text}</p>
+                  <Link
+                    href={`/behaviour-obedience#${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                    className="mt-4 inline-block font-extrabold text-primary hover:text-sky-deep"
+                  >
+                    Full program details →
+                  </Link>
                 </li>
               ))}
             </ol>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
               <Link href="/behaviour-obedience" className="font-extrabold text-primary hover:text-sky-deep">
-                See the programs →
+                Compare all behaviour programs →
               </Link>
               <p className="text-medium-grey">
                 Also available:{" "}
