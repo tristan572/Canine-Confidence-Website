@@ -7,9 +7,9 @@ import { Link } from "wouter";
 import { MapPin, Phone, Check, Users, Footprints } from "lucide-react";
 import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ConsultationForm from "@/components/forms/consultation-form";
-import ball480 from "@assets/chermside_ball_480.webp";
-import ball768 from "@assets/chermside_ball_768.webp";
-import ballJpeg from "@assets/chermside_ball_768.jpg";
+import ball480 from "@assets/chermside_sit_480.webp";
+import ball768 from "@assets/chermside_sit_768.webp";
+import ballJpeg from "@assets/chermside_sit_768.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
@@ -138,7 +138,7 @@ export default function ChermsidePage() {
                 <source type="image/webp" srcSet={`${ball480} 480w, ${ball768} 768w`} sizes="40vw" />
                 <img
                   src={ballJpeg}
-                  alt="A grey staffy lying on the grass, watching Tristan as he holds a ball on a rope in a North Brisbane park"
+                  alt="A grey staffy sitting beside Tristan and looking up at him in a North Brisbane park"
                   className="aspect-[4/5] w-full rounded-[26px] object-cover object-center"
                   width={768}
                   height={960}
