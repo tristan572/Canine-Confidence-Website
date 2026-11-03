@@ -63,7 +63,7 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24">
+      <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
           <div className="lg:col-span-5">
             <p className="eyebrow mb-3">What I help with</p>
