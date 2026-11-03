@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { MapPin, Phone, Check, Users, Footprints } from "lucide-react";
-import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
-import ConsultationForm from "@/components/forms/consultation-form";
+import { MapPin, Check, Users, Footprints } from "lucide-react";
+import { AssessmentButton, ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ball480 from "@assets/chermside_sit_480.webp";
 import ball768 from "@assets/chermside_sit_768.webp";
 import ballJpeg from "@assets/chermside_sit_768.jpg";
@@ -107,32 +106,9 @@ export default function ChermsidePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline"
-                      className="btn-secondary text-lg px-8 py-4"
-                      data-testid="button-request-call-hero"
-                    >
-                      <Phone className="w-5 h-5 mr-2" />
-                      Request Free Call
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md">
-                    <DialogTitle>Request Free Call</DialogTitle>
-                    <DialogDescription>
-                      Tell me about your dog and I'll call you back to discuss the best training approach.
-                    </DialogDescription>
-                    <ConsultationForm />
-                  </DialogContent>
-                </Dialog>
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className={`btn-cta ${CTA_COLOURS} text-lg px-8 py-4 order-first`}
-                  data-testid="button-book-assessment-hero"
-                >
-                  Book Assessment
-                </Button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <AssessmentButton label={`Book an Assessment · ${assessmentPrice}`} location="Chermside hero" className="px-7 py-4 text-lg" />
+                <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
               </div>
             </div>
 

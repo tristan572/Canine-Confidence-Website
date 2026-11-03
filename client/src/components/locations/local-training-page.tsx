@@ -4,6 +4,7 @@ import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
+import { usePricing } from "@/hooks/use-pricing";
 import HowItWorks from "@/components/how-it-works";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
@@ -78,6 +79,7 @@ export default function LocalTrainingPage({
   localProcessCopy,
   faqs,
 }: LocalTrainingPageProps) {
+  const pricing = usePricing();
   return (
     <div className="min-h-screen">
       <StaticSEO path={seoPath} />
@@ -96,7 +98,7 @@ export default function LocalTrainingPage({
             </h2>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">{heroCopy}</p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <AssessmentButton location={`${suburb} hero`} className="px-7 py-4 text-lg" />
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location={`${suburb} hero`} className="px-7 py-4 text-lg" />
               <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
             </div>
             <p className="mt-5 text-sm font-semibold text-medium-grey">

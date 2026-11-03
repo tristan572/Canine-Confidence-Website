@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { Waves, MapPin, Phone, Check, Heart } from "lucide-react";
+import { Waves, MapPin, Check, Heart } from "lucide-react";
 import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
-import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
-import ConsultationForm from "@/components/forms/consultation-form";
+import { AssessmentButton, ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
@@ -96,27 +95,9 @@ export default function SandgatePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="btn-secondary text-lg px-8 py-4" data-testid="button-book-assessment-hero">
-                      <Phone className="w-5 h-5 mr-2" />
-                      Book a Free Call
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
-                    <DialogTitle>Book a Free Call</DialogTitle>
-                    <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
-                    <ConsultationForm />
-                  </DialogContent>
-                </Dialog>
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className={`btn-cta ${CTA_COLOURS} text-lg px-8 py-4 order-first`}
-                  data-testid="button-book-assessment-hero-secondary"
-                >
-                  Book Assessment
-                </Button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <AssessmentButton label={`Book an Assessment · ${assessmentPrice}`} location="Sandgate hero" className="px-7 py-4 text-lg" />
+                <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
               </div>
             </div>
             

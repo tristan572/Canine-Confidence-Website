@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { MapPin, Phone, Check, Heart, Users, Footprints } from "lucide-react";
-import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
-import ConsultationForm from "@/components/forms/consultation-form";
+import { MapPin, Check, Heart, Users, Footprints } from "lucide-react";
+import { AssessmentButton, ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import bean480 from "@assets/review_bean_480.webp";
 import bean768 from "@assets/review_bean_768.webp";
 import beanJpeg from "@assets/review_bean_768.jpg";
@@ -98,32 +97,9 @@ export default function NorthgatePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline"
-                      className="btn-secondary text-lg px-8 py-4"
-                      data-testid="button-request-call-hero"
-                    >
-                      <Phone className="w-5 h-5 mr-2" />
-                      Request Free Call
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md">
-                    <DialogTitle>Request Free Call</DialogTitle>
-                    <DialogDescription>
-                      Book a free 15-minute call to talk through what your dog needs.
-                    </DialogDescription>
-                    <ConsultationForm />
-                  </DialogContent>
-                </Dialog>
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className={`btn-cta ${CTA_COLOURS} text-lg px-8 py-4 order-first`}
-                  data-testid="button-book-assessment-hero"
-                >
-                  Book Assessment
-                </Button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <AssessmentButton label={`Book an Assessment · ${assessmentPrice}`} location="Northgate hero" className="px-7 py-4 text-lg" />
+                <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
               </div>
             </div>
 

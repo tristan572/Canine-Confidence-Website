@@ -10,6 +10,7 @@ import training640 from "@assets/about_play_640.webp";
 import training1000 from "@assets/about_play_1000.webp";
 import trainingJpeg from "@assets/about_play_800.jpg";
 import FinalCta from "@/components/funnel/final-cta";
+import { usePricing } from "@/hooks/use-pricing";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 // How it feels to work with Tristan, in his own terms. Short on purpose: the
@@ -23,6 +24,7 @@ const promises = [
 const blocks = ["Health", "Lifestyle", "Clarity", "Skills"];
 
 export default function AboutPage() {
+  const pricing = usePricing();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -53,8 +55,8 @@ export default function AboutPage() {
               North Brisbane build a life they both enjoy.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <AssessmentButton location="About hero" className="h-auto px-7 py-4 text-lg" showIcon={false} />
-              <ConsultationButton className="btn-secondary h-auto px-7 py-4 text-lg" showIcon={false} />
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="About hero" className="px-7 py-4 text-lg" />
+              <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
             </div>
           </div>
           <picture className="lg:col-span-6">
