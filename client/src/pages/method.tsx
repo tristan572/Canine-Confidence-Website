@@ -3,8 +3,8 @@ import { StaticSEO } from "@/components/SEO";
 import { buildingBlocks } from "@/lib/building-blocks";
 import heel480 from "@assets/method_heel_480.webp";
 import heel960 from "@assets/method_heel_960.webp";
-import jump480 from "@assets/method_jump_480.webp";
-import jump960 from "@assets/method_jump_960.webp";
+import weave480 from "@assets/adventure_weave_480.webp";
+import weave960 from "@assets/adventure_weave_960.webp";
 import FinalCta from "@/components/funnel/final-cta";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
@@ -69,13 +69,13 @@ export default function MethodPage() {
             </p>
           </div>
           <img
-            src={jump960}
-            srcSet={`${jump480} 480w, ${jump960} 960w`}
+            src={weave960}
+            srcSet={`${weave480} 480w, ${weave960} 960w`}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            alt="A grey staffy leaping for a tug toy Tristan is holding during a training session"
+            alt="A grey staffy weaving through Tristan's legs as he holds a tug toy in an open park"
             className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
             width={960}
-            height={960}
+            height={1200}
             decoding="async"
           />
         </div>

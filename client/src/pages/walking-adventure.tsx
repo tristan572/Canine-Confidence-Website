@@ -8,8 +8,8 @@ import {
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
 import ReviewQuote from "@/components/review-quote";
-import weave480 from "@assets/adventure_weave_480.webp";
-import weave960 from "@assets/adventure_weave_960.webp";
+import cleo640 from "@assets/adventure_cleo_640.webp";
+import cleo1000 from "@assets/adventure_cleo_1000.webp";
 import FinalCta from "@/components/funnel/final-cta";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
@@ -41,13 +41,13 @@ export default function WalkingAdventurePage() {
             </div>
           </div>
           <img
-            src={weave960}
-            srcSet={`${weave480} 480w, ${weave960} 960w`}
+            src={cleo1000}
+            srcSet={`${cleo640} 640w, ${cleo1000} 1000w`}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            alt="A grey staffy weaving through Tristan's legs as he holds a tug toy in an open park"
+            alt="Tristan walking his staffy Cleo on a loose lead along a tree-lined park path"
             className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
-            width={960}
-            height={1200}
+            width={1000}
+            height={958}
           />
         </div>
       </section>
