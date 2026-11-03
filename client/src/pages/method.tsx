@@ -6,6 +6,7 @@ import heel960 from "@assets/method_heel_960.webp";
 import jump480 from "@assets/method_jump_480.webp";
 import jump960 from "@assets/method_jump_960.webp";
 import FinalCta from "@/components/funnel/final-cta";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 // `inSession` shows what the principle looks like with a real dog.
 const principles = [
@@ -53,7 +54,7 @@ export default function MethodPage() {
   return (
     <div className="min-h-screen">
       <StaticSEO path="/method" />
-      <section className="py-16 lg:py-24">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="eyebrow mb-3">My method</p>
@@ -68,13 +69,13 @@ export default function MethodPage() {
             </p>
           </div>
           <img
-            src={heel960}
-            srcSet={`${heel480} 480w, ${heel960} 960w`}
+            src={jump960}
+            srcSet={`${jump480} 480w, ${jump960} 960w`}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            alt="A grey staffy sitting at Tristan's side, looking up at him while he holds a ball on a rope"
-            className="h-auto w-full rounded-[26px] object-cover"
+            alt="A grey staffy leaping for a tug toy Tristan is holding during a training session"
+            className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
             width={960}
-            height={1280}
+            height={960}
             decoding="async"
           />
         </div>
@@ -133,13 +134,13 @@ export default function MethodPage() {
               Six things I won't compromise on.
             </h2>
             <img
-              src={jump960}
-              srcSet={`${jump480} 480w, ${jump960} 960w`}
+              src={heel960}
+              srcSet={`${heel480} 480w, ${heel960} 960w`}
               sizes="(max-width: 1024px) 100vw, 40vw"
-              alt="A grey staffy leaping for a tug toy Tristan is holding during a training session"
-              className="hidden h-auto w-full rounded-[26px] object-cover lg:block"
+              alt="A grey staffy sitting at Tristan's side, looking up at him while he holds a ball on a rope"
+              className="hidden h-[calc(100svh_-_17rem)] max-h-[40rem] w-full rounded-[26px] object-cover object-[center_70%] lg:block"
               width={960}
-              height={960}
+              height={1280}
               loading="lazy"
               decoding="async"
             />

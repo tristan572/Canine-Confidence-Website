@@ -13,6 +13,7 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import ReviewQuote from "@/components/review-quote";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 import FinalCta from "@/components/funnel/final-cta";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 const problems = [
   "Pulling on the lead",
@@ -33,7 +34,7 @@ export default function BehaviourObediencePage() {
     <div className="min-h-screen">
       <StaticSEO path="/behaviour-obedience" />
 
-      <section className="py-16 lg:py-24">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="eyebrow mb-3">
@@ -56,7 +57,7 @@ export default function BehaviourObediencePage() {
           <img
             src={behaviourImage}
             alt="Tristan working calmly with a client dog"
-            className="h-auto w-full rounded-[26px] object-cover"
+            className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
             width={640}
             height={480}
           />

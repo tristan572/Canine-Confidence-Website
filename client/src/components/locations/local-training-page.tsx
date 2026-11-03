@@ -5,6 +5,7 @@ import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
 import HowItWorks from "@/components/how-it-works";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 export interface LocalHighlight {
   label: string;
@@ -81,7 +82,7 @@ export default function LocalTrainingPage({
     <div className="min-h-screen">
       <StaticSEO path={seoPath} />
 
-      <section className="py-16 lg:py-24">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="mb-3 font-semibold uppercase tracking-[0.14em] text-primary-blue">
@@ -105,7 +106,7 @@ export default function LocalTrainingPage({
           <img
             src={heroImage}
             alt={heroImageAlt}
-            className="max-h-[620px] w-full rounded-[26px] object-cover"
+            className={`max-h-[620px] w-full rounded-[26px] ${HERO_PHOTO}`}
             width={640}
             height={640}
             loading="eager"

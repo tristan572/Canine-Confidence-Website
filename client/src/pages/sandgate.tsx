@@ -13,6 +13,7 @@ import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
 import HowItWorks from "@/components/how-it-works";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 export default function SandgatePage() {
   const pricing = usePricing();
@@ -69,7 +70,7 @@ export default function SandgatePage() {
       />
 
       {/* Hero Section */}
-      <section className="py-20">
+      <section className={HERO_SECTION}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -123,7 +124,7 @@ export default function SandgatePage() {
               <img 
                 src={sandgateHero} 
                 alt="Dog training at Shorncliffe Pier, Sandgate - where your dog learns real-world skills on Brisbane's bayside foreshore" 
-                className="rounded-[26px] w-full h-auto"
+                className={`rounded-[26px] w-full h-auto ${HERO_PHOTO}`}
                 width={600}
                 height={400}
                 loading="lazy"

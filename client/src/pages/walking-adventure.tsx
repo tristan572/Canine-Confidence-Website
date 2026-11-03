@@ -11,6 +11,7 @@ import ReviewQuote from "@/components/review-quote";
 import weave480 from "@assets/adventure_weave_480.webp";
 import weave960 from "@assets/adventure_weave_960.webp";
 import FinalCta from "@/components/funnel/final-cta";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 export default function WalkingAdventurePage() {
   const pricing = usePricing();
@@ -18,7 +19,7 @@ export default function WalkingAdventurePage() {
     <div className="min-h-screen">
       <StaticSEO path="/walking-adventure" />
 
-      <section className="py-16 lg:py-24">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="eyebrow mb-3">
@@ -44,7 +45,7 @@ export default function WalkingAdventurePage() {
             srcSet={`${weave480} 480w, ${weave960} 960w`}
             sizes="(max-width: 1024px) 100vw, 50vw"
             alt="A grey staffy weaving through Tristan's legs as he holds a tug toy in an open park"
-            className="h-auto w-full rounded-[26px] object-cover"
+            className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
             width={960}
             height={1200}
           />

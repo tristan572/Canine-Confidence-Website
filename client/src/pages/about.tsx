@@ -10,6 +10,7 @@ import training640 from "@assets/about_play_640.webp";
 import training1000 from "@assets/about_play_1000.webp";
 import trainingJpeg from "@assets/about_play_800.jpg";
 import FinalCta from "@/components/funnel/final-cta";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 // How it feels to work with Tristan, in his own terms. Short on purpose: the
 // story above carries the page; these are the promises.
@@ -39,7 +40,7 @@ export default function AboutPage() {
       />
 
       {/* Hero: portrait beside one line that sums up who Tristan is. */}
-      <section className="py-16 lg:py-24">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
           <div className="lg:col-span-6">
             <p className="eyebrow mb-3">About Tristan</p>
@@ -61,7 +62,7 @@ export default function AboutPage() {
             <img
               src={portraitJpeg}
               alt="Tristan from Canine Confidence smiling in a North Brisbane park, with a grey staffy sitting at his feet looking up at him"
-              className="h-[28rem] w-full rounded-[26px] object-cover object-[center_20%] sm:h-[34rem] lg:h-[40rem]"
+              className={`h-[28rem] w-full rounded-[26px] object-[center_20%] sm:h-[34rem] ${HERO_PHOTO}`}
               width={1000}
               height={1333}
               loading="eager"

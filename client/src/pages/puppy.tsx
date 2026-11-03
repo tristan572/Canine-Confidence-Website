@@ -17,6 +17,7 @@ import strip3 from "@assets/puppy_strip_3.webp";
 import strip3Jpeg from "@assets/puppy_strip_3.jpg";
 import { Star } from "lucide-react";
 import { GOOGLE_REVIEW_COUNT } from "@shared/social-proof";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 // Real puppies from Tristan's puppy clients.
 const puppyPhotos = [
@@ -52,7 +53,7 @@ export default function PuppyPage() {
       <StaticSEO path="/puppy" />
 
       {/* Hero */}
-      <section className="py-16 lg:py-24">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
           <div className="lg:col-span-7">
             <p className="eyebrow mb-3">Puppy raising</p>
@@ -83,7 +84,7 @@ export default function PuppyPage() {
             <img
               src={puppyJpeg}
               alt="Renegade, a curly apricot Cavoodle puppy, looking up from the grass"
-              className="aspect-[4/5] h-auto w-full rounded-[26px] object-cover"
+              className={`aspect-[4/5] h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
               width={768}
               height={960}
               loading="eager"

@@ -15,6 +15,7 @@ import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
 import HowItWorks from "@/components/how-it-works";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 export default function NorthgatePage() {
   const pricing = usePricing();
@@ -77,7 +78,7 @@ export default function NorthgatePage() {
       />
 
       {/* Hero Section */}
-      <section className="py-20">
+      <section className={HERO_SECTION}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -132,7 +133,7 @@ export default function NorthgatePage() {
                 <img
                   src={beanJpeg}
                   alt="Tristan crouching on a Northgate sports field at sunset beside Bean, a curly brown dog lying calmly on the grass"
-                  className="aspect-[4/5] w-full rounded-[26px] object-cover object-center"
+                  className={`aspect-[4/5] w-full rounded-[26px] object-center ${HERO_PHOTO}`}
                   width={768}
                   height={960}
                   loading="eager"
