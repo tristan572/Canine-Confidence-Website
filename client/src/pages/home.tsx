@@ -29,7 +29,7 @@ import FinalCta from "@/components/funnel/final-cta";
 const reasons = [
   { title: "I do the hard part first", text: "I train your dog myself, so you're not left struggling through the early stages, and the results come quicker." },
   { title: "Then I teach you", text: "You learn what to do, why it works and how to keep it going, so the training lasts." },
-  { title: "Built around your dog", text: "I train the dog in front of me, and fit the plan around their needs and your week." },
+  { title: "Built around your dog", text: "I train the dog in front of me, and fit the plan around their needs and your life." },
   { title: "With you the whole way", text: "Detailed written notes, video updates and short tutorials, and I'm a message away when something comes up." },
 ];
 
