@@ -13,6 +13,7 @@ import ballJpeg from "@assets/chermside_sit_768.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
+import MeetTristan from "@/components/meet-tristan";
 
 export default function ChermsidePage() {
   const pricing = usePricing();
@@ -480,6 +481,8 @@ export default function ChermsidePage() {
           </div>
         </div>
       </section>
+
+      <MeetTristan />
 
       {/* CTA Section */}
       <FinalCta

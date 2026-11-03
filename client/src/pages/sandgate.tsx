@@ -11,6 +11,7 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
+import MeetTristan from "@/components/meet-tristan";
 
 export default function SandgatePage() {
   const pricing = usePricing();
@@ -430,6 +431,8 @@ export default function SandgatePage() {
           </div>
         </div>
       </section>
+
+      <MeetTristan />
 
       {/* CTA Section */}
       <FinalCta

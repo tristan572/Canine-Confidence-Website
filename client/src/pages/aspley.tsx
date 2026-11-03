@@ -1,5 +1,5 @@
 import LocalTrainingPage from "@/components/locations/local-training-page";
-import aspleyImage from "@assets/park_ball_768.webp";
+import aspleyImage from "@assets/aspley_hero_768.webp";
 
 export default function AspleyPage() {
   return (
@@ -12,7 +12,7 @@ export default function AspleyPage() {
       heroSubheading="Practical training for the places your dog actually lives."
       heroCopy="Aspley moves quickly from quiet residential streets to busy roads, shopping areas and dog-filled parks. I train in your home and around suitable local environments so your dog can build calm, reliable behaviour where you need it day to day."
       heroImage={aspleyImage}
-      heroImageAlt="Tristan training a Staffy in a leafy North Brisbane park"
+      heroImageAlt="A grey staffy sitting at Tristan's feet and looking up at him in a leafy North Brisbane park"
       localHeading="From Marchant Park to the front door"
       localIntro="Good training needs to work across the different environments an Aspley dog meets in a normal week. That may mean calm behaviour at home, better connection on neighbourhood walks or better focus when the surroundings become busier."
       highlights={[

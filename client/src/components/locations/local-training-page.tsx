@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import FinalCta from "@/components/funnel/final-cta";
+import MeetTristan from "@/components/meet-tristan";
 
 export interface LocalHighlight {
   label: string;
@@ -226,6 +227,8 @@ export default function LocalTrainingPage({
           </div>
         </div>
       </section>
+
+      <MeetTristan />
 
       <FinalCta
         heading="Ready to make daily life with your dog easier?"

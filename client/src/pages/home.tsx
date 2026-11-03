@@ -20,9 +20,7 @@ import hero1024 from "@assets/hero_tug_1024.webp";
 import hero1536 from "@assets/hero_tug_1536.webp";
 import walkingCard800 from "@assets/IMG_0084_card_800_opt.webp";
 import walking1200 from "@assets/IMG_0084_1760870993102.webp";
-import trainer600 from "@assets/trainer_staffy_600.webp";
-import trainer1122 from "@assets/trainer_staffy_1122.webp";
-import trainerJpeg from "@assets/trainer_staffy_800.jpg";
+import MeetTristan from "@/components/meet-tristan";
 import { buildingBlocks } from "@/lib/building-blocks";
 import FinalCta from "@/components/funnel/final-cta";
 
@@ -40,12 +38,6 @@ const reasons = [
   { title: "Then I teach you", text: "You learn what to do, why it works and how to keep it going, so the training lasts." },
   { title: "Built around your dog", text: "I train the dog in front of me, and fit the plan around their needs and your week." },
   { title: "With you the whole way", text: "Detailed written notes, video updates and short tutorials, and I'm a message away when something comes up." },
-];
-
-const trainerPoints = [
-  { title: "Safe, cared for and respected", text: "Your dog is safe with me. I train them with care, and with respect for who they are." },
-  { title: "Reliable and flexible", text: "I turn up when I say I will, come to you anywhere across North Brisbane, and I'm as flexible as I can be with session times. I'm still here after your program ends." },
-  { title: "Qualified and always learning", text: "NDTF certified, professional and insured. I never stop studying, so I can keep getting better results for your dog." },
 ];
 
 const deliverables = [
@@ -229,46 +221,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Meet the trainer */}
-      <section className="py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 items-center overflow-hidden rounded-[26px] bg-sand lg:grid-cols-12">
-            <picture className="lg:col-span-5">
-              <source type="image/webp" srcSet={`${trainer600} 600w, ${trainer1122} 1122w`} sizes="(max-width: 1024px) 100vw, 40vw" />
-              <img
-                src={trainerJpeg}
-                alt="Tristan from Canine Confidence with a grey staffy"
-                className="h-96 w-full object-cover object-[center_20%] sm:h-[32rem] lg:h-full lg:min-h-[36rem]"
-                width={1122}
-                height={1402}
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <div className="p-7 sm:p-10 lg:col-span-7 lg:px-14">
-              <p className="eyebrow mb-3">Your trainer</p>
-              <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">Hi, I'm Tristan.</h2>
-              <p className="mb-7 text-lg leading-relaxed text-medium-grey">
-                I'm the trainer your dog can't wait to see.
-              </p>
-              <ul className="space-y-5">
-                {trainerPoints.map(({ title, text }) => (
-                  <li key={title} className="flex gap-3">
-                    <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-sky-deep" aria-hidden="true" />
-                    <div>
-                      <p className="font-extrabold text-charcoal">{title}</p>
-                      <p className="text-medium-grey">{text}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <Link href="/about" className="mt-8 inline-block font-extrabold text-primary hover:text-sky-deep">
-                More about me →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MeetTristan />
 
       {/* Reviews */}
       <section className="px-2 sm:px-4 lg:px-6">

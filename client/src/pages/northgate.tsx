@@ -13,6 +13,7 @@ import beanJpeg from "@assets/review_bean_768.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
+import MeetTristan from "@/components/meet-tristan";
 
 export default function NorthgatePage() {
   const pricing = usePricing();
@@ -468,6 +469,8 @@ export default function NorthgatePage() {
           </div>
         </div>
       </section>
+
+      <MeetTristan />
 
       {/* CTA Section */}
       <FinalCta
