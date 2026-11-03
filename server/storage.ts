@@ -2662,7 +2662,7 @@ Every new client starts with a [free 15-minute phone call](https://www.caninecon
         imageUrl: "/attached_assets/dog-scared-of-storms-brisbane-hero.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-10-27"),
-        tags: [],
+        tags: ["fear", "storms", "calm", "North Brisbane"],
         slug: "dog-scared-of-storms-brisbane"
       }
     ];

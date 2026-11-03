@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import type { BlogPost } from "@shared/schema";
 import { StaticSEO } from "@/components/SEO";
+import { BLOG_TOPICS, postInTopic } from "@/lib/blog-topics";
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -51,17 +52,10 @@ export default function BlogPage() {
     }
   };
 
-  // Get all unique tags from blog posts
-  const allTags = blogPosts?.reduce((tags: string[], post) => {
-    if (post.tags) {
-      post.tags.forEach(tag => {
-        if (!tags.includes(tag)) {
-          tags.push(tag);
-        }
-      });
-    }
-    return tags;
-  }, []) || [];
+  // Only offer topics that have at least one post.
+  const topics = BLOG_TOPICS.map((t) => t.name).filter((name) =>
+    blogPosts?.some((post) => postInTopic(post.tags, name)),
+  );
 
   // Filter posts based on search term and selected tag
   const filteredPosts = blogPosts?.filter(post => {
@@ -69,8 +63,7 @@ export default function BlogPage() {
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesTag = selectedTag === "" || 
-      (post.tags && post.tags.includes(selectedTag));
+    const matchesTag = selectedTag === "" || postInTopic(post.tags, selectedTag);
     
     return matchesSearch && matchesTag;
   });
@@ -112,7 +105,7 @@ export default function BlogPage() {
       {/* Search and Filter Section */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-between">
+          <div className="flex flex-col gap-5">
             {/* Search */}
             <div className="relative w-full shrink-0 md:w-80">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-medium-grey w-4 h-4" />
@@ -125,26 +118,22 @@ export default function BlogPage() {
               />
             </div>
 
-            {/* Tag Filter */}
-            <div className="flex min-w-0 flex-wrap gap-2">
-              <Button
-                variant={selectedTag === "" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedTag("")}
-                className={selectedTag === "" ? "bg-primary-blue text-white" : ""}
-              >
-                All Topics
-              </Button>
-              {allTags.map((tag) => (
-                <Button
-                  key={tag}
-                  variant={selectedTag === tag ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedTag(tag)}
-                  className={selectedTag === tag ? "bg-primary-blue text-white" : ""}
+            {/* Topic Filter */}
+            <div className="flex min-w-0 flex-wrap gap-2" role="group" aria-label="Filter by topic">
+              {["", ...topics].map((topic) => (
+                <button
+                  key={topic || "all"}
+                  type="button"
+                  onClick={() => setSelectedTag(topic)}
+                  aria-pressed={selectedTag === topic}
+                  className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                    selectedTag === topic
+                      ? "border-navy bg-navy text-white"
+                      : "border-navy/15 bg-white text-charcoal hover:border-navy/40"
+                  }`}
                 >
-                  {tag.charAt(0).toUpperCase() + tag.slice(1)}
-                </Button>
+                  {topic || "All topics"}
+                </button>
               ))}
             </div>
           </div>
