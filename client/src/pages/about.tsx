@@ -3,12 +3,12 @@ import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shared/social-proof";
-import portrait600 from "@assets/about_tug_sit_600.webp";
-import portrait1092 from "@assets/about_tug_sit_1092.webp";
-import portraitJpeg from "@assets/about_tug_sit_800.jpg";
-import training640 from "@assets/about_walk_640.webp";
-import training900 from "@assets/about_walk_900.webp";
-import trainingJpeg from "@assets/about_walk_900.jpg";
+import portrait600 from "@assets/about_portrait_600.webp";
+import portrait938 from "@assets/about_portrait_938.webp";
+import portraitJpeg from "@assets/about_portrait_938.jpg";
+import training640 from "@assets/about_jacaranda_640.webp";
+import training814 from "@assets/about_jacaranda_814.webp";
+import trainingJpeg from "@assets/about_jacaranda_814.jpg";
 import FinalCta from "@/components/funnel/final-cta";
 
 // How it feels to work with Tristan, in his own terms. Short on purpose: the
@@ -57,13 +57,13 @@ export default function AboutPage() {
             </div>
           </div>
           <picture className="lg:col-span-6">
-            <source type="image/webp" srcSet={`${portrait600} 600w, ${portrait1092} 1092w`} sizes="(max-width: 1024px) 100vw, 50vw" />
+            <source type="image/webp" srcSet={`${portrait600} 600w, ${portrait938} 938w`} sizes="(max-width: 1024px) 100vw, 50vw" />
             <img
               src={portraitJpeg}
-              alt="A grey staffy sitting and looking up at Tristan as he holds a tug toy in a North Brisbane park"
+              alt="Tristan from Canine Confidence smiling beside a grey staffy in a North Brisbane park"
               className="h-[28rem] w-full rounded-[26px] object-cover object-[center_20%] sm:h-[34rem] lg:h-[40rem]"
-              width={1092}
-              height={1365}
+              width={938}
+              height={1024}
               loading="eager"
               decoding="async"
             />
@@ -128,13 +128,13 @@ export default function AboutPage() {
       <section className="py-20 lg:py-32">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <picture>
-            <source type="image/webp" srcSet={`${training640} 640w, ${training900} 900w`} sizes="(max-width: 1024px) 100vw, 50vw" />
+            <source type="image/webp" srcSet={`${training640} 640w, ${training814} 814w`} sizes="(max-width: 1024px) 100vw, 50vw" />
             <img
               src={trainingJpeg}
-              alt="A grey staffy looking up at Tristan as they walk together across a sports field"
+              alt="Tristan walking a yellow Labrador on a loose lead under the jacarandas, with the Brisbane skyline behind"
               className="h-auto w-full rounded-[26px] object-cover"
-              width={900}
-              height={1125}
+              width={814}
+              height={747}
               loading="lazy"
               decoding="async"
             />
