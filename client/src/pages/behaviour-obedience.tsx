@@ -23,7 +23,6 @@ const problems = [
   "Anxiety",
   "Chewing and destructive habits",
   "Chasing",
-  "Guarding",
   "Dog reactivity",
   "Everyday manners",
 ];
