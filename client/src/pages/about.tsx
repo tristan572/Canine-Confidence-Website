@@ -3,9 +3,9 @@ import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shared/social-proof";
-import portrait600 from "@assets/trainer_gsd_600.webp";
-import portrait1092 from "@assets/trainer_gsd_1092.webp";
-import portraitJpeg from "@assets/trainer_gsd_800.jpg";
+import portrait600 from "@assets/about_tug_sit_600.webp";
+import portrait1092 from "@assets/about_tug_sit_1092.webp";
+import portraitJpeg from "@assets/about_tug_sit_800.jpg";
 import training640 from "@assets/hero_tug_640.webp";
 import training1024 from "@assets/hero_tug_1024.webp";
 import trainingJpeg from "@assets/hero_tug_1024.jpg";
@@ -60,7 +60,7 @@ export default function AboutPage() {
             <source type="image/webp" srcSet={`${portrait600} 600w, ${portrait1092} 1092w`} sizes="(max-width: 1024px) 100vw, 50vw" />
             <img
               src={portraitJpeg}
-              alt="Tristan from Canine Confidence with a young German Shepherd on a loose lead outside a Queenslander"
+              alt="A grey staffy sitting and looking up at Tristan as he holds a tug toy in a North Brisbane park"
               className="h-[28rem] w-full rounded-[26px] object-cover object-[center_20%] sm:h-[34rem] lg:h-[40rem]"
               width={1092}
               height={1365}
