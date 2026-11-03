@@ -7,8 +7,9 @@ import { Link } from "wouter";
 import { MapPin, Phone, Check, Heart, Users, Footprints } from "lucide-react";
 import { CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import ConsultationForm from "@/components/forms/consultation-form";
-import tristanPortraitWebp from "@assets/trainer_kelpie_600.webp";
-import tristanPortraitJpeg from "@assets/trainer_kelpie_800.jpg";
+import bean480 from "@assets/review_bean_480.webp";
+import bean768 from "@assets/review_bean_768.webp";
+import beanJpeg from "@assets/review_bean_768.jpg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
@@ -125,13 +126,13 @@ export default function NorthgatePage() {
 
             <div className="relative hidden lg:block">
               <picture>
-                <source type="image/webp" srcSet={tristanPortraitWebp} />
+                <source type="image/webp" srcSet={`${bean480} 480w, ${bean768} 768w`} sizes="40vw" />
                 <img
-                  src={tristanPortraitJpeg}
-                  alt="Tristan, NDTF certified dog trainer, crouching with a red Kelpie cross in a North Brisbane park"
+                  src={beanJpeg}
+                  alt="Tristan crouching on a Northgate sports field at sunset beside Bean, a curly brown dog lying calmly on the grass"
                   className="aspect-[4/5] w-full rounded-[26px] object-cover object-center"
-                  width={800}
-                  height={1000}
+                  width={768}
+                  height={960}
                   loading="eager"
                   decoding="async"
                 />
