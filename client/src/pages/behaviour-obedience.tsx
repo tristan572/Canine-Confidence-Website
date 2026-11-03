@@ -13,16 +13,6 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import ReviewQuote from "@/components/review-quote";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 
-// What owners tend to say on the first call, so readers recognise their own dog.
-const problems = [
-  { said: "He drags me down the street.", label: "Pulling on the lead" },
-  { said: "She goes off at every dog we pass.", label: "Dog reactivity" },
-  { said: "The barking starts the second someone walks past.", label: "Barking" },
-  { said: "Visitors get jumped on at the front door.", label: "Jumping up" },
-  { said: "Once he's off lead, he won't come back.", label: "Poor recall" },
-  { said: "She can't switch off, even at night.", label: "Anxiety and over-excitement" },
-];
-
 export default function BehaviourObediencePage() {
   const pricing = usePricing();
   return (
@@ -59,32 +49,15 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="py-12 lg:py-20">
+      <section className="py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-3">Sound familiar?</p>
-            <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">
-              For the problems making daily life hard
-            </h2>
-            <p className="text-lg leading-relaxed text-medium-grey">
-              I look at what is happening beneath the behaviour, then build the
-              skills that make life easier at home and out in the world.
-            </p>
-          </div>
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {problems.map(({ said, label }) => (
-              <li
-                key={label}
-                className="flex flex-col justify-between rounded-[22px] border border-navy/10 bg-white p-6 shadow-[0_1px_0_rgba(31,33,89,0.04)] lg:p-7"
-              >
-                <p className="font-quote text-xl italic leading-snug text-charcoal lg:text-2xl">“{said}”</p>
-                <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.12em] text-sky-deep">{label}</p>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 text-medium-grey">
-            Also chewing and destruction, guarding food or toys, chasing and
-            everyday manners.
+          <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">For the problems making daily life hard</h2>
+          <p className="max-w-3xl text-lg leading-relaxed text-medium-grey">
+            I help with pulling, barking, jumping up, poor recall, over-excitement,
+            anxiety, chewing and destructive habits, chasing, guarding, dog
+            reactivity and everyday manners. I look at what is happening beneath
+            the behaviour, then build the skills that make life easier at home and
+            out in the world.
           </p>
         </div>
       </section>
