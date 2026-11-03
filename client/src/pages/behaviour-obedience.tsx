@@ -1,6 +1,6 @@
 import { usePricing } from "@/hooks/use-pricing";
 import { AssessmentDetails } from "@/components/funnel/assessment-intro";
-import { ArrowRight, Calendar, ClipboardList, Footprints, HeartPulse, Home } from "lucide-react";
+import { ArrowRight, Calendar, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StaticSEO } from "@/components/SEO";
 import { ProgramCard } from "@/components/funnel/program-card";
@@ -13,23 +13,14 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import ReviewQuote from "@/components/review-quote";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 
-// Grouped by where owners notice them, so people can find their own dog fast.
-const problemGroups = [
-  {
-    title: "At home",
-    icon: Home,
-    problems: ["Barking", "Jumping up", "Chewing and destruction", "Guarding", "Everyday manners"],
-  },
-  {
-    title: "On walks",
-    icon: Footprints,
-    problems: ["Pulling on the lead", "Dog reactivity", "Chasing", "Poor recall"],
-  },
-  {
-    title: "How they feel",
-    icon: HeartPulse,
-    problems: ["Anxiety", "Over-excitement", "Can't settle"],
-  },
+// What owners tend to say on the first call, so readers recognise their own dog.
+const problems = [
+  { said: "He drags me down the street.", label: "Pulling on the lead" },
+  { said: "She goes off at every dog we pass.", label: "Dog reactivity" },
+  { said: "The barking starts the second someone walks past.", label: "Barking" },
+  { said: "Visitors get jumped on at the front door.", label: "Jumping up" },
+  { said: "Once he's off lead, he won't come back.", label: "Poor recall" },
+  { said: "She can't switch off, even at night.", label: "Anxiety and over-excitement" },
 ];
 
 export default function BehaviourObediencePage() {
@@ -71,7 +62,7 @@ export default function BehaviourObediencePage() {
       <section className="py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-3">What I help with</p>
+            <p className="eyebrow mb-3">Sound familiar?</p>
             <h2 className="mb-4 text-3xl font-extrabold text-charcoal lg:text-4xl">
               For the problems making daily life hard
             </h2>
@@ -80,25 +71,21 @@ export default function BehaviourObediencePage() {
               skills that make life easier at home and out in the world.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {problemGroups.map(({ title, icon: Icon, problems }) => (
-              <div key={title} className="rounded-[22px] bg-sand p-6 lg:p-8">
-                <div className="mb-5 flex items-center gap-3">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white">
-                    <Icon className="h-5 w-5" aria-hidden="true" />
-                  </span>
-                  <h3 className="text-xl font-extrabold text-charcoal">{title}</h3>
-                </div>
-                <ul className="flex flex-wrap gap-2">
-                  {problems.map((problem) => (
-                    <li key={problem} className="rounded-full bg-white px-3.5 py-1.5 text-sm font-bold text-charcoal">
-                      {problem}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {problems.map(({ said, label }) => (
+              <li
+                key={label}
+                className="flex flex-col justify-between rounded-[22px] border border-navy/10 bg-white p-6 shadow-[0_1px_0_rgba(31,33,89,0.04)] lg:p-7"
+              >
+                <p className="font-quote text-xl italic leading-snug text-charcoal lg:text-2xl">“{said}”</p>
+                <p className="mt-5 text-xs font-extrabold uppercase tracking-[0.12em] text-sky-deep">{label}</p>
+              </li>
             ))}
-          </div>
+          </ul>
+          <p className="mt-8 text-medium-grey">
+            Also chewing and destruction, guarding food or toys, chasing and
+            everyday manners.
+          </p>
         </div>
       </section>
 
