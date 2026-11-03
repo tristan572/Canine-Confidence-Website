@@ -29,13 +29,11 @@ export default function HowItWorks({ intro }: { intro?: string }) {
         <ol className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
           {steps.map(({ title, text }, i) => (
             <li key={title} className="flex flex-col gap-3 border-t-2 border-navy/15 pt-6">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-primary text-lg font-extrabold text-white" aria-hidden="true">
-                  {i + 1}
-                </span>
-                {i === 0 && <AssessmentDetails className="gap-x-2 text-sm text-sky-deep" />}
-              </div>
+              <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-primary text-lg font-extrabold text-white" aria-hidden="true">
+                {i + 1}
+              </span>
               <h3 className="text-xl font-extrabold text-charcoal">{title}</h3>
+              {i === 0 && <AssessmentDetails className="gap-x-2 text-sm text-sky-deep" />}
               <p className="leading-relaxed text-medium-grey">{text}</p>
             </li>
           ))}
