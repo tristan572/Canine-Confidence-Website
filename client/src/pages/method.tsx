@@ -43,10 +43,10 @@ const principles = [
 
 // Widest, darkest block at the base: each one rests on the one below.
 const stackStyles = [
-  "w-full bg-sky-deep",
-  "w-[94%] lg:w-[86%] bg-sky-deep/70",
-  "w-[88%] lg:w-[72%] bg-sky-deep/45",
-  "w-[82%] lg:w-[58%] bg-sky-deep/25",
+  "w-full bg-navy",
+  "w-[94%] lg:w-[86%] bg-navy/85",
+  "w-[88%] lg:w-[72%] bg-sky-deep",
+  "w-[82%] lg:w-[58%] bg-sky-deep/85",
 ];
 
 export default function MethodPage() {
@@ -81,16 +81,14 @@ export default function MethodPage() {
       </section>
 
       {/* The Four Building Blocks, drawn as a stack with Health at the base. */}
-      <section className="mx-2 overflow-hidden rounded-[28px] bg-navy py-16 text-white sm:mx-4 lg:mx-6 lg:rounded-[32px] lg:py-24">
+      <section className="bg-sand py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.12em] text-[#8FD3F2]">
-              My framework
-            </p>
-            <h2 className="mb-5 text-3xl font-extrabold lg:text-5xl">
+            <p className="eyebrow mb-3">My framework</p>
+            <h2 className="mb-5 text-3xl font-extrabold text-charcoal lg:text-5xl">
               The Four Building Blocks
             </h2>
-            <div className="space-y-4 text-lg leading-relaxed text-white/80">
+            <div className="space-y-4 text-lg leading-relaxed text-medium-grey">
               <p>
                 Every plan I write is built in the same order. Health first,
                 then lifestyle, then clarity, and only then the skills you
@@ -104,7 +102,7 @@ export default function MethodPage() {
             </div>
             <Link
               href="/blog/creating-balance-complete-framework"
-              className="mt-8 inline-flex font-extrabold text-white hover:text-[#8FD3F2]"
+              className="mt-8 inline-flex font-extrabold text-primary hover:text-sky-deep"
             >
               Read the full framework →
             </Link>
@@ -113,7 +111,7 @@ export default function MethodPage() {
             {buildingBlocks.map(({ number, title, short }, i) => (
               <li
                 key={title}
-                className={`${stackStyles[i]} flex min-h-[6.5rem] flex-col items-center justify-center rounded-xl px-5 py-3 text-center`}
+                className={`${stackStyles[i]} flex min-h-[6.5rem] flex-col items-center justify-center rounded-xl px-5 py-3 text-center text-white`}
               >
                 <h3 className="text-lg font-extrabold">
                   <span className="mr-2 font-quote font-normal italic text-[#8FD3F2]">{number}</span>

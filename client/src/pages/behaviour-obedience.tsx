@@ -13,6 +13,20 @@ import { getBookingLinkProps } from "@/lib/analytics";
 import ReviewQuote from "@/components/review-quote";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 
+const problems = [
+  "Pulling on the lead",
+  "Barking",
+  "Jumping up",
+  "Poor recall",
+  "Over-excitement",
+  "Anxiety",
+  "Chewing and destruction",
+  "Chasing",
+  "Guarding",
+  "Dog reactivity",
+  "Everyday manners",
+];
+
 export default function BehaviourObediencePage() {
   const pricing = usePricing();
   return (
@@ -49,15 +63,19 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-10 text-white">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-3 text-2xl font-extrabold">For the problems making daily life hard</h2>
-          <p className="text-lg leading-relaxed text-white/80">
-            I help with pulling, barking, jumping up, poor recall, over-excitement,
-            anxiety, chewing and destructive habits, chasing, guarding, dog
-            reactivity and everyday manners. I look at what is happening beneath
-            the behaviour, then build the skills that make life easier at home and
-            out in the world.
+      <section className="py-12 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-6 text-2xl font-extrabold text-charcoal lg:text-3xl">For the problems making daily life hard</h2>
+          <ul className="mb-6 flex flex-wrap gap-2.5" aria-label="Problems I help with">
+            {problems.map((problem) => (
+              <li key={problem} className="rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-bold text-charcoal">
+                {problem}
+              </li>
+            ))}
+          </ul>
+          <p className="max-w-3xl text-lg leading-relaxed text-medium-grey">
+            I look at what is happening beneath the behaviour, then build the
+            skills that make life easier at home and out in the world.
           </p>
         </div>
       </section>
