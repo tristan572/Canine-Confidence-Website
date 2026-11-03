@@ -10,6 +10,7 @@ import {
 } from "@/components/funnel/funnel-cta";
 import { behaviourPrograms, VIRTUAL_COACHING_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
+import ReviewQuote from "@/components/review-quote";
 import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
 
 export default function BehaviourObediencePage() {
@@ -111,7 +112,15 @@ export default function BehaviourObediencePage() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <ReviewQuote
+        label="Jumping up on people"
+        quote="Tristan spent time with him and was able to handle him in such a confident way it was a relief and really helpful. Harley is now much better and rarely ever jumps."
+        owner="Patricia L."
+        dog="Harley, a 70kg Mastiff cross"
+        className="bg-white"
+      />
+
+      <section className="bg-white pb-16">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 rounded-2xl border border-navy/10 bg-sand p-8 sm:p-10 lg:grid-cols-[auto_1fr_auto] lg:items-center">
           <ClipboardList className="h-12 w-12 text-primary-blue" />
           <div>

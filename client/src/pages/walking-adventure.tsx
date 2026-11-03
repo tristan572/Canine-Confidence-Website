@@ -7,6 +7,7 @@ import {
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
+import ReviewQuote from "@/components/review-quote";
 import weave480 from "@assets/adventure_weave_480.webp";
 import weave960 from "@assets/adventure_weave_960.webp";
 
@@ -87,6 +88,14 @@ export default function WalkingAdventurePage() {
           </div>
         </div>
       </section>
+
+      <ReviewQuote
+        label="Reactivity on walks"
+        quote="Tristan has taken the time to build a good bond with Dobson, and his confidence has improved so much while out and about. We now look forward to going for walks together."
+        owner="Renee B."
+        dog="Dobson, an Italian Greyhound"
+        className="bg-white"
+      />
 
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
