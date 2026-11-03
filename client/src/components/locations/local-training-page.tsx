@@ -4,6 +4,7 @@ import { StaticSEO } from "@/components/SEO";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import FinalCta from "@/components/funnel/final-cta";
 import MeetTristan from "@/components/meet-tristan";
+import HowItWorks from "@/components/how-it-works";
 
 export interface LocalHighlight {
   label: string;
@@ -185,34 +186,7 @@ export default function LocalTrainingPage({
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div>
-            <p className="mb-3 font-semibold uppercase tracking-[0.14em] text-primary-blue">
-              How it works
-            </p>
-            <h2 className="mb-4 text-3xl font-extrabold text-charcoal">Training that starts with your dog</h2>
-            <p className="text-lg leading-relaxed text-medium-grey">{localProcessCopy}</p>
-          </div>
-          <ol className="space-y-4">
-            <li className="rounded-2xl border border-navy/10 bg-sand p-6">
-              <p className="mb-1 text-sm font-bold uppercase tracking-[0.12em] text-primary-blue">Step 1</p>
-              <h3 className="mb-2 text-xl font-extrabold text-charcoal">Talk through what you need</h3>
-              <p className="text-medium-grey">Use the free phone consult if you are unsure which service fits.</p>
-            </li>
-            <li className="rounded-2xl border border-navy/10 bg-sand p-6">
-              <p className="mb-1 text-sm font-bold uppercase tracking-[0.12em] text-primary-blue">Step 2</p>
-              <h3 className="mb-2 text-xl font-extrabold text-charcoal">Start with a clear plan</h3>
-              <p className="text-medium-grey">Adult dogs begin with an assessment. Puppy clients can book The Confident Start Program directly.</p>
-            </li>
-            <li className="rounded-2xl border border-navy/10 bg-sand p-6">
-              <p className="mb-1 text-sm font-bold uppercase tracking-[0.12em] text-primary-blue">Step 3</p>
-              <h3 className="mb-2 text-xl font-extrabold text-charcoal">Train where the skills matter</h3>
-              <p className="text-medium-grey">I work in your home and around suitable local environments, then show you how to keep the progress going.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
+      <HowItWorks intro={localProcessCopy} />
 
       <MeetTristan />
 
