@@ -155,8 +155,8 @@ export default function AboutPage() {
                 highly anxious, because her needs are met every day.
               </p>
               <p>
-                Play is my favourite tool. A dog that works for a game is
-                motivated, focused and wants to be there.
+                Play is my favourite tool. A dog that loves the game is
+                motivated, engaged and wants to be there.
               </p>
             </div>
             <p className="mt-8 mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-medium-grey">
