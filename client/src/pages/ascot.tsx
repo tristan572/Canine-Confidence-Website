@@ -1,5 +1,5 @@
 import LocalTrainingPage from "@/components/locations/local-training-page";
-import ascotImage from "@assets/hero_tug_1024.webp";
+import ascotImage from "@assets/tristan-tug-with-staffy-1024.webp";
 
 export default function AscotPage() {
   return (

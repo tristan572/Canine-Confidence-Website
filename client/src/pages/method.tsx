@@ -1,10 +1,10 @@
 import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
 import { buildingBlocks } from "@/lib/building-blocks";
-import heel480 from "@assets/method_heel_480.webp";
-import heel960 from "@assets/method_heel_960.webp";
-import weave480 from "@assets/adventure_weave_480.webp";
-import weave960 from "@assets/adventure_weave_960.webp";
+import standing600 from "@assets/tristan-with-staffy-at-his-feet-600.webp";
+import standing1000 from "@assets/tristan-with-staffy-at-his-feet-1000.webp";
+import weave480 from "@assets/staffy-weaving-through-tristans-legs-480.webp";
+import weave960 from "@assets/staffy-weaving-through-tristans-legs-960.webp";
 import { usePricing } from "@/hooks/use-pricing";
 import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import FinalCta from "@/components/funnel/final-cta";
@@ -141,13 +141,13 @@ export default function MethodPage() {
               Six things I won't compromise on.
             </h2>
             <img
-              src={heel960}
-              srcSet={`${heel480} 480w, ${heel960} 960w`}
+              src={standing1000}
+              srcSet={`${standing600} 600w, ${standing1000} 1000w`}
               sizes="(max-width: 1024px) 100vw, 40vw"
-              alt="A grey staffy sitting at Tristan's side, looking up at him while he holds a ball on a rope"
-              className="hidden h-[calc(100svh_-_17rem)] max-h-[40rem] w-full rounded-[26px] object-cover object-[center_70%] lg:block"
-              width={960}
-              height={1280}
+              alt="Tristan smiling in a North Brisbane park, with a grey staffy sitting at his feet looking up at him"
+              className="hidden h-[calc(100svh_-_17rem)] max-h-[40rem] w-full rounded-[26px] object-cover object-[center_40%] lg:block"
+              width={1000}
+              height={1333}
               loading="lazy"
               decoding="async"
             />

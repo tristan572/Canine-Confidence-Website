@@ -16,8 +16,8 @@ import {
 import ContactForm from "@/components/forms/contact-form";
 import ConsultationForm from "@/components/forms/consultation-form";
 import ServiceAreaMap from "@/components/ui/service-area-map";
-import contactHeroImageWebp from "@assets/image_1750049297197.webp";
-import contactHeroImageJpeg from "@assets/image_1750049297197.jpg";
+import contactHeroImageWebp from "@assets/rottweiler-lying-down.webp";
+import contactHeroImageJpeg from "@assets/rottweiler-lying-down.jpg";
 import FinalCta from "@/components/funnel/final-cta";
 
 export default function ContactPage() {

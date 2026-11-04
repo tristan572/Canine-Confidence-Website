@@ -123,7 +123,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$120",
         category: "assessment",
-        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260_opt.webp",
+        imageUrl: "/attached_assets/grey-staffy-portrait.webp",
         features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to my training system, designed to save you time and money"]
       },
 
@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049391709_opt.webp",
+        imageUrl: "/attached_assets/dog-giving-paw-to-owner.webp",
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
@@ -144,7 +144,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049431855_opt.webp",
+        imageUrl: "/attached_assets/dog-playing-tug-on-deck.webp",
         features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
@@ -154,7 +154,7 @@ export class MemStorage implements IStorage {
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023_opt.webp",
+        imageUrl: "/attached_assets/jack-russell-on-lead.webp",
         features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Training at the parks and streets you walk", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
@@ -164,7 +164,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049520029_opt.webp",
+        imageUrl: "/attached_assets/terrier-running-with-ball-on-beach.webp",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
@@ -174,7 +174,7 @@ export class MemStorage implements IStorage {
         location: "Video call (Zoom)",
         price: "$100",
         category: "consultation",
-        imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6_opt.webp",
+        imageUrl: "/attached_assets/owner-on-video-call.webp",
         features: ["A private one-hour video call from wherever you are", "Fine-tune training details or work through something that feels stuck", "Bounce ideas around and get a second perspective", "Build or refine a practical training plan"]
       }
     ];
@@ -214,7 +214,7 @@ export class MemStorage implements IStorage {
         price: "45.00",
         priceRange: "$35 - $55",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/professional_dog_tra_68cb0c20_opt.webp",
+        imageUrl: "/attached_assets/red-setter-in-forest.webp",
         inStock: true
       },
       {
@@ -223,7 +223,7 @@ export class MemStorage implements IStorage {
         price: "30.00",
         priceRange: "$25 - $35",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad_opt.webp",
+        imageUrl: "/attached_assets/white-dog-looking-up.webp",
         inStock: true
       },
       {
@@ -232,7 +232,7 @@ export class MemStorage implements IStorage {
         price: "40.00",
         priceRange: "$30 - $50",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad_opt.webp",
+        imageUrl: "/attached_assets/white-dog-looking-up.webp",
         inStock: true
       },
       {
@@ -241,7 +241,7 @@ export class MemStorage implements IStorage {
         price: "20.00",
         priceRange: "$15 - $25",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/dog_training_balls_a_46124b17_opt.webp",
+        imageUrl: "/attached_assets/white-dog-beside-bicycle-2.webp",
         inStock: true
       },
       {
@@ -250,7 +250,7 @@ export class MemStorage implements IStorage {
         price: "25.00",
         priceRange: "$20 - $35",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/interactive_tug_toy__f1fbf953_opt.webp",
+        imageUrl: "/attached_assets/white-dog-beside-bicycle.webp",
         inStock: true
       },
       {
@@ -285,7 +285,7 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/puppy_card_molly_800.webp",
+        imageUrl: "/attached_assets/puppy-card-molly-800.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised House Training Guidance and Setup",
@@ -303,7 +303,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278_opt.webp",
+        imageUrl: "/attached_assets/dog-jumping-at-sunset.webp",
         features: [
           "5 private coaching sessions that can be used for any behaviour or skill",
           "A practical approach built around your dog and the problem in front of us",
@@ -322,7 +322,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/image_1750049297197_opt.webp",
+        imageUrl: "/attached_assets/rottweiler-lying-down-small.webp",
         features: [
           "Focused sessions aimed at steady behaviour change",
           "Clear communication that reduces confusion and helps your dog make better choices",
@@ -382,7 +382,7 @@ export class MemStorage implements IStorage {
       //   duration: "4 weeks",
       //   sessions: 12,
       //   category: "behaviour",
-      //   imageUrl: "/attached_assets/image_1750049297197_opt.webp",
+      //   imageUrl: "/attached_assets/rottweiler-lying-down-small.webp",
       //   features: [
       //     "Training plan and homework supplied",
       //     "Foundations and communication",
@@ -403,7 +403,7 @@ export class MemStorage implements IStorage {
         duration: "1 week",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839_opt.webp",
+        imageUrl: "/attached_assets/small-dog-on-lead-brick-path.webp",
         features: [
           "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
           "Focus and obedience practised while your dog moves through everyday distractions",
@@ -422,7 +422,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769_opt.webp",
+        imageUrl: "/attached_assets/french-bulldog-playing-with-toy.webp",
         features: [
           "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
           "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
@@ -440,7 +440,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287_opt.webp",
+        imageUrl: "/attached_assets/dog-sitting-at-owners-feet.webp",
         features: [
           "5 trainer-led 40-minute Walk and Train sessions",
           "Home pickup included",
@@ -459,7 +459,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/beagle-on-beach.webp",
         features: [
           "5 one-hour adventure outings with training built in",
           "Home pickup included",
@@ -605,7 +605,7 @@ Acute injuries and chronic issues both count. Arthritis. Gut problems. Structura
 Regular check-ups aren't just for when things go wrong. They're how you maintain the foundation.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
-        imageUrl: "/attached_assets/health-foundation_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/health-foundation.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-01"),
         tags: ["health", "foundation", "wellness", "four building blocks"],
@@ -661,7 +661,7 @@ When you become your dog's main source of fun, you become the most relevant thin
 Scenting is a biological need for all dogs. Their nose is their primary way of understanding the world.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind.webp",
         readTime: "10 min read",
         publishedAt: new Date("2025-10-08"),
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
@@ -725,7 +725,7 @@ Teaching the dog to respond to lead pressure rather than just tolerate it change
 When the dog learns to yield to gentle pressure, to slow when they feel tension, to check in when they're unsure, the lead becomes a calm, reliable bridge. That awareness transfers everywhere else.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "/attached_assets/clear-communication_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/clear-communication.webp",
         readTime: "9 min read",
         publishedAt: new Date("2025-10-15"),
         tags: ["communication", "clarity", "markers", "four building blocks"],
@@ -802,7 +802,7 @@ Reliable skills follow a natural progression. You don't get there by demanding e
 Skills get taught in calm, quiet environments first. The dog needs to succeed before they can be challenged. As the basic behaviour becomes confident, you start adding variables. Different locations. Mild distractions. Higher arousal.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/good-obedience-in-public.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-22"),
         tags: ["obedience", "skills", "training", "four building blocks"],
@@ -930,7 +930,7 @@ Once the dog gets the game:
 - Use fulfilled drives to power training motivation later
 
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
-        imageUrl: "/attached_assets/genetic-drives_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/genetic-drives.webp",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-05"),
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
@@ -1006,7 +1006,7 @@ Dogs with all four blocks in place become calm because their needs are met. Conf
 That's not just better behaviour. That's a better life. For the dog, and for the people who live with them.
 
 Build the blocks. Live the balance.`,
-        imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.webp",
+        imageUrl: "/attached_assets/golden-retriever-family-lounge.webp",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-19"),
         tags: ["four building blocks", "balance", "framework", "complete guide"],
@@ -1068,7 +1068,7 @@ Build the windows at home. Take the work outside from there.
 For clients around Ascot, Hamilton and Hendra, outside usually means a café. Racecourse Road has food on every table, so it's where a settle really gets tested. See [dog training in Ascot](https://www.canineconfidence.com.au/dog-training-ascot).
 
 If you're not sure where your dog's gaps are, a free 15-minute phone call is the right place to start.`,
-        imageUrl: "/attached_assets/dog-resting-settle_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/dog-resting-settle.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-18"),
         tags: ["calm", "settle", "behaviour", "training", "foundations"],
@@ -1136,7 +1136,7 @@ It does pass. Eventually. But it leaves behind whatever the dog has been practis
 If your dog is in the adolescent window and things are slipping, that's the time to act.
 
 A free 15-minute call is the simplest place to start. I'll talk through what you're seeing, what's normal, and what's worth working on now.`,
-        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/naughty-dog-adolescence.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-11"),
         tags: ["adolescence", "puppies", "behaviour", "training", "development"],
@@ -1198,7 +1198,7 @@ If your dog is doing something you can't explain, it's worth getting a real read
 The Initial Canine Success Assessment is a 60-minute in-home session. You walk away understanding what's behind the behaviour, and with a plan to address it.
 
 Start with a free 15-minute call. No pitch. Just a conversation about what your dog actually needs.`,
-        imageUrl: "/attached_assets/guilty-dog_1779699487.webp",
+        imageUrl: "/attached_assets/guilty-dog.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-05-05"),
         tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
@@ -1250,7 +1250,7 @@ Most of the dogs I work with, tug becomes a core part of the training. Not as a 
 If your dog has gone flat in play or won't engage with toys, it's worth looking at whether the game has ever actually been worth playing for them.
 
 A free 15-minute call is a good place to start. canineconfidence.com.au`,
-        imageUrl: "/attached_assets/tug-game-dog-trainer_opt.webp",
+        imageUrl: "/attached_assets/tug-game-dog-trainer.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-06-01"),
         tags: ["play", "tug", "training", "engagement", "behaviour"],
@@ -1308,7 +1308,7 @@ A stubborn dog who understands the conversation, sees the value, and gets honest
 If your dog is described as stubborn often enough that it's become the explanation, the issue isn't the dog. It's the gap between what you're asking and what they're understanding. Increase the motivation and make it simple.
 
 That's a fixable gap. The free phone consult is where I'd start. No commitment, just a conversation about what's actually going on.`,
-        imageUrl: "/attached_assets/stubborn-dog-pulling_1779699487.webp",
+        imageUrl: "/attached_assets/stubborn-dog-pulling.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-25"),
         tags: ["behaviour", "training", "stubbornness", "motivation"],
@@ -1363,7 +1363,7 @@ Start at home. Build confidence through play. Establish clear communication. The
 If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. I work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
 
 Book directly at canineconfidence.com.au.`,
-        imageUrl: "/attached_assets/puppy-watching-park-socialisation_opt.webp",
+        imageUrl: "/attached_assets/puppy-watching-park-socialisation.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-06-15"),
         tags: ["puppy", "socialisation", "confidence", "puppy training", "Brisbane"],
@@ -1411,7 +1411,7 @@ It won't fix everything overnight. But it's the easiest, fastest change most own
 If you're around Northgate, Nundah or Kalinga, the [Kalinga Park Walk and Train](https://www.canineconfidence.com.au/dog-training-northgate) sessions build on this exact routine before hitting the bikeway, where the real distractions are.
 
 If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. I'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
-        imageUrl: "/attached_assets/dog-walk-blog-post.png",
+        imageUrl: "/attached_assets/why-your-dog-ignores-you-on-walks.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-22"),
         tags: ["walks", "leash walking", "training", "behaviour", "quick tips"],
@@ -1470,7 +1470,7 @@ If you're a dog owner in north Brisbane and something on this list sounds famili
 Based in Boondall, I work with dogs and owners across Brisbane's north side.
 
 Book via the link in the menu.`,
-        imageUrl: "/attached_assets/dog-unmet-needs-brisbane_opt.webp",
+        imageUrl: "/attached_assets/dog-unmet-needs-brisbane.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-08"),
         tags: ["behaviour", "unmet needs", "Brisbane", "dog training"],
@@ -1506,7 +1506,7 @@ Sometimes that means two very different dogs end up using the same tool for oppo
 You watch the dog, not the trend. That's what the Initial Canine Success Assessment is built around — figuring out what actually motivates your dog before we build a plan around it.
 
 Tristan`,
-        imageUrl: "/attached_assets/cleo-ball_opt.webp",
+        imageUrl: "/attached_assets/cleo-ball.webp",
         readTime: "3 min read",
         publishedAt: new Date("2026-06-29"),
         tags: ["tools", "equipment", "Brisbane", "dog training", "flirt pole"],
@@ -1566,7 +1566,7 @@ The first year is when these habits set. Not because older dogs can't learn. Bec
 If you've got a Cavoodle under 12 months, this is the easiest window you'll get.
 
 Tristan`,
-        imageUrl: "/attached_assets/cavoodle-running_opt.webp",
+        imageUrl: "/attached_assets/cavoodle-running.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-07-07"),
         tags: ["Cavoodle", "breed drives", "puppy", "behaviour", "Brisbane"],
@@ -1625,7 +1625,7 @@ One method. Short reps. Every day. Four weeks.
 Most of the dogs I'm told are hopeless just haven't had that yet.
 
 Tristan`,
-        imageUrl: "/attached_assets/why-nothings-worked-yet_opt.webp",
+        imageUrl: "/attached_assets/why-nothings-worked-yet.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-07-27"),
         tags: ["consistency", "training", "behaviour", "reactivity"],
@@ -1670,7 +1670,7 @@ The dogs who actually stop needing that level of management are the ones where t
 Reactive isn't a diagnosis, it's a description. What's underneath it, fear or frustration, changes everything about how you fix it. And however you fix it, threshold management should be the thing that buys you time, not the thing you're still relying on a year later.
 
 Tristan`,
-        imageUrl: "/attached_assets/frustration-or-fear_opt.webp",
+        imageUrl: "/attached_assets/frustration-or-fear.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-08-03"),
         tags: ["reactivity", "behaviour", "fear", "training"],
@@ -1721,7 +1721,7 @@ Use both markers from the start. Say "Yes" and reward within two seconds every t
 Keep your tone flat and identical every time you use each marker. Consistency is what gives these words meaning.
 
 Two markers. Clean feedback. Real communication with your dog starts here.`,
-        imageUrl: "/attached_assets/release-markers-and-wrong_opt.webp",
+        imageUrl: "/attached_assets/release-markers-and-wrong.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-08-10"),
         tags: ["communication", "markers", "impulse control", "training", "behaviour"],

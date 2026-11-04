@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Calendar, Menu } from "lucide-react";
 // 320px-wide WebP (30 KB) instead of the 868px PNG (267 KB) — the logo never
 // renders wider than ~105 CSS px, and this loads eagerly on every page.
-import logoImage from "@assets/canine_confidence_logo_320_opt.webp";
+import logoImage from "@assets/canine-confidence-logo-320.webp";
 import { ASSESSMENT_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";

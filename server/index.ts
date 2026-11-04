@@ -4,6 +4,7 @@ import path from "path";
 import { registerRoutes } from "./routes";
 import { requireAdminAuth } from "./adminAuth";
 import { registerSeoMiddleware } from "./seo";
+import { RENAMED_ASSETS } from "./renamed-assets";
 
 function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -49,6 +50,13 @@ app.use(express.urlencoded({ extended: false }));
 // The admin page has no client-side login; gate it at the server so the
 // management UI and its data aren't reachable by an unauthenticated visitor.
 app.use("/admin", requireAdminAuth);
+
+// Old image URLs point to their renamed files.
+app.use('/attached_assets', (req, res, next) => {
+  const renamed = RENAMED_ASSETS[req.baseUrl + req.path];
+  if (renamed) return res.redirect(301, renamed);
+  next();
+});
 
 // Serve attached assets with cache headers for 1 year
 app.use('/attached_assets', express.static('attached_assets', {

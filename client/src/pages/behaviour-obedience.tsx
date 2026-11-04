@@ -11,7 +11,7 @@ import {
 import { behaviourPrograms, VIRTUAL_COACHING_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
 import ReviewQuote from "@/components/review-quote";
-import behaviourImage from "@assets/DSC_0171_testimonials_800.webp";
+import behaviourImage from "@assets/tristan-crouching-with-staffy-800.webp";
 import FinalCta from "@/components/funnel/final-cta";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 

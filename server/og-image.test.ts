@@ -8,7 +8,7 @@ import { registerSeoMiddleware } from "./seo";
 import { storage } from "./storage";
 
 const SITE_URL = "https://www.canineconfidence.com.au";
-const DEFAULT_IMAGE = `${SITE_URL}/attached_assets/IMG_0177_hero_1200_opt.webp`;
+const DEFAULT_IMAGE = `${SITE_URL}/attached_assets/tristan-playing-tug-with-staffy.webp`;
 const STORM_SHARE_IMAGE = `${SITE_URL}/attached_assets/dog-scared-of-storms-brisbane-share.jpg`;
 
 const template = `<!doctype html>

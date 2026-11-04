@@ -1,24 +1,24 @@
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Play, Star, X } from "lucide-react";
-import bean480 from "@assets/review_bean_480.webp";
-import bean768 from "@assets/review_bean_768.webp";
-import beanJpeg from "@assets/review_bean_768.jpg";
-import lyla480 from "@assets/review_lyla_480.webp";
-import lyla768 from "@assets/review_lyla_768.webp";
-import lylaJpeg from "@assets/review_lyla_768.jpg";
+import bean480 from "@assets/review-bean-480.webp";
+import bean768 from "@assets/review-bean-768.webp";
+import beanJpeg from "@assets/review-bean-768.jpg";
+import lyla480 from "@assets/review-lyla-480.webp";
+import lyla768 from "@assets/review-lyla-768.webp";
+import lylaJpeg from "@assets/review-lyla-768.jpg";
 import lylaClip from "@assets/review_lyla_clip.mp4";
-import archie480 from "@assets/review_archie_480.webp";
-import archie768 from "@assets/review_archie_768.webp";
-import archieJpeg from "@assets/review_archie_768.jpg";
-import molly480 from "@assets/review_molly_480.webp";
-import molly768 from "@assets/review_molly_768.webp";
-import mollyJpeg from "@assets/review_molly_768.jpg";
-import ziggy480 from "@assets/review_ziggy_480.webp";
-import ziggy768 from "@assets/review_ziggy_768.webp";
-import ziggyJpeg from "@assets/review_ziggy_768.jpg";
-import rae480 from "@assets/review_rae_480.webp";
-import rae768 from "@assets/review_rae_768.webp";
-import raeJpeg from "@assets/review_rae_768.jpg";
+import archie480 from "@assets/review-archie-480.webp";
+import archie768 from "@assets/review-archie-768.webp";
+import archieJpeg from "@assets/review-archie-768.jpg";
+import molly480 from "@assets/review-molly-480.webp";
+import molly768 from "@assets/review-molly-768.webp";
+import mollyJpeg from "@assets/review-molly-768.jpg";
+import ziggy480 from "@assets/review-ziggy-480.webp";
+import ziggy768 from "@assets/review-ziggy-768.webp";
+import ziggyJpeg from "@assets/review-ziggy-768.jpg";
+import rae480 from "@assets/review-rae-480.webp";
+import rae768 from "@assets/review-rae-768.webp";
+import raeJpeg from "@assets/review-rae-768.jpg";
 
 // Owners' stories from Google reviews, each with a photo of the dog. Shared by
 // the homepage and the Reviews page. Quotes are the owners' own words.

@@ -11,7 +11,7 @@ import { apiRequest } from "@/lib/queryClient";
 import FormattedText from "@/components/ui/formatted-text";
 import { GOOGLE_RATING } from "@shared/social-proof";
 import type { Package } from "@shared/schema";
-import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
+import packagesHeroImage from "@assets/tristan-walking-cleo-on-path.jpeg";
 import { getBookingLinkProps } from "@/lib/analytics";
 import FinalCta from "@/components/funnel/final-cta";
 

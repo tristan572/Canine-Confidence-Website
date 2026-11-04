@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Waves, MapPin, Check, Heart } from "lucide-react";
-import sandgateHero from "@assets/IMG_0358_1762512636150.jpeg";
+import sandgateHero from "@assets/shorncliffe-pier-sunset.jpeg";
 import { AssessmentButton, ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
@@ -57,7 +57,7 @@ export default function SandgatePage() {
     <div className="min-h-screen">
       <StaticSEO
         path="/dog-training-sandgate"
-        ogImage="/attached_assets/IMG_0358_1762512636150.webp"
+        ogImage="/attached_assets/shorncliffe-pier-sunset.webp"
         keywords={[
           'dog training Sandgate',
           'dog trainer Shorncliffe',

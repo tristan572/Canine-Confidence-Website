@@ -1,8 +1,8 @@
 import { Link } from "wouter";
 import { CheckCircle2 } from "lucide-react";
-import trainer600 from "@assets/trainer_staffy_600.webp";
-import trainer1122 from "@assets/trainer_staffy_1122.webp";
-import trainerJpeg from "@assets/trainer_staffy_800.jpg";
+import trainer600 from "@assets/tristan-with-cleo-600.webp";
+import trainer1122 from "@assets/tristan-with-cleo-1122.webp";
+import trainerJpeg from "@assets/tristan-with-cleo-800.jpg";
 
 const trainerPoints = [
   { title: "Safe, cared for and respected", text: "Your dog is safe with me. I train them with care, and with respect for who they are." },

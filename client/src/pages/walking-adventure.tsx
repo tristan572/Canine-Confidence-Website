@@ -8,8 +8,8 @@ import {
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
 import ReviewQuote from "@/components/review-quote";
-import cleo640 from "@assets/adventure_cleo_640.webp";
-import cleo1000 from "@assets/adventure_cleo_1000.webp";
+import cleo640 from "@assets/tristan-walking-cleo-640.webp";
+import cleo1000 from "@assets/tristan-walking-cleo-1000.webp";
 import FinalCta from "@/components/funnel/final-cta";
 import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 

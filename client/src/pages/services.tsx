@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { SEO } from "@/components/SEO";
 import { ServiceSchema } from "@/components/StructuredData";
 import FormattedText from "@/components/ui/formatted-text";
-import servicesHeroImage from "@assets/IMG_0237_1760870579906.jpeg";
+import servicesHeroImage from "@assets/tristan-training-staffy-in-park.jpeg";
 import {
   GraduationCap,
   Footprints,
