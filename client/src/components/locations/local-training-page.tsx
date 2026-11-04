@@ -108,7 +108,7 @@ export default function LocalTrainingPage({
           <img
             src={heroImage}
             alt={heroImageAlt}
-            className={`max-h-[620px] w-full rounded-[26px] ${HERO_PHOTO}`}
+            className={`max-h-[620px] w-full rounded-[26px] object-[center_12%] ${HERO_PHOTO}`}
             width={640}
             height={640}
             loading="eager"
