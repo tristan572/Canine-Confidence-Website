@@ -1,101 +1,199 @@
+import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
-import { AssessmentButton } from "@/components/funnel/funnel-cta";
-import methodImage from "@assets/IMG_0076_1758798863394_opt.webp";
+import { buildingBlocks } from "@/lib/building-blocks";
+import standing600 from "@assets/tristan-with-cleo-at-his-feet-600.webp";
+import standing1000 from "@assets/tristan-with-cleo-at-his-feet-1000.webp";
+import weave480 from "@assets/staffy-weaving-through-tristans-legs-480.webp";
+import weave960 from "@assets/staffy-weaving-through-tristans-legs-960.webp";
+import { usePricing } from "@/hooks/use-pricing";
+import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
+import FinalCta from "@/components/funnel/final-cta";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
+// `inSession` shows what the principle looks like with a real dog.
 const principles = [
   {
     title: "Dog first",
     text: "Genetics, drives, health, past learning and environment all shape behaviour. I understand those pieces before deciding what the training should look like.",
+    inSession: "Your assessment starts with your dog's health, breed, history and daily routine before we pick up a lead.",
   },
   {
     title: "Clarity",
     text: "Your dog needs communication they can understand. Clear information removes guesswork, reduces anxiety and gives them a straight path to success.",
+    inSession: "I teach \"Yes\" and \"Uh-uh\" early, so your dog always knows when they've got it right and when they haven't.",
   },
   {
     title: "Play",
-    text: "Training is high-value engagement, not a chore. Purposeful play builds trust, motivation and focus, accelerating learning while strengthening your relationship.",
+    text: "Training should be something your dog wants to do. Play builds trust, motivation and focus, speeds up learning and strengthens your relationship.",
+    inSession: "Tug and toy games become the reward, including out on walks where food often stops working.",
   },
   {
     title: "Fulfilment",
     text: "A dog whose physical, mental and genetic needs are met is easier to live with and ready to learn. Obedience cannot compensate for an unfulfilled lifestyle.",
+    inSession: "Your plan includes the outlets your dog needs, like sniffing, running, chewing or games that suit their breed.",
   },
   {
     title: "Real life",
     text: "Skills need to survive footpaths, parks, visitors and the distractions that matter in your life. That is where training earns its value.",
+    inSession: "Once a skill is built at home, we take it out the front door to the footpaths and parks.",
   },
   {
-    title: "Built to Last",
+    title: "Built to last",
     text: "I can build foundations with your dog, but the final skill must transfer to you. You learn the handling and communication needed to maintain the result for life.",
+    inSession: "Every coaching session comes with written notes, so you know exactly what to practise until I see you next.",
   },
 ];
 
+// Widest, darkest block at the base: each one rests on the one below.
+const stackStyles = [
+  "w-full bg-navy",
+  "w-[94%] lg:w-[86%] bg-navy/85",
+  "w-[88%] lg:w-[72%] bg-sky-deep",
+  "w-[82%] lg:w-[58%] bg-sky-deep/85",
+];
+
 export default function MethodPage() {
+  const pricing = usePricing();
   return (
     <div className="min-h-screen">
       <StaticSEO path="/method" />
-      <section className="hero-gradient py-16 lg:py-20">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">My method</p>
-            <h1 className="mb-5 text-4xl font-bold text-charcoal lg:text-5xl">
+            <p className="eyebrow mb-3">My method</p>
+            <h1 className="mb-5 text-4xl font-extrabold text-charcoal lg:text-5xl">
               The goal is a dog you can take anywhere.
             </h1>
-            <p className="text-xl leading-relaxed text-medium-grey">
+            <p className="mb-8 text-xl leading-relaxed text-medium-grey">
               Every dog is different, so every program should be different. I
               look at the dog, their drives and what daily life actually looks
               like, then combine play, fulfilment, clear communication and
               real-world practice to build something that lasts.
             </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="Method hero" className="px-7 py-4 text-lg" />
+              <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
+            </div>
           </div>
           <img
-            src={methodImage}
-            alt="Tristan training a client dog outdoors"
-            className="h-auto w-full rounded-2xl shadow-xl"
-            width={640}
-            height={480}
+            src={weave960}
+            srcSet={`${weave480} 480w, ${weave960} 960w`}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="A grey staffy weaving through Tristan's legs as he holds a tug toy in an open park"
+            className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
+            width={960}
+            height={1200}
+            decoding="async"
           />
-        </div>
-      </section>
-      <section className="bg-sand py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14 max-w-3xl">
-            <p className="eyebrow mb-3">
-              The way I train
-            </p>
-            <h2 className="text-4xl font-extrabold leading-tight text-charcoal lg:text-5xl">
-              Six things I will not compromise on.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {principles.map(({ title, text }, index) => (
-              <article key={title} className="point-card lg:p-8">
-                <p className="mb-4 text-3xl font-extrabold text-sky-deep">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mb-3 text-2xl font-extrabold text-charcoal lg:text-3xl">{title}</h3>
-                <p className="text-lg leading-relaxed text-medium-grey">{text}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl rounded-2xl border border-blue-100 bg-blue-50 px-6 py-10 text-center sm:px-10">
-          <h2 className="mb-4 text-3xl font-bold text-charcoal">
-            Start training for the life you want together
-          </h2>
-          <p className="mb-7 text-lg leading-relaxed text-medium-grey">
-            Your assessment gives me the full picture of your dog, your goals
-            and daily life. From there, I recommend the training approach that
-            will get you where you want to go.
-          </p>
-          <AssessmentButton
-            location="Method final CTA"
-            className="px-7 py-4 text-lg"
-          />
+      {/* The Four Building Blocks, drawn as a stack with Health at the base. */}
+      <section className="bg-sand py-16 lg:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <p className="eyebrow mb-3">My framework</p>
+            <h2 className="mb-5 text-3xl font-extrabold text-charcoal lg:text-5xl">
+              The Four Building Blocks
+            </h2>
+            <div className="space-y-4 text-lg leading-relaxed text-medium-grey">
+              <p>
+                Every plan I write is built in the same order. Health first,
+                then lifestyle, then clarity, and only then the skills you
+                booked me for.
+              </p>
+              <p>
+                Skip a block and the ones above it wobble. That's why a sit that
+                works in the kitchen falls apart at the park, and why I check all
+                four at your assessment.
+              </p>
+            </div>
+            <Link
+              href="/blog/creating-balance-complete-framework"
+              className="mt-8 inline-flex font-extrabold text-primary hover:text-sky-deep"
+            >
+              Read the full framework →
+            </Link>
+          </div>
+          <ol className="flex flex-col-reverse items-center gap-1.5" aria-label="The Four Building Blocks, from the base up">
+            {buildingBlocks.map(({ number, title, short }, i) => (
+              <li
+                key={title}
+                className={`${stackStyles[i]} flex min-h-[6.5rem] flex-col items-center justify-center rounded-xl px-5 py-3 text-center text-white`}
+              >
+                <h3 className="text-lg font-extrabold">
+                  <span className="mr-2 font-quote font-normal italic text-[#8FD3F2]">{number}</span>
+                  {title}
+                </h3>
+                <p className="mt-1 max-w-[19rem] text-sm leading-snug text-white/80">{short}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
+
+      {/* Six principles: heading and photo stay put while the list scrolls. */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:px-8">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <p className="eyebrow mb-3">The way I train</p>
+            <h2 className="mb-6 text-4xl font-extrabold leading-tight text-charcoal lg:text-5xl">
+              Six things I won't compromise on.
+            </h2>
+            <img
+              src={standing1000}
+              srcSet={`${standing600} 600w, ${standing1000} 1000w`}
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              alt="Tristan smiling in a North Brisbane park, with his staffy Cleo sitting at his feet looking up at him"
+              className="hidden h-[calc(100svh_-_17rem)] max-h-[40rem] w-full rounded-[26px] object-cover object-[center_40%] lg:block"
+              width={1000}
+              height={1333}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <ol>
+            {principles.map(({ title, text, inSession }, index) => (
+              <li key={title} className="border-t border-navy/15 py-8 first:border-t-0 first:pt-0 lg:first:pt-2">
+                <div className="mb-3 flex items-baseline gap-4">
+                  <span className="font-quote text-3xl italic text-sky-deep">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-2xl font-extrabold text-charcoal lg:text-3xl">{title}</h3>
+                </div>
+                <p className="mb-5 text-lg leading-relaxed text-medium-grey">{text}</p>
+                <p className="rounded-2xl bg-sand px-5 py-4 leading-relaxed text-charcoal">
+                  <span className="mr-2 text-xs font-extrabold uppercase tracking-[0.12em] text-sky-deep">In a session</span>
+                  {inSession}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="bg-sand py-16 lg:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <figure className="border-l-2 border-sky-brand pl-6 lg:pl-10">
+            <blockquote className="font-quote text-2xl font-normal italic leading-snug text-charcoal lg:text-3xl">
+              “Tristan is extremely knowledgeable, patient, and explains everything
+              in a way that's easy to understand and put into practice. He takes
+              the time to understand your dog's behaviour and provides practical
+              training techniques that really work.”
+            </blockquote>
+            <figcaption className="mt-3 text-sm font-bold text-medium-grey">Amanda C. · Owner of Murphy</figcaption>
+          </figure>
+          <Link href="/reviews" className="mt-8 inline-flex font-extrabold text-primary hover:text-sky-deep">
+            Read all reviews →
+          </Link>
+        </div>
+      </section>
+
+      <FinalCta
+        heading="Start training for the life you want together"
+        text="Your assessment gives me the full picture of your dog, your goals and daily life. From there, I recommend the training approach that will get you where you want to go."
+        location="Method final CTA"
+      />
     </div>
   );
 }

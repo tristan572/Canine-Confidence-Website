@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { SEO } from "@/components/SEO";
-import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign, ShieldCheck, Award } from "lucide-react";
+import { Star, Clock, Users, CheckCircle, Calendar, Phone, DollarSign } from "lucide-react";
 import ConsultationForm from "@/components/forms/consultation-form";
 import { apiRequest } from "@/lib/queryClient";
 import FormattedText from "@/components/ui/formatted-text";
 import { GOOGLE_RATING } from "@shared/social-proof";
 import type { Package } from "@shared/schema";
-import packagesHeroImage from "@assets/IMG_0084_1760870993102.jpeg";
+import packagesHeroImage from "@assets/tristan-walking-cleo-on-path.jpeg";
 import { getBookingLinkProps } from "@/lib/analytics";
+import FinalCta from "@/components/funnel/final-cta";
 
 const PackageCard = ({ pkg }: { pkg: Package }) => {
   const getPackageBookingUrl = () => {
@@ -22,8 +22,8 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
     // is later reworded, so update the key here rather than the ID.
     const packageMap: Record<string, number> = {
       "The Confident Start Program": 6,
-      "The Connected Companion Walk": 13,
-      "From Chaos to Calm Program": 9,
+      "The Connected Companion": 13,
+      "The Balanced Canine": 9,
       "The Focused Progress Plan": 2,
       "The Foundation Program": 1,
       "The Real World Reliability Package": 3,
@@ -87,7 +87,7 @@ const PackageCard = ({ pkg }: { pkg: Package }) => {
             </div>
             {pkg.originalPrice && (
               <p className="text-sm text-primary-blue font-medium mt-1">
-                Save {parseInt(pkg.originalPrice.replace('$', '')) - parseInt(pkg.price.replace('$', ''))} AUD
+                Save ${(Number(pkg.originalPrice.replace(/[^0-9.]/g, '')) - Number(pkg.price.replace(/[^0-9.]/g, ''))).toLocaleString('en-AU')} · inc. GST
               </p>
             )}
           </div>
@@ -325,54 +325,11 @@ export default function PackagesPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue content-visibility-auto">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">Not sure which package is right for you?</h2>
-              <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                A free 15-minute call is enough to work out what your dog actually needs — no pressure, no sales pitch.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Book a Free Call
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Book a Free Call</DialogTitle>
-                  <DialogDescription>Book a free 15-minute call to talk through what your dog needs.</DialogDescription>
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
-
-              <Link href="/services">
-                <Button
-                  variant="outline"
-                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold transition-colors"
-                >
-                  View All Services
-                </Button>
-              </Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-12 pt-8 text-blue-100">
-              <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-2" />
-                <span>Fully Insured</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span>Certified Professional</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        heading="Not sure which package is right for you?"
+        text="Start with an assessment and I'll recommend the package that suits your dog. If you'd rather talk first, a free 15-minute call is enough to work out what your dog needs."
+        location="Packages final CTA"
+      />
     </div>
   );
 }

@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { MapPin, Phone, Check, ShieldCheck, Award, Users, Footprints } from "lucide-react";
-import ConsultationForm from "@/components/forms/consultation-form";
-import tristanPortraitWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
-import tristanPortraitJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
+import { MapPin, Check, Users, Footprints } from "lucide-react";
+import { AssessmentButton, ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
+import cleo600 from "@assets/tristan-with-cleo-at-his-feet-600.webp";
+import cleo1000 from "@assets/tristan-with-cleo-at-his-feet-1000.webp";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
+import FinalCta from "@/components/funnel/final-cta";
+import MeetTristan from "@/components/meet-tristan";
+import HowItWorks from "@/components/how-it-works";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 export default function ChermsidePage() {
   const pricing = usePricing();
@@ -72,7 +76,7 @@ export default function ChermsidePage() {
       />
 
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className={HERO_SECTION}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -81,7 +85,7 @@ export default function ChermsidePage() {
                   <MapPin className="w-5 h-5 text-primary-blue" />
                   <span className="text-primary-blue font-semibold">Chermside, Kedron & Stafford Heights</span>
                 </div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+                <h1 className="text-4xl lg:text-5xl font-extrabold text-charcoal leading-tight">
                   Chermside Dog Training
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal">
@@ -101,44 +105,21 @@ export default function ChermsidePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button
-                      className="btn-primary text-lg px-8 py-4"
-                      data-testid="button-request-call-hero"
-                    >
-                      <Phone className="w-5 h-5 mr-2" />
-                      Request Free Call
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-md">
-                    <DialogTitle>Request Free Call</DialogTitle>
-                    <DialogDescription>
-                      Tell me about your dog and I'll call you back to discuss the best training approach.
-                    </DialogDescription>
-                    <ConsultationForm />
-                  </DialogContent>
-                </Dialog>
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-secondary text-lg px-8 py-4"
-                  data-testid="button-book-assessment-hero"
-                >
-                  Book Assessment
-                </Button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <AssessmentButton label={`Book an Assessment · ${assessmentPrice}`} location="Chermside hero" className="px-7 py-4 text-lg" />
+                <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
               </div>
             </div>
 
             <div className="relative hidden lg:block">
               <picture>
-                <source type="image/webp" srcSet={tristanPortraitWebp} />
+                <source type="image/webp" srcSet={`${cleo600} 600w, ${cleo1000} 1000w`} sizes="40vw" />
                 <img
-                  src={tristanPortraitJpeg}
-                  alt="Tristan, NDTF certified dog trainer, with his dog"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                  width={600}
-                  height={400}
+                  src={cleo1000}
+                  alt="Tristan smiling in a North Brisbane park, with his staffy Cleo sitting at his feet looking up at him"
+                  className={`aspect-[4/5] w-full rounded-[26px] object-center ${HERO_PHOTO}`}
+                  width={1000}
+                  height={1333}
                   loading="eager"
                   decoding="async"
                 />
@@ -149,15 +130,15 @@ export default function ChermsidePage() {
       </section>
 
       {/* Walk & Train Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-20 bg-sand">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-blue-50 text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-sand text-primary-blue px-4 py-2 rounded-full text-sm font-medium">
                 <Footprints className="w-4 h-4" />
                 High-Frequency Results
               </div>
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 Walk and Train at <span className="text-primary-blue">7th Brigade Park</span>
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
@@ -199,7 +180,7 @@ export default function ChermsidePage() {
                 </p>
                 <Button
                   onClick={() => setShowWalkTrainDialog(true)}
-                  className="btn-primary"
+                  className={`btn-cta ${CTA_COLOURS} `}
                   data-testid="button-book-walk-train"
                 >
                   Book Assessment
@@ -207,20 +188,20 @@ export default function ChermsidePage() {
               </div>
             </div>
 
-            <Card className="bg-white border-0 shadow-xl">
+            <Card className="rounded-[22px] border border-navy/10 bg-white shadow-none">
               <CardContent className="p-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+                  <h3 className="text-2xl font-extrabold text-charcoal mb-4">Session Details & Pricing</h3>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+                    <div className="flex items-center justify-between p-4 bg-sand rounded-lg">
                       <div>
                         <p className="font-semibold text-charcoal">Single 40-Minute Session</p>
                       </div>
                       <div className="text-2xl font-bold text-primary-blue">{walkTrainPrice}</div>
                     </div>
 
-                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
+                    <div className="border-2 border-primary-blue rounded-lg p-4 bg-sand">
                       <div className="flex items-center justify-between mb-2">
                         <div>
                           <p className="font-semibold text-charcoal">The Real World Reliability Package</p>
@@ -255,7 +236,7 @@ export default function ChermsidePage() {
 
                   <Button
                     onClick={() => setShowWalkTrainPackageDialog(true)}
-                    className="btn-primary w-full"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-walk-train-package"
                   >
                     Book Assessment
@@ -272,11 +253,11 @@ export default function ChermsidePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-sand text-navy px-4 py-2 rounded-full text-sm font-bold">
                 <Users className="w-4 h-4" />
                 Owner Skill Building
               </div>
-              <h2 className="text-4xl font-bold text-charcoal">
+              <h2 className="text-4xl font-extrabold text-charcoal">
                 <span className="text-primary-blue">One-on-One Private Coaching</span> Sessions
               </h2>
               <p className="text-lg text-medium-grey leading-relaxed">
@@ -318,7 +299,7 @@ export default function ChermsidePage() {
                 </p>
                 <Button
                   onClick={() => setShowCoachingDialog(true)}
-                  className="btn-primary"
+                  className={`btn-cta ${CTA_COLOURS} `}
                   data-testid="button-book-coaching"
                 >
                   Book a Coaching Session
@@ -330,7 +311,7 @@ export default function ChermsidePage() {
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Session Details & Pricing</h3>
+                    <h3 className="text-2xl font-extrabold text-charcoal mb-4">Session Details & Pricing</h3>
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-4 bg-white rounded-lg">
                         <div>
@@ -339,7 +320,7 @@ export default function ChermsidePage() {
                         <div className="text-2xl font-bold text-primary-blue">{coachingPrice}</div>
                       </div>
 
-                      <div className="border-2 border-primary-blue rounded-lg p-4 bg-blue-50">
+                      <div className="border-2 border-primary-blue rounded-lg p-4 bg-sand">
                         <div className="flex items-center justify-between mb-2">
                           <div>
                             <p className="font-semibold text-charcoal">The Focused Progress Plan</p>
@@ -377,7 +358,7 @@ export default function ChermsidePage() {
                     </ul>
                   </div>
 
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="bg-sand border border-navy/15 rounded-lg p-4">
                     <p className="text-primary-blue font-semibold text-center">
                       The goal is a dog that responds to you — not just to me.
                     </p>
@@ -385,7 +366,7 @@ export default function ChermsidePage() {
 
                   <Button
                     onClick={() => setShowCoachingPackageDialog(true)}
-                    className="btn-primary w-full"
+                    className={`btn-cta ${CTA_COLOURS} w-full`}
                     data-testid="button-book-coaching-package"
                   >
                     Book Assessment
@@ -397,141 +378,16 @@ export default function ChermsidePage() {
         </div>
       </section>
 
-      {/* Assessment Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-charcoal">
-                Every dog is different. The plan should be too.
-              </h2>
-              <p className="text-lg text-medium-grey leading-relaxed">
-                Before any training begins, I need to understand your dog: their genetics, their triggers, how they move through your specific environment. A proper assessment tells me everything.
-              </p>
-              <p className="text-lg text-medium-grey leading-relaxed">
-                The Initial Canine Success Assessment is a 60-minute, one-on-one session. You walk away with a clear picture of what's driving your dog's behaviour and a structured plan to address it.
-              </p>
+      <HowItWorks intro="From your own front door to the footpaths around Westfield, the plan is built around your dog and the places you take them." />
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-charcoal">What it covers:</h3>
-
-                <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Trigger identification</h4>
-                    <p className="text-medium-grey">Exactly what causes your dog to react, and why.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">Environment review</h4>
-                    <p className="text-medium-grey">Your walking routes, your home setup, the specific demands of where you live.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-primary-blue flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-charcoal mb-1">A training roadmap</h4>
-                    <p className="text-medium-grey">A step-by-step plan built around your dog and your situation, not a template.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4 hidden lg:block">
-                <Button
-                  onClick={() => setShowAssessmentDialog(true)}
-                  className="btn-primary px-8"
-                  data-testid="button-book-assessment-section"
-                >
-                  Book your assessment
-                </Button>
-              </div>
-            </div>
-
-            <Card className="bg-white border-0 shadow-xl">
-              <CardContent className="p-8">
-                <div className="space-y-6">
-                  <div className="text-center pb-4 border-b">
-                    <h3 className="text-2xl font-bold text-charcoal mb-2">Initial Canine Success Assessment</h3>
-                    <div className="text-4xl font-bold text-primary-blue">{assessmentPrice}</div>
-                    <p className="text-medium-grey mt-2">60 minutes · One-off session</p>
-                  </div>
-
-                  <p className="text-medium-grey">
-                    One session. A clear picture of your dog, their triggers, and the plan to move forward. It's also how I work out whether Walk and Train, One-on-One Private Coaching, or a combination of both is the right fit.
-                  </p>
-
-                  <Button
-                    onClick={() => setShowAssessmentDialog(true)}
-                    className="btn-primary w-full"
-                    data-testid="button-book-assessment-card"
-                  >
-                    Book Your Assessment
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <MeetTristan />
 
       {/* CTA Section */}
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-white">
-                Your dog can handle Chermside. They just need the right foundation.
-              </h2>
-              <p className="text-xl text-white opacity-90">
-                If walks feel like damage control and your building's corridor is a source of dread, that's worth fixing. A calm, connected dog isn't a personality type. It's a skill set. One you can build.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 text-lg font-semibold"
-                    data-testid="button-request-call-cta"
-                  >
-                    Book a free call
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-md">
-                  <DialogTitle>Book a Free Call</DialogTitle>
-                  <DialogDescription>
-                    Tell me about your dog and I'll call you back to discuss the best training approach.
-                  </DialogDescription>
-                  <ConsultationForm />
-                </DialogContent>
-              </Dialog>
-
-              <Button
-                onClick={() => setShowAssessmentDialog(true)}
-                className="bg-white text-primary-blue hover:bg-gray-50 px-8 py-4 text-lg font-semibold"
-                data-testid="button-book-now-cta"
-              >
-                Book Assessment
-              </Button>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 text-blue-100">
-              <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-2" />
-                <span>Fully Insured</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span>Certified Professional</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FinalCta
+        heading="Your dog can handle Chermside. They just need the right foundation."
+        text="If walks feel like damage control and your building's corridor is a source of dread, that's worth fixing, and it starts with an assessment at your home."
+        location="Chermside final CTA"
+      />
 
       {/* Security Dialogs */}
       <Dialog open={showAssessmentDialog} onOpenChange={setShowAssessmentDialog}>
@@ -548,7 +404,7 @@ export default function ChermsidePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -579,7 +435,7 @@ export default function ChermsidePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -610,7 +466,7 @@ export default function ChermsidePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -641,7 +497,7 @@ export default function ChermsidePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -672,7 +528,7 @@ export default function ChermsidePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",
@@ -703,7 +559,7 @@ export default function ChermsidePage() {
             >
               Cancel
             </Button>
-            <Button asChild className="btn-primary">
+            <Button asChild className={`btn-cta ${CTA_COLOURS} `}>
               <a
                 {...getBookingLinkProps(
                   "https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/",

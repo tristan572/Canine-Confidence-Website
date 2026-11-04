@@ -12,6 +12,10 @@ import ConsultationForm from "@/components/forms/consultation-form";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { ASSESSMENT_URL } from "@/lib/funnel";
 
+// The booking button's accent colours. These are utilities rather than part of
+// .btn-cta so they override the Button component's default navy fill.
+export const CTA_COLOURS = "bg-sky-brand text-navy font-extrabold hover:bg-[#4FB7E6]";
+
 interface AssessmentButtonProps {
   location: string;
   className?: string;
@@ -26,7 +30,7 @@ export function AssessmentButton({
   showIcon = true,
 }: AssessmentButtonProps) {
   return (
-    <Button asChild className={`btn-primary ${className}`}>
+    <Button asChild className={`btn-cta ${CTA_COLOURS} ${className}`}>
       <a
         {...getBookingLinkProps(
           ASSESSMENT_URL,

@@ -1,5 +1,5 @@
 import LocalTrainingPage from "@/components/locations/local-training-page";
-import aspleyImage from "@assets/IMG_0237_card_800_opt.webp";
+import aspleyImage from "@assets/tristan-with-cleo-at-his-feet-1000.webp";
 
 export default function AspleyPage() {
   return (
@@ -12,7 +12,7 @@ export default function AspleyPage() {
       heroSubheading="Practical training for the places your dog actually lives."
       heroCopy="Aspley moves quickly from quiet residential streets to busy roads, shopping areas and dog-filled parks. I train in your home and around suitable local environments so your dog can build calm, reliable behaviour where you need it day to day."
       heroImage={aspleyImage}
-      heroImageAlt="Tristan training a Staffy in a leafy North Brisbane park"
+      heroImageAlt="Tristan smiling in a North Brisbane park, with his staffy Cleo sitting at his feet looking up at him"
       localHeading="From Marchant Park to the front door"
       localIntro="Good training needs to work across the different environments an Aspley dog meets in a normal week. That may mean calm behaviour at home, better connection on neighbourhood walks or better focus when the surroundings become busier."
       highlights={[
@@ -47,20 +47,20 @@ export default function AspleyPage() {
       localProcessCopy="The plan is based on your dog, your home and the Aspley environments you want to enjoy together. I can do the concentrated training work, coach you and your family, or combine both depending on what will create the best result."
       faqs={[
         {
-          question: "Do you come to homes in Aspley?",
-          answer: "Yes. In-home training is available across Aspley and nearby North Brisbane suburbs. It lets me see the environment, routines and behaviour as they actually happen before we take skills into local public spaces where appropriate.",
-        },
-        {
-          question: "Do you train dogs at Marchant Park?",
-          answer: "Marchant Park and its surrounding paths can be useful for suitable dogs and goals. I choose the exact location and level of distraction around the individual dog. Sessions do not depend on entering the off-leash area.",
-        },
-        {
           question: "Can you help with reactivity or anxiety?",
-          answer: "Yes. Behaviour and obedience work can cover dog reactivity, anxiety, barking, lunging, over-excitement and related handling problems. Adult dogs start with an assessment so I can see what is happening and build the right plan.",
+          answer: "Yes. I work with dogs who bark, lunge or shut down around other dogs, people or busy places. We start with an assessment so I can see what triggers your dog and how they cope, then build the plan around that.",
         },
         {
-          question: "Which nearby suburbs do you cover?",
-          answer: "I work throughout North Brisbane, including Aspley, Carseldine and Bridgeman Downs. Availability can be confirmed during the free phone consult.",
+          question: "How many sessions will my dog need?",
+          answer: "It depends on your dog and what you want to change. After the assessment I recommend a program and tell you exactly how many sessions it includes, so you know what you're booking before you commit.",
+        },
+        {
+          question: "Will I need to practise between sessions?",
+          answer: "Yes, a little each day. After every session I email you notes on what we covered and what to work on first, and you can send me a question or a video if something isn't working before we meet again.",
+        },
+        {
+          question: "Do you only train at home?",
+          answer: "Most programs start at home, because that's where the routines and habits are. Once your dog is ready, we take the skills out to your street, your regular walks and busier spots like Marchant Park.",
         },
       ]}
     />

@@ -5,10 +5,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Calendar, Menu } from "lucide-react";
 // 320px-wide WebP (30 KB) instead of the 868px PNG (267 KB) — the logo never
 // renders wider than ~105 CSS px, and this loads eagerly on every page.
-import logoImage from "@assets/canine_confidence_logo_320_opt.webp";
+import logoImage from "@assets/canine-confidence-logo-320.webp";
 import { ASSESSMENT_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
-import { ConsultationButton } from "@/components/funnel/funnel-cta";
+import { ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
 import { GOOGLE_RATING } from "@shared/social-proof";
 
 export default function Navbar() {
@@ -33,8 +33,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-cream/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-      {/* Credentials bar */}
+    <>
+      {/* Credentials bar. Scrolls away with the page; only the bar below
+          stays on screen. */}
       <div className="bg-navy text-[#D9DBEF]">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-6 px-4 py-2 text-xs font-semibold sm:px-6 sm:text-sm lg:justify-between lg:px-8">
           <span className="hidden lg:inline">In-home dog training across North Brisbane</span>
@@ -47,18 +48,20 @@ export default function Navbar() {
           </span>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center py-3">
+      {/* Slim floating bar. The wrapper is a fixed h-20 so pages can slide
+          a full-bleed hero underneath it with -mt-20 (see home.tsx). */}
+      <nav className="pointer-events-none sticky top-0 z-50 h-20 px-2 pt-3 sm:px-4">
+        <div className="pointer-events-auto mx-auto flex h-16 max-w-7xl items-center rounded-2xl border border-white/60 bg-cream/90 px-4 shadow-[0_8px_30px_rgba(31,33,89,0.12)] backdrop-blur-md sm:px-6">
           {/* Mobile Layout */}
           <div className="lg:hidden flex items-center gap-3 w-full">
             <Link href="/" className="flex items-center shrink-0 group" aria-label="Canine Confidence home" data-testid="link-brand">
               <img
                 src={logoImage}
                 alt="Canine Confidence logo"
-                className="block h-12 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+                className="block h-11 w-auto"
                 data-testid="img-logo"
-                width={60}
-                height={48}
+                width={55}
+                height={44}
                 loading="eager"
                 decoding="async"
               />
@@ -72,7 +75,7 @@ export default function Navbar() {
 
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" aria-label="Open menu" className="h-11 w-11 shrink-0 border-[1.5px] border-input bg-transparent text-primary">
+                <Button variant="outline" size="icon" aria-label="Open menu" className="h-10 w-10 shrink-0 border-[1.5px] border-input bg-transparent text-primary">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -121,10 +124,10 @@ export default function Navbar() {
               <img
                 src={logoImage}
                 alt="Canine Confidence logo"
-                className="block h-14 lg:h-16 w-auto drop-shadow-sm transition-[filter] group-hover:drop-shadow-md"
+                className="block h-12 w-auto"
                 data-testid="img-logo"
-                width={80}
-                height={64}
+                width={60}
+                height={48}
                 loading="eager"
                 decoding="async"
               />
@@ -150,7 +153,7 @@ export default function Navbar() {
             {/* Desktop CTA Buttons */}
             <div className="flex items-center gap-2 shrink-0">
               <ConsultationButton className="btn-secondary hidden h-11 px-4 py-0 text-sm xl:inline-flex" showIcon={false} />
-              <Button asChild className="btn-primary h-11 px-5 py-0 text-sm">
+              <Button asChild className={`btn-cta ${CTA_COLOURS} h-11 px-5 py-0 text-sm`}>
                 <a
                   {...getBookingLinkProps(
                     ASSESSMENT_URL,
@@ -165,8 +168,7 @@ export default function Navbar() {
           </div>
 
         </div>
-      </div>
-      
-    </nav>
+      </nav>
+    </>
   );
 }

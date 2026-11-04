@@ -41,8 +41,15 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "How long will training take?",
     answer: [
-      "It depends on the dog, the goals, and how consistent the practice is at home. Most owners see meaningful change in three to six sessions. Real-world reliability (off-lead, distractions, public spaces) takes longer.",
+      "It depends on the dog, the goals, and how consistent the practice is at home. Most owners see good changes within the first week. For most dogs I recommend three weeks of training, which surprises owners who expect it to take months. Real-world reliability (off-lead, distractions, public spaces) takes longer.",
       "I'll give you a clearer estimate throughout the program.",
+    ],
+  },
+  {
+    question: "Can you guarantee results?",
+    answer: [
+      "No. Every dog is different, and a lot depends on what happens between sessions. What I can promise is that I'll give your dog everything I've got, show you clearly what to do and why, and support you the whole way.",
+      "I take a lot of pride in my results. My reviews show what that looks like.",
     ],
   },
   {
@@ -80,6 +87,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What does it cost?",
     answer: [
+      "I keep my prices affordable, with plenty of value in every session, so I can help as many dogs as possible.",
       [
         "Puppy training is listed on the ",
         { text: "puppy page", href: "/puppy" },

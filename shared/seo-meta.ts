@@ -20,7 +20,7 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/puppy": {
     title: "Puppy Training North Brisbane | The Confident Start Program",
     description:
-      "Six private in-home puppy training sessions for $549. Build confidence, communication and practical life skills without an assessment first.",
+      "Six private in-home puppy training sessions for $660. Build confidence, communication and practical life skills without an assessment first.",
     canonicalPath: "/puppy",
   },
   "/behaviour-obedience": {
@@ -32,7 +32,7 @@ export const STATIC_META: Record<string, PageMeta> = {
   "/walking-adventure": {
     title: "Dog Walking and Adventure Training North Brisbane",
     description:
-      "Trainer-led walks, adventure outings and real-world reliability programs for North Brisbane dogs. New clients start with a $120 assessment.",
+      "Trainer-led walks, adventure outings and reliability programs for North Brisbane dogs. New clients start with a $120 assessment.",
     canonicalPath: "/walking-adventure",
   },
   "/services": {

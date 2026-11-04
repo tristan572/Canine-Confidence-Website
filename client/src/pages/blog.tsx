@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import type { BlogPost } from "@shared/schema";
 import { StaticSEO } from "@/components/SEO";
+import { BLOG_TOPICS, postInTopic } from "@/lib/blog-topics";
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -51,17 +52,10 @@ export default function BlogPage() {
     }
   };
 
-  // Get all unique tags from blog posts
-  const allTags = blogPosts?.reduce((tags: string[], post) => {
-    if (post.tags) {
-      post.tags.forEach(tag => {
-        if (!tags.includes(tag)) {
-          tags.push(tag);
-        }
-      });
-    }
-    return tags;
-  }, []) || [];
+  // Only offer topics that have at least one post.
+  const topics = BLOG_TOPICS.map((t) => t.name).filter((name) =>
+    blogPosts?.some((post) => postInTopic(post.tags, name)),
+  );
 
   // Filter posts based on search term and selected tag
   const filteredPosts = blogPosts?.filter(post => {
@@ -69,8 +63,7 @@ export default function BlogPage() {
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesTag = selectedTag === "" || 
-      (post.tags && post.tags.includes(selectedTag));
+    const matchesTag = selectedTag === "" || postInTopic(post.tags, selectedTag);
     
     return matchesSearch && matchesTag;
   });
@@ -98,9 +91,9 @@ export default function BlogPage() {
         ]}
       />
       {/* Hero Section */}
-      <section className="hero-gradient py-20">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-6">
+          <h1 className="text-5xl font-extrabold text-charcoal mb-6">
             Free Training Advice & Tips
           </h1>
           <p className="text-xl text-medium-grey mb-8">
@@ -112,7 +105,7 @@ export default function BlogPage() {
       {/* Search and Filter Section */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start justify-between">
+          <div className="flex flex-col gap-5">
             {/* Search */}
             <div className="relative w-full shrink-0 md:w-80">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-medium-grey w-4 h-4" />
@@ -125,26 +118,22 @@ export default function BlogPage() {
               />
             </div>
 
-            {/* Tag Filter */}
-            <div className="flex min-w-0 flex-wrap gap-2">
-              <Button
-                variant={selectedTag === "" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedTag("")}
-                className={selectedTag === "" ? "bg-primary-blue text-white" : ""}
-              >
-                All Topics
-              </Button>
-              {allTags.map((tag) => (
-                <Button
-                  key={tag}
-                  variant={selectedTag === tag ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedTag(tag)}
-                  className={selectedTag === tag ? "bg-primary-blue text-white" : ""}
+            {/* Topic Filter */}
+            <div className="flex min-w-0 flex-wrap gap-2" role="group" aria-label="Filter by topic">
+              {["", ...topics].map((topic) => (
+                <button
+                  key={topic || "all"}
+                  type="button"
+                  onClick={() => setSelectedTag(topic)}
+                  aria-pressed={selectedTag === topic}
+                  className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                    selectedTag === topic
+                      ? "border-navy bg-navy text-white"
+                      : "border-navy/15 bg-white text-charcoal hover:border-navy/40"
+                  }`}
                 >
-                  {tag.charAt(0).toUpperCase() + tag.slice(1)}
-                </Button>
+                  {topic || "All topics"}
+                </button>
               ))}
             </div>
           </div>
@@ -198,10 +187,10 @@ export default function BlogPage() {
       {/* Newsletter Section */}
       <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] py-20 bg-primary-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-extrabold text-white mb-4">
             Get Training Tips Delivered
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-white/80 mb-8">
             Get new blog posts delivered straight to your inbox. Training tips, dog behaviour insights, and practical advice — free, no spam.
           </p>
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
@@ -216,14 +205,14 @@ export default function BlogPage() {
             />
             <Button 
               type="submit"
-              className="bg-white text-primary-blue hover:bg-gray-50 whitespace-nowrap"
+              className="whitespace-nowrap"
               disabled={subscribeMutation.isPending}
               data-testid="button-newsletter-subscribe"
             >
               {subscribeMutation.isPending ? "Subscribing..." : "Subscribe"}
             </Button>
           </form>
-          <p className="text-blue-100 text-sm mt-4">
+          <p className="text-white/80 text-sm mt-4">
             No spam, unsubscribe anytime. I respect your privacy.
           </p>
         </div>

@@ -1,17 +1,30 @@
 import { useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Link } from "wouter";
 import { StaticSEO } from "@/components/SEO";
+import { AssessmentButton, ConsultationButton } from "@/components/funnel/funnel-cta";
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, MAD_PAWS_REVIEW_FLOOR } from "@shared/social-proof";
-import { Award, Heart, Users, Target, CheckCircle, Phone, MapPin, Clock, Glasses, Search, FileText, HeartHandshake, Calendar } from "lucide-react";
-import ConsultationForm from "@/components/forms/consultation-form";
-import aboutHeroImageWebp from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453_opt.webp";
-import aboutHeroImageJpeg from "@assets/_com.apple.Foundation.NSItemProvider.abN4B8_1760871363453.jpeg";
-import aboutTrainingImageWebp from "@assets/IMG_0076_1758798863394_opt.webp";
-import aboutTrainingImageJpeg from "@assets/IMG_0076_1758798863394.jpeg";
+import portrait600 from "@assets/tristan-with-cleo-600.webp";
+import portrait1122 from "@assets/tristan-with-cleo-1122.webp";
+import portraitJpeg from "@assets/tristan-with-cleo-800.jpg";
+import training640 from "@assets/tristan-playing-tug-in-park-640.webp";
+import training1000 from "@assets/tristan-playing-tug-in-park-1000.webp";
+import trainingJpeg from "@assets/tristan-playing-tug-in-park-800.jpg";
+import FinalCta from "@/components/funnel/final-cta";
+import { usePricing } from "@/hooks/use-pricing";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
+
+// How it feels to work with Tristan, in his own terms. Short on purpose: the
+// story above carries the page; these are the promises.
+const promises = [
+  { title: "Your dog is safe with me", text: "I train the dog in front of me, with care and with respect for who they are. Safety comes first, every session." },
+  { title: "No judgement", text: "Most owners have already tried a few things by the time they call me. You'll never be made to feel bad about where you're starting from." },
+  { title: "I turn up, and I stay available", text: "I come to you anywhere across North Brisbane, I'm as flexible as I can be with session times, and I'm a message away when something comes up, long after your program ends." },
+];
+
+const blocks = ["Health", "Lifestyle", "Clarity", "Skills"];
 
 export default function AboutPage() {
+  const pricing = usePricing();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,324 +34,203 @@ export default function AboutPage() {
       <StaticSEO
         path="/about"
         keywords={[
-          'NDTF certified dog trainer',
-          'North Brisbane dog trainer',
-          'professional dog trainer Brisbane',
-          'certified animal behaviourist',
-          'play-based training specialist'
+          "NDTF certified dog trainer",
+          "North Brisbane dog trainer",
+          "professional dog trainer Brisbane",
+          "play-based dog training",
         ]}
       />
 
-      {/* Hero Section */}
-      <section className="hero-gradient py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-charcoal mb-4">
-            About Tristan
-          </h1>
-          <h2 className="text-3xl font-semibold text-charcoal mb-6">
-            From Hobby to <span className="text-primary-blue">Obsession</span>
+      {/* Hero: portrait beside one line that sums up who Tristan is. */}
+      <section className={HERO_SECTION}>
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
+          <div className="lg:col-span-6">
+            <p className="eyebrow mb-3">About Tristan</p>
+            <h1 className="mb-6 text-4xl font-extrabold leading-[1.05] text-charcoal lg:text-6xl">
+              The trainer your dog can't wait to see.
+            </h1>
+            <p className="mb-8 max-w-xl text-lg leading-relaxed text-medium-grey lg:text-xl">
+              I'm Tristan. I've spent years learning how dogs think, feel and learn,
+              and what I love doing most is helping dogs and their owners across
+              North Brisbane build a life they both enjoy.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <AssessmentButton label={`Book an Assessment · ${pricing.servicePrice("Initial Canine Success Assessment")}`} location="About hero" className="px-7 py-4 text-lg" />
+              <ConsultationButton className="btn-secondary px-7 py-4 text-lg" />
+            </div>
+          </div>
+          <picture className="lg:col-span-6">
+            <source type="image/webp" srcSet={`${portrait600} 600w, ${portrait1122} 1122w`} sizes="(max-width: 1024px) 100vw, 50vw" />
+            <img
+              src={portraitJpeg}
+              alt="Tristan from Canine Confidence with his staffy Cleo"
+              className={`h-[28rem] w-full rounded-[26px] object-[center_20%] sm:h-[34rem] ${HERO_PHOTO}`}
+              width={1122}
+              height={1402}
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
+
+      {/* The story, told as a story. */}
+      <section className="bg-sand py-20 lg:py-32">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <p className="eyebrow mb-3">How I got here</p>
+          <h2 className="mb-10 text-3xl font-extrabold text-charcoal lg:text-5xl lg:leading-[1.1]">
+            A weekend hobby I couldn't stop thinking about.
           </h2>
-          <p className="text-xl text-medium-grey mb-8">
-            I started training my own dog in 2016. What began as a weekend hobby turned into something I couldn't stop thinking about.
-          </p>
-        </div>
-      </section>
-
-      {/* Main About Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">The <span className="text-primary-blue">Turning Point</span></h2>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  For years I kept it alongside a regular job. Then in 2020, I was made redundant. I took it as the push I'd been waiting for.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  I didn't want to be another backyard trainer. I wanted to actually understand dogs.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  I formalised my training through the National Dog Trainers Federation, earning my Certificate III in Dog Behaviour and Training. The certificate was the starting point, not the destination.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  Since then I've spent every day immersed in the field. Books, podcasts, seminars, courses, and more importantly, dogs. Hundreds of them, across North Brisbane. That's where real understanding comes from.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  At Canine Confidence, you get the benefit of that obsession. I don't rely on guesswork or generic methods. I rely on applied canine behaviour, continuous study, and honest communication with every dog I work with.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
-                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">NDTF</div>
-                  <div className="text-sm text-medium-grey">Certified Professional</div>
-                </Card>
-                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
-                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">Insured</div>
-                  <div className="text-sm text-medium-grey">Fully Covered</div>
-                </Card>
-                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
-                  <div className="mb-2 text-2xl font-bold leading-tight text-primary-blue [overflow-wrap:anywhere] sm:text-3xl">2020</div>
-                  <div className="text-sm text-medium-grey">Started Training</div>
-                </Card>
-                <Card className="min-w-0 bg-white p-4 border border-gray-100 sm:p-6">
-                  <div className="mb-2 text-xl font-bold leading-tight text-primary-blue sm:text-3xl">North Brisbane</div>
-                  <div className="text-sm text-medium-grey">Local Expert</div>
-                </Card>
-              </div>
-            </div>
-
-            <div className="relative">
-              <picture>
-                <source type="image/webp" srcSet={aboutHeroImageWebp} />
-                <img
-                  src={aboutHeroImageJpeg}
-                  alt="Tristan with his dog Cleo in North Brisbane"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                  width={600}
-                  height={400}
-                  loading="eager"
-                  decoding="async"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Training Philosophy Section */}
-      <section className="py-20 bg-light-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">The Canine <span className="text-primary-blue">Confidence</span> Philosophy</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              Training is about more than commands. It's about understanding what a dog actually needs and building a relationship on that foundation. When the foundations are right, behaviour follows.
+          <div className="space-y-6 text-lg leading-relaxed text-medium-grey lg:text-xl">
+            <p>
+              I started training my own dog in 2016. It began as something to do
+              on weekends, and it quickly became the thing I thought about the
+              rest of the week.
+            </p>
+            <p>
+              For years I kept it alongside a regular job. Then in 2020 I was made
+              redundant, and I took it as the push I'd been waiting for.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-white p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Play-Based Learning</h3>
-              <p className="text-medium-grey">
-                Play is my primary training tool. A dog that works for a game is more motivated, more focused, and more engaged than one working only for food or to avoid a correction. It turns training into something your dog genuinely wants to do.
-              </p>
-            </Card>
-
-            <Card className="bg-white p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Real-World Skills</h3>
-              <p className="text-medium-grey">
-                I don't train for the living room. I train for real life. Busy footpaths, cafés, parks, guests at the door. Your dog needs to handle the world, not just perform in ideal conditions.
-              </p>
-            </Card>
-
-            <Card className="bg-white p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Genetic Fulfilment</h3>
-              <p className="text-medium-grey">
-                Most behavioural issues start with frustration. I identify what your dog is bred to do and give them a constructive outlet for that drive. When biological needs are met, a lot of the problem behaviour disappears on its own.
-              </p>
-            </Card>
-
-            <Card className="bg-white p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Glasses className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-charcoal mb-4">Predictability & Clarity</h3>
-              <p className="text-medium-grey">
-                Anxiety comes from confusion. Clear expectations and consistent boundaries give your dog a framework they can rely on. When a dog knows what's expected, they settle.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <picture>
-                <source type="image/webp" srcSet={aboutTrainingImageWebp} />
-                <img
-                  src={aboutTrainingImageJpeg}
-                  alt="Tristan training a client's dog in North Brisbane"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
-                  width={600}
-                  height={400}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              <div className="absolute -top-6 right-0 sm:-right-6 bg-primary-blue p-6 rounded-xl shadow-lg text-white max-w-xs">
-                <div className="text-center">
-                  <div className="text-lg font-bold mb-1">Training that fits daily life</div>
-                  <div className="text-blue-100 text-sm">I want you to have a dog you can genuinely enjoy living with.</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-charcoal">Why I Train Differently</h2>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  Most trainers work on symptoms. I work on the cause.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  When you understand what a dog is wired for and give them a real outlet for it, training becomes straightforward. My own dog Cleo is the clearest example. She's never been destructive or highly anxious because her needs are consistently met.
-                </p>
-                <p className="text-lg text-medium-grey leading-relaxed">
-                  That's the outcome I work towards for every client: a fulfilled dog, and a household that actually feels calm.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">NDTF Certified Professional</h3>
-                    <p className="text-medium-grey">Nationally accredited through the National Dog Trainers Federation, with a focus on genetic fulfilment and play-based learning.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">{GOOGLE_RATING}★ from {GOOGLE_REVIEW_COUNT} Google reviews · {MAD_PAWS_REVIEW_FLOOR}+ on Mad Paws</h3>
-                    <p className="text-medium-grey">Verified across Google and Mad Paws from North Brisbane families.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Ongoing Support</h3>
-                    <p className="text-medium-grey">Committed to your dog's progress for the long term, not just the sessions.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-primary-blue" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Results-Based Methods</h3>
-                    <p className="text-medium-grey">Grounded in current canine behaviour science and applied in the real world.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-20 bg-light-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">My Approach</h2>
-            <p className="text-xl text-medium-grey max-w-3xl mx-auto">
-              I take the time to understand your dog's individual needs, genetics, and personality, building a strategy that fits both your dog's natural learning style and your family's lifestyle.
+          <blockquote className="my-12 border-l-2 border-sky-brand pl-6 font-quote text-2xl italic leading-snug text-charcoal lg:pl-10 lg:text-3xl">
+            “I didn't want to be another backyard trainer. I wanted to actually
+            understand dogs.”
+          </blockquote>
+          <div className="space-y-6 text-lg leading-relaxed text-medium-grey lg:text-xl">
+            <p>
+              So I studied with the National Dog Trainers Federation and earned my
+              Certificate III in Dog Behaviour and Training. That was where the
+              learning started.
+            </p>
+            <p>
+              Since then it's been books, podcasts, seminars and courses, and
+              above all, dogs. Hundreds of them across North Brisbane, every
+              breed and temperament you can think of. I never stop studying, and
+              every dog I work with teaches me something new.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Behavioural Audit</h3>
-              <p className="text-sm text-medium-grey">A thorough look at your dog's current behaviour, history, and what's actually driving it.</p>
-            </Card>
-
-            <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Personalised Strategy</h3>
-              <p className="text-sm text-medium-grey">A training plan built around your dog's drives, learning style, and your household.</p>
-            </Card>
-
-            <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Hands-On Skill Transfer</h3>
-              <p className="text-sm text-medium-grey">Practical sessions where you learn to lead, not just watch.</p>
-            </Card>
-
-            <Card className="bg-white p-6 text-center border border-gray-100">
-              <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <HeartHandshake className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Sustained Results</h3>
-              <p className="text-sm text-medium-grey">Ongoing guidance so progress holds up in real life.</p>
-            </Card>
+          <h3 className="mb-6 mt-16 font-quote text-2xl not-italic text-charcoal lg:text-4xl">
+            Why I started Canine Confidence
+          </h3>
+          <div className="space-y-6 text-lg leading-relaxed text-medium-grey lg:text-xl">
+            <p>
+              A lot of dogs end up in shelters because life with them got too
+              hard. Usually they're good dogs whose needs weren't being met, with
+              owners who didn't get the right help in time.
+            </p>
+            <p className="font-semibold text-charcoal">
+              I started Canine Confidence to stop that happening. I want every
+              owner I work with to understand their dog, really enjoy them and get
+              the best out of them, so giving up never crosses their mind.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to get started?</h2>
-          <p className="text-xl text-white/90 mb-12">
-            Book a free 15-minute call. I'll talk through what's going on with your dog and work out whether we're a good fit.
-          </p>
-          <div className="flex justify-center">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-50 px-8 py-4 text-lg">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Book a Free Call
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-                <DialogTitle>Free Consultation</DialogTitle>
-                <DialogDescription>Book a free 15-minute call to talk through what's going on with your dog.</DialogDescription>
-                <ConsultationForm />
-              </DialogContent>
-            </Dialog>
-          </div>
-
-          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex items-center justify-center space-x-3">
-              <MapPin className="w-5 h-5 text-white" />
-              <div>
-                <div className="font-semibold text-white">Service Area</div>
-                <div className="text-white/90">North Brisbane & Surrounds</div>
-              </div>
+      {/* What he believes, tied to the framework rather than a new list. */}
+      <section className="py-20 lg:py-32">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+          <picture>
+            <source type="image/webp" srcSet={`${training640} 640w, ${training1000} 1000w`} sizes="(max-width: 1024px) 100vw, 50vw" />
+            <img
+              src={trainingJpeg}
+              alt="Tristan playing tug with a grey staffy under the trees in a North Brisbane park"
+              className="h-auto w-full rounded-[26px] object-cover"
+              width={1000}
+              height={1236}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div>
+            <p className="eyebrow mb-3">What I believe</p>
+            <h2 className="mb-6 text-3xl font-extrabold text-charcoal lg:text-4xl">
+              Get the foundations right and behaviour follows.
+            </h2>
+            <div className="space-y-5 text-lg leading-relaxed text-medium-grey">
+              <p>
+                A lot of problem behaviour starts with a need that isn't being
+                met. So before I teach a single cue, I look at what your dog is
+                wired for and what their days actually look like.
+              </p>
+              <p>
+                My own dog Cleo is the proof. She's never been destructive or
+                highly anxious, because her needs are met every day.
+              </p>
+              <p>
+                Play is my favourite tool. A dog that loves the game is
+                motivated, engaged and wants to be there.
+              </p>
             </div>
-            <div className="flex items-center justify-center space-x-3">
-              <Clock className="w-5 h-5 text-white" />
-              <div>
-                <div className="font-semibold text-white">Availability</div>
-                <div className="text-white/90">6 Days a Week</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center space-x-3">
-              <Phone className="w-5 h-5 text-white" />
-              <div>
-                <div className="font-semibold text-white">Response Time</div>
-                <div className="text-white/90">Within 24 Hours</div>
-              </div>
-            </div>
+            <p className="mt-8 mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-medium-grey">
+              The four building blocks I work through with every dog
+            </p>
+            <p className="font-quote text-2xl not-italic text-charcoal lg:text-3xl">
+              {blocks.map((block, i) => (
+                <span key={block}>
+                  {block}
+                  {i < blocks.length - 1 && <span className="mx-2 text-sky-brand" aria-hidden="true">→</span>}
+                </span>
+              ))}
+            </p>
+            <Link href="/blog/creating-balance-complete-framework" className="mt-6 inline-block font-extrabold text-primary hover:text-sky-deep">
+              Read the full framework →
+            </Link>
           </div>
         </div>
       </section>
+
+      {/* What working with him is like, with a client's words as proof. */}
+      <section className="px-2 sm:px-4 lg:px-6">
+        <div className="mx-auto max-w-[88rem] rounded-[28px] bg-primary py-20 text-white lg:rounded-[32px] lg:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-[#8FD3F2]">Working with me</p>
+            <h2 className="mb-12 max-w-3xl text-3xl font-extrabold lg:text-4xl">
+              What you can count on
+            </h2>
+            <ul className="grid grid-cols-1 gap-x-10 gap-y-10 lg:grid-cols-3">
+              {promises.map(({ title, text }) => (
+                <li key={title} className="border-t border-white/25 pt-6">
+                  <h3 className="mb-3 font-quote text-2xl not-italic text-white">{title}</h3>
+                  <p className="leading-relaxed text-white/80">{text}</p>
+                </li>
+              ))}
+            </ul>
+            <figure className="mt-16 max-w-3xl">
+              <blockquote className="font-quote text-2xl italic leading-snug text-white lg:text-3xl">
+                “I didn’t feel judged once, no matter how cheeky she was or how
+                frustrated I got, and he was very calm and kind.”
+              </blockquote>
+              <figcaption className="mt-4 text-sm font-bold text-white/70">Alex C. · Owner of Lyla</figcaption>
+            </figure>
+            <dl className="mt-14 grid grid-cols-2 gap-6 border-t border-white/25 pt-8 sm:grid-cols-4">
+              <div>
+                <dt className="text-sm font-semibold text-white/70">Google</dt>
+                <dd className="text-2xl font-extrabold">{GOOGLE_RATING}★ · {GOOGLE_REVIEW_COUNT} reviews</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-white/70">Mad Paws</dt>
+                <dd className="text-2xl font-extrabold">{MAD_PAWS_REVIEW_FLOOR}+ reviews</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-white/70">Qualified</dt>
+                <dd className="text-2xl font-extrabold">NDTF Cert III</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-white/70">Cover</dt>
+                <dd className="text-2xl font-extrabold">Fully insured</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Next step */}
+      <FinalCta
+        heading="Let's meet your dog."
+        text="Start with an assessment at your home. If you'd like to talk it through first, request a free 15-minute call and I'll get back to you within 24 hours."
+        location="About final CTA"
+      />
     </div>
   );
 }

@@ -7,7 +7,11 @@ import {
   ConsultationButton,
 } from "@/components/funnel/funnel-cta";
 import { walkingPrograms } from "@/lib/funnel";
-import walkingImage from "@assets/IMG_0084_card_800_opt.webp";
+import ReviewQuote from "@/components/review-quote";
+import cleo640 from "@assets/tristan-walking-cleo-640.webp";
+import cleo1000 from "@assets/tristan-walking-cleo-1000.webp";
+import FinalCta from "@/components/funnel/final-cta";
+import { HERO_PHOTO, HERO_SECTION } from "@/lib/hero";
 
 export default function WalkingAdventurePage() {
   const pricing = usePricing();
@@ -15,19 +19,20 @@ export default function WalkingAdventurePage() {
     <div className="min-h-screen">
       <StaticSEO path="/walking-adventure" />
 
-      <section className="hero-gradient py-16 lg:py-20">
+      <section className={HERO_SECTION}>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="mb-3 font-semibold uppercase tracking-wide text-primary-blue">
+            <p className="eyebrow mb-3">
               Adventure and training
             </p>
-            <h1 className="mb-5 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
+            <h1 className="mb-5 text-4xl font-extrabold leading-[1.05] text-charcoal lg:text-6xl">
               Your dog's walk should not be the most stressful part of your day
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-medium-grey">
-              I use real environments,
-              purposeful movement, play and carefully chosen challenges to build
-              focus, confidence and reliable skills while giving your dog the
+              I train out in parks, beaches, trails and streets, using
+              structured walking, play, sniffing, running and other carefully
+              chosen challenges to build focus,
+              confidence and reliable skills, while giving your dog the
               physical and mental fulfilment they actually need.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -36,24 +41,26 @@ export default function WalkingAdventurePage() {
             </div>
           </div>
           <img
-            src={walkingImage}
-            alt="Tristan walking a client dog through a North Brisbane park"
-            className="h-[360px] w-full rounded-2xl object-cover object-center shadow-xl sm:h-[440px]"
-            width={640}
-            height={480}
+            src={cleo1000}
+            srcSet={`${cleo640} 640w, ${cleo1000} 1000w`}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="Tristan walking his staffy Cleo on a loose lead along a tree-lined park path"
+            className={`h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
+            width={1000}
+            height={958}
           />
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section className="bg-sand py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-bold text-charcoal">Start here: your dog's assessment</h2>
+            <h2 className="mb-4 text-3xl font-extrabold text-charcoal">Start here: your dog's assessment</h2>
             <AssessmentDetails className="mb-4 text-lg text-primary-blue" />
             <p className="mb-4 text-lg leading-relaxed text-medium-grey">
               I take the time to understand what you want from your dog's walks,
-              get to know their temperament and begin working out how to work
-              with them safely. From there, I suggest a walking or training
+              get to know their temperament and build a plan around who they are
+              and how they learn. From there, I suggest a walking or training
               program to get you started.
             </p>
             <p className="mb-5 font-semibold text-charcoal">You don't need to choose a program before we meet.</p>
@@ -84,21 +91,19 @@ export default function WalkingAdventurePage() {
         </div>
       </section>
 
-      <section className="mx-2 my-12 overflow-hidden rounded-[28px] sm:mx-4 lg:mx-6 lg:rounded-[32px] bg-primary-blue py-16 text-center text-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 text-3xl font-bold">Start enjoying the walk again</h2>
-          <p className="mb-7 text-lg text-blue-100">
-            We'll talk through what you want from the walks, get to know your
-            dog's temperament and begin working out how to work together safely.
-            I'll suggest a walking or training program to get you started.
-          </p>
-          <AssessmentDetails className="mb-6 justify-center text-xl text-white" />
-          <AssessmentButton
-            location="Walking final CTA"
-            className="bg-white text-primary-blue hover:bg-gray-50"
-          />
-        </div>
-      </section>
+      <ReviewQuote
+        label="Reactivity on walks"
+        quote="Tristan has taken the time to build a good bond with Dobson, and his confidence has improved so much while out and about. We now look forward to going for walks together."
+        owner="Renee B."
+        dog="Dobson, an Italian Greyhound"
+        className="bg-white"
+      />
+
+      <FinalCta
+        heading="Start enjoying the walk again"
+        text="We'll talk through what you want from the walks, get to know your dog's temperament and build a plan around who they are and how they learn. I'll suggest a walking or training program to get you started."
+        location="Walking final CTA"
+      />
     </div>
   );
 }

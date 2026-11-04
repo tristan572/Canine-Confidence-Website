@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 /* Self-hosted fonts for faster loading.
-   Manrope (variable, 400–800) is the site font; Fraunces italic is used only
-   for review quotes (`font-quote italic`). */
+   Manrope (variable, 400–800) is the site font; Fraunces roman is the display
+   font for h1/h2, and Fraunces italic is used for review quotes
+   (`font-quote italic`). */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/attached_assets/fraunces-latin-wght.woff2') format('woff2');
+}
+
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
@@ -87,11 +96,29 @@
     @apply font-extrabold tracking-tight;
     text-wrap: balance;
   }
+
+  h1, h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Fraunces reads best at semibold. Pages mark headings `font-extrabold`, so
+   this needs the extra specificity to beat the utility class. */
+h1.font-extrabold, h2.font-extrabold,
+h1.font-bold, h2.font-bold {
+  font-weight: 600;
 }
 
 @layer components {
   .btn-primary {
     @apply bg-primary text-primary-foreground shadow-sm hover:bg-blue-900 hover:shadow-md motion-safe:hover:-translate-y-0.5 px-6 py-3 rounded-[10px] font-bold transition-all duration-200;
+  }
+
+  /* The one accent on the site: logo sky, reserved for the booking button.
+     Colours come from CTA_COLOURS in funnel-cta.tsx. */
+  .btn-cta {
+    @apply shadow-sm hover:shadow-md motion-safe:hover:-translate-y-0.5 px-6 py-3 rounded-[10px] transition-all duration-200;
   }
 
   .btn-secondary {
@@ -102,6 +129,33 @@
     background-color: hsl(var(--background));
   }
 
+  /* A photo that stays still while the page scrolls over it. clip-path keeps
+     the fixed image inside its section (overflow: hidden doesn't clip fixed
+     children). The photo is only fixed on desktop, and not for visitors who
+     prefer less motion; otherwise it scrolls with the section. */
+  .fixed-photo-frame {
+    clip-path: inset(0);
+  }
+
+  .fixed-photo-frame-rounded {
+    clip-path: inset(0 round 28px);
+  }
+
+  .fixed-photo {
+    @apply absolute inset-0 h-full w-full object-cover;
+  }
+
+  @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+    .fixed-photo-frame-rounded {
+      clip-path: inset(0 round 32px);
+    }
+
+    .fixed-photo {
+      position: fixed;
+      height: 100vh;
+    }
+  }
+
   .card-hover {
     @apply hover:shadow-lg transition-shadow duration-200;
   }
@@ -109,12 +163,13 @@
   /* White card on a sand section for non-clickable points. No hover effect:
      site rule is that only clickable things react to the mouse. */
   .point-card {
-    @apply rounded-2xl border border-border bg-white p-7 shadow-sm;
+    @apply border-t-2 border-navy/15 pt-6;
   }
 
-  /* Small uppercase label above section headings */
+  /* Small uppercase label above section headings. Kept neutral so the sky
+     accent stays on the booking button. */
   .eyebrow {
-    @apply text-sm font-extrabold uppercase tracking-[0.12em] text-sky-deep;
+    @apply text-sm font-extrabold uppercase tracking-[0.14em] text-medium-grey;
   }
 
   /* Legacy colour helpers, kept so existing pages pick up the new palette. */

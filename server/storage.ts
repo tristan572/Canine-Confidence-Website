@@ -123,7 +123,7 @@ export class MemStorage implements IStorage {
         location: "In-home assessment",
         price: "$120",
         category: "assessment",
-        imageUrl: "/attached_assets/c75d23458f22c6f788d64af16f9d89d3_1760359837260_opt.webp",
+        imageUrl: "/attached_assets/grey-staffy-portrait.webp",
         features: ["A full assessment of your dog's unique temperament, genetics, and needs", "An in-depth, personalised training roadmap outlining the clear steps needed to reach your goals", "Immediate clarity on communication and a few simple, actionable exercises you can start today", "A low-commitment entry to my training system, designed to save you time and money"]
       },
 
@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
         location: "In-home or suitable environment",
         price: "$120",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049391709_opt.webp",
+        imageUrl: "/attached_assets/dog-giving-paw-to-owner.webp",
         features: ["Personalised in-home or public location training", "Learn effective training techniques", "Build strong relationship with your dog", "You become the primary trainer", "Cost-effective option", "Support every step of the way"]
       },
       {
@@ -144,7 +144,7 @@ export class MemStorage implements IStorage {
         location: "In-home training",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/image_1750049431855_opt.webp",
+        imageUrl: "/attached_assets/dog-playing-tug-on-deck.webp",
         features: ["Comfortable home environment", "General obedience or behavioural needs", "Tailored program for your dog", "Owners don't need to be home", "Flexible scheduling", "Session-based pricing", "Tools and treats included"]
       },
       {
@@ -154,8 +154,8 @@ export class MemStorage implements IStorage {
         location: "Home pickup and local area",
         price: "$60",
         category: "training",
-        imageUrl: "/attached_assets/irene-berral-hens-hJ-ZeyvuTbc-unsplash_1760533138023_opt.webp",
-        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Real-world environment training", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
+        imageUrl: "/attached_assets/jack-russell-on-lead.webp",
+        features: ["Home visit with walk from there or nearby location", "Reinforce behaviours of your choice", "Training at the parks and streets you walk", "Transition indoor training outdoors", "Reliable responses outside the home", "Tools and treats included"]
       },
       {
         name: "Adventure Walk and Training",
@@ -164,7 +164,7 @@ export class MemStorage implements IStorage {
         location: "Local parks, forests, or beaches",
         price: "$80",
         category: "walking",
-        imageUrl: "/attached_assets/image_1750049520029_opt.webp",
+        imageUrl: "/attached_assets/terrier-running-with-ball-on-beach.webp",
         features: ["Collection from home", "Adventure locations", "Video updates", "Enrichment activities", "Fun and play", "Obedience Proofing", "Tools and treats included"]
       },
       {
@@ -174,7 +174,7 @@ export class MemStorage implements IStorage {
         location: "Video call (Zoom)",
         price: "$100",
         category: "consultation",
-        imageUrl: "/attached_assets/stock_images/professional_video_c_568ae1d6_opt.webp",
+        imageUrl: "/attached_assets/owner-on-video-call.webp",
         features: ["A private one-hour video call from wherever you are", "Fine-tune training details or work through something that feels stuck", "Bounce ideas around and get a second perspective", "Build or refine a practical training plan"]
       }
     ];
@@ -184,13 +184,20 @@ export class MemStorage implements IStorage {
         price: "$120",
       },
       "One-on-One Private Coaching": {
-        price: "$125",
+        price: "$140",
+      },
+      "Virtual Coaching and Support": {
+        price: "$120",
+      },
+      "In-home Day Train": {
+        price: "$80",
       },
       "Walk and Train": {
-        price: "$70",
+        price: "$80",
+        duration: "30 minutes",
       },
       "Adventure Walk and Training": {
-        price: "$90",
+        price: "$120",
       },
     };
 
@@ -207,7 +214,7 @@ export class MemStorage implements IStorage {
         price: "45.00",
         priceRange: "$35 - $55",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/professional_dog_tra_68cb0c20_opt.webp",
+        imageUrl: "/attached_assets/red-setter-in-forest.webp",
         inStock: true
       },
       {
@@ -216,7 +223,7 @@ export class MemStorage implements IStorage {
         price: "30.00",
         priceRange: "$25 - $35",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad_opt.webp",
+        imageUrl: "/attached_assets/white-dog-looking-up.webp",
         inStock: true
       },
       {
@@ -225,7 +232,7 @@ export class MemStorage implements IStorage {
         price: "40.00",
         priceRange: "$30 - $50",
         category: "equipment",
-        imageUrl: "/attached_assets/stock_images/high_quality_dog_lea_ec3bf9ad_opt.webp",
+        imageUrl: "/attached_assets/white-dog-looking-up.webp",
         inStock: true
       },
       {
@@ -234,7 +241,7 @@ export class MemStorage implements IStorage {
         price: "20.00",
         priceRange: "$15 - $25",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/dog_training_balls_a_46124b17_opt.webp",
+        imageUrl: "/attached_assets/white-dog-beside-bicycle-2.webp",
         inStock: true
       },
       {
@@ -243,7 +250,7 @@ export class MemStorage implements IStorage {
         price: "25.00",
         priceRange: "$20 - $35",
         category: "toys",
-        imageUrl: "/attached_assets/stock_images/interactive_tug_toy__f1fbf953_opt.webp",
+        imageUrl: "/attached_assets/white-dog-beside-bicycle.webp",
         inStock: true
       },
       {
@@ -278,11 +285,11 @@ export class MemStorage implements IStorage {
         duration: "6 weeks",
         sessions: 6,
         category: "puppy",
-        imageUrl: "/attached_assets/image_1750048904991_opt.webp",
+        imageUrl: "/attached_assets/puppy-card-molly-800.webp",
         features: [
           "6 x Private, In-Home Expert Sessions (Save $240)",
           "Personalised House Training Guidance and Setup",
-          "Step by Step Socialisation and Desensitisation Plan",
+          "Socialisation and Desensitisation Guidance, With a Socialisation Checklist",
           "The 5 Foundational Manners: Sit, Stay, Come, Place, and Loose-Leash Walking Foundations",
           "BONUS: Comprehensive 50+ page Puppy Raising Guide (Included Free!)"
         ],
@@ -296,7 +303,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "behaviour,obedience",
-        imageUrl: "/attached_assets/rafaella-waasdorp-jrsKVUBmJUM-unsplash_1760444556278_opt.webp",
+        imageUrl: "/attached_assets/dog-jumping-at-sunset.webp",
         features: [
           "5 private coaching sessions that can be used for any behaviour or skill",
           "A practical approach built around your dog and the problem in front of us",
@@ -315,7 +322,7 @@ export class MemStorage implements IStorage {
         duration: "15 sessions",
         sessions: 15,
         category: "behaviour",
-        imageUrl: "/attached_assets/image_1750049297197_opt.webp",
+        imageUrl: "/attached_assets/rottweiler-lying-down-small.webp",
         features: [
           "Focused sessions aimed at steady behaviour change",
           "Clear communication that reduces confusion and helps your dog make better choices",
@@ -375,7 +382,7 @@ export class MemStorage implements IStorage {
       //   duration: "4 weeks",
       //   sessions: 12,
       //   category: "behaviour",
-      //   imageUrl: "/attached_assets/image_1750049297197_opt.webp",
+      //   imageUrl: "/attached_assets/rottweiler-lying-down-small.webp",
       //   features: [
       //     "Training plan and homework supplied",
       //     "Foundations and communication",
@@ -390,13 +397,13 @@ export class MemStorage implements IStorage {
       // },
       {
         name: "The Connected Companion Walk",
-        description: "Stop the struggle and start enjoying your walks.\n\nThis program works on pulling and resistance by building focus, connection and clear communication across a focused two-week block.\n\n**Four Trainer-Led Sessions:** I work directly with your dog to build better walking habits and improve how they feel about the collar and lead.\n\n**One Owner Coaching Session:** The final session shows you the lead handling and communication your dog already understands so the progress transfers to you.\n\n**Clear Communication:** Your dog learns what you want on a walk and how to make calmer choices beside you.\n\n**Important Note:** Please book the From Chaos To Calm Program if your dog is barking and lunging at dogs or people.",
+        description: "Stop the struggle and start enjoying your walks.\n\nThis program works on pulling and resistance by building focus, connection and clear communication across a focused two-week block.\n\n**Four Trainer-Led Sessions:** I work directly with your dog to build better walking habits and improve how they feel about the collar and lead.\n\n**One Owner Coaching Session:** The final session shows you the lead handling and communication your dog already understands so the progress transfers to you.\n\n**Clear Communication:** Your dog learns what you want on a walk and how to make calmer choices beside you.\n\n**Important Note:** If your dog is barking and lunging at dogs or people, start with an assessment and I'll recommend the right program.",
         price: "$340",
         originalPrice: "$360",
         duration: "1 week",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/gabe-pierce-5TPx9X_obko-unsplash_1760530908839_opt.webp",
+        imageUrl: "/attached_assets/small-dog-on-lead-brick-path.webp",
         features: [
           "5 targeted sessions: 4 trainer-led walks and 1 coaching session with you",
           "Focus and obedience practised while your dog moves through everyday distractions",
@@ -415,7 +422,7 @@ export class MemStorage implements IStorage {
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/jing-ma-B4ZWfy_rmQ0-unsplash_1760531280769_opt.webp",
+        imageUrl: "/attached_assets/french-bulldog-playing-with-toy.webp",
         features: [
           "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
           "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
@@ -427,17 +434,17 @@ export class MemStorage implements IStorage {
       },
       {
         name: "The Real World Reliability Package",
-        description: "Move beyond the backyard and build more reliable skills on real walks. I collect your dog from home and use five sessions to practise obedience and loose-lead walking around traffic, people, sounds and other everyday distractions.\n\n**Skills for Everyday Walks:** Each session carries indoor skills into the places where you actually need them.\n\n**Confidence and Clarity:** Consistent practice helps your dog understand what is expected on lead.\n\n**Loose-Lead Practice:** I work directly on pulling, focus and manners while your dog is moving.\n\n**Home Pickup Included:** I come to you and return your dog after every session.",
+        description: "Move beyond the backyard and build more reliable skills on everyday walks. I collect your dog from home and use five sessions to practise obedience and loose-lead walking around traffic, people, sounds and other everyday distractions.\n\n**Skills for Everyday Walks:** Each session carries indoor skills into the places where you actually need them.\n\n**Confidence and Clarity:** Consistent practice helps your dog understand what is expected on lead.\n\n**Loose-Lead Practice:** I work directly on pulling, focus and manners while your dog is moving.\n\n**Home Pickup Included:** I come to you and return your dog after every session.",
         price: "$280",
         originalPrice: "$300",
         duration: "5 sessions",
         sessions: 5,
         category: "obedience",
-        imageUrl: "/attached_assets/tamas-pap-n2vcWTUutIA-unsplash_1760532090287_opt.webp",
+        imageUrl: "/attached_assets/dog-sitting-at-owners-feet.webp",
         features: [
           "5 trainer-led 40-minute Walk and Train sessions",
           "Home pickup included",
-          "Obedience and manners practised during real walks",
+          "Obedience and manners practised during everyday walks",
           "Dedicated loose-lead walking practice",
           "Skills built around traffic, people, dogs and other everyday distractions",
           "Free guide: 'The Four Building Blocks of a Balanced Dog'"
@@ -446,13 +453,13 @@ export class MemStorage implements IStorage {
       },
       {
         name: "The Adventure Pack",
-        description: "Five varied adventures give your dog exercise, exploration and repeated skill work around real distractions. I collect your dog from home and choose forests, beaches or parks that suit their needs and training goals.\n\n**Reliable Habits:** Repeated outings help your dog practise focus across different environments.\n\n**Skills Around Distractions:** I work on recall, loose-lead foundations and impulse control while life is happening around them.\n\n**Mental and Physical Fulfilment:** Your dog gets time to run, sniff, play and explore safely.\n\n**Video and Feedback:** You receive an update after every outing, including useful tips for you.",
+        description: "Five varied adventures give your dog exercise, exploration and repeated skill work around everyday distractions. I collect your dog from home and choose forests, beaches or parks that suit their needs and training goals.\n\n**Reliable Habits:** Repeated outings help your dog practise focus across different environments.\n\n**Skills Around Distractions:** I work on recall, loose-lead foundations and impulse control while life is happening around them.\n\n**Mental and Physical Fulfilment:** Your dog gets time to run, sniff, play and explore safely.\n\n**Video and Feedback:** You receive an update after every outing, including useful tips for you.",
         price: "$375",
         originalPrice: "$400",
         duration: "5 sessions",
         sessions: 5,
         category: "adventure",
-        imageUrl: "/attached_assets/artem-beliaikin-edbhAWFxnTA-unsplash_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/beagle-on-beach.webp",
         features: [
           "5 one-hour adventure outings with training built in",
           "Home pickup included",
@@ -467,23 +474,25 @@ export class MemStorage implements IStorage {
 
     const currentPackageOverrides: Record<string, Partial<InsertPackage>> = {
       "The Confident Start Program": {
-        price: "$549",
+        price: "$660",
         originalPrice: undefined,
         duration: "Use within 3 months",
         features: [
           "6 Private In-Home Coaching Sessions for You, Your Family and Your Puppy",
           "Personalised House Training Guidance and Setup",
-          "Step by Step Socialisation and Desensitisation Plan",
+          "Socialisation and Desensitisation Guidance, With a Socialisation Checklist",
           "The 5 Foundational Manners: Sit, Stay, Come, Place and Loose-Lead Walking Foundations",
+          "Toilet Training Tracker to Spot Your Puppy's Patterns",
           "Free Comprehensive 50+ Page Puppy Raising Guide",
         ],
       },
       "The Foundation Program": {
-        price: "$320",
-        originalPrice: "$365",
-        duration: "Use within 2 weeks",
+        price: "$430",
+        originalPrice: "$460",
+        duration: "1 week · use within 6 months",
+        description: "Engagement, motivation and fulfilment, plus the start of clear communication. Across four trainer-led sessions at home or on walks, I get to know your dog and work consistently on the priorities that matter most. The coaching session then shows you how to carry those skills forward.\n\n**Flexible Focus:** Use the sessions for obedience, foundation skills, behaviour work or fulfilment.\n\n**Training Built Around Your Dog:** The work is shaped around your dog's personality, learning style and current needs.\n\n**Feedback and Coaching:** You receive video updates, practical feedback and a private coaching session with you.",
         features: [
-          "4 private in-home Day Train sessions, followed by 1 private coaching session with you",
+          "4 trainer-led sessions (In-Home Day Train or Walk and Train), followed by 1 coaching session with you",
           "Use the sessions for obedience, foundation skills, behaviour work or fulfilment",
           "A training plan built around the problems you want to solve first",
           "Feedback and video updates so you can see what your dog is learning",
@@ -491,28 +500,42 @@ export class MemStorage implements IStorage {
         ],
       },
       "The Connected Companion Walk": {
-        price: "$350",
-        originalPrice: "$405",
-        duration: "Use within 2 weeks per block",
+        name: "The Connected Companion",
+        price: "$1,290",
+        originalPrice: "$1,380",
+        duration: "3 weeks · use within 6 months",
+        sessions: 15,
+        description: "A complete communication system and skills you can rely on in everyday life.\n\nOver three weeks I train your dog at home and out on walks, help with common behaviour problems and mild to moderate reactivity, and coach you each week so the skills transfer to you.\n\n**Four Trainer-Led Sessions a Week:** I do the hard part, so the skills are already in place before you take over.\n\n**One Coaching Session a Week:** I show you what to do, why it works and how to keep it going, with detailed written notes to follow.\n\n**Clear Communication:** Your dog learns what you want, when they've got it right and when they haven't.",
+        features: [
+          "15 sessions over three weeks: 4 trainer-led sessions and 1 coaching session each week",
+          "A complete communication system your dog understands",
+          "Reliable skills practised at home and around everyday distractions",
+          "Help with common behaviour problems and mild to moderate reactivity",
+          "Feedback and video updates throughout the program",
+          "Free guide: 'The Four Building Blocks of a Balanced Dog'",
+        ],
       },
       "From Chaos to Calm Program": {
-        price: "$1,050",
-        originalPrice: "$1,175",
-        duration: "Use within 5 weeks",
+        name: "The Balanced Canine",
+        price: "$2,500",
+        originalPrice: "$2,760",
+        duration: "6 weeks · use within 6 months",
+        sessions: 30,
+        description: "For severe or long-standing reactivity, multiple triggers, anxiety and aggression.\n\nThis program works on what is driving the behaviour, with time to change how your dog feels as well as what they do, and practical ways to keep everyone safe while the training progresses.\n\n**Four Trainer-Led Sessions a Week:** I work directly with your dog on the anxiety, impulse control and emotional responses behind their reactions.\n\n**One Coaching Session a Week:** You learn the handling and communication your dog already understands, so the progress carries into daily life.\n\n**Six Focused Weeks:** 30 sessions give real behaviour change the time it needs.",
       },
       "The Focused Progress Plan": {
-        price: "$550",
-        originalPrice: "$625",
+        price: "$650",
+        originalPrice: "$700",
         duration: "Use within 6 months",
       },
       "The Real World Reliability Package": {
-        price: "$325",
-        originalPrice: "$350",
+        price: "$375",
+        originalPrice: "$400",
         duration: "Use within 6 months",
       },
       "The Adventure Pack": {
-        price: "$425",
-        originalPrice: "$450",
+        price: "$570",
+        originalPrice: "$600",
         duration: "Use within 6 months",
       },
     };
@@ -522,24 +545,6 @@ export class MemStorage implements IStorage {
       .filter((pkg) => currentPackageNames.includes(pkg.name))
       .map((pkg) => {
         const current = { ...pkg, ...currentPackageOverrides[pkg.name] };
-        if (pkg.name === "The Connected Companion Walk") {
-          current.description = current.description.replace("in just one week", "in a focused two-week block");
-        }
-        if (pkg.name === "From Chaos to Calm Program") {
-          current.description = current.description.replace(
-            "over three consecutive weeks (saving you $90 compared to single session purchases)",
-            "across five focused weeks (saving you $125 compared to single session purchases)",
-          );
-        }
-        if (pkg.name === "The Focused Progress Plan") {
-          current.description = current.description.replace("saving you $50", "saving you $75");
-        }
-        if (pkg.name === "The Foundation Program") {
-          current.description = current.description.replace(
-            "five private, done-for-you sessions",
-            "four done-for-you sessions plus private owner coaching",
-          );
-        }
         return current;
       });
 
@@ -600,7 +605,7 @@ Acute injuries and chronic issues both count. Arthritis. Gut problems. Structura
 Regular check-ups aren't just for when things go wrong. They're how you maintain the foundation.
 
 When your dog feels good physically, everything else becomes possible. They can focus, they can learn, they can regulate their emotions, and they can truly partner with you. Health isn't just the first step—it's the foundation that supports everything meaningful you'll build together.`,
-        imageUrl: "/attached_assets/health-foundation_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/health-foundation.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-01"),
         tags: ["health", "foundation", "wellness", "four building blocks"],
@@ -656,7 +661,7 @@ When you become your dog's main source of fun, you become the most relevant thin
 Scenting is a biological need for all dogs. Their nose is their primary way of understanding the world.
 
 This is why lifestyle and fulfillment must come before demanding obedience or trying to eliminate unwanted behaviors. Find what truly drives and motivates your individual dog, provide appropriate outlets for those drives, and you'll discover that everything else becomes significantly easier to achieve.`,
-        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/lifestyle-fulfilling-dog-mind.webp",
         readTime: "10 min read",
         publishedAt: new Date("2025-10-08"),
         tags: ["lifestyle", "mental stimulation", "breed drives", "four building blocks"],
@@ -720,7 +725,7 @@ Teaching the dog to respond to lead pressure rather than just tolerate it change
 When the dog learns to yield to gentle pressure, to slow when they feel tension, to check in when they're unsure, the lead becomes a calm, reliable bridge. That awareness transfers everywhere else.
 
 When communication is clear, training becomes collaborative rather than adversarial. Your dog becomes an active participant in the learning process because they understand what success looks like and how to achieve it.`,
-        imageUrl: "/attached_assets/clear-communication_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/clear-communication.webp",
         readTime: "9 min read",
         publishedAt: new Date("2025-10-15"),
         tags: ["communication", "clarity", "markers", "four building blocks"],
@@ -797,7 +802,7 @@ Reliable skills follow a natural progression. You don't get there by demanding e
 Skills get taught in calm, quiet environments first. The dog needs to succeed before they can be challenged. As the basic behaviour becomes confident, you start adding variables. Different locations. Mild distractions. Higher arousal.
 
 Remember that skills are indeed the final piece of the puzzle, not the starting point. When built on solid foundations of health, mental fulfillment, and clear communication, they become natural expressions of your dog's desire to cooperate and succeed rather than behaviors that must be forced or constantly enforced.`,
-        imageUrl: "/attached_assets/good-obedience-in-public_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/good-obedience-in-public.webp",
         readTime: "8 min read",
         publishedAt: new Date("2025-10-22"),
         tags: ["obedience", "skills", "training", "four building blocks"],
@@ -925,7 +930,7 @@ Once the dog gets the game:
 - Use fulfilled drives to power training motivation later
 
 When you honour your dog's genetic blueprint and provide appropriate outlets, you're not just managing behaviour—you're creating a partnership based on understanding and mutual satisfaction.`,
-        imageUrl: "/attached_assets/genetic-drives_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/genetic-drives.webp",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-05"),
         tags: ["breed drives", "genetics", "fulfillment", "behaviour", "training"],
@@ -978,7 +983,7 @@ Begin with an honest look at where your dog is in each area.
 
 **Lifestyle.** What is your dog actually wired for? What drives sit underneath the breed? How well are those needs being met day to day?
 
-**Communication.** How consistent is the system between you and your dog? Where do the mixed messages live? What does "no" actually mean in your house?
+**Clarity.** How consistent is the system between you and your dog? Where do the mixed messages live? What does "no" actually mean in your house?
 
 **Skills.** Which cues hold up in the real world, and which only work in the kitchen? What's missing?
 
@@ -1001,7 +1006,7 @@ Dogs with all four blocks in place become calm because their needs are met. Conf
 That's not just better behaviour. That's a better life. For the dog, and for the people who live with them.
 
 Build the blocks. Live the balance.`,
-        imageUrl: "/attached_assets/generated_images/Balanced_harmonious_canine_life_357c8e73.webp",
+        imageUrl: "/attached_assets/golden-retriever-family-lounge.webp",
         readTime: "12 min read",
         publishedAt: new Date("2025-11-19"),
         tags: ["four building blocks", "balance", "framework", "complete guide"],
@@ -1063,7 +1068,7 @@ Build the windows at home. Take the work outside from there.
 For clients around Ascot, Hamilton and Hendra, outside usually means a café. Racecourse Road has food on every table, so it's where a settle really gets tested. See [dog training in Ascot](https://www.canineconfidence.com.au/dog-training-ascot).
 
 If you're not sure where your dog's gaps are, a free 15-minute phone call is the right place to start.`,
-        imageUrl: "/attached_assets/dog-resting-settle_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/dog-resting-settle.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-18"),
         tags: ["calm", "settle", "behaviour", "training", "foundations"],
@@ -1131,7 +1136,7 @@ It does pass. Eventually. But it leaves behind whatever the dog has been practis
 If your dog is in the adolescent window and things are slipping, that's the time to act.
 
 A free 15-minute call is the simplest place to start. I'll talk through what you're seeing, what's normal, and what's worth working on now.`,
-        imageUrl: "/attached_assets/naughty-dog-adolescence_1760531575107_opt.webp",
+        imageUrl: "/attached_assets/naughty-dog-adolescence.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-11"),
         tags: ["adolescence", "puppies", "behaviour", "training", "development"],
@@ -1193,7 +1198,7 @@ If your dog is doing something you can't explain, it's worth getting a real read
 The Initial Canine Success Assessment is a 60-minute in-home session. You walk away understanding what's behind the behaviour, and with a plan to address it.
 
 Start with a free 15-minute call. No pitch. Just a conversation about what your dog actually needs.`,
-        imageUrl: "/attached_assets/guilty-dog_1779699487.webp",
+        imageUrl: "/attached_assets/guilty-dog.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-05-05"),
         tags: ["behaviour", "dog psychology", "destructive behaviour", "training"],
@@ -1245,7 +1250,7 @@ Most of the dogs I work with, tug becomes a core part of the training. Not as a 
 If your dog has gone flat in play or won't engage with toys, it's worth looking at whether the game has ever actually been worth playing for them.
 
 A free 15-minute call is a good place to start. canineconfidence.com.au`,
-        imageUrl: "/attached_assets/tug-game-dog-trainer_opt.webp",
+        imageUrl: "/attached_assets/tug-game-dog-trainer.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-06-01"),
         tags: ["play", "tug", "training", "engagement", "behaviour"],
@@ -1303,7 +1308,7 @@ A stubborn dog who understands the conversation, sees the value, and gets honest
 If your dog is described as stubborn often enough that it's become the explanation, the issue isn't the dog. It's the gap between what you're asking and what they're understanding. Increase the motivation and make it simple.
 
 That's a fixable gap. The free phone consult is where I'd start. No commitment, just a conversation about what's actually going on.`,
-        imageUrl: "/attached_assets/stubborn-dog-pulling_1779699487.webp",
+        imageUrl: "/attached_assets/stubborn-dog-pulling.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-05-25"),
         tags: ["behaviour", "training", "stubbornness", "motivation"],
@@ -1358,7 +1363,7 @@ Start at home. Build confidence through play. Establish clear communication. The
 If you're in Northside Brisbane and want help getting this right, the Confident Start Program is six private in-home sessions designed specifically for puppies. I work on confidence, play, how your puppy learns, and how to navigate the hard moments of the first year.
 
 Book directly at canineconfidence.com.au.`,
-        imageUrl: "/attached_assets/puppy-watching-park-socialisation_opt.webp",
+        imageUrl: "/attached_assets/puppy-watching-park-socialisation.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-06-15"),
         tags: ["puppy", "socialisation", "confidence", "puppy training", "Brisbane"],
@@ -1406,7 +1411,7 @@ It won't fix everything overnight. But it's the easiest, fastest change most own
 If you're around Northgate, Nundah or Kalinga, the [Kalinga Park Walk and Train](https://www.canineconfidence.com.au/dog-training-northgate) sessions build on this exact routine before hitting the bikeway, where the real distractions are.
 
 If your dog's walks start like a wrestling match and you're not sure where to start untangling it, a free fifteen-minute call is the easiest first step. I'll talk through what's actually happening and whether Walk and Train or a coaching session is the better fit for where you're at.`,
-        imageUrl: "/attached_assets/dog-walk-blog-post.png",
+        imageUrl: "/attached_assets/why-your-dog-ignores-you-on-walks.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-22"),
         tags: ["walks", "leash walking", "training", "behaviour", "quick tips"],
@@ -1465,7 +1470,7 @@ If you're a dog owner in north Brisbane and something on this list sounds famili
 Based in Boondall, I work with dogs and owners across Brisbane's north side.
 
 Book via the link in the menu.`,
-        imageUrl: "/attached_assets/dog-unmet-needs-brisbane_opt.webp",
+        imageUrl: "/attached_assets/dog-unmet-needs-brisbane.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-06-08"),
         tags: ["behaviour", "unmet needs", "Brisbane", "dog training"],
@@ -1501,7 +1506,7 @@ Sometimes that means two very different dogs end up using the same tool for oppo
 You watch the dog, not the trend. That's what the Initial Canine Success Assessment is built around — figuring out what actually motivates your dog before we build a plan around it.
 
 Tristan`,
-        imageUrl: "/attached_assets/cleo-ball_opt.webp",
+        imageUrl: "/attached_assets/cleo-ball.webp",
         readTime: "3 min read",
         publishedAt: new Date("2026-06-29"),
         tags: ["tools", "equipment", "Brisbane", "dog training", "flirt pole"],
@@ -1561,7 +1566,7 @@ The first year is when these habits set. Not because older dogs can't learn. Bec
 If you've got a Cavoodle under 12 months, this is the easiest window you'll get.
 
 Tristan`,
-        imageUrl: "/attached_assets/cavoodle-running_opt.webp",
+        imageUrl: "/attached_assets/cavoodle-running.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-07-07"),
         tags: ["Cavoodle", "breed drives", "puppy", "behaviour", "Brisbane"],
@@ -1620,7 +1625,7 @@ One method. Short reps. Every day. Four weeks.
 Most of the dogs I'm told are hopeless just haven't had that yet.
 
 Tristan`,
-        imageUrl: "/attached_assets/why-nothings-worked-yet_opt.webp",
+        imageUrl: "/attached_assets/why-nothings-worked-yet.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-07-27"),
         tags: ["consistency", "training", "behaviour", "reactivity"],
@@ -1665,7 +1670,7 @@ The dogs who actually stop needing that level of management are the ones where t
 Reactive isn't a diagnosis, it's a description. What's underneath it, fear or frustration, changes everything about how you fix it. And however you fix it, threshold management should be the thing that buys you time, not the thing you're still relying on a year later.
 
 Tristan`,
-        imageUrl: "/attached_assets/frustration-or-fear_opt.webp",
+        imageUrl: "/attached_assets/frustration-or-fear.webp",
         readTime: "4 min read",
         publishedAt: new Date("2026-08-03"),
         tags: ["reactivity", "behaviour", "fear", "training"],
@@ -1716,7 +1721,7 @@ Use both markers from the start. Say "Yes" and reward within two seconds every t
 Keep your tone flat and identical every time you use each marker. Consistency is what gives these words meaning.
 
 Two markers. Clean feedback. Real communication with your dog starts here.`,
-        imageUrl: "/attached_assets/release-markers-and-wrong_opt.webp",
+        imageUrl: "/attached_assets/release-markers-and-wrong.webp",
         readTime: "5 min read",
         publishedAt: new Date("2026-08-10"),
         tags: ["communication", "markers", "impulse control", "training", "behaviour"],
@@ -2657,7 +2662,7 @@ Every new client starts with a [free 15-minute phone call](https://www.caninecon
         imageUrl: "/attached_assets/dog-scared-of-storms-brisbane-hero.webp",
         readTime: "6 min read",
         publishedAt: new Date("2026-10-27"),
-        tags: [],
+        tags: ["fear", "storms", "calm", "North Brisbane"],
         slug: "dog-scared-of-storms-brisbane"
       }
     ];
@@ -2665,73 +2670,45 @@ Every new client starts with a [free 15-minute phone call](https://www.caninecon
     blogData.forEach(post => this.createBlogPost(post));
 
     // Seed testimonials
+    // Google reviews, word for word, best and most varied first. Names are
+    // shortened to first name and initial.
     const testimonialData: InsertTestimonial[] = [
-      {
-        clientName: "Patsy Poppins",
-        dogName: "Bean",
-        rating: 5,
-        reviewText: "From the get go, Tristan has been amazing to work with. Very knowledgeable, relaxed and great at explaining dog behaviour, communication and training approaches. Tristan has taught me how to communicate with Bean by using play. Through play Bean has learnt key words which we've started to transfer to day to day life. Previously Bean would lockjaw on balls or bones he picked up while walking. He now lets go when I ask. We've also been working on reactivity from frustration and making progress after just a few 1 on 1 sessions. The whole process has improved my relationship with Bean. We both enjoy the play activities Tristan has taught us and it's become part of our daily routine.",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Manpreet Kharbarh",
-        dogName: null,
-        rating: 5,
-        reviewText: "My cavoodle is nuts about Tristan! Ever since Tristan has been working with my dog, he's doing so well with his behaviour. Tristan is a wealth of knowledge too, you can tell he loves what he does, he loves sharing his knowledge with you and most importantly, he genuinely cares about our dog.",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Steph and Jonathan A.",
-        dogName: null,
-        rating: 5,
-        reviewText: "We reached out to Tristan for help training our 1yo puppy who is displaying some behaviour problems. Tristan was extremely knowledgeable, patient and understanding. He spent the time to talk us through all of our concerns with a no-judgement attitude. He has also taken the time to create a training plan for us to implement. Thank you Tristan! Looking forward to the next session.",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Brodie Sloan",
-        dogName: "Rae",
-        rating: 5,
-        reviewText: "Tristan has been absolutely wonderful with our dog Rae. He has helped improve her ability to walk calmly on a leash and, just as importantly, taught us how to better understand Rae and her cues, which has made walking her genuinely enjoyable again.\n\nWe've also booked Tristan to come while we're at work to train and walk Rae, and we really appreciate how he keeps us updated with photos and videos throughout each session. It gives us so much peace of mind.\n\nWe truly value Tristan's knowledge and guidance and have seen huge improvements in Rae's leash walking and overall obedience in such a short time. Highly recommend him to anyone looking for a knowledgeable, patient, and effective dog trainer.",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Rorie N.",
-        dogName: null,
-        rating: 5,
-        reviewText: "Great advise and instant results",
-        service: "Training",
-        location: null
-      },
-      {
-        clientName: "Prue B.",
-        dogName: null,
-        rating: 5,
-        reviewText: "Very professional and after only one session my dogs pulling on lead has improved! Highly recommend",
-        service: "Dog walks",
-        location: null
-      },
-      {
-        clientName: "Charlotte S.",
-        dogName: null,
-        rating: 5,
-        reviewText: "Thank you to Tristian for helping us get started on dog training at short notice for our new puppy. Tristian is very knowledgeable on all aspects of dog training and has great communication. We found the training session valuable and look foward to putting what we have learnt into practice. We highly recommend Tristian if you are looking for a dog trainer.",
-        service: "Training",
-        location: null
-      }
+      { clientName: "Alex C.", dogName: "Lyla", rating: 5, reviewText: "My very stubborn Malamute Lyla and I did the 3 week intensive with Tristan to work on challenging behaviours at home and on walks, and reactivity towards other dogs. He has been so patient (with both of us) and his balanced approach of supportive guidance, praise, positive reinforcement and appropriate correction has helped me feel a lot more confident, and Lyla’s confidence around other dogs and in following instructions has improved a lot too! I didn’t feel judged once, no matter how cheeky she was or how frustrated I got, and he was very calm and kind. Learning how to communicate more effectively with my dog has helped me understand where I’ve been running into problems and how to do things differently moving forward. On top of doing excellent training, it’s great how much genuine positive regard and warmth Tristan has for the dogs he’s working with. Lyla gets so excited for all their sessions and adventures, and she’s a great judge of character. I would strongly recommend, and look forward to continuing to get help from Tristan as we need it.", service: "Training", location: null },
+      { clientName: "Sheridan H.", dogName: "Archie", rating: 5, reviewText: "Tristan is a fantastic dog trainer! After two years of frustrating leash pulling with our Brittany Spaniel, Archie, we were at our wits' end.\n\nTristan not only trained Archie, but he educated us on how to guide him. He is wonderfully respectful of each dog's unique breed and helped us set clear, realistic expectations. I'm still amazed that I can now walk Archie with zero pulling and complete confidence.\n\nThank you, Tristan, for giving us back the joy of walking our dog. I can’t recommend him highly enough!", service: "Training", location: null },
+      { clientName: "Anna S.", dogName: "Ziggy", rating: 5, reviewText: "We’ve been working with Tristan for our 1yr old Staffy cross Ziggy and it’s made a huge difference from the start. My partner couldn’t believe it when we got sent a video of her walking beautifully at heel on the FIRST walk and train (still a work in progress of course). Even outside of the coaching which has helped us get stronger engagement and clearer communication, the passing tips and recommendations for toys and games to tire her out have been huge wins on their own.\n\nI’d 100% recommend for anyone who wants to work on something with their dog. Especially if you’re like us and have a high energy adolescent dog! On days we need to be in the office, we can book Tristan in for a walk and train instead of sending her to doggy daycare. Even from a 40 minute session, we come home to a fulfilled, mentally stimulated pup, with all the benefits of 1:1 training. And as a clingy dog mum the video updates to see the progress are a huge bonus!", service: "Coaching and walk & train", location: null },
+      { clientName: "Patsy P.", dogName: "Bean", rating: 5, reviewText: "From the get go, Tristan has been amazing to work with. Very knowledgeable, relaxed and great at explaining dog behaviour, communication and training approaches. Tristan has taught me how to communicate with Bean by using play. Through play Bean has learnt key words which we've started to transfer to day to day life. Previously Bean would lockjaw on balls or bones he picked up while walking. He now let's go when I ask. We've also been working on reactivity from frustration and making progress after just a few 1 on 1 sessions. The whole process has improved my relationship with Bean. We both enjoy the play activites Tristan has taught us and it's become part of our daily routine.", service: "Training", location: null },
+      { clientName: "Gemma", dogName: "Benji", rating: 5, reviewText: "I highly recommend Tristan from Canine Confidence! My dog Benji is quite reactive and I don’t trust many people with him but I have complete peace of mind knowing he’s in such capable hands. He understands dogs on a deep level, and his calm, confident approach is awesome. He’s incredibly reliable and flexible with times, which I really appreciate, and honestly, I think he should be charging more for the skill, knowledge, and care he brings to his work. It’s rare to find someone I can trust completely with my dog, but he’s one of them.", service: "Training", location: null },
+      { clientName: "Stephanie D.", dogName: "Molly", rating: 5, reviewText: "Half way through the puppy program with Tristan and were very happy with the results for our staffy pup Molly. Being new dog parents to a very high energy pup, we knew we needed a professional trainer who could give us all the best possible tools to ensure Molly would live a happy, stress and anxiety-free life. Implenting the basics at this age has given us the confidence in this journey and seeing her learn simple commands, looking at us for direction and simply exploring all the new things in the world with ease has been so rewarding. Tristan is flexible to move the sessions outside to the real world if theres an area youre struggling with and is happy to spend more time on certain things if needed. Highly recommend!!", service: "Puppy program", location: null },
+      { clientName: "Brodie S.", dogName: "Rae", rating: 5, reviewText: "Tristan has been absolutely wonderful with our dog Rae. He has helped improve her ability to walk calmly on a leash and, just as importantly, taught us how to better understand Rae and her cues, which has made walking her genuinely enjoyable again.\n\nWe’ve also booked Tristan to come while we’re at work to train and walk Rae, and we really appreciate how he keeps us updated with photos and videos throughout each session. It gives us so much peace of mind.\n\nWe truly value Tristan’s knowledge and guidance and have seen huge improvements in Rae’s leash walking and overall obedience in such a short time. Highly recommend him to anyone looking for a knowledgeable, patient, and effective dog trainer.", service: "Training", location: null },
+      { clientName: "Rich", dogName: "Buster", rating: 5, reviewText: "We reached out to Tristan for guidance with our 1 year old Staffy/Boxer that we recently re homed from a rescue shelter, and the progress we have made in just a few weeks has been a real game changer!\n\nHis training is progressive, very well structured, and great value for money.\n\nIt's the little things done well that really make the difference. Would definitely recommend Canine Confidence!", service: "Training", location: null },
+      { clientName: "Renee B.", dogName: "Dobson", rating: 5, reviewText: "Tristan has been great to work with. We reached out to Canine Confidence for help with Dobson, our Italian Greyhound and his reactivity on walks. Tristan has taken the time to build a good bond with Dobson, and his confidence has improved so much while out and about. We now look forward to going for walks together and we have Tristan to thank for that.", service: "Training", location: null },
+      { clientName: "Judith Q.", dogName: "Renegade", rating: 5, reviewText: "I chose Canine Confidence based on the great reviews & one on one training package. A great choice. My puppy Renegade (Cavoodle) & I have been doing weekly puppy training with Tristan owner of Canine Confidence. Renegade absolutely loves Tristan & we are both learning so much. Every week we make progress & learn more. Renegade is very determined boy.. He needs plenty of mental & physical stimulation. We have just done our 1st walking lesson with a harness & lead.. Renegade just loved it & I learnt so much. Tristan’s approach is excellent.He has picked up patterns & behaviours immediately. Tristan is very relaxed & calm when teaching Renegade which is the perfect way for him to grow. His tail is always wagging as he wants to learn. We are now tackling separation training. We will be continuing our training activities straight after our puppy training is completed as I want to have the confidence & skills to ensure Renegade lives a long happy & healthy life. I can’t recommend Canine Confidence enough. We are both learning so much & the one on one training program is a great bonding & positive experience for Renegade & myself.", service: "Puppy program", location: null },
+      { clientName: "Amanda C.", dogName: "Murphy", rating: 5, reviewText: "Training our Labrador, Murphy, with Tristan has been one of the best decisions we've made!\n\nTristan is extremely knowledgeable, patient, and explains everything in a way that's easy to understand and put into practice. He takes the time to understand your dog's behaviour and provides practical training techniques that really work.\n\nMurphy has come such a long way thanks to Tristan's guidance, and we've learned so much as owners too. If you're looking for a professional, experienced dog trainer who genuinely cares about helping both you and your dog succeed, Tristan is the one to see.\n\nThank you, Tristan, for all your help with Murphy—we're so grateful!", service: "Training", location: null },
+      { clientName: "Alex H.", dogName: "Toby", rating: 5, reviewText: "Tristan from Canine Confidence has been a life changing help for me and my American Staffy, Toby.  Toby was always crazy in our house, jumping on furniture and people. Chewing things and digging holes. Don’t get me started about walks!  Tristan came to our house in Chermside for 5 coaching lessons and taught us so much.  Now we have fun with Toby daily, playing and now walks are more enjoyable.  This change in lifestyle along with knowing how to communicate with him well, has made all the changes we were looking for, plus more.  Thank you Tristan!", service: "Coaching", location: null },
+      { clientName: "Michael F.", dogName: "Rocket", rating: 5, reviewText: "Tristan from Canine Confidence was amazing for my dog!! I couldn’t recommend him more.  He came to my home in Aspley  for a few coaching lessons and has really changed how I interact and live with my Cavoodle for the better. I have a much better understanding of what Rocket needs, how to communicate with him and we have so much fun together now. No more frustration around the house and on walks and we have great play sessions together. Thanks Tristan!", service: "Coaching", location: null },
+      { clientName: "Donna M.", dogName: "Winnie", rating: 5, reviewText: "Tristan (Canine Confidence) has taught me the delights of play to strengthen my bond with Winnie, my twelve month old Aussie Terrier (yes, the same rambunctious breed as the one in the OfficeWorks adverts!)\n\nTristan’s play-based approach to training Winnie & me focuses on establishing an affectionate, companionable relationship rather than old-school rules of obedience through control. I now have a calm, happy dog and am much more confident (& playful!) in myself.", service: "Training", location: null },
+      { clientName: "A. Kenyon", dogName: null, rating: 5, reviewText: "Tristan is a great trainer. He knows his stuff and worked really hard to find a rapport with my stubborn dog. My dog loves Tristan now and looks forward to him coming over, learning new things and hanging out. My dogs anxiety and reactivity have decreased and he is a lot happier.  Thank you Tristan.", service: "Training", location: null },
+      { clientName: "Jess G.", dogName: null, rating: 5, reviewText: "Thank you for helping with our six month old Cavoodle! I was overwhelmed with our puppy and young kids. Tristan gave me practical advice and helped me understand his needs much more than puppy school did! Will definitely use again!", service: "Puppy training", location: null },
+      { clientName: "Patricia L.", dogName: "Harley", rating: 5, reviewText: "Tristan was fantastic with our boy Harley who would get so excited with people and jump up on them. While this is never ideal, Harley is a health 70kg mastiff/great dane and him jumping up at you for cuddles and licks was downright dangerous at times. Tristan spent time with him and was able to handle him in such a confident way it was a relief and really helpful. Harley is now much better and rarely ever jumps (he has turned to leaning and does still get on my lap on the couch on occasion when allowed....) Would definitely recommend Tristan's services.", service: "Training", location: null },
+      { clientName: "Chloe T.", dogName: "Zinny", rating: 5, reviewText: "Tristan was excellent with my staffy, Zinny. Zinny was struggling to walk on the led without pulling my arm out of its socket. I'm now able to walk my dog while drinking a coffee! Thats a win!\n\nThank you Tristen", service: "Training", location: null },
+      { clientName: "Sheela Mae G.", dogName: null, rating: 5, reviewText: "Tristan has been amazing to work with! He’s very patient, knowledgeable, and genuinely cares about both the dog and the owner. He took the time to explain everything clearly and gave us practical techniques that we can continue using at home.", service: "Training", location: null },
+      { clientName: "Julie H.", dogName: "Winnie", rating: 5, reviewText: "Highly recommend Tristan from Canine Confidence. He is reliable, punctual and his knowledge and passion is obvious. Most importantly Winnie loves her walks and time with Tristan and i love the videos I get of their outings!!", service: "Dog walks", location: null },
+      { clientName: "Wolf", dogName: null, rating: 5, reviewText: "I would highly recommend Tristan to train or take care of your pets. He cares for and walks my doggies several times a week so I have peace of mind as a shift worker. He is kind and professional and both dogs and my cat adore him. Thank you Canine Confidence.", service: "Dog walks", location: null },
+      { clientName: "Thomas S.", dogName: "Onyx", rating: 5, reviewText: "Tristan has been fantastic in training my puppy on walking and recall. He has great communication and shares updates as he goes along. Onyx loves his walks and training sessions", service: "Training", location: null },
+      { clientName: "Nicola L.", dogName: "Bailey", rating: 5, reviewText: "Tristan has done wonders with my 12 month old Cavoodle Bailey. He is calm, patient and knowledgeable and Bailey loves him. I can't thank him enough,  and would recommend him to anyone.", service: "Training", location: null },
+      { clientName: "Chloe G.", dogName: null, rating: 5, reviewText: "My dog has come a long way with her response and reaction to other dogs on walks thanks to Tristan’s consistent training program.", service: "Training", location: null },
+      { clientName: "Jessica M.", dogName: "Indi", rating: 5, reviewText: "Tristan really helped with our young staffy Indi. He built a good rapport with her quickly making it a pleasant and easy experience for all of us. His love for dogs is obvious and he was very knowledgable and helped us create some really good habits. I would highly recommend his services.", service: "Training", location: null },
+      { clientName: "Manpreet K.", dogName: null, rating: 5, reviewText: "My cavoodle is nuts about Tristan! Ever since Tristan has been working with my dog, he's doing so well with his behaviour. Tristan is a wealth of knowledge too, you can tell he loves what he does, he loves sharing his knowledge with you and most importantly, he genuinely cares about our dog.", service: "Training", location: null },
+      { clientName: "Deepika J.", dogName: "Simba", rating: 5, reviewText: "Tristan has been amazing with my dog Simba! 🐶 He’s so patient, kind, and always goes above and beyond to make sure Simba learns in a positive way. You can really see how much he cares about the dogs he trains. Highly recommend him for your fur babies — you’ll be in great hands!", service: "Training", location: null },
+      { clientName: "Rhonda P.", dogName: "Benny", rating: 5, reviewText: "Extra good. Tristam very professional. My liitle dog Benny adores him and cannot wait until the next session. Good communicator and very aware of the unique individual attributes that all dogs have. Would recommend him again and again", service: "Training", location: null },
+      { clientName: "Lillian C.", dogName: null, rating: 5, reviewText: "Tristan explains the training advice really well and takes the time to demonstrate thoroughly. We followed the advice given and there is an improvement in my dog's behaviour. Looking forward to more sessions.", service: "Training", location: null },
+      { clientName: "Reece", dogName: null, rating: 5, reviewText: "Tristan has been walking my dog a few times a week and the improvement in her behaviour has been obvious. She comes home settled and happy!!!", service: "Dog walks", location: null },
+      { clientName: "Emma C.", dogName: null, rating: 5, reviewText: "Tristan was recommended so we booked him to help us with our puppy. The training really paid off and our puppy loved him. Would highly recommend.", service: "Puppy training", location: null },
+      { clientName: "April Grace L.", dogName: null, rating: 5, reviewText: "Just had an amazing one on one assessment from Tristan. He's knowledgable and very informative. We've learned a lot. Thank you!", service: "Assessment", location: null },
+      { clientName: "Jeffrey W.", dogName: "Koda", rating: 5, reviewText: "Tristan is reliable, polite, kind and great with Koda. I’d recommend him anytime.", service: "Training", location: null },
+      { clientName: "Neil C.", dogName: null, rating: 5, reviewText: "Tristan is an absolute gentleman to deal with and so good at working with dogs. Would highly recommend", service: "Training", location: null },
+      { clientName: "Marie O.", dogName: "Rockie", rating: 4, reviewText: "Thanks, Tristan\nRockie loved the training & you saved my sanity.  Marie", service: "Training", location: null },
     ];
-
-    testimonialData.push({
-      "clientName": "Alex C.",
-      "dogName": "Lyla",
-      "rating": 5,
-      "reviewText": "My very stubborn Malamute Lyla and I did the 3 week intensive with Tristan to work on challenging behaviours at home and on walks, and reactivity towards other dogs. He has been so patient (with both of us) and his balanced approach of supportive guidance, praise, positive reinforcement and appropriate correction has helped me feel a lot more confident, and Lyla’s confidence around other dogs and in following instructions has improved a lot too! I didn’t feel judged once, no matter how cheeky she was or how frustrated I got, and he was very calm and kind. Learning how to communicate more effectively with my dog has helped me understand where I’ve been running into problems and how to do things differently moving forward. On top of doing excellent training, it’s great how much genuine positive regard and warmth Tristan has for the dogs he’s working with. Lyla gets so excited for all their sessions and adventures, and she’s a great judge of character. I would strongly recommend, and look forward to continuing to get help from Tristan as we need it.",
-      "service": "Training",
-      "location": null
-});
 
     testimonialData.forEach(testimonial => this.createTestimonial(testimonial));
   }

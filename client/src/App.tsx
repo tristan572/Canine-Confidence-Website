@@ -38,7 +38,21 @@ function ScrollToTop() {
   const [location] = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // A link with #section (e.g. a homepage program card) scrolls to that
+    // section once the lazily loaded page has rendered it; otherwise top.
+    const target = decodeURIComponent(window.location.hash.slice(1));
+    let timer: number | undefined;
+    if (target) {
+      let tries = 0;
+      const find = () => {
+        const el = document.getElementById(target);
+        if (el) el.scrollIntoView({ block: "start" });
+        else if (tries++ < 40) timer = window.setTimeout(find, 50);
+      };
+      find();
+    } else {
+      window.scrollTo(0, 0);
+    }
 
     // GA4's automatic page_view only fires on the initial load; client-side
     // route changes need to be sent manually (send_page_view is disabled in
@@ -49,6 +63,7 @@ function ScrollToTop() {
         page_location: window.location.href,
       });
     }
+    return () => window.clearTimeout(timer);
   }, [location]);
 
   return null;
