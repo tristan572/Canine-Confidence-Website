@@ -6,9 +6,8 @@ import { StaticSEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { MapPin, Check, Users, Footprints } from "lucide-react";
 import { AssessmentButton, ConsultationButton, CTA_COLOURS } from "@/components/funnel/funnel-cta";
-import ball480 from "@assets/staffy-sitting-beside-tristan-480.webp";
-import ball768 from "@assets/staffy-sitting-beside-tristan-768.webp";
-import ballJpeg from "@assets/staffy-sitting-beside-tristan-768.jpg";
+import cleo600 from "@assets/tristan-with-cleo-at-his-feet-600.webp";
+import cleo1000 from "@assets/tristan-with-cleo-at-his-feet-1000.webp";
 import { getBookingLinkProps } from "@/lib/analytics";
 import { usePricing } from "@/hooks/use-pricing";
 import FinalCta from "@/components/funnel/final-cta";
@@ -114,13 +113,13 @@ export default function ChermsidePage() {
 
             <div className="relative hidden lg:block">
               <picture>
-                <source type="image/webp" srcSet={`${ball480} 480w, ${ball768} 768w`} sizes="40vw" />
+                <source type="image/webp" srcSet={`${cleo600} 600w, ${cleo1000} 1000w`} sizes="40vw" />
                 <img
-                  src={ballJpeg}
-                  alt="A grey staffy sitting beside Tristan and looking up at him in a North Brisbane park"
+                  src={cleo1000}
+                  alt="Tristan smiling in a North Brisbane park, with his staffy Cleo sitting at his feet looking up at him"
                   className={`aspect-[4/5] w-full rounded-[26px] object-center ${HERO_PHOTO}`}
-                  width={768}
-                  height={960}
+                  width={1000}
+                  height={1333}
                   loading="eager"
                   decoding="async"
                 />
