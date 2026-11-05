@@ -169,7 +169,13 @@ export default function AboutPage() {
               {blocks.map((block, i) => (
                 <span key={block}>
                   {block}
-                  {i < blocks.length - 1 && <span className="mx-2 text-sky-brand" aria-hidden="true">→</span>}
+                  {i < blocks.length - 1 && (
+                    <>
+                      <span className="mx-2 text-sky-brand" aria-hidden="true">→</span>
+                      {/* Lets the line wrap after an arrow on narrow screens. */}
+                      <wbr />
+                    </>
+                  )}
                 </span>
               ))}
             </p>
