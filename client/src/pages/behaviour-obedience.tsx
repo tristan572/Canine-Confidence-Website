@@ -1,3 +1,4 @@
+import { programAnchorId } from "@/lib/funnel";
 import { usePricing } from "@/hooks/use-pricing";
 import { AssessmentDetails } from "@/components/funnel/assessment-intro";
 import { ArrowRight, Calendar, CheckCircle2, ClipboardList } from "lucide-react";
@@ -125,7 +126,7 @@ export default function BehaviourObediencePage() {
                   program.name === "One-on-One Private Coaching"
                     ? {
                         label: "Need ongoing support? View The Focused Progress Plan",
-                        targetId: "the-focused-progress-plan",
+                        targetId: programAnchorId("The Focused Progress Plan"),
                       }
                     : undefined
                 }

@@ -99,6 +99,8 @@ function getAttribute(attributes: string, name: string): string | undefined {
   return match?.[1];
 }
 
+const ANCHOR_ID = /^[a-z][a-z0-9-]*$/;
+
 export function toSemanticHtml(reactHtml: string): string {
   let output = "";
   let skipDepth = 0;
@@ -140,7 +142,10 @@ export function toSemanticHtml(reactHtml: string): string {
     }
 
     if (!KEEP_TAGS.has(tag)) {
-      output += " ";
+      // Keep in-page anchor targets (e.g. program cards rendered as divs) so
+      // links like /behaviour-obedience#the-balanced-canine work before JS.
+      const id = isClosing ? undefined : getAttribute(attributes, "id");
+      output += id && ANCHOR_ID.test(id) ? ` <span id="${id}"></span> ` : " ";
       continue;
     }
 

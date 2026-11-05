@@ -1,3 +1,4 @@
+import { programAnchorId } from "@/lib/funnel";
 import { usePricing } from "@/hooks/use-pricing";
 import { AssessmentDetails } from "@/components/funnel/assessment-intro";
 import { StaticSEO } from "@/components/SEO";
@@ -76,12 +77,12 @@ export default function WalkingAdventurePage() {
                   program.name === "Walk and Train"
                     ? {
                         label: "Want five sessions? View The Real World Reliability Package",
-                        targetId: "the-real-world-reliability-package",
+                        targetId: programAnchorId("The Real World Reliability Package"),
                       }
                     : program.name === "Adventure Walk and Training"
                       ? {
                           label: "Want five adventures? View The Adventure Pack",
-                          targetId: "the-adventure-pack",
+                          targetId: programAnchorId("The Adventure Pack"),
                         }
                       : undefined
                 }

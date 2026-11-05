@@ -1,3 +1,4 @@
+import { programAnchorId } from "@/lib/funnel";
 import { usePricing } from "@/hooks/use-pricing";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
@@ -396,7 +397,7 @@ export default function HomePage() {
                   <p className="text-sm font-semibold text-muted-foreground">{sessions}</p>
                   <p className="mt-3 leading-relaxed text-medium-grey">{text}</p>
                   <Link
-                    href={`/behaviour-obedience#${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`}
+                    href={`/behaviour-obedience#${programAnchorId(name)}`}
                     className="mt-4 inline-block font-extrabold text-primary hover:text-sky-deep"
                   >
                     Full program details →
