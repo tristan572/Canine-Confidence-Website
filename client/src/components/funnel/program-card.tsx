@@ -1,3 +1,4 @@
+import { programAnchorId } from "@/lib/funnel";
 import { Card, CardContent } from "@/components/ui/card";
 import type { FunnelProgram } from "@/lib/funnel";
 import { AssessmentButton } from "./funnel-cta";
@@ -15,7 +16,7 @@ export function ProgramCard({
 }) {
   return (
     <Card
-      id={program.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
+      id={programAnchorId(program.name)}
       className="flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[22px] border border-navy/10 bg-white shadow-none transition duration-300 hover:shadow-[0_20px_50px_rgba(31,33,89,0.12)]"
     >
       <CardContent className="flex h-full flex-col p-7">

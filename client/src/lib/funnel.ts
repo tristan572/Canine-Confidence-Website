@@ -117,7 +117,7 @@ export const behaviourPrograms: FunnelProgram[] = [
     price: "$120",
     composition: "1 private 60-minute video call",
     summary:
-      "A standalone assessment for clients outside my travel area, or personalised support without the travel time. Use this one-hour video call to fine-tune details, review footage or build a practical training plan.",
+      "Remote coaching and support for owners outside my in-person service area, or anyone wanting ongoing guidance without the travel time. Use this one-hour video call to fine-tune details, review footage or build a practical training plan. This is a coaching session, separate from the Initial Assessment.",
     benefits: [
       "A private one-hour video call from wherever you are",
       "Fine-tune training details or work through something that feels stuck",
@@ -219,3 +219,8 @@ export const confidentStart: FunnelProgram = {
   ],
   kind: "retail",
 };
+
+/** Section anchor id for a program card, derived from its name (single source for cards and links). */
+export function programAnchorId(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
