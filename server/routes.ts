@@ -288,21 +288,39 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(201).json({ id: 0 });
     }
 
+    let validatedData;
     try {
-      const validatedData = insertSubscriberSchema.parse(req.body);
-      await subscribeToMailerLite(validatedData.email);
-      await sendRescueGuideEmail(validatedData.email);
-
-      const subscriber = await storage.createSubscriber(validatedData);
-      res.status(201).json(subscriber);
+      validatedData = insertSubscriberSchema.parse(req.body);
     } catch (error) {
       if (error instanceof ZodError) {
         return res.status(400).json({ message: "Please enter a valid email address" });
       }
-
-      console.error("Failed to deliver rescue guide:", error);
-      res.status(502).json({ message: "Could not deliver the guide email" });
+      throw error;
     }
+
+    // The visitor always gets the guide on screen. List sync and the email
+    // copy are best effort, so a MailerLite or Resend outage never blocks them.
+    const [listResult, emailResult] = await Promise.allSettled([
+      subscribeToMailerLite(validatedData.email),
+      sendRescueGuideEmail(validatedData.email),
+    ]);
+    if (listResult.status === "rejected") {
+      console.error("Rescue guide: MailerLite sync failed:", listResult.reason);
+    }
+    if (emailResult.status === "rejected") {
+      console.error("Rescue guide: guide email failed:", emailResult.reason);
+    }
+
+    try {
+      await storage.createSubscriber(validatedData);
+    } catch (error) {
+      console.error("Rescue guide: could not store subscriber:", error);
+    }
+
+    res.status(201).json({
+      listSynced: listResult.status === "fulfilled",
+      emailSent: emailResult.status === "fulfilled",
+    });
   });
 
   app.get("/api/subscribers", requireAdminAuth, async (req, res) => {
