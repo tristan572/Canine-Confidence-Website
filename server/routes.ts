@@ -27,6 +27,17 @@ function isHoneypotTripped(req: express.Request): boolean {
   return typeof req.body?.website === "string" && req.body.website.trim().length > 0;
 }
 
+// Enquiries live only in memory, so if the alert email fails the lead is gone
+// on the next restart. Log the full enquiry on one searchable line so it can be
+// recovered from the hosting logs. Search for: ENQUIRY ALERT FAILED
+function logFailedEnquiryAlert(kind: string, enquiry: unknown, error: unknown) {
+  console.error(
+    `ENQUIRY ALERT FAILED (${kind}): ${JSON.stringify(enquiry)} :: ${
+      error instanceof Error ? error.message : String(error)
+    }`,
+  );
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Services routes
   app.get("/api/services", async (req, res) => {
@@ -133,7 +144,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         await sendBookingNotification(booking);
       } catch (emailError) {
-        console.error('Failed to send booking email notification:', emailError);
+        logFailedEnquiryAlert("booking", booking, emailError);
         // Don't fail the request if email fails
       }
       
@@ -169,7 +180,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         await sendConsultationNotification(consultation);
       } catch (emailError) {
-        console.error('Failed to send consultation email notification:', emailError);
+        logFailedEnquiryAlert("consultation", consultation, emailError);
         // Don't fail the request if email fails
       }
       
@@ -196,7 +207,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         await sendContactFormNotification(submission);
       } catch (emailError) {
-        console.error('Failed to send contact form email notification:', emailError);
+        logFailedEnquiryAlert("contact form", submission, emailError);
         // Don't fail the request if email fails
       }
       
@@ -288,21 +299,39 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(201).json({ id: 0 });
     }
 
+    let validatedData;
     try {
-      const validatedData = insertSubscriberSchema.parse(req.body);
-      await subscribeToMailerLite(validatedData.email);
-      await sendRescueGuideEmail(validatedData.email);
-
-      const subscriber = await storage.createSubscriber(validatedData);
-      res.status(201).json(subscriber);
+      validatedData = insertSubscriberSchema.parse(req.body);
     } catch (error) {
       if (error instanceof ZodError) {
         return res.status(400).json({ message: "Please enter a valid email address" });
       }
-
-      console.error("Failed to deliver rescue guide:", error);
-      res.status(502).json({ message: "Could not deliver the guide email" });
+      throw error;
     }
+
+    // The visitor always gets the guide on screen. List sync and the email
+    // copy are best effort, so a MailerLite or Resend outage never blocks them.
+    const [listResult, emailResult] = await Promise.allSettled([
+      subscribeToMailerLite(validatedData.email),
+      sendRescueGuideEmail(validatedData.email),
+    ]);
+    if (listResult.status === "rejected") {
+      console.error("Rescue guide: MailerLite sync failed:", listResult.reason);
+    }
+    if (emailResult.status === "rejected") {
+      console.error("Rescue guide: guide email failed:", emailResult.reason);
+    }
+
+    try {
+      await storage.createSubscriber(validatedData);
+    } catch (error) {
+      console.error("Rescue guide: could not store subscriber:", error);
+    }
+
+    res.status(201).json({
+      listSynced: listResult.status === "fulfilled",
+      emailSent: emailResult.status === "fulfilled",
+    });
   });
 
   app.get("/api/subscribers", requireAdminAuth, async (req, res) => {
