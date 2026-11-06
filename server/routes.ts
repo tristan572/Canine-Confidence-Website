@@ -27,6 +27,17 @@ function isHoneypotTripped(req: express.Request): boolean {
   return typeof req.body?.website === "string" && req.body.website.trim().length > 0;
 }
 
+// Enquiries live only in memory, so if the alert email fails the lead is gone
+// on the next restart. Log the full enquiry on one searchable line so it can be
+// recovered from the hosting logs. Search for: ENQUIRY ALERT FAILED
+function logFailedEnquiryAlert(kind: string, enquiry: unknown, error: unknown) {
+  console.error(
+    `ENQUIRY ALERT FAILED (${kind}): ${JSON.stringify(enquiry)} :: ${
+      error instanceof Error ? error.message : String(error)
+    }`,
+  );
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Services routes
   app.get("/api/services", async (req, res) => {
@@ -133,7 +144,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         await sendBookingNotification(booking);
       } catch (emailError) {
-        console.error('Failed to send booking email notification:', emailError);
+        logFailedEnquiryAlert("booking", booking, emailError);
         // Don't fail the request if email fails
       }
       
@@ -169,7 +180,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         await sendConsultationNotification(consultation);
       } catch (emailError) {
-        console.error('Failed to send consultation email notification:', emailError);
+        logFailedEnquiryAlert("consultation", consultation, emailError);
         // Don't fail the request if email fails
       }
       
@@ -196,7 +207,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         await sendContactFormNotification(submission);
       } catch (emailError) {
-        console.error('Failed to send contact form email notification:', emailError);
+        logFailedEnquiryAlert("contact form", submission, emailError);
         // Don't fail the request if email fails
       }
       
