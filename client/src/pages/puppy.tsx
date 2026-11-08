@@ -6,9 +6,12 @@ import FinalCta from "@/components/funnel/final-cta";
 import { usePricing } from "@/hooks/use-pricing";
 import { confidentStart, CONFIDENT_START_URL } from "@/lib/funnel";
 import { getBookingLinkProps } from "@/lib/analytics";
-import puppy480 from "@assets/renegade-cavoodle-puppy-480.webp";
-import puppy768 from "@assets/renegade-cavoodle-puppy-768.webp";
-import puppyJpeg from "@assets/renegade-cavoodle-puppy-768.jpg";
+import puppy600 from "@assets/tristan-with-boxer-puppy-600.webp";
+import puppy1000 from "@assets/tristan-with-boxer-puppy-1000.webp";
+import puppyJpeg from "@assets/tristan-with-boxer-puppy-800.jpg";
+import cuddle640 from "@assets/tristan-cuddling-boxer-puppy-640.webp";
+import cuddle1200 from "@assets/tristan-cuddling-boxer-puppy-1200.webp";
+import cuddleJpeg from "@assets/tristan-cuddling-boxer-puppy-960.jpg";
 import strip1 from "@assets/brown-and-white-puppy.webp";
 import strip1Jpeg from "@assets/brown-and-white-puppy.jpg";
 import strip2 from "@assets/black-and-white-puppy.webp";
@@ -80,13 +83,13 @@ export default function PuppyPage() {
             </p>
           </div>
           <picture className="mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
-            <source type="image/webp" srcSet={`${puppy480} 480w, ${puppy768} 768w`} sizes="(max-width: 1024px) 100vw, 40vw" />
+            <source type="image/webp" srcSet={`${puppy600} 600w, ${puppy1000} 1000w`} sizes="(max-width: 1024px) 100vw, 40vw" />
             <img
               src={puppyJpeg}
-              alt="Renegade, a curly apricot Cavoodle puppy, looking up from the grass"
+              alt="Tristan sitting on the grass in a family backyard with a boxer puppy at his side"
               className={`aspect-[4/5] h-auto w-full rounded-[26px] ${HERO_PHOTO}`}
-              width={768}
-              height={960}
+              width={1000}
+              height={1250}
               loading="eager"
               decoding="async"
             />
@@ -129,6 +132,18 @@ export default function PuppyPage() {
                   not left trying to translate generic advice back into real life.
                 </p>
               </div>
+              <picture>
+                <source type="image/webp" srcSet={`${cuddle640} 640w, ${cuddle1200} 1200w`} sizes="(max-width: 1024px) 100vw, 45vw" />
+                <img
+                  src={cuddleJpeg}
+                  alt="A boxer puppy climbing into Tristan's lap for a cuddle during an in-home session"
+                  className="mt-8 h-auto w-full rounded-[26px] object-cover"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
           <div className="lg:col-span-6">
