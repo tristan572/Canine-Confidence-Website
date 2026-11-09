@@ -2664,6 +2664,68 @@ Every new client starts with a [free 15-minute phone call](https://www.caninecon
         publishedAt: new Date("2026-10-27"),
         tags: ["fear", "storms", "calm", "North Brisbane"],
         slug: "dog-scared-of-storms-brisbane"
+      },
+      {
+        title: "How to Teach Your Dog to Settle at Home",
+        metaTitle: "How to Teach Your Dog to Settle at Home | Canine Confidence Brisbane",
+        author: "Tristan",
+        excerpt: "Dog won't settle at night? Here's how I teach North Brisbane dogs to switch off on the lead at home, so calm becomes inevitable rather than something you wait for.",
+        content: `# How to Teach Your Dog to Settle at Home
+
+If your dog paces around the house every evening, follows you from the couch to the kitchen and back, or keeps bringing you his ball while you're trying to watch something, you've probably been told he just needs more exercise. Some dogs do need more to do in their day, and I've written about why [a tired dog isn't always a fulfilled dog](https://www.canineconfidence.com.au/blog/tired-isnt-the-same-as-fulfilled), but plenty of the dogs I see have already had a good walk and a play and they still can't settle, because nobody has shown them how.
+
+Settling is something you teach, the same as sit or down. A dog who can lie down and stay there while the house carries on around him is a lot easier to live with, and he copes much better when visitors come over, which helps a lot if [jumping at the front door](https://www.canineconfidence.com.au/blog/dog-jumping-front-door-brisbane) is a problem at your place too.
+
+I've written before about the four states I see in a dog's day and why the settle is the one most owners skip, in [The Four Windows: Why Your Dog Needs to Know How to Switch Off](https://www.canineconfidence.com.au/blog/the-four-windows-switch-off).
+
+## Why some dogs never seem to switch off
+
+Most dogs who can't settle have learned that being busy gets them things. Nudging your hand gets a pat, dropping a toy in your lap eventually gets a throw, and following you to the kitchen sometimes ends with a bit of cheese off the chopping board. It's easy to fall into, because a pat to keep him quiet seems harmless at the time, but every one of those little wins teaches him that pestering is worth the effort.
+
+Waiting for him to wear himself out doesn't teach him much either. He'll flop down eventually, but that's because he's run out of steam, and the next night he'll go through the whole routine again. Handing him something every time he lies down has its own problem: it builds anticipation, and a dog who's waiting for the next bit of something is the opposite of a dog who's switched off.
+
+What helps is making the settle inevitable, so wandering, jumping up and pestering simply stop working.
+
+## How I teach it on the lead
+
+I put the dog on a lead, sit down (usually on the couch) and stand on the lead at a length where he can stand or lie down comfortably. Any other movement, like wandering off, jumping up or trying to pester, hits the end of the lead. I don't say anything and I don't give him feedback. I let the lead do the talking.
+
+The first sessions can take a while with some dogs. They try the things that used to work, hit the end of the lead, and eventually lie down because that's what's available. Each time you do it they get quicker, which is why it becomes inevitable.
+
+I don't call it "settle" at the start. I add that name only once the dog is predictably starting to settle on his own. Until then the lead is doing the teaching, not a cue word.
+
+When I'm finished teaching it, I just stand up and walk away, and the dog can get up too if he likes. I don't use a release word while I'm teaching this. Later on, if you want a normal release to freedom, you can add one, like saying free. I've written more about how releases work in my post on [release markers](https://www.canineconfidence.com.au/blog/release-markers-and-wrong).
+
+## A mat or bed is useful, but not required
+
+You can do this on a mat or a bed if you want to, and that also teaches him that spot is a good place to switch off. Practising without a mat or bed is just as useful, because then the settle works anywhere. I like doing both, so the dog learns the state and, separately, learns that a particular spot in the house is a good place for it.
+
+If you do use a mat or bed, put it somewhere he can still see what's going on, like the corner of the lounge room. In a Brisbane summer, put it somewhere cool, out of the afternoon sun and away from the window that heats up, because a hot dog will keep getting up to find a cooler patch of floor.
+
+## Building it up at home
+
+Once he's starting to lie down sooner in a quiet room, start adding the normal noise of your house, one thing at a time. Have the TV on, then someone walking past, then dinner on the table, then the kids playing nearby. Practise it most evenings, and in different rooms too, until lying down and staying there becomes the default when the lead is on the floor under your foot.
+
+## Taking it outside the house
+
+When he's solid inside, try the same setup on the back patio, then the front yard or the driveway, where there's more to look at. After that try somewhere quiet away from home, like a park bench when there's hardly anyone around, and later a busier spot, like a café down at Sandgate on a weekend morning with people and other dogs going past. Change one thing at a time so he has a fair chance of getting it right in each new place. If you're down that way, this is the kind of real-world work I do with [dog training in Sandgate](https://www.canineconfidence.com.au/dog-training-sandgate) and around the bayside.
+
+## When he gets it wrong
+
+He will get up or try to wander at the wrong moment sometimes, especially the first few times you take it somewhere new. The lead handles that the same way it did at home. If he gets it wrong when it's the real thing, he just needs more practice and more places to practise in, and the most important part is sticking to the same setup every time, so the rule is the same in the lounge room, on the patio and at the café.
+
+It also helps a lot if everyone at home is on the same page. If one person lets him jump on the couch every time he nudges, or slips him a bit of dinner when he hovers, he's getting mixed messages, and the rule that wins is usually whichever one paid off most recently.
+
+## When to get some help
+
+If he's panicking or frantic on the lead, or it isn't easing after a few sessions, if he still can't settle after a full and busy day, or if the restlessness at night comes with other things like chewing the house or reacting to every noise outside, it's worth having someone take a proper look. The small details are hard to spot when you're the one living with it every day.
+
+Every new client starts with a free 15-minute phone call, where you tell me what's going on and I'll tell you honestly whether I can help. If it's a good fit, I'll book an Initial Canine Success Assessment and work with you on settling at your place, as part of my [behaviour and obedience training](https://www.canineconfidence.com.au/behaviour-obedience). You can see how my [training programs](https://www.canineconfidence.com.au/packages) work before we talk. I come to you if you're within about 15km of Boondall, which takes in places like [Chermside](https://www.canineconfidence.com.au/dog-training-chermside) and [Aspley](https://www.canineconfidence.com.au/dog-training-aspley), and if you're further out I can coach you virtually.`,
+        imageUrl: "/attached_assets/settle-at-home-brisbane-hero.webp",
+        readTime: "6 min read",
+        publishedAt: new Date("2026-11-09"),
+        tags: ["settle", "calm", "home", "North Brisbane"],
+        slug: "how-to-teach-your-dog-to-settle-brisbane"
       }
     ];
 
