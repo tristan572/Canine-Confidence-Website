@@ -19,6 +19,9 @@ import ziggyJpeg from "@assets/review-ziggy-768.jpg";
 import rae480 from "@assets/review-rae-480.webp";
 import rae768 from "@assets/review-rae-768.webp";
 import raeJpeg from "@assets/review-rae-768.jpg";
+import buster480 from "@assets/review-buster-480.webp";
+import buster768 from "@assets/review-buster-768.webp";
+import busterJpeg from "@assets/review-buster-768.jpg";
 
 // Owners' stories from Google reviews, each with a photo of the dog. Shared by
 // the homepage and the Reviews page. Quotes are the owners' own words.
@@ -84,16 +87,16 @@ export const caseStudies = [
     quote: "…taught us how to better understand Rae and her cues, which has made walking her genuinely enjoyable again.",
     photo: { webp: `${rae480} 480w, ${rae768} 768w`, jpeg: raeJpeg, alt: "Rae sitting on the grass on lead, looking up happily" },
   },
-  // Buster (Rich's rescue) is ready to swap back in once there's a photo of him.
-  // {
-  //   dog: "Buster",
-  //   owner: "Rich",
-  //   program: "Training program",
-  //   before: "A 1-year-old Staffy/Boxer, recently rehomed from a rescue shelter.",
-  //   work: "A progressive, well-structured program.",
-  //   after: "Real progress in just a few weeks.",
-  //   quote: "The progress we have made in just a few weeks has been a real game changer!",
-  // },
+  {
+    dog: "Buster",
+    owner: "Rich",
+    program: "Training program",
+    before: "A 1-year-old Staffy/Boxer, recently rehomed from a rescue shelter.",
+    work: "A progressive, well-structured program.",
+    after: "Real progress in just a few weeks.",
+    quote: "The progress we have made in just a few weeks has been a real game changer!",
+    photo: { webp: `${buster480} 480w, ${buster768} 768w`, jpeg: busterJpeg, alt: "Tristan with Buster, a tan and white Staffy/Boxer cross, on lead in a park in Taigum, North Brisbane" },
+  },
 ];
 
 type CaseStudy = (typeof caseStudies)[number] & {
