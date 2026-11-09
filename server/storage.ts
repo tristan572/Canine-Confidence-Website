@@ -2690,11 +2690,13 @@ What helps is making the settle inevitable, so wandering, jumping up and pesteri
 
 I put the dog on a lead, sit down (usually on the couch) and stand on the lead at a length where he can stand or lie down comfortably. Any other movement, like wandering off, jumping up or trying to pester, hits the end of the lead. I don't say anything and I don't give him feedback. I let the lead do the talking.
 
-The first sessions can take a while with some dogs. They try the things that used to work, hit the end of the lead, and eventually lie down because that's what's available. Each time you do it they get quicker, which is why it becomes inevitable.
+The first sessions can take a while. Most dogs settle within about 10 minutes, but I've had one take 100, so only start when you've got the time to wait it out. They try the things that used to work, hit the end of the lead, and eventually lie down because that's what's available. Each time you do it they get quicker, which is why it becomes inevitable.
+
+The one rule you can't skip is that protesting never ends with him getting free. If he whines, barks or pulls and you let him go, he learns that protesting works and the next session takes longer. Be ready to wait it out for as long as it takes.
 
 I don't call it "settle" at the start. I add that name only once the dog is predictably starting to settle on his own. Until then the lead is doing the teaching, not a cue word.
 
-When I'm finished teaching it, I just stand up and walk away, and the dog can get up too if he likes. I don't use a release word while I'm teaching this. Later on, if you want a normal release to freedom, you can add one, like saying free. I've written more about how releases work in my post on [release markers](https://www.canineconfidence.com.au/blog/release-markers-and-wrong).
+I don't finish until he's been fully relaxed for a few minutes. Then I just stand up and walk away, and the dog can get up too if he likes. The lead stays on for a few more minutes before I unclip it. If the lead comes off the moment the session ends, unclipping becomes the signal that it's over, and the dog gets excited every time a lead comes off in everyday life. I don't use a release word while I'm teaching this. Later on, if you want a normal release to freedom, you can add one, like saying free. I've written more about how releases work in my post on [release markers](https://www.canineconfidence.com.au/blog/release-markers-and-wrong).
 
 ## A mat or bed is useful, but not required
 
@@ -2722,7 +2724,7 @@ If he's panicking or frantic on the lead, or it isn't easing after a few session
 
 Every new client starts with a free 15-minute phone call, where you tell me what's going on and I'll tell you honestly whether I can help. If it's a good fit, I'll book an Initial Canine Success Assessment and work with you on settling at your place, as part of my [behaviour and obedience training](https://www.canineconfidence.com.au/behaviour-obedience). You can see how my [training programs](https://www.canineconfidence.com.au/packages) work before we talk. I come to you if you're within about 15km of Boondall, which takes in places like [Chermside](https://www.canineconfidence.com.au/dog-training-chermside) and [Aspley](https://www.canineconfidence.com.au/dog-training-aspley), and if you're further out I can coach you virtually.`,
         imageUrl: "/attached_assets/settle-at-home-brisbane-hero.webp",
-        readTime: "6 min read",
+        readTime: "7 min read",
         publishedAt: new Date("2026-11-09"),
         tags: ["settle", "calm", "home", "North Brisbane"],
         slug: "how-to-teach-your-dog-to-settle-brisbane"
