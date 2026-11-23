@@ -2728,6 +2728,102 @@ Every new client starts with a free 15-minute phone call, where you tell me what
         publishedAt: new Date("2026-11-09"),
         tags: ["settle", "calm", "home", "North Brisbane"],
         slug: "how-to-teach-your-dog-to-settle-brisbane"
+      },
+      {
+        title: "How do I get my dog ready for Christmas visitors in Brisbane?",
+        metaTitle: "How do I get my dog ready for Christmas visitors in Brisbane? | Canine Confidence Brisbane",
+        author: "Tristan",
+        excerpt: "Visitors coming for Christmas lunch? Brisbane dog trainer Tristan explains how to stop jumping, food stealing and over-excitement so your dog stays calm with a full house.",
+        content: `# How do I get my dog ready for Christmas visitors in Brisbane?
+
+Christmas lunch is one of the busiest days of the year for a lot of Brisbane dogs. The house fills up, there's food on every table, kids are running around and half the guests are people your dog barely knows.
+
+For a calm dog that's no problem. For a dog that already jumps on visitors, steals food or gets wound up easily, it can turn the day into a long afternoon of chasing, yelling and apologising to Grandma.
+
+The good news is you have a few weeks to get ahead of it. Here's how I help families on Brisbane's Northside get their dogs ready for a full house.
+
+## Why does my dog go wild when visitors arrive?
+
+Most dogs that lose the plot around visitors aren't being naughty. They're excited, unsure of the rules, and nobody has shown them a better way to behave when the house gets busy.
+
+A few things usually sit underneath it:
+
+- **No clear communication.** If your dog doesn't understand your markers and commands at home on a quiet day, they won't understand them with ten people in the lounge room.
+- **Inconsistent rules.** One guest lets them jump, another pushes them off, and someone else feeds them ham under the table. The dog learns that anything goes.
+- **Too much energy, not enough outlet.** A dog that hasn't had a walk or a training session before guests arrive is running on a full tank.
+- **No off switch.** Plenty of dogs have never learned how to settle when things are exciting, so they just keep going until they're exhausted or in trouble.
+
+## How do I stop my dog jumping on guests at the door?
+
+The front door is where most Christmas chaos starts. If your dog greets every guest by launching at them, the whole day starts on the wrong foot.
+
+The simplest tool I give families is a short lead left on the dog while guests are around. It means you can calmly guide your dog away from the door or off a guest without grabbing collars or chasing them around the house.
+
+Be consistent every time someone walks in, and ask your guests to ignore your dog until it's calm. Once the greetings are done, that's the moment to put your dog into a settle (more on that below).
+
+I've written a full guide on this one: [How to stop your dog jumping at the front door](https://www.canineconfidence.com.au/blog/dog-jumping-front-door-brisbane).
+
+## How do I stop my dog stealing food at Christmas lunch?
+
+A table covered in ham, prawns and pavlova is a lot to ask of most dogs. The aim is to make sure your dog knows the rules and that you can follow through on them.
+
+- **Set the rule early.** Decide now whether your dog is allowed near the table at meal times, and practise it every meal between now and Christmas.
+- **Use your markers.** A clear marker for "wrong" or "no" tells your dog the moment they've made a bad choice, and a clear "yes" tells them when they've got it right.
+- **Follow through every time.** If your dog sticks its nose on the table and nothing happens, it's learned that trying is worth it.
+- **Brief your guests.** Ask everyone not to feed the dog from the table. One person slipping scraps undoes weeks of work.
+
+If you can't supervise properly, that's fine. Pop your dog in its crate or another room with something to chew while everyone eats.
+
+## How do I get my dog to settle with a full house?
+
+A dog that can switch off is the biggest difference between a stressful Christmas and an easy one. Most owners are great at getting their dog excited and much less practised at helping them calm down. I teach this with a settle, and I've written a full guide on it here: [How to teach your dog to settle](https://www.canineconfidence.com.au/blog/how-to-teach-your-dog-to-settle-brisbane). Here's the short version.
+
+- **Start at home when it's quiet.** Put your dog on a lead and stand on it, with enough slack to sit or lie down but not enough to wander off.
+- **Stay quiet and wait it out.** No talking, patting or treats. Don't step off the lead while your dog is resisting, however long it takes.
+- **Wait for real calm.** The first calm is often fake. You're looking for a second, genuine calm that lasts at least five minutes.
+- **Only say "settle" once it's really settling.** As your dog relaxes, give it a little more freedom. If it winds back up, take that freedom away and start again.
+- **Bring it into busier moments.** Once your dog can do this reliably at home, it's the tool you use when the guests have arrived and the excitement builds.
+
+It also helps to give your dog its outlet first. A good walk and a short training session on Christmas morning takes the edge off before anyone arrives, and a tired, fulfilled dog settles far more easily.
+
+## How do I keep my dog and visiting kids safe together?
+
+Kids and dogs at Christmas need an adult keeping an eye on them the whole time. Excited kids running, squealing and hugging can push even a friendly dog past its limit.
+
+- **Supervise or separate.** If you can't watch the dog and the kids together, keep them apart. There's no in-between.
+- **Set rules for the kids too.** No hugging, no chasing, no feeding from plates, and leave the dog alone when it's resting.
+- **Know your dog's signals.** Lip licking, turning away, freezing or stiffening are a dog asking for space. Give it to them early.
+- **Give your dog a safe spot.** A crate or quiet room where kids aren't allowed means your dog always has somewhere to go.
+
+If your dog has ever growled, snapped or shown aggression towards people or kids, don't wait for Christmas to deal with it. Get help before the day.
+
+## What Christmas foods and heat risks should I watch for?
+
+A lot of Christmas food is dangerous for dogs, which is another good reason to keep them off the table.
+
+- **Cooked bones** from ham, turkey or chicken can splinter.
+- **Fatty scraps** like ham fat and crackling can upset a dog's stomach or cause pancreatitis.
+- **Chocolate, grapes, raisins and sultanas** are toxic. Watch the Christmas pudding, fruit cake and mince pies.
+- **Onion and garlic** turn up in stuffing and gravy and are harmful to dogs.
+- **Macadamia nuts** and anything sweetened with xylitol are also on the list.
+
+Brisbane at Christmas is hot, so keep fresh water out all day, give your dog a cool shady spot away from the crowd, and walk them early in the morning. If you think your dog has eaten something it shouldn't, call your vet straight away.
+
+## When should I start training before Christmas?
+
+Now. A few weeks is enough to make a real difference, but only if the practice starts well before the day. Trying to teach new rules with a house full of guests rarely works.
+
+Every dog is different, so I start with an Initial Canine Success Assessment to get to know your dog and work out what's driving the chaos. From there, $140 coaching sessions give you a clear plan for greetings at the door, manners around food, a reliable settle and keeping your dog relaxed while the house is full.
+
+If you're on Brisbane's Northside and want a calmer dog for Christmas lunch, [book your assessment here](https://canineconfidence.simplybook.net/v2/#book/service/16/count/1/).
+
+Tristan
+`,
+        imageUrl: "/attached_assets/christmas-visitors-brisbane-hero.webp",
+        readTime: "6 min read",
+        publishedAt: new Date("2026-11-23"),
+        tags: ["Christmas", "visitors", "manners", "North Brisbane"],
+        slug: "dog-christmas-visitors-brisbane"
       }
     ];
 
