@@ -188,7 +188,7 @@ export default function NorthgatePage() {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-sand rounded-lg">
                       <div>
-                        <p className="font-semibold text-charcoal">Single 40-Minute Session</p>
+                        <p className="font-semibold text-charcoal">Single 30-Minute Session</p>
                       </div>
                       <div className="text-2xl font-bold text-primary-blue">{walkTrainPrice}</div>
                     </div>

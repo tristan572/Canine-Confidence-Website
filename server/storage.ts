@@ -442,7 +442,7 @@ export class MemStorage implements IStorage {
         category: "obedience",
         imageUrl: "/attached_assets/dog-sitting-at-owners-feet.webp",
         features: [
-          "5 trainer-led 40-minute Walk and Train sessions",
+          "5 trainer-led 30-minute Walk and Train sessions",
           "Home pickup included",
           "Obedience and manners practised during everyday walks",
           "Dedicated loose-lead walking practice",
